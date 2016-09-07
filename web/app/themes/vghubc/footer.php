@@ -1,5 +1,6 @@
 <footer id="footer">
   <div class="container">
+    <p>© <?php print date('Y'); ?> VCG & UBC Hospital Foundation. All rights reserved.</p>
 
 
   </div>
