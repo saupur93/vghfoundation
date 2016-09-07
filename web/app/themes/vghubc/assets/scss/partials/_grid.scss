@@ -1,0 +1,23 @@
+@import "../neat/neat-helpers";
+$max-width: 1200px;
+
+// NEAT EXAMPLES
+
+// div.container {
+//   @include outer-container;
+// }
+
+// div.element {
+//   @include span-columns(6);
+// }
+
+
+// Define your breakpoints
+$ptab: new-breakpoint(601px);
+$tab: new-breakpoint(769px);
+$desk: new-breakpoint(1025px);
+$wideDesk: new-breakpoint(1201px);
+$mobileOnly: new-breakpoint(max-width 600px);
+$ptabAndLess: new-breakpoint(max-width 768px);
+
+$laptopHeightOnly: new-breakpoint(max-height 768px);

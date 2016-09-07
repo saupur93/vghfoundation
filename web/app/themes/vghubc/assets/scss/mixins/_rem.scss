@@ -1,0 +1,15 @@
+// mixin for using rem with pixel fallback
+//  @include fontSize(32px);
+
+// may need to change this value
+$baseSize: 16px;
+
+@function calculateRem($size) {
+  $remSize: $size / $baseSize;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}

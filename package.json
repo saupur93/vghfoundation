@@ -1,0 +1,54 @@
+{
+  "name": "Signals",
+  "description": "Signals WordPress seed site",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "deploy": "./deploy.sh",
+    "build": "gulp build --production",
+    "postinstall": "node postinstall.js",
+    "getwp": "wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && mv wordpress web/wp && rm latest.tar.gz"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "chalk": "^1.1.1",
+    "concat": "^1.0.0",
+    "del": "^2.2.0",
+    "eslint": "^2.4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-csso": "^1.1.0",
+    "gulp-duration": "0.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-rev": "^7.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "mysql": "^2.10.2",
+    "prompt": "^1.0.0",
+    "request": "^2.69.0",
+    "through2": "^2.0.1",
+    "time-grunt": "^1.3.0",
+    "verge": "^1.9.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0",
+    "yargs": "^4.3.1"
+  },
+  "engines": {
+    "node": ">=0.12.4"
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
