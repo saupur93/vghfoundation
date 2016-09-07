@@ -21,6 +21,7 @@ add_theme_support( 'menus' );
 // Custom body classes
 function custom_body_classes($classes) {
   is_front_page() ? $classes[] = 'front' : $classes[] = 'not-front';
+
   return $classes;
 }
 add_filter('body_class','custom_body_classes');

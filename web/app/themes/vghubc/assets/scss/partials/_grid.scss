@@ -1,7 +1,11 @@
+// Bourbon Neat Grid
 @import "../neat/neat-helpers";
 $max-width: 1280px;
 
-// NEAT EXAMPLES
+.container, .full-container {
+  @include fill-parent();
+  @include row(table);
+}
 
 .container {
   @include outer-container;
@@ -12,6 +16,64 @@ $max-width: 1280px;
   }
 }
 
+.col-grid-1 {
+  @include span-columns(1);
+}
+
+.col-grid-2 {
+  @include span-columns(2);
+  vertical-align:top;
+}
+
+.col-grid-3 {
+  @include span-columns(3);
+  vertical-align:top;
+}
+
+.col-grid-4 {
+  @include span-columns(4);
+  vertical-align:top;
+}
+
+.col-grid-5 {
+  @include span-columns(5);
+  vertical-align:top;
+}
+
+.col-grid-6 {
+  @include span-columns(6);
+  vertical-align:top;
+}
+
+.col-grid-7 {
+  @include span-columns(7);
+  vertical-align:top;
+}
+
+.col-grid-8 {
+  @include span-columns(8);
+  vertical-align:top;
+}
+
+.col-grid-9 {
+  @include span-columns(9);
+  vertical-align:top;
+}
+
+.col-grid-10 {
+  @include span-columns(10);
+  vertical-align:top;
+}
+
+.col-grid-11 {
+  @include span-columns(11);
+  vertical-align:top;
+}
+
+.col-grid-12 {
+  @include span-columns(12);
+  vertical-align:top;
+}
 
 
 

@@ -9822,7 +9822,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var $ = require('jquery');
-
 var Home = require('./modules/home');
 
 var App = function () {
@@ -9834,7 +9833,7 @@ var App = function () {
 		console.log('%cSignals', 'font: 200 28px Calibri;color:#93cb3c');
 		console.log('%chttp://www.signals.ca', 'font: 200 16px Calibri;color:#CCC');
 
-		this.routes();
+		this.behaviours();
 	}
 
 	/**
@@ -9843,12 +9842,25 @@ var App = function () {
 
 
 	_createClass(App, [{
-		key: 'routes',
-		value: function routes() {
+		key: 'behaviours',
+		value: function behaviours() {
+			this.latestNavigation();
+		}
+	}, {
+		key: 'latestNavigation',
+		value: function latestNavigation() {
+			var latestToggle = document.getElementById('toggleLatest');
 
-			if ($('body').hasClass('home')) {
-				this.home = new Home();
+			if ($('body').hasClass('front')) {
+				setTimeout(function () {
+					$('body').toggleClass('latest-open');
+				}, 400);
 			}
+
+			latestToggle.onclick = function () {
+				$('body').toggleClass('latest-open');
+				$('body').toggleClass('latest-closed');
+			};
 		}
 	}]);
 
