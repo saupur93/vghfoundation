@@ -1,15 +1,18 @@
 @import "../neat/neat-helpers";
-$max-width: 1200px;
+$max-width: 1280px;
 
 // NEAT EXAMPLES
 
-// div.container {
-//   @include outer-container;
-// }
+.container {
+  @include outer-container;
 
-// div.element {
-//   @include span-columns(6);
-// }
+  .inner-wrap {
+    position: relative;
+    margin: 0 9.375%
+  }
+}
+
+
 
 
 // Define your breakpoints

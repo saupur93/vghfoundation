@@ -2,7 +2,7 @@
 
 
 	<section class="main-content">
-		<div class="inner-wrap">
+		<div class="container">
 		  <?php if (!have_posts()) : ?>
 			<div class="not-found center">
 			  <h1>Page not found</h1>
