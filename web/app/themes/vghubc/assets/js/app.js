@@ -37,9 +37,15 @@ class App {
 
 			if ($('body').hasClass('latest-closed')) {
 				setTimeout(() => {
-					$('body').removeClass('latest-closed');
+					$('body').addClass('latest-closed-finished');
 				}, 400);
 			}
+
+			if ($('body').hasClass('latest-closed-finished')) {
+				$('body').removeClass('latest-closed-finished');
+			}
+
+
 			return false;
 		};
 
@@ -61,24 +67,61 @@ class App {
 	 * Homepage themes grid expansion animations
 	 */
 	themesGrid () {
-		const gridElm = $('#grid');
+		const sectionEl = $('#themes-section');
+		const gridEl = $('#grid');
+
+    const preloadImage = url => {
+			try {
+				let loadingImg = new Image();
+				loadingImg.src = url;
+			} catch (e) {
+				console.log(e);
+			}
+    };
+		gridEl.find('li').each(function () {
+			let imageURL = $(this).data('hover-image');
+			preloadImage(imageURL);
+		});
+
 
 		const openItem = (e) => {
 			e.preventDefault();
-			$('#themes-section').addClass('expanded-overlay');
+			sectionEl.addClass('expanded-overlay');
 			$(e.currentTarget).addClass('expanded');
-			$('html, body').animate({ scrollTop: gridElm.position().top - $('#top-header').outerHeight()});
+
+			$('html, body').animate({ scrollTop: gridEl.offset().top - $('#top-header').outerHeight()});
 		};
 
 		const closeItem = (e) => {
 			e.preventDefault();
-			gridElm.find('.expanded').removeClass('expanded');
-			$('#themes-section').removeClass('expanded-overlay');
+			gridEl.find('.expanded').removeClass('expanded');
+			sectionEl.removeClass('expanded-overlay');
 		};
 
-		gridElm.on('click', 'li', openItem);
-		gridElm.on('click', 'li.expanded', closeItem);
+		const mouseEnterItem = (e) => {
+			let hoverTitle = $(e.currentTarget).data('hover-title');
+			let hoverImage = $(e.currentTarget).data('hover-image');
+			sectionEl.find('.summary').empty().append(`<h1>${hoverTitle}</h1>`);
+			sectionEl.css('background-image', `url(${hoverImage})`);
+
+		};
+
+		const mouseLeaveItem = () => {
+			if (!sectionEl.hasClass('expanded-overlay')) {
+				let defaultTitle = sectionEl.find('.summary').data('default-title');
+				sectionEl.find('.summary').empty().append(`<h1>${defaultTitle}</h1>`);
+				sectionEl.removeAttr('style');
+			}
+		};
+
+		gridEl.on('click', 'li', openItem);
+		gridEl.on('click', 'li.expanded', closeItem);
+
+		gridEl.on('mouseenter', 'li', mouseEnterItem);
+		gridEl.on('mouseleave', mouseLeaveItem);
 	}
+
+
 
 }
 

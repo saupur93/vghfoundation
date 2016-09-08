@@ -40,13 +40,13 @@ Template Name: Home
 
   <section class="panel" id="themes-section">
     <div class="container">
-      <div class="summary">
+      <div class="summary" data-default-title="Our donors provide funds essential to delivering BC’s best, most specialized care for adults.">
         <h1>Our donors provide funds essential to delivering BC’s best, most specialized care for adults.</h1>
       </div>
     </div>
 
     <ul id="grid" class="grid">
-        <li>
+        <li data-hover-title="The foundation funds care for cancer patients in a variety of ways" data-hover-image="http://placehold.it/1282x849/333">
             <a class="open" href="#"><span>Surgery</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
@@ -56,7 +56,7 @@ Template Name: Home
                 </div>
             </div>
         </li>
-        <li>
+        <li data-hover-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849/000">
             <a class="open" href="#"><span>Cancer</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
@@ -66,7 +66,7 @@ Template Name: Home
                 </div>
             </div>
         </li>
-        <li>
+        <li data-hover-title="consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, " data-hover-image="http://placehold.it/1282x849/999">
             <a class="open" href="#"><span>Heart & Lung</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
@@ -76,7 +76,7 @@ Template Name: Home
                 </div>
             </div>
         </li>
-        <li>
+        <li data-hover-title="ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849">
             <a class="open" href="#"><span>Brain Health</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
@@ -86,7 +86,7 @@ Template Name: Home
                 </div>
             </div>
         </li>
-        <li>
+        <li data-hover-title="Lorem ipsum dolor consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849/666">
             <a class="open" href="#"><span>Innovation</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
@@ -96,7 +96,7 @@ Template Name: Home
                 </div>
             </div>
         </li>
-        <li>
+        <li data-hover-title="Lorem ipsum dolor sit amet, consectetur sed do eiusmod" data-hover-image="http://placehold.it/1282x849">
             <a class="open" href="#"><span>Community</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
