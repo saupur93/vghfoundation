@@ -21,11 +21,11 @@ Template Name: Home
     </div>
   </section>
 
-  <section class="panel extra-padded">
+  <section class="panel extra-padded home-overview">
     <div class="container">
       <div class="inner-wrap">
         <div class="col-grid-6">
-          <h1>Together with your support, VGH UBC Hospital Foundation is saving lives in our community.</h1>
+          <h1>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h1>
         </div>
 
         <div class="col-grid-6">
@@ -40,10 +40,74 @@ Template Name: Home
 
   <section class="panel" id="themes-section">
     <div class="container">
-      <div class="col-grid-5">
+      <div class="summary">
         <h1>Our donors provide funds essential to delivering BC’s best, most specialized care for adults.</h1>
       </div>
     </div>
+
+    <ul id="grid" class="grid">
+        <li>
+            <a class="open" href="#"><span>Surgery</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="open" href="#"><span>Cancer</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="open" href="#"><span>Heart & Lung</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="open" href="#"><span>Brain Health</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="open" href="#"><span>Innovation</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="open" href="#"><span>Community</span></a>
+            <div class="overlay">
+                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
+                <div class="copy">
+                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
+                    <p><a href="#" class="learn-more">Learn more</a></p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
   </section>
 
 <section class="panel" id="newsletter-signup">

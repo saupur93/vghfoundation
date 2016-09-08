@@ -118,9 +118,9 @@ h3 {
 	padding:8px 25px;
 	text-decoration:none;
 	text-transform:uppercase;
+	font-family:$font-bold;
 	color:$body-text;
 	@include font-size(18px);
-	font-family:$font-bold;
 
 }
 
@@ -391,6 +391,15 @@ h3 {
 	color:$brand-green;
 }
 
+.read-more {
+	text-transform:uppercase;
+	font-family:$font-bold;
+	text-decoration:none;
+	@include font-size(18px);
+	color:$brand-green;
+	letter-spacing:1px;
+}
+
 .panel {
   @include clearfix;
   background-color:#fff;
@@ -405,6 +414,12 @@ h3 {
 
 }
 
+span.highlighted-text {
+	display:inline;
+	background:$brand-green;
+	color:#fff;
+}
+
 .hero-content {
 	width:100%;
 	height:100vh;
@@ -412,7 +427,8 @@ h3 {
 	padding-top:100px;
 	background-repeat: no-repeat;
 	background-size:cover;
-	background-position:50% 0%;
+	background-position:50% 100px;
+	// margin-top:100px;
 
 	.container {
 		position:relative;
@@ -461,6 +477,214 @@ h3 {
 		}
 	}
 }
+
+.home-overview {
+	.col-grid-6:first-child {
+		padding-right:40px;
+	}
+	.col-grid-6:last-child {
+		padding-left:40px;
+	}
+
+	p {
+		@include font-size(24px);
+		line-height:1.3;
+	}
+}
+
+svg.icon.close-x {
+	width:25px;
+	height:25px;
+	display:inline-block;
+	fill:#fff;
+}
+
+#themes-section {
+	background-image:url(../img/home-themes-bg.jpg);
+	background-repeat: no-repeat;
+	background-size:100%;
+	color:#fff;
+	padding:26.5rem 0 0;
+
+	.container {
+		position:absolute;
+		left:0;
+		right:0;
+	}
+
+	.summary {
+		float: left;
+    width: calc(55% - 3.5rem);
+    color: #fff;
+    // padding: 4rem 5rem 0;
+    line-height: 1.5;
+	}
+
+	.grid {
+ 		float: right;
+    width: calc(33.3% + 3.5rem);
+    list-style: none;
+    margin: 0 0 -2.5rem;
+
+    li {
+	    position: relative;
+	    width: 50%;
+	    float: left;
+	    transition: all 0.2s cubic-bezier(0.28, 0, 0.18, 1);
+	    z-index: 1;
+	    &:before {
+    		content: "";
+    		display: block;
+    		padding-top: 100%;
+	    }
+
+	    &:hover {
+		    transform: scale(1.1);
+    		z-index: 2;
+	    }
+
+			&.expanded {
+				transform: scale(1);
+				z-index: 3;
+
+				.copy {
+					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 0.8s;
+					visibility: visible;
+					opacity: 1;
+					top: 0;
+				}
+
+				.close {
+					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 1.6s;
+					opacity:1;
+					visibility:visible;
+				}
+
+				.overlay {
+					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 0.2s;
+					visibility: visible;
+					opacity: 1;
+					width: 200%;
+					height: 300%;
+					padding: 6.75rem 2.75rem;
+					background-color:inherit;
+				}
+			}
+
+	    &:nth-child(1){
+				background-color:$surgery;
+				.overlay {
+					top: 0;
+	        left: 0;
+	      }
+	    }
+	    &:nth-child(2){
+				background-color:$cancer;
+				.overlay {
+					top: 0;
+	        right: 0;
+	      }
+	    }
+			&:nth-child(3) {
+				background-color:$heartlung;
+				.overlay {
+					top: 0;
+	        left: 0;
+	        margin-top:-100%;
+	      }
+			}
+			&:nth-child(4) {
+				background-color:$brainhealth;
+				.overlay {
+					top: 0;
+	        right: 0;
+	        margin-top:-100%;
+	      }
+			}
+			&:nth-child(5) {
+				background-color:$innovation;
+				.overlay {
+					bottom: 0;
+	        left: 0;
+	      }
+			}
+			&:nth-child(6) {
+				background-color:$community;
+				.overlay {
+					bottom: 0;
+	        right: 0;
+	      }
+			}
+
+	    span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				transition: all 0.2s cubic-bezier(0.28, 0, 0.18, 1);
+				visibility: visible;
+				opacity: 1;
+	    }
+
+	    a {
+	    	backface-visibility: hidden;
+	    }
+
+	    .open {
+				position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    color: #fff;
+		    @include font-size(16px);
+				text-transform:uppercase;
+				font-family:$font-bold;
+				text-decoration:none;
+				letter-spacing:1px;
+	    }
+
+	    .overlay {
+				position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    visibility: hidden;
+		    opacity: 0;
+
+		    p {
+		    	@include font-size(24px);
+		    	line-height:1.33;
+		    }
+
+				.learn-more {
+					text-transform:uppercase;
+					text-decoration:none;
+					@include font-size(24px);
+					color:#fff;
+					letter-spacing:1px;
+					float:left;
+				}
+	    }
+
+	    .copy {
+				color: #fff;
+		    visibility: hidden;
+		    opacity: 0;
+		    top: 2rem;
+	    }
+
+	    .close {
+	    	opacity:0;
+	    	visibility: hidden;
+	    	color: #fff;
+	    	position:absolute;
+	    	top:2.5rem;
+	    }
+    }
+
+	}
+}
+
 
 #newsletter-signup {
 	padding:80px 0;
