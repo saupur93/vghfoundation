@@ -1,10 +1,14 @@
-$body-text: #575b5d;
 $brand-green: #90c53d;
+$teal: #00ac9a;
+$purple: #953a93;
+$light-blue: #93d2cf;
+
+$body-text: #575b5d;
 $footer-bg: #626366;
 
-$surgery:#90c53d;
-$cancer:#00ac9a;
-$heartlung:#93d2cf;
-$brainhealth:#953a93;
+$surgery: $brand-green;
+$cancer: $teal;
+$heartlung: $light-blue;
+$brainhealth: $purple;
 $innovation:#f48f1e;
 $community:#c7d836;

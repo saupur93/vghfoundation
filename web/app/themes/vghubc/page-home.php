@@ -9,7 +9,8 @@ Template Name: Home
   <section class="hero-content panel" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home-hero-bg.jpg);">
     <div class="container">
       <div class="hero-copy">
-        <blockquote>I didn’t even realize how many things <br>I wanted to do until I got diagnosed.”</blockquote>
+        <blockquote><span class="highlight-text">“I didn’t even realize how many things</span><br>
+        <span class="highlight-text">I wanted to do until I got diagnosed.”</span></blockquote>
         <p><a href="#" class="button">Jaime's Story</a></p>
       </div>
 

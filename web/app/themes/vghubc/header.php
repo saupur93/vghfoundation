@@ -13,6 +13,7 @@
 	<![endif]-->
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <?php if ( WP_ENV == 'production' || WP_ENV == 'staging' ): ?>
   <?php $bundle = bundle_rev_file('css'); ?>

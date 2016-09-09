@@ -10,8 +10,26 @@
 
     <h1 class="site-name"><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
 
+    <nav id="main-menu">
+      <ul id="primary-nav">
+        <?php wp_nav_menu(array(
+          'menu'        => 'Main Menu',
+          'container'   => '',
+          'items_wrap'  => '%3$s'
+        )); ?>
+      </ul>
+
+      <ul id="language-switcher">
+        <li><a href="#">EN</a></li>
+        <li><a href="#">中文</a></li>
+      </ul>
+    </nav>
+
     <nav id="latest-menu">
-      <a href="#" id="toggleLatest">Latest</a>
+      <ul class="utility-menu">
+        <li><a href="/donate">Donate</a></li>
+        <li><a href="#" id="toggleLatest">Latest</a></li>
+      </ul>
 
       <div id="latest-highlights">
         <div class="highlight highlight-1" style="background-image:url(http://www.fillmurray.com/400/160);">
@@ -41,16 +59,7 @@
       </div>
     </nav>
 
-    <nav id="main-menu">
-      <ul id="primary-nav">
-        <?php wp_nav_menu(array(
-          'menu'        => 'Main Menu',
-          'container'   => '',
-          'items_wrap'  => '%3$s'
-        )); ?>
 
-      </ul>
-    </nav>
 
 
 

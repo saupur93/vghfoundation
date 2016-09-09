@@ -38,6 +38,7 @@ class App {
 			if ($('body').hasClass('latest-closed')) {
 				setTimeout(() => {
 					$('body').addClass('latest-closed-finished');
+					scrolled = true;
 				}, 400);
 			}
 

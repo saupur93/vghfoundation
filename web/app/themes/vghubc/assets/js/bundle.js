@@ -9866,6 +9866,7 @@ var App = function () {
 				if ($('body').hasClass('latest-closed')) {
 					setTimeout(function () {
 						$('body').addClass('latest-closed-finished');
+						scrolled = true;
 					}, 400);
 				}
 
