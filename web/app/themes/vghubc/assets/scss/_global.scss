@@ -590,6 +590,18 @@ span.highlighted-text {
 	color:#fff;
 }
 
+
+.highlight-text-upper {
+	@include font-size(24px);
+	text-transform:uppercase;
+	letter-spacing:2px;
+	background:$teal;
+	color:#fff;
+	display:inline-block;
+	padding:5px 20px;
+	margin-bottom:10px;
+}
+
 .hero-content {
 	width:100%;
 	height:100vh;
@@ -603,17 +615,6 @@ span.highlighted-text {
 	.container {
 		position:relative;
 		height:100%;
-	}
-
-	.highlight-text {
-		@include font-size(24px);
-		text-transform:uppercase;
-		letter-spacing:2px;
-		background:$teal;
-		color:#fff;
-		display:inline-block;
-		padding:5px 20px;
-		margin-bottom:10px;
 	}
 
 	.hero-copy {
@@ -969,4 +970,14 @@ form {
 			margin:0 5px;
 		}
 	}
+}
+
+.events-list {
+	padding-top:100px;
+
+	.event-item {
+		padding:60px 0;
+	}
+
+
 }

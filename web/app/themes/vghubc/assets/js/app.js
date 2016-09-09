@@ -35,6 +35,8 @@ class App {
 			$('body').toggleClass('latest-open');
 			$('body').toggleClass('latest-closed');
 
+
+
 			if ($('body').hasClass('latest-closed')) {
 				setTimeout(() => {
 					$('body').addClass('latest-closed-finished');
@@ -54,6 +56,8 @@ class App {
 				setTimeout(() => {
 					$('body').toggleClass('latest-open');
 				}, 400);
+		} else {
+			$('body').toggleClass('latest-closed');
 		}
 
 		latestToggle.onclick = toggleFunction;

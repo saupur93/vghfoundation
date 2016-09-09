@@ -9881,6 +9881,8 @@ var App = function () {
 				setTimeout(function () {
 					$('body').toggleClass('latest-open');
 				}, 400);
+			} else {
+				$('body').toggleClass('latest-closed');
 			}
 
 			latestToggle.onclick = toggleFunction;
