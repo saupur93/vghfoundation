@@ -58,6 +58,7 @@ class App {
 				}, 400);
 		} else {
 			$('body').toggleClass('latest-closed');
+			$('body').addClass('latest-closed-finished');
 		}
 
 		latestToggle.onclick = toggleFunction;

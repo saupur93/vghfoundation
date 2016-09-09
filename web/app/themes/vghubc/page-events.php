@@ -8,29 +8,29 @@ Template Name: Events
 <?php get_header(); ?>
 
 <section class="panel events-list">
-  <article class="event-item" style="background-image:url(http://placehold.it/1600x900);">
+  <article class="event-item" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/events/thousand-stars.jpg);">
     <div class="container">
       <div class="inner-wrap">
         <h2 class="highlight-text-upper">NIGHT OF A THOUSAND STARS GALA</h2>
-        <p><a href="#" class="button">Learn more</a></p>
+        <p><a href="#" class="button white">Learn more</a></p>
       </div>
     </div>
   </article>
 
-  <article class="event-item" style="background-image:url(http://placehold.it/1600x900/999);">
+  <article class="event-item" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/events/time-to-shine.jpg);">
     <div class="container">
       <div class="inner-wrap">
         <h2 class="highlight-text-upper">TIME TO SHINE GALA</h2>
-        <p><a href="#" class="button">Learn more</a></p>
+        <p><a href="#" class="button white">Learn more</a></p>
       </div>
     </div>
   </article>
 
-  <article class="event-item" style="background-image:url(http://placehold.it/1600x900);">
+  <article class="event-item" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/events/mrlube.jpg);">
     <div class="container">
       <div class="inner-wrap">
         <h2 class="highlight-text-upper">MR LUBE TOURNAMENT FOR LIFE</h2>
-        <p><a href="#" class="button">Learn more</a></p>
+        <p><a href="#" class="button white">Learn more</a></p>
       </div>
     </div>
   </article>

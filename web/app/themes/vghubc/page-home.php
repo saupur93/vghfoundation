@@ -47,7 +47,7 @@ Template Name: Home
     </div>
 
     <ul id="grid" class="grid">
-        <li data-hover-title="The foundation funds care for cancer patients in a variety of ways" data-hover-image="http://placehold.it/1282x849/333">
+        <li data-hover-title="The foundation funds care for cancer patients in a variety of ways" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg">
             <a class="open" href="#"><span>Surgery</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
