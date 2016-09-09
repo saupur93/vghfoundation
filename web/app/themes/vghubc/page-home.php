@@ -8,38 +8,52 @@ Template Name: Home
 <?php get_header(); ?>
   <section class="hero-content panel" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home-hero-bg.jpg);">
     <div class="container">
-      <div class="hero-copy">
+      <div class="inner-wrap">
+        <div class="hero-copy">
+          <h1>what's vital?</h1>
+          <p>“I didn’t even realize how many things I wanted to do until I got diagnosed.”</p>
+          <p><a href="#" class="button white">Jaime's Story</a></p>
+
+          <ul class="slide-pager">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+
+      </div>
+
+<!--       <div class="hero-copy">
         <blockquote><span class="highlight-text-upper">“I didn’t even realize how many things</span><br>
         <span class="highlight-text-upper">I wanted to do until I got diagnosed.”</span></blockquote>
         <p><a href="#" class="button">Jaime's Story</a></p>
       </div>
 
-      <h1>what’s <span class="green">v</span>ital to jaime</h1>
+      <h1>what’s <span class="green">v</span>ital to jaime</h1> -->
 
     </div>
-    <div class="down-arrow">
+    <!-- <div class="down-arrow">
       <img src="<?php bloginfo('template_directory'); ?>/assets/img/down-arrow.svg" />
-    </div>
+    </div> -->
   </section>
 
   <section class="panel extra-padded home-overview">
     <div class="container">
-      <div class="inner-wrap">
-        <div class="col-grid-6">
-          <h1>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h1>
-        </div>
+      <div class="narrow-wrap">
+        <h1>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h1>
 
-        <div class="col-grid-6">
-          <p>We are Vancouver Costal Health's primary philanthropic partner.</p>
-          <p>Your support enables us to provide the best hospital care to every adult British Columbian.</p>
-          <p>Our donors drive innovation and healthcare transformation.</p>
-          <p><a href="#" class="read-more">about the foundation</a></p>
-        </div>
+        <p>We are Vancouver Costal Health's primary philanthropic partner.</p>
+        <p>Your support enables us to provide the best hospital care to every adult British Columbian.</p>
+        <p>Our donors drive innovation and healthcare transformation.</p>
+        <p><a href="#" class="read-more">about the foundation</a></p>
+
       </div>
     </div>
   </section>
 
   <section class="panel" id="themes-section">
+    <div class="hover-bg-image"></div>
     <div class="container">
       <div class="summary" data-default-title="Our donors provide funds essential to delivering BC’s best, most specialized care for adults.">
         <h1>Our donors provide funds essential to delivering BC’s best, most specialized care for adults.</h1>
@@ -111,13 +125,13 @@ Template Name: Home
 
   </section>
 
-<section class="panel" id="newsletter-signup">
+  <section class="panel" id="newsletter-signup">
     <div class="container">
         <p class="intro">Sign up and find out how your donations are making a difference.</p>
         <form>
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
-          <input type="submit" value="Subscribe" />
+          <input type="submit" value="Subscribe" class="button green" />
         </form>
       </div>
   </section>

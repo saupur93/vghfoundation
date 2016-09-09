@@ -9882,6 +9882,7 @@ var App = function () {
 					$('body').toggleClass('latest-open');
 				}, 400);
 			} else {
+				scrolled = true;
 				$('body').toggleClass('latest-closed');
 				$('body').addClass('latest-closed-finished');
 			}
@@ -9934,15 +9935,17 @@ var App = function () {
 			var mouseEnterItem = function mouseEnterItem(e) {
 				var hoverTitle = $(e.currentTarget).data('hover-title');
 				var hoverImage = $(e.currentTarget).data('hover-image');
+				sectionEl.addClass('hovered-on');
 				sectionEl.find('.summary').empty().append('<h1>' + hoverTitle + '</h1>');
-				sectionEl.css('background-image', 'url(' + hoverImage + ')');
+				sectionEl.find('.hover-bg-image').css('background-image', 'url(' + hoverImage + ')');
 			};
 
 			var mouseLeaveItem = function mouseLeaveItem() {
+				sectionEl.removeClass('hovered-on');
 				if (!sectionEl.hasClass('expanded-overlay')) {
 					var defaultTitle = sectionEl.find('.summary').data('default-title');
 					sectionEl.find('.summary').empty().append('<h1>' + defaultTitle + '</h1>');
-					sectionEl.removeAttr('style');
+					sectionEl.find('.hover-bg-image').removeAttr('style');
 				}
 			};
 

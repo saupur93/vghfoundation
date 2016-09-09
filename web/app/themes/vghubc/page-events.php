@@ -37,13 +37,13 @@ Template Name: Events
 
 </section>
 
-<section class="panel" id="newsletter-signup">
+  <section class="panel" id="newsletter-signup">
     <div class="container">
         <p class="intro">Sign up and find out how your donations are making a difference.</p>
         <form>
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
-          <input type="submit" value="Subscribe" />
+          <input type="submit" value="Subscribe" class="button green" />
         </form>
       </div>
   </section>

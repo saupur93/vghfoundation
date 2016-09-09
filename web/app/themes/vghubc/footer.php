@@ -30,7 +30,7 @@
             </ul>
         </div>
 
-        <div class="col">
+        <div class="col green-text">
           <h4>Follow Us</h4>
           <ul class="social">
             <li><a href="https://www.facebook.com/VGHUBCHospitalFoundation" target="_blank" class="fa fa-facebook"></a></li>

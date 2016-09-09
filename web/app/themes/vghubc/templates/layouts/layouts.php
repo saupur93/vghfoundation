@@ -4,6 +4,7 @@
 				<h1 class="section-title"><?php the_title(); ?></h1>
 			</div>
 		</section>
+
 		<?php	if( have_rows('layouts') ): $count = 0; ?>
 				<?php while ( have_rows('layouts') ) : the_row(); $count++;
 
