@@ -38,14 +38,12 @@ Template Name: Home
     </div> -->
   </section>
 
-  <section class="panel extra-padded home-overview">
+  <section class="panel extra-padded overview-panel">
     <div class="container">
       <div class="narrow-wrap">
-        <h1>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h1>
+        <h2>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h2>
 
-        <p>We are Vancouver Costal Health's primary philanthropic partner.</p>
-        <p>Your support enables us to provide the best hospital care to every adult British Columbian.</p>
-        <p>Our donors drive innovation and healthcare transformation.</p>
+        <p>We are Vancouver Costal Health's primary philanthropic partner. Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
         <p><a href="#" class="read-more">about the foundation</a></p>
 
       </div>
@@ -62,12 +60,12 @@ Template Name: Home
 
     <ul id="grid" class="grid">
         <li data-hover-title="The foundation funds care for cancer patients in a variety of ways" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg">
-            <a class="open" href="#"><span>Surgery</span></a>
+            <a class="open" href="#"><span>Surgical</span></a>
             <div class="overlay">
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/surgical" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>
@@ -77,7 +75,7 @@ Template Name: Home
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/cancer" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>
@@ -87,7 +85,7 @@ Template Name: Home
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/heart-lung" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>
@@ -97,7 +95,7 @@ Template Name: Home
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/brain-health" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>
@@ -107,7 +105,7 @@ Template Name: Home
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/innovation" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>
@@ -117,7 +115,7 @@ Template Name: Home
                 <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
                 <div class="copy">
                     <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="#" class="learn-more">Learn more</a></p>
+                    <p><a href="/themes/community" class="learn-more">Learn more</a></p>
                 </div>
             </div>
         </li>

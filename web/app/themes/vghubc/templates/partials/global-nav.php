@@ -58,16 +58,14 @@
         </div>
       </div>
     </nav>
-
-
-
-
-
-
   </div>
 </header>
 
-
-
-
-
+<?php if(get_post_type(get_the_ID()) == 'themes_post'): ?>
+<header id="sub-navigation">
+  <div class="container">
+  <h3><?php print get_the_title(get_the_ID()); ?></h3>
+  <a href="#" class="button top-donate">Donate to <?php print get_the_title(get_the_ID()); ?></a>
+  </div>
+</header>
+<?php endif; ?>

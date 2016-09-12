@@ -4,7 +4,7 @@
 add_filter('show_admin_bar', '__return_false');
 
 // Enable Menus
-add_theme_support( 'menus' );
+add_theme_support('menus');
 
 // Enable post Thumbnails
 //add_theme_support( 'post-thumbnails' );
@@ -22,6 +22,10 @@ add_theme_support( 'menus' );
 function custom_body_classes($classes) {
   is_front_page() ? $classes[] = 'front' : $classes[] = 'not-front';
 
+  if (get_post_type(get_the_ID()) == 'themes_post') {
+    $classes[] = 'theme-section-' . sanitize_title(get_the_title(get_the_ID()));
+  }
+
   return $classes;
 }
 add_filter('body_class','custom_body_classes');
@@ -29,7 +33,8 @@ add_filter('body_class','custom_body_classes');
 
 // Let's not overload the functions.php file... keep things separate
 require_once 'lib/assets.php'; // load the correct assets for cache busting
-
+require_once 'lib/post_types.php'; // custom post types
+require_once 'lib/visual_editor_styles.php'; // additional formatting options for the visual
 
 
 

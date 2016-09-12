@@ -1,5 +1,5 @@
 const $ = require('jquery');
-const Home = require('./modules/home');
+const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 
 class App {
 
@@ -20,6 +20,10 @@ class App {
 	behaviours () {
 		this.latestNavigation();
 		this.themesGrid();
+
+		if($('.single-themes_post').length){
+			this.fixedHeaderScroll = new FixedHeaderScroll();
+		}
 
 	}
 
@@ -94,7 +98,7 @@ class App {
 		const openItem = (e) => {
 			e.preventDefault();
 			sectionEl.addClass('expanded-overlay');
-			$(e.currentTarget).addClass('expanded');
+			$(e.currentTarget).parents('li').addClass('expanded');
 
 			$('html, body').animate({ scrollTop: gridEl.offset().top - $('#top-header').outerHeight()});
 		};
@@ -123,8 +127,8 @@ class App {
 			}
 		};
 
-		gridEl.on('click', 'li', openItem);
-		gridEl.on('click', 'li.expanded', closeItem);
+		gridEl.on('click', 'li .open', openItem);
+		gridEl.on('click', 'li .close', closeItem);
 
 		gridEl.on('mouseenter', 'li', mouseEnterItem);
 		gridEl.on('mouseleave', mouseLeaveItem);

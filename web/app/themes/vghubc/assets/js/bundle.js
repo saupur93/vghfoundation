@@ -9822,7 +9822,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var $ = require('jquery');
-var Home = require('./modules/home');
+var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 
 var App = function () {
 	function App() {
@@ -9846,6 +9846,10 @@ var App = function () {
 		value: function behaviours() {
 			this.latestNavigation();
 			this.themesGrid();
+
+			if ($('.single-themes_post').length) {
+				this.fixedHeaderScroll = new FixedHeaderScroll();
+			}
 		}
 
 		/**
@@ -9921,7 +9925,7 @@ var App = function () {
 			var openItem = function openItem(e) {
 				e.preventDefault();
 				sectionEl.addClass('expanded-overlay');
-				$(e.currentTarget).addClass('expanded');
+				$(e.currentTarget).parents('li').addClass('expanded');
 
 				$('html, body').animate({ scrollTop: gridEl.offset().top - $('#top-header').outerHeight() });
 			};
@@ -9949,8 +9953,8 @@ var App = function () {
 				}
 			};
 
-			gridEl.on('click', 'li', openItem);
-			gridEl.on('click', 'li.expanded', closeItem);
+			gridEl.on('click', 'li .open', openItem);
+			gridEl.on('click', 'li .close', closeItem);
 
 			gridEl.on('mouseenter', 'li', mouseEnterItem);
 			gridEl.on('mouseleave', mouseLeaveItem);
@@ -9962,7 +9966,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/home":3,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/fixedHeaderScroll":3,"jquery":1}],3:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -9971,41 +9975,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var $ = require('jquery');
 
-/**
- * Homepage JS
- */
+var FixedHeaderScroll = function () {
+	function FixedHeaderScroll() {
+		_classCallCheck(this, FixedHeaderScroll);
 
-var Home = function () {
-	function Home() {
-		_classCallCheck(this, Home);
-
+		// had to offset by 59 pixels because of pseudo element effect placed over top of the header image
+		this.navHeaderH = $('#top-header').outerHeight();
+		this.pageTop = $('.page-header').outerHeight() + this.navHeaderH;
 		this.events();
-		//this.$container = $('#main-content');
 	}
 
-	/**
-  * Event listeners
-  */
-
-
-	_createClass(Home, [{
+	_createClass(FixedHeaderScroll, [{
 		key: 'events',
-		value: function events() {}
-		//this.$container.on('click', '.post', this.doSomethingHandler.bind(this));
-
-
-		/**
-   * Do something click handler method
-   */
-
+		value: function events() {
+			$(window).on('scroll', this.handleScroll.bind(this));
+		}
 	}, {
-		key: 'doSomethingHandler',
-		value: function doSomethingHandler() {}
+		key: 'handleScroll',
+		value: function handleScroll(e) {
+			if (this.pageTop / 4 <= e.currentTarget.pageYOffset) {
+				$('body').addClass('fixed-sub-nav');
+			} else {
+				$('body').removeClass('fixed-sub-nav');
+			}
+		}
 	}]);
 
-	return Home;
+	return FixedHeaderScroll;
 }();
 
-module.exports = Home;
+module.exports = FixedHeaderScroll;
 
 },{"jquery":1}]},{},[2]);
