@@ -164,12 +164,15 @@ p {
 
 .single-themes_post {
 	#sub-navigation {
-		transform:translate3d(0, -45px, 1);
+		transform: translate3d(0, -45px, 1px);
 		transition: transform 0.25s linear;
 	}
 
 	&.fixed-sub-nav {
-		transform:translate3d(0, 0, 1);
+		#sub-navigation {
+			transform: translate3d(0, 0, 1px);
+
+		}
 	}
 }
 
