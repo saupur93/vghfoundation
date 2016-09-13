@@ -1442,31 +1442,70 @@ form {
 
 .panel.donation-panel {
 
+	.narrow-wrap {
+		max-width:795px;
+		margin:auto;
+	}
+
 	.donation-amounts {
 		color:$body-text;
 
 		span {
 			font-family:$font-bold;
 			@include font-size(55px);
-			margin-right:80px;
+			margin-right:70px;
+			float:left;
+			position:relative;
+			color:$body-text;
+			transition: color 0.3s linear;
+
+			&:hover, &.selected {
+				color:$brand-green;
+			}
+
+			&:after {
+				content:'';
+				width:1px;
+				height:51px;
+				display:block;
+				background-color:$body-text;
+				position:absolute;
+				top:15px;
+				right:-20px;
+			}
 		}
 
 		input {
 			display:inline-block;
 		}
 
-		input[name="other"] {
-			background:transparent;
-			border-bottom:6px solid $body-text;
-			@include font-size(55px);
-			padding:40px 0px;
-			width:100px;
+		span.other {
+			margin-right:35px;
+
+			&:after {
+				display:none;
+			}
 		}
 
-	form input[type="submit"] {
-		padding-left:20px;
-		padding-right:20px;
-	}
+		input[name="set.Value"] {
+			background:transparent;
+			border-bottom:3px solid $body-text;
+			@include font-size(55px);
+			padding:25px 0px;
+			width:90px;
+			min-width:0;
+			text-align:center;
+		}
+
+		input[type="submit"] {
+			padding-left:20px;
+			padding-right:20px;
+			margin-top:22px;
+		}
+
+		#submit {
+			display:none;
+		}
 
 	}
 }

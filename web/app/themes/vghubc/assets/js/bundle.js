@@ -9850,6 +9850,10 @@ var App = function () {
 			if ($('.single-themes_post').length) {
 				this.fixedHeaderScroll = new FixedHeaderScroll();
 			}
+
+			if ($('.donation-form').length) {
+				this.donationForm();
+			}
 		}
 
 		/**
@@ -9958,6 +9962,35 @@ var App = function () {
 
 			gridEl.on('mouseenter', 'li', mouseEnterItem);
 			gridEl.on('mouseleave', mouseLeaveItem);
+		}
+	}, {
+		key: 'donationForm',
+		value: function donationForm() {
+			var oneTimeURL = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
+			var formEl = $('.donation-form');
+
+			formEl.on('click', 'span[data-donation-level]', function (e) {
+				var donationAmount = $(e.currentTarget).data('donation-level');
+				formEl.find('input[name="set.Value"]').val('');
+				formEl.find('input[name="set.DonationLevel"]').attr('value', donationAmount);
+				formEl.find('span[data-donation-level]').removeClass('selected');
+				$(e.currentTarget).addClass('selected');
+			});
+
+			formEl.on('click', 'input[type="submit"]', function (e) {
+				e.preventDefault();
+				var formData = formEl.serialize();
+				console.log(formData);
+				if (formData.length) {
+					var link = oneTimeURL + '&' + formData;
+					$('#submit').attr('href', link);
+					document.getElementById('submit').click();
+				}
+			});
+
+			formEl.on('click', '.other', function () {
+				formEl.find('span[data-donation-level]').removeClass('selected');
+			});
 		}
 	}]);
 

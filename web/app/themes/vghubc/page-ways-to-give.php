@@ -40,13 +40,16 @@ Template Name: Ways to Give
   <section class="panel grey-bg padded-top donation-panel">
     <div class="container">
       <div class="narrow-wrap">
-        <form class="donation-amounts">
-          <span data-amount="$5">$5</span>
-          <span data-amount="$10">$10</span>
-          <span data-amount="$25">$25</span>
-          <span>$ <input type="text" name="other" /></span>
-          <input type="hidden" name="donationAmount" value="" />
+        <form class="donation-form donation-amounts">
+          <span data-donation-level="2081">$1,000</span>
+          <span data-donation-level="2084">$500</span>
+          <span data-donation-level="2086">$250</span>
+          <span data-donation-level="2082">$100</span>
+          <span data-donation-level="2083">$50</span>
+          <input type="hidden" name="set.DonationLevel" value="2085" />
+          <span class="other">$ <input type="text" name="set.Value" value="" /></span>
           <input type="submit" value="Make Donation" class="button grey" />
+          <a href="" target="_blank" id="submit"></a>
         </form>
       </div>
     </div>
