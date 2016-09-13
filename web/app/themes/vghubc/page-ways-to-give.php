@@ -20,11 +20,65 @@ Template Name: Ways to Give
       <div class="inner-wrap">
         <div class="header-copy">
           <h1><?php the_title(); ?></h1>
-          <p>Your donations are critical. And with the cost of medicine rising, they are also the only way for us to continue to ensure that our hospitals and health care teams can deliver BC’s best, most specialized care for adults.</p>
+          <p>The foundation is grateful to all of its donors who generously help to ensure our hospitals and health care teams deliver BC’s best care for adults. VGH UBC is pleased to recognize those who have donated $10,000 or more to advance healthcare, now and for generations to come.</p>
         </div>
       </div>
     </div>
   </section>
+
+
+  <section class="panel padded extra-padded overview-panel">
+    <div class="container">
+      <div class="narrow-wrap">
+        <h2>Give today.</h2>
+        <p class="intro">VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="panel grey-bg padded-top donation-panel">
+    <div class="container">
+      <div class="narrow-wrap">
+        <form class="donation-amounts">
+          <span data-amount="$5">$5</span>
+          <span data-amount="$10">$10</span>
+          <span data-amount="$25">$25</span>
+          <span>$ <input type="text" name="other" /></span>
+          <input type="hidden" name="donationAmount" value="" />
+          <input type="submit" value="Make Donation" class="button grey" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="panel padded three-column-list">
+    <article class="col-grid-4">
+      <img src="http://placehold.it/427x350" />
+      <div class="copy">
+        <h3>$5 Monthly</h3>
+        <p><a href="#" class="button green-keyline">Donate</a></p>
+      </div>
+    </article>
+
+    <article class="col-grid-4">
+      <img src="http://placehold.it/427x350/333333" />
+      <div class="copy">
+        <h3>$10 Monthly</h3>
+        <p><a href="#" class="button green-keyline">Donate</a></p>
+      </div>
+    </article>
+
+    <article class="col-grid-4">
+      <img src="http://placehold.it/427x350" />
+      <div class="copy">
+        <h3>$25 Monthly</h3>
+        <p><a href="#" class="button green-keyline">Donate</a></p>
+      </div>
+    </article>
+  </section>
+
 
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
