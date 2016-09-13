@@ -52,7 +52,9 @@ class DonationTabs {
 
 			let currentTab = $(e.currentTarget).data('tab');
 			$('[data-tab-content]').removeClass('active');
-			$('[data-tab-content]').eq(currentTab - 1).addClass('active');
+			$('[data-tab-content="' + currentTab + '"]').addClass('active');
+
+			// $('[data-tab-content]').eq(currentTab - 1).addClass('active');
 
 		};
 

@@ -41,7 +41,7 @@ Template Name: Ways to Give
     <ul class="tabs">
       <li class="active" data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1" data-tab="1">One-time Gift</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1660&mfc_pref=T&1660.donation=form1" data-tab="2">Monthly Giving</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1640&mfc_pref=T&1640.donation=form1" data-tab="3">Tribute</li>
     </ul>
-    <div class="container">
+    <div class="container active" data-tab-content="1">
       <div class="narrow-wrap">
         <form class="donation-form donation-amounts">
           <span data-donation-level="2081">$1,000</span>
@@ -57,8 +57,38 @@ Template Name: Ways to Give
       </div>
     </div>
 
+    <div class="container" data-tab-content="2">
+      <div class="narrow-wrap">
+        <form class="donation-form donation-amounts">
+          <span data-donation-level="2125">$50</span>
+          <span data-donation-level="2121">$25</span>
+          <span data-donation-level="2123">$10</span>
+          <span data-donation-level="2122">$20</span>
+          <input type="hidden" name="set.DonationLevel" value="2124" />
+          <span class="other">$ <input type="text" name="set.Value" value="" /></span>
+          <input type="submit" value="Make Donation" class="button grey" />
+          <a href="" target="_blank" id="submit"></a>
+        </form>
+      </div>
+    </div>
 
-    <section class="panel padded three-column-list active" data-tab-content=1">
+    <div class="container" data-tab-content="3">
+      <div class="narrow-wrap">
+        <form class="donation-form donation-amounts">
+          <span data-donation-level="2104">$1,000</span>
+          <span data-donation-level="2102">$500</span>
+          <span data-donation-level="2101">$250</span>
+          <span data-donation-level="2105">$100</span>
+          <span data-donation-level="2106">$50</span>
+          <input type="hidden" name="set.DonationLevel" value="2103" />
+          <span class="other">$ <input type="text" name="set.Value" value="" /></span>
+          <input type="submit" value="Make Donation" class="button grey" />
+          <a href="" target="_blank" id="submit"></a>
+        </form>
+      </div>
+    </div>
+
+    <section class="panel padded three-column-list active" data-tab-content="1">
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350" />
         <div class="copy">
@@ -86,7 +116,7 @@ Template Name: Ways to Give
 
 
 
-    <section class="panel padded three-column-list" data-tab-content=2">
+    <section class="panel padded three-column-list" data-tab-content="2">
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350" />
         <div class="copy">
@@ -113,7 +143,7 @@ Template Name: Ways to Give
     </section>
 
 
-    <section class="panel padded three-column-list" data-tab-content=3">
+    <section class="panel padded three-column-list" data-tab-content="3">
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350" />
         <div class="copy">
