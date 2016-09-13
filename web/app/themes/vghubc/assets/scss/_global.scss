@@ -1440,7 +1440,38 @@ form {
 }
 
 
-.panel.donation-panel {
+.panel.donation-panel-tabs {
+	position:relative;
+	[data-tab-content]{
+		display:none;
+
+		&.active {
+			display:table;
+		}
+	}
+
+	.tabs {
+		padding:0;
+		margin:0;
+		text-align:center;
+		margin-bottom:60px;
+		li {
+			display:inline-block;
+			padding:30px 50px;
+			background-color:#c4d9a2;
+			text-decoration:none;
+			text-transform:uppercase;
+			font-family:$font-bold;
+			color:#fff;
+			@include font-size(16px);
+			letter-spacing: 2px;
+			border-right:2px solid $lighter-grey;
+
+			&:hover, &.active {
+				background-color:$brand-green;
+			}
+		}
+	}
 
 	.narrow-wrap {
 		max-width:795px;

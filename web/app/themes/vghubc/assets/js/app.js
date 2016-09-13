@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
+const DonationTabs = require('./modules/donationTabs');
 
 class App {
 
@@ -10,7 +11,6 @@ class App {
 		console.log('%chttp://www.signals.ca', 'font: 200 16px Calibri;color:#CCC');
 
 		this.behaviours();
-
 
 	}
 
@@ -25,8 +25,8 @@ class App {
 			this.fixedHeaderScroll = new FixedHeaderScroll();
 		}
 
-		if ($('.donation-form').length) {
-			this.donationForm();
+		if ($('.donation-panel-tabs').length) {
+			this.donationTabs = new DonationTabs();
 		}
 
 	}
@@ -136,36 +136,6 @@ class App {
 
 		gridEl.on('mouseenter', 'li', mouseEnterItem);
 		gridEl.on('mouseleave', mouseLeaveItem);
-	}
-
-
-	donationForm () {
-		let oneTimeURL = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
-		const formEl = $('.donation-form');
-
-		formEl.on('click', 'span[data-donation-level]', e => {
-			let donationAmount = $(e.currentTarget).data('donation-level');
-			formEl.find('input[name="set.Value"]').val('');
-			formEl.find('input[name="set.DonationLevel"]').attr('value', donationAmount);
-			formEl.find('span[data-donation-level]').removeClass('selected');
-			$(e.currentTarget).addClass('selected');
-		});
-
-		formEl.on('click', 'input[type="submit"]', e => {
-			e.preventDefault();
-			let formData = formEl.serialize();
-			console.log(formData);
-			if(formData.length){
-				let link = oneTimeURL + '&' + formData;
-				$('#submit').attr('href', link);
-				document.getElementById('submit').click();
-			}
-		});
-
-		formEl.on('click', '.other', () => {
-			formEl.find('span[data-donation-level]').removeClass('selected');
-		});
-
 	}
 
 }

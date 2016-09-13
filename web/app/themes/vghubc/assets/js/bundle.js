@@ -9823,6 +9823,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var $ = require('jquery');
 var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
+var DonationTabs = require('./modules/donationTabs');
 
 var App = function () {
 	function App() {
@@ -9851,8 +9852,8 @@ var App = function () {
 				this.fixedHeaderScroll = new FixedHeaderScroll();
 			}
 
-			if ($('.donation-form').length) {
-				this.donationForm();
+			if ($('.donation-panel-tabs').length) {
+				this.donationTabs = new DonationTabs();
 			}
 		}
 
@@ -9963,10 +9964,39 @@ var App = function () {
 			gridEl.on('mouseenter', 'li', mouseEnterItem);
 			gridEl.on('mouseleave', mouseLeaveItem);
 		}
-	}, {
+	}]);
+
+	return App;
+}();
+
+window.App = new App();
+
+},{"./modules/donationTabs":3,"./modules/fixedHeaderScroll":4,"jquery":1}],3:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = require('jquery');
+
+var DonationTabs = function () {
+	function DonationTabs() {
+		_classCallCheck(this, DonationTabs);
+
+		this.donateUrl = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
+		this.panelTabs();
+
+		if ($('.donation-form').length) {
+			this.donationForm();
+		}
+	}
+
+	_createClass(DonationTabs, [{
 		key: 'donationForm',
 		value: function donationForm() {
-			var oneTimeURL = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
+			var _this = this;
+
 			var formEl = $('.donation-form');
 
 			formEl.on('click', 'span[data-donation-level]', function (e) {
@@ -9980,9 +10010,8 @@ var App = function () {
 			formEl.on('click', 'input[type="submit"]', function (e) {
 				e.preventDefault();
 				var formData = formEl.serialize();
-				console.log(formData);
 				if (formData.length) {
-					var link = oneTimeURL + '&' + formData;
+					var link = _this.donateUrl + '&' + formData;
 					$('#submit').attr('href', link);
 					document.getElementById('submit').click();
 				}
@@ -9992,14 +10021,35 @@ var App = function () {
 				formEl.find('span[data-donation-level]').removeClass('selected');
 			});
 		}
+	}, {
+		key: 'panelTabs',
+		value: function panelTabs() {
+			var _this2 = this;
+
+			var tabsEl = $('.donation-panel-tabs');
+
+			var changeTab = function changeTab(e) {
+				_this2.donateUrl = $(e.currentTarget).data('donate-url');
+				console.log(_this2.donateUrl);
+
+				$('[data-tab]').removeClass('active');
+				$(e.currentTarget).addClass('active');
+
+				var currentTab = $(e.currentTarget).data('tab');
+				$('[data-tab-content]').removeClass('active');
+				$('[data-tab-content]').eq(currentTab - 1).addClass('active');
+			};
+
+			tabsEl.on('click', '[data-tab]', changeTab);
+		}
 	}]);
 
-	return App;
+	return DonationTabs;
 }();
 
-window.App = new App();
+module.exports = DonationTabs;
 
-},{"./modules/fixedHeaderScroll":3,"jquery":1}],3:[function(require,module,exports){
+},{"jquery":1}],4:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();

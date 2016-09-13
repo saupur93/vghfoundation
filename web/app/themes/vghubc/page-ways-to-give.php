@@ -37,7 +37,10 @@ Template Name: Ways to Give
   </section>
 
 
-  <section class="panel grey-bg padded-top donation-panel">
+  <section class="panel grey-bg donation-panel-tabs">
+    <ul class="tabs">
+      <li class="active" data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1" data-tab="1">One-time Gift</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1660&mfc_pref=T&1660.donation=form1" data-tab="2">Monthly Giving</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1640&mfc_pref=T&1640.donation=form1" data-tab="3">Tribute</li>
+    </ul>
     <div class="container">
       <div class="narrow-wrap">
         <form class="donation-form donation-amounts">
@@ -53,34 +56,91 @@ Template Name: Ways to Give
         </form>
       </div>
     </div>
+
+
+    <section class="panel padded three-column-list active" data-tab-content=1">
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$5 One-time</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350/333333" />
+        <div class="copy">
+          <h3>$10 One-time</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$25 One-time</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+    </section>
+
+
+
+    <section class="panel padded three-column-list" data-tab-content=2">
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$5 Monthly</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350/333333" />
+        <div class="copy">
+          <h3>$10 Monthly</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$25 Monthly</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="panel padded three-column-list" data-tab-content=3">
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$5 In Tribute</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350/333333" />
+        <div class="copy">
+          <h3>$10 In Tribute</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="http://placehold.it/427x350" />
+        <div class="copy">
+          <h3>$25 In Tribute</h3>
+          <p><a href="#" class="button green-keyline">Donate</a></p>
+        </div>
+      </article>
+    </section>
+
   </section>
 
-
-  <section class="panel padded three-column-list">
-    <article class="col-grid-4">
-      <img src="http://placehold.it/427x350" />
-      <div class="copy">
-        <h3>$5 Monthly</h3>
-        <p><a href="#" class="button green-keyline">Donate</a></p>
-      </div>
-    </article>
-
-    <article class="col-grid-4">
-      <img src="http://placehold.it/427x350/333333" />
-      <div class="copy">
-        <h3>$10 Monthly</h3>
-        <p><a href="#" class="button green-keyline">Donate</a></p>
-      </div>
-    </article>
-
-    <article class="col-grid-4">
-      <img src="http://placehold.it/427x350" />
-      <div class="copy">
-        <h3>$25 Monthly</h3>
-        <p><a href="#" class="button green-keyline">Donate</a></p>
-      </div>
-    </article>
-  </section>
 
 
     <?php if( have_rows('layouts') ): $count = 0; ?>
