@@ -26,6 +26,27 @@ Template Name: Why Give
     </div>
   </section>
 
+
+  <section class="panel padded three-column-boxes">
+    <div class="container">
+      <div class="inner-wrap">
+        <h2 class="section-title">Urgent Needs</h2>
+        <article class="col-third">
+          <h3>Most Urgent Needs</h3>
+          <p>Support our hospitals by donating to the Most Urgent Needs Fund.</p>
+          <p class="bottom"><a href="#" class="read-more">Give Now</a></p>
+        </article>
+
+        <article class="col-third">
+          <h3>ALS Research</h3>
+          <p>Dr. Neil Cashman, one of the world’s renowned experts in brain and spinal cord degenerative diseases, is leading revolutionary research into how neurodegenerative diseases.</p>
+          <p class="bottom"><a href="#" class="read-more">Give Now</a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
 
