@@ -13,7 +13,7 @@ Template Name: Style Guide
           <nav>
             <ul>
               <li><a href="#headings">Headings</a></li>
-              <li><a href="#body-text">Body text</a></li>
+              <li><a href="#body-text">Body Text</a></li>
               <li><a href="#column-lists">Column & List</a></li>
               <li><a href="#brand-colours">Brand Colours</a></li>
               <li><a href="#theme-colours">Theme Colours</a></li>
@@ -37,7 +37,7 @@ Template Name: Style Guide
         </section>
 
         <section id="body-text" class="style-section">
-          <h1 class="section-title">Body styles</h1>
+          <h1 class="section-title">Body Text</h1>
           <p class="intro">Intro Paragraph. With your help, we can provide care to those who need it most.</p>
 
           <p>This is a paragraph with a <span class="highlighted-text">text highlight treatment</span>. quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptat</p>
