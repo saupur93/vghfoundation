@@ -106,6 +106,20 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 5.4.6-RC1 =
+* Gallery field: Fixed bug where open sidebar fields were saved to post
+* API: Fixed bug causing `get_row(true)` to return incorrect values
+* Field group: Fixed bug where radio input values were lost when duplicating a flexible content layout
+* Core: Added notice when PRO license fails to validate URL
+* Core: Fixed bug where conditional logic would incorrectly enable select elements
+* Core: Minor fixes and improvements
+
+= 5.4.5 =
+* API: Fixed bug in `acf_form()` where AJAX validation ignored 'post_title'
+* API: Improved `update_field()` when saving a new value (when reference value does not yet exist)
+* Core: Added search input & toggle to admin field groups list
+* Core: Fixed bug where preview values did not load for a draft post
+
 = 5.4.4 =
 * WYSIWYG field: Fixed JS error when 'Disable the visual editor when writing' is checked
 

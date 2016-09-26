@@ -20,7 +20,7 @@ body {
 	font-family:$font;
 	line-height:1.4;
 	font-weight:300;
-	color:#454545;
+	color:$body-text;
 }
 
 a{
@@ -70,7 +70,6 @@ p {
 }
 
 
-// admin link to help people edit pages when you disable the full admin bar
 .post-edit-link {
 	position:fixed;
 	background:#999;
@@ -98,6 +97,7 @@ p {
 	color:$body-text;
 	@include font-size(18px);
 	letter-spacing: 2px;
+	transition: all 0.3s linear;
 
 	&.white {
 		border:2px solid #fff;
@@ -108,12 +108,22 @@ p {
 		color:#fff;
 		background-color:$brand-green;
 		border:2px solid $brand-green;
+		&:hover {
+			color:#fff;
+			background-color:transparent;
+			color:$brand-green;
+		}
 	}
 
 	&.green-keyline {
 		border:2px solid $brand-green;
 		color:$brand-green;
 		background-color:transparent;
+		&:hover {
+			color:#fff;
+			background-color:$brand-green;
+			border:2px solid $brand-green;
+		}
 	}
 
 	&.grey {
@@ -591,6 +601,12 @@ p {
 	letter-spacing:2px;
 	border-bottom:1px solid $brand-green;
 	padding-bottom:8px;
+	transition: all 0.3s linear;
+
+	&:hover {
+		color:$light-grey;
+		border-bottom:1px solid $light-grey;
+	}
 }
 
 .panel {
@@ -613,15 +629,16 @@ p {
   	padding-top:200px;
   }
 
-
-  p.intro {
-  	@include font-size(24px);
-  }
-
   &.grey-bg {
   	background: $lighter-grey;
   }
 
+  .col-half {
+  	width:50%;
+  	float:left;
+  	padding-right:5%;
+  	margin-bottom:1rem;
+  }
 
 }
 
@@ -1246,8 +1263,8 @@ form {
 		float:left;
 		margin-top:14px;
 		margin-bottom:0;
-		@include font-size(18px);
 		color:#fff;
+		@include font-size(18px);
 		text-transform:uppercase;
 		letter-spacing:1px;
 	}
@@ -1623,6 +1640,79 @@ form {
 
 			&.bottom {
 				margin-bottom:0;
+			}
+		}
+	}
+}
+
+
+.style-guide {
+	padding-bottom:200px;
+
+	.container {
+		padding-left:20%;
+	}
+
+	.fixed-sidebar {
+		position:fixed;
+		width:20%;
+		margin-left:-20%;
+		padding-top:150px;
+		ul {
+			padding:0;
+			li {
+				padding:0;
+			}
+		}
+	}
+
+	.style-section {
+		padding-top:160px;
+		margin-bottom:-100px;
+
+	}
+
+	.section-title {
+		@include font-size(18px);
+		text-transform:uppercase;
+		letter-spacing:2px;
+		border-bottom:1px solid #ccc;
+		padding-bottom:20px;
+		margin-bottom:30px;
+		font-family:$font;
+	}
+
+	#headings {
+		h1, h2, h3, h4, h5 {
+			margin-bottom:30px;
+		}
+	}
+
+	#brand-colours {
+		img {
+			max-width:100%;
+			height:auto;
+			margin-top:2rem;
+			margin-bottom:1rem;
+		}
+	}
+}
+
+.fixed-sidebar {
+	ul {
+		padding:0;
+		margin:0;
+		li {
+			display:inline-block;
+			width:100%;
+			margin-bottom:10px;
+			a {
+				color:$body-text;
+				@include font-size(34px);
+				text-decoration:none;
+				&:hover {
+					color:$brand-green;
+				}
 			}
 		}
 	}
