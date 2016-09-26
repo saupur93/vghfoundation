@@ -1666,6 +1666,10 @@ form {
 			padding:0;
 			li {
 				padding:0;
+
+				&.active a {
+					color:$brand-green;
+				}
 			}
 		}
 	}

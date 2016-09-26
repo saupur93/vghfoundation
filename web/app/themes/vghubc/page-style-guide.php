@@ -52,7 +52,7 @@ Template Name: Style Guide
 
 
         <section id="column-lists" class="style-section">
-          <h1 class="section-title">Lists</h1>
+          <h1 class="section-title">Columns & Lists</h1>
 
           <div class="col-row">
             <div class="col-half">
