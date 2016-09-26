@@ -54,12 +54,15 @@ Template Name: Style Guide
         <section id="column-lists" class="style-section">
           <h1 class="section-title">Lists</h1>
 
-          <div class="col-half">
-            <p class="small">Two column. Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner.</p>
+          <div class="col-row">
+            <div class="col-half">
+              <p class="small">Two column. Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner.</p>
+            </div>
+            <div class="col-half">
+              <p class="small">Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
+            </div>
           </div>
-          <div class="col-half">
-            <p class="small">Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
-          </div>
+
 
           <h5>Unordered List:</h5>
           <ul>
