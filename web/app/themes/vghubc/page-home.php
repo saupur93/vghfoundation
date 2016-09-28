@@ -6,133 +6,138 @@ Template Name: Home
 
 
 <?php get_header(); ?>
-  <section class="hero-content panel" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home-hero-bg.jpg);">
+  <section class="hero-content panel slideshow">
+    <div class="slide-images">
+      <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/home-story.jpg);"></div><!--
+       --><div class="slide-bg slide-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home-hero-bg.jpg);"></div>
+    </div>
     <div class="container">
       <div class="inner-wrap">
-        <div class="hero-copy">
+        <div class="hero-copy" data-colour-type="surgery">
           <h1>what's vital?</h1>
-          <p>“I didn’t even realize how many things I wanted to do until I got diagnosed.”</p>
-          <p><a href="#" class="button white">Jaime's Story</a></p>
+          <div class="slide-text slide-1 active" data-colour-type="surgery">
+            <p class="intro">“The outstanding pre- and post-operative care I received was absolutely world-class.”</p>
+            <p><a href="#" class="read-more white">Umberto's Story</a></p>
+          </div>
+
+          <div class="slide-text slide-2" data-colour-type="cancer">
+            <p class="intro">“I didn’t even realize how many things I wanted to do until I got diagnosed.”</p>
+            <p><a href="#" class="read-more white">Jamie's Story</a></p>
+          </div>
 
           <ul class="slide-pager">
             <li class="active">1</li>
             <li>2</li>
-            <li>3</li>
-            <li>4</li>
           </ul>
         </div>
 
       </div>
-
-<!--       <div class="hero-copy">
-        <blockquote><span class="highlight-text-upper">“I didn’t even realize how many things</span><br>
-        <span class="highlight-text-upper">I wanted to do until I got diagnosed.”</span></blockquote>
-        <p><a href="#" class="button">Jaime's Story</a></p>
-      </div>
-
-      <h1>what’s <span class="green">v</span>ital to jaime</h1> -->
-
     </div>
-    <!-- <div class="down-arrow">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/img/down-arrow.svg" />
-    </div> -->
   </section>
 
   <section class="panel extra-padded overview-panel">
     <div class="container">
       <div class="narrow-wrap">
-        <h2>Together with your support, VGH UBC Hospital Foundation is <span class="highlighted-text">saving lives</span> in our community.</h2>
-
-        <p>We are Vancouver Costal Health's primary philanthropic partner. Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
-        <p><a href="#" class="read-more">about the foundation</a></p>
-
+        <div class="col-grid-6">
+          <p>Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner.</p>
+          <p><a href="#" class="read-more">about the foundation</a></p>
+        </div>
+        <div class="col-grid-6">
+          <p>Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="panel" id="themes-section">
-    <div class="hover-bg-image"></div>
-    <div class="container">
-      <div class="summary" data-default-title="Our donors provide funds essential to delivering BC’s best, most specialized care for adults.">
-        <h1>Our donors provide funds essential to delivering BC’s best, most specialized care for adults.</h1>
+    <div class="themes-items">
+      <div class="themes-item active surgery">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>What if complex surgery could be performed in a one-stop innovative hybrid space?</h2>
+          </div>
+        </div>
       </div>
+      <div class="themes-item cancer">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>What if we could detect cancer earlier with new revolutionary technology?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="themes-item heart-lung">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>What if we could revolutionize heart and lung surgery so it no longer required invasive procedures?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="themes-item innovation">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>Imagining a world where disease are cured through an innovative small needle.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="themes-item community">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>What if the continuum of care extended beyond the hospital walls and into the community?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="themes-item brain-health">
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="container">
+          <div class="summary">
+            <h5>How we can change lives together</h5>
+            <h2>When it’s a matter of brain health, what if our neurosurgeons depended on a revolutionary new procedure in order to save lives?</h2>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <ul id="grid" class="grid">
-        <li data-hover-title="The foundation funds care for cancer patients in a variety of ways" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg">
-            <a class="open" href="#"><span>Surgical</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/surgical" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+    <ul id="themes-menu">
+        <li class="surgery">
+          <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg" ?>
         </li>
-        <li data-hover-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849/000">
-            <a class="open" href="#"><span>Cancer</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/cancer" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+        <li class="cancer">
+          <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg" ?>
         </li>
-        <li data-hover-title="consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, " data-hover-image="http://placehold.it/1282x849/999">
-            <a class="open" href="#"><span>Heart & Lung</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/heart-lung" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+        <li class="heart-lung">
+          <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg" ?>
         </li>
-        <li data-hover-title="ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849">
-            <a class="open" href="#"><span>Brain Health</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/brain-health" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+        <li class="innovation">
+          <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg" ?>
         </li>
-        <li data-hover-title="Lorem ipsum dolor consectetur adipisicing elit, sed do eiusmod" data-hover-image="http://placehold.it/1282x849/666">
-            <a class="open" href="#"><span>Innovation</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/innovation" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+        <li class="community">
+          <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg" ?>
         </li>
-        <li data-hover-title="Lorem ipsum dolor sit amet, consectetur sed do eiusmod" data-hover-image="http://placehold.it/1282x849">
-            <a class="open" href="#"><span>Community</span></a>
-            <div class="overlay">
-                <a class="close" href="#"><svg class="icon close-x"><use xlink:href="#close-x" /></svg></a>
-                <div class="copy">
-                    <p>Patients are provided with educational materials and equipment to assist them in their recovery, breast cancer support group meetings, digital imaging tools for mammography, education and training for oncology staff, and emergency financial assistance for patients undergoing treatment.</p>
-                    <p><a href="/themes/community" class="learn-more">Learn more</a></p>
-                </div>
-            </div>
+        <li class="brain-health">
+          <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
+          <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg" ?>
         </li>
     </ul>
 
   </section>
 
-  <section class="panel" id="newsletter-signup">
-    <div class="container">
-        <p class="intro">Sign up and find out how your donations are making a difference.</p>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="submit" value="Subscribe" class="button green" />
-        </form>
-      </div>
-  </section>
+
 
 	<section class="main-content">
 		<div class="container">

@@ -102,6 +102,11 @@ p {
 	&.white {
 		border:2px solid #fff;
 		color:#fff;
+
+		&:hover {
+			background-color:#fff;
+			color:$brand-green;
+		}
 	}
 
 	&.green {
@@ -217,6 +222,7 @@ p {
 				content: '/';
 				color:#979797;
 				@include font-size(11px);
+				font-family:$font-bold;
 				position:absolute;
 				top:5px;
 				left:-20px;
@@ -232,16 +238,16 @@ p {
 		li {
 			&.menu-item-has-children {
 				position: relative;
-				&:after {
-					content:'';
-					background:url(../img/carret.svg) no-repeat;
-					display:inline-block;
-					position:relative;
-					top:4px;
-					right:-2px;
-					width:10px;
-					height:10px;
-				}
+				// &:after {
+				// 	content:'';
+				// 	background:url(../img/carret.svg) no-repeat;
+				// 	display:inline-block;
+				// 	position:relative;
+				// 	top:4px;
+				// 	right:-2px;
+				// 	width:10px;
+				// 	height:10px;
+				// }
 				.sub-menu {
 					background:#f8f8f8;
 					display:inline-block;
@@ -318,62 +324,81 @@ p {
 	}
 }
 
-#latest-menu {
-	float:right;
-	// margin-top:20px;
+#top-header {
+	.big-donate {
+		position:absolute;
+		right:20px;
+		top:20px;
+		bottom:20px;
+		// height:100%;
+		border:0;
+		padding:0px 55px;
+		line-height:3.5;
 
+		&:hover {
+			background-color:$light-grey;
+			color:#fff;
+		}
+	}
 	#toggleLatest {
 		margin-right:30px;
 		position:relative;
-		display:inline-block;
-		padding-bottom:3px;
+
+
 		&:after {
 				content:'';
-				background:url(../img/carret.svg) no-repeat;
+				background:url(../img/carret-line.svg) no-repeat;
 				display:inline-block;
 				position:relative;
-				top:4px;
+				top:2px;
 				right:-7px;
-				width:10px;
-				height:10px;
+				width:8px;
+				height:8px;
+				background-size:contain;
 			}
 	}
 
 	.latest-open & {
 		#toggleLatest {
-			border-bottom:1px solid $body-text;
 			color:$brand-green;
 		}
 	}
-
-	.utility-menu {
-		margin:0;
-		margin-top:20px;
-		padding:0;
-		margin-left:60px;
-
-		li {
-			display:inline-block;
-			margin-left:35px;
-			position:relative;
-
-			&:before {
-				content: '/';
-				color:#979797;
-				@include font-size(11px);
-				position:absolute;
-				top:5px;
-				left:-23px;
-			}
-
-			&:first-child {
-				&:before {
-					display:none;
-				}
-			}
-		}
-	}
 }
+
+
+
+// #latest-menu {
+// 	float:right;
+// 	// margin-top:20px;
+
+// 	.utility-menu {
+// 		margin:0;
+// 		margin-top:20px;
+// 		padding:0;
+// 		margin-left:60px;
+
+// 		li {
+// 			display:inline-block;
+// 			margin-left:35px;
+// 			position:relative;
+
+// 			&:before {
+// 				content: '/';
+// 				color:#979797;
+// 				@include font-size(11px);
+// 				position:absolute;
+// 				top:5px;
+// 				left:-23px;
+// 			}
+
+// 			&:first-child {
+// 				&:before {
+// 					display:none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 
 
@@ -598,14 +623,20 @@ p {
 	text-decoration:none;
 	@include font-size(18px);
 	color:$brand-green;
-	letter-spacing:2px;
 	border-bottom:1px solid $brand-green;
+	letter-spacing:2px;
 	padding-bottom:8px;
 	transition: all 0.3s linear;
+	font-family:$font-med;
 
 	&:hover {
 		color:$light-grey;
 		border-bottom:1px solid $light-grey;
+	}
+
+	&.white {
+		color:#fff;
+		border-bottom:1px solid #fff;
 	}
 }
 
@@ -669,10 +700,6 @@ span.highlighted-text {
 	height:calc(100vh - 70px);
 	position:relative;
 	padding-top:100px;
-	background-repeat: no-repeat;
-	background-size:cover;
-	background-position:50% 100px;
-	// margin-top:100px;
 
 	.container {
 		position:relative;
@@ -687,14 +714,34 @@ span.highlighted-text {
     position: absolute;
     bottom:-70px;
     width:50%;
-    min-height:400px;
+    min-height:375px;
     padding:60px 60px 30px 60px;
   	@include font-size(38px);
   	color:#fff;
-
   	margin:0;
   	display:inline;
   	background:$brand-green;
+  	transition:background 1s linear;
+
+		&[data-colour-type="surgery"] {
+			background-color:$surgery;
+		}
+		&[data-colour-type="cancer"] {
+			background-color:$cancer;
+		}
+		&[data-colour-type="heartlung"] {
+			background-color:$heartlung;
+		}
+		&[data-colour-type="brainhealth"] {
+			background-color:$brainhealth;
+		}
+		&[data-colour-type="innovation"] {
+			background-color:$innovation;
+		}
+		&[data-colour-type="community"] {
+			background-color:$community;
+		}
+
 
   	&:after {
   		content:'';
@@ -715,19 +762,56 @@ span.highlighted-text {
 	}
 
 	h1 {
-		margin-top:-120px;
+		margin-top:-135px;
 		margin-bottom:1rem;
 		color:#fff;
 		@include font-size(96px);
 		font-family: 'Karbon-Semibold';
 	}
+}
 
+.panel.slideshow {
 
+	.slide-images {
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		z-index:0;
+		white-space:nowrap;
+		overflow: hidden;
+
+		.slide-bg {
+			width:100%;
+			height:100%;
+			background-repeat: no-repeat;
+			background-size:cover;
+			background-position:50% 100px;
+			display:inline-block;
+			transition: transform 1s ease-in-out;
+		}
+
+	}
+
+	.slide-text {
+		opacity:0;
+		visibility:hidden;
+		height:0;
+
+		&.active {
+			opacity:1;
+			visibility:visible;
+			height:auto;
+		}
+
+	}
 
 	.slide-pager {
-		padding:0;
+		padding:0px;
 		margin: 0;
-		margin-top:-1rem;
+		position:absolute;
+		bottom:20px;
+
 		li {
 			display:inline-block;
 			font: 0/0 a;
@@ -746,24 +830,9 @@ span.highlighted-text {
 		}
 	}
 
-	// .down-arrow {
-	// 	background:transparent;
-	// 	transition: background 0.3s linear;
-	// 	width:100%;
-	// 	padding:10px 0 3px 0;
-	// 	text-align:center;
-	// 	position:absolute;
-	// 	left:0;
-	// 	right:0;
-	// 	bottom:0;
-
-	// 	&:hover {
-	// 		background:$brand-green;
-	// 	}
-	// }
 }
 
-.overview-panel {
+.panel.overview-panel {
 	margin-top:60px;
 	.col-grid-6:first-child {
 		padding-right:40px;
@@ -786,11 +855,10 @@ svg.icon.close-x {
 }
 
 #themes-section {
-	background-image:url(../img/home-themes-bg.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
 	color:#fff;
-	padding:26.5rem 0 0;
+	height:100vh;
 	position:relative;
 
 	&.expanded-overlay {
@@ -804,19 +872,18 @@ svg.icon.close-x {
 			content:'';
 		}
 	}
-
 	.container {
-		position:absolute;
-		left:0;
-		right:0;
-	}
+		position:relative;
+		.summary {
+			width:55%;
+			color: #fff;
+    	line-height: 1.5;
 
-	.summary {
-		float: left;
-    width: calc(55% - 3.5rem);
-    color: #fff;
-    padding-top:2rem;
-    line-height: 1.5;
+			h5 {
+				display:inline-block;
+				padding:5px 10px;
+			}
+		}
 	}
 
 	.hover-bg-image {
@@ -831,110 +898,171 @@ svg.icon.close-x {
 		z-index:0;
 	}
 
-	.grid {
- 		float: right;
-    width: calc(33.3% + 3.5rem);
+	.themes-items {
+		.themes-item {
+			display:none;
+
+			.container {
+				transform: translateY(-50%);
+    		padding-top: 50%;
+
+			}
+
+			&.active {
+				display:block;
+			}
+
+	    &.surgery {
+	    	h5 {
+					background-color:$surgery;
+	    	}
+	    }
+	    &.cancer {
+	    	h5 {
+					background-color:$cancer;
+	    	}
+	    }
+			&.heart-lung {
+				h5 {
+					background-color:$heartlung;
+				}
+			}
+			&.innovation {
+				h5 {
+					background-color:$brainhealth;
+				}
+			}
+			&.community {
+				h5 {
+					background-color:$innovation;
+				}
+			}
+			&.brain-health {
+				h5 {
+					background-color:$community;
+				}
+			}
+
+
+		}
+	}
+
+	#themes-menu {
+ 		position:absolute;
+    width: 100%;
     list-style: none;
-    margin: 0 0 -2.5rem;
+    bottom:0;
+    padding:0;
+    margin:0;
+    left:0;
+    right:0;
+	  height:16.666vw;
 
     li {
 	    position: relative;
-	    width: 50%;
+	    width: 16.666vw;
+	    height:100%;
 	    float: left;
-	    transition: all 0.2s cubic-bezier(0.28, 0, 0.18, 1);
+	    transition: opacity 0.2s cubic-bezier(0.28, 0, 0.18, 1);
 	    z-index: 1;
-	    &:before {
-    		content: "";
-    		display: block;
-    		padding-top: 75%;
+	    margin-bottom:0;
+
+
+
+	    &:after {
+	    	content:'';
+	    	display:block;
+	    	width:100%;
+	    	height:100%;
+	    	position:absolute;
+	    	transform: scale(1);
+	    	top:0;
+	    	left:0;
+	    	right:0;
+	    	bottom:0;
+	    	z-index:-1;
+	    	transition: transform 0.2s cubic-bezier(0.28, 0, 0.18, 1)
 	    }
 
 	    &:hover {
-		    transform: scale(1.1);
     		z-index: 2;
+
+    		a {
+    			z-index:222;
+    		}
+
+    		&:after {
+    			opacity:1;
+    			transform: scale(1.1);
+    		}
+
+    		.thumb {
+    			opacity:0;
+    		}
 	    }
 
-			&.expanded {
-				transform: scale(1);
-				z-index: 3;
-
-				.copy {
-					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 0.8s;
-					visibility: visible;
-					opacity: 1;
-					top: 0;
+	    &.surgery {
+	    	&:after {
+					background-color:$surgery;
 				}
-
-				.close {
-					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 1.2s;
-					opacity:1;
-					visibility:visible;
-				}
-
-				.overlay {
-					transition: all 0.4s cubic-bezier(0.28, 0, 0.18, 1) 0.2s;
-					visibility: visible;
-					opacity: 1;
-					width: 200%;
-					height: 300%;
-					padding: 6.75rem 2.75rem;
-					background-color:inherit;
-				}
-			}
-
-	    &:nth-child(1){
-				background-color:$surgery;
-				.overlay {
-					top: 0;
-	        left: 0;
-	      }
 	    }
-	    &:nth-child(2){
-				background-color:$cancer;
-				.overlay {
-					top: 0;
-	        right: 0;
-	      }
+	    &.cancer {
+	    	&:after {
+					background-color:$cancer;
+				}
 	    }
-			&:nth-child(3) {
-				background-color:$heartlung;
-				.overlay {
-					top: 0;
-	        left: 0;
-	        margin-top:-75%;
-	      }
+			&.heart-lung {
+				&:after {
+					background-color:$heartlung;
+				}
 			}
-			&:nth-child(4) {
-				background-color:$brainhealth;
-				.overlay {
-					top: 0;
-	        right: 0;
-	        margin-top:-100%;
-	      }
+			&.innovation {
+				&:after {
+					background-color:$innovation;
+				}
 			}
-			&:nth-child(5) {
-				background-color:$innovation;
-				.overlay {
-					bottom: 0;
-	        left: 0;
-	      }
+			&.community {
+				&:after {
+					background-color:$community;
+				}
 			}
-			&:nth-child(6) {
-				background-color:$community;
-				.overlay {
-					bottom: 0;
-	        right: 0;
-	      }
+			&.brain-health {
+				&:after {
+					background-color:$brainhealth;
+				}
+			}
+
+			.thumb {
+				width:100%;
+				left:0;
+				right:0;
+				bottom:0;
+				position:absolute;
+				background-size:cover;
+				opacity:1;
+				transition: opacity 0.2s linear;
 			}
 
 	    span {
+	    	padding:15px 20px;
+	    	width:100%;
+	    	left:0;
+	    	right:0;
+	    	top:0;
 				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
 				transition: all 0.2s cubic-bezier(0.28, 0, 0.18, 1);
-				visibility: visible;
-				opacity: 1;
+
+				&.read-more {
+					color:#fff;
+					border-color:#fff;
+					top:auto;
+					bottom:25px;
+					left:20px;
+					right:auto;
+					padding:0;
+					padding-bottom:8px;
+					width:auto;
+				}
 	    }
 
 	    a {
@@ -948,48 +1076,11 @@ svg.icon.close-x {
 		    right: 0;
 		    bottom: 0;
 		    color: #fff;
-		    @include font-size(16px);
+		    @include font-size(24px);
 				text-transform:uppercase;
 				font-family:$font-bold;
 				text-decoration:none;
 				letter-spacing:1px;
-	    }
-
-	    .overlay {
-				position: absolute;
-		    width: 100%;
-		    height: 100%;
-		    visibility: hidden;
-		    opacity: 0;
-
-		    p {
-		    	@include font-size(24px);
-		    	line-height:1.33;
-		    }
-
-				.learn-more {
-					text-transform:uppercase;
-					text-decoration:none;
-					@include font-size(24px);
-					color:#fff;
-					letter-spacing:1px;
-					float:left;
-				}
-	    }
-
-	    .copy {
-				color: #fff;
-		    visibility: hidden;
-		    opacity: 0;
-		    top: 2rem;
-	    }
-
-	    .close {
-	    	opacity:0;
-	    	visibility: hidden;
-	    	color: #fff;
-	    	position:absolute;
-	    	top:2.5rem;
 	    }
     }
 
@@ -1097,7 +1188,7 @@ form {
 	}
 
 	.green-text {
-		h4, a {
+		a {
 			color:$brand-green;
 		}
 	}
@@ -1284,10 +1375,7 @@ form {
 	}
 }
 
-.single-themes_post {
-
-}
-.theme-section-surgical {
+.theme-section-surgery {
 	#sub-navigation {
 		background-color: $surgery;
 	}

@@ -10,6 +10,11 @@
       Phone:  604 875 4676<br>
       Toll Free:  1 877 875 4676</p>
 
+
+      <h4>Address</h4>
+      <p>190-855 West 12th Avenue<br>
+      Vancouver, BC V5Z 1M9  Canada</p>
+
       <p>Charity Number 132173063RR0001</p>
 
     </div>
@@ -45,9 +50,9 @@
 
   </div>
   <div class="container bottom-line">
-    <p class="copyright">© <?php print date('Y'); ?> VCG & UBC Hospital Foundation. All rights reserved.</p>
+    <p class="copyright">© <?php print date('Y'); ?> VGH & UBC Hospital Foundation. All rights reserved.</p>
     <div class="footer-secondary-menu">
-      <a href="#">Terms Of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
+      <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
     </div>
   </div>
 </footer>

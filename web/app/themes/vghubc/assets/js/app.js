@@ -1,6 +1,7 @@
-const $ = require('jquery');
+import $ from 'jquery';
 const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 const DonationTabs = require('./modules/donationTabs');
+import slideshow from './modules/slideshow';
 
 class App {
 
@@ -32,6 +33,13 @@ class App {
 		if ($('.fixed-sidebar').length) {
 			this.anchorStickyNav();
 		}
+
+		if ($('.slideshow').length) {
+			$('.slideshow').each((i, elm) => {
+				slideshow.init(elm);
+			});
+		}
+
 
 	}
 
@@ -87,7 +95,7 @@ class App {
 	 */
 	themesGrid () {
 		const sectionEl = $('#themes-section');
-		const gridEl = $('#grid');
+		const gridEl = $('#themes-menu');
 
     const preloadImage = url => {
 			try {
@@ -97,49 +105,24 @@ class App {
 				console.log(e);
 			}
     };
-		gridEl.find('li').each(function () {
+		sectionEl.find('.hover-bg-image').each(function () {
 			let imageURL = $(this).data('hover-image');
 			preloadImage(imageURL);
 		});
 
-
-		const openItem = (e) => {
-			e.preventDefault();
-			sectionEl.addClass('expanded-overlay');
-			$(e.currentTarget).parents('li').addClass('expanded');
-
-			$('html, body').animate({ scrollTop: gridEl.offset().top - $('#top-header').outerHeight()});
-		};
-
-		const closeItem = (e) => {
-			e.preventDefault();
-			gridEl.find('.expanded').removeClass('expanded');
-			sectionEl.removeClass('expanded-overlay');
-		};
-
 		const mouseEnterItem = (e) => {
-			let hoverTitle = $(e.currentTarget).data('hover-title');
-			let hoverImage = $(e.currentTarget).data('hover-image');
 			sectionEl.addClass('hovered-on');
-			sectionEl.find('.summary').empty().append(`<h1>${hoverTitle}</h1>`);
-			sectionEl.find('.hover-bg-image').css('background-image', `url(${hoverImage})`);
-
+			let index = $(e.currentTarget).index();
+			sectionEl.find('.themes-item').removeClass('active');
+			sectionEl.find('.themes-item').eq(index).addClass('active');
 		};
 
 		const mouseLeaveItem = () => {
 			sectionEl.removeClass('hovered-on');
-			if (!sectionEl.hasClass('expanded-overlay')) {
-				let defaultTitle = sectionEl.find('.summary').data('default-title');
-				sectionEl.find('.summary').empty().append(`<h1>${defaultTitle}</h1>`);
-				sectionEl.find('.hover-bg-image').removeAttr('style');
-			}
 		};
 
-		gridEl.on('click', 'li .open', openItem);
-		gridEl.on('click', 'li .close', closeItem);
-
 		gridEl.on('mouseenter', 'li', mouseEnterItem);
-		gridEl.on('mouseleave', mouseLeaveItem);
+
 	}
 
 
@@ -177,17 +160,11 @@ class App {
 		    var id = cur && cur.length ? cur[0].id : "";
 
 		    if (lastId !== id) {
-		        lastId = id;
-		        // Set/remove active class
-		        menuItems
-		            .parent().removeClass("active")
-		            .end().filter('[href="#' + id + '"]').parent().addClass("active");
+					lastId = id;
 
-		        // if (history.replaceState) {
-		        //     history.replaceState(null, null, $location.path() +'#'+ id);
-		        // } else {
-		        //     location.hash = target;
-		        // }
+					menuItems
+					    .parent().removeClass("active")
+					    .end().filter('[href="#' + id + '"]').parent().addClass("active");
 		    }
 		});
 

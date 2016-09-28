@@ -17,6 +17,7 @@
           'container'   => '',
           'items_wrap'  => '%3$s'
         )); ?>
+        <li><a href="#" id="toggleLatest">Latest</a></li>
       </ul>
 
       <ul id="language-switcher">
@@ -25,32 +26,29 @@
       </ul>
     </nav>
 
-    <nav id="latest-menu">
-      <ul class="utility-menu">
-        <li><a href="/donate">Donate</a></li>
-        <li><a href="#" id="toggleLatest">Latest</a></li>
-      </ul>
+    <a class="button green big-donate" href="/donate">Donate</a>
 
+    <nav id="latest-menu">
       <div id="latest-highlights">
-        <div class="highlight highlight-1" style="background-image:url(http://www.fillmurray.com/400/160);">
+        <div class="highlight highlight-1" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/1.jpg);">
           <a href="#">
             <h2>THE RECYCLE RIDE FOR TRANSPLANT RESEARCH</h2>
             <span class="read-more">Read article</span>
           </a>
         </div>
-        <div class="highlight highlight-2" style="background-image:url(http://www.fillmurray.com/g/400/160);">
+        <div class="highlight highlight-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/2.jpg);">
           <a href="#">
             <h2>NEW LIFE INJECTED IN TB WARD AT VGH</h2>
             <span class="read-more">Read article</span>
           </a>
         </div>
-        <div class="highlight highlight-3" style="background-image:url(http://www.fillmurray.com/400/160);">
+        <div class="highlight highlight-3" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/3.jpg);">
           <a href="#">
             <h2>RECORD-BREAKING SERIES RETURNS WITH SECOND SEASON</h2>
             <span class="read-more">Read article</span>
           </a>
         </div>
-        <div class="highlight highlight-4" style="background-image:url(http://www.fillmurray.com/g/400/160);">
+        <div class="highlight highlight-4" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/4.jpg);">
           <a href="#">
             <h2>NEW ICU BEDS OPEN AT VGH WITH SUPPORT FROM TECK</h2>
             <span class="read-more">Read article</span>
