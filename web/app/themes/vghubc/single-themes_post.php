@@ -7,20 +7,32 @@
 	      <div class="inner-wrap">
 	        <div class="header-copy">
 	          <h1><?php the_title(); ?></h1>
-	          <p>We aim to find cancers early, and treat them with the most advanced and minimally-invasive techniques so that patients experience less side-effects and return home sooner.</p>
+	          <p class="intro">We aim to find cancers early, and treat them with the most advanced techniques.</p>
 	        </div>
 	      </div>
 	    </div>
 	  </section>
 
-    <section class="panel padded extra-padded overview-panel">
+
+
+    <section class="panel extra-padded overview-panel sidebar-right">
       <div class="container">
-        <div class="narrow-wrap">
-          <h2>Transforming cancer care</h2>
-          <p class="intro">Whether it's innovative radiation methods, new chemotherapy treatments or state-of-the-art imaging techniques, our specialists are transforming care and saving lives at home and around the world. Your support enables us to bring these innovative treatments to patients sooner.</p>
+        <div class="inner-wrap">
+          <div class="col-grid-9">
+            <p>Whether it's innovative radiation methods, new chemotherapy treatments or state-of-the-art imaging techniques, our specialists are transforming care and saving lives at home and around the world. Your support enables us to bring these innovative treatments to patients sooner.</p>
+          </div>
+          <div class="col-grid-3">
+            <h4>Cases for Support</h4>
+            <ul class="small">
+              <li>Last year 32 survivors and patients attended support groups</li>
+              <li>Last year 32 survivors and patients attended support groups</li>
+              <li>Last year 32 survivors and patients attended support groups</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
+
 
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
@@ -55,7 +67,7 @@
       </section>
 
     <?php endif; ?>
-
+<!--
 			<section class="panel themes-pagination">
 				<div class="container">
 					<div class="inner-wrap">
@@ -76,7 +88,7 @@
           </div>
         </div>
       </footer>
-
+ -->
 
   </div>
 

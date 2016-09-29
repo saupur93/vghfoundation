@@ -10241,178 +10241,229 @@ var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 var DonationTabs = require('./modules/donationTabs');
 
 var App = function () {
-	function App() {
-		_classCallCheck(this, App);
+  function App() {
+    _classCallCheck(this, App);
 
-		// just some console fun.
-		console.log('%cBuilt by', 'font: 200 16px Calibri;color:#CCC');
-		console.log('%cSignals', 'font: 200 28px Calibri;color:#93cb3c');
-		console.log('%chttp://www.signals.ca', 'font: 200 16px Calibri;color:#CCC');
+    // just some console fun.
+    console.log('%cBuilt by', 'font: 200 16px Calibri;color:#CCC');
+    console.log('%cSignals', 'font: 200 28px Calibri;color:#93cb3c');
+    console.log('%chttp://www.signals.ca', 'font: 200 16px Calibri;color:#CCC');
 
-		this.behaviours();
-	}
+    this.behaviours();
+  }
 
-	/**
-  * load Classes based on body CSS class
-  */
-
-
-	_createClass(App, [{
-		key: 'behaviours',
-		value: function behaviours() {
-			this.latestNavigation();
-			this.themesGrid();
-
-			if ((0, _jquery2.default)('.single-themes_post').length) {
-				this.fixedHeaderScroll = new FixedHeaderScroll();
-			}
-
-			if ((0, _jquery2.default)('.donation-panel-tabs').length) {
-				this.donationTabs = new DonationTabs();
-			}
-
-			if ((0, _jquery2.default)('.fixed-sidebar').length) {
-				this.anchorStickyNav();
-			}
-
-			if ((0, _jquery2.default)('.slideshow').length) {
-				(0, _jquery2.default)('.slideshow').each(function (i, elm) {
-					_slideshow2.default.init(elm);
-				});
-			}
-		}
-
-		/**
-   * latest news navigation menu animations
+  /**
+   * load Classes based on body CSS class
    */
 
-	}, {
-		key: 'latestNavigation',
-		value: function latestNavigation() {
-			var latestToggle = document.getElementById('toggleLatest');
-			var scrolled = false;
 
-			var toggleFunction = function toggleFunction() {
-				scrolled = false;
-				(0, _jquery2.default)('body').toggleClass('latest-open');
-				(0, _jquery2.default)('body').toggleClass('latest-closed');
+  _createClass(App, [{
+    key: 'behaviours',
+    value: function behaviours() {
+      this.latestNavigation();
+      this.themesGrid();
 
-				if ((0, _jquery2.default)('body').hasClass('latest-closed')) {
-					setTimeout(function () {
-						(0, _jquery2.default)('body').addClass('latest-closed-finished');
-						scrolled = true;
-					}, 400);
-				}
+      if ((0, _jquery2.default)('.single-themes_post').length) {
+        this.fixedHeaderScroll = new FixedHeaderScroll();
+      }
 
-				if ((0, _jquery2.default)('body').hasClass('latest-closed-finished')) {
-					(0, _jquery2.default)('body').removeClass('latest-closed-finished');
-				}
+      if ((0, _jquery2.default)('.donation-panel-tabs').length) {
+        this.donationTabs = new DonationTabs();
+      }
 
-				return false;
-			};
+      if ((0, _jquery2.default)('.fixed-sidebar').length) {
+        this.anchorStickyNav();
+      }
 
-			if ((0, _jquery2.default)('body').hasClass('front')) {
-				setTimeout(function () {
-					(0, _jquery2.default)('body').toggleClass('latest-open');
-				}, 400);
-			} else {
-				scrolled = true;
-				(0, _jquery2.default)('body').toggleClass('latest-closed');
-				(0, _jquery2.default)('body').addClass('latest-closed-finished');
-			}
+      if ((0, _jquery2.default)('.slideshow').length) {
+        (0, _jquery2.default)('.slideshow').each(function (i, elm) {
+          _slideshow2.default.init(elm);
+        });
+      }
 
-			latestToggle.onclick = toggleFunction;
+      if ((0, _jquery2.default)('.themes-overview-stats').length) {
+        var options = {
+          menuEl: '.tabs-menu',
+          contentEl: '.tab-content',
+          tabItem: '[data-tab-item]'
+        };
+        this.themesTabs(options);
+      }
+    }
 
-			(0, _jquery2.default)(window).on('scroll', function () {
-				if (!scrolled) toggleFunction();
-				scrolled = true;
-			});
-		}
+    /**
+     * latest news navigation menu animations
+     */
 
-		/**
-   * Homepage themes grid expansion animations
-   */
+  }, {
+    key: 'latestNavigation',
+    value: function latestNavigation() {
+      var latestToggle = document.getElementById('toggleLatest');
+      var scrolled = false;
 
-	}, {
-		key: 'themesGrid',
-		value: function themesGrid() {
-			var sectionEl = (0, _jquery2.default)('#themes-section');
-			var gridEl = (0, _jquery2.default)('#themes-menu');
+      var toggleFunction = function toggleFunction() {
+        scrolled = false;
+        (0, _jquery2.default)('body').toggleClass('latest-open');
+        (0, _jquery2.default)('body').toggleClass('latest-closed');
 
-			var preloadImage = function preloadImage(url) {
-				try {
-					var loadingImg = new Image();
-					loadingImg.src = url;
-				} catch (e) {
-					console.log(e);
-				}
-			};
-			sectionEl.find('.hover-bg-image').each(function () {
-				var imageURL = (0, _jquery2.default)(this).data('hover-image');
-				preloadImage(imageURL);
-			});
+        if ((0, _jquery2.default)('body').hasClass('latest-closed')) {
+          setTimeout(function () {
+            (0, _jquery2.default)('body').addClass('latest-closed-finished');
+            scrolled = true;
+          }, 400);
+        }
 
-			var mouseEnterItem = function mouseEnterItem(e) {
-				sectionEl.addClass('hovered-on');
-				var index = (0, _jquery2.default)(e.currentTarget).index();
-				sectionEl.find('.themes-item').removeClass('active');
-				sectionEl.find('.themes-item').eq(index).addClass('active');
-			};
+        if ((0, _jquery2.default)('body').hasClass('latest-closed-finished')) {
+          (0, _jquery2.default)('body').removeClass('latest-closed-finished');
+        }
 
-			var mouseLeaveItem = function mouseLeaveItem() {
-				sectionEl.removeClass('hovered-on');
-			};
+        return false;
+      };
 
-			gridEl.on('mouseenter', 'li', mouseEnterItem);
-		}
+      if ((0, _jquery2.default)('body').hasClass('front')) {
+        setTimeout(function () {
+          (0, _jquery2.default)('body').toggleClass('latest-open');
+        }, 400);
+      } else {
+        scrolled = true;
+        (0, _jquery2.default)('body').toggleClass('latest-closed');
+        (0, _jquery2.default)('body').addClass('latest-closed-finished');
+      }
 
-		/**
-   * Anchor Sticky Nav
-   */
+      latestToggle.onclick = toggleFunction;
 
-	}, {
-		key: 'anchorStickyNav',
-		value: function anchorStickyNav() {
-			var lastId,
-			    topMenu = (0, _jquery2.default)(".fixed-sidebar"),
+      (0, _jquery2.default)(window).on('scroll', function () {
+        if (!scrolled) toggleFunction();
+        scrolled = true;
+      });
+    }
 
-			// topMenuHeight = topMenu.outerHeight() + 15,
-			// All list items
-			menuItems = topMenu.find("a"),
+    /**
+     * preload images
+     * @param  {[type]} url [description]
+     */
 
-			// Anchors corresponding to menu items
-			scrollItems = menuItems.map(function () {
-				var item = (0, _jquery2.default)((0, _jquery2.default)(this).attr("href"));
-				if (item.length) {
-					return item;
-				}
-			});
+  }, {
+    key: 'preloadImage',
+    value: function preloadImage(url) {
+      try {
+        var loadingImg = new Image();
+        loadingImg.src = url;
+      } catch (e) {
+        console.log(e);
+      }
+    }
 
-			// Bind to scroll
-			(0, _jquery2.default)(window).on('scroll', function () {
-				// Get container scroll position
-				var fromTop = (0, _jquery2.default)(this).scrollTop() + (0, _jquery2.default)('#top-header').outerHeight();
+    /**
+     * Homepage themes grid expansion animations
+     */
 
-				// Get id of current scroll item
-				var cur = scrollItems.map(function () {
-					if (this[0].offsetTop < fromTop) {
-						return this;
-					}
-				});
-				// Get the id of the current element
-				cur = cur[cur.length - 1];
-				var id = cur && cur.length ? cur[0].id : "";
+  }, {
+    key: 'themesGrid',
+    value: function themesGrid() {
+      var self = this;
+      var sectionEl = (0, _jquery2.default)('#themes-section');
+      var gridEl = (0, _jquery2.default)('#themes-menu');
 
-				if (lastId !== id) {
-					lastId = id;
+      sectionEl.find('.hover-bg-image').each(function () {
+        var imageURL = (0, _jquery2.default)(this).data('hover-image');
+        self.preloadImage(imageURL);
+      });
 
-					menuItems.parent().removeClass("active").end().filter('[href="#' + id + '"]').parent().addClass("active");
-				}
-			});
-		}
-	}]);
+      var mouseEnterItem = function mouseEnterItem(e) {
+        sectionEl.addClass('hovered-on');
+        var index = (0, _jquery2.default)(e.currentTarget).index();
+        sectionEl.find('.themes-item').removeClass('active');
+        sectionEl.find('.themes-item').eq(index).addClass('active');
+      };
 
-	return App;
+      var mouseLeaveItem = function mouseLeaveItem() {
+        sectionEl.removeClass('hovered-on');
+      };
+
+      gridEl.on('mouseenter', 'li', mouseEnterItem);
+    }
+
+    /**
+     * Anchor Sticky Nav
+     */
+
+  }, {
+    key: 'anchorStickyNav',
+    value: function anchorStickyNav() {
+      var lastId,
+          topMenu = (0, _jquery2.default)(".fixed-sidebar"),
+
+      // topMenuHeight = topMenu.outerHeight() + 15,
+      // All list items
+      menuItems = topMenu.find("a"),
+
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function () {
+        var item = (0, _jquery2.default)((0, _jquery2.default)(this).attr("href"));
+        if (item.length) {
+          return item;
+        }
+      });
+
+      // Bind to scroll
+      (0, _jquery2.default)(window).on('scroll', function () {
+        // Get container scroll position
+        var fromTop = (0, _jquery2.default)(this).scrollTop() + (0, _jquery2.default)('#top-header').outerHeight();
+
+        // Get id of current scroll item
+        var cur = scrollItems.map(function () {
+          if (this[0].offsetTop < fromTop) {
+            return this;
+          }
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+          lastId = id;
+
+          menuItems.parent().removeClass("active").end().filter('[href="#' + id + '"]').parent().addClass("active");
+        }
+      });
+    }
+
+    /**
+     * theme hover tab behaviour
+     * @param  options = {menuEl: '.tabs-menu', contentEl: '.tab-content', tabItem: '[data-tab-item]'}
+     * @return {[type]}            [description]
+     */
+
+  }, {
+    key: 'themesTabs',
+    value: function themesTabs(options) {
+      var self = this;
+      var menuEl = options.menuEl;
+      var contentEl = options.contentEl;
+      var tabItem = options.tabItem;
+
+
+      var $contentEl = (0, _jquery2.default)(contentEl);
+      var $menuEl = (0, _jquery2.default)(menuEl);
+      var $tabItem = $contentEl.find(tabItem);
+
+      var mouseEnterItem = function mouseEnterItem(e) {
+        $contentEl.addClass('hovered-on');
+        var index = (0, _jquery2.default)(e.currentTarget).index();
+        $tabItem.removeClass('active');
+        $tabItem.eq(index).addClass('active');
+      };
+
+      var mouseLeaveItem = function mouseLeaveItem() {
+        $contentEl.removeClass('hovered-on');
+      };
+
+      $menuEl.on('mouseenter', 'li', mouseEnterItem);
+    }
+  }]);
+
+  return App;
 }();
 
 window.App = new App();

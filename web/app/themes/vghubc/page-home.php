@@ -61,7 +61,7 @@ Template Name: Home
         </div>
       </div>
       <div class="themes-item cancer">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);"></div>
         <div class="container">
           <div class="summary">
             <h5>How we can change lives together</h5>
@@ -70,7 +70,7 @@ Template Name: Home
         </div>
       </div>
       <div class="themes-item heart-lung">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);"></div>
         <div class="container">
           <div class="summary">
             <h5>How we can change lives together</h5>
@@ -79,7 +79,7 @@ Template Name: Home
         </div>
       </div>
       <div class="themes-item innovation">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jp"></div>
         <div class="container">
           <div class="summary">
             <h5>How we can change lives together</h5>
@@ -88,7 +88,7 @@ Template Name: Home
         </div>
       </div>
       <div class="themes-item community">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg"></div>
         <div class="container">
           <div class="summary">
             <h5>How we can change lives together</h5>
@@ -97,7 +97,7 @@ Template Name: Home
         </div>
       </div>
       <div class="themes-item brain-health">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/themes-bg.jpg"></div>
+        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);"></div>
         <div class="container">
           <div class="summary">
             <h5>How we can change lives together</h5>
