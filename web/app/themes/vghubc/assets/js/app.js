@@ -214,6 +214,9 @@ class App {
     };
 
     $menuEl.on('mouseenter', 'li', mouseEnterItem);
+    $menuEl.on('click', 'li', () => {
+      return false;
+    });
   }
 }
 

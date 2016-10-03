@@ -61,9 +61,8 @@
 
 <?php if(get_post_type(get_the_ID()) == 'themes_post'): ?>
 <header id="sub-navigation">
-  <div class="container">
-  <h3><?php print get_the_title(get_the_ID()); ?></h3>
-  <a href="#" class="button top-donate">Donate to <?php print get_the_title(get_the_ID()); ?></a>
+  <div class="container breadcrumb">
+  <h3><a href="/why-give"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> Why Give</a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
   </div>
 </header>
 <?php endif; ?>

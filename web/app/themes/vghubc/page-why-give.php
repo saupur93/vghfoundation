@@ -73,7 +73,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Surgery</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/surgery" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">
@@ -110,7 +110,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Cancer</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/cancer" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">
@@ -147,7 +147,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Heart & Lung</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/heart-lung" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">
@@ -184,7 +184,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Innovation</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/innovation" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">
@@ -221,7 +221,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Community</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/community" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">
@@ -258,7 +258,7 @@ Template Name: Why Give
           <div class="col-half">
             <h2>Brain Health</h2>
             <p>With your support, we are transforming cancer care for patients. VGH UBC is aiming to be one of the largest cancer programs in North America.</p>
-            <p><a href="#" class="button">Donate</a> <a href="#" class="button keyline">Learn more</a></p>
+            <p><a href="#" class="button">Donate</a> <a href="/themes/brain-health" class="button keyline">Learn more</a></p>
           </div>
           <div class="col-half">
             <div class="fact-row">

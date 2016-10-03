@@ -10460,6 +10460,9 @@ var App = function () {
       };
 
       $menuEl.on('mouseenter', 'li', mouseEnterItem);
+      $menuEl.on('click', 'li', function () {
+        return false;
+      });
     }
   }]);
 

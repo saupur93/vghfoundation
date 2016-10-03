@@ -6,7 +6,7 @@
   // .brain-health {}
 
 .panel {
-  .surgery {
+  .surgery, .theme-section-surgery & {
     h5 {
       color:$surgery;
     }
@@ -31,7 +31,7 @@
       }
     }
   }
-  .cancer {
+  .cancer, .theme-section-cancer & {
     h5 {
       color:$cancer;
     }
@@ -56,7 +56,7 @@
       }
     }
   }
-  .heart-lung {
+  .heart-lung, .theme-section-heart-lung & {
     h5 {
       color:$heartlung;
     }
@@ -81,7 +81,7 @@
       }
     }
   }
-  .innovation {
+  .innovation, .theme-section-innovation & {
     h5 {
       color:$innovation;
     }
@@ -106,7 +106,7 @@
       }
     }
   }
-  .community {
+  .community, .theme-section-community & {
     h5 {
       color:$community;
     }
@@ -131,7 +131,7 @@
       }
     }
   }
-  .brain-health {
+  .brain-health, .theme-section-brain-health & {
     h5 {
       color:$brainhealth;
     }
@@ -218,6 +218,12 @@
     }
   }
 
+  .panel.full-stats-panel {
+    .number {
+      color: $surgery;
+    }
+  }
+
 }
 .theme-section-cancer {
   #sub-navigation {
@@ -229,6 +235,12 @@
 
   .overview-panel {
     h4 {
+      color: $cancer;
+    }
+  }
+
+  .panel.full-stats-panel {
+    .number {
       color: $cancer;
     }
   }
@@ -246,6 +258,12 @@
       color: $heartlung;
     }
   }
+
+  .panel.full-stats-panel {
+    .number {
+      color: $heartlung;
+    }
+  }
 }
 .theme-section-brain-health {
   #sub-navigation {
@@ -257,6 +275,12 @@
 
   .overview-panel {
     h4 {
+      color: $brainhealth;
+    }
+  }
+
+  .panel.full-stats-panel {
+    .number {
       color: $brainhealth;
     }
   }
@@ -274,6 +298,12 @@
       color: $innovation;
     }
   }
+
+  .panel.full-stats-panel {
+    .number {
+      color: $innovation;
+    }
+  }
 }
 .theme-section-community {
   #sub-navigation {
@@ -285,6 +315,12 @@
 
   .overview-panel {
     h4 {
+      color: $community;
+    }
+  }
+
+  .panel.full-stats-panel {
+    .number {
       color: $community;
     }
   }

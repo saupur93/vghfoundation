@@ -34,6 +34,111 @@
     </section>
 
 
+    <section class="panel padded slideshow-content-panel slideshow grey-bg">
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="slide-images">
+            <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/theme-slide.jpg);"></div><!--
+             --><div class="slide-bg slide-2" style="background-image:url(http://placehold.it/795x515);"></div>
+          </div>
+          <div class="slide-content">
+            <h4>Ovarian Cancer Research</h4>
+            <div class="slide-text slide-1 active">
+              <p class="small">Dr. Miller is an internationally renowned surgeon, educator, clinician and researcher, and was one of the leaders in launching the world’s first population-based ovarian cancer prevention program.</p>
+              <p><a href="#" class="read-more small">Give now</a></p>
+            </div>
+
+            <div class="slide-text slide-2">
+              <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+              <p><a href="#" class="read-more small">Give now</a></p>
+            </div>
+
+            <ul class="slide-pager">
+              <li class="active">1</li>
+              <li>2</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="panel padded full-stats-panel">
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="stat-focus">
+            <h2>Outcomes</h2>
+            <div class="col-third overview">
+              <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
+            </div>
+
+            <div class="col-third">
+              <div class="fact-row">
+                <div class="left">
+                  <p class="small"><strong>Last year</strong><br><span class="number">32</span></p>
+                </div>
+                <div class="right">
+                  <p class="small">survivors and current patients attended support groups</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-third">
+              <div class="fact-row">
+                <div class="left">
+                  <p class="small"><strong>In 2015</strong><br><span class="number">610</span></p>
+                </div>
+                <div class="right">
+                  <p class="small">Patients received in-home treatment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-focus">
+            <h2>Facts</h2>
+            <div class="col-third overview">
+              <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
+            </div>
+
+            <div class="col-third">
+              <div class="fact-row">
+                <div class="left">
+                  <p class="small"><strong>Last year</strong><br><span class="number">175</span></p>
+                </div>
+                <div class="right">
+                  <p class="small">survivors and current patients attended support groups</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-third">
+              <div class="fact-row">
+                <div class="left">
+                  <p class="small"><strong>In 2015</strong><br><span class="number">800</span></p>
+                </div>
+                <div class="right">
+                  <p class="small">Patients received in-home treatment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fact-sheet center">
+            <a href="#" class="button keyline">Download Fact Sheet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="panel padded three-stories-panel">
+      <div class="container">
+        <div class="inner-wrap">
+        </div>
+      </div>
+    </section>
+
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
 
