@@ -8,8 +8,9 @@ Template Name: Home
 <?php get_header(); ?>
   <section class="hero-content panel slideshow">
     <div class="slide-images">
-      <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/home-story.jpg);"></div><!--
-       --><div class="slide-bg slide-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home-hero-bg.jpg);"></div>
+      <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Surgery-primary_Umberto-copy.jpg);"></div><!--
+       --><div class="slide-bg slide-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Feature-primary-photo-Jamie-skiing-downhill.jpg);"></div></div><!--
+       -->
     </div>
     <div class="container">
       <div class="inner-wrap">
@@ -21,13 +22,16 @@ Template Name: Home
           </div>
 
           <div class="slide-text slide-2" data-colour-type="cancer">
-            <p class="intro">“I didn’t even realize how many things I wanted to do until I got diagnosed.”</p>
+            <p class="intro">World-class skier Jamie Crane-Mauzy credits revolutionary brain surgery and VGH’s ICU team for saving her life.</p>
             <p><a href="#" class="read-more white">Jamie's Story</a></p>
           </div>
+
+
 
           <ul class="slide-pager">
             <li class="active">1</li>
             <li>2</li>
+
           </ul>
         </div>
 

@@ -470,6 +470,9 @@ p {
     padding:15px 30px;
     // text-align:center;
     border-right:2px solid #fff;
+    @include media($laptopHeightOnly){
+      height:120px;
+    }
     &:last-child {
       border:0;
     }
@@ -755,6 +758,9 @@ span.highlighted-text {
     display:inline;
     background:$brand-green;
     transition:background 1s linear;
+    @include media($laptopHeightOnly){
+      min-height:290px;
+    }
 
     &[data-colour-type="surgery"] {
       background-color:$surgery;
@@ -800,6 +806,17 @@ span.highlighted-text {
     color:#fff;
     @include font-size(96px);
     font-family: 'Karbon-Semibold';
+    @include media($laptopHeightOnly){
+      @include font-size(70px);
+      margin-top:-115px;
+
+    }
+  }
+
+  p.intro {
+    @include media($laptopHeightOnly){
+      @include font-size(28px);
+    }
   }
 }
 
@@ -1420,10 +1437,12 @@ form {
 
   h1 {
     float:left;
-    margin-top:-135px;
+    margin-top:-110px;
     margin-bottom:1rem;
     width:100%;
     color:#fff;
+    line-height:0.8;
+
     // @include font-size(96px);
     // font-family: 'Karbon-Semibold';
   }
