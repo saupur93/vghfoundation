@@ -1,6 +1,6 @@
 // Bourbon Neat Grid
 @import "../neat/neat-helpers";
-$max-width: 1280px;
+$max-width: 1320px;
 
 .container, .full-container {
   @include fill-parent();
@@ -9,6 +9,8 @@ $max-width: 1280px;
 
 .container {
   @include outer-container;
+  padding-left:20px;
+  padding-right:20px;
 
   .inner-wrap {
     position: relative;

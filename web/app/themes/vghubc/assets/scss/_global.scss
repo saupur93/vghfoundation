@@ -98,14 +98,14 @@ p {
   @include font-size(18px);
   letter-spacing: 2px;
   transition: all 0.3s linear;
+  color:#fff;
+  background-color:$brand-green;
+  border:2px solid $brand-green;
+  &:hover {
     color:#fff;
-    background-color:$brand-green;
-    border:2px solid $brand-green;
-    &:hover {
-      color:#fff;
-      background-color:transparent;
-      color:$brand-green;
-    }
+    background-color:transparent;
+    color:$brand-green;
+  }
 
   &.white {
     border:2px solid #fff;
@@ -677,7 +677,7 @@ p {
   }
 
   &.title-only {
-    padding-top:rem(200);
+    padding-top:rem(120);
   }
 
   &.grey-bg {
@@ -693,6 +693,11 @@ p {
     float:left;
     padding-right:5%;
     margin-bottom:1rem;
+  }
+
+  a {
+    color:$brand-green;
+    text-decoration:none;
   }
 
 }
@@ -888,7 +893,7 @@ svg.icon.close-x {
   background-repeat: no-repeat;
   background-size:100%;
   color:#fff;
-  height:100vh;
+  height:calc(100vh - 16.666vw);
   min-height:900px;
   position:relative;
 
@@ -1109,10 +1114,11 @@ svg.icon.close-x {
         background-size:cover;
         opacity:1;
         transition: opacity 0.2s linear;
+        top:rem(60);
       }
 
       span {
-        padding:rem(11) rem(20);
+        padding:rem(15) rem(20);
         width:100%;
         left:0;
         right:0;
@@ -1410,8 +1416,8 @@ form {
     margin-bottom:1rem;
     width:100%;
     color:#fff;
-    @include font-size(96px);
-    font-family: 'Karbon-Semibold';
+    // @include font-size(96px);
+    // font-family: 'Karbon-Semibold';
   }
 
   p {
@@ -1932,7 +1938,7 @@ form {
         font-family:$font-bold;
         text-decoration:none;
         letter-spacing:1px;
-        padding:rem(10) rem(20);
+        padding:rem(10) rem(15);
         display:inline-block;
         width:100%;
         left:0;
@@ -1950,6 +1956,7 @@ form {
 
   .tab-content {
     height:100%;
+    padding-left:20px;
 
     .tab-content-item {
       height:100%;

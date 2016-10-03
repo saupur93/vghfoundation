@@ -1,12 +1,19 @@
 <?php get_header(); ?>
 
+		<section class="panel title-only">
+			<div class="container">
+				<h1 class="section-title"><?php the_title(); ?></h1>
+			</div>
+		</section>
 
-	<section class="main-content">
+	<section class="main-content padded panel">
 		<div class="container">
 		  <?php if (!have_posts()) : ?>
-			<div class="not-found center">
-			  <h1>Page not found</h1>
-			  <p class="intro">Sorry, this page does not exist. <a href="/">Go back to home</a>.</p>
+		  <div class="inner-wrap">
+				<div class="not-found">
+				  <h2>Page not found</h2>
+				  <p class="intro">Sorry, this page does not exist. <a href="/">Go back to home</a>.</p>
+				</div>
 			</div>
 		  <?php endif; ?>
 
