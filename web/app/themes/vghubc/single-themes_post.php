@@ -73,7 +73,7 @@
               <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
             </div>
 
-            <div class="col-third">
+            <div class="col-third stat-col">
               <div class="fact-row">
                 <div class="left">
                   <p class="small"><strong>Last year</strong><br><span class="number">32</span></p>
@@ -84,7 +84,7 @@
               </div>
             </div>
 
-            <div class="col-third">
+            <div class="col-third stat-col">
               <div class="fact-row">
                 <div class="left">
                   <p class="small"><strong>In 2015</strong><br><span class="number">610</span></p>
@@ -102,7 +102,7 @@
               <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
             </div>
 
-            <div class="col-third">
+            <div class="col-third stat-col">
               <div class="fact-row">
                 <div class="left">
                   <p class="small"><strong>Last year</strong><br><span class="number">175</span></p>
@@ -113,7 +113,7 @@
               </div>
             </div>
 
-            <div class="col-third">
+            <div class="col-third stat-col">
               <div class="fact-row">
                 <div class="left">
                   <p class="small"><strong>In 2015</strong><br><span class="number">800</span></p>
@@ -135,9 +135,38 @@
     <section class="panel padded three-stories-panel">
       <div class="container">
         <div class="inner-wrap">
+          <h2>Cancer Stories</h2>
+          <article class="col-grid-4">
+            <div class="tag">Cancer</div>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/Cancer_Feature_Primary_JasonKo-thumb.jpg" />
+            <div class="copy">
+              <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
+            </div>
+            <p class="more"><a href="#" class="read-more">JASON & EMILY’S STORY</a></p>
+          </article>
+
+          <article class="col-grid-4">
+            <div class="tag">Cancer</div>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGH-DrHuntsman-Final-thumb.jpg" />
+            <div class="copy">
+              <p class="small">We believe that understanding how cancer starts will lead to better prevention and treatment.</p>
+            </div>
+            <p class="more"><a href="#" class="read-more">DR. HUNTSMAN’S STORY</a></p>
+          </article>
+
+          <article class="col-grid-4">
+            <div class="tag">Cancer</div>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGHPancreatic-1382-thumb.jpg" />
+            <div class="copy">
+              <p class="small">“We exist because generous donors believe that research is the key.”</p>
+            </div>
+            <p class="more"><a href="#" class="read-more">DR. Shaeffer’S STORY</a></p>
+          </article>
         </div>
       </div>
     </section>
+
+
 
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
