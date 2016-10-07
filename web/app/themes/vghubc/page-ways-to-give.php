@@ -20,24 +20,15 @@ Template Name: Ways to Give
       <div class="inner-wrap">
         <div class="header-copy">
           <h1><?php the_title(); ?></h1>
-          <p>The foundation is grateful to all of its donors who generously help to ensure our hospitals and health care teams deliver BC’s best care for adults. VGH UBC is pleased to recognize those who have donated $10,000 or more to advance healthcare, now and for generations to come.</p>
+          <p class="intro">The foundation is grateful to all donors who help to ensure our hospitals and health care teams deliver BC’s best care.</p>
         </div>
       </div>
     </div>
   </section>
 
 
-  <section class="panel padded extra-padded overview-panel">
-    <div class="container">
-      <div class="narrow-wrap">
-        <h2>Give today.</h2>
-        <p class="intro">VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
-      </div>
-    </div>
-  </section>
 
-
-  <section class="panel grey-bg donation-panel-tabs">
+  <section class="panel padded grey-bg donation-panel-tabs">
     <ul class="tabs">
       <li class="active" data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1" data-tab="1">One-time Gift</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1660&mfc_pref=T&1660.donation=form1" data-tab="2">Monthly Giving</li><li data-donate-url="https://secure.vghfoundation.ca/site/Donation2?df_id=1640&mfc_pref=T&1640.donation=form1" data-tab="3">Tribute</li>
     </ul>
@@ -170,62 +161,42 @@ Template Name: Ways to Give
     </section>
   </section>
 
-  <section class="panel padded three-column-boxes">
+
+  <section class="panel extra-padded expanding-two-column-list">
     <div class="container">
       <div class="inner-wrap">
-        <h2 class="section-title">Other Ways to Give</h2>
-        <article class="col-third">
-          <h3>Occasions</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
+        <h2>Other Ways to Give</h2>
+        <div class="col-half">
+          <p>VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
+        </div>
 
-        <article class="col-third">
-          <h3>Corporate Giving</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
+        <div class="col-half last">
+          <ul class="expanding-list">
+            <li><a href="#">Occasions</a></li>
+            <li><a href="#">Through Securities</a></li>
+            <li><a href="#">Legacy Giving</a></li>
+            <li><a href="#">Employee Giving</a></li>
+            <li><a href="#">Gifts of Art</a></li>
+            <li><a href="#">Door to Door</a></li>
+            <li><a href="#">Donate to an Event</a></li>
+          </ul>
+        </div>
 
-        <article class="col-third">
-          <h3>Employee Giving</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
-
-        <article class="col-third">
-          <h3>Through Securities</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
-
-        <article class="col-third">
-          <h3>Gifts of Art</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
-
-        <article class="col-third">
-          <h3>Door to Door</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
-
-        <article class="col-third">
-          <h3>Legacy Giving</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
-
-        <article class="col-third">
-          <h3>Donate to an Event</h3>
-          <p>Celebrate your birthday, anniversary, or retirement with donations to VGH & UBC Hospital Foundation in lieu of gifts.</p>
-          <p class="bottom"><a href="#" class="read-more">Donate</a></p>
-        </article>
       </div>
     </div>
   </section>
 
 
+  <section class="panel extra-padded grey-bg footer-cta">
+    <div class="container">
+      <div class="inner-wrap">
+        <h2>Your donations help save lives. <span class="green">Give today.</a></h2>
+        <p class="center"><a href="#" class="button green donate">Donate</a></p>
+      </div>
+    </div>
+  </section>
+
+<!--
     <?php if( have_rows('layouts') ): $count = 0; ?>
         <?php while ( have_rows('layouts') ) : the_row(); $count++;
 
@@ -249,7 +220,7 @@ Template Name: Ways to Give
               <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
             <?php endif; ?>
 
-        <?php endwhile; ?>
+        <?php endwhile; ?> -->
 
     <?php else : ?>
       <section class="main-content panel">

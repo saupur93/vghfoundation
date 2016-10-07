@@ -64,7 +64,7 @@
       </div>
     </section>
 
-    <section class="panel padded full-stats-panel">
+    <section class="panel padded-top full-stats-panel">
       <div class="container">
         <div class="inner-wrap">
           <div class="stat-focus">
@@ -136,36 +136,97 @@
       <div class="container">
         <div class="inner-wrap">
           <h2>Cancer Stories</h2>
-          <article class="col-grid-4">
-            <div class="tag">Cancer</div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/Cancer_Feature_Primary_JasonKo-thumb.jpg" />
-            <div class="copy">
-              <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
-            </div>
-            <p class="more"><a href="#" class="read-more">JASON & EMILY’S STORY</a></p>
-          </article>
+          <div class="row">
+            <article class="col-grid-4">
+              <div class="tag">Cancer</div>
+              <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/Cancer_Feature_Primary_JasonKo-thumb.jpg" />
+              <div class="copy">
+                <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
+              </div>
+              <p class="more"><a href="#" class="read-more">JASON & EMILY’S STORY</a></p>
+            </article>
 
-          <article class="col-grid-4">
-            <div class="tag">Cancer</div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGH-DrHuntsman-Final-thumb.jpg" />
-            <div class="copy">
-              <p class="small">We believe that understanding how cancer starts will lead to better prevention and treatment.</p>
-            </div>
-            <p class="more"><a href="#" class="read-more">DR. HUNTSMAN’S STORY</a></p>
-          </article>
+            <article class="col-grid-4">
+              <div class="tag">Cancer</div>
+              <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGH-DrHuntsman-Final-thumb.jpg" />
+              <div class="copy">
+                <p class="small">We believe that understanding how cancer starts will lead to better prevention and treatment.</p>
+              </div>
+              <p class="more"><a href="#" class="read-more">DR. HUNTSMAN’S STORY</a></p>
+            </article>
 
-          <article class="col-grid-4">
-            <div class="tag">Cancer</div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGHPancreatic-1382-thumb.jpg" />
-            <div class="copy">
-              <p class="small">“We exist because generous donors believe that research is the key.”</p>
-            </div>
-            <p class="more"><a href="#" class="read-more">DR. Shaeffer’S STORY</a></p>
-          </article>
+            <article class="col-grid-4">
+              <div class="tag">Cancer</div>
+              <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGHPancreatic-1382-thumb.jpg" />
+              <div class="copy">
+                <p class="small">“We exist because generous donors believe that research is the key.”</p>
+              </div>
+              <p class="more"><a href="#" class="read-more">DR. Shaeffer’S STORY</a></p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
+
+    <section class="panel padded expanding-two-column-list">
+      <div class="container">
+        <div class="inner-wrap">
+          <h2>Our Funds</h2>
+          <div class="col-half">
+            <p>VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
+          </div>
+
+          <div class="col-half last">
+            <ul class="expanding-list" data-default-showing="5">
+              <li><a href="#">Cancer Treatment and Care</a></li>
+              <li><a href="#">Ovarian Cancer Research</a></li>
+              <li><a href="#">Prostate Cancer</a></li>
+              <li><a href="#">Physical Rehabilitation</a></li>
+              <li><a href="#">Radiology and Diagnostic Imaging</a></li>
+              <li><a href="#">Cancer Treatment and Care</a></li>
+              <li><a href="#">Ovarian Cancer Research</a></li>
+              <li><a href="#">Prostate Cancer</a></li>
+              <li><a href="#">Physical Rehabilitation</a></li>
+              <li><a href="#">Radiology and Diagnostic Imaging</a></li>
+            </ul>
+            <span class="read-more list more">More +</span>
+            <span class="read-more list less">Less -</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="panel footer-themes-menu padded-top">
+      <ul id="themes-menu">
+          <li class="surgery">
+            <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg" ?>
+          </li>
+          <li class="cancer">
+            <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg" ?>
+          </li>
+          <li class="heart-lung">
+            <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg" ?>
+          </li>
+          <li class="innovation">
+            <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg" ?>
+          </li>
+          <li class="community">
+            <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg" ?>
+          </li>
+          <li class="brain-health">
+            <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
+            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg" ?>
+          </li>
+      </ul>
+    </section>
 
 
     <?php if( have_rows('layouts') ): $count = 0; ?>
