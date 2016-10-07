@@ -21,6 +21,7 @@ class App {
   behaviours() {
     this.latestNavigation();
     this.themesGrid();
+    this.eventsGrid();
 
     if ($('.single-themes_post').length) {
       this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -136,6 +137,36 @@ class App {
       let index = $(e.currentTarget).index();
       sectionEl.find('.themes-item').removeClass('active');
       sectionEl.find('.themes-item').eq(index).addClass('active');
+    };
+
+    const mouseLeaveItem = () => {
+      sectionEl.removeClass('hovered-on');
+    };
+
+    gridEl.on('mouseenter', 'li', mouseEnterItem);
+
+  }
+
+
+/**
+   * Homepage themes grid expansion animations
+   */
+  eventsGrid() {
+    let self = this;
+    const sectionEl = $('#events-section');
+    const gridEl = $('#events-menu');
+
+
+    sectionEl.find('.hover-bg-image').each(function() {
+      let imageURL = $(this).data('hover-image');
+      self.preloadImage(imageURL);
+    });
+
+    const mouseEnterItem = (e) => {
+      sectionEl.addClass('hovered-on');
+      let index = $(e.currentTarget).index();
+      sectionEl.find('.events-item').removeClass('active');
+      sectionEl.find('.events-item').eq(index).addClass('active');
     };
 
     const mouseLeaveItem = () => {

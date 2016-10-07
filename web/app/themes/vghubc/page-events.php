@@ -77,36 +77,36 @@ Template Name: Events
       </div>
     </div>
 
-    <section class="panel" id="themes-section">
-      <div class="themes-items">
-        <div class="themes-item active surgery">
+    <section class="panel" id="events-section">
+      <div class="events-items">
+        <div class="events-item active angel-event">
           <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg"></div>
           <div class="container">
             <div class="summary">
-              <h5>How we can change lives together</h5>
-              <h2>What if complex surgery could be performed in a one-stop innovative hybrid space?</h2>
+              <h5>HONOUR AN ANGEL IN YOUR LIFE</h5>
+              <h2>Angel Campaign</h2>
             </div>
           </div>
         </div>
-        <div class="themes-item cancer">
+        <div class="events-item stars-gala">
           <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);"></div>
           <div class="container">
             <div class="summary">
-              <h5>How we can change lives together</h5>
-              <h2>What if we could detect cancer earlier with new revolutionary technology?</h2>
+              <h5>Night of a Thousand Stars Gala</h5>
+              <h2>Night of a Thousand Stars Gala</h2>
             </div>
           </div>
         </div>
-        <div class="themes-item heart-lung">
+        <div class="events-item shine-gala">
           <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);"></div>
           <div class="container">
             <div class="summary">
-              <h5>How we can change lives together</h5>
-              <h2>What if we could revolutionize heart and lung surgery so it no longer required invasive procedures?</h2>
+              <h5>DE BEERS TIME TO SHINE GALA</h5>
+              <h2>DE BEERS TIME TO SHINE GALA</h2>
             </div>
           </div>
         </div>
-        <div class="themes-item innovation">
+        <div class="events-item">
           <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jp"></div>
           <div class="container">
             <div class="summary">
@@ -115,51 +115,36 @@ Template Name: Events
             </div>
           </div>
         </div>
-        <div class="themes-item community">
-          <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg"></div>
-          <div class="container">
-            <div class="summary">
-              <h5>How we can change lives together</h5>
-              <h2>What if the continuum of care extended beyond the hospital walls and into the community?</h2>
-            </div>
-          </div>
-        </div>
-        <div class="themes-item brain-health">
-          <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);"></div>
-          <div class="container">
-            <div class="summary">
-              <h5>How we can change lives together</h5>
-              <h2>When it’s a matter of brain health, what if our neurosurgeons depended on a revolutionary new procedure in order to save lives?</h2>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <ul id="themes-menu">
-          <li class="surgery">
-            <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
+      <ul id="events-menu">
+          <li class="angel-event">
+            <a class="open" href="/events/surgery">
+            <span>ANGEL CAMPAIGN</span>
+            <span class="date">October 21, 2016</span>
+            <span class="read-more">Learn More</span></a>
             <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg" ?>
           </li>
-          <li class="cancer">
-            <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
+          <li class="stars-gala">
+            <a class="open" href="/events/cancer">
+            <span>Night of a Thousand Stars Gala</span>
+            <span class="date">October 21, 2016</span>
+            <span class="read-more">Learn More</span></a>
             <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg" ?>
           </li>
-          <li class="heart-lung">
-            <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
+          <li class="shine-gala">
+            <a class="open" href="/events/heart-lung">
+            <span>DE BEERS TIME TO SHINE GALA</span>
+            <span class="date">October 21, 2016</span>
+            <span class="read-more">Learn More</span></a>
             <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg" ?>
           </li>
           <li class="innovation">
-            <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
+            <a class="open" href="/events/innovation">
+            <span>Ismaili Walk</span>
+            <span class="date">October 21, 2016</span>
+            <span class="read-more">Learn More</span></a>
             <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg" ?>
-          </li>
-          <li class="community">
-            <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg" ?>
-          </li>
-          <li class="brain-health">
-            <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg" ?>
           </li>
       </ul>
 

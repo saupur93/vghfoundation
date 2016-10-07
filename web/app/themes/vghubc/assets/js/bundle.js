@@ -10262,6 +10262,7 @@ var App = function () {
     value: function behaviours() {
       this.latestNavigation();
       this.themesGrid();
+      this.eventsGrid();
 
       if ((0, _jquery2.default)('.single-themes_post').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -10379,6 +10380,36 @@ var App = function () {
         var index = (0, _jquery2.default)(e.currentTarget).index();
         sectionEl.find('.themes-item').removeClass('active');
         sectionEl.find('.themes-item').eq(index).addClass('active');
+      };
+
+      var mouseLeaveItem = function mouseLeaveItem() {
+        sectionEl.removeClass('hovered-on');
+      };
+
+      gridEl.on('mouseenter', 'li', mouseEnterItem);
+    }
+
+    /**
+       * Homepage themes grid expansion animations
+       */
+
+  }, {
+    key: 'eventsGrid',
+    value: function eventsGrid() {
+      var self = this;
+      var sectionEl = (0, _jquery2.default)('#events-section');
+      var gridEl = (0, _jquery2.default)('#events-menu');
+
+      sectionEl.find('.hover-bg-image').each(function () {
+        var imageURL = (0, _jquery2.default)(this).data('hover-image');
+        self.preloadImage(imageURL);
+      });
+
+      var mouseEnterItem = function mouseEnterItem(e) {
+        sectionEl.addClass('hovered-on');
+        var index = (0, _jquery2.default)(e.currentTarget).index();
+        sectionEl.find('.events-item').removeClass('active');
+        sectionEl.find('.events-item').eq(index).addClass('active');
       };
 
       var mouseLeaveItem = function mouseLeaveItem() {
