@@ -269,7 +269,7 @@ p {
         //  height:10px;
         // }
         .sub-menu {
-          background:#f8f8f8;
+          background:#fff;
           display:inline-block;
           padding:20px 30px 10px 30px;
           position: absolute;
@@ -296,7 +296,8 @@ p {
 
           a {
             color:$body-text;
-            text-transform: none;
+            text-transform: uppercase;
+            @include font-size(11px);
             &:hover {
               color:$brand-green;
             }
@@ -683,7 +684,7 @@ p {
     padding-top:rem(60);
   }
 
-  &.title-only {
+  &.title-only, &.extra-padded-top {
     padding-top:rem(120);
   }
 
@@ -883,7 +884,8 @@ span.highlighted-text {
 }
 
 .panel.overview-panel {
-  margin-top:60px;
+  margin-top:rem(80);
+  padding-bottom:rem(80);
   .col-grid-6:first-child {
     padding-right:40px;
   }
@@ -1413,7 +1415,7 @@ form {
     position: absolute;
     bottom:-100px;
     width:rem(600);
-    min-height:280px;
+    min-height:300px;
     padding:60px 40px 0px 60px;
     @include font-size(24px);
     color:#fff;
@@ -1448,13 +1450,14 @@ form {
     width:100%;
     color:#fff;
     line-height:0.8;
+    text-transform:lowercase;
 
     // @include font-size(96px);
     // font-family: 'Karbon-Semibold';
   }
 
   p {
-    padding-right:4rem;
+    padding-right:3rem;
   }
 
 }
@@ -1589,9 +1592,21 @@ form {
   display:table;
   width:100%;
 
+  &.white-bg {
+    background-color:#fff;
+
+    .copy {
+      background: $lighter-grey;
+    }
+  }
+
   article {
     position:relative;
-    padding-top:19%;
+    padding-top:20%;
+
+    h4 {
+      font-family:$font;
+    }
 
     img {
       position:absolute;
@@ -1612,9 +1627,9 @@ form {
         background-color:$brand-green;
         color:#fff;
 
-        .button {
+        .read-more {
           border-color:#fff;
-          background-color:transparent;
+          // background-color:transparent;
           color:#fff;
         }
       }
@@ -1639,7 +1654,8 @@ form {
 
 
 .panel.donation-panel-tabs {
-  position:relative;
+  padding-top:rem(160);
+  // position:relative;
   [data-tab-content]{
     display:none;
 
@@ -1648,26 +1664,37 @@ form {
     }
   }
 
+  .inner-wrap {
+    margin:0;
+  }
+
   .tabs {
     padding:0;
     margin:0;
     text-align:center;
     margin-bottom:60px;
+    position:relative;
     li {
       display:inline-block;
-      padding:30px 50px;
-      background-color:#c4d9a2;
+      margin:30px 40px 0px 40px;
+      // background-color:#c4d9a2;
       text-decoration:none;
       text-transform:uppercase;
       font-family:$font-bold;
-      color:#fff;
-      @include font-size(16px);
+      color:$body-text-light;
+      padding-bottom:5px;
+      padding-left:0;
+      padding-right:0;
+      @include font-size(24px);
       letter-spacing: 2px;
-      border-right:2px solid $lighter-grey;
+      border-bottom:3px solid transparent;
+      transition: all 0.3s linear;
+      // border-right:2px solid $lighter-grey;
       cursor: pointer;
 
       &:hover, &.active {
-        background-color:$brand-green;
+        color:$brand-green;
+        border-bottom:3px solid $brand-green;
       }
     }
   }
@@ -1683,27 +1710,31 @@ form {
 
     span {
       font-family:$font-bold;
-      @include font-size(55px);
-      margin-right:60px;
+      @include font-size(35px);
+      margin-right:rem(10);
       position:relative;
-      color:$body-text;
+      color:$brand-green;
       transition: color 0.3s linear;
       cursor: pointer;
+      padding:rem(5) rem(30);
+      border:2px solid $brand-green;
+
 
       &:hover, &.selected {
-        color:$brand-green;
+        color:#fff;
+        background-color:$brand-green;
       }
 
-      &:after {
-        content:'';
-        width:1px;
-        height:51px;
-        display:block;
-        background-color:$body-text;
-        position:absolute;
-        top:15px;
-        right:-20px;
-      }
+      // &:after {
+      //   content:'';
+      //   width:1px;
+      //   height:51px;
+      //   display:block;
+      //   background-color:$body-text;
+      //   position:absolute;
+      //   top:15px;
+      //   right:-20px;
+      // }
     }
 
     input {
@@ -1711,7 +1742,13 @@ form {
     }
 
     span.other {
-      margin-right:35px;
+      margin-right:25px;
+      border:0;
+
+      &:hover {
+        color:$brand-green;
+        background-color:transparent;
+      }
 
       &:after {
         display:none;
@@ -1720,7 +1757,7 @@ form {
 
     input[name="set.Value"] {
       background:transparent;
-      border-bottom:3px solid $body-text;
+      border-bottom:2px solid $brand-green;
       @include font-size(55px);
       padding:25px 0px;
       width:90px;
@@ -1729,9 +1766,9 @@ form {
     }
 
     input[type="submit"] {
-      padding-left:20px;
-      padding-right:20px;
-      margin-top:22px;
+      padding-left: rem(20);
+      padding-right: rem(20);
+      margin-top:rem(35);
     }
 
     #submit {
@@ -1739,6 +1776,13 @@ form {
     }
 
   }
+
+  .three-column-list {
+    h4 {
+      font-family:$font;
+    }
+  }
+
 }
 
 
@@ -2423,9 +2467,19 @@ form {
 
 
 .panel.footer-cta {
+  text-align:center;
   .donate {
     margin-top:rem(20);
     padding-left:rem(60);
     padding-right:rem(60);
+  }
+}
+
+.panel.signature-events-panel {
+  h2 {
+    margin-bottom:3.5rem;
+  }
+  .inner-wrap {
+    padding: 0 3.75rem;
   }
 }

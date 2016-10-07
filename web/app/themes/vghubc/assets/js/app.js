@@ -232,7 +232,6 @@ class App {
     const panel = $('.expanding-two-column-list');
     const list = panel.find('.expanding-list');
     const displayCount = list.data('default-showing');
-    console.log(displayCount);
 
     const showItems = () => {
       for (var i = displayCount; i < list.find('li').length; i++) {

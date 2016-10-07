@@ -42,7 +42,7 @@ Template Name: Ways to Give
           <span data-donation-level="2083">$50</span>
           <input type="hidden" name="set.DonationLevel" value="2085" />
           <span class="other">$ <input type="text" name="set.Value" value="" /></span><br>
-          <input type="submit" value="Make Donation" class="button grey" />
+          <input type="submit" value="Make Donation" class="button green" />
           <a href="" target="_blank" id="submit"></a>
         </form>
       </div>
@@ -57,7 +57,7 @@ Template Name: Ways to Give
           <span data-donation-level="2122">$20</span>
           <input type="hidden" name="set.DonationLevel" value="2124" />
           <span class="other">$ <input type="text" name="set.Value" value="" /></span><br>
-          <input type="submit" value="Make Donation" class="button grey" />
+          <input type="submit" value="Make Donation" class="button green" />
           <a href="" target="_blank" id="submit"></a>
         </form>
       </div>
@@ -73,89 +73,89 @@ Template Name: Ways to Give
           <span data-donation-level="2106">$50</span>
           <input type="hidden" name="set.DonationLevel" value="2103" />
           <span class="other">$ <input type="text" name="set.Value" value="" /></span><br>
-          <input type="submit" value="Make Donation" class="button grey" />
+          <input type="submit" value="Make Donation" class="button green" />
           <a href="" target="_blank" id="submit"></a>
         </form>
       </div>
     </div>
 
-    <section class="panel padded three-column-list active" data-tab-content="1">
+    <section class="panel padded-top three-column-list active" data-tab-content="1">
       <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb1.jpg" />
         <div class="copy">
-          <h3>$50 One-time</h3>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2083" class="button green-keyline" target="_blank">Donate</a></p>
+          <h4>$50 One-time</h4>
+          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2083" class="read-more" target="_blank">Donate</a></p>
         </div>
       </article>
 
       <article class="col-grid-4">
-        <img src="http://placehold.it/427x350/333333" />
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb2.jpg" />
         <div class="copy">
-          <h3>$100 One-time</h3>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2082" class="button green-keyline" target="_blank">Donate</a></p>
+          <h4>$100 One-time</h4>
+          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2082" class="read-more" target="_blank">Donate</a></p>
         </div>
       </article>
 
       <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg" />
         <div class="copy">
-          <h3>$250 One-time</h3>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2086" class="button green-keyline" target="_blank">Donate</a></p>
-        </div>
-      </article>
-    </section>
-
-
-
-    <section class="panel padded three-column-list" data-tab-content="2">
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
-        <div class="copy">
-          <h3>$X Monthly</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350/333333" />
-        <div class="copy">
-          <h3>$X Monthly</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
-        <div class="copy">
-          <h3>$X Monthly</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
+          <h4>$250 One-time</h4>
+          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2086" class="read-more" target="_blank">Donate</a></p>
         </div>
       </article>
     </section>
 
 
-    <section class="panel padded three-column-list" data-tab-content="3">
+
+    <section class="panel padded-top three-column-list" data-tab-content="2">
+      <article class="col-grid-4">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb1.jpg" />
+        <div class="copy">
+          <h4>$X Monthly</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb2.jpg" />
+        <div class="copy">
+          <h4>$X Monthly</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
+        </div>
+      </article>
+
+      <article class="col-grid-4">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg" />
+        <div class="copy">
+          <h4>$X Monthly</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="panel padded-top three-column-list" data-tab-content="3">
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350" />
         <div class="copy">
-          <h3>$X In Tribute</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
+          <h4>$X In Tribute</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
         </div>
       </article>
 
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350/333333" />
         <div class="copy">
-          <h3>$X In Tribute</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
+          <h4>$X In Tribute</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
         </div>
       </article>
 
       <article class="col-grid-4">
         <img src="http://placehold.it/427x350" />
         <div class="copy">
-          <h3>$X In Tribute</h3>
-          <p><a href="#" class="button green-keyline">Donate</a></p>
+          <h4>$X In Tribute</h4>
+          <p><a href="#" class="read-more">Donate</a></p>
         </div>
       </article>
     </section>

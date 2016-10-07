@@ -10479,7 +10479,6 @@ var App = function () {
       var panel = (0, _jquery2.default)('.expanding-two-column-list');
       var list = panel.find('.expanding-list');
       var displayCount = list.data('default-showing');
-      console.log(displayCount);
 
       var showItems = function showItems() {
         for (var i = displayCount; i < list.find('li').length; i++) {
