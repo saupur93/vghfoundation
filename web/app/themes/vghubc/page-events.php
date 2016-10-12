@@ -6,8 +6,6 @@ Template Name: Events
 
 <?php get_header(); ?>
 
-<?php get_header(); ?>
-
   <div class="page-wrap">
 
   <section class="panel page-header" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/EVENTS-Gala-Option-1.jpg);">
@@ -77,10 +75,10 @@ Template Name: Events
       </div>
     </div>
 
-    <section class="panel" id="events-section">
+    <section class="panel grid-slider" id="events-section">
       <div class="events-items">
         <div class="events-item active angel-event">
-          <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg"></div>
+          <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/angel-image.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/tmp/angel-image.jpg"></div>
           <div class="container">
             <div class="summary">
               <h5>HONOUR AN ANGEL IN YOUR LIFE</h5>
@@ -102,7 +100,7 @@ Template Name: Events
           <div class="container">
             <div class="summary">
               <h5>DE BEERS TIME TO SHINE GALA</h5>
-              <h2>DE BEERS TIME TO SHINE GALA</h2>
+              <h2>De Beers Time To Shine Gala</h2>
             </div>
           </div>
         </div>
@@ -118,33 +116,33 @@ Template Name: Events
       </div>
 
       <ul id="events-menu">
-          <li class="angel-event">
-            <a class="open" href="/events/surgery">
+          <li class="angel-event event-item item">
+            <a class="open" href="/signature-events/angel-campaign">
             <span>ANGEL CAMPAIGN</span>
             <span class="date">October 21, 2016</span>
             <span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg" ?>
-          </li>
-          <li class="stars-gala">
-            <a class="open" href="/events/cancer">
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/angel-image.jpg");"></div>
+          </li><!--
+          --><li class="stars-gala event-item item">
+            <a class="open" href="/events/stars-gala">
             <span>Night of a Thousand Stars Gala</span>
             <span class="date">October 21, 2016</span>
             <span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg" ?>
-          </li>
-          <li class="shine-gala">
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/stars-gala-thumb.jpg");"></div>
+          </li><!--
+          --><li class="shine-gala event-item item">
             <a class="open" href="/events/heart-lung">
-            <span>DE BEERS TIME TO SHINE GALA</span>
+            <span>De Beers Time to Shine Gala</span>
             <span class="date">October 21, 2016</span>
             <span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg" ?>
-          </li>
-          <li class="innovation">
-            <a class="open" href="/events/innovation">
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/de-beers-thumb.jpg");"></div>
+          </li><!--
+          --><li class="innovation event-item item">
+            <a class="open" href="/signature-events/ismaili-walk/">
             <span>Ismaili Walk</span>
             <span class="date">October 21, 2016</span>
             <span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg");"></div>
           </li>
       </ul>
 

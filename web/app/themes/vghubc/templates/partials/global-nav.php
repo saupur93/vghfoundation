@@ -66,3 +66,12 @@
   </div>
 </header>
 <?php endif; ?>
+
+
+<?php if(get_post_type(get_the_ID()) == 'signature_events'): ?>
+<header id="sub-navigation">
+  <div class="container breadcrumb">
+  <h3><a href="/events"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> Events</a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
+  </div>
+</header>
+<?php endif; ?>

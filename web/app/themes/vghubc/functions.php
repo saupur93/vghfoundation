@@ -26,6 +26,12 @@ function custom_body_classes($classes) {
     $classes[] = 'theme-section-' . sanitize_title(get_the_title(get_the_ID()));
   }
 
+
+  if (get_post_type(get_the_ID()) == 'signature_events') {
+    $classes[] = 'signature-event-' . sanitize_title(get_the_title(get_the_ID()));
+  }
+
+
   return $classes;
 }
 add_filter('body_class','custom_body_classes');

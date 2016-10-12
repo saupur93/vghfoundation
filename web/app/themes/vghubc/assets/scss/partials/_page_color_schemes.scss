@@ -393,3 +393,41 @@
 }
 
 
+
+
+.panel.category-bg-color {
+  background-color:$brand-green;
+  color:#fff;
+
+  h1,h2,h3,h4,h5 {
+    color:#fff;
+  }
+
+  .signature-event-angel-campaign & {
+    background-color:$angel-pink;
+  }
+}
+
+
+.signature-event-angel-campaign {
+
+  .button {
+    background-color:$angel-pink;
+    border-color:$angel-pink;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+
+    &.keyline {
+      background-color:transparent;
+      color:$angel-pink;
+      &:hover {
+        background-color:$angel-pink;
+        border-color:$angel-pink;
+        color:#fff;
+      }
+    }
+  }
+}

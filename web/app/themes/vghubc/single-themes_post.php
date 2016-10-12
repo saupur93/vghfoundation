@@ -203,27 +203,27 @@
       <ul id="themes-menu">
           <li class="surgery">
             <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg";)"></div>
           </li>
           <li class="cancer">
             <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg";)"></div>
           </li>
           <li class="heart-lung">
             <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg";)"></div>
           </li>
           <li class="innovation">
             <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg";)"></div>
           </li>
           <li class="community">
             <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg";)"></div>
           </li>
           <li class="brain-health">
             <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
-            <img class="thumb" src="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg" ?>
+            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg";)"></div>
           </li>
       </ul>
     </section>

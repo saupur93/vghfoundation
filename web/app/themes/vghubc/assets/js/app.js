@@ -55,6 +55,11 @@ class App {
     }
 
 
+    if ($('.grid-slider').length) {
+      this.gridSlider();
+    }
+
+
 
   }
 
@@ -281,6 +286,60 @@ class App {
       showItems();
     });
 
+
+  }
+
+
+/**
+   * Grid slider for events
+   */
+  gridSlider() {
+    const panel = $('.grid-slider');
+    const items = panel.find('.item');
+    const pagerTpl = '<div class="pager"><div class="left"></div><div class="right"></div></div>';
+    let currentSlide = 0;
+
+    const transitionSlides = (currentSlide) => {
+      items.css({
+        transform: 'translate3d(-'+ 100 * currentSlide +'%,0,0)'
+      });
+    };
+
+    const pagerVisibility = () => {
+      if(currentSlide == 0) {
+        panel.find('.pager .left').fadeOut();
+        panel.find('.pager .right').fadeIn();
+      }
+
+      if (currentSlide > 0) {
+        panel.find('.pager .left').fadeIn();
+      }
+
+      if (currentSlide == (items.length - 3)) {
+        panel.find('.pager .right').fadeOut();
+      }
+    };
+
+    if (items.length >= 3) {
+      panel.append(pagerTpl);
+      pagerVisibility();
+    }
+
+    panel.find('.pager').on('click', '.left', () => {
+      if (currentSlide > 0 ) {
+        currentSlide--;
+        transitionSlides(currentSlide);
+        pagerVisibility();
+      }
+    });
+
+    panel.find('.pager').on('click', '.right', () => {
+      if (currentSlide < (items.length - 3)) {
+        currentSlide++;
+        transitionSlides(currentSlide);
+        pagerVisibility();
+      }
+    });
 
   }
 
