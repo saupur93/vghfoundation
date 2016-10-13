@@ -2,6 +2,7 @@ import $ from 'jquery';
 const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 const DonationTabs = require('./modules/donationTabs');
 import slideshow from './modules/slideshow';
+import NewsFeed from './modules/newsFeed';
 
 class App {
 
@@ -59,6 +60,10 @@ class App {
       this.gridSlider();
     }
 
+    if($('.page-template-page-latest').length) {
+      this.newsFeed = new NewsFeed();
+    }
+
 
 
   }
@@ -102,7 +107,7 @@ class App {
       $('body').addClass('latest-closed-finished');
     }
 
-    latestToggle.onclick = toggleFunction;
+    latestToggle.onmouseover = toggleFunction;
 
     $(window).on('scroll', () => {
       if (!scrolled) toggleFunction();

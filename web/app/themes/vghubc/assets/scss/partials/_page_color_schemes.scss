@@ -197,7 +197,6 @@
         position:absolute;
         left:0.25rem;
         color:$brand-green;
-
       }
     }
   }
@@ -419,7 +418,6 @@
       color:#fff;
       background:transparent;
     }
-
     &.keyline {
       background-color:transparent;
       color:$angel-pink;
@@ -430,4 +428,18 @@
       }
     }
   }
+
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+
+
 }
+
+

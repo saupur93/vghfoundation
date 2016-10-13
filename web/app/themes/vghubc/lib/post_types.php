@@ -28,6 +28,7 @@ function custom_posts_types() {
 			'has_archive' => 'themes-archive', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
+			"show_in_rest" => true,
 			'rewrite' => array('slug'=>'themes'),
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array('title', 'editor', 'author', 'revisions', 'sticky', 'excerpt','thumbnail')

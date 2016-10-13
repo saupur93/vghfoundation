@@ -17,7 +17,7 @@
           'container'   => '',
           'items_wrap'  => '%3$s'
         )); ?>
-        <li><a href="#" id="toggleLatest">Latest</a></li>
+        <li><a href="/latest/" id="toggleLatest">Latest</a></li>
       </ul>
 
       <ul id="language-switcher">

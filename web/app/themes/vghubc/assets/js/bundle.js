@@ -10233,6 +10233,10 @@ var _slideshow = require('./modules/slideshow');
 
 var _slideshow2 = _interopRequireDefault(_slideshow);
 
+var _newsFeed = require('./modules/newsFeed');
+
+var _newsFeed2 = _interopRequireDefault(_newsFeed);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10298,6 +10302,10 @@ var App = function () {
       if ((0, _jquery2.default)('.grid-slider').length) {
         this.gridSlider();
       }
+
+      if ((0, _jquery2.default)('.page-template-page-latest').length) {
+        this.newsFeed = new _newsFeed2.default();
+      }
     }
 
     /**
@@ -10339,7 +10347,7 @@ var App = function () {
         (0, _jquery2.default)('body').addClass('latest-closed-finished');
       }
 
-      latestToggle.onclick = toggleFunction;
+      latestToggle.onmouseover = toggleFunction;
 
       (0, _jquery2.default)(window).on('scroll', function () {
         if (!scrolled) toggleFunction();
@@ -10594,7 +10602,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/donationTabs":3,"./modules/fixedHeaderScroll":4,"./modules/slideshow":5,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/donationTabs":3,"./modules/fixedHeaderScroll":4,"./modules/newsFeed":5,"./modules/slideshow":6,"jquery":1}],3:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10715,6 +10723,116 @@ var FixedHeaderScroll = function () {
 module.exports = FixedHeaderScroll;
 
 },{"jquery":1}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Load additional posts via AJAX,
+ * NOTE: initial page post list is still loaded via PHP,
+ * this simply does the "more" data part
+ */
+var NewsFeed = function () {
+  function NewsFeed() {
+    _classCallCheck(this, NewsFeed);
+
+    this.api = '/wp-json/wp/v2/posts/';
+    this.filterCategory = 'news';
+    this.filterThemeId = false;
+    this.paging = 1;
+    this.perPage = 10;
+    this.hasMore = true;
+
+    (0, _jquery2.default)('.load-more').on('click', this.loadMore.bind(this));
+    this.panelTabs();
+  }
+
+  /**
+   * Load more news posts from WP JSON endpoint
+   */
+
+
+  _createClass(NewsFeed, [{
+    key: 'loadMore',
+    value: function loadMore() {
+      this.paging = this.paging + 1;
+      var url = this.api + ('?fitler[category_name]=' + this.filterCategory + '&per_page=' + this.perPage + '&page=' + this.paging);
+      if (this.filterThemeId) {
+        url = url + ('&filter[meta_key]=related_theme&filter[meta_compare]=LIKE&filter[meta_value]=' + this.filterThemeId);
+      }
+      (0, _jquery2.default)('.load-more').addClass('loading');
+      _jquery2.default.ajax({
+        url: url,
+        xhr: function xhr() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.addEventListener('progress', function (e) {
+            console.log(e);
+            if (e.lengthComputable) {
+              var percentComplete = e.loaded / e.total;
+              console.log(percentComplete);
+              //Do something with download progress
+            }
+          }, false);
+          return xhr;
+        }
+      }).done(function (data) {
+        console.log("success");
+        (0, _jquery2.default)('.load-more').removeClass('loading');
+        console.log(data);
+      });
+    }
+  }, {
+    key: 'panelTabs',
+    value: function panelTabs() {
+      var _this = this;
+
+      var tabsEl = (0, _jquery2.default)('.news-tabs');
+
+      var changeTab = function changeTab(e) {
+        (0, _jquery2.default)('[data-tab]').removeClass('active');
+        (0, _jquery2.default)(e.currentTarget).addClass('active');
+        _this.resetState();
+
+        var currentTab = (0, _jquery2.default)(e.currentTarget).data('tab');
+        (0, _jquery2.default)('[data-tab-content]').removeClass('active');
+        (0, _jquery2.default)('[data-tab-content="' + currentTab + '"]').addClass('active');
+
+        // $('[data-tab-content]').eq(currentTab - 1).addClass('active');
+      };
+
+      tabsEl.on('click', '[data-tab]', changeTab);
+    }
+
+    /**
+     * Reset the filters and paging when tabs change
+     */
+
+  }, {
+    key: 'resetState',
+    value: function resetState() {
+      this.paging = 1;
+      (0, _jquery2.default)('.additional-loaded-news').empty();
+    }
+  }]);
+
+  return NewsFeed;
+}();
+
+exports.default = NewsFeed;
+
+},{"jquery":1}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

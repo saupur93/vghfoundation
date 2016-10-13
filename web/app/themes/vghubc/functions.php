@@ -26,16 +26,23 @@ function custom_body_classes($classes) {
     $classes[] = 'theme-section-' . sanitize_title(get_the_title(get_the_ID()));
   }
 
-
   if (get_post_type(get_the_ID()) == 'signature_events') {
     $classes[] = 'signature-event-' . sanitize_title(get_the_title(get_the_ID()));
   }
-
 
   return $classes;
 }
 add_filter('body_class','custom_body_classes');
 
+// add meta key & meta value to wp json rest
+function rest_api_allow_meta_query($valid_vars) {
+    $valid_vars[] = 'meta_key';
+    $valid_vars[] = 'meta_value';
+    $valid_vars[] = 'meta_compare';
+
+    return $valid_vars;
+}
+add_filter('rest_query_vars', 'rest_api_allow_meta_query');
 
 // Let's not overload the functions.php file... keep things separate
 require_once 'lib/assets.php'; // load the correct assets for cache busting

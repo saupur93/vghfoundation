@@ -49,29 +49,29 @@
         <div class="gallery-item item">
           <div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
         </div><!--
-      --><div class="gallery-item item">
-        <div class="thumb" style="background-image:url('http://placehold.it/400x400/000000');"></div>
+     --><div class="gallery-item item">
+          <div class="thumb" style="background-image:url('http://placehold.it/400x400/000000');"></div>
         </div><!--
-        --><div class="gallery-item item">
+     --><div class="gallery-item item">
           <div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
         </div><!--
      --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
+          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
         </div><!--
      --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
+          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
         </div><!--
      --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
+          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
         </div><!--
      --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
+          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
         </div><!--
-     --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
+     --><div class="gallery-item item"><!--
+        --><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
         </div><!--
-     --><div class="gallery-item item">
-      <div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
+     --><div class="gallery-item item"><!--
+       --><div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
         </div>
       </div>
     </section>
@@ -153,12 +153,71 @@
     </section>
 
 
-
     <section class="panel extra-padded bg-color-cta category-bg-color">
       <div class="container">
         <div class="inner-wrap">
           <h2>Become an Angel. Donate today.</h2>
           <p><a href="<?php print $donate_url; ?>" class="button white-keyline" target="_blank">Donate</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="panel padded three-column-donors">
+      <div class="container">
+        <div class="inner-wrap">
+          <h3>Thanks to our generous donors</h3>
+          <div class="col-grid-4">
+            <div class="donor-group">
+              <h5>Silver</h5>
+              <ul class="small">
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+              </ul>
+            </div>
+
+            <div class="donor-group">
+              <h5>Bronze</h5>
+              <ul class="small">
+                <li>Beverley Anne Briscoe</li>
+                <li>Iranian-Canadian Benevolent Foundation</li>
+              </ul>
+            </div>
+
+            <div class="donor-group">
+              <h5>#myangelbc</h5>
+              <ul class="small">
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-grid-4">
+            <div class="donor-group">
+              <h5>angel</h5>
+              <ul class="small">
+                <li>Alan and Joy Grant</li>
+                <li>Kathy and Steve Bellringer</li>
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+              </ul>
+            </div>
+            <div class="donor-group">
+              <h5>media</h5>
+              <ul class="small">
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-grid-4">
+            <div class="donor-group">
+              <h5>In-kind Support</h5>
+              <ul class="small">
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
