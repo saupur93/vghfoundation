@@ -3,6 +3,7 @@ const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 const DonationTabs = require('./modules/donationTabs');
 import slideshow from './modules/slideshow';
 import NewsFeed from './modules/newsFeed';
+import AnnualReport from './modules/annualReport';
 
 class App {
 
@@ -62,6 +63,10 @@ class App {
 
     if($('.page-template-page-latest').length) {
       this.newsFeed = new NewsFeed();
+    }
+
+    if($('.page-template-page-annual-report').length) {
+      this.annualReport = new AnnualReport();
     }
 
 

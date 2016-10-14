@@ -45,3 +45,9 @@
 ## Building and Deploying
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
 
+
+
+# TODO
+- AR
+- Add copy from Gather Content into templates where possible - especially Angel Campaign
+- homepage change to Latest in smaller desktop - peekaboo

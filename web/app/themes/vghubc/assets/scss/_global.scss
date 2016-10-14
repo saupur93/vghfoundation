@@ -3144,3 +3144,220 @@ form {
     }
   }
 }
+
+
+.panel.news-feed-panel {
+
+}
+
+
+@keyframes animateArDown {
+  0% {
+      transform:translateY(-100vh);
+  }
+  50% {
+      transform:translateY(calc(50vh - 60px));
+  }
+  75% {
+    opacity:1;
+  }
+
+  100% {
+    opacity:0;
+    transform:translateY(calc(50vh - 60px));
+  }
+}
+
+
+body.page-template-page-annual-report-php {
+  overflow:hidden;
+}
+
+#annual-report {
+  overflow:visible;
+  height:100%;
+
+  transition: transform 0.6s cubic-bezier(.15,.89,.52,.96);
+  z-index:5;
+
+  h2 {
+    font-family:$font-bold;
+    line-height:1.1;
+  }
+
+  .full-panel {
+    height:100%;
+    position:relative;
+  }
+
+  .panel.ar-intro-cover {
+    position:relative;
+    background-image:url(../img/tmp/ar-bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh;
+    color:#fff;
+
+    .container, .inner-wrap {
+      height:calc(100vh - 100px);
+    }
+
+    .animate-down {
+      position:absolute;
+      transform:translateY(-100vh);
+      // transition: transform 3000ms linear;
+
+    }
+    .animate-down {
+      animation: animateArDown 4000ms 300ms;
+      animation-fill-mode: forwards;
+      // transform:translateY(calc(50vh - 60px));
+    }
+
+    .arrow-down {
+      position:absolute;
+      bottom:rem(30);
+      left:0;
+      right:0;
+      width:100%;
+      text-align:center;
+    }
+
+    .intro-copy {
+      @extend .vertical-center;
+      margin-left:rem(400);
+      transition: margin-left 600ms 300ms linear;
+      .second {
+        opacity:0;
+        transition: opacity 900ms linear;
+      }
+    }
+
+    span {
+      transition: opacity 900ms linear;
+    }
+
+    &.start .intro-copy {
+      margin-left:0;
+    }
+  }
+
+  .ar-section-header {
+    color:#fff;
+    background-color:$teal;
+    padding:rem(30) 0;
+    position:absolute;
+    top:100px;
+    width:100%;
+
+
+    h5 {
+      @include font-size(16px);
+      margin-bottom:0.25rem;
+    }
+
+    h3 {
+      margin-bottom:0;
+    }
+  }
+
+  .surgery-bg .facts .number, .surgery-bg .facts h5 {
+    color:$surgery !important;
+  }
+  .cancer-bg .facts .number, .cancer-bg .facts h5 {
+    color:$cancer !important;
+  }
+  .heart-lung-bg .facts .number, .heart-lung-bg .facts h5 {
+    color:$heartlung !important;
+  }
+  .innovation-bg .facts .number, .innovation-bg .facts h5 {
+    color:$innovation !important;
+  }
+  .community-bg .facts .number, .community-bg .facts h5 {
+    color:$community !important;
+  }
+  .brain-health-bg .facts .number, .brain-health-bg .facts h5 {
+    color:$brainhealth !important;
+  }
+
+  .surgery-bg .ar-section-header {
+    background-color:$surgery;
+  }
+  .cancer-bg .ar-section-header {
+    background-color:$cancer;
+  }
+  .heart-lung-bg .ar-section-header {
+    background-color:$heartlung;
+  }
+  .innovation-bg .ar-section-header {
+    background-color:$innovation;
+  }
+  .community-bg .ar-section-header {
+    background-color:$community;
+  }
+  .brain-health-bg .ar-section-header {
+    background-color:$brainhealth;
+  }
+
+  .ar-section {
+    height:100vh;
+    background-image:url(../img/ar-bg-v.svg);
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position:0 -200px;
+    padding-top:rem(100);
+
+    p {
+      font-weight:normal;
+    }
+
+    .container {
+      display:block;
+      height:calc(100% - 100px);
+
+    }
+
+    .narrow-wrap {
+      @extend .vertical-center;
+    }
+
+    .facts {
+      h5 {
+        margin-bottom:rem(30);
+      }
+
+      p {
+        line-height:1;
+        margin-bottom:0;
+      }
+      .number {
+        @include font-size(72px);
+        float:left;
+        width:100%;
+        margin-bottom:rem(0);
+      }
+
+      img {
+        margin-top:rem(-20);
+        margin-bottom:rem(5);
+      }
+    }
+
+    &.ar-section-9 {
+      background-color:$teal;
+
+
+
+      h4 {
+        margin-bottom:3rem;
+      }
+
+      .button {
+        &:hover {
+          color:$teal;
+        }
+      }
+    }
+  }
+}
+

@@ -10237,6 +10237,10 @@ var _newsFeed = require('./modules/newsFeed');
 
 var _newsFeed2 = _interopRequireDefault(_newsFeed);
 
+var _annualReport = require('./modules/annualReport');
+
+var _annualReport2 = _interopRequireDefault(_annualReport);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10305,6 +10309,10 @@ var App = function () {
 
       if ((0, _jquery2.default)('.page-template-page-latest').length) {
         this.newsFeed = new _newsFeed2.default();
+      }
+
+      if ((0, _jquery2.default)('.page-template-page-annual-report').length) {
+        this.annualReport = new _annualReport2.default();
       }
     }
 
@@ -10602,7 +10610,217 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/donationTabs":3,"./modules/fixedHeaderScroll":4,"./modules/newsFeed":5,"./modules/slideshow":6,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/annualReport":3,"./modules/donationTabs":4,"./modules/fixedHeaderScroll":5,"./modules/newsFeed":6,"./modules/slideshow":7,"jquery":1}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Annual Report
+ */
+var inTransition = false;
+
+var AnnualReport = function () {
+  function AnnualReport() {
+    _classCallCheck(this, AnnualReport);
+
+    this.scrollJackPanels().init();
+
+    setTimeout(function () {
+      (0, _jquery2.default)('.ar-intro-cover').addClass('start');
+    }, 3800);
+
+    setTimeout(function () {
+      (0, _jquery2.default)('.ar-intro-cover .hide').removeClass('hide');
+      (0, _jquery2.default)('.ar-intro-cover .second').css('opacity', 1);
+    }, 5500);
+  }
+
+  _createClass(AnnualReport, [{
+    key: 'scrollJackPanels',
+    value: function scrollJackPanels() {
+      return {
+        elements: {
+          container: document.getElementById('annual-report'),
+          pages: document.querySelectorAll('.full-panel')
+        },
+
+        init: function init() {
+          this.events();
+        },
+
+        getViewPortTop: function getViewPortTop(el) {
+          var fromTop = el.getBoundingClientRect().bottom - el.getBoundingClientRect().height;
+          return fromTop;
+        },
+
+        events: function events() {
+          var self = this;
+
+          // Cross browser call to monitor the scroll
+          if (window.addEventListener) {
+            // all browsers except IE before version 9
+
+            // Internet Explorer, Opera, Google Chrome and Safari
+            window.addEventListener("mousewheel", function (e) {
+              self.scrollEvent(e);
+            }, false);
+
+            // Firefox
+            window.addEventListener("DOMMouseScroll", function (e) {
+              self.scrollEvent(e);
+            }, false);
+          } else {
+            // IE before version 9
+
+            window.attachEvent("onmousewheel", function (e) {
+              self.scrollEvent(e);
+            });
+          }
+        },
+
+        scrollEvent: function scrollEvent(e) {
+          var self = this;
+
+          var scrollDistance = -e.detail || e.wheelDelta; // normalize scroll distance between browsers
+          var delta = e.detail ? 10 : 100; // e.detail is much lower than e.wheelDelta
+          var panelsEl = self.elements.container;
+
+          // Control the panels
+          if ((0, _jquery2.default)('body').hasClass('page-template-page-annual-report-php')) {
+
+            if (!inTransition) {
+              if (scrollDistance > 0) {
+
+                // scrolling up
+                if (scrollDistance > delta) {
+                  inTransition = true;
+                  self.waitForTransition();
+                  self.transition('up');
+
+                  // quick way to get the element in the right spot on the way up
+                  if (panelsEl.getBoundingClientRect().top > 0) {
+                    window.scroll(0, window.innerHeight - delta);
+                  }
+                }
+              } else {
+
+                // scrolling down
+                if (scrollDistance < -delta) {
+                  inTransition = true;
+
+                  self.waitForTransition();
+                  self.transition('down');
+                }
+              }
+            }
+          }
+        },
+
+        // Function: transitionDuration()
+        // Calculates how long the slide transition is from the css prop
+        // --------------------------
+        transitionDuration: function transitionDuration() {
+          var self = this;
+          var duration = 0;
+
+          if (typeof window.getComputedStyle === 'function') {
+            var containerStyles = window.getComputedStyle(self.elements.container, null);
+            var computedDuration = containerStyles['transition-duration'] || containerStyles['MozTransitionDuration'];
+          }
+
+          if (computedDuration !== undefined) {
+            duration = computedDuration.replace('s', '').split(',')[0];
+          }
+          return duration * 1000;
+        },
+
+        // Function: waitForTransition()
+        // waits for a transition to finish then unblocks the scrollEvent functionality
+        // --------------------------
+        waitForTransition: function waitForTransition() {
+          var self = this;
+          setTimeout(function () {
+            inTransition = false;
+          }, self.transitionDuration());
+        },
+
+        // Function: transition()
+        // transition the elements up or down
+        // --------------------------
+        transition: function transition(direction, targetIndex) {
+          var self = this;
+          var transitionPercentage, curIndex, nextIndex, prevIndex, el;
+          console.log(direction);
+
+          // Determind the current page index
+          for (var i = 0; i < self.elements.pages.length; i++) {
+            if ((0, _jquery2.default)(self.elements.pages[i]).hasClass('active')) {
+              curIndex = i;
+              i = self.elements.pages.length;
+            }
+          }
+
+          // Calculate the new position & assign the new class
+          switch (direction) {
+            case 'up':
+              prevIndex = curIndex - 1;
+              el = self.elements.pages[prevIndex];
+              transitionPercentage = prevIndex * -100;
+
+              //remove fixed to release the jack
+              // if (curIndex === 0 && prevIndex === -1){
+              //  $('body').removeClass('fixed');
+              // }
+              break;
+
+            case 'down':
+              nextIndex = curIndex + 1;
+              el = self.elements.pages[nextIndex];
+              transitionPercentage = nextIndex * -100;
+
+              break;
+
+            case 'jump':
+              el = self.elements.pages[targetIndex];
+              transitionPercentage = targetIndex * -100;
+              break;
+          }
+
+          // If the element doesn't exist don't do the transition
+          if (el === undefined) return false;
+
+          // Remove the section & nav active class
+          (0, _jquery2.default)(self.elements.pages[curIndex]).removeClass('active');
+
+          (0, _jquery2.default)(el).addClass('active');
+
+          // Apply the new position
+          self.elements.container.setAttribute('style', '-webkit-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-moz-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-ms-transform:translate3d(0,' + transitionPercentage + '%,0);' + 'transform:translate3d(0,' + transitionPercentage + '%,0);');
+        }
+
+      };
+    }
+  }]);
+
+  return AnnualReport;
+}();
+
+exports.default = AnnualReport;
+
+},{"jquery":1}],4:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10682,7 +10900,7 @@ var DonationTabs = function () {
 
 module.exports = DonationTabs;
 
-},{"jquery":1}],4:[function(require,module,exports){
+},{"jquery":1}],5:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10722,7 +10940,7 @@ var FixedHeaderScroll = function () {
 
 module.exports = FixedHeaderScroll;
 
-},{"jquery":1}],5:[function(require,module,exports){
+},{"jquery":1}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10832,7 +11050,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":1}],6:[function(require,module,exports){
+},{"jquery":1}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
