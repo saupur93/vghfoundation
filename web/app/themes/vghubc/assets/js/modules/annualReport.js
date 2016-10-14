@@ -4,6 +4,7 @@ import $ from 'jquery';
  * Annual Report
  */
 let inTransition = false;
+window.section2interval;
 
 export default class AnnualReport {
   constructor() {
@@ -76,6 +77,8 @@ export default class AnnualReport {
           var panelsEl = self.elements.container;
 
 
+
+
           // Control the panels
           if ( $('body').hasClass('page-template-page-annual-report-php') ) {
 
@@ -134,8 +137,6 @@ export default class AnnualReport {
         },
 
 
-
-
         // Function: waitForTransition()
         // waits for a transition to finish then unblocks the scrollEvent functionality
         // --------------------------
@@ -145,7 +146,6 @@ export default class AnnualReport {
             inTransition = false;
           }, self.transitionDuration());
         },
-
 
 
         // Function: transition()
@@ -158,11 +158,13 @@ export default class AnnualReport {
 
           // Determind the current page index
           for(var i=0; i < self.elements.pages.length; i++){
-            if( $(self.elements.pages[i]).hasClass('active') ){
+            if($(self.elements.pages[i]).hasClass('active')){
               curIndex = i;
-              i = self.elements.pages.length;
+              // i = self.elements.pages.length;
             }
           }
+
+
 
           // Calculate the new position & assign the new class
           switch(direction){
@@ -199,6 +201,7 @@ export default class AnnualReport {
           $(self.elements.pages[curIndex]).removeClass('active');
 
 
+
           $(el).addClass('active');
 
 
@@ -209,6 +212,57 @@ export default class AnnualReport {
                 '-ms-transform:translate3d(0,'+transitionPercentage+'%,0);' +
                     'transform:translate3d(0,'+transitionPercentage+'%,0);'
           );
+
+
+          // different first panel
+          if (!$('.ar-intro-cover').hasClass('active')) {
+            $('.ar-main-header').removeClass('cover');
+
+            // colors
+            let newColor;
+            if($('.full-panel.active').attr('data-headerColor')){
+              newColor = $('.full-panel.active').attr('data-headerColor');
+            } else {
+              newColor = '';
+            }
+            $('.ar-main-header').attr('data-headerColor', newColor);
+
+
+            // headers
+            let headers = $('.full-panel.active .ar-section-header').find('.container').html();
+            $('.ar-main-header').find('.container').html(headers);
+
+
+            // last panel like cover
+            if(self.elements.pages.length - 1 == $('.full-panel.active').index()) {
+              $('.ar-main-header').addClass('cover');
+            }
+
+            // specifically section 1
+            if($('.full-panel.active').hasClass('ar-section-1')) {
+
+              let count = 0
+              window.section2interval = setInterval(() => {
+                if (count < $('.animated-content .item').length -1) {
+                    count = count + 1;
+                } else {
+                  count = 0;
+                }
+                $('.animated-content .item').removeClass('active');
+                $('.animated-content .item').eq(count).addClass('active');
+
+
+              }, 5000);
+            } else {
+              clearInterval(window.section2interval);
+            }
+
+
+
+
+          } else {
+            $('.ar-main-header').addClass('cover');
+          }
 
 
         }

@@ -10355,6 +10355,12 @@ var App = function () {
         (0, _jquery2.default)('body').addClass('latest-closed-finished');
       }
 
+      if ((0, _jquery2.default)(window).height() <= 800) {
+        setTimeout(function () {
+          toggleFunction();
+        }, 3000);
+      }
+
       latestToggle.onmouseover = toggleFunction;
 
       (0, _jquery2.default)(window).on('scroll', function () {
@@ -10631,6 +10637,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * Annual Report
  */
 var inTransition = false;
+window.section2interval;
 
 var AnnualReport = function () {
   function AnnualReport() {
@@ -10769,7 +10776,7 @@ var AnnualReport = function () {
           for (var i = 0; i < self.elements.pages.length; i++) {
             if ((0, _jquery2.default)(self.elements.pages[i]).hasClass('active')) {
               curIndex = i;
-              i = self.elements.pages.length;
+              // i = self.elements.pages.length;
             }
           }
 
@@ -10809,6 +10816,50 @@ var AnnualReport = function () {
 
           // Apply the new position
           self.elements.container.setAttribute('style', '-webkit-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-moz-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-ms-transform:translate3d(0,' + transitionPercentage + '%,0);' + 'transform:translate3d(0,' + transitionPercentage + '%,0);');
+
+          // different first panel
+          if (!(0, _jquery2.default)('.ar-intro-cover').hasClass('active')) {
+            (0, _jquery2.default)('.ar-main-header').removeClass('cover');
+
+            // colors
+            var newColor = void 0;
+            if ((0, _jquery2.default)('.full-panel.active').attr('data-headerColor')) {
+              newColor = (0, _jquery2.default)('.full-panel.active').attr('data-headerColor');
+            } else {
+              newColor = '';
+            }
+            (0, _jquery2.default)('.ar-main-header').attr('data-headerColor', newColor);
+
+            // headers
+            var headers = (0, _jquery2.default)('.full-panel.active .ar-section-header').find('.container').html();
+            (0, _jquery2.default)('.ar-main-header').find('.container').html(headers);
+
+            // last panel like cover
+            if (self.elements.pages.length - 1 == (0, _jquery2.default)('.full-panel.active').index()) {
+              (0, _jquery2.default)('.ar-main-header').addClass('cover');
+            }
+
+            // specifically section 1
+            if ((0, _jquery2.default)('.full-panel.active').hasClass('ar-section-1')) {
+              (function () {
+
+                var count = 0;
+                window.section2interval = setInterval(function () {
+                  if (count < (0, _jquery2.default)('.animated-content .item').length - 1) {
+                    count = count + 1;
+                  } else {
+                    count = 0;
+                  }
+                  (0, _jquery2.default)('.animated-content .item').removeClass('active');
+                  (0, _jquery2.default)('.animated-content .item').eq(count).addClass('active');
+                }, 5000);
+              })();
+            } else {
+              clearInterval(window.section2interval);
+            }
+          } else {
+            (0, _jquery2.default)('.ar-main-header').addClass('cover');
+          }
         }
 
       };

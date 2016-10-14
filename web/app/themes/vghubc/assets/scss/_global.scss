@@ -635,6 +635,16 @@ p {
       animation: showsSlideUp 300ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1) both;
     }
   }
+
+  // .latest-peek & {
+  //   height:15px;
+  //   .highlight {
+
+  //     a {
+  //       opacity: 0;
+  //     }
+  //   }
+  // }
 }
 
 
@@ -769,25 +779,44 @@ span.highlighted-text {
     transition:background 1s linear;
     @include media($laptopHeightOnly){
       min-height:290px;
+      background-color:rgba($brand-green,0.85);
     }
 
     &[data-colour-type="surgery"] {
       background-color:$surgery;
+      @include media($laptopHeightOnly){
+        background-color:rgba($surgery,0.85);
+      }
     }
     &[data-colour-type="cancer"] {
       background-color:$cancer;
+      @include media($laptopHeightOnly){
+        background-color:rgba($cancer,0.85);
+      }
     }
     &[data-colour-type="heartlung"] {
       background-color:$heartlung;
+      @include media($laptopHeightOnly){
+        background-color:rgba($heartlung,0.85);
+      }
     }
     &[data-colour-type="brainhealth"] {
       background-color:$brainhealth;
+      @include media($laptopHeightOnly){
+        background-color:rgba($brainhealth,0.85);
+      }
     }
     &[data-colour-type="innovation"] {
       background-color:$innovation;
+      @include media($laptopHeightOnly){
+        background-color:rgba($innovation,0.85);
+      }
     }
     &[data-colour-type="community"] {
       background-color:$community;
+      @include media($laptopHeightOnly){
+        background-color:rgba($community,0.9);
+      }
     }
 
 
@@ -3169,8 +3198,54 @@ form {
 }
 
 
+// ANNUAL REPORT
 body.page-template-page-annual-report-php {
   overflow:hidden;
+}
+
+.ar-main-header {
+  color:#fff;
+  background-color:$teal;
+  padding:rem(30) 0;
+  position:absolute;
+  top:100px;
+  width:100%;
+  z-index:2;
+  transform:translateY(0%);
+  transition: transform 0.6s 0.45s cubic-bezier(.15,.89,.52,.96), background 0.3s linear;
+
+  &.cover {
+    transform:translateY(-100%);
+  }
+
+
+  h5 {
+    @include font-size(16px);
+    margin-bottom:0.25rem;
+  }
+
+  h3 {
+    margin-bottom:0;
+  }
+}
+
+.ar-main-header[data-headerColor="surgery-bg"] {
+  background-color:$surgery;
+}
+.ar-main-header[data-headerColor="cancer-bg"] {
+  background-color:$cancer;
+}
+.ar-main-header[data-headerColor="heart-lung-bg"] {
+  background-color:$heartlung;
+}
+.ar-main-header[data-headerColor="innovation-bg"] {
+  background-color:$innovation;
+}
+.ar-main-header[data-headerColor="community-bg"] {
+  background-color:$community;
+}
+.ar-main-header[data-headerColor="brain-health-bg"] {
+  background-color:$brainhealth;
 }
 
 #annual-report {
@@ -3188,13 +3263,19 @@ body.page-template-page-annual-report-php {
   .full-panel {
     height:100%;
     position:relative;
+
+    .ar-section-header {
+      display: none;
+    }
   }
 
   .panel.ar-intro-cover {
     position:relative;
     background-image:url(../img/tmp/ar-bg.jpg);
+    background-color:#16ad8e;
     background-repeat:no-repeat;
-    background-size:cover;
+    background-position:50% 50%;
+    background-size:100%;
     height:100vh;
     color:#fff;
 
@@ -3242,62 +3323,57 @@ body.page-template-page-annual-report-php {
     }
   }
 
-  .ar-section-header {
-    color:#fff;
-    background-color:$teal;
-    padding:rem(30) 0;
-    position:absolute;
-    top:100px;
-    width:100%;
+  // .ar-section-header, .ar-main-header {
+  //   color:#fff;
+  //   background-color:$teal;
+  //   padding:rem(30) 0;
+  //   position:absolute;
+  //   top:100px;
+  //   width:100%;
 
 
-    h5 {
-      @include font-size(16px);
-      margin-bottom:0.25rem;
+  //   h5 {
+  //     @include font-size(16px);
+  //     margin-bottom:0.25rem;
+  //   }
+
+  //   h3 {
+  //     margin-bottom:0;
+  //   }
+  // }
+
+  [data-headerColor="surgery-bg"] {
+    .facts .number, .facts h5 {
+      color:$surgery !important;
     }
-
-    h3 {
-      margin-bottom:0;
+  }
+  [data-headerColor="cancer-bg"] {
+    .facts .number, .facts h5 {
+      color:$cancer !important;
+    }
+  }
+  [data-headerColor="heart-lung-bg"] {
+    .facts .number, .facts h5 {
+      color:$heartlung !important;
+    }
+  }
+  [data-headerColor="innovation-bg"] {
+    .facts .number, .facts h5 {
+      color:$innovation !important;
+    }
+  }
+  [data-headerColor="community-bg"] {
+    .facts .number, .facts h5 {
+      color:$community !important;
+    }
+  }
+  [data-headerColor="brain-health-bg"] {
+    .facts .number, .facts h5 {
+      color:$brainhealth !important;
     }
   }
 
-  .surgery-bg .facts .number, .surgery-bg .facts h5 {
-    color:$surgery !important;
-  }
-  .cancer-bg .facts .number, .cancer-bg .facts h5 {
-    color:$cancer !important;
-  }
-  .heart-lung-bg .facts .number, .heart-lung-bg .facts h5 {
-    color:$heartlung !important;
-  }
-  .innovation-bg .facts .number, .innovation-bg .facts h5 {
-    color:$innovation !important;
-  }
-  .community-bg .facts .number, .community-bg .facts h5 {
-    color:$community !important;
-  }
-  .brain-health-bg .facts .number, .brain-health-bg .facts h5 {
-    color:$brainhealth !important;
-  }
 
-  .surgery-bg .ar-section-header {
-    background-color:$surgery;
-  }
-  .cancer-bg .ar-section-header {
-    background-color:$cancer;
-  }
-  .heart-lung-bg .ar-section-header {
-    background-color:$heartlung;
-  }
-  .innovation-bg .ar-section-header {
-    background-color:$innovation;
-  }
-  .community-bg .ar-section-header {
-    background-color:$community;
-  }
-  .brain-health-bg .ar-section-header {
-    background-color:$brainhealth;
-  }
 
   .ar-section {
     height:100vh;
@@ -3311,9 +3387,13 @@ body.page-template-page-annual-report-php {
       font-weight:normal;
     }
 
+    .stat-intro {
+      margin-top:-10%;
+    }
+
     .container {
       display:block;
-      height:calc(100% - 100px);
+      height:calc(100%);
 
     }
 
@@ -3341,6 +3421,50 @@ body.page-template-page-annual-report-php {
         margin-top:rem(-20);
         margin-bottom:rem(5);
       }
+    }
+
+    .animated-content {
+      overflow: hidden;
+      // position: relative;
+      transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      .item {
+        opacity: 0;
+        transform:translateX(100%);
+        transition:all 500ms linear;
+        z-index: 0;
+        position: absolute;
+        top:0;
+
+        &.active {
+          opacity: 1;
+          transform:translateX(0%);
+          z-index: 3;
+        }
+      }
+
+      .large-number {
+        color:$brand-green;
+        font-family: $font-bold;
+        @include font-size(210px);
+        line-height: 0.7;
+      }
+    }
+
+    &.ar-section-1 {
+      .narrow-wrap {
+        width:740px;
+        top:35%;
+        transform:translateY(0);
+
+      }
+    }
+
+
+    &.ar-section-3 {
+      color:#fff;
+      background:url(../img/tmp/ar-people-bg.jpg) no-repeat 50% 100px;
+      background-size:cover;
     }
 
     &.ar-section-9 {
