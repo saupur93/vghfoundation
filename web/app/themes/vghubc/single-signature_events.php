@@ -34,9 +34,9 @@
           <div class="col-grid-3">
             <h4>Cases for Support</h4>
             <ul class="small">
-              <li>Last year 32 survivors and patients attended support groups</li>
-              <li>Last year 32 survivors and patients attended support groups</li>
-              <li>Last year 32 survivors and patients attended support groups</li>
+              <li>Angel Campaign has raised over $2.5 million since 2001.</li>
+              <li>Your donation will support the most urgent needs in our hospitals, including purchasing critical equipment, funding high-impact research projects, and advancing patient care to deliver BC’s best, most specialized care for adults.</li>
+              <li>Contact nathania.lo@vghfoundation.ca.</li>
             </ul>
           </div>
         </div>
@@ -45,35 +45,15 @@
 
 
     <section class="panel inline-gallery-thumbs grid-slider">
-      <div class="full-container">
-        <div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400/000000');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
-        </div><!--
-     --><div class="gallery-item item">
-          <div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
-        </div><!--
-     --><div class="gallery-item item"><!--
-        --><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div>
-        </div><!--
-     --><div class="gallery-item item"><!--
-       --><div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div>
-        </div>
-      </div>
+      <div class="full-container"><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/000000');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400/666666');"></div></div><!--
+     --><div class="gallery-item item"><div class="thumb" style="background-image:url('http://placehold.it/400x400');"></div></div></div>
     </section>
 
 
@@ -171,14 +151,14 @@
             <div class="donor-group">
               <h5>Silver</h5>
               <ul class="small">
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/LeithWheeler_Logo-295x96.png" /></li>
               </ul>
             </div>
 
             <div class="donor-group">
               <h5>Bronze</h5>
               <ul class="small">
-                <li>Beverley Anne Briscoe</li>
+                <li>Beverly Anne Briscoe</li>
                 <li>Iranian-Canadian Benevolent Foundation</li>
               </ul>
             </div>
@@ -186,7 +166,7 @@
             <div class="donor-group">
               <h5>#myangelbc</h5>
               <ul class="small">
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/ncix-295x126.png" /></li>
               </ul>
             </div>
           </div>
@@ -196,15 +176,15 @@
               <ul class="small">
                 <li>Alan and Joy Grant</li>
                 <li>Kathy and Steve Bellringer</li>
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/scotiabank.png" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/Shining_life_society-137x94.png" /></li>
               </ul>
             </div>
             <div class="donor-group">
               <h5>media</h5>
               <ul class="small">
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/Sing_tao-295x111.png" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/ming_pao-295x98.png" /></li>
               </ul>
             </div>
           </div>
@@ -212,9 +192,11 @@
             <div class="donor-group">
               <h5>In-kind Support</h5>
               <ul class="small">
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
-                <li class="logo"><img src="http://placehold.it/125x70" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/cafe_ami.png" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/GohBalletLogo-295x89.png" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/UnoGraphicImaging-295x72.jpg" /></li>
+                <li class="logo"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logos/choral_music_little_flower-295x53.png" /></li>
+                <li>Reel Silks</li>
               </ul>
             </div>
           </div>

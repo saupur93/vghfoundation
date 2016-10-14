@@ -112,10 +112,12 @@ class App {
       $('body').addClass('latest-closed-finished');
     }
 
-    if($(window).height() <= 800) {
-      setTimeout(() => {
-        toggleFunction();
-      }, 3000);
+    if ($('body').hasClass('front')) {
+      if($(window).height() <= 800) {
+        setTimeout(() => {
+          toggleFunction();
+        }, 3000);
+      }
     }
 
     latestToggle.onmouseover = toggleFunction;

@@ -29,9 +29,9 @@ Template Name: Events
         <div class="col-grid-3">
           <h4>Cases for Support</h4>
           <ul class="small">
-            <li>Last year 32 survivors and patients attended support groups</li>
-            <li>Last year 32 survivors and patients attended support groups</li>
-            <li>Last year 32 survivors and patients attended support groups</li>
+            <li>Events bring people together to help saves lives. From treks in the mountains to golf tournaments, events of every size make a difference in the lives of our patients and families.</li>
+            <li>Each year, hundreds of caring individuals and groups raise money for VGH UBC Hospital Foundation in their own creative way by hosting Community Events</li>
+            <li>Be sure to visit our <a href="/events-calendar">Event Calendar</a> section regularly for upcoming events.</li>
           </ul>
         </div>
       </div>
@@ -119,7 +119,7 @@ Template Name: Events
           <li class="angel-event event-item item">
             <a class="open" href="/signature-events/angel-campaign">
             <span>ANGEL CAMPAIGN</span>
-            <span class="date">October 21, 2016</span>
+            <span class="date">November 11, 2016</span>
             <span class="read-more">Learn More</span></a>
             <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/angel-image.jpg");"></div>
           </li><!--

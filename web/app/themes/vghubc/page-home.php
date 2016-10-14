@@ -43,11 +43,11 @@ Template Name: Home
     <div class="container">
       <div class="narrow-wrap">
         <div class="col-grid-6">
-          <p>Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner.</p>
+          <p>Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner. ​</p>
           <p><a href="#" class="read-more">about the foundation</a></p>
         </div>
         <div class="col-grid-6">
-          <p>Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.</p>
+          <p>Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.​</p>
         </div>
       </div>
     </div>

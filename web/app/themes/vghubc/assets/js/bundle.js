@@ -10355,10 +10355,12 @@ var App = function () {
         (0, _jquery2.default)('body').addClass('latest-closed-finished');
       }
 
-      if ((0, _jquery2.default)(window).height() <= 800) {
-        setTimeout(function () {
-          toggleFunction();
-        }, 3000);
+      if ((0, _jquery2.default)('body').hasClass('front')) {
+        if ((0, _jquery2.default)(window).height() <= 800) {
+          setTimeout(function () {
+            toggleFunction();
+          }, 3000);
+        }
       }
 
       latestToggle.onmouseover = toggleFunction;
