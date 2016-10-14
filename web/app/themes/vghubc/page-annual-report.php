@@ -29,7 +29,7 @@ Template Name: Annual Report
           <div class="intro-copy">
             <div class="col-half first">
               <h2><span class="initial-show">2015 - 2016</span><br>
-              <span class="hide">VGH UBV<br>
+              <span class="hide">VGH UBC<br>
               annual report</span></h2>
             </div>
             <div class="col-half second">
