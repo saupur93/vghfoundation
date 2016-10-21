@@ -65,40 +65,15 @@ Template Name: Latest
         <section class="panel three-stories-panel">
           <div class="container">
             <div class="inner-wrap">
-              <div class="row">
-                <article class="col-grid-4">
-                  <div class="tag">Surgery</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/Cancer_Feature_Primary_JasonKo-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">“I didn’t even realize how many things i wanted to do until I got diagnosed.”</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">Jamie’S STORY</a></p>
-                </article>
-
-                <article class="col-grid-4">
-                  <div class="tag">Cancer</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGH-DrHuntsman-Final-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">We believe that understanding how cancer starts will lead to better prevention and treatment.</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">DR. HUNTSMAN’S STORY</a></p>
-                </article>
-
-                <article class="col-grid-4">
-                  <div class="tag">Cancer</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGHPancreatic-1382-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">“We exist because generous donors believe that research is the key.”</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">DR. Shaeffer’S STORY</a></p>
-                </article>
-
-
-              </div>
+              <?php $main_category = 'news'; ?>
+              <?php include(locate_template('templates/partials/latest-loop.php')); ?>
+              <?php if(!$posts->have_posts()): ?>
+                <p class="center">Sorry, no posts were found for this category.</p>
+              <?php endif; ?>
             </div>
           </div>
         </section>
-        <section class="panel additional-loaded-news">
+        <section class="panel additional-loaded-news three-stories-panel">
         </section>
       </div>
 
@@ -106,40 +81,15 @@ Template Name: Latest
         <section class="panel three-stories-panel">
           <div class="container">
             <div class="inner-wrap">
-              <div class="row">
-                <article class="col-grid-4">
-                  <div class="tag">Cancer</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/Cancer_Feature_Primary_JasonKo-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">“I didn’t even realize how many things i wanted to do until I got diagnosed.”</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">Jamie’S STORY</a></p>
-                </article>
-
-                <article class="col-grid-4">
-                  <div class="tag">Cancer</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGH-DrHuntsman-Final-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">We believe that understanding how cancer starts will lead to better prevention and treatment.</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">DR. HUNTSMAN’S STORY</a></p>
-                </article>
-
-                <article class="col-grid-4">
-                  <div class="tag">Cancer</div>
-                  <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/story/Cancer/VGHPancreatic-1382-thumb.jpg" />
-                  <div class="copy">
-                    <p class="small">“We exist because generous donors believe that research is the key.”</p>
-                  </div>
-                  <p class="more"><a href="#" class="read-more">DR. Shaeffer’S STORY</a></p>
-                </article>
-
-
-              </div>
+              <?php $main_category = 'impact'; ?>
+              <?php include(locate_template('templates/partials/latest-loop.php')); ?>
+              <?php if(!$posts->have_posts()): ?>
+                <p class="center">Sorry, no posts were found for this category.</p>
+              <?php endif; ?>
             </div>
           </div>
         </section>
-        <section class="panel additional-loaded-news">
+        <section class="panel additional-loaded-news three-stories-panel">
         </section>
       </div>
 

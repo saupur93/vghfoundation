@@ -89,6 +89,78 @@ $max-width: 1340px;
   display:block;
 }
 
+.col-float-1 {
+  @include span-columns(1);
+float:left;
+display:block;
+}
+
+.col-float-2 {
+  @include span-columns(2);
+  float:left;
+  display:block;
+}
+
+.col-float-3 {
+  @include span-columns(3);
+  float:left;
+  display:block;
+}
+
+.col-float-4 {
+  @include span-columns(4);
+  float:left;
+  display:block;
+}
+
+.col-float-5 {
+  @include span-columns(5);
+  float:left;
+  display:block;
+}
+
+.col-float-6 {
+  @include span-columns(6);
+  float:left;
+  display:block;
+}
+
+.col-float-7 {
+  @include span-columns(7);
+  float:left;
+  display:block;
+}
+
+.col-float-8 {
+  @include span-columns(8);
+  float:left;
+  display:block;
+}
+
+.col-float-9 {
+  @include span-columns(9);
+  float:left;
+  display:block;
+}
+
+.col-float-10 {
+  @include span-columns(10);
+  float:left;
+  display:block;
+}
+
+.col-float-11 {
+  @include span-columns(11);
+  float:left;
+  display:block;
+}
+
+.col-float-12 {
+  @include span-columns(12);
+  float:left;
+  display:block;
+}
+
 
 
 // Define your breakpoints

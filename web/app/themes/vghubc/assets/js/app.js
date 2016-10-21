@@ -70,6 +70,10 @@ class App {
     }
 
 
+    if ($('.single-post').length) {
+      this.shareToggle();
+    }
+
 
   }
 
@@ -358,7 +362,18 @@ class App {
         pagerVisibility();
       }
     });
+  }
 
+  /**
+   * Toggle share option visibility
+   */
+  shareToggle() {
+    const elm = $('.social-share');
+    const toggleShareVisible = (e) => {
+      e.preventDefault();
+      $(e.currentTarget).parents('.social-share').find('.share-options').toggleClass('showing');
+    }
+    elm.find('.share-this').on('click', toggleShareVisible);
   }
 
 }

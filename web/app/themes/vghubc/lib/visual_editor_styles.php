@@ -1,14 +1,14 @@
 <?php
 
-function sphf_add_editor_styles() {
+function vgh_add_editor_styles() {
     add_editor_style( 'tce-editor-style.css' );
 }
-add_action( 'admin_init', 'sphf_add_editor_styles' );
+add_action( 'admin_init', 'vgh_add_editor_styles' );
 
 // // Callback function to insert 'styleselect' into the $buttons array
 function my_mce_buttons_2( $buttons ) {
-	array_unshift( $buttons, 'styleselect' );
-	return $buttons;
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
 }
 // Register our callback to the appropriate filter
 add_filter('mce_buttons_2', 'my_mce_buttons_2');
@@ -17,12 +17,12 @@ add_filter('mce_buttons_2', 'my_mce_buttons_2');
 // add some additional classes to the editor
 function my_mce_before_init( $settings ) {
 
-		$style_formats = array(
-			array(
-				'title' => 'Intro Paragraph',
-				'selector' => 'p',
-				'classes' => 'intro'
-			),
+    $style_formats = array(
+      array(
+        'title' => 'Intro Paragraph',
+        'selector' => 'p',
+        'classes' => 'intro'
+      ),
       array(
         'title' => 'Button',
         'selector' => 'a',
@@ -33,9 +33,14 @@ function my_mce_before_init( $settings ) {
         'selector' => 'a',
         'classes' => 'read-more'
       ),
+      array(
+        'title' => 'Small Text',
+        'selector' => 'p',
+        'classes' => 'small'
+      ),
 
 
-		);
+        );
 
     $settings['style_formats'] = json_encode( $style_formats );
 

@@ -406,6 +406,25 @@
   .signature-event-angel-campaign & {
     background-color:$angel-pink;
   }
+
+  &.bg-surgery{
+    background-color:$surgery;
+  }
+  &.bg-cancer{
+    background-color:$cancer;
+  }
+  &.bg-heart-lung{
+    background-color:$heartlung;
+  }
+  &.bg-innovation{
+    background-color:$innovation;
+  }
+  &.bg-community{
+    background-color:$community;
+  }
+  &.bg-brain-health{
+    background-color:$brainhealth;
+  }
 }
 
 
@@ -442,5 +461,30 @@
 
 
 }
+
+
+.panel article {
+  .tag {
+    &.surgery{
+      background-color:$surgery;
+    }
+    &.cancer{
+      background-color:$cancer;
+    }
+    &.heart-lung{
+      background-color:$heartlung;
+    }
+    &.innovation{
+      background-color:$innovation;
+    }
+    &.community{
+      background-color:$community;
+    }
+    &.brain-health{
+      background-color:$brainhealth;
+    }
+  }
+}
+
 
 

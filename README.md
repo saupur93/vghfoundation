@@ -48,5 +48,46 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 # TODO
-- Add copy from Gather Content into templates where possible - especially Angel Campaign
-- homepage change to Latest in smaller desktop - peekaboo
+- ask about footer donation CTA functionality throughout
+    - does it relate to theme, is it per page, or global?
+
+Home
+- try to adjust the sizing of the laptop view of Themes area
+- some treatment to highlight Latest toggle
+
+About Us
+- Sub Sub Menu functionality for footer area
+- Sub navigation menu in header
+- Leadership List page of people images
+- two column list panel
+- Donor tabs template with tabs and accordion
+- Join Our Team job posts list
+
+Events Calendar
+- style calendar and single view
+
+Events
+- lightbox for gallery opening
+
+News Single
+- Import problems
+- Related stories in footer
+
+Latest
+- header story slider
+- import issue not carrying over Featured Images on posts
+- fix tabs to incorporate filters for various related themes
+- gallery news post 3 image treatment
+- back to top arrow
+
+Annual Report
+- change animations
+- add arrow to all
+- adjust font sizes
+
+Contact
+- remove map?
+
+- CMS integration of all panel types
+- responsive
+- IE

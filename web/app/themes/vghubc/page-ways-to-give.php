@@ -181,7 +181,6 @@ Template Name: Ways to Give
             <li><a href="#">Donate to an Event</a></li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>

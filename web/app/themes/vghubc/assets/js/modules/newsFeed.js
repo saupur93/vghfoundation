@@ -7,11 +7,10 @@ import $ from 'jquery';
  */
 export default class NewsFeed {
 	constructor() {
-		this.api = '/wp-json/wp/v2/posts/';
+		this.api = '/latest/?jsLoad';
 		this.filterCategory = 'news';
 		this.filterThemeId = false;
 		this.paging = 1;
-		this.perPage = 10;
 		this.hasMore = true;
 
     $('.load-more').on('click', this.loadMore.bind(this));
@@ -23,13 +22,16 @@ export default class NewsFeed {
    */
   loadMore() {
     this.paging = this.paging + 1;
-    let url = this.api + `?fitler[category_name]=${this.filterCategory}&per_page=${this.perPage}&page=${this.paging}`;
+    let url = this.api + `&category=${this.filterCategory}&loaded=${this.paging}`;
+    // let url = this.api + `?fitler[category_name]=${this.filterCategory}&per_page=${this.perPage}&page=${this.paging}`;
     if (this.filterThemeId) {
-      url = url + `&filter[meta_key]=related_theme&filter[meta_compare]=LIKE&filter[meta_value]=${this.filterThemeId}`;
+      url = url + `&theme=   ${this.filterThemeId}`;
+      // url = url + `&filter[meta_key]=related_theme&filter[meta_compare]=LIKE&filter[meta_value]=${this.filterThemeId}`;
     }
     $('.load-more').addClass('loading');
     $.ajax({
       url: url,
+      dataType: 'html',
       xhr: () => {
         let xhr = new window.XMLHttpRequest();
         xhr.addEventListener('progress', (e) => {
@@ -46,7 +48,8 @@ export default class NewsFeed {
     .done((data) => {
       console.log("success");
       $('.load-more').removeClass('loading');
-      console.log(data);
+      $('[data-tab-content].active .additional-loaded-news').append(data);
+      // this.paging = this.paging + 1;
     });
   }
 

@@ -74,7 +74,7 @@ h1 {
 h2 {
   @include font-size(55px);
   letter-spacing:1px;
-  line-height:1.2;
+  line-height:1;
   font-family: 'Karbon-Medium';
   font-weight:normal;
 }
@@ -148,4 +148,12 @@ h1.page-header {
     }
   }
 
+}
+
+p.date {
+  @include font-size(16px);
+  font-family: $font-med;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  line-height:1.1;
 }

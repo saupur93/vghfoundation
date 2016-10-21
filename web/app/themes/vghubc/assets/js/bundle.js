@@ -10314,6 +10314,10 @@ var App = function () {
       if ((0, _jquery2.default)('.page-template-page-annual-report').length) {
         this.annualReport = new _annualReport2.default();
       }
+
+      if ((0, _jquery2.default)('.single-post').length) {
+        this.shareToggle();
+      }
     }
 
     /**
@@ -10610,6 +10614,21 @@ var App = function () {
           pagerVisibility();
         }
       });
+    }
+
+    /**
+     * Toggle share option visibility
+     */
+
+  }, {
+    key: 'shareToggle',
+    value: function shareToggle() {
+      var elm = (0, _jquery2.default)('.social-share');
+      var toggleShareVisible = function toggleShareVisible(e) {
+        e.preventDefault();
+        (0, _jquery2.default)(e.currentTarget).parents('.social-share').find('.share-options').toggleClass('showing');
+      };
+      elm.find('.share-this').on('click', toggleShareVisible);
     }
   }]);
 
@@ -11019,11 +11038,10 @@ var NewsFeed = function () {
   function NewsFeed() {
     _classCallCheck(this, NewsFeed);
 
-    this.api = '/wp-json/wp/v2/posts/';
+    this.api = '/latest/?jsLoad';
     this.filterCategory = 'news';
     this.filterThemeId = false;
     this.paging = 1;
-    this.perPage = 10;
     this.hasMore = true;
 
     (0, _jquery2.default)('.load-more').on('click', this.loadMore.bind(this));
@@ -11039,13 +11057,16 @@ var NewsFeed = function () {
     key: 'loadMore',
     value: function loadMore() {
       this.paging = this.paging + 1;
-      var url = this.api + ('?fitler[category_name]=' + this.filterCategory + '&per_page=' + this.perPage + '&page=' + this.paging);
+      var url = this.api + ('&category=' + this.filterCategory + '&loaded=' + this.paging);
+      // let url = this.api + `?fitler[category_name]=${this.filterCategory}&per_page=${this.perPage}&page=${this.paging}`;
       if (this.filterThemeId) {
-        url = url + ('&filter[meta_key]=related_theme&filter[meta_compare]=LIKE&filter[meta_value]=' + this.filterThemeId);
+        url = url + ('&theme=   ' + this.filterThemeId);
+        // url = url + `&filter[meta_key]=related_theme&filter[meta_compare]=LIKE&filter[meta_value]=${this.filterThemeId}`;
       }
       (0, _jquery2.default)('.load-more').addClass('loading');
       _jquery2.default.ajax({
         url: url,
+        dataType: 'html',
         xhr: function xhr() {
           var xhr = new window.XMLHttpRequest();
           xhr.addEventListener('progress', function (e) {
@@ -11061,7 +11082,8 @@ var NewsFeed = function () {
       }).done(function (data) {
         console.log("success");
         (0, _jquery2.default)('.load-more').removeClass('loading');
-        console.log(data);
+        (0, _jquery2.default)('[data-tab-content].active .additional-loaded-news').append(data);
+        // this.paging = this.paging + 1;
       });
     }
   }, {
