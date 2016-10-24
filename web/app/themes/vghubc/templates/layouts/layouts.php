@@ -1,3 +1,8 @@
+  <?php
+    // these are the governance pages
+    $gover_ids = menu_featured_images(49, true);
+  ?>
+
   <div class="page-wrap">
     <?php
       $page_header_image = null !== get_field('page_header_image') ? get_field('page_header_image')['url'] : false;
@@ -191,23 +196,35 @@
                     <?php elseif( get_row_layout() == 'narrow_two_column' ): ?>
                       <?php include(locate_template('templates/layouts/layout-narrow_two_column.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'two_column_image_list' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-two_column_image_list.php')); ?>
+
                     <?php elseif( get_row_layout() == 'three_column' ): ?>
                       <?php include(locate_template('templates/layouts/layout-three_column.php')); ?>
 
                     <?php elseif( get_row_layout() == 'three_column_sidebar' ): ?>
                       <?php include(locate_template('templates/layouts/layout-three_column_sidebar.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'inline_slideshow' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-inline_slideshow.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'tiered_tabs' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-tiered_tabs.php')); ?>
+
 
                     <?php elseif( get_row_layout() == 'raw_html' ): ?>
                       <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
                     <?php endif; ?>
-
                 <?php endwhile; ?>
 
                 <?php
-                  // these are the governance pages
-                  $gover_ids = menu_featured_images(49, true);
-                ?>
+                  // if its a child of About Us, but not the Annual Report, and not one of the Governance pages
+                  if(menu_is_child_of(38) && get_the_ID() != 20259 && !in_array(get_the_ID(), $gover_ids)): ?>
+                  <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
+                  <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
+                <?php endif; ?>
+
+
                 <?php if(in_array(get_the_ID(), $gover_ids)): ?>
                   <?php include(locate_template('templates/partials/governance-menu.php')); ?>
                   <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>

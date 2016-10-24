@@ -10318,6 +10318,14 @@ var App = function () {
       if ((0, _jquery2.default)('.single-post').length) {
         this.shareToggle();
       }
+
+      if ((0, _jquery2.default)('.accordion-panel').length) {
+        this.accordion();
+      }
+
+      if ((0, _jquery2.default)('.panel.tiered-tabs').length) {
+        this.tierTabs();
+      }
     }
 
     /**
@@ -10629,6 +10637,42 @@ var App = function () {
         (0, _jquery2.default)(e.currentTarget).parents('.social-share').find('.share-options').toggleClass('showing');
       };
       elm.find('.share-this').on('click', toggleShareVisible);
+    }
+  }, {
+    key: 'accordion',
+    value: function accordion() {
+      var accordion = (0, _jquery2.default)('.accordion-item');
+      accordion.find('.accordion-title').on('click', function () {
+        (0, _jquery2.default)(this).parents('.accordion-item').toggleClass('active');
+      });
+    }
+
+    /**
+     * tier tabs
+     */
+
+  }, {
+    key: 'tierTabs',
+    value: function tierTabs() {
+      var tab = (0, _jquery2.default)('[data-tab]');
+      tab.on('click', function () {
+        var index = (0, _jquery2.default)(this).index();
+        var tierLevel = (0, _jquery2.default)(this).data('tier');
+
+        (0, _jquery2.default)('html,body').animate({
+          scrollTop: (0, _jquery2.default)(this).parents('.panel').offset().top - 140
+        }, 600);
+
+        (0, _jquery2.default)(this).parents('.tab-group').find('[data-tab][data-tier="' + tierLevel + '"]').removeClass('active');
+        (0, _jquery2.default)(this).addClass('active');
+        (0, _jquery2.default)(this).parents('.tab-group').first().find('[data-tab-content]').removeClass('active');
+        (0, _jquery2.default)(this).parents('.tab-group').first().find('[data-tab-content][data-tier="' + tierLevel + '"]').eq(index).addClass('active');
+
+        if (tierLevel == 1) {
+          console.log((0, _jquery2.default)(this).parents('.tab-group').first());
+          (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').addClass('active');
+        }
+      });
     }
   }]);
 

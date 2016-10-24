@@ -75,3 +75,12 @@
   </div>
 </header>
 <?php endif; ?>
+
+
+<?php /* 38 is the About page */ if(menu_is_child_of(38) && get_the_ID() != 20259): ?>
+<header id="sub-navigation">
+  <div class="container breadcrumb">
+  <h3><a href="/about"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> <?php print get_the_title(38); ?></a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
+  </div>
+</header>
+<?php endif; ?>

@@ -68,6 +68,7 @@ Events Calendar
 
 Events
 - lightbox for gallery opening
+- different behaviour for navigation tiers?
 
 News Single
 - Import problems

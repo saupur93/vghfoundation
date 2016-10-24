@@ -38,6 +38,11 @@ function my_mce_before_init( $settings ) {
         'selector' => 'p',
         'classes' => 'small'
       ),
+      array(
+        'title' => '-> Arrow Link',
+        'selector' => 'a',
+        'classes' => 'arrow-link'
+      ),
 
 
         );

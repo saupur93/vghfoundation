@@ -1,4 +1,4 @@
-        <section class="panel extra-padded expanding-two-column-list">
+        <section class="panel extra-padded expanding-two-column-list footer-about-menu">
           <div class="container">
             <div class="inner-wrap">
               <h2>Learn More About Us</h2>
@@ -8,12 +8,16 @@
 
               <div class="col-half last">
                 <ul class="expanding-list">
-                  <li><a href="#">About the Foundation</a></li>
-                  <li><a href="#">Our Hospitals</a></li>
-                  <li><a href="#">Our Donors</a></li>
-                  <li><a href="#">Join Our Team</a></li>
-                  <li><a href="#">News & Impact</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <?php
+                    $args = array(
+                        'child_of' => 38,
+                        'depth' => 1,
+                        'title_li' => null,
+                        'exclude' => implode(',', $gover_ids),
+                        'sort_column' => 'menu_order'
+                      );
+                    wp_list_pages($args);
+                  ?>
                 </ul>
               </div>
 

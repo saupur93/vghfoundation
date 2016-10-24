@@ -56,7 +56,6 @@ class App {
       this.expandingLinks();
     }
 
-
     if ($('.grid-slider').length) {
       this.gridSlider();
     }
@@ -69,12 +68,17 @@ class App {
       this.annualReport = new AnnualReport();
     }
 
-
     if ($('.single-post').length) {
       this.shareToggle();
     }
 
+    if ($('.accordion-panel').length) {
+      this.accordion();
+    }
 
+    if ($('.panel.tiered-tabs').length) {
+      this.tierTabs();
+    }
   }
 
   /**
@@ -375,6 +379,42 @@ class App {
     }
     elm.find('.share-this').on('click', toggleShareVisible);
   }
+
+
+  accordion () {
+    let accordion = $('.accordion-item');
+    accordion.find('.accordion-title').on('click', function () {
+      $(this).parents('.accordion-item').toggleClass('active');
+    });
+  }
+
+
+  /**
+   * tier tabs
+   */
+  tierTabs () {
+    let tab = $('[data-tab]');
+    tab.on('click', function () {
+      const index = $(this).index();
+      const tierLevel = $(this).data('tier');
+
+      $('html,body').animate({
+        scrollTop: $(this).parents('.panel').offset().top - 140
+      }, 600);
+
+      $(this).parents('.tab-group').find('[data-tab][data-tier="' + tierLevel + '"]').removeClass('active');
+      $(this).addClass('active');
+      $(this).parents('.tab-group').first().find('[data-tab-content]').removeClass('active');
+      $(this).parents('.tab-group').first().find('[data-tab-content][data-tier="' + tierLevel + '"]').eq(index).addClass('active');
+
+      if(tierLevel == 1) {
+        console.log($(this).parents('.tab-group').first());
+        $(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').addClass('active');
+      }
+
+    });
+  }
+
 
 }
 

@@ -167,6 +167,23 @@ p {
     color:#fff;
     border:2px solid $body-text;
   }
+}
+
+.panel {
+  .arrow-link {
+    color:$body-text;
+    display:inline-block;
+    padding-left:rem(25);
+    transition:all 0.2s linear;
+    background-position:-2rem 50%;
+
+    &:hover {
+      color:$brand-green;
+      background:url(../img/arrow-right.svg) no-repeat;
+      background-position:0 50%;
+
+    }
+  }
 
 }
 
@@ -733,6 +750,10 @@ p {
     padding-top:rem(120);
   }
 
+  &.extra-padded-bottom {
+    padding-bottom:rem(120);
+  }
+
   &.grey-bg {
     background: $lighter-grey;
   }
@@ -903,6 +924,7 @@ span.highlighted-text {
     z-index:0;
     white-space:nowrap;
     overflow: hidden;
+    font-size:0;
 
     .slide-bg {
       width:100%;
@@ -912,9 +934,11 @@ span.highlighted-text {
       background-position:50% 100px;
       display:inline-block;
       transition: transform 1s ease-in-out;
+      font-size:0;
+
 
       &:before {
-        background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
         width:100%;
         height:100%;
         position:absolute;
@@ -1571,7 +1595,7 @@ form {
 #sub-navigation {
   width:100%;
   height:45px;
-  background-color:$light-grey;
+  background-color:$button-grey;
   position:fixed;
   top:100px;
   z-index:3;
@@ -2996,7 +3020,7 @@ form {
   }
 
   #sub-navigation {
-    background-color:#575b5d;
+    background-color:$button-grey;
   }
 
   .overview-panel {
@@ -3217,16 +3241,16 @@ form {
     position:relative;
     li {
       display:inline-block;
-      margin:30px 40px 0px 40px;
       // background-color:#c4d9a2;
       text-decoration:none;
       text-transform:uppercase;
+      @include font-size(24px);
       font-family:$font-bold;
       color:$body-text-light;
+      margin:30px 40px 0px 40px;
       padding-bottom:5px;
       padding-left:0;
       padding-right:0;
-      @include font-size(24px);
       letter-spacing: 2px;
       border-bottom:3px solid transparent;
       transition: all 0.3s linear;
@@ -3776,11 +3800,267 @@ body.page-template-page-annual-report-php {
   .title-only, .panel-1, .panel-2,
   .panel-3, .panel-4, .panel-5, .panel-6,
   .panel-7, .panel-8, .panel-9, .panel-10,
-  .panel-11, .panel-12, .panel-13, .panel-14 {
-    padding-left:rem(70);
-    padding-right:rem(70);
+  .panel-11, .panel-12, .panel-13, .panel-14,
+  .footer-about-menu {
+    .inner-wrap {
+      padding-left:rem(90);
+      padding-right:rem(90);
+    }
+  }
+}
+
+
+.panel.two-column {
+  h3 {
+    margin-bottom:3rem;
+  }
+}
+
+.panel.two-column-image-list {
+  .col-half {
+    margin-bottom:rem(90);
+    .arrow-link {
+      margin-left:rem(-25);
+      font-family:$font-med;
+    }
+
+    p {
+      margin-bottom:0.25rem;
+    }
+  }
+  img {
+    float:left;
+    overflow:hidden;
+    margin-right:rem(40);
+  }
+  .item-text {
+    margin-top:rem(20);
+  }
+}
+
+.subnavigation-visible {
+  .title-only {
+    padding-top:rem(240);
+  }
+}
+
+.panel.footer-about-menu {
+  h2 {
+    margin-bottom:2.5rem;
+  }
+}
+
+.panel.accordion-panel {
+  position:relative;
+
+  .accordion-item {
+    .accordion-title {
+      padding:rem(30) rem(20);
+      margin-bottom:0;
+
+      color:$body-text;
+      position: relative;
+      cursor:pointer;
+      transition: background 0.2s linear;
+      font-family:$font;
+      border-bottom:1px solid rgba($brand-green, 0.5);
+
+      &:hover {
+        background:$lighter-grey;
+      }
+
+      @include media($tab){
+        padding:rem(30) rem(40);
+      }
+
+      &:after {
+        content:'';
+        background:url(../img/plus-icon.svg) no-repeat;
+        position:absolute;
+        right:20px;
+        top:30px;
+        display:block;
+        width:26px;
+        height:26px;
+        transition:transform 0.25s linear;
+
+        @include media($tab){
+          right:rem(40);
+          top:rem(33);
+        }
+      }
+    }
+
+    &.active {
+      .accordion-title:after {
+        transform:rotate(45deg);
+      }
+    }
+
+    .accordion-content {
+      @include clearfix;
+
+      transition:opacity 0.3s linear;
+      overflow:hidden;
+      height:0;
+      opacity:0;
+
+      font-size:1.25rem;
+      line-height:1.5;
+      max-width:700px;
+      margin:0;
+      text-align:left;
+
+      h2 {
+        font-size:1.625rem;
+      }
+
+      h3 {
+        font-size:1.375rem;
+
+      }
+
+      ul h3 {
+        margin-bottom:10px;
+      }
+
+    }
+
+    &.active {
+      .accordion-content {
+        opacity: 1;
+        overflow:visible;
+        height:auto;
+        margin:20px 0px;
+
+        @include media($tab){
+          margin:40px auto;
+        }
+
+      }
+    }
+
+  }
+}
+
+.panel.tiered-tabs {
+  margin-top:rem(60);
+  [data-tab-content]{
+    display:none;
+
+    &.active {
+      display:table;
+    }
   }
 
 
+  .main-tabs {
+    list-style:none;
+    width:100%;
+    float:left;
+    margin-bottom:1.5rem;
+    li {
+      padding:0;
+      margin:0;
+      display:block;
+      float:left;
+      width:16.666%;
+      vertical-align:top;
+      padding-bottom:rem(20);
+      padding-right:rem(60);
+      color:$body-text-light;
+      transition:all 0.3s linear;
 
+      &[data-tab] {
+        cursor:pointer;
+      }
+
+      &.active, &:hover {
+        color:$brand-green;
+
+        h5 {
+          &:after {
+            background:$brand-green;
+            width:100%;
+          }
+        }
+      }
+
+      h4 {
+        @include font-size(24px);
+        // text-transform:uppercase;
+        font-family:$font-bold;
+        min-height:rem(55);
+      }
+
+      h5 {
+        @include font-size(16px);
+        font-family:$font-med;
+        position:relative;
+        &:after {
+          content:'';
+          width:0%;
+          height:3px;
+          background:transparent;
+          display:block;
+          margin-top:1rem;
+          transition:all 0.2s linear;
+        }
+      }
+    }
+  }
+
+  .secondary-tabs {
+    position:relative;
+    padding:0;
+    margin:0;
+    float:left;
+    width:100%;
+    margin-bottom:2.5rem;
+    li {
+      display:inline-block;
+      margin-right:rem(40);
+
+      &[data-tab] {
+        cursor:pointer;
+      }
+
+      &.active, &:hover {
+        h4 {
+          color:$brand-green;
+          &:after {
+            background:$brand-green;
+            width:100%;
+          }
+        }
+      }
+
+      h4 {
+        text-decoration:none;
+        text-transform:uppercase;
+        @include font-size(24px);
+        font-family:$font-med;
+        color:$body-text-light;
+        &:after {
+          content:'';
+          width:0%;
+          height:3px;
+          background:transparent;
+          display:block;
+          margin-top:1rem;
+          transition:all 0.2s linear;
+        }
+      }
+
+      &:last-child {
+        margin-right:0;
+      }
+    }
+  }
+
+  .tab-content {
+    p {
+      margin-bottom:1rem;
+    }
+  }
 }
