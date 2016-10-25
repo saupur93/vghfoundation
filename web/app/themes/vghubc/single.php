@@ -57,29 +57,33 @@
     <div class="container">
       <div class="narrow-wrap">
         <h3>Related Stories</h3>
-
         <?php
           $relatedArgs = array(
             'post_type' => 'post',
             'posts_per_page' => 2,
             'post_status' => 'publish',
+            'post__not_in' => array(get_the_ID()),
             'meta_query' => array(
               array(
                 'key' => 'related_theme',
-                'value' => '"' . $theme[0] . '"',
-                'compare' => '='
-              )
+                'value' => '"' . $theme[0]->ID . '"',
+                'compare' => 'LIKE'
+              ),
+              array(
+               'key' => '_thumbnail_id',
+               'compare' => 'EXISTS'
+              ),
             )
           );
           $related_query = new WP_Query($relatedArgs);
         ?>
         <?php while($related_query->have_posts()) : $related_query->the_post(); ?>
-          <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts->ID ), 'full' )[0]; ?>
+        <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
         <div class="col-half">
           <a href="<?php echo get_permalink(); ?>">
             <?php if(isset($featured_image)) print '<img width="150" height="150" src='. $featured_image .' />'; ?>
             <?php the_title(); ?>
-            <span class="read-more small">Read more</span>
+            <br><span class="read-more small">Read more</span>
           </a>
         </div>
         <?php endwhile; ?>
@@ -90,7 +94,7 @@
 
 
   <?php
-    $class = isset($theme[0]) ? ' bg-' . sanitize_title(get_the_title($theme[0])) : '';
+    $class = isset($theme[0]->ID) ? ' bg-' . sanitize_title(get_the_title($theme[0]->ID)) : '';
    ?>
   <section class="panel extra-padded bg-color-cta category-bg-color<?php print $class ?>">
     <div class="container">

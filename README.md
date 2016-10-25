@@ -45,7 +45,7 @@
 ## Building and Deploying
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
 
-
+2 hrs - import news attachment plugin/script
 
 # TODO
 - ask about footer donation CTA functionality throughout
@@ -56,12 +56,7 @@ Home
 - some treatment to highlight Latest toggle
 
 About Us
-- Sub Sub Menu functionality for footer area
-- Sub navigation menu in header
-- Leadership List page of people images
-- two column list panel
-- Donor tabs template with tabs and accordion
-- Join Our Team job posts list
+- Sub Sub Menu footer menu - where to put CMS?
 
 Events Calendar
 - style calendar and single view
@@ -71,10 +66,10 @@ Events
 - different behaviour for navigation tiers?
 
 News Single
-- Import problems
 - Related stories in footer
 
 Latest
+- What to do about news without featured images
 - header story slider
 - import issue not carrying over Featured Images on posts
 - fix tabs to incorporate filters for various related themes
@@ -91,4 +86,5 @@ Contact
 
 - CMS integration of all panel types
 - responsive
+- regenerate thumbnails
 - IE

@@ -18,4 +18,14 @@
     <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="0" y1="17.85" x2="40" y2="17.85"/>
   </symbol>
 
+  <symbol id="download-icon" viewBox="0 0 15 17">
+    <g>
+      <g>
+        <polyline style="fill:none;stroke:currentColor;stroke-miterlimit:10;" points="2.521,8.305 7.902,13.52 12.811,7.812    "/>
+      </g>
+      <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="0" y1="16.5" x2="15" y2="16.5"/>
+      <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="7.5" y1="13" x2="7.5" y2="0"/>
+    </g>
+  </symbol>
+
 </svg>

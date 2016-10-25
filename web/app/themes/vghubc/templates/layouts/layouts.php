@@ -211,6 +211,8 @@
                     <?php elseif( get_row_layout() == 'tiered_tabs' ): ?>
                       <?php include(locate_template('templates/layouts/layout-tiered_tabs.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'download_sets' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-download_sets.php')); ?>
 
                     <?php elseif( get_row_layout() == 'raw_html' ): ?>
                       <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
