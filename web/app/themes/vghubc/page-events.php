@@ -42,27 +42,33 @@ Template Name: Events
 
   <section class="panel three-column-list white-bg">
     <article class="col-grid-4">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/event-calendar.jpg" />
-      <div class="copy">
-        <h4>Event calendar</h4>
-        <p><a href="#" class="read-more">Learn more</a></p>
-      </div>
+      <a href="/events-calendar">
+        <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/event-calendar.jpg');"></div>
+        <div class="copy">
+          <h4>Event calendar</h4>
+          <p><span class="read-more">Learn more</span></p>
+        </div>
+      </a>
     </article>
 
     <article class="col-grid-4">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/plan-event.jpg" />
-      <div class="copy">
-        <h4>Plan your next event</h4>
-        <p><a href="#" class="read-more">Learn more</a></p>
-      </div>
+      <a href="#">
+        <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/plan-event.jpg');"></div>
+        <div class="copy">
+          <h4>Plan your next event</h4>
+          <p><span class="read-more">Learn more</span></p>
+        </div>
+      </a>
     </article>
 
     <article class="col-grid-4">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg" />
-      <div class="copy">
-        <h4>Donate to an event</h4>
-        <p><a href="#" class="read-more">Learn more</a></p>
-      </div>
+      <a href="#">
+        <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg');"></div>
+        <div class="copy">
+          <h4>Donate to an event</h4>
+          <p><span class="read-more">Learn more</span></p>
+        </div>
+      </a>
     </article>
   </section>
 

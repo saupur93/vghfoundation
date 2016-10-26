@@ -45,13 +45,12 @@
 ## Building and Deploying
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
 
-2 hrs - import news attachment plugin/script
 
 # TODO
 - ask about footer donation CTA functionality throughout
     - does it relate to theme, is it per page, or global?
 - single news page with featured images, but not a nice big image and different field
-- question about latest header? sticky? or category?
+
 
 Home
 - try to adjust the sizing of the laptop view of Themes area
@@ -61,7 +60,8 @@ About Us
 - Sub Sub Menu footer menu - where to put CMS?
 
 Events Calendar
-- style calendar and single view
+- style single page...if we are using it?
+    - figure out linkage between signature events
 
 Events
 - lightbox for gallery opening
@@ -69,15 +69,14 @@ Events
 
 Latest
 - What to do about news without featured images
-- header story slider
-- import issue not carrying over Featured Images on posts
-- fix tabs to incorporate filters for various related themes
+- header story slider -
+  - question about latest header? sticky? or category?
 - gallery news post 3 image treatment
 - back to top arrow
 
 Annual Report
 - change animations
-- add arrow to all
+- add arrow down to all panels
 - adjust font sizes
 
 Contact

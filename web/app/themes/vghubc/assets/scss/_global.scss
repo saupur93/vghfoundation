@@ -1351,6 +1351,10 @@ form {
     padding-left:60px;
   }
 
+  .item {
+    margin-bottom:2.25rem;
+  }
+
   .footer-right {
     float:right;
   }
@@ -1378,7 +1382,7 @@ form {
     letter-spacing:2px;
     @include font-size(14px);
     font-family:$font-bold;
-    margin-bottom:1.5rem;
+    margin-bottom:1rem;
   }
 
   a {
@@ -1413,10 +1417,196 @@ form {
       color:$brand-green;
     }
   }
+
+
+}
+
+body.tribe-events-page-template {
+  #tribe-events-bar {
+    margin-top:3.5rem;
+    margin-bottom:4.5rem;
+  }
+
+  h3.page-title {
+    margin-bottom:rem(60);
+  }
+
+  h4 a {
+    color:$body-text;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color:$brand-green;
+    }
+  }
+
+  .tribe-events-button {
+    border:2px solid $brand-green !important;
+    color:$brand-green !important;
+    background-color:transparent !important;
+    border-radius:0 !important;
+    font-family:$font-bold;
+    &:hover {
+      color:#fff !important;
+      background-color:$brand-green !important;
+      border:2px solid $brand-green !important;
+    }
+  }
+  &.single-tribe_events #tribe-events-footer {
+    border-top:0;
+    padding-top:0;
+  }
+
+  .tribe-events-event-meta {
+    margin-bottom:2rem;
+  }
+
+  .tribe-events-event-meta, .tribe-events-list .tribe-events-venue-details {
+    color:$body-text-light;
+    @include font-size(25px);
+    font-style:normal;
+    font-family:$font-med;
+    address.tribe-events-address {
+      font-style:normal;
+    }
+  }
+
+  .tribe-events-sub-nav li a {
+    @include font-size(18px);
+  }
+
+  .tribe-events-read-more {
+    @extend .button;
+  }
+
+  .tribe-events-list-separator-month {
+    text-align:left;
+    padding:0;
+    margin:0;
+
+    span {
+      padding:0;
+      @include font-size(24px);
+      color:$brand-green;
+      text-transform:uppercase;
+      font-family:$font-med;
+      letter-spacing:1px;
+    }
+
+    &:after {
+      display:none;
+    }
+  }
+
+  .type-tribe_events {
+    margin-bottom:2rem;
+    padding-bottom:3.5rem;
+    border-bottom:1px solid $body-text-light;
+  }
+
+  &.events-list  #tribe-events-footer {
+    border-top:0;
+    padding-top:0;
+  }
+
+
+  .tribe-bar-filters, #tribe-bar-views .tribe-bar-views-inner {
+    padding:1rem 0;
+    height:100%;
+  }
+
+  #tribe-bar-views .tribe-bar-views-inner {
+    padding:2rem 1rem;
+    height:rem(140);
+  }
+
+  #tribe-bar-views .tribe-bar-views-list li a {
+    padding-left:2rem;
+  }
+
+
+  #tribe-bar-form {
+    label {
+      @include font-size(18px);
+      font-family:$font-bold;
+      letter-spacing:1px;
+    }
+
+    input[type=text] {
+      background:#fff;
+      border-bottom:0;
+      @include font-size(16px);
+      padding:rem(12) rem(15);
+      margin-top:rem(10);
+      font-style:italic;
+      border:0;
+      min-height:42px;
+      &:focus {
+        border:0;
+        outline:2px solid $brand-green;
+      }
+    }
+    .tribe-bar-submit {
+      margin-left:0;
+      margin-top:2rem;
+
+      input[type="submit"], input[type="submit"].tribe-events-button.tribe-no-param {
+        border:2px solid $brand-green;
+        min-height:40px;
+        color:$brand-green;
+        background-color:transparent;
+        @include font-size(18px);
+        &:hover {
+          color:#fff;
+          background-color:$brand-green;
+          border:2px solid $brand-green;
+        }
+      }
+    }
+  }
+
+
+  .tribe-bar-date-filter {
+    padding-left:0;
+  }
+
+  &.single-tribe_events .tribe-events-event-meta {
+    background: transparent;
+    border: 0;
+    margin: 0px;
+
+    .tribe-events-single-section-title {
+      @extend h5;
+      color:$body-text;
+    }
+  }
+
+  &.single-tribe_events {
+    .tribe-events-single-event-title {
+      @extend h3;
+    }
+
+    .tribe-events-schedule h2 {
+      @extend h4;
+    }
+  }
+
+  .tribe-events-event-meta .column,
+  .tribe-events-event-meta .tribe-events-meta-group {
+    padding:0;
+  }
+
+  // .tribe-bar-active {
+  //   color:$brand-green;
+  //   a, span {
+  //     color:$brand-green;
+  //   }
+  // }
+
 }
 
 .events-list {
-  padding-top:100px;
+  // padding-top:rem(100);
 
   .event-item {
     padding:80px 0;
@@ -1730,12 +1920,26 @@ form {
     }
   }
 
+  .thumb {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    height:rem(375);
+    position:absolute;
+    top:0;
+    z-index:0;
+    width:100%;
+  }
+
   article {
     position:relative;
     padding-top:20%;
 
     h4 {
       font-family:$font;
+    }
+    a {
+      color:$body-text;
     }
 
     img {

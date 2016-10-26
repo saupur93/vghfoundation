@@ -16,14 +16,16 @@ add_theme_support('post-thumbnails', array('post', 'page'));
 //   add_image_size('slideshow_thumb', 152, 101, true);
 // }
 
-
 // Let's not overload the functions.php file... keep things separate
 require_once 'lib/assets.php'; // load the correct assets for cache busting
 require_once 'lib/post_types.php'; // custom post types
 require_once 'lib/visual_editor_styles.php'; // additional formatting options for the visual
 require_once 'lib/custom.php'; // custom helper theme function
 
-
+// Options page for global fields
+if(function_exists('acf_add_options_page')) {
+  acf_add_options_page();
+}
 
 // Custom body classes
 function custom_body_classes($classes) {
@@ -42,13 +44,9 @@ function custom_body_classes($classes) {
     $classes[] = 'subnavigation-visible';
   }
 
-
-
-
   return $classes;
 }
 add_filter('body_class','custom_body_classes');
-
 
 
 

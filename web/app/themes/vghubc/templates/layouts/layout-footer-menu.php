@@ -1,10 +1,23 @@
         <section class="panel extra-padded expanding-two-column-list footer-about-menu">
           <div class="container">
             <div class="inner-wrap">
-              <h2>Learn More About Us</h2>
-              <div class="col-half">
-                <p>At VGH & UBC Hospital Foundation, we partner with donors to raise essential funds over and above government funding for VGH, UBC Hospital, GF Strong Rehab Centre, Vancouver Coastal Health Research Institute and Vancouver Community Health Services. Together we deliver a healthy continuum of care – from research to patient care, rehabilitation and community health services.</p>
-              </div>
+              <?php print_r($content['section_title']); ?>
+
+              <?php if( have_rows('global_about_message', 'option') ): ?>
+                <?php while( have_rows('global_about_message', 'option') ): the_row();
+                  $content_title = get_sub_field('section_title');
+                  $content_text = get_sub_field('section_text');
+                ?>
+                  <h2><?php print $content_title; ?></h2>
+                  <div class="col-half">
+                    <?php print $content_text; ?>
+                  </div>
+
+                <?php endwhile; ?>
+              <?php endif; ?>
+
+
+
 
               <div class="col-half last">
                 <ul class="expanding-list">

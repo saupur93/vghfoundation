@@ -1,22 +1,14 @@
 <footer id="footer">
   <div class="container">
     <div class="col-grid-3">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-white.svg" />
+      <img src="<?php bloginfo('template_directory'); ?>/assets/img/VGHUBC-logo-footer.svg" />
     </div>
 
     <div class="col-grid-3">
-      <h4>Office Hours</h4>
-      <p>8:30am – 4:30pm (PST) Mon to Fri<br>
-      Phone:  604 875 4676<br>
-      Toll Free:  1 877 875 4676</p>
-
-
-      <h4>Address</h4>
-      <p>190-855 West 12th Avenue<br>
-      Vancouver, BC V5Z 1M9  Canada</p>
-
-      <p>Charity Number 132173063RR0001</p>
-
+      <?php $address_content = get_field('global_footer_address_area', 'option'); ?>
+      <?php if($address_content): ?>
+        <?php print $address_content; ?>
+      <?php endif; ?>
     </div>
 
     <div class="col-grid-6">
