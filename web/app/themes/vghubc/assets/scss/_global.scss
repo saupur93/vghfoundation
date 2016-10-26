@@ -517,6 +517,7 @@ p {
     display:block;
     float:left;
     padding:15px 30px;
+    background-size:cover;
     // text-align:center;
     border-right:2px solid #fff;
     @include media($laptopHeightOnly){
@@ -3174,6 +3175,7 @@ form {
   h1 {
     text-transform:lowercase;
   }
+
 }
 
 
@@ -3256,6 +3258,12 @@ form {
       transition: all 0.3s linear;
       // border-right:2px solid $lighter-grey;
       cursor: pointer;
+      a {
+        color:$body-text-light;
+      }
+      &.active a, &:hover a{
+        color:$brand-green;
+      }
 
       &:hover, &.active {
         color:$brand-green;
@@ -3269,7 +3277,8 @@ form {
       @include font-size(15px);
       border-bottom:0 !important;
       color:$body-text !important;
-      &:hover, &.active {
+
+      &:hover, &.active, a:hover, &.active a {
         color:$brand-green !important;
       }
     }
@@ -3277,6 +3286,15 @@ form {
 
   .row {
     margin-bottom:rem(60);
+  }
+
+  p.none-found {
+    margin-bottom:3.5rem;
+    // float:left;
+  }
+
+  .row {
+    width:100%;
   }
 }
 
@@ -3684,6 +3702,10 @@ body.page-template-page-annual-report-php {
   }
 
   .main-content {
+    img {
+      max-width:100%;
+      height:auto;
+    }
     .social-share, .share-options {
       margin-bottom:0;
     }
@@ -3808,8 +3830,11 @@ body.page-template-page-annual-report-php {
 
     img {
       float:left;
-      overflow: hidden;
       margin-right:rem(20);
+    }
+    .content {
+      overflow: hidden;
+      margin-bottom:2rem;
     }
     .read-more {
       // float:left;

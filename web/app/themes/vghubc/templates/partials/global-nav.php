@@ -30,30 +30,33 @@
 
     <nav id="latest-menu">
       <div id="latest-highlights">
-        <div class="highlight highlight-1" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/1.jpg);">
-          <a href="#">
-            <h2>THE RECYCLE RIDE FOR TRANSPLANT RESEARCH</h2>
+        <?php
+          $count = 0;
+          $latestArgs = array(
+            'post_type' => 'post',
+            'posts_per_page' => 4,
+            'post_status' => 'publish',
+            'post__in' => get_option('sticky_posts'),
+            'meta_query' => array(
+              array(
+               'key' => '_thumbnail_id',
+               'compare' => 'EXISTS'
+              ),
+            )
+          );
+          $latest_query = new WP_Query($latestArgs);
+        ?>
+        <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+        <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
+        <div class="highlight highlight-<?php print $count;  ?>" style="background-image:url(<?php print $featured_image; ?>);">
+          <a href="<?php echo get_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
             <span class="read-more">Read article</span>
           </a>
         </div>
-        <div class="highlight highlight-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/2.jpg);">
-          <a href="#">
-            <h2>NEW LIFE INJECTED IN TB WARD AT VGH</h2>
-            <span class="read-more">Read article</span>
-          </a>
-        </div>
-        <div class="highlight highlight-3" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/3.jpg);">
-          <a href="#">
-            <h2>RECORD-BREAKING SERIES RETURNS WITH SECOND SEASON</h2>
-            <span class="read-more">Read article</span>
-          </a>
-        </div>
-        <div class="highlight highlight-4" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/highlight-news/4.jpg);">
-          <a href="#">
-            <h2>NEW ICU BEDS OPEN AT VGH WITH SUPPORT FROM TECK</h2>
-            <span class="read-more">Read article</span>
-          </a>
-        </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+
       </div>
     </nav>
   </div>

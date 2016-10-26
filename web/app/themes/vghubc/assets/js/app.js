@@ -409,7 +409,7 @@ class App {
 
       if(tierLevel == 1) {
         console.log($(this).parents('.tab-group').first());
-        $(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').addClass('active');
+        $(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').eq(0).addClass('active');
       }
 
     });

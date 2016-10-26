@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import qs from 'query-string';
 
 /**
  * Load additional posts via AJAX,
@@ -11,7 +12,12 @@ export default class NewsFeed {
 		this.filterCategory = 'news';
 		this.filterThemeId = false;
 		this.paging = 1;
-		this.hasMore = true;
+
+    const parsed = qs.parse(location.search);
+
+    if(parsed.category && parsed.category !== '') this.filterCategory = parsed.category;
+    if(parsed.theme && parsed.theme !== '') this.filterThemeId = parsed.theme;
+
 
     $('.load-more').on('click', this.loadMore.bind(this));
     this.panelTabs();
@@ -31,24 +37,16 @@ export default class NewsFeed {
     $('.load-more').addClass('loading');
     $.ajax({
       url: url,
-      dataType: 'html',
-      xhr: () => {
-        let xhr = new window.XMLHttpRequest();
-        xhr.addEventListener('progress', (e) => {
-          console.log(e);
-           if (e.lengthComputable) {
-               let percentComplete = e.loaded / e.total;
-               console.log(percentComplete);
-               //Do something with download progress
-           }
-        }, false);
-         return xhr;
-      }
+      dataType: 'html'
     })
     .done((data) => {
-      console.log("success");
+      console.log(data.length);
       $('.load-more').removeClass('loading');
-      $('[data-tab-content].active .additional-loaded-news').append(data);
+      if(data) {
+        $('[data-tab-content].active .additional-loaded-news').append(data);
+      } else {
+        $('.load-more-footer').remove();
+      }
       // this.paging = this.paging + 1;
     });
   }
@@ -70,7 +68,7 @@ export default class NewsFeed {
 
     };
 
-    tabsEl.on('click', '[data-tab]', changeTab);
+    // tabsEl.on('click', '[data-tab]', changeTab);
   }
 
 

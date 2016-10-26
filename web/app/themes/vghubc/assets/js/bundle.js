@@ -10222,6 +10222,199 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 'use strict';
+/* eslint-disable no-unused-vars */
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (e) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (Object.getOwnPropertySymbols) {
+			symbols = Object.getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+},{}],3:[function(require,module,exports){
+'use strict';
+var strictUriEncode = require('strict-uri-encode');
+var objectAssign = require('object-assign');
+
+function encode(value, opts) {
+	if (opts.encode) {
+		return opts.strict ? strictUriEncode(value) : encodeURIComponent(value);
+	}
+
+	return value;
+}
+
+exports.extract = function (str) {
+	return str.split('?')[1] || '';
+};
+
+exports.parse = function (str) {
+	// Create an object with no prototype
+	// https://github.com/sindresorhus/query-string/issues/47
+	var ret = Object.create(null);
+
+	if (typeof str !== 'string') {
+		return ret;
+	}
+
+	str = str.trim().replace(/^(\?|#|&)/, '');
+
+	if (!str) {
+		return ret;
+	}
+
+	str.split('&').forEach(function (param) {
+		var parts = param.replace(/\+/g, ' ').split('=');
+		// Firefox (pre 40) decodes `%3D` to `=`
+		// https://github.com/sindresorhus/query-string/pull/37
+		var key = parts.shift();
+		var val = parts.length > 0 ? parts.join('=') : undefined;
+
+		key = decodeURIComponent(key);
+
+		// missing `=` should be `null`:
+		// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
+		val = val === undefined ? null : decodeURIComponent(val);
+
+		if (ret[key] === undefined) {
+			ret[key] = val;
+		} else if (Array.isArray(ret[key])) {
+			ret[key].push(val);
+		} else {
+			ret[key] = [ret[key], val];
+		}
+	});
+
+	return ret;
+};
+
+exports.stringify = function (obj, opts) {
+	var defaults = {
+		encode: true,
+		strict: true
+	};
+
+	opts = objectAssign(defaults, opts);
+
+	return obj ? Object.keys(obj).sort().map(function (key) {
+		var val = obj[key];
+
+		if (val === undefined) {
+			return '';
+		}
+
+		if (val === null) {
+			return encode(key, opts);
+		}
+
+		if (Array.isArray(val)) {
+			var result = [];
+
+			val.slice().forEach(function (val2) {
+				if (val2 === undefined) {
+					return;
+				}
+
+				if (val2 === null) {
+					result.push(encode(key, opts));
+				} else {
+					result.push(encode(key, opts) + '=' + encode(val2, opts));
+				}
+			});
+
+			return result.join('&');
+		}
+
+		return encode(key, opts) + '=' + encode(val, opts);
+	}).filter(function (x) {
+		return x.length > 0;
+	}).join('&') : '';
+};
+
+},{"object-assign":2,"strict-uri-encode":4}],4:[function(require,module,exports){
+'use strict';
+module.exports = function (str) {
+	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+		return '%' + c.charCodeAt(0).toString(16).toUpperCase();
+	});
+};
+
+},{}],5:[function(require,module,exports){
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -10670,7 +10863,7 @@ var App = function () {
 
         if (tierLevel == 1) {
           console.log((0, _jquery2.default)(this).parents('.tab-group').first());
-          (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').addClass('active');
+          (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').eq(0).addClass('active');
         }
       });
     }
@@ -10681,7 +10874,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/annualReport":3,"./modules/donationTabs":4,"./modules/fixedHeaderScroll":5,"./modules/newsFeed":6,"./modules/slideshow":7,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/annualReport":6,"./modules/donationTabs":7,"./modules/fixedHeaderScroll":8,"./modules/newsFeed":9,"./modules/slideshow":10,"jquery":1}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10936,7 +11129,7 @@ var AnnualReport = function () {
 
 exports.default = AnnualReport;
 
-},{"jquery":1}],4:[function(require,module,exports){
+},{"jquery":1}],7:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11016,7 +11209,7 @@ var DonationTabs = function () {
 
 module.exports = DonationTabs;
 
-},{"jquery":1}],5:[function(require,module,exports){
+},{"jquery":1}],8:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11056,7 +11249,7 @@ var FixedHeaderScroll = function () {
 
 module.exports = FixedHeaderScroll;
 
-},{"jquery":1}],6:[function(require,module,exports){
+},{"jquery":1}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11068,6 +11261,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
+
+var _queryString = require('query-string');
+
+var _queryString2 = _interopRequireDefault(_queryString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11086,7 +11283,11 @@ var NewsFeed = function () {
     this.filterCategory = 'news';
     this.filterThemeId = false;
     this.paging = 1;
-    this.hasMore = true;
+
+    var parsed = _queryString2.default.parse(location.search);
+
+    if (parsed.category && parsed.category !== '') this.filterCategory = parsed.category;
+    if (parsed.theme && parsed.theme !== '') this.filterThemeId = parsed.theme;
 
     (0, _jquery2.default)('.load-more').on('click', this.loadMore.bind(this));
     this.panelTabs();
@@ -11110,23 +11311,15 @@ var NewsFeed = function () {
       (0, _jquery2.default)('.load-more').addClass('loading');
       _jquery2.default.ajax({
         url: url,
-        dataType: 'html',
-        xhr: function xhr() {
-          var xhr = new window.XMLHttpRequest();
-          xhr.addEventListener('progress', function (e) {
-            console.log(e);
-            if (e.lengthComputable) {
-              var percentComplete = e.loaded / e.total;
-              console.log(percentComplete);
-              //Do something with download progress
-            }
-          }, false);
-          return xhr;
-        }
+        dataType: 'html'
       }).done(function (data) {
-        console.log("success");
+        console.log(data.length);
         (0, _jquery2.default)('.load-more').removeClass('loading');
-        (0, _jquery2.default)('[data-tab-content].active .additional-loaded-news').append(data);
+        if (data) {
+          (0, _jquery2.default)('[data-tab-content].active .additional-loaded-news').append(data);
+        } else {
+          (0, _jquery2.default)('.load-more-footer').remove();
+        }
         // this.paging = this.paging + 1;
       });
     }
@@ -11149,7 +11342,7 @@ var NewsFeed = function () {
         // $('[data-tab-content]').eq(currentTab - 1).addClass('active');
       };
 
-      tabsEl.on('click', '[data-tab]', changeTab);
+      // tabsEl.on('click', '[data-tab]', changeTab);
     }
 
     /**
@@ -11169,7 +11362,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":1}],7:[function(require,module,exports){
+},{"jquery":1,"query-string":3}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11331,4 +11524,4 @@ var slideshow = {
 
 exports.default = slideshow;
 
-},{"jquery":1}]},{},[2]);
+},{"jquery":1}]},{},[5]);

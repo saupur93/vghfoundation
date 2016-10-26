@@ -50,6 +50,8 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 # TODO
 - ask about footer donation CTA functionality throughout
     - does it relate to theme, is it per page, or global?
+- single news page with featured images, but not a nice big image and different field
+- question about latest header? sticky? or category?
 
 Home
 - try to adjust the sizing of the laptop view of Themes area
@@ -64,9 +66,6 @@ Events Calendar
 Events
 - lightbox for gallery opening
 - different behaviour for navigation tiers?
-
-News Single
-- Related stories in footer
 
 Latest
 - What to do about news without featured images
@@ -84,6 +83,7 @@ Annual Report
 Contact
 - remove map?
 
+- chinese
 - CMS integration of all panel types
 - responsive
 - regenerate thumbnails
