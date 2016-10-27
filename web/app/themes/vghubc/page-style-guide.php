@@ -5,7 +5,7 @@ Template Name: Style Guide
 ?>
 
 <?php get_header(); ?>
-
+<div class="page-wrap">
 	<div class="style-guide">
     <section class="main-content panel">
       <div class="container">
@@ -117,7 +117,7 @@ Template Name: Style Guide
 
     <?php //get_template_part('templates/layouts/layouts'); ?>
 	</div>
-
+</div>
 	<?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 
 <?php get_footer(); ?>

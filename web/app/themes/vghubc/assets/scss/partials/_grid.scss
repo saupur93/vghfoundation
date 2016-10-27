@@ -10,7 +10,7 @@ $wideDesk: new-breakpoint(1201px);
 $mobileOnly: new-breakpoint(max-width 600px);
 $ptabAndLess: new-breakpoint(max-width 768px);
 
-$laptopHeightOnly: new-breakpoint(max-height 768px);
+$laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 
 
 .container, .full-container {
@@ -20,8 +20,12 @@ $laptopHeightOnly: new-breakpoint(max-height 768px);
 
 .container {
   @include outer-container;
-  padding-left:30px;
-  padding-right:30px;
+  padding-left:20px;
+  padding-right:20px;
+  @include media($ptab){
+    padding-left:30px;
+    padding-right:30px;
+  }
 
   .inner-wrap {
     position: relative;

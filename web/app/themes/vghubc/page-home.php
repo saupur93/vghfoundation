@@ -6,6 +6,7 @@ Template Name: Home
 
 
 <?php get_header(); ?>
+<div class="page-wrap">
   <section class="hero-content panel slideshow">
     <div class="slide-images">
       <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Surgery-primary_Umberto-copy.jpg);"></div><!--
@@ -148,7 +149,7 @@ Template Name: Home
 			<?php the_content(); ?>
 		</div>
 	</section>
-
+</div>
 
 	<?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 

@@ -67,69 +67,98 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:300;
 }
 h1 {
-  @include font-size(96px);
+  @include font-size(52px);
   font-family: 'Karbon-Semibold';
+  @include media($ptab){
+    @include font-size(96px);
+  }
 }
 
 h2 {
-  @include font-size(55px);
   letter-spacing:1px;
   line-height:1;
   font-family: 'Karbon-Medium';
   font-weight:normal;
+  @include font-size(30px);
+  @include media($ptab){
+    @include font-size(55px);
+  }
 }
 
 h3 {
-  @include font-size(34px);
+  @include font-size(24px);
   font-family: 'Karbon-Semibold';
   line-height:1.1;
+  @include media($ptab){
+    @include font-size(34px);
+  }
 }
 
 h4 {
-  @include font-size(34px);
+  @include font-size(24px);
   font-family: 'Karbon-Medium';
   line-height:1.1;
+  @include media($ptab){
+    @include font-size(34px);
+  }
 }
 
 h5 {
-  @include font-size(18px);
+  @include font-size(13px);
   font-family: 'Karbon-Semibold';
   text-transform:uppercase;
   letter-spacing:1px;
   line-height:1.1;
+  @include media($ptab){
+    @include font-size(18px);
+  }
 }
 
 h1.page-header {
   float:left;
   margin-bottom:3.5rem;
   width:100%;
-  @include font-size(96px);
+  @include font-size(52px);
   font-family: 'Karbon-Semibold';
-
+  @include media($ptab){
+    @include font-size(96px);
+  }
 }
 
 .panel {
   p.intro {
-    @include font-size(38px);
+    @include font-size(20px);
     line-height:1.26;
+    @include media($ptab){
+      @include font-size(38px);
+    }
   }
 
   p {
-    @include font-size(24px);
+    @include font-size(16px);
     line-height:1.33;
     margin-bottom:2rem;
+    @include media($ptab){
+      @include font-size(24px);
+    }
   }
 
   p.small, ul.small, ol.small {
-    @include font-size(18px);
     line-height:1.33;
+    @include font-size(14px);
+    @include media($ptab){
+      @include font-size(18px);
+    }
   }
 
   ul, ol {
-    @include font-size(24px);
+    @include font-size(16px);
     margin-bottom:3rem;
     padding-left:1.5rem;
     line-height:1.33;
+    @include media($ptab){
+      @include font-size(24px);
+    }
     li {
       margin-bottom: 0.75rem;
       padding-left:0.5rem;
@@ -142,18 +171,24 @@ h1.page-header {
     padding-left:2rem;
     padding-right:30%;
     p {
-      @include font-size(30px);
+      @include font-size(16px);
       line-height:1.33;
       margin:3rem 0;
+      @include media($ptab){
+        @include font-size(30px);
+      }
     }
   }
 
 }
 
 p.date {
-  @include font-size(16px);
+  @include font-size(13px);
   font-family: $font-med;
   text-transform:uppercase;
   letter-spacing:1px;
   line-height:1.1;
+  @include media($ptab){
+    @include font-size(16px);
+  }
 }

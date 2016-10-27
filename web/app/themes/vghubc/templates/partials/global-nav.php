@@ -10,55 +10,57 @@
 
     <h1 class="site-name"><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
 
-    <nav id="main-menu">
-      <ul id="primary-nav">
-        <?php wp_nav_menu(array(
-          'menu'        => 'Main Menu',
-          'container'   => '',
-          'items_wrap'  => '%3$s'
-        )); ?>
-        <li><a href="/latest/" id="toggleLatest">Latest</a></li>
-      </ul>
+    <div class="menu-set">
+      <nav id="main-menu">
+        <ul id="primary-nav">
+          <?php wp_nav_menu(array(
+            'menu'        => 'Main Menu',
+            'container'   => '',
+            'items_wrap'  => '%3$s'
+          )); ?>
+          <li><a href="/latest/" id="toggleLatest">Latest</a></li>
+        </ul>
 
-      <ul id="language-switcher">
-        <li><a href="#">EN</a></li>
-        <li><a href="#">中文</a></li>
-      </ul>
-    </nav>
+        <ul id="language-switcher">
+          <li><a href="#">EN</a></li>
+          <li><a href="#">中文</a></li>
+        </ul>
+      </nav>
 
-    <a class="button green big-donate" href="/donate">Donate</a>
 
-    <nav id="latest-menu">
-      <div id="latest-highlights">
-        <?php
-          $count = 0;
-          $latestArgs = array(
-            'post_type' => 'post',
-            'posts_per_page' => 4,
-            'post_status' => 'publish',
-            'post__in' => get_option('sticky_posts'),
-            'meta_query' => array(
-              array(
-               'key' => '_thumbnail_id',
-               'compare' => 'EXISTS'
-              ),
-            )
-          );
-          $latest_query = new WP_Query($latestArgs);
-        ?>
-        <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
-        <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
-        <div class="highlight highlight-<?php print $count;  ?>" style="background-image:url(<?php print $featured_image; ?>);">
-          <a href="<?php echo get_permalink(); ?>">
-            <h2><?php the_title(); ?></h2>
-            <span class="read-more">Read article</span>
-          </a>
+      <nav id="latest-menu">
+        <div id="latest-highlights">
+          <?php
+            $count = 0;
+            $latestArgs = array(
+              'post_type' => 'post',
+              'posts_per_page' => 4,
+              'post_status' => 'publish',
+              'post__in' => get_option('sticky_posts'),
+              'meta_query' => array(
+                array(
+                 'key' => '_thumbnail_id',
+                 'compare' => 'EXISTS'
+                ),
+              )
+            );
+            $latest_query = new WP_Query($latestArgs);
+          ?>
+          <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+          <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
+          <div class="highlight highlight-<?php print $count;  ?>" style="background-image:url(<?php print $featured_image; ?>);">
+            <a href="<?php echo get_permalink(); ?>">
+              <h2><?php the_title(); ?></h2>
+              <span class="read-more">Read article</span>
+            </a>
+          </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+
         </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-
-      </div>
-    </nav>
+      </nav>
+    </div>
+    <a class="button green big-donate" href="/donate">Donate</a>
   </div>
 </header>
 

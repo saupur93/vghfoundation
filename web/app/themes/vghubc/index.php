@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div class="page-wrap">
   <section class="panel title-only">
     <div class="container">
       <h1 class="section-title"><?php the_title(); ?></h1>
@@ -23,7 +23,7 @@
       <?php endwhile; ?>
     </div>
   </section>
-
+</div>
 
   <?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 
