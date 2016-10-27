@@ -2,6 +2,17 @@
 @import "../neat/neat-helpers";
 $max-width: 1340px;
 
+// Define your breakpoints
+$ptab: new-breakpoint(601px);
+$tab: new-breakpoint(769px);
+$desk: new-breakpoint(1025px);
+$wideDesk: new-breakpoint(1201px);
+$mobileOnly: new-breakpoint(max-width 600px);
+$ptabAndLess: new-breakpoint(max-width 768px);
+
+$laptopHeightOnly: new-breakpoint(max-height 768px);
+
+
 .container, .full-container {
   @include fill-parent();
   @include row(table);
@@ -14,161 +25,206 @@ $max-width: 1340px;
 
   .inner-wrap {
     position: relative;
+    @include media($ptab){
     margin: 0 5.933%;
+    }
   }
 
   .narrow-wrap {
     position: relative;
-    margin: 0 20%
+    @include media($ptab){
+      margin: 0 20%
+    }
   }
 }
 
 .col-grid-1 {
-  @include span-columns(1);
+  @include media($ptab){
+    @include span-columns(1);
+  }
 }
 
 .col-grid-2 {
-  @include span-columns(2);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(2);
+  }
 }
 
 .col-grid-3 {
-  @include span-columns(3);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(3);
+  }
 }
 
 .col-grid-4 {
-  @include span-columns(4);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(4);
+  }
 }
 
 .col-grid-5 {
-  @include span-columns(5);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(5);
+  }
 }
 
 .col-grid-6 {
-  @include span-columns(6);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(6);
+  }
 }
 
 .col-grid-7 {
-  @include span-columns(7);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(7);
+  }
 }
 
 .col-grid-8 {
-  @include span-columns(8);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(8);
+  }
 }
 
 .col-grid-9 {
-  @include span-columns(9);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(9);
+  }
 }
 
 .col-grid-10 {
-  @include span-columns(10);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(10);
+  }
 }
 
 .col-grid-11 {
-  @include span-columns(11);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(11);
+  }
 }
 
 .col-grid-12 {
-  @include span-columns(12);
   vertical-align:top;
+  @include media($ptab){
+    @include span-columns(12);
+  }
 }
 
 
 .col-third {
-  width:33%;
   float:left;
   display:block;
+  @include media($ptab){
+    width:33%;
+  }
 }
 
 .col-float-1 {
-  @include span-columns(1);
-float:left;
-display:block;
+  float:left;
+  display:block;
+  @include media($ptab){
+    @include span-columns(1);
+  }
 }
 
 .col-float-2 {
-  @include span-columns(2);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(2);
+  }
 }
 
 .col-float-3 {
-  @include span-columns(3);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(3);
+  }
 }
 
 .col-float-4 {
-  @include span-columns(4);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(4);
+  }
 }
 
 .col-float-5 {
-  @include span-columns(5);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(5);
+  }
 }
 
 .col-float-6 {
-  @include span-columns(6);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(6);
+  }
 }
 
 .col-float-7 {
-  @include span-columns(7);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(7);
+  }
 }
 
 .col-float-8 {
-  @include span-columns(8);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(8);
+  }
 }
 
 .col-float-9 {
-  @include span-columns(9);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(9);
+  }
 }
 
 .col-float-10 {
-  @include span-columns(10);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(10);
+  }
 }
 
 .col-float-11 {
-  @include span-columns(11);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(11);
+  }
 }
 
 .col-float-12 {
-  @include span-columns(12);
   float:left;
   display:block;
+  @include media($ptab){
+    @include span-columns(12);
+  }
 }
 
 
 
-// Define your breakpoints
-$ptab: new-breakpoint(601px);
-$tab: new-breakpoint(769px);
-$desk: new-breakpoint(1025px);
-$wideDesk: new-breakpoint(1201px);
-$mobileOnly: new-breakpoint(max-width 600px);
-$ptabAndLess: new-breakpoint(max-width 768px);
-
-$laptopHeightOnly: new-breakpoint(max-height 768px);

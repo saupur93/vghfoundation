@@ -10464,6 +10464,7 @@ var App = function () {
       this.latestNavigation();
       this.themesGrid();
       this.eventsGrid();
+      this.toggleMobileNav();
 
       if ((0, _jquery2.default)('.single-themes_post').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -10550,30 +10551,32 @@ var App = function () {
         return false;
       };
 
-      if ((0, _jquery2.default)('body').hasClass('front')) {
-        setTimeout(function () {
-          (0, _jquery2.default)('body').toggleClass('latest-open');
-        }, 400);
-      } else {
-        scrolled = true;
-        (0, _jquery2.default)('body').toggleClass('latest-closed');
-        (0, _jquery2.default)('body').addClass('latest-closed-finished');
-      }
-
-      if ((0, _jquery2.default)('body').hasClass('front')) {
-        if ((0, _jquery2.default)(window).height() <= 800) {
+      if ((0, _jquery2.default)(window).width() >= 768) {
+        if ((0, _jquery2.default)('body').hasClass('front')) {
           setTimeout(function () {
-            toggleFunction();
-          }, 3000);
+            (0, _jquery2.default)('body').toggleClass('latest-open');
+          }, 400);
+        } else {
+          scrolled = true;
+          (0, _jquery2.default)('body').toggleClass('latest-closed');
+          (0, _jquery2.default)('body').addClass('latest-closed-finished');
         }
+
+        if ((0, _jquery2.default)('body').hasClass('front')) {
+          if ((0, _jquery2.default)(window).height() <= 800) {
+            setTimeout(function () {
+              toggleFunction();
+            }, 3000);
+          }
+        }
+
+        latestToggle.onmouseover = toggleFunction;
+
+        (0, _jquery2.default)(window).on('scroll', function () {
+          if (!scrolled) toggleFunction();
+          scrolled = true;
+        });
       }
-
-      latestToggle.onmouseover = toggleFunction;
-
-      (0, _jquery2.default)(window).on('scroll', function () {
-        if (!scrolled) toggleFunction();
-        scrolled = true;
-      });
     }
 
     /**
@@ -10865,6 +10868,19 @@ var App = function () {
           console.log((0, _jquery2.default)(this).parents('.tab-group').first());
           (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').eq(0).addClass('active');
         }
+      });
+    }
+
+    /**
+     * mobile nav toggle
+     */
+
+  }, {
+    key: 'toggleMobileNav',
+    value: function toggleMobileNav() {
+      var elm = (0, _jquery2.default)('.navburger');
+      elm.on('click', function () {
+        (0, _jquery2.default)('body').toggleClass('nav-open');
       });
     }
   }]);

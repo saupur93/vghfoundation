@@ -187,6 +187,56 @@ p {
 
 }
 
+
+// NAV BURGER
+.navburger {
+  width:56px;
+  height:56px;
+  position: absolute;
+  z-index:1001;
+  left: 0px;
+  top: 5px;
+  cursor:pointer;
+  background:#fff;
+  @include media($ptab){
+    display:none;
+
+  }
+}
+
+.navburger {
+  .stripes {
+    margin-top:22px;
+    margin-left:20px;
+  }
+
+  .stripe {
+    width:28px;
+    height:2px;
+    background:$body-text;
+    margin-bottom:5px;
+    transition:transform 0.3s linear;
+
+  }
+}
+
+.nav-open {
+  .stripes {
+    margin-top:29px;
+
+  }
+  .stripe1 {
+    transform: rotate(45deg);
+    position:absolute;
+  }
+  .stripe2 {
+    display:none;
+  }
+  .stripe3 {
+    transform: rotate(-45deg);
+  }
+}
+
 .page-wrap {
   overflow:hidden;
 }
@@ -199,22 +249,35 @@ p {
   position:fixed;
   z-index:100;
   top:0;
-  height:100px;
+  height:70px;
+  @include media($ptab){
+    height:100px;
+  }
 }
 
 .site-name {
   float:left;
   margin:0;
   a {
-    width:155px;
+    width:100px;
     height:57px;
     display:block;
     background-image:url(../img/logo.svg);
     background-repeat:no-repeat;
+    background-size:100%;
     border: 0;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
+    margin-left:35px;
+    margin-top:-3px;
+
+    @include media($ptab){
+      width:155px;
+      height:57px;
+      margin-left:0px;
+      margin-top:0px;
+    }
   }
 }
 
@@ -393,13 +456,24 @@ p {
 #top-header {
   .big-donate {
     position:absolute;
-    right:20px;
-    top:20px;
-    bottom:20px;
+    right:15px;
+    top:15px;
+    bottom:15px;
     // height:100%;
     border:0;
-    padding:0px 55px;
-    line-height:3.5;
+    padding:0px 20px;
+    line-height:3.2;
+    @include media($ptab){
+      padding:0px 55px;
+      top:20px;
+      bottom:20px;
+      right:20px;
+      line-height:3.5;
+    }
+
+    @include media($ptabAndLess){
+      @include font-size(13px);
+    }
 
     &:hover {
       background-color:$light-grey;
@@ -811,7 +885,11 @@ span.highlighted-text {
   width:100%;
   height:calc(100vh - 70px);
   position:relative;
-  padding-top:100px;
+  padding-top:70px;
+  @include media($ptab){
+    height:calc(100vh - 70px);
+    padding-top:100px;
+  }
 
   .container {
     position:relative;
@@ -932,10 +1010,13 @@ span.highlighted-text {
       height:100%;
       background-repeat: no-repeat;
       background-size:cover;
-      background-position:50% 100px;
+      background-position:50% 70px;
       display:inline-block;
       transition: transform 1s ease-in-out;
       font-size:0;
+      @include media($ptab){
+        background-position:50% 100px;
+      }
 
 
       &:before {
@@ -4379,3 +4460,54 @@ body.page-template-page-annual-report-php {
 }
 
 
+#main-menu {
+  @include media($ptabAndLess){
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(255,255,2553,1);
+    padding:50px 20px 100px 20px !important;
+    overflow:scroll;
+    transform:translateX(-100%);
+    // padding-left:145px !important;
+    transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
+
+    #primary-nav {
+      margin-left:0;
+      margin-top:60px;
+      position:relative;
+      li {
+        width:100%;
+        margin-bottom:1rem;
+        &:before {
+          display:none;
+        }
+      }
+    }
+  }
+
+  .nav-open & {
+    @include media($ptabAndLess){
+      transform:translateX(0%);
+    }
+  }
+}
+
+#language-switcher {
+  @include media($ptabAndLess){
+    position:absolute;
+    top:rem(60);
+    right:rem(15);
+
+    li {
+      margin-right:0;
+      margin-left:rem(25);
+      a {
+        color:$brand-green;
+      }
+    }
+  }
+}
