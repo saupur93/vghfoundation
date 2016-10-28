@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="page-wrap">
 <?php
   $large_header = get_field('display_as_large_post_header')[0];
   $large_header = isset($large_header) && $large_header == 'Yes' ? true : false;
@@ -112,7 +113,7 @@
   </section>
 
 
-
+</div>
 
   <?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 

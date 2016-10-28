@@ -56,6 +56,8 @@ Home
 - try to adjust the sizing of the laptop view of Themes area
 - some treatment to highlight Latest toggle
 
+Themes Single page template
+
 About Us
 - Sub Sub Menu footer menu - where to put CMS?
 
@@ -66,6 +68,7 @@ Events Calendar
 Events
 - lightbox for gallery opening
 - different behaviour for navigation tiers?
+- single event cal page link to symbolic link
 
 Latest
 - What to do about news without featured images
@@ -82,6 +85,8 @@ Annual Report
 Contact
 - remove map?
 
+- mobile subnav - accordion like
+- menu items for various section
 - chinese
 - CMS integration of all panel types
 - responsive

@@ -8,8 +8,6 @@
       $page_header_image = null !== get_field('page_header_image') ? get_field('page_header_image')['url'] : false;
       $page_header_subtitle = null !== get_field('page_header_subtitle') ? get_field('page_header_subtitle') : false;
     ?>
-
-
     <?php if($page_header_image): ?>
       <section class="panel page-header" style="background-image:url(<?php print $page_header_image; ?>);">
         <div class="container">
@@ -99,43 +97,6 @@
           </div>
         </div>
       </section>
-
-
-
-      <section class="panel map-panel">
-        <div class="container">
-          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkHcoGY-jTWLV14JW-ew9IaKhydZ-mCsQ"></script>
-          <script type="text/javascript">
-          google.maps.event.addDomListener(window, 'load', init);
-          function init() {
-              var mapOptions = {
-                  zoom: 14,
-                  center: new google.maps.LatLng(49.2611781,-123.1231168)
-              };
-
-              var mapElement = document.getElementById('map');
-              var map = new google.maps.Map(mapElement, mapOptions);
-              var marker = new google.maps.Marker({
-                  position: new google.maps.LatLng(49.2611781,-123.1231168),
-                  map: map,
-                  title: 'VGH UBC Hospital Foundation'
-              });
-
-              var infowindow = new google.maps.InfoWindow({
-                content: '<div id="content"><h5>VGH UBC Hospital Foundation</h5><p>190-855 West 12th Avenue<br>Vancouver, BC V5Z 1M9<br>Canada</p></div>'
-              });
-
-              marker.addListener('click', function() {
-                infowindow.open(map, marker);
-              });
-          }
-          </script>
-          <div class="inner-wrap">
-              <div id="map"></div>
-          </div>
-        </div>
-      </section>
-
 
 
       <section class="panel padded narrow-two-column">

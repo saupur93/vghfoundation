@@ -8,42 +8,65 @@ Template Name: Why Give
 <?php get_header(); ?>
 
   <div class="page-wrap">
-<!--    <section class="panel title-only">
-      <div class="container">
-        <h1 class="section-title"><?php the_title(); ?></h1>
-      </div>
-    </section> -->
-
-
-  <section class="panel page-header" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/why-give.jpg);">
-    <div class="container">
-      <div class="inner-wrap">
-        <div class="header-copy">
-          <h1><?php the_title(); ?></h1>
-          <p class="intro">With your help, we can provide care to those who need it most.</p>
+    <?php
+      $page_header_image = null !== get_field('page_header_image') ? get_field('page_header_image')['url'] : false;
+      $page_header_subtitle = null !== get_field('page_header_subtitle') ? get_field('page_header_subtitle') : false;
+    ?>
+    <?php if($page_header_image): ?>
+      <section class="panel page-header" style="background-image:url(<?php print $page_header_image; ?>);">
+        <div class="container">
+          <div class="inner-wrap">
+            <div class="header-copy">
+              <h1><?php the_title(); ?></h1>
+              <p class="intro"><?php print $page_header_subtitle; ?></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    <?php else: ?>
+      <section class="panel title-only">
+        <div class="container">
+          <div class="inner-wrap">
+            <h1><?php the_title(); ?></h1>
+          </div>
+        </div>
+      </section>
+    <?php endif; ?>
+
+    <?php if( have_rows('layouts') ): $count = 0; ?>
+        <?php while ( have_rows('layouts') ) : the_row(); $count++;
+
+            if( get_row_layout() == 'basic_content_area' ): ?>
+              <?php include(locate_template('templates/layouts/layout-basic_content_area.php')); ?>
+
+            <?php elseif( get_row_layout() == 'basic_content_area_sidebar' ): ?>
+              <?php include(locate_template('templates/layouts/layout-basic_content_area-sidebar.php')); ?>
+
+            <?php elseif( get_row_layout() == 'accordion' ): ?>
+              <?php include(locate_template('templates/layouts/layout-accordion.php')); ?>
+
+            <?php elseif( get_row_layout() == 'three_column' ): ?>
+              <?php include(locate_template('templates/layouts/layout-three_column.php')); ?>
+
+            <?php elseif( get_row_layout() == 'three_column_sidebar' ): ?>
+              <?php include(locate_template('templates/layouts/layout-three_column_sidebar.php')); ?>
 
 
-  <section class="panel extra-padded overview-panel sidebar-right">
-    <div class="container">
-      <div class="inner-wrap">
-        <div class="col-grid-9">
-          <p>Your donations are critical. And with the cost of medicine rising, they are also the only way for us to continue to ensure that our hospitals and health care teams can deliver BC’s best, most specialized care for adults. VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
+            <?php elseif( get_row_layout() == 'raw_html' ): ?>
+              <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
+            <?php endif; ?>
+
+        <?php endwhile; ?>
+
+    <?php else : ?>
+      <section class="main-content panel">
+        <div class="container">
+          <?php the_content(); ?>
         </div>
-        <div class="col-grid-3">
-          <h4>Reasons to Give</h4>
-          <ul class="small">
-            <li>Last year 32 survivors and patients attended support groups</li>
-            <li>Last year 32 survivors and patients attended support groups</li>
-            <li>Last year 32 survivors and patients attended support groups</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+
+    <?php endif; ?>
+
 
   <section class="panel themes-overview-stats">
     <ul class="top-menu tabs-menu">
@@ -292,52 +315,14 @@ Template Name: Why Give
     </div>
   </section>
 
-  <section class="panel extra-padded bg-image-cta" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/footer-donate-bg.jpg);">
-    <div class="container">
-      <div class="inner-wrap">
-        <h2>Support our hospitals by donating to the <br>
-        <span class="highlighted-text">Most Urgent Needs Fund.</span></h2>
-        <p><a href="#" class="button white-keyline">Give Now</a></p>
-      </div>
-    </div>
-  </section>
 
+<?php
+  $related_call_to_action = null !== get_field('related_call_to_action') ? get_field('related_call_to_action') : false;
+?>
+<?php if($related_call_to_action): ?>
+  <?php include(locate_template('templates/partials/footer-cta.php')); ?>
+<?php endif; ?>
 
-
-
-    <!-- <?php if( have_rows('layouts') ): $count = 0; ?>
-        <?php while ( have_rows('layouts') ) : the_row(); $count++;
-
-            if( get_row_layout() == 'basic_content_area' ): ?>
-              <?php include(locate_template('templates/layouts/layout-basic_content_area.php')); ?>
-
-            <?php elseif( get_row_layout() == 'basic_content_area_sidebar' ): ?>
-              <?php include(locate_template('templates/layouts/layout-basic_content_area-sidebar.php')); ?>
-
-            <?php elseif( get_row_layout() == 'accordion' ): ?>
-              <?php include(locate_template('templates/layouts/layout-accordion.php')); ?>
-
-            <?php elseif( get_row_layout() == 'three_column' ): ?>
-              <?php include(locate_template('templates/layouts/layout-three_column.php')); ?>
-
-            <?php elseif( get_row_layout() == 'three_column_sidebar' ): ?>
-              <?php include(locate_template('templates/layouts/layout-three_column_sidebar.php')); ?>
-
-
-            <?php elseif( get_row_layout() == 'raw_html' ): ?>
-              <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
-            <?php endif; ?>
-
-        <?php endwhile; ?> -->
-
-    <?php else : ?>
-      <section class="main-content panel">
-        <div class="container">
-          <?php the_content(); ?>
-        </div>
-      </section>
-
-    <?php endif; ?>
   </div>
 
   <?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>

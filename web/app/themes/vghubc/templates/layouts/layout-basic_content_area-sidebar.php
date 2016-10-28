@@ -1,24 +1,22 @@
-<section class="panel with-sidebar padded<?php echo ' panel-'.$count; ?>">
-	<div class="inner-wrap">
-    <section class="content-left">
-		  <?php the_sub_field('body'); ?>
-    </section>
-<?php if ($count == 1): ?>
-    <aside class="sidebar-right join">
-      <?php the_field('global_sidebar_message', 'option'); ?>
-    </aside>
-  <?php if(get_sub_field('sidebar')): ?>
-    <aside>
-      <?php the_sub_field('sidebar'); ?>
-    </aside>
-  <?php endif; ?>
+<?php if($count == 1): ?>
+<section class="panel extra-padded overview-panel sidebar-right"<?php echo ' panel-'.$count; ?>>
 <?php else: ?>
-  <?php if(get_sub_field('sidebar')): ?>
-    <aside>
-      <?php the_sub_field('sidebar'); ?>
-    </aside>
-  <?php endif; ?>
+<section class="panel padded overview-panel sidebar-right"<?php echo ' panel-'.$count; ?>>
 <?php endif; ?>
+
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="col-grid-9">
+          <?php the_sub_field('body'); ?>
+        </div>
+        <aside class="col-grid-3">
+          <?php if(get_sub_field('sidebar')): ?>
+            <?php the_sub_field('sidebar'); ?>
+          <?php endif; ?>
+        </aside>
+      </div>
+    </div>
+
 
 	</div>
 </section>
