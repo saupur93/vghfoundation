@@ -47,7 +47,7 @@
             $latest_query = new WP_Query($latestArgs);
           ?>
           <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
-          <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
+          <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>
           <div class="highlight highlight-<?php print $count;  ?>" style="background-image:url(<?php print $featured_image; ?>);">
             <a href="<?php echo get_permalink(); ?>">
               <h2><?php the_title(); ?></h2>

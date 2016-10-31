@@ -1,7 +1,6 @@
         <section class="panel extra-padded expanding-two-column-list footer-about-menu">
           <div class="container">
             <div class="inner-wrap">
-              <?php print_r($content['section_title']); ?>
 
               <?php if( have_rows('global_about_message', 'option') ): ?>
                 <?php while( have_rows('global_about_message', 'option') ): the_row();
