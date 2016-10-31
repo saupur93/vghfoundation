@@ -47,16 +47,13 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 # TODO
-- ask about footer donation CTA functionality throughout
-    - does it relate to theme, is it per page, or global?
-- single news page with featured images, but not a nice big image and different field
-
 
 Home
 - try to adjust the sizing of the laptop view of Themes area
 - some treatment to highlight Latest toggle
 
-Themes Single page template
+Themes
+- Single page template
 
 About Us
 - Sub Sub Menu footer menu - where to put CMS?
@@ -71,9 +68,9 @@ Events
 - single event cal page link to symbolic link
 
 Latest
-- What to do about news without featured images
 - header story slider -
   - question about latest header? sticky? or category?
+  - integrate top header
 - gallery news post 3 image treatment
 - back to top arrow
 
@@ -82,8 +79,7 @@ Annual Report
 - add arrow down to all panels
 - adjust font sizes
 
-Contact
-- remove map?
+
 
 - mobile subnav - accordion like
 - menu items for various section

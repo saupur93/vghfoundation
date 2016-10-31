@@ -3730,6 +3730,10 @@ body.tribe-events-page-template {
   }
 }
 
+.page-id-38 .narrow-basic-content.panel-2 {
+  @extend .background-v-panel;
+}
+
 
 .panel.three-subpages-panel {
   @extend .three-stories-panel;
@@ -4475,7 +4479,7 @@ body.page-template-page-annual-report-php {
 
 
 .page-template-default {
-  .panel-1 {
+  .panel-1:not(.overview-panel) {
     padding-top:rem(30);
   }
 

@@ -29,181 +29,45 @@
       </section>
     <?php endif; ?>
 
-    <?php if(is_page('about')): ?>
-      <section class="panel extra-padded overview-panel narrow-basic-content">
-        <div class="container">
-          <div class="narrow-wrap">
-            <p>We raise funds for VGH, UBC Hospital, GF Strong Rehab Centre, Vancouver Coastal Health Research Institute and Vancouver Community Health Services. Together, we deliver the “plus” for a healthy continuum of care known for excellence right across the health care spectrum – from patient care to research, rehabilitation and local community health services.</p>
 
-            <p>And the simple truth is, if you are seriously ill or injured, our hospitals are your best chance. There are few illnesses or injuries our medical teams cannot treat, no matter how complex or rare. VGH is one of two accredited Level 1 Trauma Centres in BC and, together with UBC Hospital and GF Strong, it is the province’s main referral centre. Doctors at the forefront of their specialties care for patients, discover new treatments through internationally acclaimed research, and educate the next generation of health care superstars. With donor support, the Foundation works hard to ensure that excellent care is here when you need it.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel background-v-panel">
-        <div class="container">
-          <div class="narrow-wrap">
-            <h4>Vision</h4>
-            <p>Inspiring donors. Transforming health care. Saving lives.</p>
-
-            <h4>Mission</h4>
-            <p>Harnessing the power of philanthropy to significantly improve specialized health care and research for British Columbians.</p>
-
-            <h4>Value</h4>
-            <p>Initiative & Innovatio<br>
-            Integrity & Stewardship<br>
-            Teamwork & Engagement</p>
-          </div>
-        </div>
-      </section>
+    <?php if( have_rows('layouts') ): ?>
+        <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
 
 
-      <?php include(locate_template('templates/partials/governance-menu.php')); ?>
+        <?php if(is_page('about')): ?>
+          <?php include(locate_template('templates/partials/governance-menu.php')); ?>
+          <section class="panel extra-padded bg-image-cta" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/vital-bg.jpg);">
+              <div class="container">
+                <div class="inner-wrap">
 
-
-      <section class="panel extra-padded bg-image-cta" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/vital-bg.jpg);">
-          <div class="container">
-            <div class="inner-wrap">
-              <h2>Read the VGH and UBC 2015 Annual Report: <br>
-              <span class="highlighted-text">The power of philanthrophy.</span></h2>
-              <p><a href="#" class="button white-keyline">Read Now</a></p>
-            </div>
-          </div>
-        </section>
-
-
-      <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
-      <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
-
-    <?php elseif(is_page('contact')): ?>
-
-      <section class="panel extra-padded overview-panel narrow-two-column">
-        <div class="container">
-          <div class="narrow-wrap">
-            <div class="col-half">
-              <h3>General Inquiries</h3>
-              <p>Office hours: 8:30am – 4:30pm Monday to Friday PST<br>
-              Phone: 604 875 4676<br>
-              Toll free: 1 877 875 4676</p>
-            </div>
-
-            <div class="col-half">
-              <h3>Mailing Address</h3>
-              <p>VGH & UBC Hospital Foundation<br>
-              190-855 West 12th Avenue<br>
-              Vancouver, BC V5Z 1M9<br>
-              Canada</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="panel padded narrow-two-column">
-        <div class="container">
-          <div class="narrow-wrap">
-            <h3>Key Foundation Contacts</h3>
-            <div class="col-half">
-              <p><a href="mailto:barbara.grantham@vghfoundation.ca"><strong>Barbara Grantham</strong></a><br>
-              President &amp; CEO</p>
-              <p><a href="mailto:brian.dowling@vghfoundation.ca"><strong>Brian Dowling</strong></a><br>
-              Sr. Vice President, Finance &amp; Information Systems</p>
-              <p><a href="mailto:angela.chapman@vghfoundation.ca"><strong>Angela Chapman</strong></a><br>
-              Sr. Vice President, Philanthropy</p>
-              <p><a href="mailto:jim.o'Hara@vghfoundation.ca"><strong>Jim O’Hara</strong></a><br>
-              Vice President, Leadership Giving</p>
-              <p><a href="mailto:candice.tsang@vghfoundation.ca"><strong>Candice Tsang</strong></a><br>
-              Vice President, Major Gifts &amp; Gift and Estate Planning</p>
-              <p><a href="mailto:mary.prodanovic@vghfoundation.ca " target="_blank"><strong>Mary Prodanovic</strong></a><br>
-              Director, Organizational Development &amp; Human Resources</p>
-            </div>
-
-            <div class="col-half">
-              <p><a href="mailto: shirlyn.baskette@vghfoundation.ca"><strong>Shirlyn Baskette</strong></a><br>
-              Director, Annual Programs</p>
-              <p><a href="mailto:tiffany.kraus@vghfoundation.ca"><strong>Tiffany Kraus</strong></a><br>
-              Director, Marketing &amp; Communications</p>
-              <p><a href="mailto:cathy.helliwell@vghfoundation.ca"><strong>Cathy Helliwell</strong></a><br>
-              Director,&nbsp;Strategic Partnerships</p>
-              <p><a href="mailto:charlene.taylor@vghfoundation.ca"><strong>Charlene Taylor</strong></a><br>
-              Associate Director, Gift &amp; Estate Planning</p>
-              <p><a href="mailto:stephanie.forgacs@vghfoundation.ca"><strong>Stephanie Forgacs</strong></a><br>
-              Associate Director, Major Gifts</p>
-              <p><a href="mailto:Tim.Staunton@vghfoundation.ca"><strong>Tim Staunton</strong></a><br>
-              Associate Director, Major Gifts</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
-
-    <?php else: ?>
-            <?php if( have_rows('layouts') ): $count = 0; ?>
-                <?php while ( have_rows('layouts') ) : the_row(); $count++;
-
-                    if( get_row_layout() == 'basic_content_area' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-basic_content_area.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'basic_content_area_sidebar' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-basic_content_area-sidebar.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'accordion' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-accordion.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'two_column' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-two_column.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'narrow_two_column' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-narrow_two_column.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'two_column_image_list' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-two_column_image_list.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'three_column' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-three_column.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'three_column_sidebar' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-three_column_sidebar.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'inline_slideshow' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-inline_slideshow.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'tiered_tabs' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-tiered_tabs.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'download_sets' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-download_sets.php')); ?>
-
-                    <?php elseif( get_row_layout() == 'raw_html' ): ?>
-                      <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
-                    <?php endif; ?>
-                <?php endwhile; ?>
-
-                <?php
-                  // if its a child of About Us, but not the Annual Report, and not one of the Governance pages
-                  if(menu_is_child_of(38) && get_the_ID() != 20259 && !in_array(get_the_ID(), $gover_ids)): ?>
-                  <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
-                  <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
-                <?php endif; ?>
-
-
-                <?php if(in_array(get_the_ID(), $gover_ids)): ?>
-                  <?php include(locate_template('templates/partials/governance-menu.php')); ?>
-                  <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
-                <?php endif; ?>
-
-            <?php else : ?>
-              <section class="main-content panel">
-                <div class="container">
-                  <?php the_content(); ?>
                 </div>
-              </section>
-            <?php endif; ?>
+              </div>
+            </section>
+          <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
+          <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
+        <?php endif; ?>
 
+
+        <?php
+          // if its a child of About Us, but not the Annual Report, and not one of the Governance pages
+          if(menu_is_child_of(38) && get_the_ID() != 20259 && !in_array(get_the_ID(), $gover_ids)): ?>
+          <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
+          <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
+        <?php endif; ?>
+
+
+        <?php if(in_array(get_the_ID(), $gover_ids)): ?>
+          <?php include(locate_template('templates/partials/governance-menu.php')); ?>
+          <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
+        <?php endif; ?>
+
+    <?php else : ?>
+      <section class="main-content panel">
+        <div class="container">
+          <?php the_content(); ?>
+        </div>
+      </section>
     <?php endif; ?>
-
-
 
 
   </div>
