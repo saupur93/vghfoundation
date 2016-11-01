@@ -55,52 +55,84 @@
             $theme = get_field('related_theme')[0];
             $theme_title = get_the_title($theme->ID);
             $class = isset($theme->ID) ? ' ' . sanitize_title($theme_title) : '';
+            $link_text = null !== get_field('alternative_button_text') && get_field('alternative_button_text') != '' ? get_field('alternative_button_text') : 'Read Article';
+            $featured_image_gallery = null !== get_field('images') ? get_field('images') : false;
          ?>
       <?php if($count == 1): ?>
       <div class="row">
         <a href="<?php echo get_permalink(); ?>">
-        <article class="col-float-4">
+        <article class="col-float-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
           <?php if(!empty($class)): ?>
           <div class="tag<?php print $class; ?>"><?php print $theme_title; ?></div>
           <?php endif; ?>
+          <?php if($featured_image_gallery): ?>
+          <div class="featured-multi">
+          <?php foreach($featured_image_gallery as $key => $image): ?>
+          <?php if($key < 3): ?>
+            <div class="thumb thumb-<?php print $key; ?>"<?php if($image) print ' style="background-image:url('. $image['url'] .')"'; ?>></div>
+          <?php endif; ?>
+          <?php endforeach; ?>
+          </div>
+          <?php else: ?>
           <div class="thumb"<?php if($featured_image) print ' style="background-image:url('. $featured_image .')"'; ?>></div>
+          <?php endif; ?>
           <div class="copy">
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more">Read Article</span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </article>
         </a>
       <?php endif; ?>
 
         <?php if($count == 2): ?>
         <a href="<?php echo get_permalink(); ?>">
-        <article class="col-float-4">
+        <article class="col-float-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
           <?php if(!empty($class)): ?>
           <div class="tag<?php print $class; ?>"><?php print $theme_title; ?></div>
           <?php endif; ?>
+          <?php if($featured_image_gallery): ?>
+          <div class="featured-multi">
+          <?php foreach($featured_image_gallery as $key => $image): ?>
+          <?php if($key < 3): ?>
+            <div class="thumb thumb-<?php print $key; ?>"<?php if($image) print ' style="background-image:url('. $image['url'] .')"'; ?>></div>
+          <?php endif; ?>
+          <?php endforeach; ?>
+          </div>
+          <?php else: ?>
           <div class="thumb"<?php if($featured_image) print ' style="background-image:url('. $featured_image .')"'; ?>></div>
+          <?php endif; ?>
           <div class="copy">
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more">Read Article</span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </article>
         </a>
         <?php endif; ?>
 
         <?php if($count == 3): ?>
         <a href="<?php echo get_permalink(); ?>">
-        <article class="col-float-4">
+        <article class="col-float-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
           <?php if(!empty($class)): ?>
           <div class="tag<?php print $class; ?>"><?php print $theme_title; ?></div>
           <?php endif; ?>
+          <?php if($featured_image_gallery): ?>
+          <div class="featured-multi">
+          <?php foreach($featured_image_gallery as $key => $image): ?>
+          <?php if($key < 3): ?>
+            <div class="thumb thumb-<?php print $key; ?>"<?php if($image) print ' style="background-image:url('. $image['url'] .')"'; ?>></div>
+          <?php endif; ?>
+          <?php endforeach; ?>
+          </div>
+          <?php else: ?>
           <div class="thumb"<?php if($featured_image) print ' style="background-image:url('. $featured_image .')"'; ?>></div>
+          <?php endif; ?>
           <div class="copy">
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more">Read Article</span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </article>
         </a>
       </div>
@@ -114,28 +146,48 @@
           <?php if(!empty($class)): ?>
           <div class="tag<?php print $class; ?>"><?php print $theme_title; ?></div>
           <?php endif; ?>
+          <?php if($featured_image_gallery): ?>
+          <div class="featured-multi">
+          <?php foreach($featured_image_gallery as $key => $image): ?>
+          <?php if($key < 3): ?>
+            <div class="thumb thumb-<?php print $key; ?>"<?php if($image) print ' style="background-image:url('. $image['url'] .')"'; ?>></div>
+          <?php endif; ?>
+          <?php endforeach; ?>
+          </div>
+          <?php else: ?>
           <div class="thumb"<?php if($featured_image) print ' style="background-image:url('. $featured_image .')"'; ?>></div>
+          <?php endif; ?>
           <div class="copy">
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more">Read Article</span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </article>
         </a>
         <?php endif; ?>
 
         <?php if($count == 5): ?>
         <a href="<?php echo get_permalink(); ?>">
-        <article class="col-float-4">
+        <article class="col-float-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
           <?php if(!empty($class)): ?>
           <div class="tag<?php print $class; ?>"><?php print $theme_title; ?></div>
           <?php endif; ?>
+          <?php if($featured_image_gallery): ?>
+          <div class="featured-multi">
+          <?php foreach($featured_image_gallery as $key => $image): ?>
+          <?php if($key < 3): ?>
+            <div class="thumb thumb-<?php print $key; ?>"<?php if($image) print ' style="background-image:url('. $image['url'] .')"'; ?>></div>
+          <?php endif; ?>
+          <?php endforeach; ?>
+          </div>
+          <?php else: ?>
           <div class="thumb"<?php if($featured_image) print ' style="background-image:url('. $featured_image .')"'; ?>></div>
+          <?php endif; ?>
           <div class="copy">
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more">Read Article</span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </article>
         </a>
         <?php endif; ?>

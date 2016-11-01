@@ -47,13 +47,18 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 # TODO
+CMS Integration
+- latest
+- ways to give page
+- pillar/theme single page
+- annual report
+- home
+- signature events overview
+- signature events single
 
 Home
 - try to adjust the sizing of the laptop view of Themes area
 - some treatment to highlight Latest toggle
-
-Themes
-- Single page template
 
 About Us
 - Learn about us menu.. where in CMS and what pages establish a pattern
@@ -68,9 +73,6 @@ Events
 - single event cal page link to symbolic link
 
 Latest
-- header story slider -
-  - question about latest header? sticky? or category?
-  - integrate top header
 - gallery news post 3 image treatment
 - back to top arrow
 
@@ -86,5 +88,5 @@ Annual Report
 - chinese
 - CMS integration of all panel types
 - responsive
-- regenerate thumbnails
+- set thumbnail sizes and regenerate thumbnails
 - IE

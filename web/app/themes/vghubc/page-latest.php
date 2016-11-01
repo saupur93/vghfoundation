@@ -10,29 +10,46 @@ Template Name: Latest
   <div class="page-wrap">
 
     <section class="latest-header panel slideshow">
+      <?php
+        $count = 0;
+        $latestArgs = array(
+          'post_type' => 'post',
+          'posts_per_page' => 4,
+          'post_status' => 'publish',
+          'post__in' => get_option('sticky_posts'),
+          'meta_query' => array(
+            array(
+             'key' => '_thumbnail_id',
+             'compare' => 'EXISTS'
+            ),
+          )
+        );
+        $latest_query = new WP_Query($latestArgs);
+      ?>
       <div class="slide-images">
-        <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Surgery-primary_Umberto-copy.jpg);"></div><!--
-         --><div class="slide-bg slide-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Feature-primary-photo-Jamie-skiing-downhill.jpg);"></div><!--
-         -->
+      <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+      <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>
+        <div class="slide-bg slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" style="background-image:url(<?php print $featured_image; ?>);"></div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
       </div>
       <div class="container">
         <div class="inner-wrap">
           <div class="hero-copy" data-colour-type="surgery">
             <h1><?php the_title(); ?></h1>
-            <div class="slide-text slide-1 active" data-colour-type="surgery">
-              <p class="intro">“The outstanding pre- and post-operative care I received was absolutely world-class.”</p>
-              <p><a href="#" class="read-more white">Umberto's Story</a></p>
+            <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+            <div class="slide-text slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" data-colour-type="surgery">
+              <p class="intro"><?php the_title(); ?></p>
+              <?php $link_text = null !== get_field('alternative_button_text') ? get_field('alternative_button_text') : 'Read more'; ?>
+              <p><a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a></p>
             </div>
-
-            <div class="slide-text slide-2" data-colour-type="cancer">
-              <p class="intro">World-class skier Jamie Crane-Mauzy credits revolutionary brain surgery and VGH’s ICU team for saving her life.</p>
-              <p><a href="#" class="read-more white">Jamie's Story</a></p>
-            </div>
-
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
             <ul class="slide-pager">
-              <li class="active">1</li>
-              <li>2</li>
-
+            <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+              <li class="<?php if($count == 1) print 'active'; ?>"><?php print $count; ?></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
             </ul>
           </div>
 
@@ -45,12 +62,10 @@ Template Name: Latest
         if(!$main_category){
           $main_category = isset($_GET['category']) ? sanitize_title_with_dashes($_GET['category']) : '';
         }
-
         if(!$themeId){
           $themeId = isset($_GET['theme']) ? sanitize_title_with_dashes($_GET['theme']) : '';
         }
       ?>
-
       <ul class="tabs">
         <li<?php if(empty($main_category) || $main_category == 'news') print ' class="active"'; ?> data-tab="1" data-postCategory="news"><a href="?category=">News</a></li>
         <li data-tab="2"<?php if($main_category == 'impact') print ' class="active"'; ?> data-postCategory="impact"><a href="?category=impact">Impact</a></li>
@@ -136,16 +151,7 @@ Template Name: Latest
     </section>
 
 
-    <section class="panel grey-bg extra-padded newsletter-signup">
-      <div class="container">
-          <h2>Find out how <span class="green">your donations</span> make a difference.</h2>
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="submit" value="Subscribe" />
-          </form>
-        </div>
-    </section>
+    <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
 
 
 

@@ -3072,6 +3072,10 @@ body.tribe-events-page-template {
       margin-bottom:0;
     }
 
+    &.multi-image {
+      padding-top:rem(370);
+    }
+
 
     .tag {
       background-color:$brand-green;
@@ -3097,14 +3101,38 @@ body.tribe-events-page-template {
       background-size:cover;
       background-repeat:no-repeat;
       background-position:50% 30%;
-      height:rem(135);
       position:absolute;
       top:0;
       z-index:0;
       width:100%;
+      height:rem(135);
       @include media($ptab){
         height:rem(265);
         background-position:50% 50%;
+      }
+    }
+
+    .featured-multi {
+      .thumb-0 {}
+      .thumb-1 {
+        width:calc(50% - 6px);
+        height:rem(35);
+        top:rem(275);
+        left:0;
+        @include media($ptab){
+          height:rem(130);
+          background-position:50% 50%;
+        }
+      }
+      .thumb-2 {
+        width:calc(50% - 6px);
+        height:rem(35);
+        top:rem(275);
+        right:0;
+        @include media($ptab){
+          height:rem(130);
+          background-position:50% 50%;
+        }
       }
     }
 
