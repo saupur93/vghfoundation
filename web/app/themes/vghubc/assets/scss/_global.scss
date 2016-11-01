@@ -3710,7 +3710,7 @@ body.tribe-events-page-template {
 }
 
 
-.panel.background-v-panel {
+.panel.background-v-panel, .page-id-38 .narrow-basic-content.panel-2 {
   background-image:url(../img/background-v.svg);
   background-position:0 0;
   background-repeat:no-repeat;
@@ -3730,9 +3730,6 @@ body.tribe-events-page-template {
   }
 }
 
-.page-id-38 .narrow-basic-content.panel-2 {
-  @extend .background-v-panel;
-}
 
 
 .panel.three-subpages-panel {
