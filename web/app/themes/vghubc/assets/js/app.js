@@ -25,6 +25,7 @@ class App {
     this.themesGrid();
     this.eventsGrid();
     this.toggleMobileNav();
+    this.submenuMobileDropdown();
 
     if ($('.single-themes_post').length) {
       this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -427,8 +428,17 @@ class App {
     elm.on('click', function (){
       $('body').toggleClass('nav-open');
     });
-
    }
+
+   /**
+    * Dropdown triggers
+    */
+    submenuMobileDropdown(){
+      $('.submenu-trigger').on('click', function(e) {
+        const parent = $(this).parent();
+        parent.toggleClass('submenu-open');
+      })
+    }
 }
 
 window.App = new App();

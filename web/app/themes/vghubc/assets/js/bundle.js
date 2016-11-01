@@ -10465,6 +10465,7 @@ var App = function () {
       this.themesGrid();
       this.eventsGrid();
       this.toggleMobileNav();
+      this.submenuMobileDropdown();
 
       if ((0, _jquery2.default)('.single-themes_post').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -10881,6 +10882,19 @@ var App = function () {
       var elm = (0, _jquery2.default)('.navburger');
       elm.on('click', function () {
         (0, _jquery2.default)('body').toggleClass('nav-open');
+      });
+    }
+
+    /**
+     * Dropdown triggers
+     */
+
+  }, {
+    key: 'submenuMobileDropdown',
+    value: function submenuMobileDropdown() {
+      (0, _jquery2.default)('.submenu-trigger').on('click', function (e) {
+        var parent = (0, _jquery2.default)(this).parent();
+        parent.toggleClass('submenu-open');
       });
     }
   }]);

@@ -16,6 +16,7 @@
           <?php wp_nav_menu(array(
             'menu'        => 'Main Menu',
             'container'   => '',
+            'after' => '<i class="submenu-trigger"></i>',
             'items_wrap'  => '%3$s'
           )); ?>
           <li><a href="/latest/" id="toggleLatest">Latest</a></li>

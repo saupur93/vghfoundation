@@ -245,13 +245,16 @@ p {
 
 #top-header {
   float:left;
-  width:100%;
+  width:100vw;
   padding:20px 0;
   background:#fff;
   position:fixed;
   z-index:100;
   top:0;
   height:70px;
+  @include media($tab){
+    width: 100%;
+  }
   @include media($ptab){
     height:100px;
   }
@@ -352,16 +355,27 @@ p {
     li {
       &.menu-item-has-children {
         position: relative;
-        // &:after {
-        //  content:'';
-        //  background:url(../img/carret.svg) no-repeat;
-        //  display:inline-block;
-        //  position:relative;
-        //  top:4px;
-        //  right:-2px;
-        //  width:10px;
-        //  height:10px;
-        // }
+        &.submenu-open > .submenu-trigger{
+          &:after{
+            transform: rotate(-180deg);
+          }
+        }
+        > .submenu-trigger{
+          position: relative;
+          float: right;
+          width:1em;
+          height:1em;
+          &:after {
+            content:'';
+            background:url(../img/carret.svg) no-repeat;
+            transition: transform 0.3s ease-in-out;
+            display: block;
+            position:relative;
+            top: 0.5em;
+            height: 100%;
+            width: 100%;
+          }
+        }
         .sub-menu {
           background:#fff;
           display:inline-block;
@@ -386,7 +400,6 @@ p {
               display:none;
             }
           }
-
 
 
           a {
