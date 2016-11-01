@@ -56,7 +56,7 @@ Themes
 - Single page template
 
 About Us
-- Sub Sub Menu footer menu - where to put CMS?
+- Learn about us menu.. where in CMS and what pages establish a pattern
 
 Events Calendar
 - style single page...if we are using it?

@@ -15,9 +15,6 @@
                 <?php endwhile; ?>
               <?php endif; ?>
 
-
-
-
               <div class="col-half last">
                 <ul class="expanding-list">
                   <?php
