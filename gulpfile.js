@@ -65,7 +65,7 @@ if (production) {
  */
 gulp.task( 'dev', ['js'], function(){
 		browserSync({
-				proxy: "vghubc.dev.192.168.34.74.xip.io",
+				proxy: "vghubc.dev",
 				ghostMode: false,
 				open: false
 		});
