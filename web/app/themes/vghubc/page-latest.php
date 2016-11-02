@@ -154,14 +154,6 @@ Template Name: Latest
 
     <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
 
-
-
-
-
-
-
-
-
   </div>
 
   <?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
