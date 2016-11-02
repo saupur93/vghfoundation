@@ -64,6 +64,12 @@ $event_id = get_the_ID();
 						<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 						<div class="tribe-events-single-event-description tribe-events-content">
 							<?php the_content(); ?>
+			<?php
+				$related_signature_event = null !== get_field('related_signature_event') ? get_field('related_signature_event') : false;
+			 ?>
+			 <?php if($related_signature_event): ?>
+			 	<p><a href="<?php print get_post_permalink($related_signature_event[0]->ID); ?>" class="button green">Read about this signature event</a></p>
+			 <?php endif; ?>
 						</div>
 						<!-- .tribe-events-single-event-description -->
 						<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>

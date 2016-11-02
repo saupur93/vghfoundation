@@ -60,12 +60,7 @@ Home
 - try to adjust the sizing of the laptop view of Themes area
 - some treatment to highlight Latest toggle
 
-About Us
-- Learn about us menu.. where in CMS and what pages establish a pattern
 
-Events Calendar
-- style single page...if we are using it?
-    - figure out linkage between signature events
 
 Events
 - lightbox for gallery opening
@@ -78,7 +73,8 @@ Annual Report
 - add arrow down to all panels
 - adjust font sizes
 
-
+About Us
+- Learn about us menu.. where in CMS and what pages establish a pattern
 
 - mobile subnav - accordion like
 - menu items for various section
