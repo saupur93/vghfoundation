@@ -59,10 +59,10 @@ Template Name: Latest
 
     <section class="panel news-tabs" id="newsfeed">
       <?php
-        if(!$main_category){
+        if(isset($main_category) && !empty($main_category)){
           $main_category = isset($_GET['category']) ? sanitize_title_with_dashes($_GET['category']) : '';
         }
-        if(!$themeId){
+        if(isset($themeId) && !empty($themeId)){
           $themeId = isset($_GET['theme']) ? sanitize_title_with_dashes($_GET['theme']) : '';
         }
       ?>
