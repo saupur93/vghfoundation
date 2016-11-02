@@ -355,6 +355,10 @@ p {
     li {
       &.menu-item-has-children {
         position: relative;
+        .submenu-trigger {
+          display:none;
+        }
+
         &.submenu-open > .submenu-trigger{
           &:after{
             transform: rotate(-180deg);
