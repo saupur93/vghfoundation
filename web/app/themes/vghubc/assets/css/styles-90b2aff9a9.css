@@ -1455,6 +1455,15 @@ p {
   margin-right: 30px;
   position: relative; }
   @media screen and (min-width: 601px) {
+    #top-header #toggleLatest:before {
+      width: 0;
+      height: 2px;
+      background: #7dab35;
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      -webkit-transition: width 0.3s linear;
+      transition: width 0.3s linear; }
     #top-header #toggleLatest:after {
       content: '';
       background: url(../img/carret-line.svg) no-repeat;
@@ -1475,6 +1484,8 @@ p {
 
 .latest-open #top-header #toggleLatest {
   color: #7dab35; }
+  .latest-open #top-header #toggleLatest:before {
+    width: 65px; }
   .latest-open #top-header #toggleLatest:after {
     -webkit-animation: arrowUpDown 1s linear infinite;
             animation: arrowUpDown 1s linear infinite; }
@@ -2495,6 +2506,9 @@ body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta {
 body.tribe-events-page-template .tribe-events-event-meta .column,
 body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-group {
   padding: 0; }
+
+body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-group.tribe-events-meta-group-gmap {
+  padding-left: 3rem; }
 
 .events-list .event-item {
   padding: 80px 0;
@@ -4550,3 +4564,10 @@ body.page-template-page-annual-report-php {
         color: #7dab35;
         font-size: 11px;
         font-size: 0.6875rem; } }
+
+@media screen and (min-width: 601px) {
+  .error404 .page-wrap {
+    height: 50vh; } }
+
+.error404 .page-wrap .not-found {
+  text-align: center; }
