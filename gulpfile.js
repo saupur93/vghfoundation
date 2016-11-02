@@ -87,7 +87,7 @@ gulp.task( 'sass', function(){
         .pipe(sass())
         .on('error', gutil.log.bind(gutil, 'Sass Error'))
         .pipe(autoprefixer())
-        .pipe(gulpif(production, csso()))
+        //.pipe(gulpif(production, csso()))
         .pipe(duration('Compiled CSS'))
       .pipe(gulpif(!production, sourcemaps.write()))
       .pipe(gulpif(production, rev()))
