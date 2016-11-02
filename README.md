@@ -72,9 +72,6 @@ Events
 - different behaviour for navigation tiers?
 - single event cal page link to symbolic link
 
-Latest
-- gallery news post 3 image treatment
-- back to top arrow
 
 Annual Report
 - change animations
@@ -85,7 +82,7 @@ Annual Report
 
 - mobile subnav - accordion like
 - menu items for various section
-- chinese
+- chinese content integration
 - CMS integration of all panel types
 - responsive
 - set thumbnail sizes and regenerate thumbnails

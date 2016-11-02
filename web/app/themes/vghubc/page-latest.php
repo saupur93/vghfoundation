@@ -148,6 +148,7 @@ Template Name: Latest
         <?php endif; ?>
       </div>
 
+      <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-to-top.svg" class="back-to-top" /></a>
     </section>
 
 

@@ -3969,8 +3969,26 @@ body.tribe-events-page-template {
 }
 
 
-.panel.news-feed-panel {
+.panel#newsfeed {
+  .back-to-top {
+    position:fixed;
+    right:rem(40);
+    bottom:rem(40);
+    visibility:hidden;
+    height:0;
+    width:0;
+    overflow:hidden;
+    opacity:0;
+    transition:opacity 0.3s linear;
 
+    &.visible {
+      visibility:visible;
+      overflow:auto;
+      width:auto;
+      height:auto;
+      opacity: 1;
+    }
+  }
 }
 
 
