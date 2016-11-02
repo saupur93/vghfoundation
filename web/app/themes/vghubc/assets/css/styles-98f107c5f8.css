@@ -1461,7 +1461,7 @@ p {
       background: #7dab35;
       content: '';
       position: absolute;
-      bottom: -10px;
+      bottom: -6px;
       -webkit-transition: width 0.3s linear;
       transition: width 0.3s linear; }
     #top-header #toggleLatest:after {
@@ -1485,7 +1485,7 @@ p {
 .latest-open #top-header #toggleLatest {
   color: #7dab35; }
   .latest-open #top-header #toggleLatest:before {
-    width: 65px; }
+    width: 49px; }
   .latest-open #top-header #toggleLatest:after {
     -webkit-animation: arrowUpDown 1s linear infinite;
             animation: arrowUpDown 1s linear infinite; }

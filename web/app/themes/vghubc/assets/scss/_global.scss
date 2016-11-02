@@ -509,7 +509,7 @@ p {
         background:$brand-green;
         content:'';
         position:absolute;
-        bottom:-10px;
+        bottom:-6px;
         transition:width 0.3s linear;
       }
       &:after {
@@ -540,7 +540,7 @@ p {
     #toggleLatest {
       color:$brand-green;
       &:before {
-        width:65px;
+        width:49px;
       }
       &:after {
         animation: arrowUpDown 1s linear infinite;
