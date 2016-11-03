@@ -80,84 +80,60 @@ Template Name: Ways to Give
     </div>
 
     <section class="panel padded-top three-column-list active" data-tab-content="1">
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb1.jpg" />
-        <div class="copy">
-          <h4>$50 One-time</h4>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2083" class="read-more" target="_blank">Donate</a></p>
+      <section class="panel padded slideshow-content-panel slideshow grey-bg">
+        <div class="container">
+          <div class="inner-wrap">
+            <div class="slide-images">
+              <div class="slide-bg slide active" style="background-image:url(http://placehold.it/1200x600);"></div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-text active">
+                <h3>One-time Gift</h3>
+                <p>With a one-time gift, you’ll be helping our medical teams treat patients with the most complex illnesses and injuries from across BC, helping save lives and improve outcomes.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb2.jpg" />
-        <div class="copy">
-          <h4>$100 One-time</h4>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2082" class="read-more" target="_blank">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg" />
-        <div class="copy">
-          <h4>$250 One-time</h4>
-          <p><a href="https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1&set.DonationLevel=2086" class="read-more" target="_blank">Donate</a></p>
-        </div>
-      </article>
+      </section>
     </section>
 
 
 
     <section class="panel padded-top three-column-list" data-tab-content="2">
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb1.jpg" />
-        <div class="copy">
-          <h4>$X Monthly</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
+      <section class="panel padded slideshow-content-panel slideshow grey-bg">
+        <div class="container">
+          <div class="inner-wrap">
+            <div class="slide-images">
+              <div class="slide-bg slide active" style="background-image:url(http://placehold.it/1200x600);"></div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-text active">
+                <h3>Monthly Gift</h3>
+                <p>Making a monthly donation allows you to conveniently spread out your generosity throughout the year. Just select an amount for each month and an automatic deduction can be made from your bank account or credit card.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb2.jpg" />
-        <div class="copy">
-          <h4>$X Monthly</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg" />
-        <div class="copy">
-          <h4>$X Monthly</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
-        </div>
-      </article>
+      </section>
     </section>
 
 
     <section class="panel padded-top three-column-list" data-tab-content="3">
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
-        <div class="copy">
-          <h4>$X In Tribute</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
+      <section class="panel padded slideshow-content-panel slideshow grey-bg">
+        <div class="container">
+          <div class="inner-wrap">
+            <div class="slide-images">
+              <div class="slide-bg slide active" style="background-image:url(http://placehold.it/1200x600);"></div>
+            </div>
+            <div class="slide-content">
+              <div class="slide-text active">
+                <h3>Tribute Gift</h3>
+                <p>Making a monthly donation allows you to conveniently spread out your generosity throughout the year. Just select an amount for each month and an automatic deduction can be made from your bank account or credit card.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350/333333" />
-        <div class="copy">
-          <h4>$X In Tribute</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
-        </div>
-      </article>
-
-      <article class="col-grid-4">
-        <img src="http://placehold.it/427x350" />
-        <div class="copy">
-          <h4>$X In Tribute</h4>
-          <p><a href="#" class="read-more">Donate</a></p>
-        </div>
-      </article>
+      </section>
     </section>
   </section>
 

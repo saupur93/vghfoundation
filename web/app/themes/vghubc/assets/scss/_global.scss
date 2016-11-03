@@ -300,7 +300,7 @@ p {
       color:$brand-green;
     }
   }
-  .current_page_item a {
+  .current_page_item a, a.active {
     color:$brand-green;
   }
 }
@@ -2279,7 +2279,7 @@ body.tribe-events-page-template {
 
   article {
     position:relative;
-    padding-top:20%;
+    padding-top:rem(335);
 
     h4 {
       font-family:$font;
@@ -2895,7 +2895,7 @@ body.tribe-events-page-template {
 
 
 
-.panel.bg-image-cta, .panel.bg-color-cta {
+.panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color:#fff;
   text-align:center;
   background-size:cover;

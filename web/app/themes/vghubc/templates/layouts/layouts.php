@@ -36,13 +36,21 @@
 
         <?php if(is_page('about')): ?>
           <?php include(locate_template('templates/partials/governance-menu.php')); ?>
-          <section class="panel extra-padded bg-image-cta" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/tmp/vital-bg.jpg);">
+          <?php $ID = 21106; ?>
+          <?php $text_content = null !== get_field('text_content', $ID) ? get_field('text_content', $ID) : false; ?>
+          <?php $white_text_colour = null !== get_field('text_colour', $ID) && get_field('text_colour') == 'White text' ? true : false; ?>
+          <?php $bg_image = null !== get_field('background_image', $ID) ? get_field('background_image', $ID)['url'] : false; ?>
+
+          <?php if($text_content): ?>
+            <section class="panel extra-padded<?php if($white_text_colour) print ' bg-color-cta'; ?><?php if($bg_image) print ' bg-image-cta'; ?>"<?php if($bg_image) print ' style="background-image:url('. $bg_image .');"'; ?>>
               <div class="container">
                 <div class="inner-wrap">
-
+                  <?php print $text_content; ?>
                 </div>
               </div>
             </section>
+          <?php endif; ?>
+
           <?php include(locate_template('templates/layouts/layout-footer-menu.php')); ?>
           <?php include(locate_template('templates/partials/newsletter-signup.php')); ?>
         <?php endif; ?>

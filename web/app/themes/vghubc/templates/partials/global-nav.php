@@ -22,9 +22,19 @@
           <li><a href="/latest/" id="toggleLatest">Latest</a></li>
         </ul>
 
+
+        <?php
+
+          $currentLang = qtrans_getLanguage();
+          $page_url = get_permalink();
+          $page_url = parse_url( $page_url );
+          $page_url = $page_url['path'];
+          $page_url = str_replace('/en', '', $page_url);
+          $page_url = str_replace('/zh', '', $page_url);
+         ?>
         <ul id="language-switcher">
-          <li><a href="#">EN</a></li>
-          <li><a href="#">中文</a></li>
+          <li><a href="/en<?php print $page_url; ?>"<?php if($currentLang == 'en') print ' class="active"'; ?>>EN</a></li>
+          <li><a href="/zh<?php print $page_url; ?>"<?php if($currentLang == 'zh') print ' class="active"'; ?>>中文</a></li>
         </ul>
       </nav>
 

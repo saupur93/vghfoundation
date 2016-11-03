@@ -39,6 +39,21 @@
                     <?php elseif( get_row_layout() == 'themes_overview_stats' ): ?>
                       <?php include(locate_template('templates/layouts/layout-themes_overview_stats.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'inline_gallery_thumbs' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-inline_gallery_thumbs.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'full_width_video' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-full_width_video.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'three_stories_panel' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-three_stories_panel.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'three_column_donors' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-three_column_donors.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'call_to_action' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-call_to_action.php')); ?>
+
                     <?php elseif( get_row_layout() == 'raw_html' ): ?>
                       <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
                     <?php endif; ?>

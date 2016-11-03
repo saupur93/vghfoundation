@@ -47,8 +47,14 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 # TODO
-CMS Integration
-- latest
+
+## Functional
+Events
+- lightbox for gallery opening
+- different behaviour for navigation tiers - events?
+
+
+## CMS Integration
 - ways to give page
 - pillar/theme single page
 - annual report
@@ -56,17 +62,12 @@ CMS Integration
 - signature events overview
 - signature events single
 
+
+## Responsive
+- mobile subnav - accordion like
 Home
 - try to adjust the sizing of the laptop view of Themes area
 - some treatment to highlight Latest toggle
-
-
-
-Events
-- lightbox for gallery opening
-- different behaviour for navigation tiers?
-- single event cal page link to symbolic link
-
 
 Annual Report
 - change animations
@@ -76,10 +77,7 @@ Annual Report
 About Us
 - Learn about us menu.. where in CMS and what pages establish a pattern
 
-- mobile subnav - accordion like
-- menu items for various section
 - chinese content integration
-- CMS integration of all panel types
-- responsive
+
 - set thumbnail sizes and regenerate thumbnails
 - IE

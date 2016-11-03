@@ -1285,7 +1285,7 @@ p {
   #main-menu a:hover, #latest-menu a:hover {
     color: #7dab35; }
 
-#main-menu .current_page_item a, #latest-menu .current_page_item a {
+#main-menu .current_page_item a, #main-menu a.active, #latest-menu .current_page_item a, #latest-menu a.active {
   color: #7dab35; }
 
 .single-themes_post #sub-navigation {
@@ -2733,7 +2733,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     width: 100%; }
   .panel.three-column-list article {
     position: relative;
-    padding-top: 20%; }
+    padding-top: 20.9375rem; }
     .panel.three-column-list article h4, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h2, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.three-column-list article h1, .panel.three-column-list article .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h1, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.three-column-list article h1, .panel.three-column-list article .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h1 {
       font-family: "Karbon", Helvetica, Arial, sans-serif; }
     .panel.three-column-list article a {
@@ -3096,17 +3096,17 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-size: 72px;
         font-size: 4.5rem; }
 
-.panel.bg-image-cta, .panel.bg-color-cta {
+.panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color: #fff;
   text-align: center;
   background-size: cover;
   background-repeat: 50% 50%; }
-  .panel.bg-image-cta .button, .panel.bg-image-cta form input[type="submit"], form .panel.bg-image-cta input[type="submit"], .panel.bg-image-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-image-cta .tribe-events-read-more, .panel.bg-color-cta .button, .panel.bg-color-cta form input[type="submit"], form .panel.bg-color-cta input[type="submit"], .panel.bg-color-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-color-cta .tribe-events-read-more {
+  .panel.bg-image-cta .button, .panel.bg-image-cta form input[type="submit"], form .panel.bg-image-cta input[type="submit"], .panel.bg-image-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-image-cta .tribe-events-read-more, .panel.bg-color-cta .button, .panel.bg-color-cta form input[type="submit"], form .panel.bg-color-cta input[type="submit"], .panel.bg-color-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-color-cta .tribe-events-read-more, .cta-panel .button, .cta-panel form input[type="submit"], form .cta-panel input[type="submit"], .cta-panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .cta-panel .tribe-events-read-more {
     padding: 0.8125rem 1.5625rem;
     min-width: 13.75rem; }
-  .panel.bg-image-cta h2, .panel.bg-image-cta .title-only h1, .title-only .panel.bg-image-cta h1, .panel.bg-image-cta .single-post .large-featured-image h1, .single-post .large-featured-image .panel.bg-image-cta h1, .panel.bg-color-cta h2, .panel.bg-color-cta .title-only h1, .title-only .panel.bg-color-cta h1, .panel.bg-color-cta .single-post .large-featured-image h1, .single-post .large-featured-image .panel.bg-color-cta h1 {
+  .panel.bg-image-cta h2, .panel.bg-image-cta .title-only h1, .title-only .panel.bg-image-cta h1, .panel.bg-image-cta .single-post .large-featured-image h1, .single-post .large-featured-image .panel.bg-image-cta h1, .panel.bg-color-cta h2, .panel.bg-color-cta .title-only h1, .title-only .panel.bg-color-cta h1, .panel.bg-color-cta .single-post .large-featured-image h1, .single-post .large-featured-image .panel.bg-color-cta h1, .cta-panel h2, .cta-panel .title-only h1, .title-only .cta-panel h1, .cta-panel .single-post .large-featured-image h1, .single-post .large-featured-image .cta-panel h1 {
     margin-bottom: 3rem; }
-  .panel.bg-image-cta p, .panel.bg-color-cta p {
+  .panel.bg-image-cta p, .panel.bg-color-cta p, .cta-panel p {
     margin-bottom: 0; }
 
 .panel.slideshow-content-panel {

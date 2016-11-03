@@ -21,12 +21,14 @@
             </div>
             <?php endwhile; ?>
 
+
             <ul class="slide-pager">
             <?php $count = 0; ?>
             <?php while( have_rows('slide') ): the_row(); $count++; ?>
               <li<?php if($count == 1) print ' class="active"'; ?>><?php print $count; ?></li>
             <?php endwhile; ?>
             </ul>
+
           </div>
 
           <?php endif; ?>
