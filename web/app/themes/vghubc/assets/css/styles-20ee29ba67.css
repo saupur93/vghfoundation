@@ -994,6 +994,10 @@ p.date {
     color: #fff; }
   .signature-event-angel-campaign .panel.category-bg-color {
     background-color: #ce89c3; }
+  .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color {
+    background-color: #272787; }
+  .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color {
+    background-color: #d8c58b; }
   .panel.category-bg-color.bg-surgery {
     background-color: #00AAE3; }
   .panel.category-bg-color.bg-cancer {
@@ -1023,6 +1027,42 @@ p.date {
       color: #fff; }
 
 .signature-event-angel-campaign .panel.overview-panel ul li:before {
+  color: #fff; }
+
+.signature-event-night-of-a-thousand-stars-gala .button, .signature-event-night-of-a-thousand-stars-gala form input[type="submit"], form .signature-event-night-of-a-thousand-stars-gala input[type="submit"], .signature-event-night-of-a-thousand-stars-gala body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-night-of-a-thousand-stars-gala .tribe-events-read-more {
+  background-color: #272787;
+  border-color: #272787;
+  color: #fff; }
+  .signature-event-night-of-a-thousand-stars-gala .button:hover, .signature-event-night-of-a-thousand-stars-gala form input[type="submit"]:hover, form .signature-event-night-of-a-thousand-stars-gala input[type="submit"]:hover, .signature-event-night-of-a-thousand-stars-gala body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-night-of-a-thousand-stars-gala .tribe-events-read-more:hover {
+    color: #fff;
+    background: transparent; }
+  .signature-event-night-of-a-thousand-stars-gala .button.keyline, .signature-event-night-of-a-thousand-stars-gala form input.keyline[type="submit"], form .signature-event-night-of-a-thousand-stars-gala input.keyline[type="submit"], .signature-event-night-of-a-thousand-stars-gala body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-night-of-a-thousand-stars-gala .keyline.tribe-events-read-more {
+    background-color: transparent;
+    color: #272787; }
+    .signature-event-night-of-a-thousand-stars-gala .button.keyline:hover, .signature-event-night-of-a-thousand-stars-gala form input.keyline[type="submit"]:hover, form .signature-event-night-of-a-thousand-stars-gala input.keyline[type="submit"]:hover, .signature-event-night-of-a-thousand-stars-gala body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-night-of-a-thousand-stars-gala .keyline.tribe-events-read-more:hover {
+      background-color: #272787;
+      border-color: #272787;
+      color: #fff; }
+
+.signature-event-night-of-a-thousand-stars-gala .panel.overview-panel ul li:before {
+  color: #fff; }
+
+.signature-event-viva-pharmaceutical-time-to-shine-gala .button, .signature-event-viva-pharmaceutical-time-to-shine-gala form input[type="submit"], form .signature-event-viva-pharmaceutical-time-to-shine-gala input[type="submit"], .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .tribe-events-read-more {
+  background-color: #d8c58b;
+  border-color: #d8c58b;
+  color: #fff; }
+  .signature-event-viva-pharmaceutical-time-to-shine-gala .button:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala form input[type="submit"]:hover, form .signature-event-viva-pharmaceutical-time-to-shine-gala input[type="submit"]:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .tribe-events-read-more:hover {
+    color: #fff;
+    background: transparent; }
+  .signature-event-viva-pharmaceutical-time-to-shine-gala .button.keyline, .signature-event-viva-pharmaceutical-time-to-shine-gala form input.keyline[type="submit"], form .signature-event-viva-pharmaceutical-time-to-shine-gala input.keyline[type="submit"], .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .keyline.tribe-events-read-more {
+    background-color: transparent;
+    color: #d8c58b; }
+    .signature-event-viva-pharmaceutical-time-to-shine-gala .button.keyline:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala form input.keyline[type="submit"]:hover, form .signature-event-viva-pharmaceutical-time-to-shine-gala input.keyline[type="submit"]:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .keyline.tribe-events-read-more:hover {
+      background-color: #d8c58b;
+      border-color: #d8c58b;
+      color: #fff; }
+
+.signature-event-viva-pharmaceutical-time-to-shine-gala .panel.overview-panel ul li:before {
   color: #fff; }
 
 .panel article .tag.surgery {
@@ -2195,15 +2235,15 @@ svg.icon.close-x {
       transition: -webkit-transform 0.2s cubic-bezier(0.28, 0, 0.18, 1);
       transition: transform 0.2s cubic-bezier(0.28, 0, 0.18, 1);
       transition: transform 0.2s cubic-bezier(0.28, 0, 0.18, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0, 0.18, 1); }
-    .panel #themes-menu li:hover {
+    .panel #themes-menu li:hover, .panel #themes-menu li.active {
       z-index: 2; }
-      .panel #themes-menu li:hover a {
+      .panel #themes-menu li:hover a, .panel #themes-menu li.active a {
         z-index: 222; }
-      .panel #themes-menu li:hover:after {
+      .panel #themes-menu li:hover:after, .panel #themes-menu li.active:after {
         opacity: 1;
         -webkit-transform: scale(1.1);
                 transform: scale(1.1); }
-      .panel #themes-menu li:hover .thumb {
+      .panel #themes-menu li:hover .thumb, .panel #themes-menu li.active .thumb {
         opacity: 0; }
     .panel #themes-menu li.surgery:after {
       background-color: #00AAE3; }
@@ -3473,11 +3513,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       background-color: #7dab35; }
     .panel.signature-events-panel #events-section .events-items .events-item.active {
       display: block; }
-    .panel.signature-events-panel #events-section .events-items .events-item.angel-event h5, .panel.signature-events-panel #events-section .events-items .events-item.angel-event body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.angel-event .tribe-events-single-section-title {
+    .panel.signature-events-panel #events-section .events-items .events-item.angel-campaign h5, .panel.signature-events-panel #events-section .events-items .events-item.angel-campaign body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.angel-campaign .tribe-events-single-section-title {
       background-color: #ce89c3; }
-    .panel.signature-events-panel #events-section .events-items .events-item.stars-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.stars-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.stars-gala .tribe-events-single-section-title {
+    .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala .tribe-events-single-section-title {
       background-color: #272787; }
-    .panel.signature-events-panel #events-section .events-items .events-item.shine-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.shine-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.shine-gala .tribe-events-single-section-title {
+    .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala .tribe-events-single-section-title {
       background-color: #d8c58b; }
   .panel.signature-events-panel #events-section #events-menu {
     position: absolute;
@@ -3490,7 +3530,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     left: 0;
     right: 0;
     height: 16.666vw;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-size: 0; }
     .panel.signature-events-panel #events-section #events-menu li {
       position: relative;
       width: 33.333vw;
@@ -3535,11 +3576,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           opacity: 1;
           -webkit-transition: all 0.2s 0.1s linear;
           transition: all 0.2s 0.1s linear; }
-      .panel.signature-events-panel #events-section #events-menu li.angel-event:after {
+      .panel.signature-events-panel #events-section #events-menu li.angel-campaign:after {
         background-color: #ce89c3; }
-      .panel.signature-events-panel #events-section #events-menu li.stars-gala:after {
+      .panel.signature-events-panel #events-section #events-menu li.night-of-a-thousand-stars-gala:after {
         background-color: #272787; }
-      .panel.signature-events-panel #events-section #events-menu li.shine-gala:after {
+      .panel.signature-events-panel #events-section #events-menu li.viva-pharmaceutical-time-to-shine-gala:after {
         background-color: #d8c58b; }
       .panel.signature-events-panel #events-section #events-menu li .thumb {
         width: 100%;
@@ -4574,3 +4615,9 @@ body.page-template-page-annual-report-php {
 
 .error404 .page-wrap .not-found {
   text-align: center; }
+
+.single-themes_post #menu-item-18 a {
+  color: #7dab35; }
+
+.single-signature_events #menu-item-17 a {
+  color: #7dab35; }
