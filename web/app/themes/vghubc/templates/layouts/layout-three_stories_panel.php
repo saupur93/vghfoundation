@@ -31,6 +31,10 @@
 
 
             <article class="col-grid-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
+            <?php $theme = get_post_type(get_the_ID()) == 'themes_post' ? true : false; ?>
+            <?php if ($theme): ?>
+            <div class="tag"><?php the_title(get_the_ID()); ?></div>
+            <?php endif ?>
             <a href="<?php echo get_permalink(); ?>">
               <?php if(!empty($class)): ?>
               <?php endif; ?>

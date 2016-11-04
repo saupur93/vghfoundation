@@ -7,7 +7,7 @@ add_filter('show_admin_bar', '__return_false');
 add_theme_support('menus');
 
 // Enable post Thumbnails
-add_theme_support('post-thumbnails', array('post', 'page'));
+add_theme_support('post-thumbnails', array('post', 'page', 'themes_post'));
 
 // Custom Image Sizes
 // if ( function_exists( 'add_theme_support' ) ) {

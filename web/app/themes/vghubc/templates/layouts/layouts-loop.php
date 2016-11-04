@@ -54,6 +54,12 @@
                     <?php elseif( get_row_layout() == 'call_to_action' ): ?>
                       <?php include(locate_template('templates/layouts/layout-call_to_action.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'expanding_two_column_list' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-expanding_two_column_list.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'full_stats_panel' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-full_stats_panel.php')); ?>
+
                     <?php elseif( get_row_layout() == 'raw_html' ): ?>
                       <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
                     <?php endif; ?>
