@@ -990,6 +990,8 @@ p.date {
   color: #fff; }
   .panel.category-bg-color h1, .panel.category-bg-color h2, .panel.category-bg-color .title-only h1, .title-only .panel.category-bg-color h1, .panel.category-bg-color .single-post .large-featured-image h1, .single-post .large-featured-image .panel.category-bg-color h1, .panel.category-bg-color h3, .panel.category-bg-color body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events .panel.category-bg-color .tribe-events-single-event-title, .panel.category-bg-color h4, .panel.category-bg-color body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.category-bg-color h2, .panel.category-bg-color body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.category-bg-color h1, .panel.category-bg-color .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.category-bg-color h1, .panel.category-bg-color body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.category-bg-color h1, .panel.category-bg-color .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.category-bg-color h1, .panel.category-bg-color h5, .panel.category-bg-color body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.category-bg-color .tribe-events-single-section-title {
     color: #fff; }
+  .panel.category-bg-color a {
+    color: #fff; }
   .signature-event-angel-campaign .panel.category-bg-color {
     background-color: #ce89c3; }
   .panel.category-bg-color.bg-surgery {
@@ -3629,7 +3631,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 .panel.inline-gallery-thumbs {
   position: relative; }
   .panel.inline-gallery-thumbs .full-container {
-    white-space: nowrap; }
+    white-space: nowrap;
+    overflow: hidden; }
   .panel.inline-gallery-thumbs .gallery-item {
     display: inline-block;
     width: 33.333vw;

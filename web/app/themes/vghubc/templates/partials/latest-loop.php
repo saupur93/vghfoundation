@@ -51,7 +51,7 @@
         <?php $count++; ?>
         <?php
           $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts->ID ), 'full' )[0];
-          $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : 'http://placehold.it/400x200/333333';
+          $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : '/app/themes/vghubc/assets/img/post-placeholder.jpg';
             $theme = get_field('related_theme')[0];
             $theme_title = get_the_title($theme->ID);
             $class = isset($theme->ID) ? ' ' . sanitize_title($theme_title) : '';
