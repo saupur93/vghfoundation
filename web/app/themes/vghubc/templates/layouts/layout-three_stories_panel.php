@@ -28,24 +28,6 @@
         )
       )
     ));
-  } elseif($related_category && $related_theme){
-    $posts = new WP_Query(array(
-      "post_type" => "post",
-      "posts_per_page" => 3,
-      "orderby" => "date",
-      "order" => "DESC",
-      'cat' => implode(', ', $related_category),
-      'ignore_sticky_posts' => 1,
-      'meta_query' => array(
-        'relation' => 'AND',
-        array(
-          'key' => 'related_theme',
-          'value' => '"' . $related_theme . '"',
-          'compare' => 'LIKE'
-        )
-      )
-    ));
-
   }
 ?>
 <section class="panel padded three-stories-panel<?php echo ' panel-'.$count; ?>">
