@@ -33,8 +33,8 @@
         <?php endwhile; ?>
       </ul>
       <?php endif; ?>
+      <?php wp_reset_query(); ?>
     </section>
-    <?php wp_reset_query(); ?>
 
 
 

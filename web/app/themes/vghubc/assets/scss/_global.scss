@@ -1934,41 +1934,6 @@ body.tribe-events-page-template {
     text-align:center;
 
 
-
-    // &:before {
-    //  position:absolute;
-    //  z-index:-1;
-    //  left:0;
-    //  right:0;
-    //  top:0;
-    //  bottom:0;
-    //  content:'';
-    //  display:block;
-    //  width:100%;
-    //  height:100%;
-    //  background:rgba(0,0,0,0.7);
-    //  transition:background 0.3s linear;
-    // }
-
-    // &:after {
-    //  position:absolute;
-    //  z-index:0;
-    //  left:0;
-    //  right:0;
-    //  top:0;
-    //  bottom:0;
-    //  content:'';
-    //  display:block;
-    //  width:100%;
-    //  height:100%;
-    //  transition:background 0.3s linear;
-    //  background:rgba(#000, 0.2);
-    // }
-
-    // &:nth-child(2):after {
-    //  background:rgba(#fff, 0.5);
-    // }
-
     &:hover {
       padding:120px 0;
     }
@@ -3408,17 +3373,17 @@ body.tribe-events-page-template {
           display:block;
         }
 
-        &.angel-event {
+        &.angel-campaign {
           h5 {
             background-color:$angel-pink;
           }
         }
-        &.stars-gala {
+        &.night-of-a-thousand-stars-gala {
           h5 {
             background-color:$stars-gala;
           }
         }
-        &.shine-gala {
+        &.viva-pharmaceutical-time-to-shine-gala {
           h5 {
             background-color:$shine-gala;
           }
@@ -3443,6 +3408,7 @@ body.tribe-events-page-template {
       height:16.666vw;
       // overflow: hidden;
       white-space: nowrap;
+      font-size:0;
 
       li {
         position: relative;
@@ -3499,17 +3465,17 @@ body.tribe-events-page-template {
           }
         }
 
-        &.angel-event {
+        &.angel-campaign {
           &:after {
             background-color:$angel-pink;
           }
         }
-        &.stars-gala {
+        &.night-of-a-thousand-stars-gala {
           &:after {
             background-color:$stars-gala;
           }
         }
-        &.shine-gala {
+        &.viva-pharmaceutical-time-to-shine-gala {
           &:after {
             background-color:$shine-gala;
           }
@@ -5009,5 +4975,11 @@ body.page-template-page-annual-report-php {
     .not-found {
       text-align:center;
     }
+  }
+}
+
+.single-themes_post {
+  #menu-item-18 a {
+    color:$brand-green;
   }
 }

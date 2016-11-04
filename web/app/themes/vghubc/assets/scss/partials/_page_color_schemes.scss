@@ -411,6 +411,15 @@
     background-color:$angel-pink;
   }
 
+  .signature-event-night-of-a-thousand-stars-gala & {
+    background-color:$stars-gala;
+  }
+
+  .signature-event-viva-pharmaceutical-time-to-shine-gala & {
+    background-color:$shine-gala;
+  }
+
+
   &.bg-surgery{
     background-color:$surgery;
   }
@@ -433,7 +442,6 @@
 
 
 .signature-event-angel-campaign {
-
   .button {
     background-color:$angel-pink;
     border-color:$angel-pink;
@@ -452,7 +460,6 @@
       }
     }
   }
-
   .panel.overview-panel {
     ul {
       li {
@@ -462,9 +469,67 @@
       }
     }
   }
-
-
 }
+.signature-event-night-of-a-thousand-stars-gala {
+  .button {
+    background-color:$stars-gala;
+    border-color:$stars-gala;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$stars-gala;
+      &:hover {
+        background-color:$stars-gala;
+        border-color:$stars-gala;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+.signature-event-viva-pharmaceutical-time-to-shine-gala {
+  .button {
+    background-color:$shine-gala;
+    border-color:$shine-gala;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$shine-gala;
+      &:hover {
+        background-color:$shine-gala;
+        border-color:$shine-gala;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 .panel article {

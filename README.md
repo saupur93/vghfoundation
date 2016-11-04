@@ -56,11 +56,9 @@ Events
 
 ## CMS Integration
 - ways to give page
-- pillar/theme single page
 - annual report
 - home
 - signature events overview
-- signature events single
 
 
 ## Responsive
