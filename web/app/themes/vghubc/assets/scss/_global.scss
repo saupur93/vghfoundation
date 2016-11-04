@@ -1473,7 +1473,7 @@ svg.icon.close-x {
         transition: transform 0.2s cubic-bezier(0.28, 0, 0.18, 1);
       }
 
-      &:hover {
+      &:hover, &.active {
         z-index: 2;
 
         a {

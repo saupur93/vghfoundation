@@ -1,85 +1,44 @@
-    <section class="panel padded-top full-stats-panel">
-      <div class="container">
-        <div class="inner-wrap">
-          <div class="stat-focus">
-            <h2>Outcomes</h2>
-            <div class="col-third overview">
-              <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
-            </div>
+<?php
+  $facts_row = null !== get_sub_field('facts_row') ? get_sub_field('facts_row') : false;
+  $factsheet_download = null !== get_sub_field('factsheet_download') ? get_sub_field('factsheet_download') : false;
+?>
 
-            <div class="col-third stat-col">
-              <div class="fact-row">
-                <div class="left">
-                  <p class="small"><strong>Last year</strong><br><span class="number">32</span></p>
-                </div>
-                <div class="right">
-                  <p class="small">survivors and current patients attended support groups</p>
-                </div>
-              </div>
-            </div>
+<section class="panel padded-top full-stats-panel<?php echo ' panel-'.$count; ?>">
+  <div class="container">
+    <div class="inner-wrap">
+    <?php foreach($facts_row as $row): ?>
+      <div class="stat-focus">
+        <?php if (isset($row['section_title'])): ?>
+        <h2><?php print $row['section_title']; ?></h2>
+        <?php endif ?>
+        <div class="col-third overview">
+        <?php if (isset($row['section_overview'])): ?>
+          <?php print $row['section_overview']; ?>
+        <?php endif ?>
+        </div>
 
-            <div class="col-third stat-col">
-              <div class="fact-row">
-                <div class="left">
-                  <p class="small"><strong>In 2015</strong><br><span class="number">610</span></p>
-                </div>
-                <div class="right">
-                  <p class="small">Patients received in-home treatment</p>
-                </div>
-              </div>
+        <?php if (isset($row['fact'])): ?>
+        <?php foreach ($row['fact'] as $fact): ?>
+        <div class="col-third stat-col">
+          <div class="fact-row">
+            <div class="left">
+              <p class="small"><strong><?php print $fact['small_text']; ?></strong><br><span class="number"><?php print $fact['number']; ?></span></p>
             </div>
-          </div>
-
-          <div class="stat-focus">
-            <h2>Facts</h2>
-            <div class="col-third overview">
-              <p class="small">Sed ut perspiciatis unde omnis iste natus error sit volup tatem accu santium ispodoloremque audantium, totam rem aperiam, eaque ipsa quae ab illo inven tore veritati.</p>
+            <div class="right">
+              <p class="small"><?php print $fact['description']; ?></p>
             </div>
-
-            <div class="col-third stat-col">
-              <div class="fact-row">
-                <div class="left">
-                  <p class="small"><strong>Last year</strong><br><span class="number">175</span></p>
-                </div>
-                <div class="right">
-                  <p class="small">survivors and current patients attended support groups</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-third stat-col">
-              <div class="fact-row">
-                <div class="left">
-                  <p class="small"><strong>In 2015</strong><br><span class="number">800</span></p>
-                </div>
-                <div class="right">
-                  <p class="small">Patients received in-home treatment</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="fact-sheet center">
-            <a href="#" class="button keyline">Download Fact Sheet</a>
           </div>
         </div>
+        <?php endforeach; ?>
+        <?php endif ?>
       </div>
-    </section>
+    <?php endforeach; ?>
 
-<!-- <section class="panel three-column-panel<?php echo ' panel-'.$count; ?>">
-	<div class="inner-wrap">
-  <?php if( have_rows('columns') ): ?>
-    <?php while( have_rows('columns') ): the_row();
-      $column_title = get_sub_field('column_title');
-      $column_body = get_sub_field('column_body');
-    ?>
-		<div class="col-3">
-      <?php if($column_title): ?>
-      <h3 class="entry-title"><?php print $column_title; ?></h3>
-      <?php endif; ?>
-
-      <?php print $column_body; ?>
+    <?php if ($factsheet_download): ?>
+      <div class="fact-sheet center">
+        <a href="<?php print $factsheet_download; ?>" target="_blank" class="button keyline">Download Fact Sheet</a>
+      </div>
+    <?php endif ?>
     </div>
-    <?php endwhile; ?>
-  <?php endif; ?>
-	</div>
-</section> -->
+  </div>
+</section>

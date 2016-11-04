@@ -6,34 +6,35 @@
 
 
     <section class="panel footer-themes-menu padded-top">
+    <?php
+      $posts = new WP_Query(array(
+        "post_type" => "themes_post",
+        "posts_per_page" => 6,
+        "order" => "ASC",
+        "post_status" => "publish",
+        'ignore_sticky_posts' => 1,
+      ));
+      $current_ID = get_the_ID();
+    ?>
+      <?php if($posts->have_posts()): ?>
       <ul id="themes-menu">
-          <li class="surgery">
-            <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg";)"></div>
+        <?php $count = 0; ?>
+        <?php while($posts->have_posts()): $posts->the_post(); ?>
+        <?php $count++; ?>
+        <?php
+          $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts->ID ), 'full' )[0];
+          $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : '/app/themes/vghubc/assets/img/post-placeholder.jpg';
+          $theme_title = get_the_title();
+        ?>
+          <li class="<?php print sanitize_title($theme_title); ?><?php if(get_the_ID() == $current_ID) print ' active'; ?>">
+            <a class="open" href="<?php echo get_permalink(); ?>"><span><?php the_title(); ?></span><span class="read-more">Learn More</span></a>
+            <div class="thumb" style="background-image:url(<?php print $featured_image; ?>);"></div>
           </li>
-          <li class="cancer">
-            <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg";)"></div>
-          </li>
-          <li class="heart-lung">
-            <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg";)"></div>
-          </li>
-          <li class="innovation">
-            <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg";)"></div>
-          </li>
-          <li class="community">
-            <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg";)"></div>
-          </li>
-          <li class="brain-health">
-            <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
-            <div class="thumb" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg";)"></div>
-          </li>
+        <?php endwhile; ?>
       </ul>
+      <?php endif; ?>
     </section>
-
+    <?php wp_reset_query(); ?>
 
 
 

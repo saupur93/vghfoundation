@@ -1,56 +1,40 @@
-<!-- section_title
-section_content
-default_display_count
-links
+<?php
+  $section_title = null !== get_sub_field('section_title') ? get_sub_field('section_title') : false;
+  $section_content = null !== get_sub_field('section_content') ? get_sub_field('section_content') : false;
+  $display_amount = null !== get_sub_field('default_display_count') ? get_sub_field('default_display_count') : false;
+  $links = null !== get_sub_field('links') ? get_sub_field('links') : false;
+?>
+
+<!--
 link_title
 link_url
-open_in_new_window -->
+open_in_new_window
+-->
 
-    <section class="panel padded expanding-two-column-list">
+    <section class="panel padded expanding-two-column-list<?php echo ' panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
+          <?php if($section_title): ?>
           <h2>Our Funds</h2>
+          <?php endif; ?>
           <div class="col-half">
-            <p>VGH UBC is world-renowned for providing the highest quality care, and for teaching and research excellence across our key program areas. In each of these areas, we are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.</p>
+            <?php if($section_content): ?>
+            <?php print $section_content; ?>
+            <?php endif; ?>
           </div>
 
           <div class="col-half last">
-            <ul class="expanding-list" data-default-showing="5">
-              <li><a href="#">Cancer Treatment and Care</a></li>
-              <li><a href="#">Ovarian Cancer Research</a></li>
-              <li><a href="#">Prostate Cancer</a></li>
-              <li><a href="#">Physical Rehabilitation</a></li>
-              <li><a href="#">Radiology and Diagnostic Imaging</a></li>
-              <li><a href="#">Cancer Treatment and Care</a></li>
-              <li><a href="#">Ovarian Cancer Research</a></li>
-              <li><a href="#">Prostate Cancer</a></li>
-              <li><a href="#">Physical Rehabilitation</a></li>
-              <li><a href="#">Radiology and Diagnostic Imaging</a></li>
+            <ul class="expanding-list" data-default-showing="<?php print $display_amount; ?>">
+              <?php foreach($links as $link): ?>
+              <li><a href="<?php print $link['link_url']; ?>"<?php if($link['open_in_new_window']) print ' target="_blank"'; ?>><?php print $link['link_title']; ?></a></li>
+              <?php endforeach; ?>
             </ul>
+            <?php if (count($links) > $display_amount): ?>
             <span class="read-more list more">More +</span>
             <span class="read-more list less">Less -</span>
+            <?php endif ?>
           </div>
 
         </div>
       </div>
     </section>
-
-
-<!-- <section class="panel three-column-panel<?php echo ' panel-'.$count; ?>">
-	<div class="inner-wrap">
-  <?php if( have_rows('columns') ): ?>
-    <?php while( have_rows('columns') ): the_row();
-      $column_title = get_sub_field('column_title');
-      $column_body = get_sub_field('column_body');
-    ?>
-		<div class="col-3">
-      <?php if($column_title): ?>
-      <h3 class="entry-title"><?php print $column_title; ?></h3>
-      <?php endif; ?>
-
-      <?php print $column_body; ?>
-    </div>
-    <?php endwhile; ?>
-  <?php endif; ?>
-	</div>
-</section> -->
