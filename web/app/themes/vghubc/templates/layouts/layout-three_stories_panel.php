@@ -4,7 +4,7 @@
   $related_theme = null !== get_sub_field('theme_to_feature') ? get_sub_field('theme_to_feature')[0]->ID : false;
   $current_ID = get_the_ID();
 
-  if ($related_category){
+  if ($related_category && !related_theme){
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
@@ -13,7 +13,7 @@
       'ignore_sticky_posts' => 1,
       'cat' => implode(', ', $related_category)
     ));
-  } elseif($related_theme){
+  } elseif($related_theme && !related_category){
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
@@ -28,6 +28,24 @@
         )
       )
     ));
+  } elseif($related_category && $related_theme){
+    $posts = new WP_Query(array(
+      "post_type" => "post",
+      "posts_per_page" => 3,
+      "orderby" => "date",
+      "order" => "DESC",
+      'cat' => implode(', ', $related_category),
+      'ignore_sticky_posts' => 1,
+      'meta_query' => array(
+        'relation' => 'AND',
+        array(
+          'key' => 'related_theme',
+          'value' => '"' . $related_theme . '"',
+          'compare' => 'LIKE'
+        )
+      )
+    ));
+
   }
 ?>
 <section class="panel padded three-stories-panel<?php echo ' panel-'.$count; ?>">
@@ -53,7 +71,7 @@
 
         <article class="col-grid-4<?php if($featured_image_gallery) print ' multi-image'; ?>">
         <?php $is_theme = get_post_type($current_ID) == 'themes_post' ? true : false; ?>
-        <?php if ($is_theme): ?>
+        <?php if ($is_theme && isset($theme->post_title) && !empty($theme->post_title)): ?>
         <div class="tag"><?php print $theme->post_title; ?></div>
         <?php endif ?>
         <a href="<?php echo get_permalink(); ?>">
