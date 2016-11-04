@@ -37,6 +37,7 @@
       'cat' => implode(', ', $related_category),
       'ignore_sticky_posts' => 1,
       'meta_query' => array(
+        'relation' => 'AND',
         array(
           'key' => 'related_theme',
           'value' => '"' . $related_theme . '"',
