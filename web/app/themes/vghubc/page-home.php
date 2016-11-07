@@ -7,38 +7,62 @@ Template Name: Home
 
 <?php get_header(); ?>
 <div class="page-wrap">
+    <?php
+        $count = 0;
+        $latestArgs = array(
+          'post_type' => 'post',
+          'posts_per_page' => 6,
+          'post_status' => 'publish',
+          "orderby" => "date",
+          "order" => "DESC",
+          'category_name' => 'featured-on-home',
+          'ignore_sticky_posts' => 1,
+          'meta_query' => array(
+            array(
+             'key' => '_thumbnail_id',
+             'compare' => 'EXISTS'
+            ),
+          )
+        );
+        $latest_query = new WP_Query($latestArgs);
+      ?>
+  <?php if($latest_query->have_posts()): ?>
   <section class="hero-content panel slideshow">
-    <div class="slide-images">
-      <div class="slide-bg slide-1 active" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Surgery-primary_Umberto-copy.jpg);"></div><!--
-       --><div class="slide-bg slide-2" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/Feature-primary-photo-Jamie-skiing-downhill.jpg);"></div><!--
-       -->
-    </div>
-    <div class="container">
-      <div class="inner-wrap">
-        <div class="hero-copy" data-colour-type="surgery">
-          <h1>what's vital?</h1>
-          <div class="slide-text slide-1 active" data-colour-type="surgery">
-            <p class="intro">“The outstanding pre- and post-operative care I received was absolutely world-class.”</p>
-            <p><a href="#" class="read-more white">Umberto's Story</a></p>
-          </div>
-
-          <div class="slide-text slide-2" data-colour-type="cancer">
-            <p class="intro">World-class skier Jamie Crane-Mauzy credits revolutionary brain surgery and VGH’s ICU team for saving her life.</p>
-            <p><a href="#" class="read-more white">Jamie's Story</a></p>
-          </div>
-
-
-
-          <ul class="slide-pager">
-            <li class="active">1</li>
-            <li>2</li>
-
-          </ul>
-        </div>
-
+      <div class="slide-images">
+      <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+      <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>
+        <div class="slide-bg slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" style="background-image:url(<?php print $featured_image; ?>);"></div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
       </div>
-    </div>
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="hero-copy" data-colour-type="surgery">
+            <h1>what's vital?</h1>
+            <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+            <div class="slide-text slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" data-colour-type="surgery">
+            <?php if(!has_excerpt()): ?>
+              <p class="intro"><?php the_title(); ?></p>
+            <?php else: ?>
+              <p class="intro"><?php print get_the_excerpt(); ?></p>
+            <?php endif; ?>
+              <?php $link_text = null !== get_field('alternative_button_text') ? get_field('alternative_button_text') : 'Read article'; ?>
+              <p><a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a></p>
+            </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <ul class="slide-pager">
+            <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
+              <li class="<?php if($count == 1) print 'active'; ?>"><?php print $count; ?></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            </ul>
+          </div>
+
+        </div>
+      </div>
   </section>
+  <?php endif; ?>
 
   <section class="panel extra-padded overview-panel">
     <div class="container">

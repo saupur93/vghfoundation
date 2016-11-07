@@ -77,5 +77,6 @@ About Us
 
 - chinese content integration
 
+- click pager to go to slide
 - set thumbnail sizes and regenerate thumbnails
 - IE

@@ -1376,13 +1376,15 @@ svg.icon.close-x {
   }
 
   .themes-items {
+    height:100%;
     .themes-item {
       display:none;
+      height:calc(100% - 16.66vw);
 
       .container {
         @include media($ptab){
           transform: translateY(-50%);
-          padding-top: 50%;
+          top: 50%;
         }
 
       }
@@ -3823,6 +3825,24 @@ body.tribe-events-page-template {
 .panel.latest-header {
   @extend .hero-content;
   height: auto;
+
+  .hero-copy {
+    width: 37.5rem;
+    padding: 60px 40px 60px 60px;
+    font-size: 24px;
+    font-size: 1.5rem;
+    min-height: 240px;
+    bottom: -100px;
+
+    p.date {
+      margin-bottom:1rem;
+    }
+
+    p.intro {
+      margin-bottom:1rem;
+      line-height:1;
+    }
+  }
 
   .container {
     position:relative;

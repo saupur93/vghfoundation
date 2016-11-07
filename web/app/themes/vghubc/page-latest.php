@@ -39,8 +39,9 @@ Template Name: Latest
             <h1><?php the_title(); ?></h1>
             <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
             <div class="slide-text slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" data-colour-type="surgery">
+              <p class="date"><?php the_time('F j, Y'); ?></p>
               <p class="intro"><?php the_title(); ?></p>
-              <?php $link_text = null !== get_field('alternative_button_text') ? get_field('alternative_button_text') : 'Read more'; ?>
+              <?php $link_text = null !== get_field('alternative_button_text') ? get_field('alternative_button_text') : 'Read article'; ?>
               <p><a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a></p>
             </div>
             <?php endwhile; ?>
