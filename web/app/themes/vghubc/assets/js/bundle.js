@@ -11188,31 +11188,34 @@ var DonationTabs = function () {
       var formEl = $('.donation-form');
 
       formEl.on('click', 'span[data-donation-level]', function (e) {
-        var donationLevel = $(e.currentTarget).data('donation-level');
-        formEl.find('input[name="set.Value"]').val('');
-        formEl.find('input[name="set.DonationLevel"]').attr('value', donationLevel);
-        formEl.find('span[data-donation-level]').removeClass('selected');
-        $(e.currentTarget).addClass('selected');
+        if (!$(e.currentTarget).hasClass('.other')) {
+          var donationLevel = $(e.currentTarget).data('donation-level');
+          formEl.find('input[name="set.Value"]').val('');
+          $(e.currentTarget).parents('form').find('#submit').attr('href', '');
+          formEl.find('input[name="set.DonationLevel"]').attr('value', donationLevel);
+          formEl.find('span[data-donation-level]').removeClass('selected');
+          $(e.currentTarget).addClass('selected');
+        }
       });
 
       formEl.on('click', 'input[type="submit"]', function (e) {
         e.preventDefault();
-        console.log(formEl);
-        var formData = formEl.serializeArray();
+        var formData = $(e.currentTarget).parents('form').serializeArray();
 
         // Need to append 00 to dollar value for Luminate's handling of decimals
         for (var index = 0; index < formData.length; ++index) {
+          console.log(formData[index].value);
           if (formData[index].name == "set.Value") {
             formData[index].value = formData[index].value + '00';
             break;
           }
         }
-
         formData = $.param(formData);
+
         if (formData.length) {
           var link = _this.donateUrl + '&' + formData;
-          $('#submit').attr('href', link);
-          document.getElementById('submit').click();
+          $(e.currentTarget).parents('form').find('#submit').attr('href', link);
+          $(e.currentTarget).parents('form').find('#submit')[0].click();
         }
       });
 
