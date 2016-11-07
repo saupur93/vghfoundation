@@ -52,31 +52,26 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 Events
 - lightbox for gallery opening
 - different behaviour for navigation tiers - events?
-
+- donate buttons specific to events? change header button?
 
 ## CMS Integration
 - ways to give page
-- annual report
 - home
-- signature events overview
+- annual report
 
 
 ## Responsive
 - mobile subnav - accordion like
-Home
-- try to adjust the sizing of the laptop view of Themes area
-- some treatment to highlight Latest toggle
 
-Annual Report
+## Annual Report
 - change animations
 - add arrow down to all panels
 - adjust font sizes
 
 About Us
-- Learn about us menu.. where in CMS and what pages establish a pattern
+- Learn about us menu.. where in CMS and what pages establish the pattern
 
 - chinese content integration
-
 - click pager to go to slide
 - set thumbnail sizes and regenerate thumbnails
-- IE
+- browser testing

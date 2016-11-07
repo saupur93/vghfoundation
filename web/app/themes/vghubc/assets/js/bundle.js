@@ -11169,72 +11169,86 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var $ = require('jquery');
 
 var DonationTabs = function () {
-	function DonationTabs() {
-		_classCallCheck(this, DonationTabs);
+  function DonationTabs() {
+    _classCallCheck(this, DonationTabs);
 
-		this.donateUrl = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
-		this.panelTabs();
+    this.donateUrl = 'https://secure.vghfoundation.ca/site/Donation2?df_id=1620&mfc_pref=T&1620.donation=form1';
+    this.panelTabs();
 
-		if ($('.donation-form').length) {
-			this.donationForm();
-		}
-	}
+    if ($('.donation-form').length) {
+      this.donationForm();
+    }
+  }
 
-	_createClass(DonationTabs, [{
-		key: 'donationForm',
-		value: function donationForm() {
-			var _this = this;
+  _createClass(DonationTabs, [{
+    key: 'donationForm',
+    value: function donationForm() {
+      var _this = this;
 
-			var formEl = $('.donation-form');
+      var formEl = $('.donation-form');
 
-			formEl.on('click', 'span[data-donation-level]', function (e) {
-				var donationAmount = $(e.currentTarget).data('donation-level');
-				formEl.find('input[name="set.Value"]').val('');
-				formEl.find('input[name="set.DonationLevel"]').attr('value', donationAmount);
-				formEl.find('span[data-donation-level]').removeClass('selected');
-				$(e.currentTarget).addClass('selected');
-			});
+      formEl.on('click', 'span[data-donation-level]', function (e) {
+        var donationLevel = $(e.currentTarget).data('donation-level');
+        formEl.find('input[name="set.Value"]').val('');
+        formEl.find('input[name="set.DonationLevel"]').attr('value', donationLevel);
+        formEl.find('span[data-donation-level]').removeClass('selected');
+        $(e.currentTarget).addClass('selected');
+      });
 
-			formEl.on('click', 'input[type="submit"]', function (e) {
-				e.preventDefault();
-				var formData = formEl.serialize();
-				if (formData.length) {
-					var link = _this.donateUrl + '&' + formData;
-					$('#submit').attr('href', link);
-					document.getElementById('submit').click();
-				}
-			});
+      formEl.on('click', 'input[type="submit"]', function (e) {
+        e.preventDefault();
+        console.log(formEl);
+        var formData = formEl.serializeArray();
 
-			formEl.on('click', '.other', function () {
-				formEl.find('span[data-donation-level]').removeClass('selected');
-			});
-		}
-	}, {
-		key: 'panelTabs',
-		value: function panelTabs() {
-			var _this2 = this;
+        // Need to append 00 to dollar value for Luminate's handling of decimals
+        for (var index = 0; index < formData.length; ++index) {
+          if (formData[index].name == "set.Value") {
+            formData[index].value = formData[index].value + '00';
+            break;
+          }
+        }
 
-			var tabsEl = $('.donation-panel-tabs');
+        formData = $.param(formData);
+        if (formData.length) {
+          var link = _this.donateUrl + '&' + formData;
+          $('#submit').attr('href', link);
+          document.getElementById('submit').click();
+        }
+      });
 
-			var changeTab = function changeTab(e) {
-				_this2.donateUrl = $(e.currentTarget).data('donate-url');
-				console.log(_this2.donateUrl);
+      formEl.on('click', '.other', function (e) {
+        formEl.find('span[data-donation-level]').removeClass('selected');
+        var donationLevel = $(e.currentTarget).data('donation-level');
+        formEl.find('input[name="set.DonationLevel"]').attr('value', donationLevel);
+        // formEl.find('input[name="set.DonationLevel"]').attr('value', '');
+      });
+    }
+  }, {
+    key: 'panelTabs',
+    value: function panelTabs() {
+      var _this2 = this;
 
-				$('[data-tab]').removeClass('active');
-				$(e.currentTarget).addClass('active');
+      var tabsEl = $('.donation-panel-tabs');
 
-				var currentTab = $(e.currentTarget).data('tab');
-				$('[data-tab-content]').removeClass('active');
-				$('[data-tab-content="' + currentTab + '"]').addClass('active');
+      var changeTab = function changeTab(e) {
+        _this2.donateUrl = $(e.currentTarget).data('donate-url');
+        console.log(_this2.donateUrl);
 
-				// $('[data-tab-content]').eq(currentTab - 1).addClass('active');
-			};
+        $('[data-tab]').removeClass('active');
+        $(e.currentTarget).addClass('active');
 
-			tabsEl.on('click', '[data-tab]', changeTab);
-		}
-	}]);
+        var currentTab = $(e.currentTarget).data('tab');
+        $('[data-tab-content]').removeClass('active');
+        $('[data-tab-content="' + currentTab + '"]').addClass('active');
 
-	return DonationTabs;
+        // $('[data-tab-content]').eq(currentTab - 1).addClass('active');
+      };
+
+      tabsEl.on('click', '[data-tab]', changeTab);
+    }
+  }]);
+
+  return DonationTabs;
 }();
 
 module.exports = DonationTabs;

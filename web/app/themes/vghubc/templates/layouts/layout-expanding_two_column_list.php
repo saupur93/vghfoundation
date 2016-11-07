@@ -5,17 +5,11 @@
   $links = null !== get_sub_field('links') ? get_sub_field('links') : false;
 ?>
 
-<!--
-link_title
-link_url
-open_in_new_window
--->
-
     <section class="panel padded expanding-two-column-list<?php echo ' panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
           <?php if($section_title): ?>
-          <h2>Our Funds</h2>
+          <h2><?php print $section_title; ?></h2>
           <?php endif; ?>
           <div class="col-half">
             <?php if($section_content): ?>

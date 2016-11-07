@@ -71,7 +71,8 @@
         </div>
       </nav>
     </div>
-    <a class="button green big-donate" href="/donate">Donate</a>
+    <?php $global_donate_button_link = get_field('global_donate_button_link', 'option'); ?>
+    <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank">Donate</a>
   </div>
 </header>
 

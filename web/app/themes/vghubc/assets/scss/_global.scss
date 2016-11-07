@@ -5008,3 +5008,10 @@ body.page-template-page-annual-report-php {
     color:$brand-green;
   }
 }
+
+
+.page-template-page-ways-to-give {
+  .footer-cta {
+    @extend .grey-bg;
+  }
+}
