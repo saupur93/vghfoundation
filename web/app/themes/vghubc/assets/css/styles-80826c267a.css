@@ -1812,7 +1812,7 @@ p {
     @media screen and (min-width: 601px) {
       .panel.extra-padded-bottom {
         padding-bottom: 7.5rem; } }
-  .panel.grey-bg {
+  .panel.grey-bg, .page-template-page-ways-to-give .panel.footer-cta {
     background: #f3f3f3; }
   .panel .col-row {
     float: left; }
@@ -2060,6 +2060,13 @@ span.highlighted-text {
   @media screen and (min-width: 601px) {
     .panel.overview-panel .col-grid-6:last-child {
       padding-left: 40px; } }
+  @media screen and (min-width: 601px) {
+    .panel.overview-panel .col-half:first-child {
+      padding-right: 40px; } }
+  @media screen and (min-width: 601px) {
+    .panel.overview-panel .col-half:last-child {
+      padding-left: 40px;
+      padding-right: 0; } }
   .panel.overview-panel p {
     font-size: 16px;
     font-size: 1rem;
@@ -2885,8 +2892,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .panel.donation-panel-tabs .donation-amounts input[name="set.Value"] {
       background: transparent;
       border-bottom: 2px solid #7dab35;
-      font-size: 55px;
-      font-size: 3.4375rem;
+      font-size: 35px;
+      font-size: 2.1875rem;
       padding: 25px 0px;
       width: 90px;
       min-width: 0;
