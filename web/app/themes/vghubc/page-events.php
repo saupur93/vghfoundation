@@ -8,69 +8,44 @@ Template Name: Events
 
   <div class="page-wrap">
 
-    <section class="panel page-header" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/headers/EVENTS-Gala-Option-1.jpg);">
+<?php
+    $page_header_image = null !== get_field('page_header_image') ? get_field('page_header_image')['url'] : false;
+    $page_header_subtitle = null !== get_field('page_header_subtitle') ? get_field('page_header_subtitle') : false;
+  ?>
+  <?php if($page_header_image): ?>
+    <section class="panel page-header" style="background-image:url(<?php print $page_header_image; ?>);">
       <div class="container">
         <div class="inner-wrap">
           <div class="header-copy">
             <h1><?php the_title(); ?></h1>
-            <p class="intro">Each year our donors and supporters help raise much needed funds through events.</p>
+            <p class="intro"><?php print $page_header_subtitle; ?></p>
           </div>
         </div>
       </div>
     </section>
-
-
-    <section class="panel extra-padded overview-panel sidebar-right">
+  <?php else: ?>
+    <section class="panel title-only">
       <div class="container">
         <div class="inner-wrap">
-          <div class="col-grid-9">
-            <p>Individuals like you make significant contributions to our hospitals through their fundraising efforts. These events bring communities together to support causes they believe in. Click on the links below to learn more about the events we have at VGH UBC.</p>
-          </div>
-          <div class="col-grid-3">
-            <h4>Cases for Support</h4>
-            <ul class="small">
-              <li>Events bring people together to help saves lives. From treks in the mountains to golf tournaments, events of every size make a difference in the lives of our patients and families.</li>
-              <li>Each year, hundreds of caring individuals and groups raise money for VGH UBC Hospital Foundation in their own creative way by hosting Community Events</li>
-              <li>Be sure to visit our <a href="/events-calendar">Event Calendar</a> section regularly for upcoming events.</li>
-            </ul>
-          </div>
+          <h1><?php the_title(); ?></h1>
         </div>
       </div>
     </section>
+  <?php endif; ?>
 
 
+  <?php if( have_rows('layouts') ): ?>
+    <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
 
-    <section class="panel three-column-list white-bg">
-      <article class="col-grid-4">
-        <a href="/events-calendar">
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/event-calendar.jpg');"></div>
-          <div class="copy">
-            <h4>Event calendar</h4>
-            <p><span class="read-more">Learn more</span></p>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-grid-4">
-        <a href="#">
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/plan-event.jpg');"></div>
-          <div class="copy">
-            <h4>Plan your next event</h4>
-            <p><span class="read-more">Learn more</span></p>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-grid-4">
-        <a href="#">
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/tmp/ways-to-give-thumb3.jpg');"></div>
-          <div class="copy">
-            <h4>Donate to an event</h4>
-            <p><span class="read-more">Learn more</span></p>
-          </div>
-        </a>
-      </article>
+  <?php else : ?>
+    <section class="main-content panel">
+      <div class="container">
+        <?php the_content(); ?>
+      </div>
     </section>
+
+  <?php endif; ?>
+
 
     <?php
       $posts = new WP_Query(array(
@@ -96,6 +71,8 @@ Template Name: Events
         <?php
           $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
           $theme_title = get_the_title();
+          $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
+
         ?>
         <div class="events-items">
           <a href="<?php echo get_permalink(); ?>">
@@ -103,7 +80,9 @@ Template Name: Events
             <div class="hover-bg-image" style="background-image:url(<?php print $header_image; ?>);" data-hover-image="<?php print $header_image; ?>"></div>
             <div class="container">
               <div class="summary">
-                <h5>HONOUR AN ANGEL IN YOUR LIFE</h5>
+                <?php if($sub_title): ?>
+                <h5><?php print $sub_title; ?></h5>
+                <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
               </div>
             </div>

@@ -57,7 +57,6 @@ Events
 ## CMS Integration
 - annual report
 
-
 ## Responsive
 - mobile subnav - accordion like
 
