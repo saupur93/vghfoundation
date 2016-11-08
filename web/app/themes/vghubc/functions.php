@@ -9,6 +9,12 @@ add_theme_support('menus');
 // Enable post Thumbnails
 add_theme_support('post-thumbnails', array('post', 'page', 'themes_post'));
 
+
+// Give Editor role access to Theme Options (but can not switch, edit or install themes),
+// Menus, Background, Widgets and Custom Headers.
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
+
 // Custom Image Sizes
 // if ( function_exists( 'add_theme_support' ) ) {
 //   add_theme_support('post-thumbnails');

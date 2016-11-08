@@ -55,8 +55,6 @@ Events
 - donate buttons specific to events? change header button?
 
 ## CMS Integration
-- ways to give page
-- home
 - annual report
 
 

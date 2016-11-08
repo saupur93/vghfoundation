@@ -64,116 +64,57 @@ Template Name: Home
   </section>
   <?php endif; ?>
 
-  <section class="panel extra-padded overview-panel">
-    <div class="container">
-      <div class="narrow-wrap">
-        <div class="col-grid-6">
-          <p>Together with your support, VGH UBC Hospital Foundation is saving lives in our community. We are Vancouver Costal Health's primary philanthropic partner. ​</p>
-          <p><a href="#" class="read-more">about the foundation</a></p>
-        </div>
-        <div class="col-grid-6">
-          <p>Your support enables us to provide the best hospital care to every adult British Columbian. Our donors drive innovation and health care transformation.​</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
+  <?php if( have_rows('layouts') ): ?>
+    <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
+  <?php else : ?>
+    <section class="main-content panel">
+      <div class="container">
+        <?php the_content(); ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <?php if(have_rows('themes')): ?>
   <section class="panel" id="themes-section">
     <div class="themes-items">
-      <div class="themes-item active surgery">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-theme.jpg"></div>
+      <?php $tab_count = 0; ?>
+      <?php while (have_rows('themes') ) : the_row(); $tab_count++; ?>
+      <?php
+        $theme_full_image = get_sub_field('theme_full_image')['url'];
+        $summary = get_sub_field('summary');
+        $related_theme = get_sub_field('related_theme')[0];
+        $class = $related_theme->post_name;
+      ?>
+      <div class="themes-item<?php if($tab_count == 1) print ' active'; ?><?php print ' '. $class; ?>">
+        <div class="hover-bg-image" style="background-image:url(<?php print $theme_full_image; ?>);" data-hover-image="<?php print $theme_full_image; ?>"></div>
         <div class="container">
           <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>What if complex surgery could be performed in a one-stop innovative hybrid space?</h2>
-          </div>
-        </div>
-      </div>
-      <div class="themes-item cancer">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-theme.jpg);"></div>
-        <div class="container">
-          <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>What if we could detect cancer earlier with new revolutionary technology?</h2>
-          </div>
-        </div>
-      </div>
-      <div class="themes-item heart-lung">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-theme.jpg);"></div>
-        <div class="container">
-          <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>What if we could revolutionize heart and lung surgery so it no longer required invasive procedures?</h2>
-          </div>
-        </div>
-      </div>
-      <div class="themes-item innovation">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-theme.jp"></div>
-        <div class="container">
-          <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>Imagining a world where disease are cured through an innovative small needle.</h2>
-          </div>
-        </div>
-      </div>
-      <div class="themes-item community">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/community-theme.jpg"></div>
-        <div class="container">
-          <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>What if the continuum of care extended beyond the hospital walls and into the community?</h2>
-          </div>
-        </div>
-      </div>
-      <div class="themes-item brain-health">
-        <div class="hover-bg-image" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);" data-hover-image="<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-theme.jpg);"></div>
-        <div class="container">
-          <div class="summary">
-            <h5>How we can change lives together</h5>
-            <h2>When it’s a matter of brain health, what if our neurosurgeons depended on a revolutionary new procedure in order to save lives?</h2>
+            <?php print $summary; ?>
           </div>
         </div>
       </div>
 
+      <?php endwhile; ?>
     </div>
 
     <ul id="themes-menu">
-        <li class="surgery">
-          <a class="open" href="/themes/surgery"><span>Surgery</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/surgery-thumb.jpg');"></div>
+      <?php $tab_count = 0; ?>
+      <?php while (have_rows('themes') ) : the_row(); $tab_count++; ?>
+      <?php
+        $theme_thumbnail_image = get_sub_field('theme_thumbnail_image')['url'];
+        $related_theme = get_sub_field('related_theme')[0];
+        $class = $related_theme->post_name;
+      ?>
+        <li class="<?php print ' '. $class; ?>">
+          <a class="open" href="<?php print get_permalink($related_theme->ID); ?>"><span><?php print get_the_title($related_theme->ID); ?></span><span class="read-more">Learn More</span></a>
+          <div class="thumb" style="background-image:url('<?php print $theme_thumbnail_image; ?>');"></div>
         </li>
-        <li class="cancer">
-          <a class="open" href="/themes/cancer"><span>Cancer</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/cancer-thumb.jpg');"></div>
-        </li>
-        <li class="heart-lung">
-          <a class="open" href="/themes/heart-lung"><span>Heart & Lung</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/heart-lung-thumb.jpg');"></div>
-        </li>
-        <li class="innovation">
-          <a class="open" href="/themes/innovation"><span>Innovation</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/innovation-thumb.jpg');"></div>
-        </li>
-        <li class="community">
-          <a class="open" href="/themes/community"><span>Community</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/community-thumb.jpg');"></div>
-        </li>
-        <li class="brain-health">
-          <a class="open" href="/themes/brain-health"><span>Brain Health</span><span class="read-more">Learn More</span></a>
-          <div class="thumb" style="background-image:url('<?php bloginfo('template_directory'); ?>/assets/img/home/brain-health-thumb.jpg');"></div>
-        </li>
+      <?php endwhile; ?>
     </ul>
-
   </section>
+  <?php endif; ?>
 
-
-
-	<section class="main-content">
-		<div class="container">
-			<?php the_content(); ?>
-		</div>
-	</section>
-</div>
 
 	<?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 

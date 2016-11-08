@@ -1239,6 +1239,18 @@ span.highlighted-text {
     }
   }
 
+  .col-half:first-child {
+    @include media($ptab){
+      padding-right:40px;
+    }
+  }
+  .col-half:last-child {
+    @include media($ptab){
+      padding-left:40px;
+      padding-right:0;
+    }
+  }
+
   p {
     @include font-size(16px);
     line-height:1.3;
