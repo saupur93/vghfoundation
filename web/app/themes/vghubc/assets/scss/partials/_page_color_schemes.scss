@@ -10,6 +10,9 @@
     // h5 {
     //   color:$surgery;
     // }
+    .cta-panel {
+      background-color:$surgery;
+    }
 
     .button {
       background-color:$surgery;
@@ -35,6 +38,9 @@
     // h5 {
     //   color:$cancer;
     // }
+    .cta-panel {
+      background-color:$cancer;
+    }
 
     .button {
       background-color:$cancer;
@@ -60,6 +66,9 @@
     // h5 {
     //   color:$heartlung;
     // }
+    .cta-panel {
+      background-color:$heartlung;
+    }
 
     .button {
       background-color:$heartlung;
@@ -85,6 +94,9 @@
     // h5 {
     //   color:$innovation;
     // }
+    .cta-panel {
+      background-color:$innovation;
+    }
 
     .button {
       background-color:$innovation;
@@ -110,6 +122,9 @@
     // h5 {
     //   color:$community;
     // }
+    .cta-panel {
+      background-color:$community;
+    }
 
     .button {
       background-color:$community;
@@ -135,6 +150,9 @@
     // h5 {
     //   color:$brainhealth;
     // }
+    .cta-panel {
+      background-color:$brainhealth;
+    }
 
     .button {
       background-color:$brainhealth;
@@ -219,7 +237,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $surgery;
     }
   }
@@ -251,7 +269,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $cancer;
     }
   }
@@ -282,7 +300,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $heartlung;
     }
   }
@@ -313,7 +331,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $brainhealth;
     }
   }
@@ -344,7 +362,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $innovation;
     }
   }
@@ -375,7 +393,7 @@
   }
 
   .panel.full-stats-panel {
-    .number {
+    .number, .larger-text {
       color: $community;
     }
   }
@@ -557,3 +575,61 @@
 
 
 
+
+
+.theme-section-surgery .panel {
+  &.cta-panel {
+    background-color:$surgery;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}
+.theme-section-cancer .panel {
+  &.cta-panel {
+    background-color:$cancer;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}
+
+.theme-section-heart-lung .panel {
+  &.cta-panel {
+    background-color:$heartlung;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}
+.theme-section-innovation .panel {
+  &.cta-panel {
+    background-color:$innovation;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}
+.theme-section-community .panel {
+  &.cta-panel {
+    background-color:$community;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}
+
+.theme-section-brain-health .panel {
+  &.cta-panel {
+    background-color:$brainhealth;
+    .button {
+      border-color:#fff;
+      color:#fff;
+    }
+  }
+}

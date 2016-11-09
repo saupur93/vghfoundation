@@ -1546,12 +1546,38 @@ svg.icon.close-x {
     li {
       padding:rem(15);
       margin-bottom:0;
-      border-bottom:1px solid rgba(0,0,0,0.1);
-      @include font-size(21px);
+      // border-bottom:1px solid rgba(0,0,0,0.1);
+      @include font-size(18px);
       font-family: $font;
       &:last-child {
         border-bottom:0;
       }
+      &.surgery {
+        background-color:$surgery;
+      }
+      &.cancer {
+        background-color:$cancer;
+      }
+      &.heart-lung {
+        background-color:$heartlung;
+      }
+      &.innovation {
+        background-color:$innovation;
+      }
+      &.community {
+        background-color:$community;
+      }
+      &.brain-health {
+        background-color:$brainhealth;
+      }
+
+    }
+    a, li {
+      color: #fff;
+      text-transform:uppercase;
+      font-family:$font-bold;
+      text-decoration:none;
+      letter-spacing:1px;
     }
   }
   &.open {
@@ -2737,7 +2763,6 @@ body.tribe-events-page-template {
     top:0;
     padding:0;
     margin:0;
-
     li {
       position: relative;
       width: 100%;
@@ -2758,8 +2783,6 @@ body.tribe-events-page-template {
           display:block;
         }
       }
-
-
       &:after {
         content:'';
         display:block;
@@ -2865,6 +2888,43 @@ body.tribe-events-page-template {
     float:left;
     width:100%;
     height:100%;
+
+    .tab-content-item {
+      @include media($ptabAndLess){
+        h2 {
+          color: #fff;
+          text-transform:uppercase;
+          font-family:$font-bold;
+          text-decoration:none;
+          letter-spacing:1px;
+          @include font-size(18px);
+          padding:rem(18) rem(15) rem(15) rem(15);
+          margin-left:-15px;
+          margin-right:-15px;
+          margin-top:-8px;
+          margin-bottom:rem(20);
+        }
+        &.surgery h2 {
+          background-color:$surgery;
+        }
+        &.cancer h2 {
+          background-color:$cancer;
+        }
+        &.heart-lung h2 {
+          background-color:$heartlung;
+        }
+        &.innovation h2 {
+          background-color:$innovation;
+        }
+        &.community h2 {
+          background-color:$community;
+        }
+        &.brain-health h2 {
+          background-color:$brainhealth;
+        }
+      }
+    }
+
     .tab-body {
       float:left;
       width:100%;
@@ -2874,7 +2934,6 @@ body.tribe-events-page-template {
         padding-top:rem(120);
         padding-bottom:rem(120);
         padding-left:calc(50vw - 640px);
-
       }
 
       .col-half:first-child {
@@ -3105,26 +3164,36 @@ body.tribe-events-page-template {
   }
 
   .overview {
-    padding-right:rem(90);
-    width:30%;
+    @include media($ptab){
+      padding-right:rem(90);
+      width:30%;
+    }
   }
 
   .stat-col {
-    width:35%;
+    @include media($ptab){
+      width:35%;
+    }
   }
 
   .stat-focus {
     float:left;
-    margin-bottom:rem(30);
+    @include media($ptab){
+      margin-bottom:rem(30);
+    }
   }
 
   .fact-row {
     width:100%;
     float:left;
-    margin-bottom:rem(30);
+    @include media($ptab){
+      margin-bottom:rem(30);
+    }
 
     h5 {
-      margin-bottom:rem(30);
+      @include media($ptab){
+        margin-bottom:rem(30);
+      }
     }
 
     .left, .right {
@@ -3132,40 +3201,24 @@ body.tribe-events-page-template {
       // width:50%;
     }
 
-    .left {
-      // width:rem(155);
-      p {
-        line-height:1;
-      }
-
-      strong {
-        text-transform:uppercase;
-        letter-spacing:1px;
-      }
+    p {
+      line-height:1;
     }
 
-    .right {
-      padding-top:rem(10);
-      position:relative;
-      max-width:rem(220);
-      padding-left:3.5rem;
-
-      &:before {
-        background-color:$body-text;
-        width:1px;
-        height:rem(100);
-        content:'';
-        display:block;
-        position:absolute;
-        left:1.5rem;
-        top:0;
+    .larger-text {
+      @include font-size(28px);
+      line-height:1.1;
+      display:inline-block;
+      margin-bottom:rem(5);
+      @include media($ptab){
+        margin-bottom:rem(10);
+        @include font-size(42px);
       }
     }
 
-
-    .number {
-      @include font-size(90px);
-    }
+    // .number {
+    //   @include font-size(90px);
+    // }
   }
 
   .fact-sheet {
@@ -3208,7 +3261,7 @@ body.tribe-events-page-template {
     // width:30%;
     // margin-right:3.333%;
     transition:all 0.2s linear;
-    margin-bottom:1rem;
+    margin-bottom:2rem;
     @include media($ptab){
       padding-top:rem(230);
       margin-bottom:0;

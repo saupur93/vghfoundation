@@ -21,12 +21,9 @@
         <?php foreach ($row['fact'] as $fact): ?>
         <div class="col-third stat-col">
           <div class="fact-row">
-            <div class="left">
-              <p class="small"><strong><?php print $fact['small_text']; ?></strong><br><span class="number"><?php print $fact['number']; ?></span></p>
-            </div>
-            <div class="right">
-              <p class="small"><?php print $fact['description']; ?></p>
-            </div>
+            <p><span class="larger-text"><?php print $fact['larger_text']; ?></span><br>
+            <span class="small"><?php print $fact['description']; ?></span>
+            </p>
           </div>
         </div>
         <?php endforeach; ?>

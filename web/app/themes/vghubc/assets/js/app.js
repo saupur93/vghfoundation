@@ -309,6 +309,26 @@ class App {
     $menuEl.on('click', 'li', () => {
       return false;
     });
+
+    $('.themes-overview-stats').find('.switcher').on('click', e => {
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+    });
+
+    $('.themes-overview-stats').find('.options li').on('click', e => {
+      // e.preventDefault();
+      mouseEnterItem(e);
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+      let index = $(e.currentTarget).index();
+      $('.themes-overview-stats').find('#themes-menu li').each(function(i){
+        if (i == index) {
+          $(this).removeClass('hide')
+        } else {
+          $(this).addClass('hide')
+        }
+      });
+
+    });
+
   }
 
   /**

@@ -10752,6 +10752,24 @@ var App = function () {
       $menuEl.on('click', 'li', function () {
         return false;
       });
+
+      (0, _jquery2.default)('.themes-overview-stats').find('.switcher').on('click', function (e) {
+        (0, _jquery2.default)(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+      });
+
+      (0, _jquery2.default)('.themes-overview-stats').find('.options li').on('click', function (e) {
+        // e.preventDefault();
+        mouseEnterItem(e);
+        (0, _jquery2.default)(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+        var index = (0, _jquery2.default)(e.currentTarget).index();
+        (0, _jquery2.default)('.themes-overview-stats').find('#themes-menu li').each(function (i) {
+          if (i == index) {
+            (0, _jquery2.default)(this).removeClass('hide');
+          } else {
+            (0, _jquery2.default)(this).addClass('hide');
+          }
+        });
+      });
     }
 
     /**

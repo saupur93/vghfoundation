@@ -1,4 +1,20 @@
       <section class="panel themes-overview-stats<?php echo ' panel-'.$count; ?>">
+        <nav class="mobile-tabs-nav">
+          <h4 class="switcher">Themes</h4>
+          <ul class="options">
+          <?php while( have_rows('theme_item') ): the_row(); ?>
+            <?php
+              $related_theme = null !== get_sub_field('related_theme') ? get_sub_field('related_theme') : false;
+              $theme_title = $related_theme[0]->post_title;
+              $theme_name = $related_theme[0]->post_name;
+             ?>
+            <?php $theme_count++; ?>
+            <li class="<?php print $theme_name; ?><?php if($theme_count == 1) print ' active'; ?>" data-tab-item="<?php print $theme_count; ?>">
+              <span><?php print $theme_title; ?></span>
+            </li>
+          <?php endwhile; ?>
+          </ul>
+        </nav>
         <?php if( have_rows('theme_item') ): ?>
         <ul class="top-menu tabs-menu">
         <?php $theme_count = 0; ?>
