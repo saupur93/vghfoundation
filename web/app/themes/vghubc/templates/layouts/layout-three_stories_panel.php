@@ -4,14 +4,17 @@
   $related_theme = null !== get_sub_field('theme_to_feature') ? get_sub_field('theme_to_feature')[0]->ID : false;
   $current_ID = get_the_ID();
 
+
+
   if ($related_category && !related_theme){
+    $cats = implode(', ', $related_category);
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
       "orderby" => "date",
       "order" => "DESC",
+      'cat' => $cats,
       'ignore_sticky_posts' => 1,
-      'cat' => implode(', ', $related_category)
     ));
   } elseif($related_theme && !related_category){
     $posts = new WP_Query(array(

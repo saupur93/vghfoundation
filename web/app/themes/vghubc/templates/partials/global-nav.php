@@ -24,7 +24,7 @@
 
 
         <?php
-
+//守护天使活动
           $currentLang = qtrans_getLanguage();
           $page_url = get_permalink();
           $page_url = parse_url( $page_url );
