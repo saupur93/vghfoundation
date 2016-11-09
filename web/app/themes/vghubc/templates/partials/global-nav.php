@@ -7,9 +7,7 @@
         <div class="stripe stripe3"></div>
       </div>
     </div>
-
     <h1 class="site-name"><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
-
     <div class="menu-set">
       <nav id="main-menu">
         <ul id="primary-nav">
@@ -21,10 +19,7 @@
           )); ?>
           <li><a href="/latest/" id="toggleLatest">Latest</a></li>
         </ul>
-
-
         <?php
-//守护天使活动
           $currentLang = qtrans_getLanguage();
           $page_url = get_permalink();
           $page_url = parse_url( $page_url );
@@ -37,8 +32,6 @@
           <li><a href="/zh<?php print $page_url; ?>"<?php if($currentLang == 'zh') print ' class="active"'; ?>>中文</a></li>
         </ul>
       </nav>
-
-
       <nav id="latest-menu">
         <div id="latest-highlights">
           <?php

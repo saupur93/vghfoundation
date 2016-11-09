@@ -151,6 +151,13 @@ h1.page-header {
     }
   }
 
+  span.small {
+    @include font-size(14px);
+    @include media($ptab){
+      @include font-size(18px);
+    }
+  }
+
   ul, ol {
     @include font-size(16px);
     margin-bottom:3rem;

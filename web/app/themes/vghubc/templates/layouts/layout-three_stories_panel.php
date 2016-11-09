@@ -57,7 +57,6 @@
       "order" => "DESC",
       'ignore_sticky_posts' => 1,
       'cat' => $cats
-
     ));
   }
 ?>

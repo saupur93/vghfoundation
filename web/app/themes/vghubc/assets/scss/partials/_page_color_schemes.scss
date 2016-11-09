@@ -7,9 +7,9 @@
 
 .panel {
   .surgery, .theme-section-surgery & {
-    h5 {
-      color:$surgery;
-    }
+    // h5 {
+    //   color:$surgery;
+    // }
 
     .button {
       background-color:$surgery;
@@ -32,9 +32,9 @@
     }
   }
   .cancer, .theme-section-cancer & {
-    h5 {
-      color:$cancer;
-    }
+    // h5 {
+    //   color:$cancer;
+    // }
 
     .button {
       background-color:$cancer;
@@ -57,9 +57,9 @@
     }
   }
   .heart-lung, .theme-section-heart-lung & {
-    h5 {
-      color:$heartlung;
-    }
+    // h5 {
+    //   color:$heartlung;
+    // }
 
     .button {
       background-color:$heartlung;
@@ -82,9 +82,9 @@
     }
   }
   .innovation, .theme-section-innovation & {
-    h5 {
-      color:$innovation;
-    }
+    // h5 {
+    //   color:$innovation;
+    // }
 
     .button {
       background-color:$innovation;
@@ -107,9 +107,9 @@
     }
   }
   .community, .theme-section-community & {
-    h5 {
-      color:$community;
-    }
+    // h5 {
+    //   color:$community;
+    // }
 
     .button {
       background-color:$community;
@@ -132,9 +132,9 @@
     }
   }
   .brain-health, .theme-section-brain-health & {
-    h5 {
-      color:$brainhealth;
-    }
+    // h5 {
+    //   color:$brainhealth;
+    // }
 
     .button {
       background-color:$brainhealth;
@@ -159,22 +159,22 @@
 }
 
 .panel {
-  &.themes-overview-stats .tab-content-item.surgery .fact-row .number {
+  &.themes-overview-stats .tab-content-item.surgery .fact-row .larger-text {
     color:$surgery;
   }
-  &.themes-overview-stats .tab-content-item.cancer .fact-row .number {
+  &.themes-overview-stats .tab-content-item.cancer .fact-row .larger-text {
     color:$cancer;
   }
-  &.themes-overview-stats .tab-content-item.heart-lung .fact-row .number {
+  &.themes-overview-stats .tab-content-item.heart-lung .fact-row .larger-text {
     color:$heartlung;
   }
-  &.themes-overview-stats .tab-content-item.innovation .fact-row .number {
+  &.themes-overview-stats .tab-content-item.innovation .fact-row .larger-text {
     color:$innovation;
   }
-  &.themes-overview-stats .tab-content-item.community .fact-row .number {
+  &.themes-overview-stats .tab-content-item.community .fact-row .larger-text {
     color:$community;
   }
-  &.themes-overview-stats .tab-content-item.brain-health .fact-row .number {
+  &.themes-overview-stats .tab-content-item.brain-health .fact-row .larger-text {
     color:$brainhealth;
   }
 

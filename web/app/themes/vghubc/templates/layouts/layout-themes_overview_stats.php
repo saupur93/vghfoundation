@@ -14,8 +14,6 @@
           </li>
         <?php endwhile; ?>
         </ul>
-
-
         <div class="tab-content">
         <?php $theme_count = 0; ?>
         <?php while( have_rows('theme_item') ): the_row();
@@ -37,18 +35,18 @@
                 <div class="fact-row">
                   <h5><?php print $row['fact_row_heading']; ?></h5>
                   <?php foreach ($row['fact'] as $key => $fact): ?>
-                  <div class="left">
-                    <p class="small"><?php print $fact['small_text']; ?><br><span class="number"><?php print $fact['number']; ?></span></p>
+                  <div class="fact">
+                    <p><span class="larger-text"><?php print $fact['larger_text']; ?></span><br>
+                    <span class="small"><?php print $fact['description']; ?></span>
+                    </p>
+
                   </div>
-                  <div class="right">
-                    <p class="small"><?php print $fact['description']; ?></p>
-                  </div>
+
                   <?php endforeach; ?>
                 </div>
               <?php endforeach; ?>
               </div>
             </article>
-
             <?php if($sidebar_image): ?>
             <aside class="tab-sidebar">
               <figure style="background-image:url(<?php print $sidebar_image; ?>)">
@@ -59,9 +57,7 @@
             </aside>
             <?php endif; ?>
           </div>
-
         <?php endwhile; ?>
         </div>
       <?php endif; ?>
-
       </section>
