@@ -54,9 +54,6 @@ Events
 - different behaviour for navigation tiers - events?
 - donate buttons specific to events? change header button?
 
-## CMS Integration
-- annual report
-
 ## Responsive
 - mobile subnav - accordion like
 
@@ -64,6 +61,7 @@ Events
 - change animations
 - add arrow down to all panels
 - adjust font sizes
+- CMS integration
 
 About Us
 - Learn about us menu.. where in CMS and what pages establish the pattern

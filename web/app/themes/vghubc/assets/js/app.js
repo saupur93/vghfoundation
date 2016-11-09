@@ -180,6 +180,26 @@ class App {
 
     gridEl.on('mouseenter', 'li', mouseEnterItem);
 
+    sectionEl.find('.switcher').on('click', e => {
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+    });
+
+    sectionEl.find('.options li').on('click', e => {
+      mouseEnterItem(e);
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+      let index = $(e.currentTarget).index();
+      sectionEl.find('#themes-menu li').each(function(i){
+        if (i == index) {
+          $(this).removeClass('hide')
+        } else {
+          $(this).addClass('hide')
+        }
+      });
+
+    });
+
+
+
   }
 
 
@@ -423,22 +443,22 @@ class App {
   /**
    * mobile nav toggle
    */
-   toggleMobileNav() {
+  toggleMobileNav() {
     const elm = $('.navburger');
     elm.on('click', function (){
       $('body').toggleClass('nav-open');
     });
-   }
+  }
 
-   /**
-    * Dropdown triggers
-    */
-    submenuMobileDropdown(){
-      $('.submenu-trigger').on('click', function(e) {
-        const parent = $(this).parent();
-        parent.toggleClass('submenu-open');
-      })
-    }
+  /**
+   * Dropdown triggers
+   */
+  submenuMobileDropdown(){
+    $('.submenu-trigger').on('click', function(e) {
+      const parent = $(this).parent();
+      parent.toggleClass('submenu-open');
+    })
+  }
 }
 
 window.App = new App();

@@ -77,6 +77,15 @@ Template Name: Home
 
   <?php if(have_rows('themes')): ?>
   <section class="panel" id="themes-section">
+    <nav class="mobile-tabs-nav">
+      <h4 class="switcher">Themes</h4>
+      <ul class="options">
+      <?php while (have_rows('themes') ) : the_row(); $tab_count++; ?>
+        <?php $related_theme = get_sub_field('related_theme')[0]; ?>
+        <li><?php print get_the_title($related_theme->ID); ?></li>
+      <?php endwhile; ?>
+      </ul>
+    </nav>
     <div class="themes-items">
       <?php $tab_count = 0; ?>
       <?php while (have_rows('themes') ) : the_row(); $tab_count++; ?>

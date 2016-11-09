@@ -54,8 +54,9 @@ function custom_posts_types() {
 			'description' => __('This is the Signature Event post type' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => true,
+			'exclude_from_search' => false,
 			'show_ui' => true,
+			'show_in_nav_menus' => true,
 			'query_var' => true,
 			'menu_position' => 4, /* this is what order you want it to appear in on the left hand side menu */
 			'has_archive' => 'signature-events-archive', /* you can rename the slug here */
