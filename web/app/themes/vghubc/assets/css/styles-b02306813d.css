@@ -695,6 +695,14 @@ h1.page-header {
       font-size: 18px;
       font-size: 1.125rem; } }
 
+.panel span.small, .panel .single-post span.wp-caption-text, .single-post .panel span.wp-caption-text {
+  font-size: 14px;
+  font-size: 0.875rem; }
+  @media screen and (min-width: 601px) {
+    .panel span.small, .panel .single-post span.wp-caption-text, .single-post .panel span.wp-caption-text {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+
 .panel ul, .panel ol {
   font-size: 16px;
   font-size: 1rem;
@@ -736,8 +744,8 @@ p.date {
       font-size: 16px;
       font-size: 1rem; } }
 
-.panel .surgery h5, .panel .surgery body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .surgery .tribe-events-single-section-title, .theme-section-surgery .panel h5, .theme-section-surgery .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-surgery .panel .tribe-events-single-section-title {
-  color: #00AAE3; }
+.panel .surgery .cta-panel, .theme-section-surgery .panel .cta-panel {
+  background-color: #00AAE3; }
 
 .panel .surgery .button, .panel .surgery form input[type="submit"], form .panel .surgery input[type="submit"], .panel .surgery body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .surgery .tribe-events-read-more, .theme-section-surgery .panel .button, .theme-section-surgery .panel form input[type="submit"], form .theme-section-surgery .panel input[type="submit"], .theme-section-surgery .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-surgery .panel .tribe-events-read-more {
   background-color: #00AAE3;
@@ -754,8 +762,8 @@ p.date {
       border-color: #00AAE3;
       color: #fff; }
 
-.panel .cancer h5, .panel .cancer body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .cancer .tribe-events-single-section-title, .theme-section-cancer .panel h5, .theme-section-cancer .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-cancer .panel .tribe-events-single-section-title {
-  color: #8E3A80; }
+.panel .cancer .cta-panel, .theme-section-cancer .panel .cta-panel {
+  background-color: #8E3A80; }
 
 .panel .cancer .button, .panel .cancer form input[type="submit"], form .panel .cancer input[type="submit"], .panel .cancer body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .cancer .tribe-events-read-more, .theme-section-cancer .panel .button, .theme-section-cancer .panel form input[type="submit"], form .theme-section-cancer .panel input[type="submit"], .theme-section-cancer .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-cancer .panel .tribe-events-read-more {
   background-color: #8E3A80;
@@ -772,8 +780,8 @@ p.date {
       border-color: #8E3A80;
       color: #fff; }
 
-.panel .heart-lung h5, .panel .heart-lung body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .heart-lung .tribe-events-single-section-title, .theme-section-heart-lung .panel h5, .theme-section-heart-lung .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-heart-lung .panel .tribe-events-single-section-title {
-  color: #ED6062; }
+.panel .heart-lung .cta-panel, .theme-section-heart-lung .panel .cta-panel {
+  background-color: #ED6062; }
 
 .panel .heart-lung .button, .panel .heart-lung form input[type="submit"], form .panel .heart-lung input[type="submit"], .panel .heart-lung body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .heart-lung .tribe-events-read-more, .theme-section-heart-lung .panel .button, .theme-section-heart-lung .panel form input[type="submit"], form .theme-section-heart-lung .panel input[type="submit"], .theme-section-heart-lung .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-heart-lung .panel .tribe-events-read-more {
   background-color: #ED6062;
@@ -790,8 +798,8 @@ p.date {
       border-color: #ED6062;
       color: #fff; }
 
-.panel .innovation h5, .panel .innovation body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .innovation .tribe-events-single-section-title, .theme-section-innovation .panel h5, .theme-section-innovation .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-innovation .panel .tribe-events-single-section-title {
-  color: #ED8B00; }
+.panel .innovation .cta-panel, .theme-section-innovation .panel .cta-panel {
+  background-color: #ED8B00; }
 
 .panel .innovation .button, .panel .innovation form input[type="submit"], form .panel .innovation input[type="submit"], .panel .innovation body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .innovation .tribe-events-read-more, .theme-section-innovation .panel .button, .theme-section-innovation .panel form input[type="submit"], form .theme-section-innovation .panel input[type="submit"], .theme-section-innovation .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-innovation .panel .tribe-events-read-more {
   background-color: #ED8B00;
@@ -808,8 +816,8 @@ p.date {
       border-color: #ED8B00;
       color: #fff; }
 
-.panel .community h5, .panel .community body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .community .tribe-events-single-section-title, .theme-section-community .panel h5, .theme-section-community .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-community .panel .tribe-events-single-section-title {
-  color: #FFB81C; }
+.panel .community .cta-panel, .theme-section-community .panel .cta-panel {
+  background-color: #FFB81C; }
 
 .panel .community .button, .panel .community form input[type="submit"], form .panel .community input[type="submit"], .panel .community body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .community .tribe-events-read-more, .theme-section-community .panel .button, .theme-section-community .panel form input[type="submit"], form .theme-section-community .panel input[type="submit"], .theme-section-community .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-community .panel .tribe-events-read-more {
   background-color: #FFB81C;
@@ -826,8 +834,8 @@ p.date {
       border-color: #FFB81C;
       color: #fff; }
 
-.panel .brain-health h5, .panel .brain-health body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel .brain-health .tribe-events-single-section-title, .theme-section-brain-health .panel h5, .theme-section-brain-health .panel body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .theme-section-brain-health .panel .tribe-events-single-section-title {
-  color: #6DCDB8; }
+.panel .brain-health .cta-panel, .theme-section-brain-health .panel .cta-panel {
+  background-color: #6DCDB8; }
 
 .panel .brain-health .button, .panel .brain-health form input[type="submit"], form .panel .brain-health input[type="submit"], .panel .brain-health body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel .brain-health .tribe-events-read-more, .theme-section-brain-health .panel .button, .theme-section-brain-health .panel form input[type="submit"], form .theme-section-brain-health .panel input[type="submit"], .theme-section-brain-health .panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .theme-section-brain-health .panel .tribe-events-read-more {
   background-color: #6DCDB8;
@@ -844,22 +852,22 @@ p.date {
       border-color: #6DCDB8;
       color: #fff; }
 
-.panel.themes-overview-stats .tab-content-item.surgery .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.surgery .fact-row .larger-text {
   color: #00AAE3; }
 
-.panel.themes-overview-stats .tab-content-item.cancer .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.cancer .fact-row .larger-text {
   color: #8E3A80; }
 
-.panel.themes-overview-stats .tab-content-item.heart-lung .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.heart-lung .fact-row .larger-text {
   color: #ED6062; }
 
-.panel.themes-overview-stats .tab-content-item.innovation .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.innovation .fact-row .larger-text {
   color: #ED8B00; }
 
-.panel.themes-overview-stats .tab-content-item.community .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.community .fact-row .larger-text {
   color: #FFB81C; }
 
-.panel.themes-overview-stats .tab-content-item.brain-health .fact-row .number {
+.panel.themes-overview-stats .tab-content-item.brain-health .fact-row .larger-text {
   color: #6DCDB8; }
 
 .panel.overview-panel h4, .panel.overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.overview-panel h2, .panel.overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.overview-panel h1, .panel.overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.overview-panel h1, .panel.overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.overview-panel h1, .panel.overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.overview-panel h1 {
@@ -886,7 +894,7 @@ p.date {
 .theme-section-surgery .overview-panel h4, .theme-section-surgery .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-surgery .overview-panel h2, .theme-section-surgery .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-surgery .overview-panel h1, .theme-section-surgery .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-surgery .overview-panel h1, .theme-section-surgery .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-surgery .overview-panel h1, .theme-section-surgery .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-surgery .overview-panel h1 {
   color: #00AAE3; }
 
-.theme-section-surgery .panel.full-stats-panel .number {
+.theme-section-surgery .panel.full-stats-panel .number, .theme-section-surgery .panel.full-stats-panel .larger-text {
   color: #00AAE3; }
 
 .theme-section-surgery .three-stories-panel article .tag, .theme-section-surgery .panel.three-subpages-panel article .tag {
@@ -904,7 +912,7 @@ p.date {
 .theme-section-cancer .overview-panel h4, .theme-section-cancer .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-cancer .overview-panel h2, .theme-section-cancer .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-cancer .overview-panel h1, .theme-section-cancer .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-cancer .overview-panel h1, .theme-section-cancer .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-cancer .overview-panel h1, .theme-section-cancer .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-cancer .overview-panel h1 {
   color: #8E3A80; }
 
-.theme-section-cancer .panel.full-stats-panel .number {
+.theme-section-cancer .panel.full-stats-panel .number, .theme-section-cancer .panel.full-stats-panel .larger-text {
   color: #8E3A80; }
 
 .theme-section-cancer .three-stories-panel article .tag, .theme-section-cancer .panel.three-subpages-panel article .tag {
@@ -922,7 +930,7 @@ p.date {
 .theme-section-heart-lung .overview-panel h4, .theme-section-heart-lung .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-heart-lung .overview-panel h2, .theme-section-heart-lung .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-heart-lung .overview-panel h1, .theme-section-heart-lung .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-heart-lung .overview-panel h1, .theme-section-heart-lung .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-heart-lung .overview-panel h1, .theme-section-heart-lung .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-heart-lung .overview-panel h1 {
   color: #ED6062; }
 
-.theme-section-heart-lung .panel.full-stats-panel .number {
+.theme-section-heart-lung .panel.full-stats-panel .number, .theme-section-heart-lung .panel.full-stats-panel .larger-text {
   color: #ED6062; }
 
 .theme-section-heart-lung .three-stories-panel article .tag, .theme-section-heart-lung .panel.three-subpages-panel article .tag {
@@ -940,7 +948,7 @@ p.date {
 .theme-section-brain-health .overview-panel h4, .theme-section-brain-health .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-brain-health .overview-panel h2, .theme-section-brain-health .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-brain-health .overview-panel h1, .theme-section-brain-health .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-brain-health .overview-panel h1, .theme-section-brain-health .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-brain-health .overview-panel h1, .theme-section-brain-health .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-brain-health .overview-panel h1 {
   color: #6DCDB8; }
 
-.theme-section-brain-health .panel.full-stats-panel .number {
+.theme-section-brain-health .panel.full-stats-panel .number, .theme-section-brain-health .panel.full-stats-panel .larger-text {
   color: #6DCDB8; }
 
 .theme-section-brain-health .three-stories-panel article .tag, .theme-section-brain-health .panel.three-subpages-panel article .tag {
@@ -958,7 +966,7 @@ p.date {
 .theme-section-innovation .overview-panel h4, .theme-section-innovation .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-innovation .overview-panel h2, .theme-section-innovation .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-innovation .overview-panel h1, .theme-section-innovation .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-innovation .overview-panel h1, .theme-section-innovation .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-innovation .overview-panel h1, .theme-section-innovation .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-innovation .overview-panel h1 {
   color: #ED8B00; }
 
-.theme-section-innovation .panel.full-stats-panel .number {
+.theme-section-innovation .panel.full-stats-panel .number, .theme-section-innovation .panel.full-stats-panel .larger-text {
   color: #ED8B00; }
 
 .theme-section-innovation .three-stories-panel article .tag, .theme-section-innovation .panel.three-subpages-panel article .tag {
@@ -976,7 +984,7 @@ p.date {
 .theme-section-community .overview-panel h4, .theme-section-community .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-community .overview-panel h2, .theme-section-community .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .theme-section-community .overview-panel h1, .theme-section-community .overview-panel .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-community .overview-panel h1, .theme-section-community .overview-panel body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .theme-section-community .overview-panel h1, .theme-section-community .overview-panel .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .theme-section-community .overview-panel h1 {
   color: #FFB81C; }
 
-.theme-section-community .panel.full-stats-panel .number {
+.theme-section-community .panel.full-stats-panel .number, .theme-section-community .panel.full-stats-panel .larger-text {
   color: #FFB81C; }
 
 .theme-section-community .three-stories-panel article .tag, .theme-section-community .panel.three-subpages-panel article .tag {
@@ -1082,6 +1090,42 @@ p.date {
 
 .panel article .tag.brain-health {
   background-color: #6DCDB8; }
+
+.theme-section-surgery .panel.cta-panel {
+  background-color: #00AAE3; }
+  .theme-section-surgery .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
+
+.theme-section-cancer .panel.cta-panel {
+  background-color: #8E3A80; }
+  .theme-section-cancer .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
+
+.theme-section-heart-lung .panel.cta-panel {
+  background-color: #ED6062; }
+  .theme-section-heart-lung .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
+
+.theme-section-innovation .panel.cta-panel {
+  background-color: #ED8B00; }
+  .theme-section-innovation .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
+
+.theme-section-community .panel.cta-panel {
+  background-color: #FFB81C; }
+  .theme-section-community .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
+
+.theme-section-brain-health .panel.cta-panel {
+  background-color: #6DCDB8; }
+  .theme-section-brain-health .panel.cta-panel a {
+    border-color: #fff;
+    color: #fff; }
 
 /**
  * Box sizing
@@ -2292,12 +2336,29 @@ svg.icon.close-x {
     .mobile-tabs-nav .options li {
       padding: 0.9375rem;
       margin-bottom: 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      font-size: 21px;
-      font-size: 1.3125rem;
+      font-size: 18px;
+      font-size: 1.125rem;
       font-family: "Karbon", Helvetica, Arial, sans-serif; }
       .mobile-tabs-nav .options li:last-child {
         border-bottom: 0; }
+      .mobile-tabs-nav .options li.surgery {
+        background-color: #00AAE3; }
+      .mobile-tabs-nav .options li.cancer {
+        background-color: #8E3A80; }
+      .mobile-tabs-nav .options li.heart-lung {
+        background-color: #ED6062; }
+      .mobile-tabs-nav .options li.innovation {
+        background-color: #ED8B00; }
+      .mobile-tabs-nav .options li.community {
+        background-color: #FFB81C; }
+      .mobile-tabs-nav .options li.brain-health {
+        background-color: #6DCDB8; }
+    .mobile-tabs-nav .options a, .mobile-tabs-nav .options li {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Karbon-Semibold", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      letter-spacing: 1px; }
   .mobile-tabs-nav.open .options {
     max-height: 500px;
     overflow: auto; }
@@ -3159,6 +3220,32 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       display: none; }
       .panel.themes-overview-stats .tab-content .tab-content-item.active {
         display: block; }
+    @media screen and (max-width: 768px) {
+      .panel.themes-overview-stats .tab-content .tab-content-item h2, .panel.themes-overview-stats .tab-content .tab-content-item .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item h1, .panel.themes-overview-stats .tab-content .tab-content-item .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Karbon-Semibold", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 18px;
+        font-size: 1.125rem;
+        padding: 1.125rem 0.9375rem 0.9375rem 0.9375rem;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: -8px;
+        margin-bottom: 1.25rem; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.surgery h2, .panel.themes-overview-stats .tab-content .tab-content-item.surgery .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.surgery h1, .panel.themes-overview-stats .tab-content .tab-content-item.surgery .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.surgery h1 {
+        background-color: #00AAE3; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.cancer h2, .panel.themes-overview-stats .tab-content .tab-content-item.cancer .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.cancer h1, .panel.themes-overview-stats .tab-content .tab-content-item.cancer .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.cancer h1 {
+        background-color: #8E3A80; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.heart-lung h2, .panel.themes-overview-stats .tab-content .tab-content-item.heart-lung .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.heart-lung h1, .panel.themes-overview-stats .tab-content .tab-content-item.heart-lung .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.heart-lung h1 {
+        background-color: #ED6062; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.innovation h2, .panel.themes-overview-stats .tab-content .tab-content-item.innovation .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.innovation h1, .panel.themes-overview-stats .tab-content .tab-content-item.innovation .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.innovation h1 {
+        background-color: #ED8B00; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.community h2, .panel.themes-overview-stats .tab-content .tab-content-item.community .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.community h1, .panel.themes-overview-stats .tab-content .tab-content-item.community .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.community h1 {
+        background-color: #FFB81C; }
+      .panel.themes-overview-stats .tab-content .tab-content-item.brain-health h2, .panel.themes-overview-stats .tab-content .tab-content-item.brain-health .title-only h1, .title-only .panel.themes-overview-stats .tab-content .tab-content-item.brain-health h1, .panel.themes-overview-stats .tab-content .tab-content-item.brain-health .single-post .large-featured-image h1, .single-post .large-featured-image .panel.themes-overview-stats .tab-content .tab-content-item.brain-health h1 {
+        background-color: #6DCDB8; } }
     .panel.themes-overview-stats .tab-content .tab-body {
       float: left;
       width: 100%;
@@ -3243,9 +3330,16 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           display: block;
           position: absolute;
           left: -2rem; }
-      .panel.themes-overview-stats .tab-content .fact-row .number {
-        font-size: 72px;
-        font-size: 4.5rem; }
+      .panel.themes-overview-stats .tab-content .fact-row p {
+        line-height: 1; }
+      .panel.themes-overview-stats .tab-content .fact-row h5, .panel.themes-overview-stats .tab-content .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.themes-overview-stats .tab-content .fact-row .tribe-events-single-section-title {
+        margin-bottom: 1rem; }
+      .panel.themes-overview-stats .tab-content .fact-row .larger-text {
+        font-size: 42px;
+        font-size: 2.625rem;
+        line-height: 1.1;
+        margin-bottom: 0.625rem;
+        display: inline-block; }
 
 .panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color: #fff;
@@ -3319,47 +3413,45 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   float: left;
   width: 100%; }
 
-.panel.full-stats-panel .overview {
-  padding-right: 5.625rem;
-  width: 30%; }
+@media screen and (min-width: 601px) {
+  .panel.full-stats-panel .overview {
+    padding-right: 5.625rem;
+    width: 30%; } }
 
-.panel.full-stats-panel .stat-col {
-  width: 35%; }
+@media screen and (min-width: 601px) {
+  .panel.full-stats-panel .stat-col {
+    width: 35%; } }
 
 .panel.full-stats-panel .stat-focus {
-  float: left;
-  margin-bottom: 1.875rem; }
+  float: left; }
+  @media screen and (min-width: 601px) {
+    .panel.full-stats-panel .stat-focus {
+      margin-bottom: 1.875rem; } }
 
 .panel.full-stats-panel .fact-row {
   width: 100%;
-  float: left;
-  margin-bottom: 1.875rem; }
-  .panel.full-stats-panel .fact-row h5, .panel.full-stats-panel .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.full-stats-panel .fact-row .tribe-events-single-section-title {
-    margin-bottom: 1.875rem; }
+  float: left; }
+  @media screen and (min-width: 601px) {
+    .panel.full-stats-panel .fact-row {
+      margin-bottom: 1.875rem; } }
+  @media screen and (min-width: 601px) {
+    .panel.full-stats-panel .fact-row h5, .panel.full-stats-panel .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.full-stats-panel .fact-row .tribe-events-single-section-title {
+      margin-bottom: 1.875rem; } }
   .panel.full-stats-panel .fact-row .left, .panel.full-stats-panel .fact-row .right {
     float: left; }
-  .panel.full-stats-panel .fact-row .left p {
+  .panel.full-stats-panel .fact-row p {
     line-height: 1; }
-  .panel.full-stats-panel .fact-row .left strong {
-    text-transform: uppercase;
-    letter-spacing: 1px; }
-  .panel.full-stats-panel .fact-row .right {
-    padding-top: 0.625rem;
-    position: relative;
-    max-width: 13.75rem;
-    padding-left: 3.5rem; }
-    .panel.full-stats-panel .fact-row .right:before {
-      background-color: #575b5e;
-      width: 1px;
-      height: 6.25rem;
-      content: '';
-      display: block;
-      position: absolute;
-      left: 1.5rem;
-      top: 0; }
-  .panel.full-stats-panel .fact-row .number {
-    font-size: 90px;
-    font-size: 5.625rem; }
+  .panel.full-stats-panel .fact-row .larger-text {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    display: inline-block;
+    margin-bottom: 0.3125rem; }
+    @media screen and (min-width: 601px) {
+      .panel.full-stats-panel .fact-row .larger-text {
+        margin-bottom: 0.625rem;
+        font-size: 42px;
+        font-size: 2.625rem; } }
 
 .panel.full-stats-panel .fact-sheet {
   clear: both;
@@ -3386,7 +3478,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     background: #f3f3f3;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     @media screen and (min-width: 601px) {
       .three-stories-panel article, .panel.three-subpages-panel article {
         padding-top: 14.375rem;

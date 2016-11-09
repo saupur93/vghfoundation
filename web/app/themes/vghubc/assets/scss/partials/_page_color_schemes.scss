@@ -580,7 +580,7 @@
 .theme-section-surgery .panel {
   &.cta-panel {
     background-color:$surgery;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
@@ -589,7 +589,7 @@
 .theme-section-cancer .panel {
   &.cta-panel {
     background-color:$cancer;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
@@ -599,7 +599,7 @@
 .theme-section-heart-lung .panel {
   &.cta-panel {
     background-color:$heartlung;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
@@ -608,7 +608,7 @@
 .theme-section-innovation .panel {
   &.cta-panel {
     background-color:$innovation;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
@@ -617,7 +617,7 @@
 .theme-section-community .panel {
   &.cta-panel {
     background-color:$community;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
@@ -627,7 +627,7 @@
 .theme-section-brain-health .panel {
   &.cta-panel {
     background-color:$brainhealth;
-    .button {
+    a {
       border-color:#fff;
       color:#fff;
     }
