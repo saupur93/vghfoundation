@@ -1546,9 +1546,11 @@ svg.icon.close-x {
     li {
       padding:rem(15);
       margin-bottom:0;
-      // border-bottom:1px solid rgba(0,0,0,0.1);
+      border-bottom:1px solid rgba(0,0,0,0.1);
       @include font-size(18px);
       font-family: $font;
+      background:$brand-green;
+
       &:last-child {
         border-bottom:0;
       }
@@ -1570,6 +1572,21 @@ svg.icon.close-x {
       &.brain-health {
         background-color:$brainhealth;
       }
+
+
+      &.angel-campaign {
+        background-color:$angel-pink;
+      }
+
+      &.night-of-a-thousand-stars-gala {
+        background-color:$stars-gala;
+      }
+
+      &.viva-pharmaceutical-time-to-shine-gala {
+        background-color:$shine-gala;
+      }
+
+
 
     }
     a, li {
@@ -3538,7 +3555,7 @@ body.tribe-events-page-template {
     background-repeat: no-repeat;
     background-size:100%;
     color:#fff;
-    height:70vh;
+    height:520px;
     position:relative;
     @include media($ptab){
       min-height:900px;
@@ -3619,6 +3636,9 @@ body.tribe-events-page-template {
     }
 
     .events-items {
+      @include media($ptabAndLess){
+        height:100%;
+      }
       .events-item {
         display:none;
 
@@ -3659,6 +3679,7 @@ body.tribe-events-page-template {
       position:absolute;
       bottom:0;
       @include media($ptabAndLess){
+        display:none;
         .thumb {
           display:none;
         }
@@ -3842,6 +3863,9 @@ body.tribe-events-page-template {
     width:100%;
     position:absolute;
     bottom:0;
+    @include media($ptabAndLess){
+      display:none;
+    }
 
     .left, .right {
       width:rem(60);
@@ -3985,7 +4009,9 @@ body.tribe-events-page-template {
     margin-bottom:2.5rem;
   }
   .col-grid-4 {
-    padding-right:9rem;
+    @include media($ptab){
+      padding-right:9rem;
+    }
   }
   .donor-group {
     margin-bottom:rem(60);

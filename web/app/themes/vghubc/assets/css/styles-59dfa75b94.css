@@ -2336,9 +2336,11 @@ svg.icon.close-x {
     .mobile-tabs-nav .options li {
       padding: 0.9375rem;
       margin-bottom: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       font-size: 18px;
       font-size: 1.125rem;
-      font-family: "Karbon", Helvetica, Arial, sans-serif; }
+      font-family: "Karbon", Helvetica, Arial, sans-serif;
+      background: #7dab35; }
       .mobile-tabs-nav .options li:last-child {
         border-bottom: 0; }
       .mobile-tabs-nav .options li.surgery {
@@ -2353,6 +2355,12 @@ svg.icon.close-x {
         background-color: #FFB81C; }
       .mobile-tabs-nav .options li.brain-health {
         background-color: #6DCDB8; }
+      .mobile-tabs-nav .options li.angel-campaign {
+        background-color: #ce89c3; }
+      .mobile-tabs-nav .options li.night-of-a-thousand-stars-gala {
+        background-color: #272787; }
+      .mobile-tabs-nav .options li.viva-pharmaceutical-time-to-shine-gala {
+        background-color: #d8c58b; }
     .mobile-tabs-nav .options a, .mobile-tabs-nav .options li {
       color: #fff;
       text-transform: uppercase;
@@ -3703,7 +3711,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   background-repeat: no-repeat;
   background-size: 100%;
   color: #fff;
-  height: 70vh;
+  height: 520px;
   position: relative; }
   @media screen and (min-width: 601px) {
     .panel.signature-events-panel #events-section {
@@ -3768,6 +3776,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       -webkit-transform: translate3d(-100%, -50%, 0);
               transform: translate3d(-100%, -50%, 0);
       z-index: 0; }
+  @media screen and (max-width: 768px) {
+    .panel.signature-events-panel #events-section .events-items {
+      height: 100%; } }
   .panel.signature-events-panel #events-section .events-items .events-item {
     display: none; }
     .panel.signature-events-panel #events-section .events-items .events-item .container {
@@ -3789,8 +3800,10 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     position: absolute;
     bottom: 0; }
     @media screen and (max-width: 768px) {
-      .panel.signature-events-panel #events-section #events-menu .thumb {
-        display: none; } }
+      .panel.signature-events-panel #events-section #events-menu {
+        display: none; }
+        .panel.signature-events-panel #events-section #events-menu .thumb {
+          display: none; } }
   .panel.signature-events-panel #events-section #events-menu {
     width: 100%;
     list-style: none;
@@ -3924,6 +3937,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   width: 100%;
   position: absolute;
   bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .grid-slider .pager {
+      display: none; } }
   .grid-slider .pager .left, .grid-slider .pager .right {
     width: 3.75rem;
     height: 3.75rem;
@@ -4029,8 +4045,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 .panel.three-column-donors h3, .panel.three-column-donors body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events .panel.three-column-donors .tribe-events-single-event-title {
   margin-bottom: 2.5rem; }
 
-.panel.three-column-donors .col-grid-4 {
-  padding-right: 9rem; }
+@media screen and (min-width: 601px) {
+  .panel.three-column-donors .col-grid-4 {
+    padding-right: 9rem; } }
 
 .panel.three-column-donors .donor-group {
   margin-bottom: 3.75rem; }

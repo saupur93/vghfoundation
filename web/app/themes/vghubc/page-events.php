@@ -67,12 +67,26 @@ Template Name: Events
 
       <?php if($posts->have_posts()): ?>
       <section class="panel grid-slider" id="events-section">
+        <nav class="mobile-tabs-nav">
+          <h4 class="switcher">Events</h4>
+          <ul class="options">
+          <?php while($posts->have_posts()): $posts->the_post(); $post_count++; ?>
+            <?php
+              $theme_title = get_the_title();
+              $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
+             ?>
+            <li class="<?php print sanitize_title($theme_title); ?>">
+              <a class="open" href="#"><span><?php print $theme_title; ?></span></a>
+            </li>
+          <?php endwhile; ?>
+          </ul>
+        </nav>
+
         <?php while($posts->have_posts()): $posts->the_post(); $post_count++; ?>
         <?php
           $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
           $theme_title = get_the_title();
           $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
-
         ?>
         <div class="events-items">
           <a href="<?php echo get_permalink(); ?>">

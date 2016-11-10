@@ -230,6 +230,26 @@ class App {
 
     gridEl.on('mouseenter', 'li', mouseEnterItem);
 
+    sectionEl.find('.switcher').on('click', e => {
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+    });
+
+    sectionEl.find('.options li').on('click', e => {
+      // e.preventDefault();
+      mouseEnterItem(e);
+      $(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+      let index = $(e.currentTarget).index();
+      sectionEl.find('#themes-menu li').each(function(i){
+        if (i == index) {
+          $(this).removeClass('hide')
+        } else {
+          $(this).addClass('hide')
+        }
+      });
+
+    });
+
+
   }
 
 
