@@ -1637,7 +1637,9 @@ svg.icon.close-x {
 
         &:after {
           opacity:1;
-          transform: scale(1.1);
+          @include media($ptab){
+            transform: scale(1.1);
+          }
         }
 
         .thumb {
@@ -2141,7 +2143,9 @@ body.tribe-events-page-template {
   background-repeat: no-repeat;
   background-size:cover;
   background-position:50% 0px;
+  margin-top:rem(70);
   @include media($ptab){
+    margin-top:0;
     padding-top:100px;
     height:560px;
     background-position:50% 100px;
@@ -2381,6 +2385,11 @@ body.tribe-events-page-template {
   background: $lighter-grey;
   display:table;
   width:100%;
+  @include media($ptabAndLess){
+    margin-left:rem(15);
+    margin-right:rem(15);
+    width:calc(100% - 30px);
+  }
 
   &.white-bg {
     background-color:#fff;
@@ -2394,16 +2403,23 @@ body.tribe-events-page-template {
     background-size:cover;
     background-repeat:no-repeat;
     background-position:50% 50%;
-    height:rem(375);
+    height:rem(165);
     position:absolute;
     top:0;
     z-index:0;
     width:100%;
+    @include media($ptab){
+      height:rem(375);
+      background-position:50% 50%;
+    }
   }
 
   article {
     position:relative;
-    padding-top:rem(335);
+    padding-top:rem(135);
+    @include media($ptab){
+      padding-top:rem(335);
+    }
 
     h4 {
       font-family:$font;
@@ -2446,19 +2462,29 @@ body.tribe-events-page-template {
 
   .copy {
     background-color:#fff;
-    padding:30px;
-    width:calc(100% - 120px);
-    margin-left:60px;
-    margin-right:60px;
+    padding:rem(30);
+    width:100%;
+    margin-left:rem(0);
+    margin-right:rem(0);
     position:relative;
     z-index:1;
+    margin-bottom:rem(30);
     transition:all 0.2s linear;
+    @include media($ptab){
+      width:calc(100% - 120px);
+      margin-left:rem(60);
+      margin-right:rem(60);
+    }
   }
 }
 
 
 .panel.donation-panel-tabs {
-  padding-top:rem(160);
+  padding-top:rem(80);
+
+  @include media($ptab){
+    padding-top:rem(160);
+  }
   // position:relative;
   [data-tab-content]{
     display:none;
@@ -2476,11 +2502,17 @@ body.tribe-events-page-template {
     padding:0;
     margin:0;
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:40px;
     position:relative;
+    margin-top:20px;
+    @include media($ptab){
+      margin-bottom:60px;
+      margin-top:0px;
+    }
+
     li {
       display:inline-block;
-      margin:30px 40px 0px 40px;
+      margin:10px 7px 0px 7px;
       // background-color:#c4d9a2;
       text-decoration:none;
       text-transform:uppercase;
@@ -2489,16 +2521,23 @@ body.tribe-events-page-template {
       padding-bottom:5px;
       padding-left:0;
       padding-right:0;
-      @include font-size(24px);
+      @include font-size(12px);
       letter-spacing: 2px;
-      border-bottom:3px solid transparent;
       transition: all 0.3s linear;
-      // border-right:2px solid $lighter-grey;
       cursor: pointer;
+      border-bottom:2px solid transparent;
+      @include media($ptab){
+        border-bottom:3px solid transparent;
+        @include font-size(24px);
+        margin:30px 40px 0px 40px;
+      }
 
       &:hover, &.active {
         color:$brand-green;
+        border-bottom:2px solid $brand-green;
+        @include media($ptab){
         border-bottom:3px solid $brand-green;
+        }
       }
     }
   }
@@ -2514,15 +2553,25 @@ body.tribe-events-page-template {
 
     span {
       font-family:$font-bold;
-      @include font-size(35px);
-      margin-right:rem(10);
+      @include font-size(29px);
+      margin-right:rem(5);
       position:relative;
       color:$brand-green;
       transition: color 0.3s linear;
       cursor: pointer;
-      padding:rem(5) rem(30);
       border:2px solid $brand-green;
+      padding:rem(5) rem(13);
+      @include media($ptab){
+        border:2px solid $brand-green;
+        padding:rem(5) rem(30);
+        margin-right:rem(10);
+        @include font-size(35px);
+      }
 
+      @include media($ptabAndLess){
+        display:inline-block;
+        margin-bottom:rem(10);
+      }
 
       &:hover, &.selected {
         color:#fff;
@@ -2548,6 +2597,9 @@ body.tribe-events-page-template {
     span.other {
       margin-right:25px;
       border:0;
+      @include media($ptabAndLess){
+        width: 100%;
+      }
 
       &:hover {
         color:$brand-green;
@@ -2970,7 +3022,7 @@ body.tribe-events-page-template {
         width:100%;
         background-size:cover;
         background-position:50% 50%;
-        height:rem(200);
+        height:rem(300);
         @include media($ptab){
           height:100%;
           position:absolute;
@@ -3432,9 +3484,12 @@ body.tribe-events-page-template {
     }
   }
   .read-more.list {
-    margin-top:rem(30);
-    margin-left:rem(25);
     display:inline-block;
+    @include media($ptab){
+      margin-top:rem(30);
+      margin-left:rem(25);
+
+    }
   }
   .col-half.last {
     @include media($ptab){
@@ -3468,19 +3523,27 @@ body.tribe-events-page-template {
 
 .panel.signature-events-panel {
   h2 {
-    margin-bottom:3.5rem;
+    margin-bottom:1.5rem;
+    @include media($ptab){
+      margin-bottom:3.5rem;
+    }
   }
   .inner-wrap {
-    padding: 0 3.75rem;
+    @include media($ptab){
+      padding: 0 3.75rem;
+    }
   }
 
   #events-section {
     background-repeat: no-repeat;
     background-size:100%;
     color:#fff;
-    height:calc(100vh - 16.666vw);
-    min-height:900px;
+    height:70vh;
     position:relative;
+    @include media($ptab){
+      min-height:900px;
+      height:calc(100vh - 16.666vw);
+    }
 
     &.expanded-overlay {
       &:before {
@@ -3496,9 +3559,12 @@ body.tribe-events-page-template {
     .container {
       position:relative;
       .summary {
-        width:55%;
+        width:100%;
         color: #fff;
         line-height: 1.5;
+        @include media($ptab){
+          width:55%;
+        }
 
         h5 {
           display:inline-block;
@@ -3592,30 +3658,53 @@ body.tribe-events-page-template {
     #events-menu {
       position:absolute;
       bottom:0;
+      @include media($ptabAndLess){
+        .thumb {
+          display:none;
+        }
+      }
     }
 
     #events-menu {
-
       width: 100%;
       list-style: none;
       padding:0;
       margin:0;
       left:0;
       right:0;
-      height:16.666vw;
+      height:52px;
       // overflow: hidden;
       white-space: nowrap;
       font-size:0;
+      @include media($ptab){
+        height:16.666vw;
+      }
+
+      @include media($ptabAndLess){
+        height:52px;
+        overflow:hidden;
+      }
 
       li {
         position: relative;
-        width: 33.333vw;
+        width: 100%;
         height:100%;
         // float: left;
         transition: opacity 0.2s cubic-bezier(0.28, 0, 0.18, 1), transform 0.2s cubic-bezier(0.28, 0, 0.18, 1);
         z-index: 1;
         margin-bottom:0;
         display:inline-block;
+
+        @include media($ptab){
+          width: 33.333vw;
+        }
+
+        @include media($ptabAndLess){
+          .read-more {
+            right:0;
+            float:right;
+          }
+        }
 
 
         &:after {
@@ -3833,7 +3922,10 @@ body.tribe-events-page-template {
 
 .single-signature_events {
   .page-header {
-    height:100vh;
+    height:520px;
+    @include media($ptab){
+      height:100vh;
+    }
     .container, .inner-wrap {
       height:100%;
     }
@@ -4505,16 +4597,25 @@ body.page-template-page-annual-report-php {
 
   .large-featured-image {
     width:100%;
-    height:rem(760);
+    height:rem(550);
     position:relative;
-    padding-top:100px;
+    padding-top:0px;
     background-repeat: no-repeat;
     background-size:cover;
-    background-position:50% 100px;
-    margin-bottom:rem(80);
+    background-position:50% 70px;
+    margin-bottom:rem(0);
+    @include media($ptab){
+      background-position:50% 100px;
+      height:rem(760);
+      padding-top:100px;
+      margin-bottom:rem(80);
+    }
 
     &.has-caption {
-      margin-bottom:rem(120);
+      margin-bottom:rem(30);
+      @include media($ptab){
+        margin-bottom:rem(120);
+      }
     }
 
     .share-this {
@@ -4580,6 +4681,9 @@ body.page-template-page-annual-report-php {
       right:0;
       top:calc(100% + 0.75rem);
       max-width:rem(300);
+      @include media($ptabAndLess){
+        display:none;
+      }
     }
   }
 
@@ -4614,12 +4718,17 @@ body.page-template-page-annual-report-php {
 
   blockquote {
     padding-right:0;
-    width:calc(100% - 160px);
+    width:calc(100% - 15px);
     margin:auto;
+    @include media($ptab){
+      width:calc(100% - 160px);
+    }
   }
 
   .social-share {
-    margin: rem(60) 0;
+    @include media($ptab){
+      margin: rem(60) 0;
+    }
 
     a.button {
       min-width:rem(220);
@@ -4700,6 +4809,9 @@ body.page-template-page-annual-report-php {
 
 
 .panel.related-posts-panel {
+  @include media($ptabAndLess){
+    padding-top:0;
+  }
   h3 {
     margin-bottom:2.5rem;
   }
@@ -4721,6 +4833,9 @@ body.page-template-page-annual-report-php {
     img {
       float:left;
       margin-right:rem(20);
+      @include media($ptabAndLess){
+        width:rem(80);
+      }
     }
     .content {
       overflow: hidden;
@@ -5211,3 +5326,9 @@ body.page-template-page-annual-report-php {
   }
 }
 
+
+.panel.footer-themes-menu {
+  @include media($ptabAndLess){
+    padding-top:0;
+  }
+}

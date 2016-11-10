@@ -54,6 +54,8 @@ Events
 - different behaviour for navigation tiers - events?
 - donate buttons specific to events? change header button?
 
+- donor list page - responsive and CMS
+
 ## Responsive
 - mobile subnav - accordion like
 

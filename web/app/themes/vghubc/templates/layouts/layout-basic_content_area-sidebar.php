@@ -2,7 +2,7 @@
 <?php if($count == 1): ?>
 <section class="panel extra-padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php else: ?>
-<section class="panel padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
+<section class="panel padded sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php endif; ?>
 
     <div class="container">
