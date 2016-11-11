@@ -1910,6 +1910,38 @@ form {
   }
 
 
+  .search-form {
+    margin-top:rem(60);
+
+    input[type=search]{
+      background:#fff;
+      color:$body-text;
+      border-bottom:0;
+      @include font-size(16px);
+      padding:rem(12) rem(15);
+      margin-bottom:rem(10);
+      font-style:normal;
+      border:0;
+      width: 100%;
+      box-sizing:border-box;
+    }
+    input[type=submit]{
+      width:100%;
+      height:auto;
+      margin:0;
+      @include font-size(14px);
+      border:2px solid #fff;
+      color:#fff;
+      background-color:transparent;
+      &:hover {
+        color:$brand-green;
+        background-color:#fff;
+        border:2px solid #fff;
+      }
+
+    }
+  }
+
 }
 
 body.tribe-events-page-template {
@@ -2282,6 +2314,10 @@ body.tribe-events-page-template {
     display:block;
   }
 
+  .search-results & {
+    display: none;
+  }
+
   h3 {
     // float:left;
     margin-bottom:0;
@@ -2292,15 +2328,18 @@ body.tribe-events-page-template {
     display:inline;
   }
 
-  // .top-donate {
-  //   float:right;
-  //   border:0;
-  //   height:45px;
-  //   color:#fff;
-  //   background:$body-text;
-  //   @include font-size(14px);
-  //   line-height:2.2;
-  // }
+  .sub-header-donate {
+    float:right;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    pointer-events:none;
+
+    .collapsed-nav & {
+      opacity: 1;
+      pointer-events:auto;
+    }
+  }
+
 
   .breadcrumb {
     padding-top:12px;
@@ -3531,6 +3570,7 @@ body.tribe-events-page-template {
 
 .panel.footer-cta {
   text-align:center;
+  background:$lighter-grey;
   .donate {
     margin-top:rem(20);
     padding-left:rem(60);
@@ -5423,4 +5463,16 @@ body.page-template-page-annual-report-php {
 }
 .collapsed-nav .header-wrap {
   transform: translate3d(0, -100px, 1px);
+}
+
+
+.panel.search-results {
+  article.entry {
+    h4 {
+      margin-bottom:0.5rem;
+    }
+    margin-bottom:rem(60);
+    // padding-bottom:rem(50);
+    border-bottom: 1px solid #ccc;
+  }
 }

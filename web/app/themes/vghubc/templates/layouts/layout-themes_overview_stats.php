@@ -1,6 +1,6 @@
       <section class="panel themes-overview-stats<?php echo ' panel-'.$count; ?>">
         <nav class="mobile-tabs-nav">
-          <h4 class="switcher">Themes</h4>
+          <h4 class="switcher">Philanthropic Pillars</h4>
           <ul class="options">
           <?php while( have_rows('theme_item') ): the_row(); ?>
             <?php
