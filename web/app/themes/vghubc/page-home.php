@@ -78,9 +78,9 @@ Template Name: Home
   <?php if(have_rows('themes')): ?>
   <section class="panel" id="themes-section">
     <nav class="mobile-tabs-nav">
-      <h4 class="switcher">Themes</h4>
+      <h4 class="switcher">Philanthropic Pillars</h4>
       <ul class="options">
-      <?php while (have_rows('themes') ) : the_row(); $tab_count++; ?>
+      <?php while (have_rows('themes') ) : the_row(); ?>
         <?php
           $related_theme = null !== get_sub_field('related_theme') ? get_sub_field('related_theme')[0] : false;
           $theme_title = $related_theme->post_title;

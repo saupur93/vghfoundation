@@ -882,8 +882,7 @@ p.date {
     .panel.overview-panel ul li:before {
       content: '•';
       position: absolute;
-      left: 0.25rem;
-      color: #7dab35; }
+      left: 0.25rem; }
 
 .theme-section-surgery #sub-navigation {
   background-color: #00AAE3; }
@@ -2600,6 +2599,33 @@ form input[type="submit"] {
           margin: 0 5px; } }
   #footer .green-text a {
     color: #7dab35; }
+  #footer .search-form {
+    margin-top: 3.75rem; }
+    #footer .search-form input[type=search] {
+      background: #fff;
+      color: #575b5e;
+      border-bottom: 0;
+      font-size: 16px;
+      font-size: 1rem;
+      padding: 0.75rem 0.9375rem;
+      margin-bottom: 0.625rem;
+      font-style: normal;
+      border: 0;
+      width: 100%;
+      box-sizing: border-box; }
+    #footer .search-form input[type=submit] {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      font-size: 14px;
+      font-size: 0.875rem;
+      border: 2px solid #fff;
+      color: #fff;
+      background-color: transparent; }
+      #footer .search-form input[type=submit]:hover {
+        color: #7dab35;
+        background-color: #fff;
+        border: 2px solid #fff; }
 
 body.tribe-events-page-template #tribe-events-bar {
   margin-top: 3.5rem;
@@ -2866,6 +2892,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   @media screen and (min-width: 601px) {
     #sub-navigation {
       display: block; } }
+  .search-results #sub-navigation {
+    display: none; }
   #sub-navigation h3, #sub-navigation body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events #sub-navigation .tribe-events-single-event-title {
     margin-bottom: 0;
     color: #fff;
@@ -2874,6 +2902,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline; }
+  #sub-navigation .sub-header-donate {
+    float: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    pointer-events: none; }
+    .collapsed-nav #sub-navigation .sub-header-donate {
+      opacity: 1;
+      pointer-events: auto; }
   #sub-navigation .breadcrumb {
     padding-top: 12px; }
     #sub-navigation .breadcrumb a {
@@ -3692,7 +3729,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   display: none; }
 
 .panel.footer-cta {
-  text-align: center; }
+  text-align: center;
+  background: #f3f3f3; }
   .panel.footer-cta .donate {
     margin-top: 1.25rem;
     padding-left: 3.75rem;
@@ -5029,3 +5067,9 @@ body.page-template-page-annual-report-php {
 .collapsed-nav .header-wrap {
   -webkit-transform: translate3d(0, -100px, 1px);
           transform: translate3d(0, -100px, 1px); }
+
+.panel.search-results article.entry {
+  margin-bottom: 3.75rem;
+  border-bottom: 1px solid #ccc; }
+  .panel.search-results article.entry h4, .panel.search-results article.entry body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.search-results article.entry h2, .panel.search-results article.entry body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.search-results article.entry h1, .panel.search-results article.entry .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.search-results article.entry h1, .panel.search-results article.entry body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.search-results article.entry h1, .panel.search-results article.entry .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.search-results article.entry h1 {
+    margin-bottom: 0.5rem; }

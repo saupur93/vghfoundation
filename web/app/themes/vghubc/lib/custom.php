@@ -76,7 +76,7 @@ function menu_is_child_of($id) {
    $children = get_pages( array( 'child_of' => $id ) );
    $count = 0;
    foreach ($children as $key => $child) {
-     if($child->ID == $post->ID) $count++;
+     if(isset($post->ID) && $child->ID == $post->ID) $count++;
    }
 
    if ( is_page() && ($post->post_parent || $count > 0  ) && $post->ID != $id) {

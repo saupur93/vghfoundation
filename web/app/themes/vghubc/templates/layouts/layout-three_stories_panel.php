@@ -6,7 +6,7 @@
 
 
 
-  if ($related_category && !related_theme){
+  if ($related_category && !$related_theme){
     $cats = implode(', ', $related_category);
     $posts = new WP_Query(array(
       "post_type" => "post",
@@ -16,7 +16,7 @@
       'cat' => $cats,
       'ignore_sticky_posts' => 1,
     ));
-  } elseif($related_theme && !related_category){
+  } elseif($related_theme && !$related_category){
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
