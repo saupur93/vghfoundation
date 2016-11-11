@@ -1489,7 +1489,7 @@ p {
       @media screen and (min-width: 601px) {
         #main-menu #primary-nav li.menu-item-has-children:hover .sub-menu {
           opacity: 1;
-          max-height: 400px; } }
+          max-height: 700px; } }
 
 #language-switcher {
   margin: 0;
@@ -2294,6 +2294,7 @@ svg.icon.close-x {
       background-color: #f7f7f7;
       position: absolute;
       top: 0;
+      left: 0;
       z-index: 3;
       width: 100%;
       color: #575b5e; } }
@@ -3781,10 +3782,17 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       height: 100%; } }
   .panel.signature-events-panel #events-section .events-items .events-item {
     display: none; }
+    @media screen and (max-width: 768px) {
+      .panel.signature-events-panel #events-section .events-items .events-item {
+        height: 520px; } }
     .panel.signature-events-panel #events-section .events-items .events-item .container {
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
       padding-top: 50%; }
+      @media screen and (max-width: 768px) {
+        .panel.signature-events-panel #events-section .events-items .events-item .container {
+          padding-top: 0%;
+          top: 50%; } }
     .panel.signature-events-panel #events-section .events-items .events-item h5, .panel.signature-events-panel #events-section .events-items .events-item body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item .tribe-events-single-section-title {
       color: #fff;
       background-color: #7dab35; }
@@ -4007,6 +4015,10 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       height: 100vh; } }
   .single-signature_events .page-header .container, .single-signature_events .page-header .inner-wrap {
     height: 100%; }
+    @media screen and (max-width: 768px) {
+      .single-signature_events .page-header .container, .single-signature_events .page-header .inner-wrap {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem; } }
   .single-signature_events .page-header .cover-copy {
     width: 100%; }
     .single-signature_events .page-header .cover-copy h1 {
@@ -4673,6 +4685,11 @@ body.page-template-page-annual-report-php {
     transition: background 0.2s linear;
     font-family: "Karbon", Helvetica, Arial, sans-serif;
     border-bottom: 1px solid rgba(125, 171, 53, 0.5); }
+    @media screen and (max-width: 768px) {
+      .panel.accordion-panel .accordion-item .accordion-title {
+        font-size: 21px;
+        font-size: 1.3125rem;
+        padding: 1.875rem 3.125rem 1.875rem 1.25rem; } }
     .panel.accordion-panel .accordion-item .accordion-title:hover {
       background: #f3f3f3; }
     @media screen and (min-width: 769px) {
@@ -4733,24 +4750,41 @@ body.page-template-page-annual-report-php {
   .panel.tiered-tabs [data-tab-content] {
     display: none; }
     .panel.tiered-tabs [data-tab-content].active {
-      display: table; }
+      display: block; }
+  .panel.tiered-tabs .tab-group {
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .panel.tiered-tabs .tab-group {
+        padding-top: 2.5rem; } }
   .panel.tiered-tabs .main-tabs {
     list-style: none;
     width: 100%;
     float: left;
     margin-bottom: 1.5rem; }
+    @media screen and (max-width: 768px) {
+      .panel.tiered-tabs .main-tabs {
+        margin-top: 1.875rem;
+        padding: 0; } }
     .panel.tiered-tabs .main-tabs li {
       padding: 0;
       margin: 0;
       display: block;
       float: left;
-      width: 16.666%;
-      vertical-align: top;
-      padding-bottom: 1.25rem;
-      padding-right: 3.75rem;
       color: #b6b6b6;
       -webkit-transition: all 0.3s linear;
-      transition: all 0.3s linear; }
+      transition: all 0.3s linear;
+      width: 100%; }
+      @media screen and (min-width: 601px) {
+        .panel.tiered-tabs .main-tabs li {
+          width: 16.666%;
+          vertical-align: top;
+          padding-bottom: 1.25rem;
+          padding-right: 3.75rem; } }
+      @media screen and (max-width: 768px) {
+        .panel.tiered-tabs .main-tabs li {
+          display: none; }
+          .panel.tiered-tabs .main-tabs li.active {
+            display: block; } }
       .panel.tiered-tabs .main-tabs li[data-tab] {
         cursor: pointer; }
       .panel.tiered-tabs .main-tabs li.active, .panel.tiered-tabs .main-tabs li:hover {
@@ -4777,6 +4811,8 @@ body.page-template-page-annual-report-php {
           margin-top: 1rem;
           -webkit-transition: all 0.2s linear;
           transition: all 0.2s linear; }
+  .panel.tiered-tabs .narrow-wrap {
+    position: relative; }
   .panel.tiered-tabs .secondary-tabs {
     position: relative;
     padding: 0;
@@ -4786,7 +4822,11 @@ body.page-template-page-annual-report-php {
     margin-bottom: 2.5rem; }
     .panel.tiered-tabs .secondary-tabs li {
       display: inline-block;
-      margin-right: 2.5rem; }
+      margin-right: 0.625rem;
+      padding-left: 0; }
+      @media screen and (min-width: 601px) {
+        .panel.tiered-tabs .secondary-tabs li {
+          margin-right: 2.5rem; } }
       .panel.tiered-tabs .secondary-tabs li[data-tab] {
         cursor: pointer; }
       .panel.tiered-tabs .secondary-tabs li.active h4, .panel.tiered-tabs .secondary-tabs li.active body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li.active h2, .panel.tiered-tabs .secondary-tabs li.active body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li.active h1, .panel.tiered-tabs .secondary-tabs li.active .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li.active h1, .panel.tiered-tabs .secondary-tabs li.active body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li.active h1, .panel.tiered-tabs .secondary-tabs li.active .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li.active h1, .panel.tiered-tabs .secondary-tabs li:hover h4, .panel.tiered-tabs .secondary-tabs li:hover body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li:hover h2, .panel.tiered-tabs .secondary-tabs li:hover body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li:hover h1, .panel.tiered-tabs .secondary-tabs li:hover .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li:hover h1, .panel.tiered-tabs .secondary-tabs li:hover body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li:hover h1, .panel.tiered-tabs .secondary-tabs li:hover .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li:hover h1 {
@@ -4797,19 +4837,30 @@ body.page-template-page-annual-report-php {
       .panel.tiered-tabs .secondary-tabs li h4, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h2, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1 {
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 24px;
-        font-size: 1.5rem;
+        font-size: 14px;
+        font-size: 0.875rem;
         font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
         color: #b6b6b6; }
+        @media screen and (min-width: 601px) {
+          .panel.tiered-tabs .secondary-tabs li h4, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h2, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1 {
+            font-size: 24px;
+            font-size: 1.5rem; } }
+        @media screen and (max-width: 768px) {
+          .panel.tiered-tabs .secondary-tabs li h4, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h2, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li h1, .panel.tiered-tabs .secondary-tabs li .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1 {
+            margin-bottom: 0; } }
         .panel.tiered-tabs .secondary-tabs li h4:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h2:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1:after, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1:after, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1:after {
           content: '';
           width: 0%;
-          height: 3px;
+          height: 2px;
           background: transparent;
           display: block;
-          margin-top: 1rem;
+          margin-top: 0.25rem;
           -webkit-transition: all 0.2s linear;
           transition: all 0.2s linear; }
+          @media screen and (min-width: 601px) {
+            .panel.tiered-tabs .secondary-tabs li h4:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h2:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1:after, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.tiered-tabs .secondary-tabs li h1:after, .panel.tiered-tabs .secondary-tabs li .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1:after, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.tiered-tabs .secondary-tabs li h1:after {
+              margin-top: 1rem;
+              height: 3px; } }
       .panel.tiered-tabs .secondary-tabs li:last-child {
         margin-right: 0; }
   .panel.tiered-tabs .tab-content p {
@@ -4963,3 +5014,18 @@ body.page-template-page-annual-report-php {
 @media screen and (max-width: 768px) {
   .panel.footer-themes-menu {
     padding-top: 0; } }
+
+.header-wrap {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 1px);
+          transform: translate3d(0, 0, 1px);
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+
+.collapsed-nav .header-wrap {
+  -webkit-transform: translate3d(0, -100px, 1px);
+          transform: translate3d(0, -100px, 1px); }
