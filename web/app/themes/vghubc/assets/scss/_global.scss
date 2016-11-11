@@ -314,7 +314,6 @@ p {
   &.fixed-sub-nav {
     #sub-navigation {
       transform: translate3d(0, 0, 1px);
-
     }
   }
 }
@@ -454,7 +453,7 @@ p {
           .sub-menu {
             @include media($ptab){
               opacity: 1;
-              max-height:400px;
+              max-height:700px;
             }
           }
         }
@@ -1503,6 +1502,7 @@ svg.icon.close-x {
     background-color:#f7f7f7;
     position:absolute;
     top:0;
+    left:0;
     z-index:3;
     width: 100%;
     color:$body-text;
@@ -3641,10 +3641,17 @@ body.tribe-events-page-template {
       }
       .events-item {
         display:none;
+        @include media($ptabAndLess){
+          height:520px;
+        }
 
         .container {
           transform: translateY(-50%);
           padding-top: 50%;
+          @include media($ptabAndLess){
+            padding-top: 0%;
+            top:50%;
+          }
         }
 
         h5 {
@@ -3952,6 +3959,10 @@ body.tribe-events-page-template {
     }
     .container, .inner-wrap {
       height:100%;
+      @include media($ptabAndLess){
+        padding-left:rem(10);
+        padding-right:rem(10);
+      }
     }
     .cover-copy {
       width:100%;
@@ -4947,13 +4958,16 @@ body.page-template-page-annual-report-php {
     .accordion-title {
       padding:rem(30) rem(20);
       margin-bottom:0;
-
       color:$body-text;
       position: relative;
       cursor:pointer;
       transition: background 0.2s linear;
       font-family:$font;
       border-bottom:1px solid rgba($brand-green, 0.5);
+      @include media($ptabAndLess){
+        @include font-size(21px);
+        padding:rem(30) rem(50) rem(30) rem(20);
+      }
 
       &:hover {
         background:$lighter-grey;
@@ -5039,7 +5053,15 @@ body.page-template-page-annual-report-php {
     display:none;
 
     &.active {
-      display:table;
+      display:block;
+
+    }
+  }
+
+  .tab-group {
+    position:relative;
+    @include media($ptabAndLess){
+      padding-top:2.5rem;
     }
   }
 
@@ -5049,17 +5071,31 @@ body.page-template-page-annual-report-php {
     width:100%;
     float:left;
     margin-bottom:1.5rem;
+    @include media($ptabAndLess){
+      margin-top:rem(30);
+      padding:0;
+    }
     li {
       padding:0;
       margin:0;
       display:block;
       float:left;
-      width:16.666%;
-      vertical-align:top;
-      padding-bottom:rem(20);
-      padding-right:rem(60);
       color:$body-text-light;
       transition:all 0.3s linear;
+      width:100%;
+      @include media($ptab){
+        width:16.666%;
+        vertical-align:top;
+        padding-bottom:rem(20);
+        padding-right:rem(60);
+      }
+      @include media($ptabAndLess){
+        display:none;
+        &.active {
+          display:block;
+
+        }
+      }
 
       &[data-tab] {
         cursor:pointer;
@@ -5100,6 +5136,10 @@ body.page-template-page-annual-report-php {
     }
   }
 
+  .narrow-wrap {
+    position:relative;
+  }
+
   .secondary-tabs {
     position:relative;
     padding:0;
@@ -5107,9 +5147,14 @@ body.page-template-page-annual-report-php {
     float:left;
     width:100%;
     margin-bottom:2.5rem;
+
     li {
       display:inline-block;
-      margin-right:rem(40);
+      margin-right:rem(10);
+      padding-left:0;
+      @include media($ptab){
+        margin-right:rem(40);
+      }
 
       &[data-tab] {
         cursor:pointer;
@@ -5128,17 +5173,27 @@ body.page-template-page-annual-report-php {
       h4 {
         text-decoration:none;
         text-transform:uppercase;
-        @include font-size(24px);
+        @include font-size(14px);
         font-family:$font-med;
         color:$body-text-light;
+        @include media($ptab){
+          @include font-size(24px);
+        }
+        @include media($ptabAndLess){
+          margin-bottom:0;
+        }
         &:after {
           content:'';
           width:0%;
-          height:3px;
+          height:2px;
           background:transparent;
           display:block;
-          margin-top:1rem;
+          margin-top:0.25rem;
           transition:all 0.2s linear;
+          @include media($ptab){
+            margin-top:1rem;
+            height:3px;
+          }
         }
       }
 
@@ -5357,4 +5412,15 @@ body.page-template-page-annual-report-php {
   @include media($ptabAndLess){
     padding-top:0;
   }
+}
+
+.header-wrap {
+  transition: transform 0.3s ease;
+  transform: translate3d(0, 0, 1px);
+  position:fixed;
+  width:100%;
+  z-index:100;
+}
+.collapsed-nav .header-wrap {
+  transform: translate3d(0, -100px, 1px);
 }

@@ -53,11 +53,7 @@ Events
 - lightbox for gallery opening
 - different behaviour for navigation tiers - events?
 - donate buttons specific to events? change header button?
-
-- donor list page - responsive and CMS
-
-## Responsive
-- mobile subnav - accordion like
+- donor list page - CMS
 
 ## Annual Report
 - change animations
@@ -70,5 +66,6 @@ About Us
 
 - chinese content integration
 - click pager to go to slide
+- social sharing
 - set thumbnail sizes and regenerate thumbnails
 - browser testing

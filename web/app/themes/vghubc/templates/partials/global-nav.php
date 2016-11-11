@@ -1,3 +1,4 @@
+<div class="header-wrap">
 <header id="top-header">
   <div class="container">
     <div class="navburger">
@@ -94,3 +95,4 @@
   </div>
 </header>
 <?php endif; ?>
+</div>

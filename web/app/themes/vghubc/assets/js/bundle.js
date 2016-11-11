@@ -10467,7 +10467,7 @@ var App = function () {
       this.toggleMobileNav();
       this.submenuMobileDropdown();
 
-      if ((0, _jquery2.default)('.single-themes_post').length) {
+      if ((0, _jquery2.default)('#sub-navigation').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
       }
 
@@ -10677,7 +10677,7 @@ var App = function () {
       });
 
       sectionEl.find('.options li').on('click', function (e) {
-        // e.preventDefault();
+        e.preventDefault();
         mouseEnterItem(e);
         (0, _jquery2.default)(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
         var index = (0, _jquery2.default)(e.currentTarget).index();
@@ -10917,11 +10917,31 @@ var App = function () {
         (0, _jquery2.default)(this).addClass('active');
         (0, _jquery2.default)(this).parents('.tab-group').first().find('[data-tab-content]').removeClass('active');
         (0, _jquery2.default)(this).parents('.tab-group').first().find('[data-tab-content][data-tier="' + tierLevel + '"]').eq(index).addClass('active');
-
+        // if(tierLevel == 1) {
+        //   $(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').eq(0).addClass('active');
+        // }
         if (tierLevel == 1) {
-          console.log((0, _jquery2.default)(this).parents('.tab-group').first());
-          (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').eq(0).addClass('active');
+          (0, _jquery2.default)(this).parents('.panel').find('[data-tab-content="1"][data-tier="2"]').addClass('active');
         }
+      });
+
+      (0, _jquery2.default)('.mobile-tabs-nav').find('.switcher').on('click', function (e) {
+        (0, _jquery2.default)(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+      });
+
+      (0, _jquery2.default)('.mobile-tabs-nav').find('.options li').on('click', function (e) {
+        (0, _jquery2.default)(e.currentTarget).parents('.mobile-tabs-nav').toggleClass('open');
+        var index = (0, _jquery2.default)(e.currentTarget).index();
+        (0, _jquery2.default)('.mobile-tabs-nav').find('#themes-menu li').each(function (i) {
+          if (i == index) {
+            (0, _jquery2.default)(this).removeClass('hide');
+          } else {
+            (0, _jquery2.default)(this).addClass('hide');
+          }
+        });
+
+        (0, _jquery2.default)('.main-tabs li').removeClass('active');
+        (0, _jquery2.default)('.tab-group').find('.main-tabs li').eq(index).addClass('active');
       });
     }
 
@@ -11319,32 +11339,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var $ = require('jquery');
 
 var FixedHeaderScroll = function () {
-	function FixedHeaderScroll() {
-		_classCallCheck(this, FixedHeaderScroll);
+  function FixedHeaderScroll() {
+    _classCallCheck(this, FixedHeaderScroll);
 
-		// had to offset by 59 pixels because of pseudo element effect placed over top of the header image
-		this.navHeaderH = $('#top-header').outerHeight();
-		this.pageTop = $('.page-header').outerHeight() + this.navHeaderH;
-		this.events();
-	}
+    // had to offset by 59 pixels because of pseudo element effect placed over top of the header image
+    this.navHeaderH = $('#top-header').outerHeight();
+    this.pageTop = $('.page-header').outerHeight() + this.navHeaderH;
+    this.events();
+    this.lastScrollTop = 0;
+  }
 
-	_createClass(FixedHeaderScroll, [{
-		key: 'events',
-		value: function events() {
-			$(window).on('scroll', this.handleScroll.bind(this));
-		}
-	}, {
-		key: 'handleScroll',
-		value: function handleScroll(e) {
-			if (this.pageTop / 4 <= e.currentTarget.pageYOffset) {
-				$('body').addClass('fixed-sub-nav');
-			} else {
-				$('body').removeClass('fixed-sub-nav');
-			}
-		}
-	}]);
+  _createClass(FixedHeaderScroll, [{
+    key: 'events',
+    value: function events() {
+      $(window).on('scroll', this.handleScroll.bind(this));
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll(e) {
+      if (this.pageTop / 4 <= e.currentTarget.pageYOffset) {
+        $('body').addClass('fixed-sub-nav');
+      } else {
+        $('body').removeClass('fixed-sub-nav');
+      }
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > this.lastScrollTop) {
+        console.log('down');
+        console.log(st);
+        console.log(this.navHeaderH);
+        if (st > this.navHeaderH) {
+          $('body').addClass('collapsed-nav');
+        }
+        // down
+      } else {
+        $('body').removeClass('collapsed-nav');
+      }
+      this.lastScrollTop = st;
+    }
+  }]);
 
-	return FixedHeaderScroll;
+  return FixedHeaderScroll;
 }();
 
 module.exports = FixedHeaderScroll;
