@@ -25,9 +25,6 @@ class FixedHeaderScroll {
     }
     let st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > this.lastScrollTop){
-      console.log('down');
-      console.log(st);
-      console.log(this.navHeaderH);
       if(st > this.navHeaderH) {
         $('body').addClass('collapsed-nav');
       }
