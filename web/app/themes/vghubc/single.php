@@ -40,20 +40,19 @@
   </section>
 <?php endif; ?>
 
+<?php if($featured_image_gallery): ?>
+ <section class="panel inline-gallery-thumbs grid-slider">
+    <div class="full-container">
+    <?php foreach($featured_image_gallery as $key => $image): ?>
+    <div class="gallery-item item" data-overlay-image="<?php print $image['url']; ?>"><div class="thumb" style="background-image:url(<?php print $image['url']; ?>);"></div></div>
+    <?php endforeach; ?>
+   </div>
+  </section>
+<?php endif; ?>
+
   <article class="main-content padded-bottom panel">
     <div class="container">
       <div class="narrow-wrap">
-
-        <?php if($featured_image_gallery): ?>
-         <section class="panel inline-gallery-thumbs grid-slider">
-            <div class="full-container">
-            <?php foreach($featured_image_gallery as $key => $image): ?>
-            <div class="gallery-item item" data-overlay-image="<?php print $image['url']; ?>"><div class="thumb" style="background-image:url(<?php print $image['url']; ?>);"></div></div>
-            <?php endforeach; ?>
-           </div>
-          </section>
-        <?php endif; ?>
-
         <?php while (have_posts()) : the_post(); ?>
         <?php the_content(); ?>
         <?php endwhile; ?>
