@@ -18,8 +18,8 @@
         </div>
 
         <?php if (isset($row['fact'])): ?>
-        <?php foreach ($row['fact'] as $fact): ?>
-        <div class="col-third stat-col">
+        <?php foreach ($row['fact'] as $key => $fact): ?>
+        <div class="col-third stat-col<?php print ' col-'. $key; ?>">
           <div class="fact-row">
             <p><span class="larger-text"><?php print $fact['larger_text']; ?></span><br>
             <span class="small"><?php print $fact['description']; ?></span>

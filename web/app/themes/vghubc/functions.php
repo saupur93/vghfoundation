@@ -38,7 +38,10 @@ function custom_body_classes($classes) {
   is_front_page() ? $classes[] = 'front' : $classes[] = 'not-front';
 
   if (get_post_type(get_the_ID()) == 'themes_post') {
-    $classes[] = 'theme-section-' . sanitize_title(get_the_title(get_the_ID()));
+    // $classes[] = 'theme-section-' . sanitize_title(get_the_title(get_the_ID()));
+    $classes[] = 'theme-section-' . get_post(get_the_ID())->post_name;
+
+
   }
 
   if (get_post_type(get_the_ID()) == 'signature_events') {

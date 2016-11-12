@@ -427,7 +427,7 @@ p {
             margin-bottom:15px;
             float:left;
             margin-right:0;
-            width:120px;
+            width:150px;
             line-height:1.1;
             @include media($ptabAndLess){
               width:95%;
@@ -896,8 +896,8 @@ p {
   }
 
   &:hover {
-    color:$light-grey;
-    border-bottom:1px solid $light-grey;
+    color:rgba($brand-green, 0.7);
+    border-bottom:1px solid rgba($brand-green, 0.7);
   }
 
   &.small {
@@ -907,6 +907,10 @@ p {
   &.white {
     color:#fff;
     border-bottom:1px solid #fff;
+    &:hover {
+      color:rgba(#fff, 0.5);
+      border-bottom:1px solid rgba(#fff, 0.5);
+    }
   }
 }
 
@@ -1140,8 +1144,8 @@ span.highlighted-text {
     }
 
     @include media($laptopHeightOnly){
-      @include font-size(70px);
-      margin-top:-115px;
+      // @include font-size(70px);
+      // margin-top:-115px;
     }
 
   }
@@ -1396,7 +1400,7 @@ svg.icon.close-x {
       display:block;
       width:100%;
       height:100%;
-      background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+      background: linear-gradient(to right, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%);
     }
     @include media($ptabAndLess){
       background-position:50% 0;
@@ -1766,7 +1770,13 @@ svg.icon.close-x {
         letter-spacing:1px;
         font-size:1rem;
         @include media($wideDesk){
-          @include font-size(24px);
+          @include font-size(18px);
+        }
+
+        .read-more {
+          @include media($wideDesk){
+            @include font-size(16px);
+          }
         }
       }
     }
@@ -1867,6 +1877,10 @@ form {
   a {
     color:#fff;
     text-decoration:none;
+    transition: color 0.3s linear;
+    &:hover {
+      color:$brand-green;
+    }
   }
 
   .bottom-line {
@@ -1896,6 +1910,9 @@ form {
       color:#a6adae;
       text-decoration:none;
       margin:0 5px 0 0px;
+      &:hover {
+        color:$brand-green;
+      }
       @include media($ptab){
         margin:0 5px;
 
@@ -1906,6 +1923,10 @@ form {
   .green-text {
     a {
       color:$brand-green;
+      &:hover {
+        color:lighten($brand-green, 10%);
+      }
+
     }
   }
 
@@ -2202,7 +2223,7 @@ body.tribe-events-page-template {
   // margin-top:100px;
 
   &:before {
-    background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
     width:100%;
     height:100%;
     position:absolute;
@@ -2344,9 +2365,13 @@ body.tribe-events-page-template {
   .breadcrumb {
     padding-top:12px;
 
-    a {
+    a, a h3 {
       color:#fff;
       text-decoration:none;
+      transition:color 0.3s linear;
+      &:hover {
+        color:$brand-green;
+      }
     }
 
     .back-arrow {
@@ -3281,6 +3306,12 @@ body.tribe-events-page-template {
   .stat-col {
     @include media($ptab){
       width:35%;
+      &.col-0 {
+        padding-right:rem(40);
+      }
+      &.col-1 {
+        padding-left:rem(40);
+      }
     }
   }
 
@@ -3339,6 +3370,10 @@ body.tribe-events-page-template {
 .three-stories-panel {
   // display:table;
   width:100%;
+
+  @include media($ptabAndLess){
+    padding-bottom:rem(10) !important;
+  }
 
   .row {
     display:table;
@@ -3652,7 +3687,7 @@ body.tribe-events-page-template {
         display:block;
         width:100%;
         height:100%;
-        background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
       }
 
       &:after {
@@ -4128,6 +4163,10 @@ body.tribe-events-page-template {
 
 .panel.three-subpages-panel {
   @extend .three-stories-panel;
+
+  article.col-grid-4:last-child {
+    margin-bottom:0;
+  }
 
   .copy {
     padding:rem(15) rem(15);
@@ -4672,6 +4711,10 @@ body.page-template-page-annual-report-php {
 .single-post {
   width:100%;
 
+  .wp-caption {
+    width:100% !important;
+  }
+
   .large-featured-image {
     width:100%;
     height:rem(550);
@@ -4758,10 +4801,16 @@ body.page-template-page-annual-report-php {
       right:0;
       top:calc(100% + 0.75rem);
       max-width:rem(300);
+      @include font-size(14px);
+
       @include media($ptabAndLess){
         display:none;
       }
     }
+  }
+
+  .inline-gallery-thumbs {
+    margin-bottom: rem(60);
   }
 
   .title-only {
@@ -4791,6 +4840,7 @@ body.page-template-page-annual-report-php {
   .wp-caption-text {
     @extend .small;
     padding-top:rem(10);
+    @include font-size(14px);
   }
 
   blockquote {
@@ -5474,5 +5524,15 @@ body.page-template-page-annual-report-php {
     margin-bottom:rem(60);
     // padding-bottom:rem(50);
     border-bottom: 1px solid #ccc;
+  }
+}
+
+
+.page-template-page-home {
+  .panel.overview-panel {
+    @include media($ptab){
+      padding:9.5rem 0;
+    }
+
   }
 }
