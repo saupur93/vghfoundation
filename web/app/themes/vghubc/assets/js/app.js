@@ -112,7 +112,7 @@ class App {
       return false;
     };
 
-    if($(window).width() >= 768) {
+    if($(window).width() > 768) {
       if ($('body').hasClass('front')) {
         setTimeout(() => {
           $('body').toggleClass('latest-open');

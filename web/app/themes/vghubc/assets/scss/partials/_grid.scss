@@ -12,6 +12,8 @@ $ptabAndLess: new-breakpoint(max-width 768px);
 
 $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 
+$portraitOnly: new-breakpoint(min-width 768px max-width 1024px );
+
 
 .container, .full-container {
   @include fill-parent();
@@ -22,105 +24,105 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
   @include outer-container;
   padding-left:20px;
   padding-right:20px;
-  @include media($ptab){
+  @include media($tab){
     padding-left:30px;
     padding-right:30px;
   }
 
   .inner-wrap {
     position: relative;
-    @include media($ptab){
+    @include media($tab){
     margin: 0 5.933%;
     }
   }
 
   .narrow-wrap {
     position: relative;
-    @include media($ptab){
+    @include media($tab){
       margin: 0 20%
     }
   }
 }
 
 .col-grid-1 {
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(1);
   }
 }
 
 .col-grid-2 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(2);
   }
 }
 
 .col-grid-3 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(3);
   }
 }
 
 .col-grid-4 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(4);
   }
 }
 
 .col-grid-5 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(5);
   }
 }
 
 .col-grid-6 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(6);
   }
 }
 
 .col-grid-7 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(7);
   }
 }
 
 .col-grid-8 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(8);
   }
 }
 
 .col-grid-9 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(9);
   }
 }
 
 .col-grid-10 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(10);
   }
 }
 
 .col-grid-11 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(11);
   }
 }
 
 .col-grid-12 {
   vertical-align:top;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(12);
   }
 }
@@ -129,7 +131,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-third {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     width:33%;
   }
 }
@@ -137,7 +139,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-1 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(1);
   }
 }
@@ -145,7 +147,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-2 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(2);
   }
 }
@@ -153,7 +155,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-3 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(3);
   }
 }
@@ -161,7 +163,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-4 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(4);
   }
 }
@@ -169,7 +171,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-5 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(5);
   }
 }
@@ -177,7 +179,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-6 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(6);
   }
 }
@@ -185,7 +187,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-7 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(7);
   }
 }
@@ -193,7 +195,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-8 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(8);
   }
 }
@@ -201,7 +203,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-9 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(9);
   }
 }
@@ -209,7 +211,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-10 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(10);
   }
 }
@@ -217,7 +219,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-11 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(11);
   }
 }
@@ -225,7 +227,7 @@ $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 .col-float-12 {
   float:left;
   display:block;
-  @include media($ptab){
+  @include media($tab){
     @include span-columns(12);
   }
 }

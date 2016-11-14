@@ -48,11 +48,16 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 # TODO
 
+## QA Notes
+- Why Give Overview might be a little big on smaller screens
+- Too much space on theme outcomes/impact facts
+- Ways to Give intro text is too huge - cut copy or shrink text globally
+-
+
+
 ## Functional
 Events
 - lightbox for gallery opening
-- different behaviour for navigation tiers - events?
-- donate buttons specific to events? change header button?
 - donor list page - CMS
 
 ## Annual Report

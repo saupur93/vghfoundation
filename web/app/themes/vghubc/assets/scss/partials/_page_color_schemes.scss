@@ -633,3 +633,80 @@
     }
   }
 }
+
+
+
+.panel.surgery {
+  &.footer-cta {
+    background-color:$surgery;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$surgery;
+      }
+    }
+  }
+}
+.panel.cancer {
+  &.footer-cta {
+    background-color:$cancer;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$cancer;
+      }
+    }
+  }
+}
+
+.panel.heart .panel {
+  &.footer-cta {
+    background-color:$heartlung;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$heartlung;
+      }
+    }
+  }
+}
+.panel.innovation {
+  &.footer-cta {
+    background-color:$innovation;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$innovation;
+      }
+    }
+  }
+}
+.panel.community {
+  &.footer-cta {
+    background-color:$community;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$community;
+      }
+    }
+  }
+}
+
+.panel.brain .panel {
+  &.footer-cta {
+    background-color:$brainhealth;
+    a {
+      border-color:#fff;
+      color:#fff;
+      &:hover {
+        color:$brainhealth;
+      }
+    }
+  }
+}

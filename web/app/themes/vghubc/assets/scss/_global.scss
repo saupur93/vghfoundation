@@ -199,7 +199,7 @@ p {
   top: 5px;
   cursor:pointer;
   background:#fff;
-  @include media($ptab){
+  @include media($tab){
     display:none;
 
   }
@@ -255,7 +255,7 @@ p {
   @include media($tab){
     width: 100%;
   }
-  @include media($ptab){
+  @include media($tab){
     height:100px;
   }
 }
@@ -277,7 +277,7 @@ p {
     margin-left:45px;
     margin-top:-3px;
 
-    @include media($ptab){
+    @include media($tab){
       width:155px;
       height:57px;
       margin-left:0px;
@@ -321,6 +321,9 @@ p {
 
 #main-menu {
   float:left;
+  @include media($ptabAndLess){
+    width:100%;
+  }
 
   #primary-nav {
     margin:0;
@@ -328,6 +331,9 @@ p {
     padding:0;
     margin-left:60px;
     float:left;
+    @include media($ptabAndLess){
+      width:100%;
+    }
 
     li {
       display:inline-block;
@@ -352,6 +358,9 @@ p {
     }
 
     li {
+      &.current-page-parent a {
+        color:$brand-green;
+      }
       &.menu-item-has-children {
         position: relative;
         .submenu-trigger {
@@ -447,11 +456,15 @@ p {
               color:$brand-green;
             }
           }
+
+          .current-menu-item a {
+            color:$brand-green;
+          }
         }
 
         &:hover {
           .sub-menu {
-            @include media($ptab){
+            @include media($tab){
               opacity: 1;
               max-height:700px;
             }
@@ -517,7 +530,7 @@ p {
     border:0;
     padding:0px 20px;
     line-height:3.2;
-    @include media($ptab){
+    @include media($tab){
       padding:0px 55px;
       top:20px;
       bottom:20px;
@@ -537,7 +550,7 @@ p {
   #toggleLatest {
     margin-right:30px;
     position:relative;
-    @include media($ptab){
+    @include media($tab){
       &:before {
         width:0;
         height:2px;
@@ -585,42 +598,6 @@ p {
 }
 
 
-
-// #latest-menu {
-//  float:right;
-//  // margin-top:20px;
-
-//  .utility-menu {
-//    margin:0;
-//    margin-top:20px;
-//    padding:0;
-//    margin-left:60px;
-
-//    li {
-//      display:inline-block;
-//      margin-left:35px;
-//      position:relative;
-
-//      &:before {
-//        content: '/';
-//        color:#979797;
-//        @include font-size(11px);
-//        position:absolute;
-//        top:5px;
-//        left:-23px;
-//      }
-
-//      &:first-child {
-//        &:before {
-//          display:none;
-//        }
-//      }
-//    }
-//  }
-// }
-
-
-
 @keyframes showsSlideDown {
   0% {
     transform: translateY(-100%); }
@@ -652,7 +629,7 @@ p {
  }
 
 #latest-highlights {
-  @include media($ptab){
+  @include media($tab){
     position:absolute;
     width:100%;
     left:0;
@@ -672,7 +649,7 @@ p {
     background-size:cover;
     // text-align:center;
     border-right:2px solid #fff;
-    @include media($ptab){
+    @include media($tab){
       width:25%;
       height:160px;
     }
@@ -681,10 +658,13 @@ p {
       position:relative;
       border-right:0px solid #fff;
       margin-bottom:5px;
-      padding:15px 20px;
+      padding:rem(25) rem(20);
       .read-more {
         display:none;
       }
+    }
+    @include media($mobileOnly){
+      padding:15px 20px;
     }
 
     @include media($laptopHeightOnly){
@@ -707,7 +687,7 @@ p {
       height:100%;
       background:rgba(0,0,0,0.8);
       transition:background 0.3s linear;
-      @include media($ptab){
+      @include media($tab){
         z-index:-1;
       }
     }
@@ -727,20 +707,6 @@ p {
       background:rgba(255,255,255, 0.3);
     }
 
-    // &:nth-child(1):after{
-    //  background:rgba($purple, 0.5);
-    // }
-    // &:nth-child(2):after{
-    //  background:rgba($brand-green, 0.5);
-    // }
-    // &:nth-child(3):after{
-    //  background:rgba($light-blue, 0.5);
-    // }
-    // &:nth-child(4):after{
-    //  background:rgba($teal, 0.5);
-    // }
-
-
     &:hover {
       span {
         border-bottom:1px solid rgba(255,255,255,0.8);
@@ -752,26 +718,13 @@ p {
       &:after{
         background:$brand-green;
       }
-      // &:nth-child(1):after{
-      //  background:rgba($purple, 1);
-      // }
-      // &:nth-child(2):after{
-      //  background:rgba($brand-green, 1);
-      // }
-      // &:nth-child(3):after{
-      //  background:rgba($light-blue, 1);
-      // }
-      // &:nth-child(4):after{
-      //  background:rgba($teal, 1);
-      // }
-
     }
 
     a {
       display:block;
       z-index:1;
       position:relative;
-      @include media($ptab){
+      @include media($tab){
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -785,11 +738,9 @@ p {
       color:#fff;
       line-height:1;
       margin-bottom:0;
-      @include media($ptab){
+      @include media($tab){
         @include font-size(14px);
-
       }
-
     }
 
     span {
@@ -863,15 +814,6 @@ p {
     }
   }
 
-  // .latest-peek & {
-  //   height:15px;
-  //   .highlight {
-
-  //     a {
-  //       opacity: 0;
-  //     }
-  //   }
-  // }
 }
 
 
@@ -972,7 +914,7 @@ p {
     float:left;
     margin-bottom:1rem;
     width:100%;
-    @include media($ptab){
+    @include media($tab){
       width:50%;
       padding-right:5%;
     }
@@ -1004,7 +946,7 @@ span.highlighted-text {
 
 &.title-only {
   padding-top:rem(100);
-  @include media($ptab){
+  @include media($tab){
     padding-top:rem(160);
   }
   h1 {
@@ -1033,7 +975,7 @@ span.highlighted-text {
   height:520px;
   position:relative;
   padding-top:70px;
-  @include media($ptab){
+  @include media($tab){
     height:calc(100vh - 70px);
     padding-top:100px;
   }
@@ -1062,7 +1004,7 @@ span.highlighted-text {
     background:$brand-green;
     transition:background 1s linear;
     height:rem(240);
-    @include media($ptab){
+    @include media($tab){
       bottom:-70px;
       width:rem(600);
       min-height:375px;
@@ -1333,6 +1275,10 @@ svg.icon.close-x {
     min-height:900px;
     height:calc(100vh - 16.666vw);
   }
+  @include media($laptopHeightOnly){
+    min-height:auto;
+    height:90vh;
+  }
 
   @include media($ptabAndLess){
     overflow:hidden;
@@ -1359,6 +1305,9 @@ svg.icon.close-x {
       @include media($ptab){
         width:55%;
         margin-top:0px;
+      }
+      @include media($laptopHeightOnly){
+        width:75%;
       }
 
       h2 {
@@ -1824,13 +1773,13 @@ form {
   background-color:$footer-bg;
   color:#fff;
   padding:rem(30) 0;
-  @include media($ptab){
+  @include media($tab){
     padding:rem(60) 0;
   }
 
   .col {
     float:left;
-    @include media($ptab){
+    @include media($tab){
       padding-left:60px;
       width:250px;
     }
@@ -2214,13 +2163,12 @@ body.tribe-events-page-template {
   background-size:cover;
   background-position:50% 0px;
   margin-top:rem(70);
-  @include media($ptab){
+  @include media($tab){
     margin-top:0;
     padding-top:100px;
     height:560px;
     background-position:50% 100px;
   }
-  // margin-top:100px;
 
   &:before {
     background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
@@ -2239,7 +2187,7 @@ body.tribe-events-page-template {
   .container {
     position:relative;
     height:380px;
-    @include media($ptab){
+    @include media($tab){
       height:460px;
     }
     @include media($ptabAndLess){
@@ -2264,7 +2212,7 @@ body.tribe-events-page-template {
     margin:0;
     display:block;
     background:$brand-green;
-    @include media($ptab){
+    @include media($tab){
       width:rem(600);
       padding:60px 40px 0px 60px;
       @include font-size(24px);
@@ -2368,9 +2316,10 @@ body.tribe-events-page-template {
     a, a h3 {
       color:#fff;
       text-decoration:none;
-      transition:color 0.3s linear;
+      transition:opacity 0.3s linear;
+      opacity:1;
       &:hover {
-        color:$brand-green;
+        opacity:0.75;
       }
     }
 
@@ -2489,7 +2438,7 @@ body.tribe-events-page-template {
     top:0;
     z-index:0;
     width:100%;
-    @include media($ptab){
+    @include media($tab){
       height:rem(375);
       background-position:50% 50%;
     }
@@ -2498,7 +2447,7 @@ body.tribe-events-page-template {
   article {
     position:relative;
     padding-top:rem(135);
-    @include media($ptab){
+    @include media($tab){
       padding-top:rem(335);
     }
 
@@ -2551,7 +2500,7 @@ body.tribe-events-page-template {
     z-index:1;
     margin-bottom:rem(30);
     transition:all 0.2s linear;
-    @include media($ptab){
+    @include media($tab){
       width:calc(100% - 120px);
       margin-left:rem(60);
       margin-right:rem(60);
@@ -2903,7 +2852,7 @@ body.tribe-events-page-template {
       transition: opacity 0.2s cubic-bezier(0.28, 0, 0.18, 1);
       z-index: 1;
       margin-bottom:0;
-      @include media($ptab){
+      @include media($tab){
         width: 16.666vw;
       }
 
@@ -3005,7 +2954,7 @@ body.tribe-events-page-template {
     padding-left:15px;
     padding-right:15px;
     margin-top:rem(20);
-    @include media($ptab){
+    @include media($tab){
       margin-top:0;
       padding-left:20px;
       padding-right:0;
@@ -3062,7 +3011,7 @@ body.tribe-events-page-template {
       float:left;
       width:100%;
       height:100%;
-      @include media($ptab){
+      @include media($tab){
         width:calc(100% - 33.333%);
         padding-top:rem(120);
         padding-bottom:rem(120);
@@ -3070,13 +3019,13 @@ body.tribe-events-page-template {
       }
 
       .col-half:first-child {
-        @include media($ptab){
+        @include media($tab){
           padding-right:10%;
         }
       }
 
       .col-half:last-child {
-        @include media($ptab){
+        @include media($tab){
           padding-top:rem(32);
         }
         // padding-left:0%;
@@ -3089,7 +3038,7 @@ body.tribe-events-page-template {
       height:100%;
       width:100%;
       margin-bottom:2rem;
-      @include media($ptab){
+      @include media($tab){
         width:33.333%;
         margin-bottom:0;
       }
@@ -3104,7 +3053,7 @@ body.tribe-events-page-template {
         background-size:cover;
         background-position:50% 50%;
         height:rem(300);
-        @include media($ptab){
+        @include media($tab){
           height:100%;
           position:absolute;
           width:33.333%;
@@ -3121,7 +3070,7 @@ body.tribe-events-page-template {
           color:#fff;
           position:absolute;
           bottom:0;
-          @include media($ptab){
+          @include media($tab){
             padding:rem(40);
           }
 
@@ -3139,7 +3088,29 @@ body.tribe-events-page-template {
       width:100%;
       float:left;
       @include media($ptab){
+        width:50%;
+      }
+      @include media($tab){
+        width:100%;
         margin-bottom:rem(30);
+      }
+
+      &:first-child {
+        @include media($ptab){
+          padding-right:rem(20);
+        }
+        @include media($tab){
+          padding-right:0;
+        }
+      }
+
+      &:last-child {
+        @include media($ptab){
+          padding-left:rem(20);
+        }
+        @include media($tab){
+          padding-left:0;
+        }
       }
 
       h5 {
@@ -3149,7 +3120,7 @@ body.tribe-events-page-template {
       .left, .right {
         float:left;
         width:50%;
-        @include media($ptab){
+        @include media($tab){
           width:rem(155);
         }
       }
@@ -3200,7 +3171,8 @@ body.tribe-events-page-template {
   color:#fff;
   text-align:center;
   background-size:cover;
-  background-repeat:50% 50%;
+  background-position:50% 50%;
+  background-repeat:no-repeat;
 
   .button {
     padding:rem(13) rem(25);
@@ -3636,6 +3608,10 @@ body.tribe-events-page-template {
       min-height:900px;
       height:calc(100vh - 16.666vw);
     }
+    @include media($laptopHeightOnly){
+      min-height:auto;
+      height:95vh;
+    }
 
     &.expanded-overlay {
       &:before {
@@ -3726,6 +3702,9 @@ body.tribe-events-page-template {
           @include media($ptabAndLess){
             padding-top: 0%;
             top:50%;
+          }
+          @include media($laptopHeightOnly){
+            padding-top: 40%;
           }
         }
 

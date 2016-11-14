@@ -75,7 +75,7 @@
   <div class="container breadcrumb">
   <h3><a href="/why-give"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> Why Give</a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
   <?php $donation_link = null !== get_field('donation_url', get_the_ID()) ? get_field('donation_url', get_the_ID()) : false; ?>
-  <?php if($donation_link): ?>
+  <?php if($donation_link && !empty($donation_link)): ?>
   <a href="<?php print $donation_link; ?>" target="_blank" class="sub-header-donate"><h3>Donate to <?php print get_the_title(get_the_ID()); ?></h3></a>
   <?php endif; ?>
   </div>
@@ -87,6 +87,10 @@
 <header id="sub-navigation">
   <div class="container breadcrumb">
   <h3><a href="/events"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> Events</a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
+  <?php $donation_link = null !== get_field('donation_url', get_the_ID()) ? get_field('donation_url', get_the_ID()) : false; ?>
+  <?php if($donation_link && !empty($donation_link)): ?>
+  <a href="<?php print $donation_link; ?>" target="_blank" class="sub-header-donate"><h3>Donate to this event</h3></a>
+  <?php endif; ?>
   </div>
 </header>
 <?php endif; ?>

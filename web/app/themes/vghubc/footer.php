@@ -1,17 +1,17 @@
 <footer id="footer">
   <div class="container">
-    <div class="col-grid-3">
+    <div class="col-grid-3 first">
       <img src="<?php bloginfo('template_directory'); ?>/assets/img/VGHUBC-logo-footer.svg" />
     </div>
 
-    <div class="col-grid-3">
+    <div class="col-grid-3 second">
       <?php $address_content = get_field('global_footer_address_area', 'option'); ?>
       <?php if($address_content): ?>
         <?php print $address_content; ?>
       <?php endif; ?>
     </div>
 
-    <div class="col-grid-6">
+    <div class="col-grid-6 third">
       <div class="footer-right">
 
 

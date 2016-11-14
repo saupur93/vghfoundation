@@ -380,99 +380,99 @@ th {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .container {
       padding-left: 30px;
       padding-right: 30px; } }
   .container .inner-wrap {
     position: relative; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .container .inner-wrap {
         margin: 0 5.933%; } }
   .container .narrow-wrap {
     position: relative; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .container .narrow-wrap {
         margin: 0 20%; } }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 769px) {
   .col-grid-1 {
     display: table-cell;
     width: 8.33333%; } }
 
 .col-grid-2 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-2 {
       display: table-cell;
       width: 16.66667%; } }
 
 .col-grid-3 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-3 {
       display: table-cell;
       width: 25%; } }
 
 .col-grid-4 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-4 {
       display: table-cell;
       width: 33.33333%; } }
 
 .col-grid-5 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-5 {
       display: table-cell;
       width: 41.66667%; } }
 
 .col-grid-6 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-6 {
       display: table-cell;
       width: 50%; } }
 
 .col-grid-7 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-7 {
       display: table-cell;
       width: 58.33333%; } }
 
 .col-grid-8 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-8 {
       display: table-cell;
       width: 66.66667%; } }
 
 .col-grid-9 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-9 {
       display: table-cell;
       width: 75%; } }
 
 .col-grid-10 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-10 {
       display: table-cell;
       width: 83.33333%; } }
 
 .col-grid-11 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-11 {
       display: table-cell;
       width: 91.66667%; } }
 
 .col-grid-12 {
   vertical-align: top; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-grid-12 {
       display: table-cell;
       width: 100%; } }
@@ -480,14 +480,14 @@ th {
 .col-third {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-third {
       width: 33%; } }
 
 .col-float-1 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-1 {
       display: table-cell;
       width: 8.33333%; } }
@@ -495,7 +495,7 @@ th {
 .col-float-2 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-2 {
       display: table-cell;
       width: 16.66667%; } }
@@ -503,7 +503,7 @@ th {
 .col-float-3 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-3 {
       display: table-cell;
       width: 25%; } }
@@ -511,7 +511,7 @@ th {
 .col-float-4 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-4 {
       display: table-cell;
       width: 33.33333%; } }
@@ -519,7 +519,7 @@ th {
 .col-float-5 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-5 {
       display: table-cell;
       width: 41.66667%; } }
@@ -527,7 +527,7 @@ th {
 .col-float-6 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-6 {
       display: table-cell;
       width: 50%; } }
@@ -535,7 +535,7 @@ th {
 .col-float-7 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-7 {
       display: table-cell;
       width: 58.33333%; } }
@@ -543,7 +543,7 @@ th {
 .col-float-8 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-8 {
       display: table-cell;
       width: 66.66667%; } }
@@ -551,7 +551,7 @@ th {
 .col-float-9 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-9 {
       display: table-cell;
       width: 75%; } }
@@ -559,7 +559,7 @@ th {
 .col-float-10 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-10 {
       display: table-cell;
       width: 83.33333%; } }
@@ -567,7 +567,7 @@ th {
 .col-float-11 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-11 {
       display: table-cell;
       width: 91.66667%; } }
@@ -575,7 +575,7 @@ th {
 .col-float-12 {
   float: left;
   display: block; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .col-float-12 {
       display: table-cell;
       width: 100%; } }
@@ -1126,6 +1126,54 @@ p.date {
     border-color: #fff;
     color: #fff; }
 
+.panel.surgery.footer-cta {
+  background-color: #00AAE3; }
+  .panel.surgery.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.surgery.footer-cta a:hover {
+      color: #00AAE3; }
+
+.panel.cancer.footer-cta {
+  background-color: #8E3A80; }
+  .panel.cancer.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.cancer.footer-cta a:hover {
+      color: #8E3A80; }
+
+.panel.heart .panel.footer-cta {
+  background-color: #ED6062; }
+  .panel.heart .panel.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.heart .panel.footer-cta a:hover {
+      color: #ED6062; }
+
+.panel.innovation.footer-cta {
+  background-color: #ED8B00; }
+  .panel.innovation.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.innovation.footer-cta a:hover {
+      color: #ED8B00; }
+
+.panel.community.footer-cta {
+  background-color: #FFB81C; }
+  .panel.community.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.community.footer-cta a:hover {
+      color: #FFB81C; }
+
+.panel.brain .panel.footer-cta {
+  background-color: #6DCDB8; }
+  .panel.brain .panel.footer-cta a {
+    border-color: #fff;
+    color: #fff; }
+    .panel.brain .panel.footer-cta a:hover {
+      color: #6DCDB8; }
+
 /**
  * Box sizing
  */
@@ -1282,7 +1330,7 @@ p {
   top: 5px;
   cursor: pointer;
   background: #fff; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .navburger {
       display: none; } }
 
@@ -1329,7 +1377,7 @@ p {
   @media screen and (min-width: 769px) {
     #top-header {
       width: 100%; } }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     #top-header {
       height: 100px; } }
 
@@ -1349,7 +1397,7 @@ p {
     color: transparent;
     margin-left: 45px;
     margin-top: -3px; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .site-name a {
         width: 155px;
         height: 57px;
@@ -1386,12 +1434,18 @@ p {
 
 #main-menu {
   float: left; }
+  @media screen and (max-width: 768px) {
+    #main-menu {
+      width: 100%; } }
   #main-menu #primary-nav {
     margin: 0;
     margin-top: 20px;
     padding: 0;
     margin-left: 60px;
     float: left; }
+    @media screen and (max-width: 768px) {
+      #main-menu #primary-nav {
+        width: 100%; } }
     #main-menu #primary-nav li {
       display: inline-block;
       margin-right: 30px;
@@ -1407,6 +1461,8 @@ p {
         left: -20px; }
       #main-menu #primary-nav li:first-child:before {
         display: none; }
+    #main-menu #primary-nav li.current-page-parent a {
+      color: #7dab35; }
     #main-menu #primary-nav li.menu-item-has-children {
       position: relative; }
       #main-menu #primary-nav li.menu-item-has-children .submenu-trigger {
@@ -1485,7 +1541,9 @@ p {
           font-size: 0.6875rem; }
           #main-menu #primary-nav li.menu-item-has-children .sub-menu a:hover {
             color: #7dab35; }
-      @media screen and (min-width: 601px) {
+        #main-menu #primary-nav li.menu-item-has-children .sub-menu .current-menu-item a {
+          color: #7dab35; }
+      @media screen and (min-width: 769px) {
         #main-menu #primary-nav li.menu-item-has-children:hover .sub-menu {
           opacity: 1;
           max-height: 700px; } }
@@ -1547,7 +1605,7 @@ p {
   border: 0;
   padding: 0px 20px;
   line-height: 3.2; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     #top-header .big-donate {
       padding: 0px 55px;
       top: 20px;
@@ -1565,7 +1623,7 @@ p {
 #top-header #toggleLatest {
   margin-right: 30px;
   position: relative; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     #top-header #toggleLatest:before {
       width: 0;
       height: 2px;
@@ -1653,7 +1711,7 @@ p {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); } }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 769px) {
   #latest-highlights {
     position: absolute;
     width: 100%;
@@ -1672,7 +1730,7 @@ p {
   padding: 15px 30px;
   background-size: cover;
   border-right: 2px solid #fff; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     #latest-highlights .highlight {
       width: 25%;
       height: 160px; } }
@@ -1681,9 +1739,12 @@ p {
       position: relative;
       border-right: 0px solid #fff;
       margin-bottom: 5px;
-      padding: 15px 20px; }
+      padding: 1.5625rem 1.25rem; }
       #latest-highlights .highlight .read-more {
         display: none; } }
+  @media screen and (max-width: 600px) {
+    #latest-highlights .highlight {
+      padding: 15px 20px; } }
   @media screen and (min-width: 1024px) and (max-height: 768px) {
     #latest-highlights .highlight {
       height: 120px; } }
@@ -1703,7 +1764,7 @@ p {
     background: rgba(0, 0, 0, 0.8);
     -webkit-transition: background 0.3s linear;
     transition: background 0.3s linear; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       #latest-highlights .highlight:before {
         z-index: -1; } }
   #latest-highlights .highlight:after {
@@ -1731,7 +1792,7 @@ p {
     display: block;
     z-index: 1;
     position: relative; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       #latest-highlights .highlight a {
         position: relative;
         top: 50%;
@@ -1745,7 +1806,7 @@ p {
     color: #fff;
     line-height: 1;
     margin-bottom: 0; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       #latest-highlights .highlight h2, #latest-highlights .highlight .title-only h1, .title-only #latest-highlights .highlight h1, #latest-highlights .highlight .single-post .large-featured-image h1, .single-post .large-featured-image #latest-highlights .highlight h1 {
         font-size: 14px;
         font-size: 0.875rem; } }
@@ -1892,7 +1953,7 @@ p {
     float: left;
     margin-bottom: 1rem;
     width: 100%; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel .col-half {
         width: 50%;
         padding-right: 5%; } }
@@ -1912,7 +1973,7 @@ span.highlighted-text {
 
 .title-only {
   padding-top: 6.25rem; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .title-only {
       padding-top: 10rem; } }
 
@@ -1936,7 +1997,7 @@ span.highlighted-text {
   height: 520px;
   position: relative;
   padding-top: 70px; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .hero-content, .panel.latest-header {
       height: calc(100vh - 70px);
       padding-top: 100px; } }
@@ -1962,7 +2023,7 @@ span.highlighted-text {
     -webkit-transition: background 1s linear;
     transition: background 1s linear;
     height: 15rem; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .hero-content .hero-copy, .panel.latest-header .hero-copy {
         bottom: -70px;
         width: 37.5rem;
@@ -2170,6 +2231,10 @@ svg.icon.close-x {
     #themes-section {
       min-height: 900px;
       height: calc(100vh - 16.666vw); } }
+  @media screen and (min-width: 1024px) and (max-height: 768px) {
+    #themes-section {
+      min-height: auto;
+      height: 90vh; } }
   @media screen and (max-width: 768px) {
     #themes-section {
       overflow: hidden; } }
@@ -2192,6 +2257,9 @@ svg.icon.close-x {
         #themes-section .container .summary {
           width: 55%;
           margin-top: 0px; } }
+      @media screen and (min-width: 1024px) and (max-height: 768px) {
+        #themes-section .container .summary {
+          width: 75%; } }
       @media screen and (max-width: 768px) {
         #themes-section .container .summary h2, #themes-section .container .summary .title-only h1, .title-only #themes-section .container .summary h1, #themes-section .container .summary .single-post .large-featured-image h1, .single-post .large-featured-image #themes-section .container .summary h1 {
           margin-top: 1.5rem; } }
@@ -2536,12 +2604,12 @@ form input[type="submit"] {
   background-color: #575b5c;
   color: #fff;
   padding: 1.875rem 0; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     #footer {
       padding: 3.75rem 0; } }
   #footer .col {
     float: left; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       #footer .col {
         padding-left: 60px;
         width: 250px; } }
@@ -2806,7 +2874,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   background-size: cover;
   background-position: 50% 0px;
   margin-top: 4.375rem; }
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 769px) {
     .panel.page-header {
       margin-top: 0;
       padding-top: 100px;
@@ -2828,7 +2896,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .panel.page-header .container {
     position: relative;
     height: 380px; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.page-header .container {
         height: 460px; } }
     @media screen and (max-width: 768px) {
@@ -2850,7 +2918,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin: 0;
     display: block;
     background: #7dab35; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.page-header .header-copy {
         width: 37.5rem;
         padding: 60px 40px 0px 60px;
@@ -2926,10 +2994,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     #sub-navigation .breadcrumb a, #sub-navigation .breadcrumb a h3, #sub-navigation .breadcrumb a body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events #sub-navigation .breadcrumb a .tribe-events-single-event-title {
       color: #fff;
       text-decoration: none;
-      -webkit-transition: color 0.3s linear;
-      transition: color 0.3s linear; }
+      -webkit-transition: opacity 0.3s linear;
+      transition: opacity 0.3s linear;
+      opacity: 1; }
       #sub-navigation .breadcrumb a:hover, #sub-navigation .breadcrumb a h3:hover, #sub-navigation .breadcrumb a body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title:hover, body.tribe-events-page-template.single-tribe_events #sub-navigation .breadcrumb a .tribe-events-single-event-title:hover {
-        color: #7dab35; }
+        opacity: 0.75; }
     #sub-navigation .breadcrumb .back-arrow {
       margin-right: 10px; }
     #sub-navigation .breadcrumb .separator {
@@ -3012,14 +3081,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     top: 0;
     z-index: 0;
     width: 100%; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.three-column-list .thumb {
         height: 23.4375rem;
         background-position: 50% 50%; } }
   .panel.three-column-list article {
     position: relative;
     padding-top: 8.4375rem; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.three-column-list article {
         padding-top: 20.9375rem; } }
     .panel.three-column-list article h4, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h2, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .panel.three-column-list article h1, .panel.three-column-list article .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h1, .panel.three-column-list article body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .panel.three-column-list article h1, .panel.three-column-list article .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .panel.three-column-list article h1 {
@@ -3060,7 +3129,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-bottom: 1.875rem;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.three-column-list .copy {
         width: calc(100% - 120px);
         margin-left: 3.75rem;
@@ -3250,7 +3319,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       transition: opacity 0.2s cubic-bezier(0.28, 0, 0.18, 1);
       z-index: 1;
       margin-bottom: 0; }
-      @media screen and (min-width: 601px) {
+      @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .top-menu li {
           width: 16.666vw; } }
       @media screen and (max-width: 768px) {
@@ -3323,7 +3392,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     float: left;
     width: 100%;
     height: 100%; }
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
       .panel.themes-overview-stats .tab-content {
         margin-top: 0;
         padding-left: 20px;
@@ -3363,16 +3432,16 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       float: left;
       width: 100%;
       height: 100%; }
-      @media screen and (min-width: 601px) {
+      @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-body {
           width: calc(100% - 33.333%);
           padding-top: 7.5rem;
           padding-bottom: 7.5rem;
           padding-left: calc(50vw - 640px); } }
-      @media screen and (min-width: 601px) {
+      @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-body .col-half:first-child {
           padding-right: 10%; } }
-      @media screen and (min-width: 601px) {
+      @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-body .col-half:last-child {
           padding-top: 2rem; } }
     .panel.themes-overview-stats .tab-content .tab-sidebar {
@@ -3380,7 +3449,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       height: 100%;
       width: 100%;
       margin-bottom: 2rem; }
-      @media screen and (min-width: 601px) {
+      @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-sidebar {
           width: 33.333%;
           margin-bottom: 0; } }
@@ -3393,7 +3462,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         background-size: cover;
         background-position: 50% 50%;
         height: 18.75rem; }
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: 769px) {
           .panel.themes-overview-stats .tab-content .tab-sidebar figure {
             height: 100%;
             position: absolute;
@@ -3407,7 +3476,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           color: #fff;
           position: absolute;
           bottom: 0; }
-          @media screen and (min-width: 601px) {
+          @media screen and (min-width: 769px) {
             .panel.themes-overview-stats .tab-content .tab-sidebar figure figcaption {
               padding: 2.5rem; } }
           .panel.themes-overview-stats .tab-content .tab-sidebar figure figcaption p {
@@ -3421,13 +3490,29 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       float: left; }
       @media screen and (min-width: 601px) {
         .panel.themes-overview-stats .tab-content .fact-row {
+          width: 50%; } }
+      @media screen and (min-width: 769px) {
+        .panel.themes-overview-stats .tab-content .fact-row {
+          width: 100%;
           margin-bottom: 1.875rem; } }
+      @media screen and (min-width: 601px) {
+        .panel.themes-overview-stats .tab-content .fact-row:first-child {
+          padding-right: 1.25rem; } }
+      @media screen and (min-width: 769px) {
+        .panel.themes-overview-stats .tab-content .fact-row:first-child {
+          padding-right: 0; } }
+      @media screen and (min-width: 601px) {
+        .panel.themes-overview-stats .tab-content .fact-row:last-child {
+          padding-left: 1.25rem; } }
+      @media screen and (min-width: 769px) {
+        .panel.themes-overview-stats .tab-content .fact-row:last-child {
+          padding-left: 0; } }
       .panel.themes-overview-stats .tab-content .fact-row h5, .panel.themes-overview-stats .tab-content .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.themes-overview-stats .tab-content .fact-row .tribe-events-single-section-title {
         margin-bottom: 1.875rem; }
       .panel.themes-overview-stats .tab-content .fact-row .left, .panel.themes-overview-stats .tab-content .fact-row .right {
         float: left;
         width: 50%; }
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: 769px) {
           .panel.themes-overview-stats .tab-content .fact-row .left, .panel.themes-overview-stats .tab-content .fact-row .right {
             width: 9.6875rem; } }
       .panel.themes-overview-stats .tab-content .fact-row .left p {
@@ -3458,7 +3543,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   color: #fff;
   text-align: center;
   background-size: cover;
-  background-repeat: 50% 50%; }
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
   .panel.bg-image-cta .button, .panel.bg-image-cta form input[type="submit"], form .panel.bg-image-cta input[type="submit"], .panel.bg-image-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-image-cta .tribe-events-read-more, .panel.bg-color-cta .button, .panel.bg-color-cta form input[type="submit"], form .panel.bg-color-cta input[type="submit"], .panel.bg-color-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-color-cta .tribe-events-read-more, .cta-panel .button, .cta-panel form input[type="submit"], form .cta-panel input[type="submit"], .cta-panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .cta-panel .tribe-events-read-more {
     padding: 0.8125rem 1.5625rem;
     min-width: 13.75rem; }
@@ -3777,6 +3863,10 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .panel.signature-events-panel #events-section {
       min-height: 900px;
       height: calc(100vh - 16.666vw); } }
+  @media screen and (min-width: 1024px) and (max-height: 768px) {
+    .panel.signature-events-panel #events-section {
+      min-height: auto;
+      height: 95vh; } }
   .panel.signature-events-panel #events-section.expanded-overlay:before {
     position: absolute;
     top: 0;
@@ -3852,6 +3942,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         .panel.signature-events-panel #events-section .events-items .events-item .container {
           padding-top: 0%;
           top: 50%; } }
+      @media screen and (min-width: 1024px) and (max-height: 768px) {
+        .panel.signature-events-panel #events-section .events-items .events-item .container {
+          padding-top: 40%; } }
     .panel.signature-events-panel #events-section .events-items .events-item h5, .panel.signature-events-panel #events-section .events-items .events-item body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item .tribe-events-single-section-title {
       color: #fff;
       background-color: #7dab35; }
