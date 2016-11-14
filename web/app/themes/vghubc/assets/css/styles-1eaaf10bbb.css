@@ -1142,12 +1142,12 @@ p.date {
     .panel.cancer.footer-cta a:hover {
       color: #8E3A80; }
 
-.panel.heart .panel.footer-cta {
+.panel.heart-lung.footer-cta {
   background-color: #ED6062; }
-  .panel.heart .panel.footer-cta a {
+  .panel.heart-lung.footer-cta a {
     border-color: #fff;
     color: #fff; }
-    .panel.heart .panel.footer-cta a:hover {
+    .panel.heart-lung.footer-cta a:hover {
       color: #ED6062; }
 
 .panel.innovation.footer-cta {
@@ -1166,12 +1166,12 @@ p.date {
     .panel.community.footer-cta a:hover {
       color: #FFB81C; }
 
-.panel.brain .panel.footer-cta {
+.panel.brain-health.footer-cta {
   background-color: #6DCDB8; }
-  .panel.brain .panel.footer-cta a {
+  .panel.brain-health.footer-cta a {
     border-color: #fff;
     color: #fff; }
-    .panel.brain .panel.footer-cta a:hover {
+    .panel.brain-health.footer-cta a:hover {
       color: #6DCDB8; }
 
 /**
@@ -1421,12 +1421,16 @@ p {
   color: #7dab35; }
 
 .single-themes_post #sub-navigation {
-  -webkit-transform: translate3d(0, -45px, 1px);
-          transform: translate3d(0, -45px, 1px);
+  -webkit-transform: translate3d(0, -30px, 1px);
+          transform: translate3d(0, -30px, 1px);
   -webkit-transition: -webkit-transform 0.25s linear;
   transition: -webkit-transform 0.25s linear;
   transition: transform 0.25s linear;
   transition: transform 0.25s linear, -webkit-transform 0.25s linear; }
+  @media screen and (min-width: 769px) {
+    .single-themes_post #sub-navigation {
+      -webkit-transform: translate3d(0, -45px, 1px);
+              transform: translate3d(0, -45px, 1px); } }
 
 .single-themes_post.fixed-sub-nav #sub-navigation {
   -webkit-transform: translate3d(0, 0, 1px);
@@ -2704,6 +2708,18 @@ form input[type="submit"] {
         color: #7dab35;
         background-color: #fff;
         border: 2px solid #fff; }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #footer .col-grid-3.first {
+      float: left;
+      width: 50%;
+      margin-bottom: 2.5rem; }
+    #footer .col-grid-3.second {
+      float: left;
+      width: 50%;
+      clear: both; }
+    #footer .col-grid-6.third {
+      float: left;
+      width: 50%; } }
 
 body.tribe-events-page-template #tribe-events-bar {
   margin-top: 3.5rem;
@@ -3462,8 +3478,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         background-size: cover;
         background-position: 50% 50%;
         height: 18.75rem; }
+        @media screen and (min-width: 601px) {
+          .panel.themes-overview-stats .tab-content .tab-sidebar figure {
+            background-position: 50% 0%;
+            height: 28.125rem;
+            background-size: 100%; } }
         @media screen and (min-width: 769px) {
           .panel.themes-overview-stats .tab-content .tab-sidebar figure {
+            background-position: 50% 50%;
+            background-size: cover;
             height: 100%;
             position: absolute;
             width: 33.333%;
@@ -3475,13 +3498,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           padding: 1.25rem;
           color: #fff;
           position: absolute;
-          bottom: 0; }
+          bottom: 0;
+          width: 100%; }
           @media screen and (min-width: 769px) {
             .panel.themes-overview-stats .tab-content .tab-sidebar figure figcaption {
               padding: 2.5rem; } }
           .panel.themes-overview-stats .tab-content .tab-sidebar figure figcaption p {
             margin-bottom: 0; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 600px) {
               .panel.themes-overview-stats .tab-content .tab-sidebar figure figcaption p {
                 font-size: 13px;
                 font-size: 0.8125rem; } }
@@ -3533,11 +3557,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       .panel.themes-overview-stats .tab-content .fact-row h5, .panel.themes-overview-stats .tab-content .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.themes-overview-stats .tab-content .fact-row .tribe-events-single-section-title {
         margin-bottom: 1rem; }
       .panel.themes-overview-stats .tab-content .fact-row .larger-text {
-        font-size: 42px;
-        font-size: 2.625rem;
+        font-size: 36px;
+        font-size: 2.25rem;
         line-height: 1.1;
         margin-bottom: 0.625rem;
         display: inline-block; }
+        @media screen and (min-width: 769px) {
+          .panel.themes-overview-stats .tab-content .fact-row .larger-text {
+            font-size: 42px;
+            font-size: 2.625rem; } }
 
 .panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color: #fff;

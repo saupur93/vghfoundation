@@ -307,8 +307,11 @@ p {
 
 .single-themes_post {
   #sub-navigation {
-    transform: translate3d(0, -45px, 1px);
+    transform: translate3d(0, -30px, 1px);
     transition: transform 0.25s linear;
+    @include media($tab){
+      transform: translate3d(0, -45px, 1px);
+    }
   }
 
   &.fixed-sub-nav {
@@ -1912,6 +1915,25 @@ form {
     }
   }
 
+  @include media($portraitOnly){
+    .col-grid-3.first {
+      float:left;
+      width:50%;
+      margin-bottom:rem(40);
+    }
+
+    .col-grid-3.second {
+      float:left;
+      width:50%;
+      clear:both;
+    }
+
+    .col-grid-6.third {
+      float:left;
+      width:50%;
+    }
+  }
+
 }
 
 body.tribe-events-page-template {
@@ -3053,7 +3075,15 @@ body.tribe-events-page-template {
         background-size:cover;
         background-position:50% 50%;
         height:rem(300);
+        @include media($ptab){
+          background-position:50% 0%;
+          height:rem(450);
+          background-size:100%;
+
+        }
         @include media($tab){
+          background-position:50% 50%;
+          background-size:cover;
           height:100%;
           position:absolute;
           width:33.333%;
@@ -3070,13 +3100,14 @@ body.tribe-events-page-template {
           color:#fff;
           position:absolute;
           bottom:0;
+          width:100%;
           @include media($tab){
             padding:rem(40);
           }
 
           p {
             margin-bottom:0;
-            @include media($ptabAndLess){
+            @include media($mobileOnly){
               @include font-size(13px);
             }
           }
@@ -3156,10 +3187,13 @@ body.tribe-events-page-template {
 
 
       .larger-text {
-        @include font-size(42px);
+        @include font-size(36px);
         line-height:1.1;
         margin-bottom:rem(10);
         display:inline-block;
+        @include media($tab){
+          @include font-size(42px);
+        }
       }
     }
   }
