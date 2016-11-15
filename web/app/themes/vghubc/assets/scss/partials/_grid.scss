@@ -32,13 +32,19 @@ $portraitOnly: new-breakpoint(min-width 768px max-width 1024px );
   .inner-wrap {
     position: relative;
     @include media($tab){
-    margin: 0 5.933%;
+      margin: 0 3%;
+    }
+    @include media($desk){
+      margin: 0 5.933%;
     }
   }
 
   .narrow-wrap {
     position: relative;
     @include media($tab){
+      margin: 0 10%
+    }
+    @include media($desk){
       margin: 0 20%
     }
   }
