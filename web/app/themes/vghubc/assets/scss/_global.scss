@@ -556,7 +556,7 @@ p {
   #toggleLatest {
     margin-right:30px;
     position:relative;
-    @include media($tab){
+    @include media($regularNav){
       &:before {
         width:0;
         height:2px;
@@ -635,7 +635,7 @@ p {
  }
 
 #latest-highlights {
-  @include media($tab){
+  @include media($regularNav){
     position:absolute;
     width:100%;
     left:0;
@@ -655,12 +655,12 @@ p {
     background-size:cover;
     // text-align:center;
     border-right:2px solid #fff;
-    @include media($tab){
+    @include media($regularNav){
       width:25%;
       height:160px;
     }
 
-    @include media($ptabAndLess){
+    @include media($mobileNav){
       position:relative;
       border-right:0px solid #fff;
       margin-bottom:5px;
@@ -668,6 +668,9 @@ p {
       .read-more {
         display:none;
       }
+    }
+    @include media(new-breakpoint(min-width 601px max-width 1180px)){
+      padding: 50px 20px;
     }
     @include media($mobileOnly){
       padding:15px 20px;
@@ -693,7 +696,7 @@ p {
       height:100%;
       background:rgba(0,0,0,0.8);
       transition:background 0.3s linear;
-      @include media($tab){
+      @include media($regularNav){
         z-index:-1;
       }
     }
@@ -730,7 +733,7 @@ p {
       display:block;
       z-index:1;
       position:relative;
-      @include media($tab){
+      @include media($regularNav){
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -5522,17 +5525,17 @@ body.page-template-page-annual-report-php {
   @include media($mobileNav){
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: rem(500);
     left: 0;
     right: 0;
     height: 100vh;
     background: #fff;
-    padding:50px 30px 100px 20px !important;
+    padding:50px 30px 50px 20px !important;
     overflow:scroll;
     transform:translateX(-100%);
     // padding-left:145px !important;
     transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
-    padding-left:6rem !important;
+    padding-left:rem(30) !important;
 
     &:before {
       content:'';
@@ -5564,6 +5567,11 @@ body.page-template-page-annual-report-php {
       }
     }
   }
+  @include media($mobileOnly){
+    width: 100%;
+    padding:50px 30px 100px 20px !important;
+    padding-left:6rem !important;
+  }
 
   .nav-open & {
     @include media($mobileNav){
@@ -5577,9 +5585,17 @@ body.page-template-page-annual-report-php {
     transform:translateX(0%);
     transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
     .nav-open & {
+      transform:translateX(500px);
+    }
+  }
+  @include media($mobileOnly){
+    transform:translateX(0%);
+    transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
+    .nav-open & {
       transform:translateX(calc(100% - 64px));
     }
   }
+
 }
 
 #latest-menu {
@@ -5590,6 +5606,14 @@ body.page-template-page-annual-report-php {
 
 .page-wrap {
   @include media($mobileNav){
+    transform:translateX(0%);
+    transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
+    .nav-open & {
+      transform:translateX(500px);
+    }
+  }
+
+  @include media($mobileOnly){
     transform:translateX(0%);
     transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
     .nav-open & {

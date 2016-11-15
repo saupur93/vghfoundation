@@ -1635,7 +1635,7 @@ p {
 #top-header #toggleLatest {
   margin-right: 30px;
   position: relative; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1181px) {
     #top-header #toggleLatest:before {
       width: 0;
       height: 2px;
@@ -1723,7 +1723,7 @@ p {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); } }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1181px) {
   #latest-highlights {
     position: absolute;
     width: 100%;
@@ -1742,11 +1742,11 @@ p {
   padding: 15px 30px;
   background-size: cover;
   border-right: 2px solid #fff; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1181px) {
     #latest-highlights .highlight {
       width: 25%;
       height: 160px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1180px) {
     #latest-highlights .highlight {
       position: relative;
       border-right: 0px solid #fff;
@@ -1754,6 +1754,9 @@ p {
       padding: 1.5625rem 1.25rem; }
       #latest-highlights .highlight .read-more {
         display: none; } }
+  @media screen and (min-width: 601px) and (max-width: 1180px) {
+    #latest-highlights .highlight {
+      padding: 50px 20px; } }
   @media screen and (max-width: 600px) {
     #latest-highlights .highlight {
       padding: 15px 20px; } }
@@ -1776,7 +1779,7 @@ p {
     background: rgba(0, 0, 0, 0.8);
     -webkit-transition: background 0.3s linear;
     transition: background 0.3s linear; }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1181px) {
       #latest-highlights .highlight:before {
         z-index: -1; } }
   #latest-highlights .highlight:after {
@@ -1804,7 +1807,7 @@ p {
     display: block;
     z-index: 1;
     position: relative; }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1181px) {
       #latest-highlights .highlight a {
         position: relative;
         top: 50%;
@@ -5232,12 +5235,12 @@ body.page-template-page-annual-report-php {
   .menu-set {
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 31.25rem;
     left: 0;
     right: 0;
     height: 100vh;
     background: #fff;
-    padding: 50px 30px 100px 20px !important;
+    padding: 50px 30px 50px 20px !important;
     overflow: scroll;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -5245,7 +5248,7 @@ body.page-template-page-annual-report-php {
     transition: -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
     transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
     transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01), -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
-    padding-left: 6rem !important; }
+    padding-left: 1.875rem !important; }
     .menu-set:before {
       content: '';
       position: absolute;
@@ -5271,7 +5274,25 @@ body.page-template-page-annual-report-php {
         .menu-set #main-menu #primary-nav li:before {
           display: none; } }
 
+@media screen and (max-width: 600px) {
+  .menu-set {
+    width: 100%;
+    padding: 50px 30px 100px 20px !important;
+    padding-left: 6rem !important; } }
+
 @media screen and (max-width: 1180px) {
+  #top-header {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01), -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01); }
+    .nav-open #top-header {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px); } }
+
+@media screen and (max-width: 600px) {
   #top-header {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -5284,6 +5305,18 @@ body.page-template-page-annual-report-php {
               transform: translateX(calc(100% - 64px)); } }
 
 @media screen and (max-width: 1180px) {
+  .page-wrap {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+    transition: transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01), -webkit-transform 0.3s cubic-bezier(0.27, 0.88, 0.66, 1.01); }
+    .nav-open .page-wrap {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px); } }
+
+@media screen and (max-width: 600px) {
   .page-wrap {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
