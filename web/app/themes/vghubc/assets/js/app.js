@@ -90,22 +90,24 @@ class App {
     const latestToggle = document.getElementById('toggleLatest');
     let scrolled = false;
 
-    const toggleFunction = () => {
-      scrolled = false;
-      $('body').toggleClass('latest-open');
-      $('body').toggleClass('latest-closed');
+    const toggleFunction = (e, close) => {
+      if (!$('body').hasClass('latest-open') || close) {
+        scrolled = false;
+        $('body').toggleClass('latest-open');
+        $('body').toggleClass('latest-closed');
 
 
 
-      if ($('body').hasClass('latest-closed')) {
-        setTimeout(() => {
-          $('body').addClass('latest-closed-finished');
-          scrolled = true;
-        }, 400);
-      }
+        if ($('body').hasClass('latest-closed')) {
+          setTimeout(() => {
+            $('body').addClass('latest-closed-finished');
+            scrolled = true;
+          }, 400);
+        }
 
-      if ($('body').hasClass('latest-closed-finished')) {
-        $('body').removeClass('latest-closed-finished');
+        if ($('body').hasClass('latest-closed-finished')) {
+          $('body').removeClass('latest-closed-finished');
+        }
       }
 
 
@@ -126,15 +128,15 @@ class App {
       if ($('body').hasClass('front')) {
         if($(window).height() <= 800) {
           setTimeout(() => {
-            toggleFunction();
+            toggleFunction(undefined, true);
           }, 3000);
         }
       }
 
       latestToggle.onmouseover = toggleFunction;
 
-      $(window).on('scroll', () => {
-        if (!scrolled) toggleFunction();
+      $(window).on('scroll', (e) => {
+        if (!scrolled) toggleFunction(e, true);
         scrolled = true;
       });
     }

@@ -10533,20 +10533,22 @@ var App = function () {
       var latestToggle = document.getElementById('toggleLatest');
       var scrolled = false;
 
-      var toggleFunction = function toggleFunction() {
-        scrolled = false;
-        (0, _jquery2.default)('body').toggleClass('latest-open');
-        (0, _jquery2.default)('body').toggleClass('latest-closed');
+      var toggleFunction = function toggleFunction(e, close) {
+        if (!(0, _jquery2.default)('body').hasClass('latest-open') || close) {
+          scrolled = false;
+          (0, _jquery2.default)('body').toggleClass('latest-open');
+          (0, _jquery2.default)('body').toggleClass('latest-closed');
 
-        if ((0, _jquery2.default)('body').hasClass('latest-closed')) {
-          setTimeout(function () {
-            (0, _jquery2.default)('body').addClass('latest-closed-finished');
-            scrolled = true;
-          }, 400);
-        }
+          if ((0, _jquery2.default)('body').hasClass('latest-closed')) {
+            setTimeout(function () {
+              (0, _jquery2.default)('body').addClass('latest-closed-finished');
+              scrolled = true;
+            }, 400);
+          }
 
-        if ((0, _jquery2.default)('body').hasClass('latest-closed-finished')) {
-          (0, _jquery2.default)('body').removeClass('latest-closed-finished');
+          if ((0, _jquery2.default)('body').hasClass('latest-closed-finished')) {
+            (0, _jquery2.default)('body').removeClass('latest-closed-finished');
+          }
         }
 
         return false;
@@ -10566,15 +10568,15 @@ var App = function () {
         if ((0, _jquery2.default)('body').hasClass('front')) {
           if ((0, _jquery2.default)(window).height() <= 800) {
             setTimeout(function () {
-              toggleFunction();
+              toggleFunction(undefined, true);
             }, 3000);
           }
         }
 
         latestToggle.onmouseover = toggleFunction;
 
-        (0, _jquery2.default)(window).on('scroll', function () {
-          if (!scrolled) toggleFunction();
+        (0, _jquery2.default)(window).on('scroll', function (e) {
+          if (!scrolled) toggleFunction(e, true);
           scrolled = true;
         });
       }
@@ -11424,7 +11426,6 @@ var NewsFeed = function () {
     this.panelTabs();
 
     (0, _jquery2.default)(window).on('scroll', function (e) {
-      console.log(e.currentTarget.pageYOffset);
       if (e.currentTarget.pageYOffset > (0, _jquery2.default)('#newsfeed').height() * .80) {
         (0, _jquery2.default)('.back-to-top').addClass('visible');
       } else {

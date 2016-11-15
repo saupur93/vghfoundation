@@ -23,7 +23,6 @@ export default class NewsFeed {
     this.panelTabs();
 
       $(window).on('scroll', (e) => {
-        console.log(e.currentTarget.pageYOffset);
         if(e.currentTarget.pageYOffset > ($('#newsfeed').height() * .80)) {
           $('.back-to-top').addClass('visible')
         } else {

@@ -553,6 +553,11 @@ p {
       color:#fff;
     }
   }
+  .latest-toggle {
+    @include media($regularNav){
+      min-height:40px;
+    }
+  }
   #toggleLatest {
     margin-right:30px;
     position:relative;
