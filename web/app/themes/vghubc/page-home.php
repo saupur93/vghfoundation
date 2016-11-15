@@ -6,6 +6,7 @@ Template Name: Home
 
 
 <?php get_header(); ?>
+<?php $hero_title = null !== get_field('hero_title') ? get_field('hero_title') : false; ?>
 <div class="page-wrap">
     <?php
         $count = 0;
@@ -38,7 +39,7 @@ Template Name: Home
       <div class="container">
         <div class="inner-wrap">
           <div class="hero-copy" data-colour-type="surgery">
-            <h1>what's vital?</h1>
+            <h1><?php print $hero_title; ?></h1>
             <?php $count = 0; while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
             <div class="slide-text slide-<?php print $count;  ?><?php if($count == 1) print ' active'; ?>" data-colour-type="surgery">
             <?php if(!has_excerpt()): ?>

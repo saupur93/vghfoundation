@@ -427,14 +427,23 @@
 
   .signature-event-angel-campaign & {
     background-color:$angel-pink;
+    a:hover {
+      color:$angel-pink;
+    }
   }
 
   .signature-event-night-of-a-thousand-stars-gala & {
     background-color:$stars-gala;
+    a:hover {
+      color:$stars-gala;
+    }
   }
 
   .signature-event-viva-pharmaceutical-time-to-shine-gala & {
     background-color:$shine-gala;
+    a:hover {
+      color:$shine-gala;
+    }
   }
 
 
@@ -583,6 +592,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }
@@ -592,6 +604,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }
@@ -602,6 +617,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }
@@ -611,6 +629,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }
@@ -620,6 +641,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }
@@ -630,6 +654,9 @@
     a {
       border-color:#fff;
       color:#fff;
+      &:hover {
+        background:#fff;
+      }
     }
   }
 }

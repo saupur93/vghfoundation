@@ -1007,10 +1007,16 @@ p.date {
     color: #fff; }
   .signature-event-angel-campaign .panel.category-bg-color {
     background-color: #ce89c3; }
+    .signature-event-angel-campaign .panel.category-bg-color a:hover {
+      color: #ce89c3; }
   .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color {
     background-color: #272787; }
+    .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color a:hover {
+      color: #272787; }
   .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color {
     background-color: #d8c58b; }
+    .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color a:hover {
+      color: #d8c58b; }
   .panel.category-bg-color.bg-surgery {
     background-color: #00AAE3; }
   .panel.category-bg-color.bg-cancer {
@@ -1101,36 +1107,48 @@ p.date {
   .theme-section-surgery .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-surgery .panel.cta-panel a:hover {
+      background: #fff; }
 
 .theme-section-cancer .panel.cta-panel {
   background-color: #8E3A80; }
   .theme-section-cancer .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-cancer .panel.cta-panel a:hover {
+      background: #fff; }
 
 .theme-section-heart-lung .panel.cta-panel {
   background-color: #ED6062; }
   .theme-section-heart-lung .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-heart-lung .panel.cta-panel a:hover {
+      background: #fff; }
 
 .theme-section-innovation .panel.cta-panel {
   background-color: #ED8B00; }
   .theme-section-innovation .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-innovation .panel.cta-panel a:hover {
+      background: #fff; }
 
 .theme-section-community .panel.cta-panel {
   background-color: #FFB81C; }
   .theme-section-community .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-community .panel.cta-panel a:hover {
+      background: #fff; }
 
 .theme-section-brain-health .panel.cta-panel {
   background-color: #6DCDB8; }
   .theme-section-brain-health .panel.cta-panel a {
     border-color: #fff;
     color: #fff; }
+    .theme-section-brain-health .panel.cta-panel a:hover {
+      background: #fff; }
 
 .panel.surgery.footer-cta {
   background-color: #00AAE3; }
@@ -1984,10 +2002,17 @@ p {
   .panel .container img {
     max-width: 100%;
     height: auto; }
+  .panel.sidebar-right .section-title {
+    margin-bottom: 1.5rem; }
+    @media screen and (min-width: 769px) {
+      .panel.sidebar-right .section-title {
+        padding-left: 3.75rem; } }
   @media screen and (min-width: 769px) {
     .panel.sidebar-right .col-grid-9 {
       padding-left: 3.75rem;
       padding-right: 6rem; } }
+  .panel.sidebar-right .col-grid-3 ul {
+    margin-top: 0; }
 
 span.highlighted-text {
   display: inline;
@@ -5047,6 +5072,10 @@ body.page-template-page-annual-report-php {
       content: "";
       display: table;
       clear: both; }
+    @media screen and (max-width: 768px) {
+      .panel.accordion-panel .accordion-item .accordion-content {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem; } }
     .panel.accordion-panel .accordion-item .accordion-content h2, .panel.accordion-panel .accordion-item .accordion-content .title-only h1, .title-only .panel.accordion-panel .accordion-item .accordion-content h1, .panel.accordion-panel .accordion-item .accordion-content .single-post .large-featured-image h1, .single-post .large-featured-image .panel.accordion-panel .accordion-item .accordion-content h1 {
       font-size: 1.625rem; }
     .panel.accordion-panel .accordion-item .accordion-content h3, .panel.accordion-panel .accordion-item .accordion-content body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events .panel.accordion-panel .accordion-item .accordion-content .tribe-events-single-event-title {

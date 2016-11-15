@@ -9,7 +9,7 @@
     <div class="container">
       <div class="inner-wrap">
         <?php if($section_title): ?>
-          <h2><?php print $section_title; ?></h2>
+          <h2 class="section-title"><?php print $section_title; ?></h2>
         <?php endif; ?>
         <div class="col-grid-9">
           <?php the_sub_field('body'); ?>
