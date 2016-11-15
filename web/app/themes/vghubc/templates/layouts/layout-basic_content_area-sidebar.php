@@ -1,4 +1,5 @@
 <?php $event = get_post_type(get_the_ID()) == 'signature_events' ? true : false; ?>
+<?php $section_title = null !== get_sub_field('section_title') ? get_sub_field('section_title') : false; ?>
 <?php if($count == 1): ?>
 <section class="panel extra-padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php else: ?>
@@ -7,6 +8,9 @@
 
     <div class="container">
       <div class="inner-wrap">
+        <?php if($section_title): ?>
+          <h2><?php print $section_title; ?></h2>
+        <?php endif; ?>
         <div class="col-grid-9">
           <?php the_sub_field('body'); ?>
         </div>

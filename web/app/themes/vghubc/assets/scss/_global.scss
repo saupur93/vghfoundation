@@ -950,6 +950,16 @@ p {
       }
   }
 
+
+  &.sidebar-right {
+    .col-grid-9 {
+      @include media($tab) {
+        padding-left:3.75rem;
+        padding-right:6rem;
+      }
+    }
+  }
+
 }
 
 span.highlighted-text {
@@ -1274,15 +1284,6 @@ span.highlighted-text {
       @include font-size(24px);
       @include media($ptab){
         @include font-size(34px);
-      }
-    }
-  }
-
-  &.sidebar-right {
-    .col-grid-9 {
-      @include media($tab) {
-        padding-left:3.75rem;
-        padding-right:6rem;
       }
     }
   }

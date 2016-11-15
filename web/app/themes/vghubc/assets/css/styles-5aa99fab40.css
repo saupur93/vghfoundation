@@ -606,7 +606,7 @@ th {
 
 h1, h2, .title-only h1, .single-post .large-featured-image h1, h3, body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, h4, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1, h5, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, h6 {
   margin: 0 0 0.75rem 0;
-  font-weight: 300; }
+  font-weight: normal; }
 
 h1 {
   font-size: 52px;
@@ -1632,6 +1632,10 @@ p {
     background-color: #bbbbbb;
     color: #fff; }
 
+@media screen and (min-width: 1181px) {
+  #top-header .latest-toggle {
+    min-height: 40px; } }
+
 #top-header #toggleLatest {
   margin-right: 30px;
   position: relative; }
@@ -1980,6 +1984,10 @@ p {
   .panel .container img {
     max-width: 100%;
     height: auto; }
+  @media screen and (min-width: 769px) {
+    .panel.sidebar-right .col-grid-9 {
+      padding-left: 3.75rem;
+      padding-right: 6rem; } }
 
 span.highlighted-text {
   display: inline;
@@ -2240,10 +2248,6 @@ span.highlighted-text {
         .panel.overview-panel p.intro {
           font-size: 34px;
           font-size: 2.125rem; } }
-  @media screen and (min-width: 769px) {
-    .panel.overview-panel.sidebar-right .col-grid-9 {
-      padding-left: 3.75rem;
-      padding-right: 6rem; } }
 
 svg.icon.close-x {
   width: 25px;
