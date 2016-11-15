@@ -10552,7 +10552,7 @@ var App = function () {
         return false;
       };
 
-      if ((0, _jquery2.default)(window).width() > 768) {
+      if ((0, _jquery2.default)(window).width() > 1180) {
         if ((0, _jquery2.default)('body').hasClass('front')) {
           setTimeout(function () {
             (0, _jquery2.default)('body').toggleClass('latest-open');

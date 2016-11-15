@@ -11,9 +11,10 @@ $mobileOnly: new-breakpoint(max-width 600px);
 $ptabAndLess: new-breakpoint(max-width 768px);
 
 $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
-
 $portraitOnly: new-breakpoint(min-width 768px max-width 1024px );
 
+$regularNav: new-breakpoint(1181px);
+$mobileNav: new-breakpoint(max-width 1180px);
 
 .container, .full-container {
   @include fill-parent();

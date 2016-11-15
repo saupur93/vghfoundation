@@ -199,7 +199,7 @@ p {
   top: 5px;
   cursor:pointer;
   background:#fff;
-  @include media($tab){
+  @include media($regularNav){
     display:none;
 
   }
@@ -255,7 +255,7 @@ p {
   @include media($tab){
     width: 100%;
   }
-  @include media($tab){
+  @include media($regularNav){
     height:100px;
   }
 }
@@ -277,7 +277,7 @@ p {
     margin-left:45px;
     margin-top:-3px;
 
-    @include media($tab){
+    @include media($regularNav){
       width:155px;
       height:57px;
       margin-left:0px;
@@ -321,7 +321,7 @@ p {
 
 #main-menu {
   float:left;
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     width:100%;
   }
 
@@ -331,7 +331,7 @@ p {
     padding:0;
     margin-left:60px;
     float:left;
-    @include media($ptabAndLess){
+    @include media($mobileNav){
       width:100%;
     }
 
@@ -365,7 +365,7 @@ p {
         position: relative;
         .submenu-trigger {
           display:none;
-          @include media($ptabAndLess){
+          @include media($mobileNav){
             display:block;
           }
         }
@@ -381,7 +381,7 @@ p {
             color:$brand-green;
           }
           .sub-menu {
-            @include media($ptabAndLess){
+            @include media($mobileNav){
               opacity: 1;
               max-height:400px;
               position:relative;
@@ -425,7 +425,7 @@ p {
           max-height:0;
           z-index:3;
           overflow:hidden;
-          @include media($ptabAndLess){
+          @include media($mobileNav){
             position:absolute;
             top:auto;
             left:auto;
@@ -440,7 +440,7 @@ p {
             margin-right:0;
             width:150px;
             line-height:1.1;
-            @include media($ptabAndLess){
+            @include media($mobileNav){
               width:95%;
             }
 
@@ -466,7 +466,7 @@ p {
 
         &:hover {
           .sub-menu {
-            @include media($tab){
+            @include media($regularNav){
               opacity: 1;
               max-height:700px;
             }
@@ -540,8 +540,12 @@ p {
       line-height:3.5;
     }
 
-    @include media($ptabAndLess){
+    @include media($mobileNav){
       @include font-size(13px);
+      padding:0px 20px;
+      right:15px;
+      top:15px;
+      bottom:15px;
     }
 
     &:hover {
@@ -575,7 +579,7 @@ p {
       }
     }
 
-    @include media($ptabAndLess){
+    @include media($mobileNav){
       border-top:1px solid $body-text;
       padding-top:2rem;
       margin-top:1rem;
@@ -976,7 +980,7 @@ span.highlighted-text {
   width:100%;
   height:520px;
   position:relative;
-  padding-top:70px;
+  padding-top:0px;
   @include media($ptab){
     height:80vh;
     padding-top:0px;
@@ -1010,6 +1014,7 @@ span.highlighted-text {
     background:$brand-green;
     transition:background 1s linear;
     height:rem(240);
+    bottom:-20px;
     @include media($ptab){
       bottom:-70px;
       // min-height:375px;
@@ -1127,7 +1132,6 @@ span.highlighted-text {
       position:absolute;
       height:100%;
       top:0;
-
     }
 
     .slide-bg {
@@ -1145,6 +1149,10 @@ span.highlighted-text {
       @include media($tab){
         background-position:50% 100px;
       }
+      @include media($mobileNav){
+        background-position:50% 70px;
+      }
+
 
       &:before {
         background:linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
@@ -1456,7 +1464,7 @@ svg.icon.close-x {
     position:absolute;
     bottom:0;
 
-    @include media($portraitOnly){
+    @include media($ptabAndLess){
       display:none;
     }
 
@@ -4326,17 +4334,20 @@ body.tribe-events-page-template {
   .hero-copy {
     font-size: 24px;
     font-size: 1.5rem;
-    min-height: 220px;
+    min-height: 240px;
     bottom: -50px;
     padding: 60px 20px 20px 20px;
-    height:10rem;
-
+    @include media($ptab){
+      bottom: -150px;
+    }
     @include media($tab){
-      height:15rem;
       min-height: 240px;
       bottom: -100px;
       padding: 60px 40px 60px 60px;
       width: 37.5rem;
+    }
+    @include media($ptabAndLess){
+
     }
 
     p.date {
@@ -4390,6 +4401,9 @@ body.tribe-events-page-template {
 
 .panel.news-tabs {
   padding-top:rem(160);
+  @include media($mobileOnly){
+    padding-top:rem(60);
+  }
   // position:relative;
   [data-tab-content]{
     display:none;
@@ -5505,7 +5519,7 @@ body.page-template-page-annual-report-php {
 
 
 .menu-set {
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     position: fixed;
     top: 0px;
     width: 100%;
@@ -5552,14 +5566,14 @@ body.page-template-page-annual-report-php {
   }
 
   .nav-open & {
-    @include media($ptabAndLess){
+    @include media($mobileNav){
     }
 
   }
 }
 
 #top-header {
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     transform:translateX(0%);
     transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
     .nav-open & {
@@ -5569,13 +5583,13 @@ body.page-template-page-annual-report-php {
 }
 
 #latest-menu {
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     // transform:translateX(-100%);
   }
 }
 
 .page-wrap {
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     transform:translateX(0%);
     transition: transform .3s cubic-bezier(.27,.88,.66,1.01);
     .nav-open & {
@@ -5585,7 +5599,7 @@ body.page-template-page-annual-report-php {
 }
 
 #language-switcher {
-  @include media($ptabAndLess){
+  @include media($mobileNav){
     position:absolute;
     top:rem(60);
     right:rem(30);
@@ -5677,6 +5691,7 @@ body.page-template-page-annual-report-php {
 
 .page-template-page-home {
   .panel.overview-panel {
+    padding:0;
     @include media($tab){
       padding:9.5rem 0;
     }
