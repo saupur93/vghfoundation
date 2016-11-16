@@ -1694,6 +1694,9 @@ p {
     background-color: #bbbbbb;
     color: #fff; }
 
+#top-header .latest-toggle.active {
+  color: #7dab35; }
+
 @media screen and (min-width: 1181px) {
   #top-header .latest-toggle {
     min-height: 40px; } }

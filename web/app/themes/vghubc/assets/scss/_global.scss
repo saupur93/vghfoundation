@@ -554,6 +554,9 @@ p {
     }
   }
   .latest-toggle {
+    &.active {
+      color:$brand-green;
+    }
     @include media($regularNav){
       min-height:40px;
     }
