@@ -1021,6 +1021,10 @@ p.date {
     background-color: #00ac9a; }
     .signature-event-ismaili-walk .panel.category-bg-color a:hover {
       color: #00ac9a; }
+  .signature-event-mr-lube-tournament-for-life .panel.category-bg-color {
+    background-color: #08450F; }
+    .signature-event-mr-lube-tournament-for-life .panel.category-bg-color a:hover {
+      color: #08450F; }
   .panel.category-bg-color.bg-surgery {
     background-color: #00AAE3; }
   .panel.category-bg-color.bg-cancer {
@@ -1104,6 +1108,24 @@ p.date {
       color: #fff; }
 
 .signature-event-ismaili-walk .panel.overview-panel ul li:before {
+  color: #fff; }
+
+.signature-event-mr-lube-tournament-for-life .button, .signature-event-mr-lube-tournament-for-life form input[type="submit"], form .signature-event-mr-lube-tournament-for-life input[type="submit"], .signature-event-mr-lube-tournament-for-life body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-mr-lube-tournament-for-life .tribe-events-read-more {
+  background-color: #08450F;
+  border-color: #08450F;
+  color: #fff; }
+  .signature-event-mr-lube-tournament-for-life .button:hover, .signature-event-mr-lube-tournament-for-life form input[type="submit"]:hover, form .signature-event-mr-lube-tournament-for-life input[type="submit"]:hover, .signature-event-mr-lube-tournament-for-life body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-mr-lube-tournament-for-life .tribe-events-read-more:hover {
+    color: #fff;
+    background: transparent; }
+  .signature-event-mr-lube-tournament-for-life .button.keyline, .signature-event-mr-lube-tournament-for-life form input.keyline[type="submit"], form .signature-event-mr-lube-tournament-for-life input.keyline[type="submit"], .signature-event-mr-lube-tournament-for-life body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-mr-lube-tournament-for-life .keyline.tribe-events-read-more {
+    background-color: transparent;
+    color: #08450F; }
+    .signature-event-mr-lube-tournament-for-life .button.keyline:hover, .signature-event-mr-lube-tournament-for-life form input.keyline[type="submit"]:hover, form .signature-event-mr-lube-tournament-for-life input.keyline[type="submit"]:hover, .signature-event-mr-lube-tournament-for-life body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-mr-lube-tournament-for-life .keyline.tribe-events-read-more:hover {
+      background-color: #08450F;
+      border-color: #08450F;
+      color: #fff; }
+
+.signature-event-mr-lube-tournament-for-life .panel.overview-panel ul li:before {
   color: #fff; }
 
 .panel article .tag.surgery {
@@ -2520,7 +2542,7 @@ svg.icon.close-x {
       .mobile-tabs-nav .options li.ismaili-walk {
         background-color: #00ac9a; }
       .mobile-tabs-nav .options li.mr-lube-tournament-for-life {
-        background-color: #7dab35; }
+        background-color: #08450F; }
     .mobile-tabs-nav .options a, .mobile-tabs-nav .options li {
       color: #fff;
       text-transform: uppercase;
@@ -4112,6 +4134,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       background-color: #d8c58b; }
     .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk h5, .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk .tribe-events-single-section-title {
       background-color: #00ac9a; }
+    .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life h5, .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life .tribe-events-single-section-title {
+      background-color: #08450F; }
   .panel.signature-events-panel #events-section #events-menu {
     position: absolute;
     bottom: 0; }
@@ -4196,6 +4220,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         background-color: #d8c58b; }
       .panel.signature-events-panel #events-section #events-menu li.ismaili-walk:after {
         background-color: #00ac9a; }
+      .panel.signature-events-panel #events-section #events-menu li.mr-lube-tournament-for-life:after {
+        background-color: #08450F; }
       .panel.signature-events-panel #events-section #events-menu li .thumb {
         width: 100%;
         left: 0;

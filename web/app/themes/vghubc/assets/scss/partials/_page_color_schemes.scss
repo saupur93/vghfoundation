@@ -453,6 +453,15 @@
     }
   }
 
+  .signature-event-mr-lube-tournament-for-life & {
+    background-color:$mr-lube;
+    a:hover {
+      color:$mr-lube;
+    }
+  }
+
+
+
 
   &.bg-surgery{
     background-color:$surgery;
@@ -577,6 +586,35 @@
       &:hover {
         background-color:$teal;
         border-color:$teal;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+.signature-event-mr-lube-tournament-for-life {
+  .button {
+    background-color:$mr-lube;
+    border-color:$mr-lube;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$mr-lube;
+      &:hover {
+        background-color:$mr-lube;
+        border-color:$mr-lube;
         color:#fff;
       }
     }
