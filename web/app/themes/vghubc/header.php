@@ -12,8 +12,7 @@
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <?php if ( WP_ENV == 'production' || WP_ENV == 'staging' ): ?>
@@ -31,15 +30,16 @@
 
 
 
-	<?php if ( WP_ENV !== 'production' ): ?>
-	<meta name="robots" content="noindex">
-	<?php endif; ?>
+  <?php if ( WP_ENV !== 'production' ): ?>
+  <meta name="robots" content="noindex">
+  <?php endif; ?>
 
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
+  <script>document.body.classList.add('fade-out');</script>
 
 	<?php get_template_part('templates/partials/ie', 'message'); ?>
 

@@ -71,6 +71,7 @@
   <script src="<?php bloginfo('template_directory'); ?>/assets/js/bundle.js"></script>
 <?php endif; ?>
 
+  <script>document.body.classList.remove('fade-out');</script>
 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

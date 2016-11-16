@@ -69,8 +69,11 @@ Events
 About Us
 - Learn about us menu.. where in CMS and what pages establish the pattern
 
-- chinese content integration
 - click pager to go to slide
 - social sharing
 - set thumbnail sizes and regenerate thumbnails
 - browser testing
+
+## Launch
+- change .env to reflect vghfoundation.ca domain
+- run serializing script to clean database of vghubc.signalsinteractive.com and vghubc.dev to vghfoundation.ca

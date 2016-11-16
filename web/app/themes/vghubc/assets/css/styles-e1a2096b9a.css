@@ -1310,6 +1310,16 @@ p {
   .post-edit-link:hover {
     background: gray; }
 
+body {
+  opacity: 1;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in; }
+
+body.fade-out {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none; }
+
 .button, form input[type="submit"], body.tribe-events-page-template .tribe-events-read-more {
   display: inline-block;
   border: 2px solid #575b5e;
@@ -1694,7 +1704,7 @@ p {
     background-color: #bbbbbb;
     color: #fff; }
 
-#top-header .latest-toggle.active {
+#top-header .latest-toggle.active a {
   color: #7dab35; }
 
 @media screen and (min-width: 1181px) {
