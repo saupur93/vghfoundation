@@ -131,7 +131,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <div class="stat-focus">
             <h2>The Need</h2>
             <div class="col-third overview">
@@ -166,7 +166,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -200,7 +200,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -234,7 +234,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -268,7 +268,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -301,7 +301,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter">
+        <div class="inner-wrap vcenter adjust">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">

@@ -4808,7 +4808,7 @@ body.page-template-page-annual-report-php {
     padding-top: 6.25rem; }
     #annual-report .ar-section p {
       font-weight: normal; }
-    #annual-report .ar-section .stat-intro {
+    #annual-report .ar-section .stat-intro, #annual-report .ar-section .adjust {
       margin-top: -10%; }
     #annual-report .ar-section .container {
       display: block;
