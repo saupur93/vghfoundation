@@ -75,7 +75,7 @@ Template Name: Events
               $theme_title = get_the_title();
               $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
              ?>
-            <li class="<?php print sanitize_title($theme_title); ?>">
+            <li class="<?php print get_post(get_the_ID())->post_name; ?>">
               <a class="open" href="#"><span><?php print $theme_title; ?></span></a>
             </li>
           <?php endwhile; ?>
@@ -91,7 +91,7 @@ Template Name: Events
           $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
         ?>
           <a href="<?php echo get_permalink(); ?>">
-          <div class="events-item <?php if($post_count == 1) print ' active'; ?> <?php print sanitize_title($theme_title); ?>">
+          <div class="events-item <?php if($post_count == 1) print ' active'; ?> <?php print get_post(get_the_ID())->post_name; ?>">
             <div class="hover-bg-image" style="background-image:url(<?php print $header_image; ?>);" data-hover-image="<?php print $header_image; ?>"></div>
             <div class="container">
               <div class="summary">
@@ -112,7 +112,7 @@ Template Name: Events
           $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
           $theme_title = get_the_title();
         ?>
-            <li class="<?php print sanitize_title($theme_title); ?> event-item item">
+            <li class="<?php print get_post(get_the_ID())->post_name; ?> event-item item">
               <a class="open" href="<?php echo get_permalink(); ?>">
               <span><?php the_title(); ?></span>
               <span class="date"><?php print date('F j, Y' , strtotime(get_field('event_date'))); ?></span>

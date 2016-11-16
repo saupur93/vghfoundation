@@ -74,7 +74,7 @@
           $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : '/app/themes/vghubc/assets/img/post-placeholder.jpg';
             $theme = get_field('related_theme')[0];
             $theme_title = get_the_title($theme->ID);
-            $class = isset($theme->ID) ? ' ' . sanitize_title($theme_title) : '';
+            $class = isset($theme->ID) ? ' ' . get_post(get_the_ID())->post_name : '';
             $link_text = null !== get_field('alternative_button_text') && get_field('alternative_button_text') != '' ? get_field('alternative_button_text') : 'Read Article';
             $featured_image_gallery = null !== get_field('images') ? get_field('images') : false;
 

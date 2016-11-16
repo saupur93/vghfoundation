@@ -86,3 +86,22 @@ function menu_is_child_of($id) {
    }
 
 }
+
+/**
+ * Create class from title sentence string
+ */
+function create_my_class($url){
+    # Prep string with some basic normalization
+    $url = strtolower($url);
+    $url = strip_tags($url);
+    $url = stripslashes($url);
+    $url = html_entity_decode($url);
+
+    # Remove quotes (can't, etc.)
+    $url = str_replace('\'', '', $url);
+
+    # Replace non-alpha numeric with hyphens
+    $url = preg_replace('/[^A-Za-z0-9-]+/', '-', $url);
+
+    return $url;
+}

@@ -45,7 +45,7 @@ function custom_body_classes($classes) {
   }
 
   if (get_post_type(get_the_ID()) == 'signature_events') {
-    $classes[] = 'signature-event-' . sanitize_title(get_the_title(get_the_ID()));
+    $classes[] = 'signature-event-' . get_post(get_the_ID())->post_name;
   }
 
   // if its parent is the About section, but not Annual Report page
