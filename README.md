@@ -52,7 +52,7 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 - Why Give Overview might be a little big on smaller screens
 - Too much space on theme outcomes/impact facts
 - Ways to Give intro text is too huge - cut copy or shrink text globally
--
+- themes summary subnav collision
 
 
 ## Functional

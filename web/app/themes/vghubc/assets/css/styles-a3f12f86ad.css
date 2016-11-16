@@ -1017,6 +1017,10 @@ p.date {
     background-color: #d8c58b; }
     .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color a:hover {
       color: #d8c58b; }
+  .signature-event-ismaili-walk .panel.category-bg-color {
+    background-color: #00ac9a; }
+    .signature-event-ismaili-walk .panel.category-bg-color a:hover {
+      color: #00ac9a; }
   .panel.category-bg-color.bg-surgery {
     background-color: #00AAE3; }
   .panel.category-bg-color.bg-cancer {
@@ -1082,6 +1086,24 @@ p.date {
       color: #fff; }
 
 .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.overview-panel ul li:before {
+  color: #fff; }
+
+.signature-event-ismaili-walk .button, .signature-event-ismaili-walk form input[type="submit"], form .signature-event-ismaili-walk input[type="submit"], .signature-event-ismaili-walk body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-ismaili-walk .tribe-events-read-more {
+  background-color: #00ac9a;
+  border-color: #00ac9a;
+  color: #fff; }
+  .signature-event-ismaili-walk .button:hover, .signature-event-ismaili-walk form input[type="submit"]:hover, form .signature-event-ismaili-walk input[type="submit"]:hover, .signature-event-ismaili-walk body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-ismaili-walk .tribe-events-read-more:hover {
+    color: #fff;
+    background: transparent; }
+  .signature-event-ismaili-walk .button.keyline, .signature-event-ismaili-walk form input.keyline[type="submit"], form .signature-event-ismaili-walk input.keyline[type="submit"], .signature-event-ismaili-walk body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-ismaili-walk .keyline.tribe-events-read-more {
+    background-color: transparent;
+    color: #00ac9a; }
+    .signature-event-ismaili-walk .button.keyline:hover, .signature-event-ismaili-walk form input.keyline[type="submit"]:hover, form .signature-event-ismaili-walk input.keyline[type="submit"]:hover, .signature-event-ismaili-walk body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-ismaili-walk .keyline.tribe-events-read-more:hover {
+      background-color: #00ac9a;
+      border-color: #00ac9a;
+      color: #fff; }
+
+.signature-event-ismaili-walk .panel.overview-panel ul li:before {
   color: #fff; }
 
 .panel article .tag.surgery {
@@ -1445,16 +1467,16 @@ p {
   color: #7dab35; }
 
 .single-themes_post #sub-navigation {
-  -webkit-transform: translate3d(0, -45px, 1px);
-          transform: translate3d(0, -45px, 1px);
+  -webkit-transform: translate3d(0, -45px, 0px);
+          transform: translate3d(0, -45px, 0px);
   -webkit-transition: -webkit-transform 0.25s linear;
   transition: -webkit-transform 0.25s linear;
   transition: transform 0.25s linear;
   transition: transform 0.25s linear, -webkit-transform 0.25s linear; }
 
 .single-themes_post.fixed-sub-nav #sub-navigation {
-  -webkit-transform: translate3d(0, 0, 1px);
-          transform: translate3d(0, 0, 1px); }
+  -webkit-transform: translate3d(0, 0, 0px);
+          transform: translate3d(0, 0, 0px); }
 
 #main-menu {
   float: left; }
@@ -1692,6 +1714,9 @@ p {
   .latest-open #top-header #toggleLatest:after {
     -webkit-animation: arrowUpDown 1s linear infinite;
             animation: arrowUpDown 1s linear infinite; }
+
+html[lang="zh"] .latest-open #top-header #toggleLatest:before {
+  width: 56px; }
 
 @-webkit-keyframes showsSlideDown {
   0% {
@@ -2492,6 +2517,10 @@ svg.icon.close-x {
         background-color: #272787; }
       .mobile-tabs-nav .options li.viva-pharmaceutical-time-to-shine-gala {
         background-color: #d8c58b; }
+      .mobile-tabs-nav .options li.ismaili-walk {
+        background-color: #00ac9a; }
+      .mobile-tabs-nav .options li.mr-lube-tournament-for-life {
+        background-color: #7dab35; }
     .mobile-tabs-nav .options a, .mobile-tabs-nav .options li {
       color: #fff;
       text-transform: uppercase;
@@ -3249,7 +3278,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-top: 20px; }
     @media screen and (min-width: 601px) {
       .panel.donation-panel-tabs .tabs {
-        margin-bottom: 60px;
+        margin-bottom: 2.1875rem;
         margin-top: 0px; } }
     .panel.donation-panel-tabs .tabs li {
       display: inline-block;
@@ -3302,7 +3331,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         .panel.donation-panel-tabs .donation-amounts span {
           border: 2px solid #7dab35;
           padding: 0.3125rem 1.875rem;
-          margin-right: 0.625rem;
+          margin-right: 1rem;
           font-size: 35px;
           font-size: 2.1875rem; } }
       @media screen and (max-width: 768px) {
@@ -3898,65 +3927,67 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .three-stories-panel .copy p.date, .panel.three-subpages-panel .copy p.date {
       margin-bottom: 0.75rem; }
 
-.expanding-two-column-list ul.expanding-list {
-  padding: 0;
-  margin: 0; }
-  .expanding-two-column-list ul.expanding-list li {
-    display: inline-block;
+.panel.expanding-two-column-list {
+  padding: 1.875rem 0; }
+  @media screen and (min-width: 601px) {
+    .panel.expanding-two-column-list {
+      padding: 5rem 0; } }
+  .panel.expanding-two-column-list h2, .panel.expanding-two-column-list .title-only h1, .title-only .panel.expanding-two-column-list h1, .panel.expanding-two-column-list .single-post .large-featured-image h1, .single-post .large-featured-image .panel.expanding-two-column-list h1 {
+    margin-bottom: 2rem; }
+  .panel.expanding-two-column-list ul.expanding-list {
     padding: 0;
-    width: 100%;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    margin-bottom: 1.25rem;
-    opacity: 1;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
-    @media screen and (min-width: 769px) {
-      .expanding-two-column-list ul.expanding-list li {
-        font-size: 34px;
-        font-size: 2.125rem;
-        margin-bottom: 1.5625rem; } }
-    .expanding-two-column-list ul.expanding-list li.hide {
-      opacity: 0;
-      position: absolute;
-      left: -100%;
-      overflow: hidden; }
-    .expanding-two-column-list ul.expanding-list li a {
-      color: #575b5e;
+    margin: 0; }
+    .panel.expanding-two-column-list ul.expanding-list li {
       display: inline-block;
-      padding-left: 1.5625rem;
+      padding: 0;
+      width: 100%;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 1.25rem;
+      opacity: 1;
       -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear;
-      background-position: -2rem 50%;
-      margin-left: -1.5625rem; }
+      transition: all 0.2s linear; }
       @media screen and (min-width: 769px) {
-        .expanding-two-column-list ul.expanding-list li a {
-          margin-left: 0; } }
-      .expanding-two-column-list ul.expanding-list li a:hover {
-        color: #7dab35;
-        background: url(../img/arrow-right.svg) no-repeat;
-        background-position: 0 50%; }
-
-.expanding-two-column-list .read-more.list {
-  display: inline-block; }
+        .panel.expanding-two-column-list ul.expanding-list li {
+          font-size: 34px;
+          font-size: 2.125rem;
+          margin-bottom: 1.5625rem; } }
+      .panel.expanding-two-column-list ul.expanding-list li.hide {
+        opacity: 0;
+        position: absolute;
+        left: -100%;
+        overflow: hidden; }
+      .panel.expanding-two-column-list ul.expanding-list li a {
+        color: #575b5e;
+        display: inline-block;
+        padding-left: 1.5625rem;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        background-position: -2rem 50%;
+        margin-left: -1.5625rem; }
+        @media screen and (min-width: 769px) {
+          .panel.expanding-two-column-list ul.expanding-list li a {
+            margin-left: 0; } }
+        .panel.expanding-two-column-list ul.expanding-list li a:hover {
+          color: #7dab35;
+          background: url(../img/arrow-right.svg) no-repeat;
+          background-position: 0 50%; }
+  .panel.expanding-two-column-list .read-more.list {
+    display: inline-block; }
+    @media screen and (min-width: 769px) {
+      .panel.expanding-two-column-list .read-more.list {
+        margin-top: 1.875rem;
+        margin-left: 1.5625rem; } }
   @media screen and (min-width: 769px) {
-    .expanding-two-column-list .read-more.list {
-      margin-top: 1.875rem;
-      margin-left: 1.5625rem; } }
-
-@media screen and (min-width: 769px) {
-  .expanding-two-column-list .col-half.last {
-    padding-left: 3.75rem; } }
-
-.expanding-two-column-list .read-more.list.less {
-  display: none; }
-
-.expanding-two-column-list.expanded .read-more.list.less {
-  display: inline-block; }
-
-.expanding-two-column-list.expanded .read-more.list.more {
-  display: none; }
+    .panel.expanding-two-column-list .col-half.last {
+      padding-left: 3.75rem; } }
+  .panel.expanding-two-column-list .read-more.list.less {
+    display: none; }
+  .panel.expanding-two-column-list.expanded .read-more.list.less {
+    display: inline-block; }
+  .panel.expanding-two-column-list.expanded .read-more.list.more {
+    display: none; }
 
 .panel.footer-cta {
   text-align: center;
@@ -4079,6 +4110,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       background-color: #272787; }
     .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala .tribe-events-single-section-title {
       background-color: #d8c58b; }
+    .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk h5, .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk .tribe-events-single-section-title {
+      background-color: #00ac9a; }
   .panel.signature-events-panel #events-section #events-menu {
     position: absolute;
     bottom: 0; }
@@ -4161,6 +4194,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         background-color: #272787; }
       .panel.signature-events-panel #events-section #events-menu li.viva-pharmaceutical-time-to-shine-gala:after {
         background-color: #d8c58b; }
+      .panel.signature-events-panel #events-section #events-menu li.ismaili-walk:after {
+        background-color: #00ac9a; }
       .panel.signature-events-panel #events-section #events-menu li .thumb {
         width: 100%;
         left: 0;
@@ -4952,7 +4987,7 @@ body.page-template-page-annual-report-php {
     margin-bottom: 2rem; }
   .panel.related-posts-panel .col-half .read-more {
     display: inline-block;
-    padding-top: 2.5rem; }
+    padding-top: 0.625rem; }
 
 .page-template-default .panel-1:not(.overview-panel) {
   padding-top: 1.875rem; }

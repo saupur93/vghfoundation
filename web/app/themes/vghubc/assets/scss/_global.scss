@@ -307,13 +307,13 @@ p {
 
 .single-themes_post {
   #sub-navigation {
-    transform: translate3d(0, -45px, 1px);
+    transform: translate3d(0, -45px, 0px);
     transition: transform 0.25s linear;
   }
 
   &.fixed-sub-nav {
     #sub-navigation {
-      transform: translate3d(0, 0, 1px);
+      transform: translate3d(0, 0, 0px);
     }
   }
 }
@@ -608,6 +608,11 @@ p {
   }
 }
 
+html[lang="zh"] .latest-open #top-header #toggleLatest {
+  &:before {
+    width:56px;
+  }
+}
 
 @keyframes showsSlideDown {
   0% {
@@ -1587,6 +1592,14 @@ svg.icon.close-x {
 
       &.viva-pharmaceutical-time-to-shine-gala {
         background-color:$shine-gala;
+      }
+
+      &.ismaili-walk {
+        background-color:$teal;
+      }
+
+      &.mr-lube-tournament-for-life {
+        background-color:$brand-green;
       }
 
 
@@ -2627,7 +2640,7 @@ body.tribe-events-page-template {
     position:relative;
     margin-top:20px;
     @include media($ptab){
-      margin-bottom:60px;
+      margin-bottom:rem(35);
       margin-top:0px;
     }
 
@@ -2685,7 +2698,7 @@ body.tribe-events-page-template {
       @include media($ptab){
         border:2px solid $brand-green;
         padding:rem(5) rem(30);
-        margin-right:rem(10);
+        margin-right:1rem;
         @include font-size(35px);
       }
 
@@ -3622,7 +3635,15 @@ body.tribe-events-page-template {
   }
 }
 
-.expanding-two-column-list {
+.panel.expanding-two-column-list {
+  padding:rem(30) 0;
+  @include media($ptab){
+    padding:rem(80) 0;
+  }
+
+  h2 {
+    margin-bottom:2rem;
+  }
   ul.expanding-list {
     padding:0;
     margin:0;
@@ -3854,7 +3875,11 @@ body.tribe-events-page-template {
             background-color:$shine-gala;
           }
         }
-
+        &.ismaili-walk {
+          h5 {
+            background-color:$teal;
+          }
+        }
       }
     }
 
@@ -3968,6 +3993,11 @@ body.tribe-events-page-template {
         &.viva-pharmaceutical-time-to-shine-gala {
           &:after {
             background-color:$shine-gala;
+          }
+        }
+        &.ismaili-walk {
+          &:after {
+            background-color:$teal;
           }
         }
 
@@ -5113,7 +5143,7 @@ body.page-template-page-annual-report-php {
     .read-more {
       // float:left;
       display:inline-block;
-      padding-top:rem(40);
+      padding-top:rem(10);
 
     }
   }

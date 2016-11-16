@@ -1,7 +1,8 @@
+<?php $currentLang = qtrans_getLanguage(); ?>
 <!doctype html>
-<!--[if lt IE 9 ]><html lang="en" class="no-js lt-ie9 ie"><![endif]-->
-<!--[if IE 9 ]><html lang="en" class="no-js ie9 ie"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<!--[if lt IE 9 ]><html lang="<?php print $currentLang; ?>" class="no-js lt-ie9 ie"><![endif]-->
+<!--[if IE 9 ]><html lang="<?php print $currentLang; ?>" class="no-js ie9 ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="<?php print $currentLang; ?>" class="no-js"><!--<![endif]-->
 <head>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>

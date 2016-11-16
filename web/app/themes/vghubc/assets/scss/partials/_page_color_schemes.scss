@@ -446,6 +446,13 @@
     }
   }
 
+  .signature-event-ismaili-walk & {
+    background-color:$teal;
+    a:hover {
+      color:$teal;
+    }
+  }
+
 
   &.bg-surgery{
     background-color:$surgery;
@@ -555,7 +562,35 @@
     }
   }
 }
-
+.signature-event-ismaili-walk {
+  .button {
+    background-color:$teal;
+    border-color:$teal;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$teal;
+      &:hover {
+        background-color:$teal;
+        border-color:$teal;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
 
 
 

@@ -18,7 +18,7 @@
             'after' => '<i class="submenu-trigger"></i>',
             'items_wrap'  => '%3$s'
           )); ?>
-          <li class="latest-toggle"><a href="/latest/" id="toggleLatest">Latest</a></li>
+          <li class="latest-toggle"><a href="<?php get_permalink(117); ?>" id="toggleLatest"><?php print get_the_title(117); ?></a></li>
         </ul>
         <?php
           $currentLang = qtrans_getLanguage();
