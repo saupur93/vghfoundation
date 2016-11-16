@@ -86,16 +86,6 @@ p {
   }
 }
 
-body {
-    opacity: 1;
-    transition: 0.4s opacity ease-in;
-}
-body.fade-out {
-    opacity: 0;
-    transition: none;
-}
-
-
 .button {
   display:inline-block;
   border:2px solid $body-text;

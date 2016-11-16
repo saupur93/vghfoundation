@@ -67,7 +67,8 @@ gulp.task( 'dev', ['js'], function(){
 		browserSync({
 				proxy: "vghubc.dev",
 				ghostMode: false,
-				open: false
+				open: false,
+        notify: false
 		});
 
 		gulp.watch([app + 'assets/scss/{,**/}*.{scss,sass}'], ['sass']);

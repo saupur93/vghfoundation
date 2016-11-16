@@ -74,6 +74,9 @@ About Us
 - set thumbnail sizes and regenerate thumbnails
 - browser testing
 
+### From staging to prod
+`rsync -Pubvaz --stats web/app/uploads/ worldcy3@server.worldclasshealthcare.ca:/web/app/uploads/`
+
 ## Launch
 - change .env to reflect vghfoundation.ca domain
 - run serializing script to clean database of vghubc.signalsinteractive.com and vghubc.dev to vghfoundation.ca
