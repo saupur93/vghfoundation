@@ -423,39 +423,43 @@
 
   a {
     color:#fff;
+    transition:color 0.3s linear;
+    &:hover {
+      color:rgba(#fff, 0.5);
+    }
   }
 
   .signature-event-angel-campaign & {
     background-color:$angel-pink;
-    a:hover {
+    a.button:hover {
       color:$angel-pink;
     }
   }
 
   .signature-event-night-of-a-thousand-stars-gala & {
     background-color:$stars-gala;
-    a:hover {
+    a.button:hover {
       color:$stars-gala;
     }
   }
 
   .signature-event-viva-pharmaceutical-time-to-shine-gala & {
     background-color:$shine-gala;
-    a:hover {
+    a.button:hover {
       color:$shine-gala;
     }
   }
 
   .signature-event-ismaili-walk & {
     background-color:$teal;
-    a:hover {
+    a.button:hover {
       color:$teal;
     }
   }
 
   .signature-event-mr-lube-tournament-for-life & {
     background-color:$mr-lube;
-    a:hover {
+    a.button:hover {
       color:$mr-lube;
     }
   }

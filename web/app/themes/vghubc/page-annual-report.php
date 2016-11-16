@@ -131,25 +131,26 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
-          <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
-          <div class="row">
-            <div class="col-third facts">
-              <h5>Facts</h5>
-                <p class="small">Last year<br><span class="number">26</span></p>
-                <p class="small">survivors and current patients attended support groups</p>
+        <div class="inner-wrap vcenter">
+          <div class="stat-focus">
+            <h2>The Need</h2>
+            <div class="col-third overview">
+              <p>VGH’s operating rooms are small and out of date, and UBC facilities are not equipped to handle high acuity cases. The <em>Future of Surgery</em> will see the transformation of both sites.</p>
             </div>
 
-            <div class="col-third facts">
-              <h5>Outcomes</h5>
-                <p class="small">Last year<br><span class="number">800</span></p>
-                <p class="small">survivors and current patients attended support groups</p>
+            <div class="col-third stat-col col-0">
+              <div class="fact-row">
+                <p><span class="larger-text">30,000 surgeries</span><br>
+                <span class="small">are performed per year at VGH and UBC Hospital</span>
+                </p>
+              </div>
             </div>
-
-            <div class="col-third facts">
-              <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
-                <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
+            <div class="col-third stat-col col-1">
+              <div class="fact-row">
+                <p><span class="larger-text">60% of the BC's</span><br>
+                <span class="small">adult trauma cases are seen in our hospitals</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -165,7 +166,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap vcenter">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -199,7 +200,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap vcenter">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -233,7 +234,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap vcenter">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -267,7 +268,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap vcenter">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
@@ -300,7 +301,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap vcenter">
           <p class="stat-intro">A multi-year initiative that will enable VGH to focus on the most complex surgery cases – such as traumas, transplants and complex cancer surgeries.</p>
           <div class="row">
             <div class="col-third facts">
