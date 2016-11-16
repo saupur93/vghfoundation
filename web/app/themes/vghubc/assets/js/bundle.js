@@ -11573,17 +11573,22 @@ var slideshow = {
 
     this.pagerRight.on('click', function (e) {
       e.preventDefault();
-
       // page right, but not beyond end
       if (self.currentSlide < self.slides.length - 1) {
         self.slideCurrentIndex('right');
         self.transitionSlides(self.currentSlide);
       }
-
       // if (self.currentSlide === self.slides.length - 1) {
       //   self.currentSlide = -1;
       //   self.transitionSlides(-1);
       // }
+    });
+
+    this.pagerContainer.on('click', 'li', function (e) {
+      e.preventDefault();
+      var index = (0, _jquery2.default)(e.currentTarget).index();
+      _this.currentSlide = index;
+      _this.transitionSlides(index);
     });
 
     (0, _jquery2.default)(document).on('keydown', function (e) {

@@ -125,9 +125,12 @@ Template Name: Home
         $theme_thumbnail_image = get_sub_field('theme_thumbnail_image')['url'];
         $related_theme = get_sub_field('related_theme')[0];
         $class = $related_theme->post_name;
+        $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
       ?>
+
+
         <li class="<?php print ' '. $class; ?>">
-          <a class="open" href="<?php print get_permalink($related_theme->ID); ?>"><span><?php print get_the_title($related_theme->ID); ?></span><span class="read-more">Learn More</span></a>
+          <a class="open" href="<?php print get_permalink($related_theme->ID); ?>"><span><?php print get_the_title($related_theme->ID); ?></span><span class="read-more"><?php print $learn_more; ?></span></a>
           <div class="thumb" style="background-image:url('<?php print $theme_thumbnail_image; ?>');"></div>
         </li>
       <?php endwhile; ?>

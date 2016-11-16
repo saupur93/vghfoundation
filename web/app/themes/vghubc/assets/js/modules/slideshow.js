@@ -58,17 +58,22 @@ const slideshow = {
 
     this.pagerRight.on('click', function(e){
       e.preventDefault();
-
       // page right, but not beyond end
       if (self.currentSlide < self.slides.length - 1) {
         self.slideCurrentIndex('right');
         self.transitionSlides(self.currentSlide);
       }
-
       // if (self.currentSlide === self.slides.length - 1) {
       //   self.currentSlide = -1;
       //   self.transitionSlides(-1);
       // }
+    });
+
+    this.pagerContainer.on('click', 'li', (e) => {
+      e.preventDefault();
+      let index = $(e.currentTarget).index();
+      this.currentSlide = index;
+      this.transitionSlides(index);
 
     });
 

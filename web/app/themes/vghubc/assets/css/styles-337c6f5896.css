@@ -2263,7 +2263,9 @@ span.highlighted-text {
   padding: 0px;
   margin: 0;
   position: absolute;
-  bottom: 20px; }
+  bottom: 20px;
+  z-index: 3;
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .panel.slideshow .slide-pager {
       left: 0;
@@ -3702,9 +3704,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 .panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color: #fff;
   text-align: center;
-  background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover; }
   .panel.bg-image-cta .button, .panel.bg-image-cta form input[type="submit"], form .panel.bg-image-cta input[type="submit"], .panel.bg-image-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-image-cta .tribe-events-read-more, .panel.bg-color-cta .button, .panel.bg-color-cta form input[type="submit"], form .panel.bg-color-cta input[type="submit"], .panel.bg-color-cta body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .panel.bg-color-cta .tribe-events-read-more, .cta-panel .button, .cta-panel form input[type="submit"], form .cta-panel input[type="submit"], .cta-panel body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .cta-panel .tribe-events-read-more {
     padding: 0.8125rem 1.5625rem;
     min-width: 13.75rem; }
@@ -4016,7 +4018,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 
 .panel.footer-cta {
   text-align: center;
-  background: #f3f3f3; }
+  background-color: #f3f3f3; }
   .panel.footer-cta .donate {
     margin-top: 1.25rem;
     padding-left: 3.75rem;

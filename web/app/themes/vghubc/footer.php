@@ -54,7 +54,7 @@
   <div class="container bottom-line">
     <p class="copyright">© <?php print date('Y'); ?> VGH & UBC Hospital Foundation. All rights reserved.</p>
     <div class="footer-secondary-menu">
-      <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
+      <a href="/privacy-policy/">Privacy Policy</a></a>
     </div>
   </div>
 </footer>

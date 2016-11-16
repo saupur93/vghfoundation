@@ -22,7 +22,7 @@
                         'child_of' => 38,
                         'depth' => 1,
                         'title_li' => null,
-                        'exclude' => implode(',', $gover_ids),
+                        // 'exclude' => implode(',', $gover_ids),
                         'sort_column' => 'menu_order'
                       );
                     wp_list_pages($args);

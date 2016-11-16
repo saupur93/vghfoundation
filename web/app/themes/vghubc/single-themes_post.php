@@ -25,9 +25,10 @@
           $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts->ID ), 'full' )[0];
           $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : '/app/themes/vghubc/assets/img/post-placeholder.jpg';
           $theme_title = get_the_title();
+          $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
         ?>
           <li class="<?php print sanitize_title($theme_title); ?><?php if(get_the_ID() == $current_ID) print ' active'; ?>">
-            <a class="open" href="<?php echo get_permalink(); ?>"><span><?php the_title(); ?></span><span class="read-more">Learn More</span></a>
+            <a class="open" href="<?php echo get_permalink(); ?>"><span><?php the_title(); ?></span><span class="read-more"><?php print $learn_more; ?></span></a>
             <div class="thumb" style="background-image:url(<?php print $featured_image; ?>);"></div>
           </li>
         <?php endwhile; ?>

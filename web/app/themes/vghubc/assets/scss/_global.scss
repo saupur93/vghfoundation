@@ -1229,6 +1229,8 @@ span.highlighted-text {
     margin: 0;
     position:absolute;
     bottom:20px;
+    z-index:3;
+    cursor:pointer;
     @include media($ptabAndLess){
       left:0;
       right:0;
@@ -3288,9 +3290,9 @@ body.tribe-events-page-template {
 .panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color:#fff;
   text-align:center;
-  background-size:cover;
   background-position:50% 50%;
   background-repeat:no-repeat;
+  background-size:cover;
 
   .button {
     padding:rem(13) rem(25);
@@ -3722,7 +3724,7 @@ body.tribe-events-page-template {
 
 .panel.footer-cta {
   text-align:center;
-  background:$lighter-grey;
+  background-color:$lighter-grey;
   .donate {
     margin-top:rem(20);
     padding-left:rem(60);

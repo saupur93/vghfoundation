@@ -56,21 +56,15 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 ## Functional
-Events
 - lightbox for gallery opening
 - donor list page - CMS
-
-## Annual Report
-- change animations
-- add arrow down to all panels
-- adjust font sizes
-- CMS integration
-
-About Us
-- Learn about us menu.. where in CMS and what pages establish the pattern
-
-- click pager to go to slide
 - social sharing
+- Annual Report
+  - change animations
+  - add arrow down to all panels
+  - adjust font sizes
+  - CMS integration
+
 - set thumbnail sizes and regenerate thumbnails
 - browser testing
 
