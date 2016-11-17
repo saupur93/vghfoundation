@@ -3711,11 +3711,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       .panel.themes-overview-stats .tab-content .fact-row h5, .panel.themes-overview-stats .tab-content .fact-row body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.themes-overview-stats .tab-content .fact-row .tribe-events-single-section-title {
         margin-bottom: 1rem; }
       .panel.themes-overview-stats .tab-content .fact-row .larger-text {
-        font-size: 36px;
-        font-size: 2.25rem;
+        font-size: 28px;
+        font-size: 1.75rem;
         line-height: 1.1;
         margin-bottom: 0.625rem;
         display: inline-block; }
+        @media screen and (min-width: 601px) {
+          .panel.themes-overview-stats .tab-content .fact-row .larger-text {
+            font-size: 32px;
+            font-size: 2rem; } }
         @media screen and (min-width: 769px) {
           .panel.themes-overview-stats .tab-content .fact-row .larger-text {
             font-size: 42px;
@@ -4753,6 +4757,8 @@ body.page-template-page-annual-report-php {
     width: 25%;
     float: left;
     padding-right: 3.75rem; }
+    #annual-report .col-4:last-child {
+      padding-right: 0; }
   #annual-report .full-panel {
     height: 100%;
     position: relative; }
@@ -4813,8 +4819,8 @@ body.page-template-page-annual-report-php {
     margin-bottom: 0.3125rem; }
     @media screen and (min-width: 601px) {
       #annual-report .larger-text {
-        font-size: 36px;
-        font-size: 2.25rem; } }
+        font-size: 32px;
+        font-size: 2rem; } }
     @media screen and (min-width: 769px) {
       #annual-report .larger-text {
         font-size: 42px;
