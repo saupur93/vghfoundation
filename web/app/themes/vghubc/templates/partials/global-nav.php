@@ -66,7 +66,8 @@
       </nav>
     </div>
     <?php $global_donate_button_link = get_field('global_donate_button_link', 'option'); ?>
-    <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank">Donate</a>
+    <?php $donate = qtrans_getLanguage() == 'zh' ?  '捐助' : 'Donate' ?>
+    <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank"><?php print $donate; ?></a>
   </div>
 </header>
 
