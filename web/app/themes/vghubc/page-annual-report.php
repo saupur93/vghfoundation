@@ -41,7 +41,9 @@ Template Name: Annual Report
       </div>
 
       <div class="arrow-down">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/arrow-down.svg" />
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
       </div>
 
     </section>
@@ -83,6 +85,12 @@ Template Name: Annual Report
         </div>
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
 
@@ -104,6 +112,12 @@ Template Name: Annual Report
 
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
 
@@ -120,6 +134,12 @@ Template Name: Annual Report
           <p>In this Annual Report, you will read some amazing stories about six areas of where philanthropy is playing a major role delivering innovative, transformative and sustainable health care.</p>
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
 
@@ -132,28 +152,35 @@ Template Name: Annual Report
       </header>
       <div class="container">
         <div class="inner-wrap vcenter adjust">
-          <div class="stat-focus">
-            <h2>The Need</h2>
-            <div class="col-third overview">
-              <p>VGH’s operating rooms are small and out of date, and UBC facilities are not equipped to handle high acuity cases. The <em>Future of Surgery</em> will see the transformation of both sites.</p>
+          <div class="row">
+            <div class="col-4 facts">
+              <p class="stat-intro">Our world-class surgeons and OR specialists deserve the best facilities possible to help our patients.</p>
+            </div>
+            <div class="col-4 facts">
+              <h5>Facts</h5>
+                <p class="larger-text">60%</p>
+                <p class="small">We serve sixty percent of the province’s adult trauma cases are seen in our hospitals</p>
             </div>
 
-            <div class="col-third stat-col col-0">
-              <div class="fact-row">
-                <p><span class="larger-text">30,000 surgeries</span><br>
-                <span class="small">are performed per year at VGH and UBC Hospital</span>
-                </p>
-              </div>
+            <div class="col-4 facts">
+              <h5>Outcome</h5>
+                <p class="larger-text">Efficient and effective operating rooms</p>
+                <p class="small">Having more effective operating theatres is a part of the Future of Surgery</p>
             </div>
-            <div class="col-third stat-col col-1">
-              <div class="fact-row">
-                <p><span class="larger-text">60% of the BC's</span><br>
-                <span class="small">adult trauma cases are seen in our hospitals</span>
-                </p>
-              </div>
+
+            <div class="col-4 facts">
+              <h5>Story</h5>
+                <img src="http://placehold.it/207x96" />
+                <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
       </div>
     </section>
 
@@ -189,6 +216,12 @@ Template Name: Annual Report
           </div>
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
 
@@ -222,6 +255,12 @@ Template Name: Annual Report
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
       </div>
     </section>
 
@@ -257,6 +296,12 @@ Template Name: Annual Report
           </div>
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
 
@@ -291,6 +336,12 @@ Template Name: Annual Report
           </div>
         </div>
       </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
+      </div>
     </section>
 
     <section class="panel ar-section ar-section-8 full-panel" data-headerColor="community-bg">
@@ -323,6 +374,12 @@ Template Name: Annual Report
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="arrow-down">
+        <svg class="arrow-down-icon">
+          <use xlink:href="#arrow-down" />
+        </svg>
       </div>
     </section>
 

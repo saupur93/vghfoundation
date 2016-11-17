@@ -28,4 +28,12 @@
     </g>
   </symbol>
 
+
+  <symbol id="arrow-down" viewBox="0 0 37.192 19.534">
+    <g>
+      <polyline style="fill:none;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;" points="0.687,0.727 19.093,18.138 36.484,0.727
+          "/>
+    </g>
+  </symbol>
+
 </svg>

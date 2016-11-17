@@ -966,16 +966,26 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
     .section-title {
       margin-bottom:1.5rem;
       @include media($tab) {
+        padding-left:1.5rem;
+      }
+      @include media($desk) {
         padding-left:3.75rem;
       }
     }
     .col-grid-9 {
       @include media($tab) {
+        padding-left:1.5rem;
+        padding-right:2rem;
+      }
+      @include media($desk) {
         padding-left:3.75rem;
         padding-right:6rem;
       }
     }
     .col-grid-3 {
+      @include media($ptab) {
+
+      }
       ul {
         margin-top:0;
       }
@@ -1833,6 +1843,9 @@ form {
 
 .panel.newsletter-signup {
   text-align:center;
+  @include media($mobileNav){
+    padding:rem(40) rem(20);
+  }
 
   h2 {
     margin-bottom:2.5rem;
@@ -2257,6 +2270,9 @@ body.tribe-events-page-template {
     margin-top:0;
     padding-top:100px;
     height:560px;
+    background-position:50% 70px;
+  }
+  @include media($regularNav){
     background-position:50% 100px;
   }
 
@@ -2373,7 +2389,7 @@ body.tribe-events-page-template {
     top:70px;
     display:block;
   }
-  @include media($tab){
+  @include media($regularNav){
     top:100px;
   }
 
@@ -3140,6 +3156,7 @@ body.tribe-events-page-template {
       .col-half:last-child {
         @include media($tab){
           padding-top:rem(32);
+          padding-right:rem(70);
         }
         // padding-left:0%;
         // padding-right:0;
@@ -3405,13 +3422,16 @@ body.tribe-events-page-template {
 
   .stat-col {
     @include media($ptab){
-      width:35%;
+      width:50%;
       &.col-0 {
         padding-right:rem(40);
       }
       &.col-1 {
         padding-left:rem(40);
       }
+    }
+    @include media($tab){
+      width:35%;
     }
   }
 
@@ -4684,6 +4704,7 @@ body.page-template-page-annual-report-php {
   }
 
   .vcenter {
+    margin:0%;
     h2 {
       font-family: $font;
     }
@@ -4693,12 +4714,49 @@ body.page-template-page-annual-report-php {
     padding-right:rem(50);
   }
 
+  .col-4 {
+    width:25%;
+    float:left;
+    padding-right:rem(60);
+  }
+
   .full-panel {
     height:100%;
     position:relative;
 
     .ar-section-header {
       display: none;
+    }
+  }
+
+  .arrow-down {
+    position:absolute;
+    bottom:rem(30);
+    left:0;
+    right:0;
+    width:100%;
+    text-align:center;
+    .arrow-down-icon {
+      width:rem(37);
+      height:rem(20);
+    }
+  }
+
+  .ar-intro-cover, .ar-section.ar-section-3 {
+    .arrow-down-icon {
+      color:#fff;
+      // &:hover {
+      //   color:rgba(#fff, 0.8);
+      // }
+    }
+  }
+
+  .ar-section {
+    .arrow-down-icon {
+      color:$body-text;
+      // &:hover {
+      //   color:rgba($body-text, 0.8);
+      // }
     }
   }
 
@@ -4726,15 +4784,6 @@ body.page-template-page-annual-report-php {
       animation: animateArDown 4000ms 300ms;
       animation-fill-mode: forwards;
       // transform:translateY(calc(50vh - 60px));
-    }
-
-    .arrow-down {
-      position:absolute;
-      bottom:rem(30);
-      left:0;
-      right:0;
-      width:100%;
-      text-align:center;
     }
 
     .intro-copy {
@@ -4766,15 +4815,26 @@ body.page-template-page-annual-report-php {
       @include font-size(36px);
     }
     @include media($tab){
-      margin-bottom:rem(10);
       @include font-size(42px);
+      margin-bottom:rem(20);
     }
   }
 
-  .fact-row {
+
+  .ar-section .facts {
     p {
+      line-height:1.3;
+    }
+
+    p.stat-intro {
+      line-height:1.3;
+    }
+
+    p.larger-text {
       line-height:1;
     }
+
+
   }
   // .ar-section-header, .ar-main-header {
   //   color:#fff;
@@ -4796,32 +4856,32 @@ body.page-template-page-annual-report-php {
   // }
 
   [data-headerColor="surgery-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$surgery !important;
     }
   }
   [data-headerColor="cancer-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$cancer !important;
     }
   }
   [data-headerColor="heart-lung-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$heartlung !important;
     }
   }
   [data-headerColor="innovation-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$innovation !important;
     }
   }
   [data-headerColor="community-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$community !important;
     }
   }
   [data-headerColor="brain-health-bg"] {
-    .larger-text, .facts .number, .facts h5 {
+    .larger-text, .facts .number {
       color:$brainhealth !important;
     }
   }
@@ -4840,7 +4900,7 @@ body.page-template-page-annual-report-php {
       font-weight:normal;
     }
 
-    .stat-intro, .adjust {
+    .adjust {
       margin-top:-10%;
     }
 
@@ -4856,12 +4916,15 @@ body.page-template-page-annual-report-php {
 
     .facts {
       h5 {
-        margin-bottom:rem(30);
+        margin-bottom:rem(15);
       }
 
       p {
-        line-height:1;
         margin-bottom:0;
+      }
+
+      .larger-text {
+        margin-bottom:rem(10);
       }
       .number {
         @include font-size(72px);
@@ -4871,8 +4934,8 @@ body.page-template-page-annual-report-php {
       }
 
       img {
-        margin-top:rem(-20);
-        margin-bottom:rem(5);
+        // margin-top:rem(-20);
+        margin-bottom:rem(15);
       }
     }
 
@@ -5808,7 +5871,7 @@ body.page-template-page-annual-report-php {
 }
 .collapsed-nav .header-wrap {
   transform: translate3d(0, -70px, 1px);
-  @include media($tab){
+  @include media($regularNav){
     transform: translate3d(0, -100px, 1px);
   }
 
