@@ -4659,7 +4659,7 @@ body.page-template-page-annual-report-php {
   transform:translateY(0%);
   transition: transform 0.6s 0.45s cubic-bezier(.15,.89,.52,.96), background 0.3s linear;
   top:70px;
-  @include media($ptab){
+  @include media($tab){
     top:100px;
   }
 
@@ -4726,7 +4726,7 @@ body.page-template-page-annual-report-php {
     width:100%;
     float:left;
     padding-right:0;
-    @include media($ptab){
+    @include media($tab){
       padding-right:rem(60);
       width:25%;
     }
@@ -4938,7 +4938,7 @@ body.page-template-page-annual-report-php {
 
     .narrow-wrap, .inner-wrap.vcenter {
       top: rem(160);
-      @include media($ptab){
+      @include media($tab){
         position: relative;
         top: 50%;
         transform: translateY(-50%);

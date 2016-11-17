@@ -61,8 +61,6 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 - social sharing
 - Annual Report
   - change animations
-  - add arrow down to all panels
-  - adjust font sizes
   - CMS integration
 
 - set thumbnail sizes and regenerate thumbnails
