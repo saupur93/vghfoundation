@@ -34,7 +34,7 @@ Template Name: Annual Report
             </div>
             <div class="col-half second">
               <p>It takes a partnership between donors, VGH & UBC Hospital Foundation and our hospitals and health care teams to provide the best in specialized care for all British Columbians.</p>
-              <p><a class="button white-keyline" href="#">Download the Report</a></p>
+              <p><a class="button white-keyline" href="<?php bloginfo('template_directory'); ?>/assets/docs/160919 AR-DD1_Single_Pages.pdf">Download the Report</a></p>
             </div>
           </div>
         </div>
@@ -332,7 +332,7 @@ Template Name: Annual Report
         <div class="narrow-wrap">
           <h2>Find out how your contributions have helped make us vital.</h2>
           <h4>Download our full Annual Report to learn more.</h4>
-          <p><a class="button white-keyline" href="#">Download the Report</a></p>
+          <p><a class="button white-keyline" href="<?php bloginfo('template_directory'); ?>/assets/docs/160919 AR-DD1_Single_Pages.pdf">Download the Report</a></p>
         </div>
       </div>
     </section>

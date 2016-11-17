@@ -115,7 +115,7 @@ Template Name: Events
             <li class="<?php print get_post(get_the_ID())->post_name; ?> event-item item">
               <a class="open" href="<?php echo get_permalink(); ?>">
               <span><?php the_title(); ?></span>
-              <span class="date"><?php print date('F j, Y' , strtotime(get_field('event_date'))); ?></span>
+              <span class="date"><?php print get_field('event_date'); ?></span>
               <span class="read-more">Learn More</span></a>
               <div class="thumb" style="background-image:url(<?php print $header_image; ?>);"></div>
             </li>
