@@ -1293,7 +1293,7 @@ p {
   #browser-warning strong {
     font-weight: bold; }
 
-.vertical-center, .single-signature_events .page-header .cover-copy, #annual-report .panel.ar-intro-cover .intro-copy, #annual-report .ar-section .narrow-wrap, #annual-report .ar-section .inner-wrap.vcenter {
+.vertical-center, .single-signature_events .page-header .cover-copy, #annual-report .panel.ar-intro-cover .intro-copy {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3722,8 +3722,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
             font-size: 2rem; } }
         @media screen and (min-width: 769px) {
           .panel.themes-overview-stats .tab-content .fact-row .larger-text {
-            font-size: 42px;
-            font-size: 2.625rem; } }
+            font-size: 35px;
+            font-size: 2.1875rem; } }
 
 .panel.bg-image-cta, .panel.bg-color-cta, .cta-panel {
   color: #fff;
@@ -3845,13 +3845,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-bottom: 0.3125rem; }
     @media screen and (min-width: 601px) {
       .panel.full-stats-panel .fact-row .larger-text {
-        font-size: 36px;
-        font-size: 2.25rem; } }
+        font-size: 32px;
+        font-size: 2rem; } }
     @media screen and (min-width: 769px) {
       .panel.full-stats-panel .fact-row .larger-text {
         margin-bottom: 0.625rem;
-        font-size: 42px;
-        font-size: 2.625rem; } }
+        font-size: 35px;
+        font-size: 2.1875rem; } }
 
 .panel.full-stats-panel .fact-sheet {
   clear: both;
@@ -4699,7 +4699,6 @@ body.page-template-page-annual-report-php {
   background-color: #00ac9a;
   padding: 1.875rem 0;
   position: absolute;
-  top: 100px;
   width: 100%;
   z-index: 2;
   -webkit-transform: translateY(0%);
@@ -4707,7 +4706,11 @@ body.page-template-page-annual-report-php {
   -webkit-transition: background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96);
   transition: background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96);
   transition: transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96), background 0.3s linear;
-  transition: transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96), background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96); }
+  transition: transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96), background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96);
+  top: 70px; }
+  @media screen and (min-width: 601px) {
+    .ar-main-header {
+      top: 100px; } }
   .ar-main-header.cover {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
@@ -4751,12 +4754,20 @@ body.page-template-page-annual-report-php {
     margin: 0%; }
     #annual-report .vcenter h2, #annual-report .vcenter .title-only h1, .title-only #annual-report .vcenter h1, #annual-report .vcenter .single-post .large-featured-image h1, .single-post .large-featured-image #annual-report .vcenter h1 {
       font-family: "Karbon", Helvetica, Arial, sans-serif; }
-  #annual-report .col-third {
-    padding-right: 3.125rem; }
+  @media screen and (min-width: 601px) {
+    #annual-report .col-third {
+      padding-right: 3.125rem; } }
   #annual-report .col-4 {
-    width: 25%;
+    width: 100%;
     float: left;
-    padding-right: 3.75rem; }
+    padding-right: 0; }
+    @media screen and (min-width: 601px) {
+      #annual-report .col-4 {
+        padding-right: 3.75rem;
+        width: 25%; } }
+    @media screen and (max-width: 768px) {
+      #annual-report .col-4 {
+        margin-bottom: 1.5rem; } }
     #annual-report .col-4:last-child {
       padding-right: 0; }
   #annual-report .full-panel {
@@ -4778,6 +4789,9 @@ body.page-template-page-annual-report-php {
     color: #fff; }
   #annual-report .ar-section .arrow-down-icon {
     color: #575b5e; }
+  @media screen and (min-width: 769px) {
+    #annual-report .ar-section-3 .narrow-wrap {
+      width: 750px; } }
   #annual-report .panel.ar-intro-cover {
     position: relative;
     background-image: url(../img/tmp/ar-bg.jpg);
@@ -4823,8 +4837,8 @@ body.page-template-page-annual-report-php {
         font-size: 2rem; } }
     @media screen and (min-width: 769px) {
       #annual-report .larger-text {
-        font-size: 42px;
-        font-size: 2.625rem;
+        font-size: 35px;
+        font-size: 2.1875rem;
         margin-bottom: 1.25rem; } }
   #annual-report .ar-section .facts p {
     line-height: 1.3; }
@@ -4858,6 +4872,14 @@ body.page-template-page-annual-report-php {
     #annual-report .ar-section .container {
       display: block;
       height: calc(100%); }
+    #annual-report .ar-section .narrow-wrap, #annual-report .ar-section .inner-wrap.vcenter {
+      top: 10rem; }
+      @media screen and (min-width: 601px) {
+        #annual-report .ar-section .narrow-wrap, #annual-report .ar-section .inner-wrap.vcenter {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); } }
     #annual-report .ar-section .facts h5, #annual-report .ar-section .facts body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta #annual-report .ar-section .facts .tribe-events-single-section-title {
       margin-bottom: 0.9375rem; }
     #annual-report .ar-section .facts p {
@@ -4898,11 +4920,21 @@ body.page-template-page-annual-report-php {
         font-size: 210px;
         font-size: 13.125rem;
         line-height: 0.7; }
-    #annual-report .ar-section.ar-section-1 .narrow-wrap {
-      width: 740px;
-      top: 35%;
-      -webkit-transform: translateY(0);
-              transform: translateY(0); }
+    @media screen and (min-width: 601px) {
+      #annual-report .ar-section.ar-section-1 .narrow-wrap {
+        width: 740px;
+        top: 35%;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); } }
+    #annual-report .ar-section.ar-section-2 .inner-wrap {
+      margin-top: 6.25rem; }
+      @media screen and (min-width: 769px) {
+        #annual-report .ar-section.ar-section-2 .inner-wrap {
+          margin-top: 16%; } }
+    @media screen and (min-width: 769px) {
+      #annual-report .ar-section.ar-section-2 .president {
+        float: left;
+        margin-right: 40px; } }
     #annual-report .ar-section.ar-section-3 {
       color: #fff;
       background: url(../img/tmp/ar-people-bg.jpg) no-repeat 50% 100px;
@@ -4966,15 +4998,16 @@ body.page-template-page-annual-report-php {
       position: relative;
       height: 41.25rem;
       display: block; }
-    .single-post .large-featured-image .inner-wrap {
-      position: relative;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
-      max-width: 34.375rem;
-      top: 60%; }
-      .single-post .large-featured-image .inner-wrap img {
-        max-width: 100%;
-        height: auto; }
+    @media screen and (min-width: 601px) {
+      .single-post .large-featured-image .inner-wrap {
+        position: relative;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        max-width: 34.375rem;
+        top: 60%; } }
+    .single-post .large-featured-image .inner-wrap img {
+      max-width: 100%;
+      height: auto; }
     .single-post .large-featured-image h1 {
       color: #fff;
       font-family: "Karbon-Semibold", Helvetica, Arial, sans-serif; }

@@ -102,8 +102,8 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap" style="margin-top:16%;">
-          <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ar-president.jpg" style="float:left;margin-right:40px;" />
+        <div class="inner-wrap">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ar-president.jpg" class="president" />
           <div class="copy" style="overflow:hidden;">
             <h2>Thank you for keeping health care in BC vital.</h2>
             <p>I may not be typical, but I love my commute to work each day. I love it because for me, it ends walking by the construction site of the Joseph and Rosalie Segal Family Health Centre. To some, it looks like any other construction site. For me it is much more symbolic – to me, it looks like hope.</p>
@@ -129,7 +129,7 @@ Template Name: Annual Report
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap" style="width:750px;">
+        <div class="narrow-wrap">
           <h2>We’re changing lives together. <br>Here’s how.</h2>
           <p>In this Annual Report, you will read some amazing stories about six areas of where philanthropy is playing a major role delivering innovative, transformative and sustainable health care.</p>
         </div>
@@ -170,7 +170,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/surgery.jpg" />
                 <p class="small">Operating rooms like this one with Dr. Bas Masri will be revitalized as part of the Future of Surgery initiative.</p>
             </div>
           </div>
@@ -212,7 +212,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/cancer.jpg" />
                 <p class="small">Jason and Emily Ko donated $1.2M to support a Lung Cancer Screening pilot program at VGH.</p>
             </div>
           </div>
@@ -254,7 +254,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/heart-lung.jpg" />
                 <p class="small">Dr. Matt Bennett performs minimally invasive heart procedures that allow patients to quickly recover.</p>
             </div>
           </div>
@@ -296,7 +296,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/innovation.jpg" />
                 <p class="small">Sonny and Florence Leong, with Dr. Stephen Ho, believe in giving back to help advance patient care in BC.</p>
             </div>
           </div>
@@ -338,7 +338,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/community.jpg" />
                 <p class="small">The Driver Rehab Program at GF Strong helps get patients back on the driving road.</p>
             </div>
           </div>
@@ -380,7 +380,7 @@ Template Name: Annual Report
 
             <div class="col-4 facts">
               <h5>Story</h5>
-                <img src="http://placehold.it/207x96" />
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/brain-health.jpg" />
                 <p class="small">World-class skier Jamie Crane-Mauzy credits revolutionary brain surgery and VGH’s ICU team for saving her life.</p>
             </div>
           </div>
