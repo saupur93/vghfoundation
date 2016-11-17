@@ -29,6 +29,11 @@ function my_mce_before_init( $settings ) {
         'classes' => 'button'
       ),
       array(
+        'title' => 'Button - White Border',
+        'selector' => 'a',
+        'classes' => 'button white-keyline'
+      ),
+      array(
         'title' => 'Read more link',
         'selector' => 'a',
         'classes' => 'read-more'
