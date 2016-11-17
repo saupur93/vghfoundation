@@ -935,9 +935,13 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
     float:left;
     margin-bottom:1rem;
     width:100%;
-    @include media($tab){
+    @include media($ptab){
       width:50%;
       padding-right:5%;
+
+      &.last, &:last-child {
+        padding-right:0;
+      }
     }
   }
 
@@ -2387,18 +2391,19 @@ body.tribe-events-page-template {
     display:inline;
   }
 
-  .sub-header-donate {
+  .breadcrumb a.sub-header-donate {
     float:right;
     opacity: 0;
     transition: opacity 0.3s linear;
     pointer-events:none;
+  }
 
-    .collapsed-nav & {
+  .collapsed-nav & {
+    .breadcrumb a.sub-header-donate {
       opacity: 1;
       pointer-events:auto;
     }
   }
-
 
   .breadcrumb {
     padding-top:12px;
@@ -4359,6 +4364,9 @@ body.tribe-events-page-template {
     @include media($ptab){
       width:50%;
       padding-right:5%;
+      &:last-child {
+        padding-right:0;
+      }
     }
   }
 
@@ -5822,6 +5830,9 @@ body.page-template-page-annual-report-php {
 .page-template-page-home {
   .panel.overview-panel {
     padding:0;
+    @include media($ptab){
+      padding:2.5rem 0;
+    }
     @include media($tab){
       padding:9.5rem 0;
     }

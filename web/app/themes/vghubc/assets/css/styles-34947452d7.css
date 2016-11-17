@@ -1018,9 +1018,9 @@ p.date {
     .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color a.button:hover, .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-night-of-a-thousand-stars-gala .panel.category-bg-color a.tribe-events-read-more:hover {
       color: #272787; }
   .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color {
-    background-color: #d8c58b; }
+    background-color: #cca349; }
     .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color a.button:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.category-bg-color a.tribe-events-read-more:hover {
-      color: #d8c58b; }
+      color: #cca349; }
   .signature-event-ismaili-walk .panel.category-bg-color {
     background-color: #00ac9a; }
     .signature-event-ismaili-walk .panel.category-bg-color a.button:hover, .signature-event-ismaili-walk .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-ismaili-walk .panel.category-bg-color a.tribe-events-read-more:hover {
@@ -1079,18 +1079,18 @@ p.date {
   color: #fff; }
 
 .signature-event-viva-pharmaceutical-time-to-shine-gala .button, .signature-event-viva-pharmaceutical-time-to-shine-gala form input[type="submit"], form .signature-event-viva-pharmaceutical-time-to-shine-gala input[type="submit"], .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .tribe-events-read-more {
-  background-color: #d8c58b;
-  border-color: #d8c58b;
+  background-color: #cca349;
+  border-color: #cca349;
   color: #fff; }
   .signature-event-viva-pharmaceutical-time-to-shine-gala .button:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala form input[type="submit"]:hover, form .signature-event-viva-pharmaceutical-time-to-shine-gala input[type="submit"]:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .tribe-events-read-more:hover {
     color: #fff;
     background: transparent; }
   .signature-event-viva-pharmaceutical-time-to-shine-gala .button.keyline, .signature-event-viva-pharmaceutical-time-to-shine-gala form input.keyline[type="submit"], form .signature-event-viva-pharmaceutical-time-to-shine-gala input.keyline[type="submit"], .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .keyline.tribe-events-read-more {
     background-color: transparent;
-    color: #d8c58b; }
+    color: #cca349; }
     .signature-event-viva-pharmaceutical-time-to-shine-gala .button.keyline:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala form input.keyline[type="submit"]:hover, form .signature-event-viva-pharmaceutical-time-to-shine-gala input.keyline[type="submit"]:hover, .signature-event-viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-to-shine-gala .keyline.tribe-events-read-more:hover {
-      background-color: #d8c58b;
-      border-color: #d8c58b;
+      background-color: #cca349;
+      border-color: #cca349;
       color: #fff; }
 
 .signature-event-viva-pharmaceutical-time-to-shine-gala .panel.overview-panel ul li:before {
@@ -2044,10 +2044,12 @@ html[lang="zh"] .latest-open #top-header #toggleLatest:before {
     float: left;
     margin-bottom: 1rem;
     width: 100%; }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 601px) {
       .panel .col-half {
         width: 50%;
-        padding-right: 5%; } }
+        padding-right: 5%; }
+        .panel .col-half.last, .panel .col-half:last-child {
+          padding-right: 0; } }
   .panel a {
     color: #7dab35;
     text-decoration: none; }
@@ -2547,7 +2549,7 @@ svg.icon.close-x {
       .mobile-tabs-nav .options li.night-of-a-thousand-stars-gala {
         background-color: #272787; }
       .mobile-tabs-nav .options li.viva-pharmaceutical-time-to-shine-gala {
-        background-color: #d8c58b; }
+        background-color: #cca349; }
       .mobile-tabs-nav .options li.ismaili-walk {
         background-color: #00ac9a; }
       .mobile-tabs-nav .options li.mr-lube-tournament-for-life {
@@ -3121,15 +3123,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline; }
-  #sub-navigation .sub-header-donate {
+  #sub-navigation .breadcrumb a.sub-header-donate {
     float: right;
     opacity: 0;
     -webkit-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
     pointer-events: none; }
-    .collapsed-nav #sub-navigation .sub-header-donate {
-      opacity: 1;
-      pointer-events: auto; }
+  .collapsed-nav #sub-navigation .breadcrumb a.sub-header-donate {
+    opacity: 1;
+    pointer-events: auto; }
   #sub-navigation .breadcrumb {
     padding-top: 12px; }
     #sub-navigation .breadcrumb a, #sub-navigation .breadcrumb a h3, #sub-navigation .breadcrumb a body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events #sub-navigation .breadcrumb a .tribe-events-single-event-title {
@@ -4141,7 +4143,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.night-of-a-thousand-stars-gala .tribe-events-single-section-title {
       background-color: #272787; }
     .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala h5, .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.viva-pharmaceutical-time-to-shine-gala .tribe-events-single-section-title {
-      background-color: #d8c58b; }
+      background-color: #cca349; }
     .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk h5, .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.ismaili-walk .tribe-events-single-section-title {
       background-color: #00ac9a; }
     .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life h5, .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .panel.signature-events-panel #events-section .events-items .events-item.mr-lube-tournament-for-life .tribe-events-single-section-title {
@@ -4227,7 +4229,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       .panel.signature-events-panel #events-section #events-menu li.night-of-a-thousand-stars-gala:after {
         background-color: #272787; }
       .panel.signature-events-panel #events-section #events-menu li.viva-pharmaceutical-time-to-shine-gala:after {
-        background-color: #d8c58b; }
+        background-color: #cca349; }
       .panel.signature-events-panel #events-section #events-menu li.ismaili-walk:after {
         background-color: #00ac9a; }
       .panel.signature-events-panel #events-section #events-menu li.mr-lube-tournament-for-life:after {
@@ -4490,7 +4492,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 @media screen and (min-width: 601px) {
   .panel.narrow-two-column .col-half {
     width: 50%;
-    padding-right: 5%; } }
+    padding-right: 5%; }
+    .panel.narrow-two-column .col-half:last-child {
+      padding-right: 0; } }
 
 @media screen and (max-width: 768px) {
   .panel.map-panel iframe[src*="maps.google.ca"], .panel.map-panel #map {
@@ -5527,6 +5531,9 @@ body.page-template-page-annual-report-php {
 
 .page-template-page-home .panel.overview-panel {
   padding: 0; }
+  @media screen and (min-width: 601px) {
+    .page-template-page-home .panel.overview-panel {
+      padding: 2.5rem 0; } }
   @media screen and (min-width: 769px) {
     .page-template-page-home .panel.overview-panel {
       padding: 9.5rem 0; } }

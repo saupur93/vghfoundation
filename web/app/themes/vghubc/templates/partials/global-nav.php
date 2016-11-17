@@ -23,7 +23,7 @@
         <?php
           $currentLang = qtrans_getLanguage();
           $page_url = get_permalink();
-          $page_url = parse_url( $page_url );
+          $page_url = parse_url($page_url);
           $page_url = $page_url['path'];
           $page_url = str_replace('/en', '', $page_url);
           $page_url = str_replace('/zh', '', $page_url);
