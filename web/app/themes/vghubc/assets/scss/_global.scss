@@ -1653,8 +1653,13 @@ svg.icon.close-x {
     left:0;
     right:0;
     height:52px;
+    
     @include media($ptab){
       height:16.666vw;
+      white-space: nowrap;
+      font-size:0;
+
+
     }
 
     li {
@@ -1667,6 +1672,8 @@ svg.icon.close-x {
       width: 100%;
       @include media($ptab){
         width: 16.666vw;
+        float: none;
+        display:inline-block;
       }
 
       &:after {
@@ -2982,6 +2989,10 @@ body.tribe-events-page-template {
     top:0;
     padding:0;
     margin:0;
+    @include media($tab){
+      font-size:0;
+      white-space: nowrap;
+    }
     li {
       position: relative;
       width: 100%;
@@ -2991,6 +3002,8 @@ body.tribe-events-page-template {
       margin-bottom:0;
       @include media($tab){
         width: 16.666vw;
+        float:none;
+        display:inline-block;
       }
 
       @include media($ptabAndLess){
@@ -3973,6 +3986,7 @@ body.tribe-events-page-template {
         z-index: 1;
         margin-bottom:0;
         display:inline-block;
+        font-size:0;
 
         @include media($ptab){
           width: 33.333vw;
