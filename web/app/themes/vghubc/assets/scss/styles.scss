@@ -1,6 +1,7 @@
 // Bourbon/Neat
 @import "bourbon/bourbon";
 @import "neat/neat";
+$disable-warnings: true !global;
 
 // Partials
 @import "_normalize.scss";

@@ -11069,7 +11069,7 @@ var AnnualReport = function () {
           var panelsEl = self.elements.container;
 
           // Control the panels
-          if ((0, _jquery2.default)('body').hasClass('page-template-page-annual-report-php')) {
+          if ((0, _jquery2.default)('body').hasClass('page-template-page-annual-report-php') && (0, _jquery2.default)(window).width() > 768) {
 
             if (!inTransition) {
               if (scrollDistance > 0) {

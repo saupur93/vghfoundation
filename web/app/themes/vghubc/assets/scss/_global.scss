@@ -398,8 +398,8 @@ p {
         > .submenu-trigger{
           position: relative;
           float: right;
-          width:rem(20);
-          height:rem(20);
+          width:1rem;
+          height:1rem;
 
           &:after {
             content:'';
@@ -558,6 +558,14 @@ p {
     }
     @include media($regularNav){
       min-height:40px;
+    }
+    .mobile-only {
+      float:right;
+      font-family: $font;
+      @include media($mobileNav){
+        display: block;
+      }
+      
     }
   }
   #toggleLatest {
@@ -1170,7 +1178,7 @@ span.highlighted-text {
 
   .slide-images {
     width:100%;
-    height:58%;
+    height:60%;
     // top:-70px;
     z-index:0;
     white-space:nowrap;
@@ -1280,6 +1288,12 @@ span.highlighted-text {
 .panel.overview-panel {
   margin-top:rem(80);
   padding-bottom:rem(30);
+
+  .single-signature_events & {
+    @include media($tab){
+      padding-bottom:7.5rem;
+    }
+  }
 
   @include media($tab){
     margin-top:rem(80);
@@ -1754,7 +1768,7 @@ svg.icon.close-x {
         background-size:cover;
         opacity:1;
         transition: opacity 0.2s linear;
-        top:rem(60);
+        top:rem(52);
       }
 
       span {
@@ -1990,6 +2004,8 @@ form {
       border:0;
       width: 100%;
       box-sizing:border-box;
+      border-radius: 0;
+      -webkit-appearance: none;
     }
     input[type=submit]{
       width:100%;
@@ -1999,6 +2015,8 @@ form {
       border:2px solid #fff;
       color:#fff;
       background-color:transparent;
+      border-radius: 0;
+      -webkit-appearance: none;
       &:hover {
         color:$brand-green;
         background-color:#fff;
@@ -2630,6 +2648,12 @@ body.tribe-events-page-template {
     margin-bottom:rem(30);
     transition:all 0.2s linear;
     @include media($tab){
+      width:calc(100% - 60px);
+      margin-left:rem(30);
+      margin-right:rem(30);
+    }
+
+    @include media($wideDesk){
       width:calc(100% - 120px);
       margin-left:rem(60);
       margin-right:rem(60);
@@ -3167,6 +3191,10 @@ body.tribe-events-page-template {
         padding-bottom:rem(120);
         padding-left:calc(50vw - 640px);
       }
+      @include media($laptopHeightOnly){
+        padding-top:rem(60);
+        padding-bottom:rem(60);
+      }
 
       .col-half:first-child {
         @include media($tab){
@@ -3357,6 +3385,13 @@ body.tribe-events-page-template {
 
 .panel.slideshow-content-panel {
   position:relative;
+  .inner-wrap {
+    @include media($tab){
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+  }
+
   .slide-images {
     position:relative;
     z-index:0;
@@ -3440,7 +3475,7 @@ body.tribe-events-page-template {
   .overview {
     @include media($tab){
       padding-right:rem(90);
-      width:30%;
+      width:45%;
     }
   }
 
@@ -3455,7 +3490,7 @@ body.tribe-events-page-template {
       }
     }
     @include media($tab){
-      width:35%;
+      width:27.5%;
     }
   }
 
@@ -3835,6 +3870,12 @@ body.tribe-events-page-template {
           display:inline-block;
           padding:5px 10px;
         }
+
+        h2 {
+          @include media($tab){
+            margin-bottom: 0;
+          }
+        }
       }
     }
 
@@ -4079,7 +4120,7 @@ body.tribe-events-page-template {
           background-size:cover;
           opacity:1;
           transition: opacity 0.2s linear;
-          top:rem(60);
+          top:rem(57);
         }
 
 
@@ -4672,7 +4713,9 @@ body.tribe-events-page-template {
 
 // ANNUAL REPORT
 body.page-template-page-annual-report-php {
-  overflow:hidden;
+  @include media($tab){
+    overflow:hidden;
+  }
 }
 
 .ar-main-header {
@@ -4768,8 +4811,38 @@ body.page-template-page-annual-report-php {
     height:100%;
     position:relative;
 
+
     .ar-section-header {
-      display: none;
+      color:#fff;
+      background-color:$teal;
+      
+      @include media($tab){
+        display: none;
+      }
+    }
+
+    [data-headerColor="surgery-bg"] .ar-section-header {
+      background-color:$surgery;
+    }
+    
+    [data-headerColor="cancer-bg"] .ar-section-header {
+      background-color:$cancer;
+    }
+    
+    [data-headerColor="heart-lung-bg"] .ar-section-header {
+      background-color:$heartlung;
+    }
+    
+    [data-headerColor="innovation-bg"] .ar-section-header {
+      background-color:$innovation;
+    }
+    
+    [data-headerColor="community-bg"] .ar-section-header {
+      background-color:$community;
+    }
+    
+    [data-headerColor="brain-health-bg"] .ar-section-header {
+      background-color:$brainhealth;
     }
   }
 
@@ -4786,6 +4859,8 @@ body.page-template-page-annual-report-php {
     }
   }
 
+
+
   .ar-intro-cover, .ar-section.ar-section-3 {
     .arrow-down-icon {
       color:#fff;
@@ -4796,6 +4871,11 @@ body.page-template-page-annual-report-php {
   }
 
   .ar-section {
+    @include media($ptabAndLess){
+      .arrow-down {
+        display:none;
+      }
+    }
     .arrow-down-icon {
       color:$body-text;
       // &:hover {
@@ -5571,6 +5651,7 @@ body.page-template-page-annual-report-php {
     @include media($ptabAndLess){
       margin-top:rem(0);
       padding:0;
+      margin-bottom:2rem;
     }
     li {
       padding:0;
@@ -5580,7 +5661,7 @@ body.page-template-page-annual-report-php {
       color:$body-text-light;
       transition:all 0.3s linear;
       width:100%;
-      @include media($ptab){
+      @include media($tab){
         width:16.666%;
         vertical-align:top;
         padding-bottom:rem(20);
@@ -5613,7 +5694,9 @@ body.page-template-page-annual-report-php {
         @include font-size(24px);
         // text-transform:uppercase;
         font-family:$font-bold;
-        min-height:rem(55);
+        @include media($tab){
+          min-height:rem(55);          
+        }
       }
 
       h5 {
@@ -5645,12 +5728,21 @@ body.page-template-page-annual-report-php {
     width:100%;
     margin-bottom:2.5rem;
 
+    @include media($ptabAndLess){
+      display:flex;
+    }
+
     li {
       display:inline-block;
       margin-right:rem(10);
       padding-left:0;
       @include media($ptab){
         margin-right:rem(40);
+      }
+      @include media($ptabAndLess){
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
       }
 
       &[data-tab] {
@@ -5734,6 +5826,10 @@ body.page-template-page-annual-report-php {
         margin:0;
         margin-bottom:1rem;
         max-width:rem(600);
+        @include media($ptabAndLess){
+          position: relative;
+          padding-right:rem(20);
+        }
 
         a {
           color:$body-text;
@@ -5754,6 +5850,12 @@ body.page-template-page-annual-report-php {
               float:right;
               width:auto;
               margin-bottom:0;
+            }
+            @include media($ptabAndLess){
+              position: absolute;
+              top:-3px;
+              right:0;
+              width:auto;
             }
 
             .download-icon {

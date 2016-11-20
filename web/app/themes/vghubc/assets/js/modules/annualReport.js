@@ -80,7 +80,7 @@ export default class AnnualReport {
 
 
           // Control the panels
-          if ( $('body').hasClass('page-template-page-annual-report-php') ) {
+          if ( $('body').hasClass('page-template-page-annual-report-php') && $(window).width() > 768) {
 
               if(!inTransition){
                 if (scrollDistance > 0) {

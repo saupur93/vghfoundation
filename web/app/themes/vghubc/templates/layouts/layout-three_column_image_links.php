@@ -4,6 +4,7 @@
       $column_title = get_sub_field('column_title');
       $link = get_sub_field('link');
       $image = get_sub_field('image')['url'];
+      $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
     ?>
     <article class="col-grid-4">
       <a href="<?php print $link; ?>">
@@ -13,7 +14,7 @@
           <h4><?php print $column_title; ?></h4>
           <?php endif; ?>
           <?php if($link): ?>
-          <p><span class="read-more">Learn more</span></p>
+          <p><span class="read-more"><?php print $learn_more; ?></span></p>
           <?php endif; ?>
         </div>
       </a>

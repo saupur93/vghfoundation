@@ -58,7 +58,7 @@ Template Name: Events
       $current_ID = get_the_ID();
       $post_count = 0;
     ?>
-    <section class="panel extra-padded-top signature-events-panel">
+    <section class="panel extra-padded-top signature-events-panel" id="signature-events">
       <div class="container">
         <div class="inner-wrap">
           <h2>Our Signature Events</h2>
@@ -89,6 +89,7 @@ Template Name: Events
           $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
           $theme_title = get_the_title();
           $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
+          $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
         ?>
           <a href="<?php echo get_permalink(); ?>" class="events-item <?php if($post_count == 1) print ' active'; ?> <?php print get_post(get_the_ID())->post_name; ?>">
             <div class="hover-bg-image" style="background-image:url(<?php print $header_image; ?>);" data-hover-image="<?php print $header_image; ?>"></div>
@@ -98,7 +99,7 @@ Template Name: Events
                 <h5><?php print $sub_title; ?></h5>
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
-                <span class="mobile-only read-more">Learn more</span>
+                <span class="mobile-only read-more"><?php print $learn_more; ?></span>
 
               </div>
             </div>
@@ -111,12 +112,13 @@ Template Name: Events
         <?php
           $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
           $theme_title = get_the_title();
+          $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
         ?>
             <li class="<?php print get_post(get_the_ID())->post_name; ?> event-item item">
               <a class="open" href="<?php echo get_permalink(); ?>">
               <span><?php the_title(); ?></span>
               <span class="date"><?php print get_field('event_date'); ?></span>
-              <span class="read-more">Learn More</span></a>
+              <span class="read-more"><?php print $learn_more; ?></span></a>
               <div class="thumb" style="background-image:url(<?php print $header_image; ?>);"></div>
             </li>
             <?php endwhile; ?>

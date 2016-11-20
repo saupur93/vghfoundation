@@ -79,7 +79,7 @@ function menu_is_child_of($id) {
      if(isset($post->ID) && $child->ID == $post->ID) $count++;
    }
 
-   if ( is_page() && ($post->post_parent || $count > 0  ) && $post->ID != $id) {
+   if ( is_page() && ($count > 0  ) && $post->ID != $id) {
     return true;
    } else {
     return false;
