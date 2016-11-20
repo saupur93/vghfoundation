@@ -105,15 +105,18 @@ Template Name: Home
         $summary = get_sub_field('summary');
         $related_theme = get_sub_field('related_theme')[0];
         $class = $related_theme->post_name;
+        $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more about '. $related_theme->post_title : '更多資訊';
       ?>
-      <div class="themes-item<?php if($tab_count == 1) print ' active'; ?><?php print ' '. $class; ?>">
+      <a href="<?php print get_permalink($related_theme->ID); ?>" class="themes-item<?php if($tab_count == 1) print ' active'; ?><?php print ' '. $class; ?>">
         <div class="hover-bg-image" style="background-image:url(<?php print $theme_full_image; ?>);" data-hover-image="<?php print $theme_full_image; ?>"></div>
         <div class="container">
           <div class="summary">
             <?php print $summary; ?>
+            <span class="mobile-only read-more"><?php print $learn_more; ?></span>
           </div>
         </div>
-      </div>
+      </a>
+
 
       <?php endwhile; ?>
     </div>

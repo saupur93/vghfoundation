@@ -90,8 +90,7 @@ Template Name: Events
           $theme_title = get_the_title();
           $sub_title = null !== get_field('sub_title') ? get_field('sub_title') : false;
         ?>
-          <a href="<?php echo get_permalink(); ?>">
-          <div class="events-item <?php if($post_count == 1) print ' active'; ?> <?php print get_post(get_the_ID())->post_name; ?>">
+          <a href="<?php echo get_permalink(); ?>" class="events-item <?php if($post_count == 1) print ' active'; ?> <?php print get_post(get_the_ID())->post_name; ?>">
             <div class="hover-bg-image" style="background-image:url(<?php print $header_image; ?>);" data-hover-image="<?php print $header_image; ?>"></div>
             <div class="container">
               <div class="summary">
@@ -99,9 +98,10 @@ Template Name: Events
                 <h5><?php print $sub_title; ?></h5>
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
+                <span class="mobile-only read-more">Learn more</span>
+
               </div>
             </div>
-          </div>
           </a>
           <?php endwhile; ?>
         </div>

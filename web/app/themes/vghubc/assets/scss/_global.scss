@@ -1335,7 +1335,7 @@ svg.icon.close-x {
   background-repeat: no-repeat;
   background-size:100%;
   color:#fff;
-  height:70vh;
+  height:80vh;
   position:relative;
   @include media($ptab){
     height:512px;
@@ -1347,6 +1347,11 @@ svg.icon.close-x {
   @include media($laptopHeightOnly){
     min-height:auto;
     height:90vh;
+  }
+
+  span.read-more {
+    color:#fff;
+    border-color:#fff;
   }
 
   @include media($ptabAndLess){
@@ -2968,6 +2973,9 @@ body.tribe-events-page-template {
   background-color:#f3f3f3;
   position:relative;
 
+  .button {
+  }
+
   .top-menu {
     width: 100%;
     list-style: none;
@@ -3863,6 +3871,10 @@ body.tribe-events-page-template {
     }
 
     .events-items {
+      span.read-more {
+        color:#fff;
+        border-color:#fff;
+      }
       @include media($ptabAndLess){
         height:100%;
       }
@@ -5519,6 +5531,8 @@ body.page-template-page-annual-report-php {
   margin-top:rem(60);
   @include clearfix;
   padding-top:rem(40);
+  position:relative;
+
   [data-tab-content]{
     display:none;
 
@@ -5529,7 +5543,6 @@ body.page-template-page-annual-report-php {
   }
 
   .tab-group {
-    position:relative;
     @include media($ptabAndLess){
       padding-top:2.5rem;
     }
@@ -5542,7 +5555,7 @@ body.page-template-page-annual-report-php {
     float:left;
     margin-bottom:1.5rem;
     @include media($ptabAndLess){
-      margin-top:rem(30);
+      margin-top:rem(0);
       padding:0;
     }
     li {
@@ -5652,19 +5665,19 @@ body.page-template-page-annual-report-php {
         @include media($ptabAndLess){
           margin-bottom:0;
         }
-        &:after {
-          content:'';
-          width:0%;
-          height:2px;
-          background:transparent;
-          display:block;
-          margin-top:0.25rem;
-          transition:all 0.2s linear;
-          @include media($ptab){
-            margin-top:1rem;
-            height:3px;
-          }
-        }
+        // &:after {
+        //   content:'';
+        //   width:0%;
+        //   height:2px;
+        //   background:transparent;
+        //   display:block;
+        //   margin-top:0.25rem;
+        //   transition:all 0.2s linear;
+        //   @include media($ptab){
+        //     margin-top:1rem;
+        //     height:3px;
+        //   }
+        // }
       }
 
       &:last-child {
@@ -5951,5 +5964,11 @@ body.page-template-page-annual-report-php {
       padding:9.5rem 0;
     }
 
+  }
+}
+
+.mobile-only {
+  @include media($tab){
+    display:none;
   }
 }
