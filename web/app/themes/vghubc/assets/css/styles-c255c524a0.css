@@ -5694,3 +5694,18 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 @media screen and (min-width: 769px) {
   .mobile-only {
     display: none; } }
+
+@media screen and (min-width: 769px) {
+  .wp-caption.alignleft {
+    float: left;
+    margin-bottom: 1.875rem; } }
+
+@media screen and (min-width: 769px) {
+  .wp-caption.alignleft img {
+    float: left;
+    margin-right: 1.875rem; } }
+
+@media screen and (min-width: 769px) {
+  .wp-caption.alignleft .wp-caption-text {
+    overflow: hidden;
+    padding: 0; } }

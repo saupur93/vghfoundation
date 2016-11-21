@@ -565,7 +565,7 @@ p {
       @include media($mobileNav){
         display: block;
       }
-      
+
     }
   }
   #toggleLatest {
@@ -1667,7 +1667,7 @@ svg.icon.close-x {
     left:0;
     right:0;
     height:52px;
-    
+
     @include media($ptab){
       height:16.666vw;
       white-space: nowrap;
@@ -4815,7 +4815,7 @@ body.page-template-page-annual-report-php {
     .ar-section-header {
       color:#fff;
       background-color:$teal;
-      
+
       @include media($tab){
         display: none;
       }
@@ -4824,23 +4824,23 @@ body.page-template-page-annual-report-php {
     [data-headerColor="surgery-bg"] .ar-section-header {
       background-color:$surgery;
     }
-    
+
     [data-headerColor="cancer-bg"] .ar-section-header {
       background-color:$cancer;
     }
-    
+
     [data-headerColor="heart-lung-bg"] .ar-section-header {
       background-color:$heartlung;
     }
-    
+
     [data-headerColor="innovation-bg"] .ar-section-header {
       background-color:$innovation;
     }
-    
+
     [data-headerColor="community-bg"] .ar-section-header {
       background-color:$community;
     }
-    
+
     [data-headerColor="brain-health-bg"] .ar-section-header {
       background-color:$brainhealth;
     }
@@ -5695,7 +5695,7 @@ body.page-template-page-annual-report-php {
         // text-transform:uppercase;
         font-family:$font-bold;
         @include media($tab){
-          min-height:rem(55);          
+          min-height:rem(55);
         }
       }
 
@@ -6086,5 +6086,27 @@ body.page-template-page-annual-report-php {
 .mobile-only {
   @include media($tab){
     display:none;
+  }
+}
+
+.wp-caption {
+  &.alignleft {
+    @include media($tab){
+      float:left;
+      margin-bottom:rem(30);
+    }
+
+    img {
+      @include media($tab){
+        float:left;
+        margin-right:rem(30);
+      }
+    }
+    .wp-caption-text {
+      @include media($tab){
+        overflow:hidden;
+        padding:0;
+      }
+    }
   }
 }
