@@ -2722,6 +2722,9 @@ svg.icon.close-x {
           font-size: 16px;
           font-size: 1rem; } }
 
+form #denySubmit {
+  display: none; }
+
 form input[type="text"], form input[type="email"] {
   background-color: #fff;
   border: 0;
@@ -2729,7 +2732,7 @@ form input[type="text"], form input[type="email"] {
   margin-right: 10px;
   font-size: 16px;
   font-size: 1rem;
-  min-width: calc(50% - 225px);
+  min-width: calc(44% - 225px);
   height: 45px; }
   @media screen and (max-width: 768px) {
     form input[type="text"], form input[type="email"] {
@@ -5015,8 +5018,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 
 .single-post {
   width: 100%; }
-  .single-post .wp-caption {
-    width: 100% !important; }
   .single-post .large-featured-image {
     width: 100%;
     height: 34.375rem;
@@ -5698,11 +5699,10 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 @media screen and (min-width: 769px) {
   .wp-caption.alignleft {
     float: left;
-    margin-bottom: 1.875rem; } }
+    margin-right: 1.875rem; } }
 
 @media screen and (min-width: 769px) {
   .wp-caption.alignleft img {
-    float: left;
     margin-right: 1.875rem; } }
 
 @media screen and (min-width: 769px) {

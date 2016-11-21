@@ -1841,13 +1841,16 @@ svg.icon.close-x {
 }
 
 form {
+  #denySubmit {
+    display:none;
+  }
   input[type="text"], input[type="email"] {
     background-color:#fff;
     border:0;
     padding:10px 15px;
     margin-right:10px;
     @include font-size(16px);
-    min-width:calc(50% - 225px);
+    min-width:calc(44% - 225px);
     height:45px;
     @include media($ptabAndLess){
       width: 100%;
@@ -5161,7 +5164,7 @@ body.page-template-page-annual-report-php {
   width:100%;
 
   .wp-caption {
-    width:100% !important;
+    // width:100% !important;
   }
 
   .large-featured-image {
@@ -6093,12 +6096,13 @@ body.page-template-page-annual-report-php {
   &.alignleft {
     @include media($tab){
       float:left;
-      margin-bottom:rem(30);
+      // width:inherit !important;
+      margin-right:rem(30);
     }
 
     img {
       @include media($tab){
-        float:left;
+        // float:left;
         margin-right:rem(30);
       }
     }

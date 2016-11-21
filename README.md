@@ -46,14 +46,10 @@
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
 
 
-# TODO
+
 
 ## QA Notes
-- Why Give Overview might be a little big on smaller screens
-- Too much space on theme outcomes/impact facts
-- Ways to Give intro text is too huge - cut copy or shrink text globally
-- themes summary subnav collision
-
+- ask Ian to style newsletter sign up page on luminate
 
 ## Functional
 - lightbox for gallery opening
