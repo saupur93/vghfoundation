@@ -4,6 +4,7 @@
             <div class="row">
             <?php
               $governance_menu = menu_featured_images(49);
+              $learn_more = qtrans_getLanguage() !== 'zh' ? 'Learn more' : '更多資訊';
             ?>
 
             <?php foreach($governance_menu as $menu_item): ?>
@@ -11,9 +12,9 @@
               <a href="<?php print $menu_item['link']; ?>">
                 <div class="thumb"<?php print ' style="background-image:url('. $menu_item['image'] .')"'; ?>></div>
                 <div class="copy center">
-                  <h3><?php print $menu_item['title']; ?></h3>
+                  <h3><?php print apply_filters('translate_text', $menu_item['title']); ?></h3>
                 </div>
-                <p class="more"><span class="read-more">Learn more</span></p>
+                <p class="more"><span class="read-more"><?php print $learn_more; ?></span></p>
               </a>
               </article>
             <?php endforeach; ?>
