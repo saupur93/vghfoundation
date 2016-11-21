@@ -5086,8 +5086,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       right: 0;
       top: calc(100% + 0.75rem);
       max-width: 18.75rem;
-      font-size: 14px;
-      font-size: 0.875rem; }
+      font-size: 16px;
+      font-size: 1rem; }
       @media screen and (max-width: 768px) {
         .single-post .large-featured-image .caption-text {
           display: none; } }
@@ -5109,8 +5109,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-bottom: 3rem; }
   .single-post .wp-caption-text {
     padding-top: 0.625rem;
-    font-size: 14px;
-    font-size: 0.875rem; }
+    font-size: 16px;
+    font-size: 1rem; }
   .single-post blockquote {
     padding-right: 0;
     width: calc(100% - 15px);
@@ -5708,4 +5708,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 @media screen and (min-width: 769px) {
   .wp-caption.alignleft .wp-caption-text {
     overflow: hidden;
-    padding: 0; } }
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem; } }

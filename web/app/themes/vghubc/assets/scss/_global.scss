@@ -5255,7 +5255,7 @@ body.page-template-page-annual-report-php {
       right:0;
       top:calc(100% + 0.75rem);
       max-width:rem(300);
-      @include font-size(14px);
+      @include font-size(16px);
 
       @include media($ptabAndLess){
         display:none;
@@ -5294,7 +5294,7 @@ body.page-template-page-annual-report-php {
   .wp-caption-text {
     @extend .small;
     padding-top:rem(10);
-    @include font-size(14px);
+    @include font-size(16px);
   }
 
   blockquote {
@@ -6110,6 +6110,8 @@ body.page-template-page-annual-report-php {
       @include media($tab){
         overflow:hidden;
         padding:0;
+        margin-bottom:0;
+        @include font-size(16px);
       }
     }
   }
