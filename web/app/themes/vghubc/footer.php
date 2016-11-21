@@ -79,12 +79,6 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   </script>
 
-  <?php if ( WP_ENV == 'production' ): ?>
-      <script>
-          ga('create', '00000000');
-          ga('send', 'pageview');
-      </script>
-  <?php endif; ?>
 
   <?php wp_footer(); ?>
 </body>
