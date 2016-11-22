@@ -52,7 +52,6 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 - ask Ian to style newsletter sign up page on luminate
 
 ## Functional
-- lightbox for gallery opening
 - Annual Report
   - change animations
   - CMS integration

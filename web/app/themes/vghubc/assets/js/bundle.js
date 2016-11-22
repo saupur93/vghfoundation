@@ -11136,27 +11136,22 @@ var AnnualReport = function () {
 
           // Control the panels
           if ((0, _jquery2.default)('body').hasClass('page-template-page-annual-report-php') && (0, _jquery2.default)(window).width() > 768) {
-
             if (!inTransition) {
               if (scrollDistance > 0) {
-
                 // scrolling up
                 if (scrollDistance > delta) {
                   inTransition = true;
                   self.waitForTransition();
                   self.transition('up');
-
                   // quick way to get the element in the right spot on the way up
                   if (panelsEl.getBoundingClientRect().top > 0) {
                     window.scroll(0, window.innerHeight - delta);
                   }
                 }
               } else {
-
                 // scrolling down
                 if (scrollDistance < -delta) {
                   inTransition = true;
-
                   self.waitForTransition();
                   self.transition('down');
                 }
@@ -11269,7 +11264,7 @@ var AnnualReport = function () {
             }
 
             // specifically section 1
-            if ((0, _jquery2.default)('.full-panel.active').hasClass('ar-section-1')) {
+            if ((0, _jquery2.default)('.full-panel.ar-section-1').hasClass('active')) {
               (function () {
 
                 var count = 0;

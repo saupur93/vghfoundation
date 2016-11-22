@@ -89,7 +89,7 @@
   <div class="container breadcrumb">
   <?php $event_text = qtrans_getLanguage() == 'zh' ?  '筹款活动' : 'Events' ?>
   <?php $donate_text = qtrans_getLanguage() == 'zh' ?  '捐助' : 'Donate to this event' ?>
-  
+
   <h3><a href="/events/#signature-events"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> <?php print $event_text; ?></a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
   <?php $donation_link = null !== get_field('donation_url', get_the_ID()) ? get_field('donation_url', get_the_ID()) : false; ?>
   <?php if($donation_link && !empty($donation_link)): ?>
@@ -100,7 +100,7 @@
 <?php endif; ?>
 
 
-<?php /* 38 is the About page; 20259 is the Annual Report page */ 
+<?php /* 38 is the About page; 20259 is the Annual Report page */
   if(menu_is_child_of(38) && get_the_ID() != 20259): ?>
 <header id="sub-navigation">
   <div class="container breadcrumb">

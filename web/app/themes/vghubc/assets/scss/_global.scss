@@ -784,6 +784,10 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
 
   .latest-open &, .latest-closed & {
     height:160px;
+
+    @include media($laptopHeightOnly){
+      height:120px;
+    }
   }
 
   .latest-closed-finished & {
@@ -5089,19 +5093,17 @@ body.page-template-page-annual-report-php {
     .animated-content {
       overflow: hidden;
       // position: relative;
-      transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      // transition: opacity 1s ease-in-out;
 
       .item {
         opacity: 0;
-        transform:translateX(100%);
-        transition:all 500ms linear;
+        transition:all 0.7s linear;
         z-index: 0;
         position: absolute;
         top:0;
 
         &.active {
           opacity: 1;
-          transform:translateX(0%);
           z-index: 3;
         }
       }

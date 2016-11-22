@@ -76,44 +76,30 @@ export default class AnnualReport {
           var delta = ( e.detail ) ? 10 : 100; // e.detail is much lower than e.wheelDelta
           var panelsEl = self.elements.container;
 
-
-
-
           // Control the panels
           if ( $('body').hasClass('page-template-page-annual-report-php') && $(window).width() > 768) {
-
               if(!inTransition){
                 if (scrollDistance > 0) {
-
                   // scrolling up
                   if(scrollDistance > delta){
                     inTransition = true;
                     self.waitForTransition();
                     self.transition('up');
-
-
                     // quick way to get the element in the right spot on the way up
                     if (panelsEl.getBoundingClientRect().top > 0 ) {
                       window.scroll(0, window.innerHeight - delta );
-
                     }
                   }
-
                 } else {
-
                   // scrolling down
                   if(scrollDistance < -delta){
                     inTransition = true;
-
                     self.waitForTransition();
                     self.transition('down');
-
                   }
-
                 }
              }
           }
-
         },
 
 
@@ -121,7 +107,7 @@ export default class AnnualReport {
         // Function: transitionDuration()
         // Calculates how long the slide transition is from the css prop
         // --------------------------
-        transitionDuration: function ( ){
+        transitionDuration: function (){
           var self = this;
           var duration = 0;
 
@@ -140,7 +126,7 @@ export default class AnnualReport {
         // Function: waitForTransition()
         // waits for a transition to finish then unblocks the scrollEvent functionality
         // --------------------------
-        waitForTransition: function( ) {
+        waitForTransition: function() {
           var self = this;
           setTimeout(function(){
             inTransition = false;
@@ -239,7 +225,7 @@ export default class AnnualReport {
             }
 
             // specifically section 1
-            if($('.full-panel.active').hasClass('ar-section-1')) {
+            if($('.full-panel.ar-section-1').hasClass('active')) {
 
               let count = 0
               window.section2interval = setInterval(() => {
