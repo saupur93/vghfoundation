@@ -6137,7 +6137,6 @@ body.overlay-open {
   @include media($ptab){
     top: 100px;
     height: calc(100% - 100px);
-    padding-top:40px;
   }
   @include media($ptabAndLess){
     z-index:333;
@@ -6197,7 +6196,17 @@ body.overlay-open {
   }
 
   .overlay-content {
-    margin-top:60px;
+    // margin-top:60px;
+  }
+
+  .full-container {
+    .gallery-item {
+      @include media($tab){
+        width:100%;
+        height:calc(100vh - 100px);
+      }
+
+    }
   }
 
   .prev, .next {

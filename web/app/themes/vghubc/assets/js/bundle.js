@@ -10959,7 +10959,6 @@ var App = function () {
 
       // ajax the content
       var loadContent = function loadContent(e) {
-        (0, _jquery2.default)('body').append('<div class="ajax-loading"></div>');
 
         var galleryHTML = (0, _jquery2.default)(e.currentTarget).parents('.inline-gallery-thumbs').html();
         overlay.find('.overlay-content').append(galleryHTML);

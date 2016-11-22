@@ -515,7 +515,6 @@ class App {
 
     // ajax the content
     const loadContent = (e) => {
-      $('body').append('<div class="ajax-loading"></div>');
 
       let galleryHTML = $(e.currentTarget).parents('.inline-gallery-thumbs').html();
       overlay.find('.overlay-content').append(galleryHTML);
