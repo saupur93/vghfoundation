@@ -6180,7 +6180,7 @@ body.overlay-open {
     &:before, &:after {
       width:1px;
       height:50px;
-      background:$brand-green;
+      background:#fff;
       content:'';
       display:block;
       position:absolute;
