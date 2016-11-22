@@ -2669,12 +2669,17 @@ body.tribe-events-page-template {
   padding-top:rem(80);
 
   @include media($ptab){
+    padding-top:rem(100);
+  }
+
+  @include media($tab){
+    padding-top:rem(120);
+  }
+
+  @include media($desk){
     padding-top:rem(160);
   }
 
-  @include media($portraitOnly){
-    padding-top:rem(100);
-  }
 
   .slideshow-content-panel {
     @include media($portraitOnly){
@@ -4238,12 +4243,14 @@ body.tribe-events-page-template {
   .full-container {
     white-space:nowrap;
     overflow:hidden;
+    font-size:0;
   }
   .gallery-item {
     display:inline-block;
-    width: 33.333vw;
+    width: 33.333333%;
     height:100%;
     height:rem(100);
+    font-size:0;
     @include media($ptab){
       height:rem(200);
     }
@@ -4264,7 +4271,7 @@ body.tribe-events-page-template {
       &:hover {
         position:relative;
         transform: scale(1.1) !important;
-        z-index:1;
+        z-index:3;
         opacity:1;
       }
 
@@ -6133,7 +6140,7 @@ body.overlay-open {
   padding-top:20px;
   overflow:scroll;
   overflow-x:hidden;
-  z-index:3;
+  z-index:333;
   @include media($ptab){
     top: 100px;
     height: calc(100% - 100px);
@@ -6141,6 +6148,7 @@ body.overlay-open {
   @include media($ptabAndLess){
     z-index:333;
   }
+
 
   @include clearfix;
 
@@ -6171,16 +6179,16 @@ body.overlay-open {
     top: 15px;
     right: 15px;
     display: inline-block;
-    z-index: 3;
+    z-index: 33;
     @include media($ptab){
-      top: 180px;
-      right: 40px;
+      top: 120px;
+      right: 20px;
     }
 
     &:before, &:after {
       width:1px;
       height:50px;
-      background:#fff;
+      background:$brand-green;
       content:'';
       display:block;
       position:absolute;
@@ -6200,52 +6208,59 @@ body.overlay-open {
   }
 
   .full-container {
+    position:relative;
     .gallery-item {
-      @include media($tab){
-        width:100%;
-        height:calc(100vh - 100px);
+      width:100%;
+      height:calc(100vh - 100px);
+      transition:transform 0.2s cubic-bezier(0.28, 0, 0.18, 1);
+
+      .thumb {
+        background-size:contain;
+        opacity:1;
+        &:hover {
+          transform: scale(1) !important;
+        }
       }
 
     }
   }
 
-  .prev, .next {
-    position:fixed;
-    cursor: pointer;
-    top:15px;
-    background:$brand-green;
-    line-height:0;
-    @include media($ptab){
-      top:50%;
-      transform:translateY(-50%);
-      background:#E0E0DF;
-    }
+  .pager {
+    width:100%;
+    position:absolute;
+    top:calc(50% + 160px);
+    transform:translateY(-50%);
+
     @include media($ptabAndLess){
-      width:50px;
-      height:50px;
-
-
-      text-align:center;
-      overflow:hidden;
-      img {
-        width:25px;
-        height:auto;
-        margin-top:-4px;
-      }
+      display:none;
     }
-  }
 
-  .prev {
-    left:20px;
-    @include media($ptab){
+    .left, .right {
+      width:rem(60);
+      height:rem(60);
+      background:rgba(0,0,0,0.4);
+      display:block;
+      z-index:10;
+      position:absolute;
+      // bottom:70px;
+
+    }
+
+    .left {
       left:0;
-    }
-  }
-  .next {
-    left:80px;
-    @include media($ptab){
       right:0;
-      left:auto;
+      background-image:url(../img/pager-right.svg);
+      background-position:50% 50%;
+      background-repeat:no-repeat;
+      transform:rotate(180deg);
+    }
+
+    .right {
+      right:0;
+      background-image:url(../img/pager-right.svg);
+      background-position:50% 50%;
+      background-repeat:no-repeat;
     }
   }
+
 }

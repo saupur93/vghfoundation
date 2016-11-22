@@ -391,6 +391,7 @@ class App {
     const items = panel.find('.item');
     const pagerTpl = '<div class="pager"><div class="left"></div><div class="right"></div></div>';
     let currentSlide = 0;
+    let currentSlideOverlay = 0;
 
     const transitionSlides = (currentSlide) => {
       items.css({
@@ -437,52 +438,68 @@ class App {
 
     const overlay = $('#overlay');
     // ajax the content
-    const loadContent = (e) => {
+    const loadContent = e => {
       let galleryHTML = $(e.currentTarget).parents('.inline-gallery-thumbs').html();
       overlay.find('.overlay-content').append(galleryHTML);
     };
 
+    const overlayPagerVisibility = () => {
+      overlay.find('.pager .left').fadeIn();
+      overlay.find('.pager .right').fadeIn();
+
+      if(currentSlideOverlay == 0) {
+        overlay.find('.pager .left').fadeOut();
+      }
+
+      if (currentSlideOverlay == items.length - 1) {
+        overlay.find('.pager .right').fadeOut();
+      }
+    };
+
     // open overlay
-    const openOverlay = (e) => {
+    const openOverlay = e => {
       e.preventDefault();
-      $('body').addClass('overlay-open');
-      let index = $(e.currentTarget).index();
-      transitionSlides(index);
       loadContent(e);
+      $('body').addClass('overlay-open');
+      currentSlideOverlay = $(e.currentTarget).index();
+      $('#overlay .gallery-item').css({
+        transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
+      });
     };
 
     // close overlay and clear DOM innerHTML
-    const closeOverlay = (e) => {
+    const closeOverlay = e => {
       e.preventDefault();
       $('body').removeClass('overlay-open');
       overlay.find('.overlay-content').empty();
+      currentSlideOverlay = 0;
     };
 
     const loadPrevious = e => {
-      if (currentSlide > 0 ) {
-        currentSlide--;
+      if (currentSlideOverlay > 0 ) {
+        currentSlideOverlay--;
         $('#overlay .gallery-item').css({
-          transform: 'translate3d(-'+ 100 * currentSlide +'%,0,0)'
+          transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
         });
-        pagerVisibility();
+        overlayPagerVisibility();
       }
     };
 
     const loadNext = e => {
-      if (currentSlide < ($('#overlay .gallery-item').length - 3)) {
-        currentSlide++;
+      if (currentSlideOverlay < $('#overlay .gallery-item').length-1) {
+        currentSlideOverlay++;
         $('#overlay .gallery-item').css({
-          transform: 'translate3d(-'+ 100 * currentSlide +'%,0,0)'
+          transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
         });
-        pagerVisibility();
+        overlayPagerVisibility();
       }
     };
 
     // overlay events
     $('[data-overlay-image]').on('click', openOverlay);
-    overlay.on('click', '.close', closeOverlay);
-    overlay.on('click', '.prev', loadPrevious);
-    overlay.on('click', '.next', loadNext);
+    $('#overlay').on('click', '.close', closeOverlay);
+    $('#overlay').on('click', '.pager .left', loadPrevious);
+    $('#overlay').on('click', '.pager .right', loadNext);
 
   }
 

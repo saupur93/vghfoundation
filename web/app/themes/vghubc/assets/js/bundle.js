@@ -10832,6 +10832,7 @@ var App = function () {
       var items = panel.find('.item');
       var pagerTpl = '<div class="pager"><div class="left"></div><div class="right"></div></div>';
       var currentSlide = 0;
+      var currentSlideOverlay = 0;
 
       var transitionSlides = function transitionSlides(currentSlide) {
         items.css({
@@ -10882,13 +10883,28 @@ var App = function () {
         overlay.find('.overlay-content').append(galleryHTML);
       };
 
+      var overlayPagerVisibility = function overlayPagerVisibility() {
+        overlay.find('.pager .left').fadeIn();
+        overlay.find('.pager .right').fadeIn();
+
+        if (currentSlideOverlay == 0) {
+          overlay.find('.pager .left').fadeOut();
+        }
+
+        if (currentSlideOverlay == items.length - 1) {
+          overlay.find('.pager .right').fadeOut();
+        }
+      };
+
       // open overlay
       var openOverlay = function openOverlay(e) {
         e.preventDefault();
-        (0, _jquery2.default)('body').addClass('overlay-open');
-        var index = (0, _jquery2.default)(e.currentTarget).index();
-        transitionSlides(index);
         loadContent(e);
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        currentSlideOverlay = (0, _jquery2.default)(e.currentTarget).index();
+        (0, _jquery2.default)('#overlay .gallery-item').css({
+          transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
+        });
       };
 
       // close overlay and clear DOM innerHTML
@@ -10896,33 +10912,34 @@ var App = function () {
         e.preventDefault();
         (0, _jquery2.default)('body').removeClass('overlay-open');
         overlay.find('.overlay-content').empty();
+        currentSlideOverlay = 0;
       };
 
       var loadPrevious = function loadPrevious(e) {
-        if (currentSlide > 0) {
-          currentSlide--;
+        if (currentSlideOverlay > 0) {
+          currentSlideOverlay--;
           (0, _jquery2.default)('#overlay .gallery-item').css({
-            transform: 'translate3d(-' + 100 * currentSlide + '%,0,0)'
+            transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
           });
-          pagerVisibility();
+          overlayPagerVisibility();
         }
       };
 
       var loadNext = function loadNext(e) {
-        if (currentSlide < (0, _jquery2.default)('#overlay .gallery-item').length - 3) {
-          currentSlide++;
+        if (currentSlideOverlay < (0, _jquery2.default)('#overlay .gallery-item').length - 1) {
+          currentSlideOverlay++;
           (0, _jquery2.default)('#overlay .gallery-item').css({
-            transform: 'translate3d(-' + 100 * currentSlide + '%,0,0)'
+            transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
           });
-          pagerVisibility();
+          overlayPagerVisibility();
         }
       };
 
       // overlay events
       (0, _jquery2.default)('[data-overlay-image]').on('click', openOverlay);
-      overlay.on('click', '.close', closeOverlay);
-      overlay.on('click', '.prev', loadPrevious);
-      overlay.on('click', '.next', loadNext);
+      (0, _jquery2.default)('#overlay').on('click', '.close', closeOverlay);
+      (0, _jquery2.default)('#overlay').on('click', '.pager .left', loadPrevious);
+      (0, _jquery2.default)('#overlay').on('click', '.pager .right', loadNext);
     }
 
     /**

@@ -53,7 +53,6 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 ## Functional
 - lightbox for gallery opening
-- donor list page - CMS
 - Annual Report
   - change animations
   - CMS integration
