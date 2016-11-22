@@ -461,15 +461,19 @@ class App {
     const loadPrevious = e => {
       if (currentSlide > 0 ) {
         currentSlide--;
-        transitionSlides(currentSlide);
+        $('#overlay .gallery-item').css({
+          transform: 'translate3d(-'+ 100 * currentSlide +'%,0,0)'
+        });
         pagerVisibility();
       }
     };
 
     const loadNext = e => {
-      if (currentSlide < (items.length - 3)) {
+      if (currentSlide < ($('#overlay .gallery-item').length - 3)) {
         currentSlide++;
-        transitionSlides(currentSlide);
+        $('#overlay .gallery-item').css({
+          transform: 'translate3d(-'+ 100 * currentSlide +'%,0,0)'
+        });
         pagerVisibility();
       }
     };

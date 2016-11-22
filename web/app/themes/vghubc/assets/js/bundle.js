@@ -10901,15 +10901,19 @@ var App = function () {
       var loadPrevious = function loadPrevious(e) {
         if (currentSlide > 0) {
           currentSlide--;
-          transitionSlides(currentSlide);
+          (0, _jquery2.default)('#overlay .gallery-item').css({
+            transform: 'translate3d(-' + 100 * currentSlide + '%,0,0)'
+          });
           pagerVisibility();
         }
       };
 
       var loadNext = function loadNext(e) {
-        if (currentSlide < items.length - 3) {
+        if (currentSlide < (0, _jquery2.default)('#overlay .gallery-item').length - 3) {
           currentSlide++;
-          transitionSlides(currentSlide);
+          (0, _jquery2.default)('#overlay .gallery-item').css({
+            transform: 'translate3d(-' + 100 * currentSlide + '%,0,0)'
+          });
           pagerVisibility();
         }
       };
