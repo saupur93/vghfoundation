@@ -10898,6 +10898,22 @@ var App = function () {
         overlay.find('.overlay-content').empty();
       };
 
+      var loadPrevious = function loadPrevious(e) {
+        if (currentSlide > 0) {
+          currentSlide--;
+          transitionSlides(currentSlide);
+          pagerVisibility();
+        }
+      };
+
+      var loadNext = function loadNext(e) {
+        if (currentSlide < items.length - 3) {
+          currentSlide++;
+          transitionSlides(currentSlide);
+          pagerVisibility();
+        }
+      };
+
       // overlay events
       (0, _jquery2.default)('[data-overlay-image]').on('click', openOverlay);
       overlay.on('click', '.close', closeOverlay);
