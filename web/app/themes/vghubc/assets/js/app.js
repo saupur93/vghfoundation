@@ -26,6 +26,7 @@ class App {
     this.eventsGrid();
     this.toggleMobileNav();
     this.submenuMobileDropdown();
+    this.overlayContent();
 
     if ($('#sub-navigation').length) {
       this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -504,6 +505,46 @@ class App {
 
   }
 
+
+  /**
+   * open overlay for image gallery
+   */
+   overlayContent () {
+    const overlay = $('#overlay');
+
+    // ajax the content
+    const loadContent = (e) => {
+      $('body').append('<div class="ajax-loading"></div>');
+
+      let galleryHTML = $(e.currentTarget).parents('.inline-gallery-thumbs').html();
+      overlay.find('.overlay-content').append(galleryHTML);
+
+
+
+    };
+
+
+    // open overlay
+    const openOverlay = (e) => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      loadContent(e);
+    };
+
+    // close overlay and clear DOM innerHTML
+    const closeOverlay = (e) => {
+      e.preventDefault();
+      $('body').removeClass('overlay-open');
+      overlay.find('.overlay-content').empty();
+    };
+
+    // overlay events
+    $('[data-overlay-image]').on('click', openOverlay);
+    overlay.on('click', '.close', closeOverlay);
+    overlay.on('click', '.prev', loadPrevious);
+    overlay.on('click', '.next', loadNext);
+
+   }
 
   /**
    * mobile nav toggle

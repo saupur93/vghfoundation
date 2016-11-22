@@ -59,6 +59,11 @@
   </div>
 </footer>
 
+<section id="overlay">
+  <a class="close" href="#"></a>
+  <div class="overlay-content"></div>
+</section>
+
 <?php if ( WP_ENV == 'production' || WP_ENV == 'staging' ): ?>
   <?php $bundle = bundle_rev_file('js'); ?>
   <?php if($bundle): ?>

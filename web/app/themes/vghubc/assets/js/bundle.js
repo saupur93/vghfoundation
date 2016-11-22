@@ -10466,6 +10466,7 @@ var App = function () {
       this.eventsGrid();
       this.toggleMobileNav();
       this.submenuMobileDropdown();
+      this.overlayContent();
 
       if ((0, _jquery2.default)('#sub-navigation').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -10945,6 +10946,44 @@ var App = function () {
         (0, _jquery2.default)('.main-tabs li').removeClass('active');
         (0, _jquery2.default)('.tab-group').find('.main-tabs li').eq(index).addClass('active');
       });
+    }
+
+    /**
+     * open overlay for image gallery
+     */
+
+  }, {
+    key: 'overlayContent',
+    value: function overlayContent() {
+      var overlay = (0, _jquery2.default)('#overlay');
+
+      // ajax the content
+      var loadContent = function loadContent(e) {
+        (0, _jquery2.default)('body').append('<div class="ajax-loading"></div>');
+
+        var galleryHTML = (0, _jquery2.default)(e.currentTarget).parents('.inline-gallery-thumbs').html();
+        overlay.find('.overlay-content').append(galleryHTML);
+      };
+
+      // open overlay
+      var openOverlay = function openOverlay(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        loadContent(e);
+      };
+
+      // close overlay and clear DOM innerHTML
+      var closeOverlay = function closeOverlay(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').removeClass('overlay-open');
+        overlay.find('.overlay-content').empty();
+      };
+
+      // overlay events
+      (0, _jquery2.default)('[data-overlay-image]').on('click', openOverlay);
+      overlay.on('click', '.close', closeOverlay);
+      overlay.on('click', '.prev', loadPrevious);
+      overlay.on('click', '.next', loadNext);
     }
 
     /**
