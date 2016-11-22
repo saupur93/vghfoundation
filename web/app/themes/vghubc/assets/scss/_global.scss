@@ -3937,6 +3937,13 @@ body.tribe-events-page-template {
     }
 
     .events-items {
+      @include media($ptab){
+        height: calc(100% - 16.66vw);
+
+        a {
+          height:100%;
+        }
+      }
       span.read-more {
         color:#fff;
         border-color:#fff;
@@ -3952,14 +3959,12 @@ body.tribe-events-page-template {
 
         .container {
           transform: translateY(-50%);
-          padding-top: 50%;
+          top: 50%;
           @include media($ptabAndLess){
-            padding-top: 0%;
+            top: 0%;
             top:50%;
           }
-          @include media($laptopHeightOnly){
-            padding-top: 40%;
-          }
+
         }
 
         h5 {
