@@ -31,7 +31,7 @@
         </ul>
 
         <?php foreach($main_tabs as $key => $tab): ?>
-        <div class="narrow-wrap active" data-tab-content="1" data-tier="1">
+        <div class="narrow-wrap<?php if($key == 0) print ' active'; ?>" data-tab-content="<?php print $key + 1; ?>" data-tier="1">
           <div class="tab-group">
             <?php if(isset($tab['inner_tabs']) && count($tab['inner_tabs']) > 1): ?>
             <ul class="tabs secondary-tabs">
