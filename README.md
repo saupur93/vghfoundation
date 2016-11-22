@@ -49,6 +49,7 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 ## QA Notes
+- consider mobile nav resize
 - ask Ian to style newsletter sign up page on luminate
 
 ## Functional
@@ -56,7 +57,6 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
   - change animations
   - CMS integration
 
-- would be nice.. hammer js
 - set thumbnail sizes and regenerate thumbnails
 - browser testing
 

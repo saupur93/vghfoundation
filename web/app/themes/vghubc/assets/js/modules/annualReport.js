@@ -10,14 +10,15 @@ export default class AnnualReport {
   constructor() {
     this.scrollJackPanels().init();
 
+    $('.keep-going').addClass('start');
     setTimeout(() => {
       $('.ar-intro-cover').addClass('start');
-    }, 3800);
+    }, 1700);
 
     setTimeout(() => {
       $('.ar-intro-cover .hide').removeClass('hide');
       $('.ar-intro-cover .second').css('opacity', 1);
-    }, 5500);
+    }, 2800);
 	}
 
 
@@ -248,6 +249,7 @@ export default class AnnualReport {
 
           } else {
             $('.ar-main-header').addClass('cover');
+
           }
 
 

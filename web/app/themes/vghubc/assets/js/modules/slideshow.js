@@ -1,4 +1,6 @@
 import $ from 'jquery';
+const Hammer = require('hammerjs');
+
 
 const slideshow = {
   container: 'slideshow',
@@ -41,33 +43,25 @@ const slideshow = {
   pagerEvents (){
     var self = this;
 
-    this.pagerLeft.on('click', function(e){
-        e.preventDefault();
+    const prevSlide = e => {
+      e.preventDefault();
       // page left, but not beyond first slide
       if (self.currentSlide > 0 ) {
         self.slideCurrentIndex('left');
         self.transitionSlides(self.currentSlide);
       }
+    };
+    this.pagerLeft.on('click', prevSlide);
 
-      // if (self.currentSlide === 0) {
-      //   self.currentSlide = self.slides.length - 1;
-      //   self.transitionSlides(self.slides.length - 1);
-      // }
-
-    });
-
-    this.pagerRight.on('click', function(e){
+    const nextSlide = e => {
       e.preventDefault();
       // page right, but not beyond end
       if (self.currentSlide < self.slides.length - 1) {
         self.slideCurrentIndex('right');
         self.transitionSlides(self.currentSlide);
       }
-      // if (self.currentSlide === self.slides.length - 1) {
-      //   self.currentSlide = -1;
-      //   self.transitionSlides(-1);
-      // }
-    });
+    };
+    this.pagerRight.on('click', nextSlide);
 
     this.pagerContainer.on('click', 'li', (e) => {
       e.preventDefault();
@@ -97,7 +91,32 @@ const slideshow = {
       clearTimeout(this.loop);
     });
 
+    const handleTouchEvents = (e) => {
+      switch(e.type){
+        case 'swipeleft':
+          nextSlide(e);
+          break;
+
+        case 'swiperight':
+          prevSlide(e);
+          break;
+      }
+    }
+
+    if ( $(window).width() <= 768 ){
+      var mcEl = document.querySelector('.slideshow');
+      var mc = new Hammer(mcEl);
+
+      mc.on("release dragleft dragright swipeleft swiperight", function(e) {
+          handleTouchEvents(e);
+      });
+    }
+
+
+
   },
+
+
 
 
   /**

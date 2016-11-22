@@ -960,6 +960,10 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
   a {
     color:$brand-green;
     text-decoration:none;
+    transition: color 0.3s linear;
+    &:hover {
+      color:lighten($brand-green, 10%);
+    }
   }
 
   .center, .centre {
@@ -979,6 +983,8 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
       margin-bottom:1.5rem;
       @include media($tab) {
         padding-left:1.5rem;
+        width: 75%;
+        padding-right: 6rem;
       }
       @include media($desk) {
         padding-left:3.75rem;
@@ -3214,6 +3220,11 @@ body.tribe-events-page-template {
         }
       }
 
+      a.button {
+        width:rem(175);
+        margin-bottom:rem(5);
+      }
+
       .col-half:last-child {
         @include media($tab){
           padding-top:rem(32);
@@ -4313,10 +4324,13 @@ body.tribe-events-page-template {
     }
     .cover-copy {
       width:100%;
-      @extend .vertical-center;
+      position: relative;
+      top: calc(50% - 100px);
+      transform: translateY(-50%);
 
       h1 {
         margin-bottom:3.5rem;
+        line-height:1;
       }
 
 
@@ -4475,6 +4489,7 @@ body.tribe-events-page-template {
       padding-right:5%;
       &:last-child {
         padding-right:0;
+        padding-left:rem(40);
       }
     }
   }
@@ -4724,8 +4739,21 @@ body.tribe-events-page-template {
   }
 
   100% {
-    opacity:0;
     transform:translateY(calc(50vh - 60px));
+  }
+}
+
+
+@keyframes keepGoing {
+  0% {
+    transform:translateY(0vh);
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  100% {
+    transform:translateY(100vh);
   }
 }
 
@@ -4927,32 +4955,44 @@ body.page-template-page-annual-report-php {
 
     .animate-down {
       position:absolute;
-      transform:translateY(-100vh);
+      animation: animateArDown 4000ms 300ms;
+      animation-fill-mode: forwards;
+
       // transition: transform 3000ms linear;
 
     }
-    .animate-down {
-      animation: animateArDown 4000ms 300ms;
-      animation-fill-mode: forwards;
+    .animate-down .stay {
+      // transform:translateY(-100vh);
+      // position:absolute;
+      margin-top: 4.6rem;
       // transform:translateY(calc(50vh - 60px));
+    }
+
+    .animate-down .keep-going.start {
+      animation: keepGoing 4000ms 1200ms;
+      animation-fill-mode: forwards;
+      position:absolute;
+      display:block;
+      width:100%;
+
     }
 
     .intro-copy {
       @extend .vertical-center;
-      margin-left:rem(400);
-      transition: margin-left 600ms 300ms linear;
+      left:400px;
+      transition: left 600ms 0ms linear;
       .second {
         opacity:0;
-        transition: opacity 900ms linear;
+        transition: opacity 300ms linear;
       }
     }
 
     span {
-      transition: opacity 900ms linear;
+      transition: opacity 300ms linear;
     }
 
     &.start .intro-copy {
-      margin-left:0;
+      left:0;
     }
   }
 

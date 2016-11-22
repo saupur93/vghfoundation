@@ -130,7 +130,7 @@ h1.page-header {
     @include font-size(20px);
     line-height:1.26;
     @include media($ptab){
-      @include font-size(38px);
+      @include font-size(36px);
     }
   }
 

@@ -18,19 +18,21 @@ Template Name: Annual Report
     <section class="panel ar-intro-cover full-panel active">
       <div class="container">
         <div class="inner-wrap">
-        <h2 class="animate-down">surgery<br>
+        <h2 class="animate-down">
+            <div class="stay">VGH UBC<br>
+            annual report</div>
+            <div class="keep-going">surgery<br>
             cancer<br>
             heart and lung<br>
             innovation<br>
             brain health<br>
-            community</h2>
+            community</div>
+          </h2>
 
 
           <div class="intro-copy">
             <div class="col-half first">
-              <h2><span class="initial-show">2015 - 2016</span><br>
-              <span class="hide">VGH UBC<br>
-              annual report</span></h2>
+              <h2><span class="initial-show">2015 - 2016</span></h2>
             </div>
             <div class="col-half second">
               <p>It takes a partnership between donors, VGH & UBC Hospital Foundation and our hospitals and health care teams to provide the best in specialized care for all British Columbians.</p>

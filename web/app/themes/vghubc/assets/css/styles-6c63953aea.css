@@ -679,8 +679,8 @@ h1.page-header {
   line-height: 1.26; }
   @media screen and (min-width: 601px) {
     .panel p.intro {
-      font-size: 38px;
-      font-size: 2.375rem; } }
+      font-size: 36px;
+      font-size: 2.25rem; } }
 
 .panel p {
   font-size: 16px;
@@ -1006,7 +1006,8 @@ p.date {
   .panel.category-bg-color a {
     color: #fff;
     -webkit-transition: color 0.3s linear;
-    transition: color 0.3s linear; }
+    transition: color 0.3s linear;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
     .panel.category-bg-color a:hover {
       color: rgba(255, 255, 255, 0.5); }
   .signature-event-angel-campaign .panel.category-bg-color {
@@ -1293,7 +1294,7 @@ p {
   #browser-warning strong {
     font-weight: bold; }
 
-.vertical-center, .single-signature_events .page-header .cover-copy, #annual-report .panel.ar-intro-cover .intro-copy {
+.vertical-center, #annual-report .panel.ar-intro-cover .intro-copy {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2062,7 +2063,11 @@ html[lang="zh"] .latest-open #top-header #toggleLatest:before {
           padding-right: 0; } }
   .panel a {
     color: #7dab35;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear; }
+    .panel a:hover {
+      color: #97c74c; }
   .panel .center, .panel .centre {
     text-align: center; }
   .panel .container img {
@@ -2072,7 +2077,9 @@ html[lang="zh"] .latest-open #top-header #toggleLatest:before {
     margin-bottom: 1.5rem; }
     @media screen and (min-width: 769px) {
       .panel.sidebar-right .section-title {
-        padding-left: 1.5rem; } }
+        padding-left: 1.5rem;
+        width: 75%;
+        padding-right: 6rem; } }
     @media screen and (min-width: 1025px) {
       .panel.sidebar-right .section-title {
         padding-left: 3.75rem; } }
@@ -3655,6 +3662,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-body .col-half:first-child {
           padding-right: 10%; } }
+      .panel.themes-overview-stats .tab-content .tab-body a.button, .panel.themes-overview-stats .tab-content .tab-body body.tribe-events-page-template a.tribe-events-read-more, body.tribe-events-page-template .panel.themes-overview-stats .tab-content .tab-body a.tribe-events-read-more {
+        width: 10.9375rem;
+        margin-bottom: 0.3125rem; }
       @media screen and (min-width: 769px) {
         .panel.themes-overview-stats .tab-content .tab-body .col-half:last-child {
           padding-top: 2rem;
@@ -4460,9 +4470,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         padding-left: 0.625rem;
         padding-right: 0.625rem; } }
   .single-signature_events .page-header .cover-copy {
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    top: calc(50% - 100px);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
     .single-signature_events .page-header .cover-copy h1 {
-      margin-bottom: 3.5rem; }
+      margin-bottom: 3.5rem;
+      line-height: 1; }
     .single-signature_events .page-header .cover-copy:after {
       display: none; }
   .single-signature_events .page-header .cover-arrow-down {
@@ -4576,7 +4591,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     width: 50%;
     padding-right: 5%; }
     .panel.narrow-two-column .col-half:last-child {
-      padding-right: 0; } }
+      padding-right: 0;
+      padding-left: 2.5rem; } }
 
 @media screen and (max-width: 768px) {
   .panel.map-panel iframe[src*="maps.google.ca"], .panel.map-panel #map {
@@ -4733,7 +4749,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   75% {
     opacity: 1; }
   100% {
-    opacity: 0;
     -webkit-transform: translateY(calc(50vh - 60px));
             transform: translateY(calc(50vh - 60px)); } }
 
@@ -4747,9 +4762,30 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   75% {
     opacity: 1; }
   100% {
-    opacity: 0;
     -webkit-transform: translateY(calc(50vh - 60px));
             transform: translateY(calc(50vh - 60px)); } }
+
+@-webkit-keyframes keepGoing {
+  0% {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh); } }
+
+@keyframes keepGoing {
+  0% {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh); } }
 
 @media screen and (min-width: 769px) {
   body.page-template-page-annual-report-php {
@@ -4885,26 +4921,33 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       height: calc(100vh - 100px); }
     #annual-report .panel.ar-intro-cover .animate-down {
       position: absolute;
-      -webkit-transform: translateY(-100vh);
-              transform: translateY(-100vh); }
-    #annual-report .panel.ar-intro-cover .animate-down {
       -webkit-animation: animateArDown 4000ms 300ms;
               animation: animateArDown 4000ms 300ms;
       -webkit-animation-fill-mode: forwards;
               animation-fill-mode: forwards; }
+    #annual-report .panel.ar-intro-cover .animate-down .stay {
+      margin-top: 4.6rem; }
+    #annual-report .panel.ar-intro-cover .animate-down .keep-going.start {
+      -webkit-animation: keepGoing 4000ms 1200ms;
+              animation: keepGoing 4000ms 1200ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      position: absolute;
+      display: block;
+      width: 100%; }
     #annual-report .panel.ar-intro-cover .intro-copy {
-      margin-left: 25rem;
-      -webkit-transition: margin-left 600ms 300ms linear;
-      transition: margin-left 600ms 300ms linear; }
+      left: 400px;
+      -webkit-transition: left 600ms 0ms linear;
+      transition: left 600ms 0ms linear; }
       #annual-report .panel.ar-intro-cover .intro-copy .second {
         opacity: 0;
-        -webkit-transition: opacity 900ms linear;
-        transition: opacity 900ms linear; }
+        -webkit-transition: opacity 300ms linear;
+        transition: opacity 300ms linear; }
     #annual-report .panel.ar-intro-cover span {
-      -webkit-transition: opacity 900ms linear;
-      transition: opacity 900ms linear; }
+      -webkit-transition: opacity 300ms linear;
+      transition: opacity 300ms linear; }
     #annual-report .panel.ar-intro-cover.start .intro-copy {
-      margin-left: 0; }
+      left: 0; }
   #annual-report .larger-text {
     font-size: 28px;
     font-size: 1.75rem;
