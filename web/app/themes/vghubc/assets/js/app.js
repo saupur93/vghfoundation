@@ -26,7 +26,7 @@ class App {
     this.eventsGrid();
     this.toggleMobileNav();
     this.submenuMobileDropdown();
-    this.overlayContent();
+
 
     if ($('#sub-navigation').length) {
       this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -417,6 +417,7 @@ class App {
       panel.append(pagerTpl);
       pagerVisibility();
     }
+    this.overlayContent();
 
     panel.find('.pager').on('click', '.left', () => {
       if (currentSlide > 0 ) {

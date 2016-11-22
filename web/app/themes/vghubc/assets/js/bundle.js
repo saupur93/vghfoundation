@@ -10466,7 +10466,6 @@ var App = function () {
       this.eventsGrid();
       this.toggleMobileNav();
       this.submenuMobileDropdown();
-      this.overlayContent();
 
       if ((0, _jquery2.default)('#sub-navigation').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -10859,6 +10858,7 @@ var App = function () {
         panel.append(pagerTpl);
         pagerVisibility();
       }
+      this.overlayContent();
 
       panel.find('.pager').on('click', '.left', function () {
         if (currentSlide > 0) {
