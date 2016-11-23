@@ -1261,11 +1261,13 @@ span.highlighted-text {
     opacity:0;
     visibility:hidden;
     height:0;
+    display:none;
 
     &.active {
       opacity:1;
       visibility:visible;
       height:auto;
+      display:block;
     }
 
   }
@@ -3609,6 +3611,7 @@ body.tribe-events-page-template {
       display:table;
       margin-left:rem(-20);
       margin-right:rem(-20);
+      width:calc(100% + 2.5rem);
 
     }
   }
@@ -4734,7 +4737,7 @@ body.tribe-events-page-template {
 }
 
 
-.panel#newsfeed {
+.page-wrap {
   .back-to-top {
     position:fixed;
     right:rem(40);

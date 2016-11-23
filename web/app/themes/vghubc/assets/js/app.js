@@ -84,6 +84,17 @@ class App {
     if ($('.panel.tiered-tabs').length) {
       this.tierTabs();
     }
+
+    if ($('.back-to-top').length) {
+      $(window).on('scroll', (e) => {
+        if(e.currentTarget.pageYOffset > ($('#newsfeed').height() * .80) || e.currentTarget.pageYOffset > ($('.tiered-tabs').height() * .80)) {
+          $('.back-to-top').addClass('visible')
+        } else {
+          $('.back-to-top').removeClass('visible')
+        }
+      });
+    }
+
   }
 
   /**

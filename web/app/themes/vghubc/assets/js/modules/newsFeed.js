@@ -22,13 +22,6 @@ export default class NewsFeed {
     $('.load-more').on('click', this.loadMore.bind(this));
     this.panelTabs();
 
-      $(window).on('scroll', (e) => {
-        if(e.currentTarget.pageYOffset > ($('#newsfeed').height() * .80)) {
-          $('.back-to-top').addClass('visible')
-        } else {
-          $('.back-to-top').removeClass('visible')
-        }
-      });
 	}
 
   /**

@@ -13168,6 +13168,16 @@ var App = function () {
       if ((0, _jquery2.default)('.panel.tiered-tabs').length) {
         this.tierTabs();
       }
+
+      if ((0, _jquery2.default)('.back-to-top').length) {
+        (0, _jquery2.default)(window).on('scroll', function (e) {
+          if (e.currentTarget.pageYOffset > (0, _jquery2.default)('#newsfeed').height() * .80 || e.currentTarget.pageYOffset > (0, _jquery2.default)('.tiered-tabs').height() * .80) {
+            (0, _jquery2.default)('.back-to-top').addClass('visible');
+          } else {
+            (0, _jquery2.default)('.back-to-top').removeClass('visible');
+          }
+        });
+      }
     }
 
     /**
@@ -14160,14 +14170,6 @@ var NewsFeed = function () {
 
     (0, _jquery2.default)('.load-more').on('click', this.loadMore.bind(this));
     this.panelTabs();
-
-    (0, _jquery2.default)(window).on('scroll', function (e) {
-      if (e.currentTarget.pageYOffset > (0, _jquery2.default)('#newsfeed').height() * .80) {
-        (0, _jquery2.default)('.back-to-top').addClass('visible');
-      } else {
-        (0, _jquery2.default)('.back-to-top').removeClass('visible');
-      }
-    });
   }
 
   /**
