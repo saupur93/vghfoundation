@@ -1016,6 +1016,9 @@ span.highlighted-text {
   display:inline;
   background:$brand-green;
   color:#fff;
+  padding: 4px;
+  position: relative;
+  top: 8px;
 }
 
 &.title-only {
