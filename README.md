@@ -52,12 +52,12 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
   - CMS integration
 
 - set thumbnail sizes and regenerate thumbnails
-- browser testing
+
 
 ## QA Notes
 - redirection plugin problems exporting database
 - consider mobile nav resize
-- nav scroll acting funny
+- mobile nav scroll acting funny on iPhone
 
 
 ### From staging to prod

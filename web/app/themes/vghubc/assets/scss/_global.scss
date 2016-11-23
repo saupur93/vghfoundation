@@ -3239,6 +3239,7 @@ body.tribe-events-page-template {
       a.button {
         width:rem(175);
         margin-bottom:rem(5);
+        text-align:center;
       }
 
       .col-half:last-child {
@@ -4343,7 +4344,7 @@ body.tribe-events-page-template {
     .cover-copy {
       width:100%;
       position: relative;
-      top: calc(50% - 100px);
+      top: 50%;
       transform: translateY(-50%);
 
       h1 {
