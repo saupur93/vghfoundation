@@ -1006,10 +1006,11 @@ p.date {
   .panel.category-bg-color a {
     color: #fff;
     -webkit-transition: color 0.3s linear;
-    transition: color 0.3s linear;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+    transition: color 0.3s linear; }
     .panel.category-bg-color a:hover {
       color: rgba(255, 255, 255, 0.5); }
+  .panel.category-bg-color .col-grid-3 a, .panel.category-bg-color .col-grid-9 a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
   .signature-event-angel-campaign .panel.category-bg-color {
     background-color: #ce89c3; }
     .signature-event-angel-campaign .panel.category-bg-color a.button:hover, .signature-event-angel-campaign .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-angel-campaign .panel.category-bg-color a.tribe-events-read-more:hover {
@@ -1521,7 +1522,9 @@ p {
     @media screen and (min-width: 1181px) {
       #main-menu #primary-nav {
         white-space: nowrap;
-        vertical-align: top; } }
+        vertical-align: top; }
+        #main-menu #primary-nav .sub-menu {
+          white-space: normal; } }
     @media screen and (max-width: 1180px) {
       #main-menu #primary-nav {
         width: 100%; } }
@@ -2150,7 +2153,7 @@ span.highlighted-text {
         padding-left: 0;
         padding-right: 0; } }
   .hero-content .inner-wrap, .panel.latest-header .inner-wrap {
-    position: initial; }
+    position: static; }
   .hero-content .hero-copy, .panel.latest-header .hero-copy {
     position: absolute;
     width: 100%;
@@ -3099,7 +3102,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         padding-left: 0;
         padding-right: 0; } }
   .panel.page-header .inner-wrap {
-    position: initial; }
+    position: static; }
   .panel.page-header .header-copy {
     position: absolute;
     bottom: -70px;
@@ -3936,7 +3939,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .three-stories-panel .row, .panel.three-subpages-panel .row {
     display: table;
     border-spacing: 1.25rem 0px;
-    display: block; }
+    display: block;
+    width: 100%; }
     @media screen and (min-width: 769px) {
       .three-stories-panel .row, .panel.three-subpages-panel .row {
         display: table;

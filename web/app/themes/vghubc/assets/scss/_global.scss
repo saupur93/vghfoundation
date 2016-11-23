@@ -337,6 +337,9 @@ p {
     @include media($regularNav){
       white-space: nowrap;
       vertical-align: top;
+      .sub-menu {
+        white-space: normal;
+      }
     }
     @include media($mobileNav){
       width:100%;
@@ -1079,7 +1082,7 @@ span.highlighted-text {
   }
 
   .inner-wrap {
-    position:initial;
+    position:static;
   }
 
   .hero-copy {
@@ -2357,7 +2360,7 @@ body.tribe-events-page-template {
   }
 
   .inner-wrap {
-    position:initial;
+    position:static;
   }
 
   .header-copy {
@@ -3601,6 +3604,7 @@ body.tribe-events-page-template {
     display:table;
     border-spacing:rem(20) 0px;
     display:block;
+    width:100%;
     @include media($tab){
       display:table;
       margin-left:rem(-20);
