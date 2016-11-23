@@ -3,7 +3,6 @@
     $gover_ids = menu_featured_images(49, true);
   ?>
 
-  <div class="page-wrap">
     <?php
       $page_header_image = null !== get_field('page_header_image') ? get_field('page_header_image')['url'] : false;
       $page_header_subtitle = null !== get_field('page_header_subtitle') ? get_field('page_header_subtitle') : false;
@@ -78,4 +77,3 @@
     <?php endif; ?>
 
 
-  </div>
