@@ -330,6 +330,10 @@ p {
     padding:0;
     margin-left:60px;
     float:left;
+    @include media($regularNav){
+      white-space: nowrap;
+      vertical-align: top;
+    }
     @include media($mobileNav){
       width:100%;
     }
@@ -4797,7 +4801,7 @@ body.page-template-page-annual-report-php {
   transform:translate3d(0, 0, 0);
   transition: transform 0.6s 0.45s cubic-bezier(.15,.89,.52,.96), background 0.3s linear;
   top:70px;
-  @include media($tab){
+  @include media($regularNav){
     top:100px;
   }
 
@@ -4884,6 +4888,9 @@ body.page-template-page-annual-report-php {
     .ar-section-header {
       color:#fff;
       background-color:$teal;
+      padding-top:rem(20);
+      padding-bottom:rem(10);
+      margin-bottom:rem(30);
 
       @include media($tab){
         display: none;
@@ -4980,6 +4987,9 @@ body.page-template-page-annual-report-php {
       animation: animateArDown 9000ms 1000ms;
       animation-fill-mode: forwards;
       transform:translate3d(0, -100vh, 0);
+      @include media($ptabAndLess){
+        position: relative;
+      }
 
       // transition: transform 3000ms linear;
 
@@ -5108,7 +5118,9 @@ body.page-template-page-annual-report-php {
     background-repeat:no-repeat;
     background-size:100%;
     background-position:0 -200px;
-    padding-top:rem(100);
+    @include media($tab){
+      padding-top:rem(100);     
+    }
 
     p {
       font-weight:normal;
@@ -5243,7 +5255,9 @@ body.page-template-page-annual-report-php {
   width:100%;
 
   .wp-caption {
-    // width:100% !important;
+    @include media($ptabAndLess){
+      width:100% !important;
+    }
   }
 
   .large-featured-image {
@@ -5303,6 +5317,9 @@ body.page-template-page-annual-report-php {
       position:relative;
       height:rem(660);
       display:block;
+      @include media($mobileOnly){
+        top:rem(200);
+      }
     }
 
     .inner-wrap {
@@ -5996,6 +6013,7 @@ body.page-template-page-annual-report-php {
       margin-left:0;
       margin-top:rem(80);
       position:relative;
+
       li {
         margin-right:0;
         width:100%;
