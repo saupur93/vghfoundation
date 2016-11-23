@@ -21,7 +21,9 @@ class App {
    * load Classes based on body CSS class
    */
   behaviours() {
-    this.latestNavigation();
+    if(!$('.page-template-page-annual-report').length) {
+      this.latestNavigation();
+    }
     this.themesGrid();
     this.eventsGrid();
     this.toggleMobileNav();

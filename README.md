@@ -46,19 +46,17 @@
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
 
 
-
-
-## QA Notes
-- consider mobile nav resize
-- ask Ian to style newsletter sign up page on luminate
-
 ## Functional
 - Annual Report
-  - change animations
   - CMS integration
 
 - set thumbnail sizes and regenerate thumbnails
 - browser testing
+
+## QA Notes
+- redirection plugin problems exporting database
+- consider mobile nav resize
+
 
 ### From staging to prod
 `rsync -Pubvaz --stats web/app/uploads/ worldcy3@server.worldclasshealthcare.ca:/web/app/uploads/`

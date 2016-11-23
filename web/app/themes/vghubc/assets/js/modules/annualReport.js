@@ -9,6 +9,7 @@ window.section2interval;
 export default class AnnualReport {
   constructor() {
     this.scrollJackPanels().init();
+    this.overlayContent();
 
     $('.keep-going').addClass('start');
     setTimeout(() => {
@@ -259,4 +260,29 @@ export default class AnnualReport {
       };
 
   }
+
+/**
+ * overlay content for president message
+ */
+  overlayContent(){
+    const overlay = $('#overlay');
+
+    const openOverlay = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    $('#president-message').on('click', openOverlay)
+
+    // close overlay and clear DOM innerHTML
+    const closeOverlay = e => {
+      e.preventDefault();
+      $('body').removeClass('overlay-open');
+      overlay.find('.overlay-content').empty();
+    };
+    overlay.on('click', '.close', closeOverlay);
+
+  }
+
 }

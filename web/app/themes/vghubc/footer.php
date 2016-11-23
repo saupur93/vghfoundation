@@ -59,7 +59,7 @@
   </div>
 </footer>
 
-<section id="overlay">
+<section id="overlay" class="panel">
   <a class="close" href="#"></a>
   <div class="overlay-content"></div>
 </section>

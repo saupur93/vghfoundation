@@ -4644,8 +4644,12 @@ body.tribe-events-page-template {
     padding:0;
     margin:0;
     text-align:center;
-    margin-bottom:60px;
     position:relative;
+    margin-bottom:30px;
+    @include media($ptab){
+      margin-bottom:60px;
+
+    }
     li {
       display:inline-block;
       // background-color:#c4d9a2;
@@ -4682,6 +4686,17 @@ body.tribe-events-page-template {
       @include font-size(15px);
       border-bottom:0 !important;
       color:$body-text !important;
+
+      @include media($mobileOnly){
+        margin:0;
+        padding:0px 20px 0px 20px;
+        float:left;
+        width:50%;
+        margin-bottom:10px;
+        text-align:left;
+
+        @include font-size(12px);
+      }
 
       &:hover, &.active, a:hover, &.active a {
         color:$brand-green !important;
@@ -4729,31 +4744,31 @@ body.tribe-events-page-template {
 
 @keyframes animateArDown {
   0% {
-      transform:translateY(-100vh);
+    transform:translate3d(0, -100vh, 0);
   }
   50% {
-      transform:translateY(calc(50vh - 60px));
+    transform:translate3d(0, calc(50vh - 60px), 0);
   }
   75% {
     opacity:1;
   }
 
   100% {
-    transform:translateY(calc(50vh - 60px));
+    transform:translate3d(0, calc(50vh - 60px), 0);
   }
 }
 
 
 @keyframes keepGoing {
   0% {
-    transform:translateY(0vh);
+    transform:translate3d(0, 0vh, 0);
     opacity:1;
   }
   25% {
     opacity:0;
   }
   100% {
-    transform:translateY(100vh);
+    transform:translate3d(0, 100vh, 0);
   }
 }
 
@@ -4765,6 +4780,10 @@ body.page-template-page-annual-report-php {
   }
 }
 
+.hide {
+  display:none;
+}
+
 .ar-main-header {
   color:#fff;
   background-color:$teal;
@@ -4772,7 +4791,7 @@ body.page-template-page-annual-report-php {
   position:absolute;
   width:100%;
   z-index:2;
-  transform:translateY(0%);
+  transform:translate3d(0, 0, 0);
   transition: transform 0.6s 0.45s cubic-bezier(.15,.89,.52,.96), background 0.3s linear;
   top:70px;
   @include media($tab){
@@ -4780,7 +4799,7 @@ body.page-template-page-annual-report-php {
   }
 
   &.cover {
-    transform:translateY(-100%);
+    transform:translate3d(0, -100%, 0);
   }
 
 
@@ -4955,8 +4974,9 @@ body.page-template-page-annual-report-php {
 
     .animate-down {
       position:absolute;
-      animation: animateArDown 4000ms 300ms;
+      animation: animateArDown 9000ms 1000ms;
       animation-fill-mode: forwards;
+      transform:translate3d(0, -100vh, 0);
 
       // transition: transform 3000ms linear;
 
@@ -4969,7 +4989,7 @@ body.page-template-page-annual-report-php {
     }
 
     .animate-down .keep-going.start {
-      animation: keepGoing 4000ms 1200ms;
+      animation: keepGoing 9000ms 5000ms;
       animation-fill-mode: forwards;
       position:absolute;
       display:block;
@@ -4980,10 +5000,10 @@ body.page-template-page-annual-report-php {
     .intro-copy {
       @extend .vertical-center;
       left:400px;
-      transition: left 600ms 0ms linear;
+      transition: left 600ms 2700ms linear;
       .second {
         opacity:0;
-        transition: opacity 300ms linear;
+        transition: opacity 300ms 4000ms linear;
       }
     }
 
@@ -5174,9 +5194,11 @@ body.page-template-page-annual-report-php {
 
     &.ar-section-2 {
       .inner-wrap {
-        margin-top:rem(100);
+        // margin-top:rem(100);
         @include media($tab){
-          margin-top:16%;
+          transform:translateY(-50%);
+          top:calc(50% + 70px);
+          // margin-top:16%;
         }
       }
 

@@ -13106,7 +13106,9 @@ var App = function () {
   _createClass(App, [{
     key: 'behaviours',
     value: function behaviours() {
-      this.latestNavigation();
+      if (!(0, _jquery2.default)('.page-template-page-annual-report').length) {
+        this.latestNavigation();
+      }
       this.themesGrid();
       this.eventsGrid();
       this.toggleMobileNav();
@@ -13718,6 +13720,7 @@ var AnnualReport = function () {
     _classCallCheck(this, AnnualReport);
 
     this.scrollJackPanels().init();
+    this.overlayContent();
 
     (0, _jquery2.default)('.keep-going').addClass('start');
     setTimeout(function () {
@@ -13933,6 +13936,32 @@ var AnnualReport = function () {
         }
 
       };
+    }
+
+    /**
+     * overlay content for president message
+     */
+
+  }, {
+    key: 'overlayContent',
+    value: function overlayContent() {
+      var overlay = (0, _jquery2.default)('#overlay');
+
+      var openOverlay = function openOverlay(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      (0, _jquery2.default)('#president-message').on('click', openOverlay);
+
+      // close overlay and clear DOM innerHTML
+      var closeOverlay = function closeOverlay(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').removeClass('overlay-open');
+        overlay.find('.overlay-content').empty();
+      };
+      overlay.on('click', '.close', closeOverlay);
     }
   }]);
 

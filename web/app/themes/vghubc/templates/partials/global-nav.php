@@ -41,6 +41,7 @@
               'post_type' => 'post',
               'posts_per_page' => 4,
               'post_status' => 'publish',
+              'ignore_sticky_posts' => true,
               'post__in' => get_option('sticky_posts'),
               'meta_query' => array(
                 array(

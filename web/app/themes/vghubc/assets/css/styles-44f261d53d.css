@@ -4680,8 +4680,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     padding: 0;
     margin: 0;
     text-align: center;
-    margin-bottom: 60px;
-    position: relative; }
+    position: relative;
+    margin-bottom: 30px; }
+    @media screen and (min-width: 601px) {
+      .panel.news-tabs .tabs, .panel.news-tabs .theme-filters {
+        margin-bottom: 60px; } }
     .panel.news-tabs .tabs li, .panel.news-tabs .theme-filters li {
       display: inline-block;
       text-decoration: none;
@@ -4712,6 +4715,16 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     font-size: 0.9375rem;
     border-bottom: 0 !important;
     color: #575b5e !important; }
+    @media screen and (max-width: 600px) {
+      .panel.news-tabs ul.theme-filters li {
+        margin: 0;
+        padding: 0px 20px 0px 20px;
+        float: left;
+        width: 50%;
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 12px;
+        font-size: 0.75rem; } }
     .panel.news-tabs ul.theme-filters li:hover, .panel.news-tabs ul.theme-filters li.active, .panel.news-tabs ul.theme-filters li a:hover, .panel.news-tabs ul.theme-filters li.active a {
       color: #7dab35 !important; }
   .panel.news-tabs .row {
@@ -4741,55 +4754,58 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 
 @-webkit-keyframes animateArDown {
   0% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh); }
+    -webkit-transform: translate3d(0, -100vh, 0);
+            transform: translate3d(0, -100vh, 0); }
   50% {
-    -webkit-transform: translateY(calc(50vh - 60px));
-            transform: translateY(calc(50vh - 60px)); }
+    -webkit-transform: translate3d(0, calc(50vh - 60px), 0);
+            transform: translate3d(0, calc(50vh - 60px), 0); }
   75% {
     opacity: 1; }
   100% {
-    -webkit-transform: translateY(calc(50vh - 60px));
-            transform: translateY(calc(50vh - 60px)); } }
+    -webkit-transform: translate3d(0, calc(50vh - 60px), 0);
+            transform: translate3d(0, calc(50vh - 60px), 0); } }
 
 @keyframes animateArDown {
   0% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh); }
+    -webkit-transform: translate3d(0, -100vh, 0);
+            transform: translate3d(0, -100vh, 0); }
   50% {
-    -webkit-transform: translateY(calc(50vh - 60px));
-            transform: translateY(calc(50vh - 60px)); }
+    -webkit-transform: translate3d(0, calc(50vh - 60px), 0);
+            transform: translate3d(0, calc(50vh - 60px), 0); }
   75% {
     opacity: 1; }
   100% {
-    -webkit-transform: translateY(calc(50vh - 60px));
-            transform: translateY(calc(50vh - 60px)); } }
+    -webkit-transform: translate3d(0, calc(50vh - 60px), 0);
+            transform: translate3d(0, calc(50vh - 60px), 0); } }
 
 @-webkit-keyframes keepGoing {
   0% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translate3d(0, 0vh, 0);
+            transform: translate3d(0, 0vh, 0);
     opacity: 1; }
   25% {
     opacity: 0; }
   100% {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh); } }
+    -webkit-transform: translate3d(0, 100vh, 0);
+            transform: translate3d(0, 100vh, 0); } }
 
 @keyframes keepGoing {
   0% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translate3d(0, 0vh, 0);
+            transform: translate3d(0, 0vh, 0);
     opacity: 1; }
   25% {
     opacity: 0; }
   100% {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh); } }
+    -webkit-transform: translate3d(0, 100vh, 0);
+            transform: translate3d(0, 100vh, 0); } }
 
 @media screen and (min-width: 769px) {
   body.page-template-page-annual-report-php {
     overflow: hidden; } }
+
+.hide {
+  display: none; }
 
 .ar-main-header {
   color: #fff;
@@ -4798,8 +4814,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   position: absolute;
   width: 100%;
   z-index: 2;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transition: background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96);
   transition: background 0.3s linear, -webkit-transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96);
   transition: transform 0.6s 0.45s cubic-bezier(0.15, 0.89, 0.52, 0.96), background 0.3s linear;
@@ -4809,8 +4825,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .ar-main-header {
       top: 100px; } }
   .ar-main-header.cover {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%); }
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
   .ar-main-header h5, .ar-main-header body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .tribe-events-single-section-title, body.tribe-events-page-template.single-tribe_events .tribe-events-event-meta .ar-main-header .tribe-events-single-section-title {
     font-size: 16px;
     font-size: 1rem;
@@ -4921,15 +4937,17 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       height: calc(100vh - 100px); }
     #annual-report .panel.ar-intro-cover .animate-down {
       position: absolute;
-      -webkit-animation: animateArDown 4000ms 300ms;
-              animation: animateArDown 4000ms 300ms;
+      -webkit-animation: animateArDown 9000ms 1000ms;
+              animation: animateArDown 9000ms 1000ms;
       -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
+              animation-fill-mode: forwards;
+      -webkit-transform: translate3d(0, -100vh, 0);
+              transform: translate3d(0, -100vh, 0); }
     #annual-report .panel.ar-intro-cover .animate-down .stay {
       margin-top: 4.6rem; }
     #annual-report .panel.ar-intro-cover .animate-down .keep-going.start {
-      -webkit-animation: keepGoing 4000ms 1200ms;
-              animation: keepGoing 4000ms 1200ms;
+      -webkit-animation: keepGoing 9000ms 5000ms;
+              animation: keepGoing 9000ms 5000ms;
       -webkit-animation-fill-mode: forwards;
               animation-fill-mode: forwards;
       position: absolute;
@@ -4937,12 +4955,12 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
       width: 100%; }
     #annual-report .panel.ar-intro-cover .intro-copy {
       left: 400px;
-      -webkit-transition: left 600ms 0ms linear;
-      transition: left 600ms 0ms linear; }
+      -webkit-transition: left 600ms 2700ms linear;
+      transition: left 600ms 2700ms linear; }
       #annual-report .panel.ar-intro-cover .intro-copy .second {
         opacity: 0;
-        -webkit-transition: opacity 300ms linear;
-        transition: opacity 300ms linear; }
+        -webkit-transition: opacity 300ms 4000ms linear;
+        transition: opacity 300ms 4000ms linear; }
     #annual-report .panel.ar-intro-cover span {
       -webkit-transition: opacity 300ms linear;
       transition: opacity 300ms linear; }
@@ -5041,11 +5059,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: 35%;
         -webkit-transform: translateY(0);
                 transform: translateY(0); } }
-    #annual-report .ar-section.ar-section-2 .inner-wrap {
-      margin-top: 6.25rem; }
-      @media screen and (min-width: 769px) {
-        #annual-report .ar-section.ar-section-2 .inner-wrap {
-          margin-top: 16%; } }
+    @media screen and (min-width: 769px) {
+      #annual-report .ar-section.ar-section-2 .inner-wrap {
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        top: calc(50% + 70px); } }
     @media screen and (min-width: 769px) {
       #annual-report .ar-section.ar-section-2 .president {
         float: left;
