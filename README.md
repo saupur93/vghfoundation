@@ -47,9 +47,7 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 
 ## Functional
-- Annual Report
-  - reponsive
-  - CMS integration
+- Line spacing in event thumb row
 
 - set thumbnail sizes and regenerate thumbnails
 

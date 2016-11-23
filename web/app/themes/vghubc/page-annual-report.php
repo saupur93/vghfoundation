@@ -2,6 +2,10 @@
 /*
 Template Name: Annual Report
 */
+$pdf_download = get_field('pdf_download')['url'];
+$cover_intro = get_field('cover_intro');
+$president_intro = get_field('presidents_message_intro');
+$president_full = get_field('presidents_message_full');
 ?>
 
 
@@ -35,8 +39,7 @@ Template Name: Annual Report
               <h2><span class="initial-show">2015 - 2016</span></h2>
             </div>
             <div class="col-half second">
-              <p>It takes a partnership between donors, VGH & UBC Hospital Foundation and our hospitals and health care teams to provide the best in specialized care for all British Columbians.</p>
-              <p><a class="button white-keyline" href="<?php bloginfo('template_directory'); ?>/assets/docs/160919 AR-DD1_Single_Pages.pdf">Download the Report</a></p>
+             <?php print $cover_intro; ?>
             </div>
           </div>
         </div>
@@ -107,84 +110,12 @@ Template Name: Annual Report
         <div class="inner-wrap">
           <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ar-president.jpg" class="president" />
           <div class="copy" style="overflow:hidden;">
-            <h2>Thank you for keeping health care in BC vital.</h2>
-            <p>I may not be typical, but I love my commute to work each day. I love it because for me, it ends walking by the construction site of the Joseph and Rosalie Segal Family Health Centre. To some, it looks like any other construction site. For me it is much more symbolic – to me, it looks like hope.</p>
+            <?php print $president_intro; ?>
             <p><a href="#" class="read-more" id="president-message">read president’s message</a></p>
             <div class="hide message-html">
               <div class="container">
                 <div class="inner-wrap">
-                  <h3>President's Message</h3>
-                  <div class="col-half">
-                    <p class="small">Slated for completion in the fall of 2017, the
-                    Centre will open the doors to a new era of
-                    mental health care. With $57 million from the
-                    provincial government and over $27 million
-                    coming from donors (including a lead gift of
-                    $12 million from the Segals) it is a beautiful
-                    example of how philanthropy can drive
-                    change right here in Vancouver. I feel blessed
-                    to be reminded of that each morning.</p>
-                    <p class="small">As President and CEO of BC’s leading adult
-                    health care foundation, it is a dream come
-                    true to be in the position of matching donors’
-                    philanthropic desires with transformational
-                    projects that will benefit all British Columbians.
-                    It is a responsibility I am both honoured and
-                    humbled to fulfil.</p>
-                    <p class="small">Our Foundation is Vancouver Coastal Health’s
-                      (VCH’s) primary philanthropic partner in
-                      Vancouver. We raise funds for specialized
-                      adult health care and research for all British
-                      Columbians at Vancouver General Hospital
-                      (VGH), UBC Hospital, GF Strong Rehab Centre
-                      and VCH Research Institute, as well as for
-                      community health services for families across
-                      Vancouver through Vancouver Community
-                      Health Services.</p>
-                    <p class="small">While government funds essential services,
-                    many game-changing projects, such as
-                    new programs and facilities, leading-edge
-                    research and advanced, more efficient
-                    medical equipment can only be realized with
-                    donors as key partners. Quite simply, we act
-                    as a vital link to provide the people, places,
-                    programs and tools our health care teams
-                    need to deliver the best patient care possible.
-                    And thanks to donors like you, we have had
-                    an extraordinary year.</p>
-                  </div>
-
-                  <div class="col-half">
-                    <p class="small">In this Annual Report, you will read some
-                    amazing stories about six areas of where
-                    philanthropy is playing a major role delivering
-                    innovative, transformative and sustainable
-                    health care. Thanks to donors like you, we
-                    are building new operating rooms including
-                    a Hybrid Operating Room at VGH, the first
-                    phase in an ambitious plan to reimagine
-                    surgical care at VGH and UBC Hospital.</p>
-
-                    <p class="small">This plan will not only significantly
-                    improve the effectiveness and efficiency
-                    of specialized surgical services, it will also
-                    allow VCH to attract (and keep) top surgical
-                    talent. Also thanks to you, our world-class
-                    cardiology services will be enhanced with an
-                    electrophysiology (EP) lab that will enable
-                    VGH’s heart specialists to increase capacity
-                    and provide leading-edge treatment.</p>
-                    <p class="small">Transforming health care takes an
-                    innovative vision and passionate people to
-                    make it happen. On behalf of the hundreds
-                    of thousands of British Columbians who
-                    benefit from your generosity – please accept
-                    our heartfelt gratitude and know that you
-                    are playing a vital role in the future of health
-                    care in BC.</p>
-                  </div>
-                  <h5>— BARBARA GRANTHAM, PRESIDENT AND CEO</h5>
-
+                 <?php print $president_full; ?>
 
 
                 </div>
@@ -482,7 +413,7 @@ Template Name: Annual Report
         <div class="narrow-wrap">
           <h2>Find out how your contributions have helped make us vital.</h2>
           <h4>Download our full Annual Report to learn more.</h4>
-          <p><a class="button white-keyline" href="<?php bloginfo('template_directory'); ?>/assets/docs/160919 AR-DD1_Single_Pages.pdf">Download the Report</a></p>
+          <p><a class="button white-keyline" href="<?php print $pdf_download; ?>" target="_blank">Download the Report</a></p>
         </div>
       </div>
     </section>
