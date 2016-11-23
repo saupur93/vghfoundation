@@ -51,7 +51,7 @@ Template Name: Home
             <?php else: ?>
               <p class="intro"><?php print get_the_excerpt(); ?></p>
             <?php endif; ?>
-              <?php $link_text = null !== get_field('alternative_button_text') ? get_field('alternative_button_text') : 'Read article'; ?>
+              <?php $link_text = null !== get_field('alternative_button_text') && !empty(get_field('alternative_button_text')) ? get_field('alternative_button_text') : 'Read article'; ?>
               <p><a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a></p>
             </div>
             <?php endwhile; ?>
