@@ -222,6 +222,10 @@ p {
 
 .nav-open {
   overflow:hidden;
+  .page-wrap {
+    overflow: hidden;
+
+  }
   .stripes {
     margin-top:29px;
 
@@ -5285,7 +5289,9 @@ body.page-template-page-annual-report-php {
 
     .share-this {
       padding:rem(13) rem(25);
-      min-width:rem(220);
+      @include media($tab){
+        min-width:rem(220);
+      }
       &:hover {
         color:$button-grey;
       }
@@ -5318,7 +5324,7 @@ body.page-template-page-annual-report-php {
       height:rem(660);
       display:block;
       @include media($mobileOnly){
-        top:rem(200);
+        top:rem(200); 
       }
     }
 
