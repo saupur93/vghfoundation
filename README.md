@@ -48,6 +48,7 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 ## Functional
 - Annual Report
+  - reponsive
   - CMS integration
 
 - set thumbnail sizes and regenerate thumbnails
@@ -56,6 +57,7 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 ## QA Notes
 - redirection plugin problems exporting database
 - consider mobile nav resize
+- nav scroll acting funny
 
 
 ### From staging to prod
