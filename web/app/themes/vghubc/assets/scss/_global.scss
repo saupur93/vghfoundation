@@ -4231,6 +4231,16 @@ body.tribe-events-page-template {
     }
   }
 
+  .pager {
+    @include media($ptab){
+      height: 16.66vw;
+      .left, .right {
+        bottom:auto;
+        top:50%;
+      }
+    }
+  }
+
 }
 
 

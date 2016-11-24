@@ -4400,6 +4400,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
             font-size: 16px;
             font-size: 1rem; } }
 
+@media screen and (min-width: 601px) {
+  .panel.signature-events-panel .pager {
+    height: 16.66vw; }
+    .panel.signature-events-panel .pager .left, .panel.signature-events-panel .pager .right {
+      bottom: auto;
+      top: 50%; } }
+
 .grid-slider .pager {
   width: 100%;
   position: absolute;

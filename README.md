@@ -59,3 +59,5 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 ### From staging to prod
 `rsync -Pubvaz --stats web/app/uploads/ worldcy3@server.worldclasshealthcare.ca:/web/app/uploads/`
 
+
+Inspiring donors. Transforming health care. Saving Lives.
