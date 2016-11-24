@@ -48,12 +48,10 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 
 ## Functional
 - Line spacing in event thumb row
-
 - set thumbnail sizes and regenerate thumbnails
 
 
 ## QA Notes
-- redirection plugin problems exporting database
 - consider mobile nav resize
 - mobile nav scroll acting funny on iPhone
 
@@ -61,6 +59,3 @@ There is a handy deploy.sh file that you can use by simply running `npm run depl
 ### From staging to prod
 `rsync -Pubvaz --stats web/app/uploads/ worldcy3@server.worldclasshealthcare.ca:/web/app/uploads/`
 
-## Launch
-- change .env to reflect vghfoundation.ca domain
-- run serializing script to clean database of vghubc.signalsinteractive.com and vghubc.dev to vghfoundation.ca
