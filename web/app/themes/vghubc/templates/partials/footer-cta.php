@@ -6,9 +6,11 @@
 <?php $text_content = null !== get_field('text_content', $ID) ? get_field('text_content', $ID) : false; ?>
 <?php $white_text_colour = null !== get_field('text_colour', $ID) && get_field('text_colour', $ID) == 'White text' ? true : false; ?>
 <?php $bg_image = null !== get_field('background_image', $ID) ? get_field('background_image', $ID)['url'] : false; ?>
+<?php $bg_color = null !== get_field('background_color', $ID) ? get_field('background_color', $ID) : false; ?>
+<?php $bg_color = explode(':', $bg_color)[0]; ?>
 
 <?php if($text_content): ?>
-  <section class="panel extra-padded footer-cta<?php print $theme_class; ?><?php if($white_text_colour) print ' bg-color-cta'; ?><?php if($bg_image) print ' bg-image-cta'; ?>"<?php if($bg_image) print ' style="background-image:url('. $bg_image .');"'; ?>>
+  <section class="panel extra-padded footer-cta<?php print $theme_class; ?><?php if($white_text_colour) print ' bg-color-cta'; ?><?php if($bg_image) print ' bg-image-cta'; ?>"<?php if($bg_image) { print ' style="background-image:url('. $bg_image .');"';} elseif($bg_color){ print ' style="background-color:'. $bg_color .';"';} ?>>
     <div class="container">
       <div class="inner-wrap">
         <?php print $text_content; ?>
