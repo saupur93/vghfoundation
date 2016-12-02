@@ -427,10 +427,10 @@ p {
         .sub-menu {
           background:#fff;
           display:inline-block;
-          padding:20px 30px 10px 30px;
+          padding:34px 30px 10px 30px;
           position: absolute;
           left:-25px;
-          top:33px;
+          top:19px;
           opacity:0;
           max-height:0;
           z-index:3;
@@ -4342,14 +4342,24 @@ body.tribe-events-page-template {
 .single-signature_events {
   .page-header {
     height:520px;
+    h1 {
+      text-transform:none;
+      float:none;
+    }
     @include media($ptab){
-      height:100vh;
+      height:60vh;
     }
     .container, .inner-wrap {
       height:100%;
       @include media($ptabAndLess){
         padding-left:rem(10);
         padding-right:rem(10);
+      }
+    }
+    .inner-wrap {
+      @include media($ptab){
+        padding-left:3.75rem;
+        padding-right:3.75rem;
       }
     }
     .cover-copy {
@@ -5450,7 +5460,7 @@ body.page-template-page-annual-report-php {
         position:relative;
         transform:translateY(-50%);
         max-width:rem(550);
-        top:60%;
+        top:50%;
       }
 
       img {

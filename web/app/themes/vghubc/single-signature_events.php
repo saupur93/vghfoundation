@@ -2,6 +2,7 @@
 
 <?php
   $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
+  $campaign_slogan = null !== get_field('campaign_slogan') ? get_field('campaign_slogan') : false;
   $donate_url = null !== get_field('donation_url') ? get_field('donation_url') : false;
  ?>
 
@@ -10,7 +11,11 @@
 	    <div class="container">
 	      <div class="inner-wrap">
 	        <div class="cover-copy">
-	          <h1><?php the_title(); ?></h1>
+            <?php if ($campaign_slogan): ?>
+              <h1><?php print $campaign_slogan; ?></h1>
+            <?php else: ?>
+              <h1><?php the_title(); ?></h1>
+            <?php endif ?>
             <?php if($donate_url): ?>
               <a class="button" href="<?php print $donate_url; ?>" target="_blank">Donate to this event</a>
             <?php endif; ?>

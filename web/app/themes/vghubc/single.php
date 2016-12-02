@@ -17,10 +17,6 @@
       <div class="inner-wrap">
         <h1><?php the_title(); ?></h1>
         <p class="date"><?php the_time('F j, Y'); ?></p>
-        <div class="social-share">
-          <p><a href="#" class="share-this button white-keyline">Share this story</a></p>
-          <?php get_template_part('templates/partials/social', 'share'); ?>
-        </div>
       </div>
 
       <?php if ($featured_image_caption && isset($featured_image_caption[0])): ?>
@@ -50,6 +46,10 @@
   </section>
 <?php endif; ?>
 
+  <?php
+    $related_call_to_action = null !== get_field('related_call_to_action') ? get_field('related_call_to_action') : false;
+  ?>
+
   <article class="main-content padded-bottom panel">
     <div class="container">
       <div class="narrow-wrap">
@@ -57,10 +57,12 @@
         <?php the_content(); ?>
         <?php endwhile; ?>
 
+        <?php if(!$related_call_to_action): ?>
         <div class="social-share center">
           <p><a href="#" class="share-this button grey-keyline">Share this story</a></p>
           <?php get_template_part('templates/partials/social', 'share'); ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </article>
@@ -113,9 +115,6 @@
     <?php endif; ?>
   <?php endif; ?>
 
-  <?php
-    $related_call_to_action = null !== get_field('related_call_to_action') ? get_field('related_call_to_action') : false;
-  ?>
   <?php if($related_call_to_action): ?>
     <?php include(locate_template('templates/partials/footer-cta.php')); ?>
   <?php endif; ?>

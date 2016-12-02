@@ -7,13 +7,12 @@
 
 
   if ($related_category && !$related_theme){
-    $cats = implode(', ', $related_category);
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
       "orderby" => "date",
       "order" => "DESC",
-      'cat' => $cats,
+      'category__and' => $related_category,
       'ignore_sticky_posts' => 1,
     ));
   } elseif($related_theme && !$related_category){
@@ -37,7 +36,7 @@
       "posts_per_page" => 3,
       "orderby" => "date",
       "order" => "DESC",
-      'cat' => implode(', ', $related_category),
+      'category__and' => $related_category,
       'ignore_sticky_posts' => 1,
       'meta_query' => array(
         'relation' => 'AND',
@@ -49,14 +48,13 @@
       )
     ));
   } else {
-    $cats = implode(', ', $related_category);
     $posts = new WP_Query(array(
       "post_type" => "post",
       "posts_per_page" => 3,
       "orderby" => "date",
       "order" => "DESC",
       'ignore_sticky_posts' => 1,
-      'cat' => $cats
+      'category__and' => $related_category
     ));
   }
 ?>

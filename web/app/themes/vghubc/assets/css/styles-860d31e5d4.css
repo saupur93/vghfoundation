@@ -1591,10 +1591,10 @@ p {
       #main-menu #primary-nav li.menu-item-has-children .sub-menu {
         background: #fff;
         display: inline-block;
-        padding: 20px 30px 10px 30px;
+        padding: 34px 30px 10px 30px;
         position: absolute;
         left: -25px;
-        top: 33px;
+        top: 19px;
         opacity: 0;
         max-height: 0;
         z-index: 3;
@@ -4484,15 +4484,22 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
 
 .single-signature_events .page-header {
   height: 520px; }
+  .single-signature_events .page-header h1 {
+    text-transform: none;
+    float: none; }
   @media screen and (min-width: 601px) {
     .single-signature_events .page-header {
-      height: 100vh; } }
+      height: 60vh; } }
   .single-signature_events .page-header .container, .single-signature_events .page-header .inner-wrap {
     height: 100%; }
     @media screen and (max-width: 768px) {
       .single-signature_events .page-header .container, .single-signature_events .page-header .inner-wrap {
         padding-left: 0.625rem;
         padding-right: 0.625rem; } }
+  @media screen and (min-width: 601px) {
+    .single-signature_events .page-header .inner-wrap {
+      padding-left: 3.75rem;
+      padding-right: 3.75rem; } }
   .single-signature_events .page-header .cover-copy {
     width: 100%;
     position: relative;
@@ -5249,7 +5256,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
         max-width: 34.375rem;
-        top: 60%; } }
+        top: 50%; } }
     .single-post .large-featured-image .inner-wrap img {
       max-width: 100%;
       height: auto; }
