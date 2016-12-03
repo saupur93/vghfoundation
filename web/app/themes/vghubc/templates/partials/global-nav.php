@@ -68,7 +68,18 @@
     </div>
     <?php $global_donate_button_link = get_field('global_donate_button_link', 'option'); ?>
     <?php $donate = qtrans_getLanguage() == 'zh' ?  '捐助' : 'Donate' ?>
-    <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank"><?php print $donate; ?></a>
+    <?php $take_over_campaign = null !== get_field('take_over_campaign') ? get_field('take_over_campaign') : false; ?>
+    <?php if (!$take_over_campaign): ?>
+      <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank"><?php print $donate; ?></a>
+    <?php else: ?>
+      <?php $select_signature_event = null !== get_field('select_signature_event') ? get_field('select_signature_event') : false; ?>
+      <?php $donation_link = $select_signature_event && null !== get_field('donation_url', $select_signature_event[0]->ID) ? get_field('donation_url', $select_signature_event[0]->ID) : false; ?>
+      <?php if($donation_link && !empty($donation_link)): ?>
+      <a class="button green big-donate<?php if($select_signature_event[0]->post_name) print ' '.$select_signature_event[0]->post_name; ?>" href="<?php print $donation_link; ?>" target="_blank"><?php print $donate; ?></a>
+      <?php else: ?>
+      <a class="button green big-donate" href="<?php print $global_donate_button_link; ?>" target="_blank"><?php print $donate; ?></a>
+      <?php endif ?>
+    <?php endif ?>
   </div>
 </header>
 

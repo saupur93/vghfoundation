@@ -817,3 +817,61 @@
     }
   }
 }
+
+body.front {
+  .big-donate.angel-campaign {
+    background-color:$angel-pink;
+    a.button:hover {
+      color:$angel-pink;
+    }
+  }
+
+  .big-donate.night-of-a-thousand-stars-gala {
+    background-color:$stars-gala;
+    a.button:hover {
+      color:$stars-gala;
+    }
+  }
+
+  .big-donate.viva-pharmaceutical-time-to-shine-gala {
+    background-color:$shine-gala;
+    a.button:hover {
+      color:$shine-gala;
+    }
+  }
+
+  .big-donate.ismaili-walk {
+    background-color:$teal;
+    a.button:hover {
+      color:$teal;
+    }
+  }
+
+  .big-donate.mr-lube-tournament-for-life {
+    background-color:$mr-lube;
+    a.button:hover {
+      color:$mr-lube;
+    }
+  }
+
+  .hero-copy.angel-campaign {
+    background-color:$angel-pink;
+  }
+
+  .hero-copy.night-of-a-thousand-stars-gala {
+    background-color:$stars-gala;
+  }
+
+  .hero-copy.viva-pharmaceutical-time-to-shine-gala {
+    background-color:$shine-gala;
+  }
+
+  .hero-copy.ismaili-walk {
+    background-color:$teal;
+  }
+
+  .hero-copy.mr-lube-tournament-for-life {
+    background-color:$mr-lube;
+  }
+
+}

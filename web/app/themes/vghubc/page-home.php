@@ -6,25 +6,43 @@ Template Name: Home
 
 
 <?php get_header(); ?>
-<?php $hero_title = null !== get_field('hero_title') ? get_field('hero_title') : false; ?>
+<?php
+  $hero_title = null !== get_field('hero_title') ? get_field('hero_title') : false;
+  $take_over_campaign = null !== get_field('take_over_campaign') ? get_field('take_over_campaign') : false;
+
+?>
 <div class="page-wrap">
+
     <?php
         $count = 0;
-        $latestArgs = array(
-          'post_type' => 'post',
-          'posts_per_page' => 6,
-          'post_status' => 'publish',
-          "orderby" => "date",
-          "order" => "DESC",
-          'category_name' => 'featured-on-home',
-          'ignore_sticky_posts' => 1,
-          'meta_query' => array(
-            array(
-             'key' => '_thumbnail_id',
-             'compare' => 'EXISTS'
-            ),
-          )
-        );
+        $related_category = null !== get_field('story_categories_to_feature') ? get_field('story_categories_to_feature') : false;
+        if(!$take_over_campaign){
+          $latestArgs = array(
+            'post_type' => 'post',
+            'posts_per_page' => 6,
+            'post_status' => 'publish',
+            "orderby" => "date",
+            "order" => "DESC",
+            'category_name' => 'featured-on-home',
+            'ignore_sticky_posts' => 1,
+            'meta_query' => array(
+              array(
+               'key' => '_thumbnail_id',
+               'compare' => 'EXISTS'
+              ),
+            )
+          );
+        } else {
+          $latestArgs = array(
+            "post_type" => "post",
+            "posts_per_page" => 3,
+            "orderby" => "date",
+            "order" => "DESC",
+            'category__and' => $related_category,
+            'ignore_sticky_posts' => 1,
+          );
+        }
+
         $latest_query = new WP_Query($latestArgs);
       ?>
   <?php if($latest_query->have_posts()): ?>
@@ -38,7 +56,8 @@ Template Name: Home
       </div>
       <div class="container">
         <div class="inner-wrap">
-          <div class="hero-copy" data-colour-type="surgery">
+          <?php $select_signature_event = null !== get_field('select_signature_event') ? get_field('select_signature_event') : false; ?>
+          <div class="hero-copy<?php if($select_signature_event[0]->post_name) print ' '.$select_signature_event[0]->post_name; ?>" data-colour-type="surgery">
             <?php if($hero_title): ?>
             <h1><?php print $hero_title; ?></h1>
             <?php else: ?>

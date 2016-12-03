@@ -1248,6 +1248,46 @@ p.date {
     .panel.brain-health.footer-cta a:hover {
       color: #6DCDB8; }
 
+body.front .big-donate.angel-campaign {
+  background-color: #ce89c3; }
+  body.front .big-donate.angel-campaign a.button:hover, body.front .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.angel-campaign a.tribe-events-read-more:hover {
+    color: #ce89c3; }
+
+body.front .big-donate.night-of-a-thousand-stars-gala {
+  background-color: #272787; }
+  body.front .big-donate.night-of-a-thousand-stars-gala a.button:hover, body.front .big-donate.night-of-a-thousand-stars-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.night-of-a-thousand-stars-gala a.tribe-events-read-more:hover {
+    color: #272787; }
+
+body.front .big-donate.viva-pharmaceutical-time-to-shine-gala {
+  background-color: #cca349; }
+  body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.button:hover, body.front .big-donate.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.tribe-events-read-more:hover {
+    color: #cca349; }
+
+body.front .big-donate.ismaili-walk {
+  background-color: #00ac9a; }
+  body.front .big-donate.ismaili-walk a.button:hover, body.front .big-donate.ismaili-walk body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.ismaili-walk a.tribe-events-read-more:hover {
+    color: #00ac9a; }
+
+body.front .big-donate.mr-lube-tournament-for-life {
+  background-color: #08450F; }
+  body.front .big-donate.mr-lube-tournament-for-life a.button:hover, body.front .big-donate.mr-lube-tournament-for-life body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.mr-lube-tournament-for-life a.tribe-events-read-more:hover {
+    color: #08450F; }
+
+body.front .hero-copy.angel-campaign {
+  background-color: #ce89c3; }
+
+body.front .hero-copy.night-of-a-thousand-stars-gala {
+  background-color: #272787; }
+
+body.front .hero-copy.viva-pharmaceutical-time-to-shine-gala {
+  background-color: #cca349; }
+
+body.front .hero-copy.ismaili-walk {
+  background-color: #00ac9a; }
+
+body.front .hero-copy.mr-lube-tournament-for-life {
+  background-color: #08450F; }
+
 /**
  * Box sizing
  */
