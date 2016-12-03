@@ -35,7 +35,7 @@ Template Name: Home
         } else {
           $latestArgs = array(
             "post_type" => "post",
-            "posts_per_page" => 3,
+            "posts_per_page" => 5,
             "orderby" => "date",
             "order" => "DESC",
             'category__and' => $related_category,
