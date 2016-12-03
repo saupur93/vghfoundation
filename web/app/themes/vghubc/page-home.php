@@ -12,7 +12,6 @@ Template Name: Home
 
 ?>
 <div class="page-wrap">
-
     <?php
         $count = 0;
         $related_category = null !== get_field('story_categories_to_feature') ? get_field('story_categories_to_feature') : false;
@@ -35,14 +34,13 @@ Template Name: Home
         } else {
           $latestArgs = array(
             "post_type" => "post",
-            "posts_per_page" => 5,
+            "posts_per_page" => 4,
             "orderby" => "date",
             "order" => "DESC",
             'category__and' => $related_category,
             'ignore_sticky_posts' => 1,
           );
         }
-
         $latest_query = new WP_Query($latestArgs);
       ?>
   <?php if($latest_query->have_posts()): ?>
@@ -87,8 +85,6 @@ Template Name: Home
       </div>
   </section>
   <?php endif; ?>
-
-
   <?php if( have_rows('layouts') ): ?>
     <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
   <?php else : ?>
@@ -135,8 +131,6 @@ Template Name: Home
           </div>
         </div>
       </a>
-
-
       <?php endwhile; ?>
     </div>
 
