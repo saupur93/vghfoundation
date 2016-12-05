@@ -4,6 +4,7 @@
   $header_image = null !== get_field('header_image') ? get_field('header_image')['url'] : false;
   $campaign_slogan = null !== get_field('campaign_slogan') ? get_field('campaign_slogan') : false;
   $donate_url = null !== get_field('donation_url') ? get_field('donation_url') : false;
+  $donation_button_text = null !== get_field('donation_button_text') ? get_field('donation_button_text') : 'Donate to this event';
  ?>
 
 	<div class="page-wrap">
@@ -17,7 +18,7 @@
               <h1><?php the_title(); ?></h1>
             <?php endif ?>
             <?php if($donate_url): ?>
-              <a class="button" href="<?php print $donate_url; ?>" target="_blank">Donate to this event</a>
+              <a class="button" href="<?php print $donate_url; ?>" target="_blank"><?php print $donation_button_text; ?></a>
             <?php endif; ?>
           </div>
           <img src="<?php bloginfo('template_directory'); ?>/assets/img/arrow-down.svg" class="cover-arrow-down" />
