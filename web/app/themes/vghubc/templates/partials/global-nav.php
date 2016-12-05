@@ -101,11 +101,12 @@
   <div class="container breadcrumb">
   <?php $event_text = qtrans_getLanguage() == 'zh' ?  '筹款活动' : 'Events' ?>
   <?php $donate_text = qtrans_getLanguage() == 'zh' ?  '捐助' : 'Donate to this event' ?>
+  <?php $donation_button_text = null !== get_field('donation_button_text') ? get_field('donation_button_text') : $donate_text; ?>
 
   <h3><a href="/events/#signature-events"><span class="back-arrow"><img src="<?php bloginfo('template_directory'); ?>/assets/img/back-arrow.svg" /></span> <?php print $event_text; ?></a></h3> <span class="separator">></span> <h3><?php print get_the_title(get_the_ID()); ?></h3>
   <?php $donation_link = null !== get_field('donation_url', get_the_ID()) ? get_field('donation_url', get_the_ID()) : false; ?>
   <?php if($donation_link && !empty($donation_link)): ?>
-  <a href="<?php print $donation_link; ?>" target="_blank" class="sub-header-donate"><h3><?php print $donate_text; ?></h3></a>
+  <a href="<?php print $donation_link; ?>" target="_blank" class="sub-header-donate"><h3><?php print $donation_button_text; ?></h3></a>
   <?php endif; ?>
   </div>
 </header>
