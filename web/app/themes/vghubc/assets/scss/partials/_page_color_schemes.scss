@@ -818,7 +818,7 @@
   }
 }
 
-body.front {
+body.front, body.single-signature_events {
   .big-donate.angel-campaign {
     background-color:$angel-pink;
     a.button:hover {
@@ -856,6 +856,9 @@ body.front {
 
   .hero-copy.angel-campaign {
     background-color:$angel-pink;
+    @include media($tab){
+      width:50.5rem;
+    }
   }
 
   .hero-copy.night-of-a-thousand-stars-gala {

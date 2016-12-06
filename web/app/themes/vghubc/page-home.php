@@ -44,7 +44,8 @@ Template Name: Home
         $latest_query = new WP_Query($latestArgs);
       ?>
   <?php if($latest_query->have_posts()): ?>
-  <section class="hero-content panel slideshow">
+  <?php $select_signature_event = null !== get_field('select_signature_event') ? get_field('select_signature_event') : false; ?>
+  <section class="hero-content panel slideshow<?php if($select_signature_event[0]->post_name) print ' '.$select_signature_event[0]->post_name; ?>">
       <div class="slide-images">
       <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
       <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>
@@ -54,7 +55,6 @@ Template Name: Home
       </div>
       <div class="container">
         <div class="inner-wrap">
-          <?php $select_signature_event = null !== get_field('select_signature_event') ? get_field('select_signature_event') : false; ?>
           <div class="hero-copy<?php if($select_signature_event[0]->post_name) print ' '.$select_signature_event[0]->post_name; ?>" data-colour-type="surgery">
             <?php if($hero_title): ?>
             <h1><?php print $hero_title; ?></h1>
@@ -69,7 +69,12 @@ Template Name: Home
               <p class="intro"><?php print get_the_excerpt(); ?></p>
             <?php endif; ?>
               <?php $link_text = null !== get_field('alternative_button_text') && !empty(get_field('alternative_button_text')) ? get_field('alternative_button_text') : 'Read article'; ?>
-              <p><a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a></p>
+              <p>
+                <a href="<?php echo get_permalink(); ?>" class="read-more white"><?php print $link_text; ?></a>
+                <?php if($select_signature_event[0]->post_name == 'angel-campaign'): ?>
+                  <a href="<?php echo get_permalink($select_signature_event[0]->ID); ?>" class="read-more white second-cta">The Angel Campaign</a>
+                <?php endif; ?>
+              </p>
             </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>

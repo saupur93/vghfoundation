@@ -1248,44 +1248,47 @@ p.date {
     .panel.brain-health.footer-cta a:hover {
       color: #6DCDB8; }
 
-body.front .big-donate.angel-campaign {
+body.front .big-donate.angel-campaign, body.single-signature_events .big-donate.angel-campaign {
   background-color: #ce89c3; }
-  body.front .big-donate.angel-campaign a.button:hover, body.front .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.angel-campaign a.tribe-events-read-more:hover {
+  body.front .big-donate.angel-campaign a.button:hover, body.front .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.angel-campaign a.tribe-events-read-more:hover, body.single-signature_events .big-donate.angel-campaign a.button:hover, body.single-signature_events .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.angel-campaign a.tribe-events-read-more:hover {
     color: #ce89c3; }
 
-body.front .big-donate.night-of-a-thousand-stars-gala {
+body.front .big-donate.night-of-a-thousand-stars-gala, body.single-signature_events .big-donate.night-of-a-thousand-stars-gala {
   background-color: #272787; }
-  body.front .big-donate.night-of-a-thousand-stars-gala a.button:hover, body.front .big-donate.night-of-a-thousand-stars-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.night-of-a-thousand-stars-gala a.tribe-events-read-more:hover {
+  body.front .big-donate.night-of-a-thousand-stars-gala a.button:hover, body.front .big-donate.night-of-a-thousand-stars-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.night-of-a-thousand-stars-gala a.tribe-events-read-more:hover, body.single-signature_events .big-donate.night-of-a-thousand-stars-gala a.button:hover, body.single-signature_events .big-donate.night-of-a-thousand-stars-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.night-of-a-thousand-stars-gala a.tribe-events-read-more:hover {
     color: #272787; }
 
-body.front .big-donate.viva-pharmaceutical-time-to-shine-gala {
+body.front .big-donate.viva-pharmaceutical-time-to-shine-gala, body.single-signature_events .big-donate.viva-pharmaceutical-time-to-shine-gala {
   background-color: #cca349; }
-  body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.button:hover, body.front .big-donate.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.tribe-events-read-more:hover {
+  body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.button:hover, body.front .big-donate.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.viva-pharmaceutical-time-to-shine-gala a.tribe-events-read-more:hover, body.single-signature_events .big-donate.viva-pharmaceutical-time-to-shine-gala a.button:hover, body.single-signature_events .big-donate.viva-pharmaceutical-time-to-shine-gala body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.viva-pharmaceutical-time-to-shine-gala a.tribe-events-read-more:hover {
     color: #cca349; }
 
-body.front .big-donate.ismaili-walk {
+body.front .big-donate.ismaili-walk, body.single-signature_events .big-donate.ismaili-walk {
   background-color: #00ac9a; }
-  body.front .big-donate.ismaili-walk a.button:hover, body.front .big-donate.ismaili-walk body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.ismaili-walk a.tribe-events-read-more:hover {
+  body.front .big-donate.ismaili-walk a.button:hover, body.front .big-donate.ismaili-walk body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.ismaili-walk a.tribe-events-read-more:hover, body.single-signature_events .big-donate.ismaili-walk a.button:hover, body.single-signature_events .big-donate.ismaili-walk body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.ismaili-walk a.tribe-events-read-more:hover {
     color: #00ac9a; }
 
-body.front .big-donate.mr-lube-tournament-for-life {
+body.front .big-donate.mr-lube-tournament-for-life, body.single-signature_events .big-donate.mr-lube-tournament-for-life {
   background-color: #08450F; }
-  body.front .big-donate.mr-lube-tournament-for-life a.button:hover, body.front .big-donate.mr-lube-tournament-for-life body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.mr-lube-tournament-for-life a.tribe-events-read-more:hover {
+  body.front .big-donate.mr-lube-tournament-for-life a.button:hover, body.front .big-donate.mr-lube-tournament-for-life body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.mr-lube-tournament-for-life a.tribe-events-read-more:hover, body.single-signature_events .big-donate.mr-lube-tournament-for-life a.button:hover, body.single-signature_events .big-donate.mr-lube-tournament-for-life body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.mr-lube-tournament-for-life a.tribe-events-read-more:hover {
     color: #08450F; }
 
-body.front .hero-copy.angel-campaign {
+body.front .hero-copy.angel-campaign, body.single-signature_events .hero-copy.angel-campaign {
   background-color: #ce89c3; }
+  @media screen and (min-width: 769px) {
+    body.front .hero-copy.angel-campaign, body.single-signature_events .hero-copy.angel-campaign {
+      width: 50.5rem; } }
 
-body.front .hero-copy.night-of-a-thousand-stars-gala {
+body.front .hero-copy.night-of-a-thousand-stars-gala, body.single-signature_events .hero-copy.night-of-a-thousand-stars-gala {
   background-color: #272787; }
 
-body.front .hero-copy.viva-pharmaceutical-time-to-shine-gala {
+body.front .hero-copy.viva-pharmaceutical-time-to-shine-gala, body.single-signature_events .hero-copy.viva-pharmaceutical-time-to-shine-gala {
   background-color: #cca349; }
 
-body.front .hero-copy.ismaili-walk {
+body.front .hero-copy.ismaili-walk, body.single-signature_events .hero-copy.ismaili-walk {
   background-color: #00ac9a; }
 
-body.front .hero-copy.mr-lube-tournament-for-life {
+body.front .hero-copy.mr-lube-tournament-for-life, body.single-signature_events .hero-copy.mr-lube-tournament-for-life {
   background-color: #08450F; }
 
 /**
@@ -2223,6 +2226,14 @@ span.highlighted-text {
       .hero-content .hero-copy, .panel.latest-header .hero-copy {
         min-height: 290px;
         background-color: rgba(125, 171, 53, 0.85); } }
+    @media screen and (max-width: 600px) {
+      .hero-content .hero-copy .read-more, .panel.latest-header .hero-copy .read-more {
+        float: left;
+        clear: both;
+        margin-top: 20px; } }
+    @media screen and (min-width: 601px) {
+      .hero-content .hero-copy .second-cta, .panel.latest-header .hero-copy .second-cta {
+        margin-left: 40px; } }
     .hero-content .hero-copy[data-colour-type="surgery"], .panel.latest-header .hero-copy[data-colour-type="surgery"] {
       background-color: #00AAE3; }
       @media screen and (min-width: 1024px) and (max-height: 768px) {
@@ -2279,6 +2290,20 @@ span.highlighted-text {
     .hero-content p.intro, .panel.latest-header p.intro {
       font-size: 28px;
       font-size: 1.75rem; } }
+  .hero-content.angel-campaign h1, .angel-campaign.panel.latest-header h1 {
+    font-size: 38px;
+    font-size: 2.375rem;
+    margin-top: -90px; }
+    @media screen and (min-width: 601px) {
+      .hero-content.angel-campaign h1, .angel-campaign.panel.latest-header h1 {
+        font-size: 52px;
+        font-size: 3.25rem;
+        margin-top: -100px; } }
+    @media screen and (min-width: 769px) {
+      .hero-content.angel-campaign h1, .angel-campaign.panel.latest-header h1 {
+        margin-top: -135px;
+        font-size: 96px;
+        font-size: 6rem; } }
 
 .panel.slideshow .slide-images {
   width: 100%;

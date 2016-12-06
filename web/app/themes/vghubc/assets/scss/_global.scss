@@ -1116,6 +1116,21 @@ span.highlighted-text {
       background-color:rgba($brand-green,0.85);
     }
 
+    .read-more {
+      @include media($mobileOnly){
+        float:left;
+        clear:both;
+        margin-top:20px;
+      }
+    }
+
+    .second-cta {
+      @include media($ptab){
+        margin-left:40px;
+      }
+
+    }
+
 
     &[data-colour-type="surgery"] {
       background-color:$surgery;
@@ -1185,8 +1200,6 @@ span.highlighted-text {
     }
 
     @include media($laptopHeightOnly){
-      // @include font-size(70px);
-      // margin-top:-115px;
     }
 
   }
@@ -1194,6 +1207,21 @@ span.highlighted-text {
   p.intro {
     @include media($laptopHeightOnly){
       @include font-size(28px);
+    }
+  }
+
+  &.angel-campaign {
+    h1 {
+      @include font-size(38px);
+      margin-top:-90px;
+      @include media($ptab){
+        @include font-size(52px);
+        margin-top:-100px;
+      }
+      @include media($tab){
+       margin-top:-135px;
+       @include font-size(96px);
+      }
     }
   }
 }
