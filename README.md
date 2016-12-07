@@ -44,20 +44,3 @@
 
 ## Building and Deploying
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
-
-
-## Functional
-- Line spacing in event thumb row
-- set thumbnail sizes and regenerate thumbnails
-
-
-## QA Notes
-- consider mobile nav resize
-- mobile nav scroll acting funny on iPhone
-
-
-### From staging to prod
-`rsync -Pubvaz --stats web/app/uploads/ worldcy3@server.worldclasshealthcare.ca:/web/app/uploads/`
-
-
-Inspiring donors. Transforming health care. Saving Lives.
