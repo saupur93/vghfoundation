@@ -44,3 +44,11 @@
 
 ## Building and Deploying
 There is a handy deploy.sh file that you can use by simply running `npm run deploy` (You'll need to uncomment and configure your SSH info in the file). If you want to manually build (for production), type `gulp build --production` and deploy however you wish.
+
+
+## .git/config file
+[remote "prod"]
+  url = worldcy3@server.worldclasshealthcare.ca:/home/worldcy3/vghubc.git
+  fetch = +refs/heads/*:refs/remotes/prod/*
+  receivepack = /usr/local/cpanel/3rdparty/libexec/git-core/git-receive-pack
+  uploadpack = /usr/local/cpanel/3rdparty/libexec/git-core/git-upload-pack
