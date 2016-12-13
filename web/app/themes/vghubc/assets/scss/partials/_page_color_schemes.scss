@@ -854,6 +854,7 @@ body.front, body.single-signature_events {
     }
   }
 
+
   .hero-copy.angel-campaign {
     background-color:$angel-pink;
     @include media($tab){
@@ -875,6 +876,51 @@ body.front, body.single-signature_events {
 
   .hero-copy.mr-lube-tournament-for-life {
     background-color:$mr-lube;
+  }
+
+}
+
+body.single-themes_post {
+  .big-donate.surgery {
+    background-color:$surgery;
+    a.button:hover {
+      color:$surgery;
+    }
+  }
+
+  .big-donate.cancer {
+    background-color:$cancer;
+    a.button:hover {
+      color:$cancer;
+    }
+  }
+
+  .big-donate.heart-lung {
+    background-color:$heartlung;
+    a.button:hover {
+      color:$heartlung;
+    }
+  }
+
+  .big-donate.brain-health {
+    background-color:$brainhealth;
+    a.button:hover {
+      color:$brainhealth;
+    }
+  }
+
+  .big-donate.innovation {
+    background-color:$innovation;
+    a.button:hover {
+      color:$innovation;
+    }
+  }
+
+  .big-donate.community {
+    background-color:$community;
+    a.button:hover {
+      color:$community;
+    }
   }
 
 }
