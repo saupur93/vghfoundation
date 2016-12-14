@@ -860,6 +860,9 @@ body.front, body.single-signature_events {
     @include media($tab){
       width:50.5rem;
     }
+    @include media($ptabAndLess){
+      height:18rem;
+    }
   }
 
   .hero-copy.night-of-a-thousand-stars-gala {

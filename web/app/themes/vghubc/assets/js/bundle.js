@@ -13113,6 +13113,7 @@ var App = function () {
       this.eventsGrid();
       this.toggleMobileNav();
       this.submenuMobileDropdown();
+      this.responsiveIframe();
 
       if ((0, _jquery2.default)('#sub-navigation').length) {
         this.fixedHeaderScroll = new FixedHeaderScroll();
@@ -13668,6 +13669,20 @@ var App = function () {
         (0, _jquery2.default)('.main-tabs li').removeClass('active');
         (0, _jquery2.default)('.tab-group').find('.main-tabs li').eq(index).addClass('active');
       });
+    }
+
+    /**
+     * Auto wrap iframes for responsive
+     */
+
+  }, {
+    key: 'responsiveIframe',
+    value: function responsiveIframe() {
+      if ((0, _jquery2.default)('.single-post').length) {
+        (0, _jquery2.default)('iframe').each(function (i) {
+          (0, _jquery2.default)('iframe').eq(i).wrap('<div class="iframe-wrapper"></div>');
+        });
+      }
     }
 
     /**

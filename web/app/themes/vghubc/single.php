@@ -67,8 +67,11 @@
     </div>
   </article>
 
-
-  <?php if(isset($theme[0])): ?>
+  <?php $related_cats = wp_get_post_categories(get_the_ID());?>
+  <?php 
+    // if(isset($theme[0]) || (isset($related_cats) && !empty($related_cats))):
+    if(isset($related_cats) && !empty($related_cats)):
+   ?>
     <?php
       $relatedArgs = array(
         'post_type' => 'post',
@@ -76,12 +79,13 @@
         'post_status' => 'publish',
         'ignore_sticky_posts' => 1,
         'post__not_in' => array(get_the_ID()),
+        'category__and' => $related_cats,
         'meta_query' => array(
-          array(
-            'key' => 'related_theme',
-            'value' => '"' . $theme[0]->ID . '"',
-            'compare' => 'LIKE'
-          ),
+          // array(
+          //   'key' => 'related_theme',
+          //   'value' => '"' . $theme[0]->ID . '"',
+          //   'compare' => 'LIKE'
+          // ),
           array(
            'key' => '_thumbnail_id',
            'compare' => 'EXISTS'
@@ -97,7 +101,7 @@
           <h3>Related Stories</h3>
 
           <?php while($related_query->have_posts()) : $related_query->the_post(); ?>
-          <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'full')[0]; ?>
+          <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'related_thumb')[0]; ?>
           <div class="col-half">
             <a href="<?php echo get_permalink(); ?>">
               <?php if(isset($featured_image)) print '<img width="150" height="150" src='. $featured_image .' />'; ?>

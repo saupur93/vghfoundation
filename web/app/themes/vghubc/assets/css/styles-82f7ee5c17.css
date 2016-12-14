@@ -1278,6 +1278,9 @@ body.front .hero-copy.angel-campaign, body.single-signature_events .hero-copy.an
   @media screen and (min-width: 769px) {
     body.front .hero-copy.angel-campaign, body.single-signature_events .hero-copy.angel-campaign {
       width: 50.5rem; } }
+  @media screen and (max-width: 768px) {
+    body.front .hero-copy.angel-campaign, body.single-signature_events .hero-copy.angel-campaign {
+      height: 18rem; } }
 
 body.front .hero-copy.night-of-a-thousand-stars-gala, body.single-signature_events .hero-copy.night-of-a-thousand-stars-gala {
   background-color: #272787; }
@@ -4585,6 +4588,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   @media screen and (min-width: 601px) {
     .single-signature_events .page-header {
       height: 60vh; } }
+  @media screen and (min-width: 1024px) and (max-height: 768px) {
+    .single-signature_events .page-header {
+      height: 80vh; } }
   .single-signature_events .page-header .container, .single-signature_events .page-header .inner-wrap {
     height: 100%; }
     @media screen and (max-width: 768px) {
@@ -4595,6 +4601,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .single-signature_events .page-header .inner-wrap {
       padding-left: 3.75rem;
       padding-right: 3.75rem; } }
+  @media screen and (min-width: 601px) {
+    .single-signature_events .page-header .container .cover-copy {
+      max-width: 90%; } }
   .single-signature_events .page-header .cover-copy {
     width: 100%;
     position: relative;
@@ -6102,3 +6111,16 @@ body.overlay-open {
       background-image: url(../img/pager-right.svg);
       background-position: 50% 50%;
       background-repeat: no-repeat; }
+
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.2%;
+  /* 16:9 */
+  height: 0; }
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

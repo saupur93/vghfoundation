@@ -28,6 +28,7 @@ class App {
     this.eventsGrid();
     this.toggleMobileNav();
     this.submenuMobileDropdown();
+    this.responsiveIframe();
 
 
     if ($('#sub-navigation').length) {
@@ -583,10 +584,20 @@ class App {
 
     });
 
-
   }
 
 
+  /**
+   * Auto wrap iframes for responsive
+   */
+  responsiveIframe() {
+    if($('.single-post').length){
+      $('iframe').each(i => {
+        $('iframe').eq(i).wrap('<div class="iframe-wrapper"></div>');
+      });
+    }
+
+  }
 
 
   /**

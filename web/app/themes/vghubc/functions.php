@@ -15,12 +15,18 @@ add_theme_support('post-thumbnails', array('post', 'page', 'themes_post', 'signa
 $role_object = get_role( 'editor' );
 $role_object->add_cap( 'edit_theme_options' );
 
+// Redirection Plugin Editor access
+add_filter( 'redirection_role', 'redirection_to_editor' );
+function redirection_to_editor() {
+  return 'edit_pages';
+}
+
+
 // Custom Image Sizes
-// if ( function_exists( 'add_theme_support' ) ) {
-//   add_theme_support('post-thumbnails');
-//   add_image_size('inline_full', 800, 534, true);
-//   add_image_size('slideshow_thumb', 152, 101, true);
-// }
+if ( function_exists( 'add_theme_support' ) ) {
+  add_image_size('related_thumb', 200, 200, true);
+  add_image_size('slideshow_thumb', 152, 101, true);
+}
 
 // Let's not overload the functions.php file... keep things separate
 require_once 'lib/assets.php'; // load the correct assets for cache busting

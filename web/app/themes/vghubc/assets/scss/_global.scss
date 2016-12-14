@@ -4377,6 +4377,9 @@ body.tribe-events-page-template {
     @include media($ptab){
       height:60vh;
     }
+    @include media($laptopHeightOnly){
+      height:80vh;
+    }
     .container, .inner-wrap {
       height:100%;
       @include media($ptabAndLess){
@@ -4388,6 +4391,11 @@ body.tribe-events-page-template {
       @include media($ptab){
         padding-left:3.75rem;
         padding-right:3.75rem;
+      }
+    }
+    .container .cover-copy {
+      @include media($ptab){
+        max-width:90%;
       }
     }
     .cover-copy {
@@ -6515,3 +6523,17 @@ body.overlay-open {
   }
 
 }
+
+  .iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.2%; /* 16:9 */
+    // padding-top: 25px;
+    height: 0;
+  }
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
