@@ -204,6 +204,7 @@ p {
   }
 }
 
+
 .navburger {
   .stripes {
     margin-top:22px;
@@ -220,8 +221,17 @@ p {
   }
 }
 
+html,body {
+  @include media($ptabAndLess){
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .nav-open {
   overflow:hidden;
+  
   .page-wrap {
     overflow: hidden;
 
@@ -1712,6 +1722,40 @@ svg.icon.close-x {
   }
 }
 
+.front {
+  .mobile-tabs-nav {
+    @include media($ptabAndLess){
+      h4.switcher {
+        &:after {
+          display: none;
+        }
+      }
+      .options {
+        max-height:none;
+        overflow:auto;
+        li {
+          width:50%;
+          float:left;
+          list-style: none;
+          white-space:nowrap;
+          height:52px;
+        }
+      }
+      
+    }
+  }
+  #themes-section {
+    @include media($ptabAndLess){
+      padding-top:200px;
+    }
+  }
+  #themes-section .hover-bg-image {
+    @include media($ptabAndLess){
+      background-position: 50% 200px;
+    }
+  }
+}
+
 .panel {
   #themes-menu {
     width: 100%;
@@ -1916,6 +1960,7 @@ form {
     margin-left:10px;
     padding-left:60px;
     padding-right:60px;
+    border-radius:0;
     @extend .button;
     @include media($ptabAndLess){
       width: 100%;

@@ -1498,6 +1498,12 @@ p {
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
 
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; } }
+
 .nav-open {
   overflow: hidden; }
   .nav-open .page-wrap {
@@ -2706,6 +2712,27 @@ svg.icon.close-x {
     max-height: 500px;
     overflow: auto; }
 
+@media screen and (max-width: 768px) {
+  .front .mobile-tabs-nav h4.switcher:after, .front .mobile-tabs-nav body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h2.switcher:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .front .mobile-tabs-nav h2.switcher:after, .front .mobile-tabs-nav body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only h1.switcher:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .title-only .front .mobile-tabs-nav h1.switcher:after, .front .mobile-tabs-nav .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1.switcher:after, .title-only body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .front .mobile-tabs-nav h1.switcher:after, .front .mobile-tabs-nav body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image h1.switcher:after, body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .single-post .large-featured-image .front .mobile-tabs-nav h1.switcher:after, .front .mobile-tabs-nav .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule h1.switcher:after, .single-post .large-featured-image body.tribe-events-page-template.single-tribe_events .tribe-events-schedule .front .mobile-tabs-nav h1.switcher:after {
+    display: none; }
+  .front .mobile-tabs-nav .options {
+    max-height: none;
+    overflow: auto; }
+    .front .mobile-tabs-nav .options li {
+      width: 50%;
+      float: left;
+      list-style: none;
+      white-space: nowrap;
+      height: 52px; } }
+
+@media screen and (max-width: 768px) {
+  .front #themes-section {
+    padding-top: 200px; } }
+
+@media screen and (max-width: 768px) {
+  .front #themes-section .hover-bg-image {
+    background-position: 50% 200px; } }
+
 .panel #themes-menu {
   width: 100%;
   list-style: none;
@@ -2865,7 +2892,8 @@ form input[type="submit"] {
   height: 45px;
   margin-left: 10px;
   padding-left: 60px;
-  padding-right: 60px; }
+  padding-right: 60px;
+  border-radius: 0; }
   @media screen and (max-width: 768px) {
     form input[type="submit"] {
       width: 100%;
