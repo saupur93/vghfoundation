@@ -53,8 +53,16 @@
           $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts->ID ), 'full' )[0];
           $featured_image = isset($featured_image) && !empty($featured_image) ? $featured_image : '/app/themes/vghubc/assets/img/post-placeholder.jpg';
             $theme = isset(get_field('related_theme')[0]) ? get_field('related_theme')[0] : false;
-            if($theme) $theme_title = get_the_title($theme->ID);
-            if($theme) $class = isset($theme->ID) ? ' ' . get_post($theme->ID)->post_name : '';
+            if($theme) {
+              $theme_title = get_the_title($theme->ID);
+            } else {
+              $theme_title = false;
+            }
+            if($theme) {
+              $class = isset($theme->ID) ? ' ' . get_post($theme->ID)->post_name : '';
+            } else {
+              $class = false;
+            }
             $link_text = null !== get_field('alternative_button_text') && get_field('alternative_button_text') != '' ? get_field('alternative_button_text') : 'Read Article';
             $featured_image_gallery = null !== get_field('images') ? get_field('images') : false;
          ?>
