@@ -12,7 +12,7 @@
 ?>
 
 <?php if($large_header && $featured_image): ?>
-  <section class="panel<?php if ($featured_image_caption && isset($featured_image_caption[0])) print ' has-caption '; ?>large-featured-image"<?php if($featured_image) print ' style="background-image:url(' . $featured_image . ');"'; ?>>
+  <section class="panel<?php if ($featured_image_caption && isset($featured_image_caption[0])) print ' has-caption '; ?> large-featured-image"<?php if($featured_image) print ' style="background-image:url(' . $featured_image . ');"'; ?>>
     <div class="container">
       <div class="inner-wrap">
         <h1><?php the_title(); ?></h1>
@@ -68,7 +68,7 @@
   </article>
 
   <?php $related_cats = wp_get_post_categories(get_the_ID());?>
-  <?php 
+  <?php
     // if(isset($theme[0]) || (isset($related_cats) && !empty($related_cats))):
     if(isset($related_cats) && !empty($related_cats)):
    ?>
