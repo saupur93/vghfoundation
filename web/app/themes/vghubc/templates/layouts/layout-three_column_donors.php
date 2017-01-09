@@ -20,11 +20,13 @@
                 <h5><?php print $group['group_title']; ?></h5>
                 <ul class="small">
                 <?php foreach ($group['donor'] as $donor): ?>
+                  <?php if($donor['donor_link']) print ' <a href="'.$donor['donor_link'].'" target="_blank">'; ?>
                   <?php if(isset($donor['donor_image']['url'])): ?>
                   <li class="logo"><img src="<?php print $donor['donor_image']['url']; ?>" alt="<?php print $donor['donor_name'] ?>" /></li>
                   <?php else: ?>
                     <li><?php print $donor['donor_name'] ?></li>
                   <?php endif; ?>
+                  <?php if($donor['donor_link']) print ' </a>'; ?>
                 <?php endforeach ?>
                 </ul>
               </div>
