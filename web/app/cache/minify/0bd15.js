@@ -1,0 +1,7 @@
+if("function"===typeof jQuery)jQuery(document).ready(function($){var mapHolder,position,venueObject,venueAddress,venueCoords,venueTitle;if('undefined'===typeof tribeEventsSingleMap){return;}
+function prepare(){if(false!==venueCoords){useCoords();}else{useAddress();}}
+function useCoords(){position=new google.maps.LatLng(venueCoords[0],venueCoords[1]);initialize();}
+function useAddress(){var geocoder=new google.maps.Geocoder();geocoder.geocode({"address":venueAddress},function(results,status){if(status==google.maps.GeocoderStatus.OK){position=results[0].geometry.location;initialize();}});}
+function initialize(){venueObject.map=new google.maps.Map(mapHolder,{zoom:parseInt(tribeEventsSingleMap.zoom),center:position,mapTypeId:google.maps.MapTypeId.ROADMAP});var marker={map:venueObject.map,title:venueTitle,position:position};if('undefined'!==tribeEventsSingleMap.pin_url&&tribeEventsSingleMap.pin_url){marker.icon=tribeEventsSingleMap.pin_url;}
+new google.maps.Marker(marker);}
+$.each(tribeEventsSingleMap.addresses,function(index,venue){mapHolder=document.getElementById("tribe-events-gmap-"+index);if(null!==mapHolder){venueObject="undefined"!==typeof venue?venue:{};venueAddress="undefined"!==typeof venue.address?venue.address:false;venueCoords="undefined"!==typeof venue.coords?venue.coords:false;venueTitle=venue.title;prepare();}});});
