@@ -231,7 +231,7 @@ html,body {
 
 .nav-open {
   overflow:hidden;
-  
+
   .page-wrap {
     overflow: hidden;
 
@@ -1741,7 +1741,7 @@ svg.icon.close-x {
           height:52px;
         }
       }
-      
+
     }
   }
   #themes-section {
@@ -3492,6 +3492,18 @@ body.tribe-events-page-template {
 
   p {
     margin-bottom:0;
+  }
+}
+
+.panel.cta-panel {
+  h2 {
+    color: $body-text;
+  }
+}
+
+.panel.bg-color-cta {
+  h2 {
+    color: #fff;
   }
 }
 

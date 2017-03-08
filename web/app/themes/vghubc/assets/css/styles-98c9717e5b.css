@@ -3935,6 +3935,12 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .panel.bg-image-cta p, .panel.bg-color-cta p, .cta-panel p {
     margin-bottom: 0; }
 
+.panel.cta-panel h2, .panel.cta-panel .title-only h1, .title-only .panel.cta-panel h1, .panel.cta-panel .single-post .large-featured-image h1, .single-post .large-featured-image .panel.cta-panel h1 {
+  color: #575b5e; }
+
+.panel.bg-color-cta h2, .panel.bg-color-cta .title-only h1, .title-only .panel.bg-color-cta h1, .panel.bg-color-cta .single-post .large-featured-image h1, .single-post .large-featured-image .panel.bg-color-cta h1 {
+  color: #fff; }
+
 .panel.slideshow-content-panel {
   position: relative; }
   @media screen and (min-width: 769px) {
