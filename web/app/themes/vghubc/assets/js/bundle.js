@@ -13406,9 +13406,9 @@ var App = function () {
     key: 'themesTabs',
     value: function themesTabs(options) {
       var self = this;
-      var menuEl = options.menuEl;
-      var contentEl = options.contentEl;
-      var tabItem = options.tabItem;
+      var menuEl = options.menuEl,
+          contentEl = options.contentEl,
+          tabItem = options.tabItem;
 
 
       var $contentEl = (0, _jquery2.default)(contentEl);

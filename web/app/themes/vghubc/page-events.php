@@ -48,13 +48,20 @@ Template Name: Events
 
 
     <?php
-      $posts = new WP_Query(array(
-        "post_type" => "signature_events",
-        "posts_per_page" => 8,
-        "order" => "DESC",
-        "post_status" => "publish",
-        'ignore_sticky_posts' => 1,
-      ));
+    $posts = new WP_Query(array(
+      "post_type"           => "signature_events",
+      "posts_per_page"      => 8,
+      "order"               => "DESC",
+      "post_status"         => "publish",
+      'ignore_sticky_posts' => 1,
+      'meta_query'          => array(
+        array(
+          'key'             => 'current_year',
+          'compare'         => '==',
+          'value'           => true
+        )
+      )
+    ));
       $current_ID = get_the_ID();
       $post_count = 0;
     ?>

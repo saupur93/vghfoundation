@@ -1,0 +1,587 @@
+<!doctype html>
+<!--[if lt IE 9 ]><html lang="en" class="no-js lt-ie9 ie"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9 ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head><link rel="stylesheet" type="text/css" href="http://localhost:8888/app/cache/minify/284e4.css" media="all" />
+
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<title>Night of a Thousand Stars Gala - VGH &amp; UBC FoundationVGH &amp; UBC Foundation</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+
+
+	<meta name="robots" content="noindex">
+
+	
+<!-- This site is optimized with the Yoast SEO plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://localhost:8888/signature-events/night-of-a-thousand-stars-gala/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Night of a Thousand Stars Gala - VGH &amp; UBC Foundation" />
+<meta property="og:url" content="http://localhost:8888/signature-events/night-of-a-thousand-stars-gala/" />
+<meta property="og:site_name" content="VGH &amp; UBC Foundation" />
+<meta property="article:publisher" content="https://www.facebook.com/VGHUBCHospitalFoundation" />
+<meta property="og:image" content="http://vghfoundation.ca/app/uploads/2016/11/5069-VGH-UBC-Social-Cards-Final.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Night of a Thousand Stars Gala - VGH &amp; UBC Foundation" />
+<meta name="twitter:site" content="@vghfdn" />
+<meta name="twitter:image" content="http://vghfoundation.ca/app/uploads/2016/11/5069-VGH-UBC-Social-Cards-Final.png" />
+<meta name="twitter:creator" content="@vghfdn" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/localhost:8888\/wp\/wp-includes\/js\/wp-emoji.js?ver=4.7.3","twemoji":"http:\/\/localhost:8888\/wp\/wp-includes\/js\/twemoji.js?ver=4.7.3"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var stringFromCharCode = String.fromCharCode,
+			flag, flag2, technologist, technologist2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56826, 55356, 56819 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'emoji4':
+				/*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 8205, 55357, 56507), 0, 0 );
+				technologist = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 55357, 56507), 0, 0 );
+				technologist2 = canvas.toDataURL();
+
+				return technologist !== technologist2;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji4' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='https://api.w.org/' href='http://localhost:8888/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8888/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost:8888/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.3" />
+<link rel='shortlink' href='http://localhost:8888/?p=80' />
+<link rel="alternate" type="application/json+oembed" href="http://localhost:8888/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8888%2Fsignature-events%2Fnight-of-a-thousand-stars-gala%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://localhost:8888/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8888%2Fsignature-events%2Fnight-of-a-thousand-stars-gala%2F&#038;format=xml" />
+<style type="text/css">
+.qtranxs_flag_en {background-image: url(http://localhost:8888/app/plugins/qtranslate-x/flags/gb.png); background-repeat: no-repeat;}
+.qtranxs_flag_zh {background-image: url(http://localhost:8888/app/plugins/qtranslate-x/flags/cn.png); background-repeat: no-repeat;}
+</style>
+<link hreflang="en" href="http://localhost:8888/en/signature-events/night-of-a-thousand-stars-gala/" rel="alternate" />
+<link hreflang="zh" href="http://localhost:8888/zh/signature-events/night-of-a-thousand-stars-gala/" rel="alternate" />
+<link hreflang="x-default" href="http://localhost:8888/signature-events/night-of-a-thousand-stars-gala/" rel="alternate" />
+<meta name="generator" content="qTranslate-X 3.4.6.8" />
+</head>
+
+<body class="signature_events-template-default single single-signature_events postid-80 tribe-no-js not-front signature-event-night-of-a-thousand-stars-gala">
+
+	<!--[if lt IE 9]>
+<div id="browser-warning">Your browser (Internet Explorer) is out of date. It has <strong>known security flaws</strong> and may <strong>not display all features</strong> of this and other websites. <a href="http://www.browser-update.org/update.html">Learn how to update your browser</a>.</div>
+<![endif]-->
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="carret-down" viewBox="0 0 8 3.891">
+    <path style="fill:currentColor;" d="M8,0L4.113,3.891L0,0"/>
+  </symbol>
+
+  <symbol id="close-x" viewBox="0 0 25.469 25.469">
+    <line style="fill:none;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;" x1="0.707" y1="0.707" x2="24.762" y2="24.762"/>
+    <line style="fill:none;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;" x1="0.707" y1="24.762" x2="24.762" y2="0.707"/>
+  </symbol>
+
+  <symbol id="arrow-left" viewBox="0 0 40.583 36.494">
+    <polyline style="fill:none;stroke:currentColor;stroke-miterlimit:10;" points="18.107,0.344 0.698,18.75 18.107,36.141   "/>
+    <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="40.583" y1="18.84" x2="0.583" y2="18.84"/>
+  </symbol>
+
+  <symbol id="arrow-right" viewBox="0 0 40.33 36.494">
+    <polyline style="fill:none;stroke:currentColor;stroke-miterlimit:10;" points="22.224,36.15 39.633,17.744 22.224,0.354  "/>
+    <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="0" y1="17.85" x2="40" y2="17.85"/>
+  </symbol>
+
+  <symbol id="download-icon" viewBox="0 0 15 17">
+    <g>
+      <g>
+        <polyline style="fill:none;stroke:currentColor;stroke-miterlimit:10;" points="2.521,8.305 7.902,13.52 12.811,7.812    "/>
+      </g>
+      <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="0" y1="16.5" x2="15" y2="16.5"/>
+      <line style="fill:none;stroke:currentColor;stroke-miterlimit:10;" x1="7.5" y1="13" x2="7.5" y2="0"/>
+    </g>
+  </symbol>
+
+
+  <symbol id="arrow-down" viewBox="0 0 37.192 19.534">
+    <g>
+      <polyline style="fill:none;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;" points="0.687,0.727 19.093,18.138 36.484,0.727
+          "/>
+    </g>
+  </symbol>
+
+</svg>
+
+	<div class="header-wrap">
+<header id="top-header">
+  <div class="container">
+    <div class="navburger">
+      <div class="stripes">
+        <div class="stripe stripe1"></div>
+        <div class="stripe stripe2"></div>
+        <div class="stripe stripe3"></div>
+      </div>
+    </div>
+    <h1 class="site-name"><a href="http://localhost:8888">VGH &amp; UBC Foundation</a></h1>
+    <div class="menu-set">
+      <nav id="main-menu">
+        <ul id="primary-nav">
+          <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18"><a href="http://localhost:8888/why-give/">Why Give</a><i class="submenu-trigger"></i>
+<ul class="sub-menu">
+	<li id="menu-item-20993" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20993"><a href="http://localhost:8888/themes/surgery/">Surgery</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20994" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20994"><a href="http://localhost:8888/themes/cancer/">Cancer</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20995" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20995"><a href="http://localhost:8888/themes/heart-lung/">Heart &#038; Lung</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20996" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20996"><a href="http://localhost:8888/themes/brain-health/">Brain Health</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20997" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20997"><a href="http://localhost:8888/themes/innovation/">Innovation</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20998" class="menu-item menu-item-type-post_type menu-item-object-themes_post menu-item-20998"><a href="http://localhost:8888/themes/community/">Community</a><i class="submenu-trigger"></i></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://localhost:8888/ways-to-give/">Ways to Give</a><i class="submenu-trigger"></i></li>
+<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-17"><a href="http://localhost:8888/events/">Events</a><i class="submenu-trigger"></i>
+<ul class="sub-menu">
+	<li id="menu-item-21773" class="menu-item menu-item-type-post_type menu-item-object-signature_events menu-item-21773"><a href="http://localhost:8888/signature-events/angel-campaign/">Angel Campaign</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21772" class="menu-item menu-item-type-post_type menu-item-object-signature_events current-menu-item menu-item-21772"><a href="http://localhost:8888/signature-events/night-of-a-thousand-stars-gala/">Night of a Thousand Stars Gala</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21771" class="menu-item menu-item-type-post_type menu-item-object-signature_events menu-item-21771"><a href="http://localhost:8888/signature-events/viva-pharmaceutical-time-to-shine-gala/">Viva Pharmaceutical Time to Shine Gala</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21769" class="menu-item menu-item-type-post_type menu-item-object-signature_events menu-item-21769"><a href="http://localhost:8888/signature-events/tournament-for-life/">Tournament for Life</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21770" class="menu-item menu-item-type-post_type menu-item-object-signature_events menu-item-21770"><a href="http://localhost:8888/signature-events/ismaili-walk/">Ismaili Walk</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20999"><a href="/events-calendar">Events Calendar</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21825"><a href="http://localhost:8888/events/plan-an-event/">Plan an Event</a><i class="submenu-trigger"></i></li>
+</ul>
+</li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><a href="http://localhost:8888/about/">About Us</a><i class="submenu-trigger"></i>
+<ul class="sub-menu">
+	<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="http://localhost:8888/about/our-hospitals/">Our Hospitals</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://localhost:8888/about/our-donors/">Our Donors</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20261"><a href="http://localhost:8888/about/annual-report/">Annual Report</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-20293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20293"><a href="http://localhost:8888/about/audited-financials/">Audited Financials</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21457"><a href="http://localhost:8888/about/board-of-directors/">Board of Directors</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21458"><a href="http://localhost:8888/about/executive-leadership/">Executive Leadership</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-21459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21459"><a href="http://localhost:8888/about/patrons-council/">Patrons’ Council</a><i class="submenu-trigger"></i></li>
+	<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://localhost:8888/about/join-our-team/">Join Our Team</a><i class="submenu-trigger"></i></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://localhost:8888/contact/">Contact</a><i class="submenu-trigger"></i></li>
+          <li class="latest-toggle"><a href="http://localhost:8888/latest/" id="toggleLatest">Latest<span class="mobile-only">View All</span></a></li>
+        </ul>
+                <ul id="language-switcher">
+          <li><a href="/en/signature-events/night-of-a-thousand-stars-gala/" class="active">EN</a></li>
+          <li><a href="/zh/signature-events/night-of-a-thousand-stars-gala/">中文</a></li>
+        </ul>
+      </nav>
+      <nav id="latest-menu">
+        <div id="latest-highlights">
+                                        <div class="highlight highlight-1" style="background-image:url(http://localhost:8888/app/uploads/2017/01/158-e1484346196285.jpg);">
+            <a href="http://localhost:8888/2017/01/13/2017-time-shine-gala-fundraiser-preview-highlights-need-improving-surgery-vgh-ubc-hospital/">
+              <h2>2017 Time to Shine Gala Fundraiser Preview highlights need for improving surgery at VGH and UBC Hospital</h2>
+              <span class="read-more">Read article</span>
+            </a>
+          </div>
+                              <div class="highlight highlight-2" style="background-image:url(http://localhost:8888/app/uploads/2016/12/Michael.jpg);">
+            <a href="http://localhost:8888/2016/12/07/conversations-volume-6/">
+              <h2>Me Too Conversations Vol 6 &#8211; February 23</h2>
+              <span class="read-more">Read article</span>
+            </a>
+          </div>
+                              <div class="highlight highlight-3" style="background-image:url(http://localhost:8888/app/uploads/2016/12/Barb-G_internal-newsletter-and-web-rights-only.jpg);">
+            <a href="http://localhost:8888/2016/12/01/barbara-grantham-named-wxn-2016-canadas-powerful-women/">
+              <h2>Barbara Grantham named a WXN 2016 Canada&#8217;s Most Powerful Women</h2>
+              <span class="read-more">Read article</span>
+            </a>
+          </div>
+                              <div class="highlight highlight-4" style="background-image:url(http://localhost:8888/app/uploads/2016/11/Hybrid-3.jpg);">
+            <a href="http://localhost:8888/2016/11/21/first-hybrid-operating-room-opens-vgh/">
+              <h2>First Hybrid Operating Room Opens at VGH</h2>
+              <span class="read-more">Read article</span>
+            </a>
+          </div>
+                    
+        </div>
+      </nav>
+    </div>
+                                              <a class="button green big-donate night-of-a-thousand-stars-gala" href="http://support.vghfoundation.ca/site/PageNavigator/df_2016_onboarding.html" target="_blank">Donate</a>
+            </div>
+</header>
+
+
+
+<header id="sub-navigation">
+  <div class="container breadcrumb">
+      
+  <h3><a href="/events/#signature-events"><span class="back-arrow"><img src="http://localhost:8888/app/themes/vghubc/assets/img/back-arrow.svg" /></span> Events</a></h3> <span class="separator">></span> <h3>Night of a Thousand Stars Gala</h3>
+      </div>
+</header>
+
+
+</div>
+
+
+
+
+	<div class="page-wrap">
+	  <section id="page-top" class="panel page-header" style="background-image:url(http://localhost:8888/app/uploads/2016/10/NOTS-hero.jpg);">
+	    <div class="container">
+	      <div class="inner-wrap">
+	        <div class="cover-copy">
+                          <h1>Night of a Thousand Stars Gala</h1>
+                                  </div>
+          <img src="http://localhost:8888/app/themes/vghubc/assets/img/arrow-down.svg" class="cover-arrow-down" />
+        </div>
+	    </div>
+	  </section>
+
+                                                                  <section class="panel extra-padded overview-panel sidebar-right panel-1 category-bg-color">
+
+    <div class="container">
+      <div class="inner-wrap">
+                <div class="col-grid-9">
+          <h2>Celebrating the passion &amp; dedication to medicine</h2>
+<p>This year, the black-tie event will bring together 800 guests representing leading BC businesses, organizations and philanthropists for an evening of relationship building, fine dining and an exciting live and silent auction.</p>
+<p><strong data-redactor-tag="strong">Date:</strong> November 5, 2016<br />
+<strong data-redactor-tag="strong">Time:</strong> 6 PM &#8211; Cocktail Reception and Silent Auction; 7 PM &#8211; Dinner and Evening Program<br />
+<strong data-redactor-tag="strong">Venue:</strong> Vancouver Convention Centre West, Ballrooms BCD, 1055 Canada Place, Vancouver, BC<br />
+<strong data-redactor-tag="strong">Attire:</strong> Black Tie</p>
+<p>One of the night’s highlights includes a presentation of the prestigious VGH &amp; UBC Hospital Foundation Leadership Award to an individual, family, or corporate supporter in our community for their exemplary philanthropic leadership in advancing health care for all British Columbians. Past recipients include the Ilich Family, Syd and Joanne Belzberg, Robert and Lily Lee, Joseph and Rosalie Segal, Gordon and Leslie Diamond, David and Brenda McLean, Peter Bentley and the late Jack Poole.</p>
+        </div>
+        <aside class="col-grid-3">
+                      <h4><strong data-redactor-tag="strong">Proceeds from the Gala Support</strong></h4>
+<ul class="small">
+<li>Vancouver General Hospital</li>
+<li>UBC Hospital</li>
+<li>GF Strong Rehab Centre</li>
+<li>Vancouver Coastal Health Research Institute</li>
+<li>Vancouver Community Health Services</li>
+<li>For more information, please email <a href="deanna.salituro@vghfoundation.ca">Deanna Salituro</a> or contact her at 604 875 4676 ext 66295</li>
+</ul>
+                  </aside>
+      </div>
+    </div>
+
+</section>
+                                                          
+  <section class="panel panel-2 extra-padded cta-panel category-bg-color" style="background-color:#f3f3f3;">
+    <div class="container">
+      <div class="inner-wrap">
+        <h2>2016 Event Highlights</h2>
+<p><a class="button" href="/signature-events/night-of-a-thousand-stars-gala-2016/">View now</a></p>
+      </div>
+    </div>
+  </section>
+
+                                        
+  </div>
+
+  
+<footer id="footer">
+  <div class="container">
+    <div class="col-grid-3 first">
+      <img src="http://localhost:8888/app/themes/vghubc/assets/img/VGHUBC-logo-footer.svg" />
+    </div>
+
+    <div class="col-grid-3 second">
+                    <div class="item">
+<h4>Office Hours</h4>
+<p>8:30am – 4:30pm (PST) Mon to Fri<br />
+Phone: 604 875 4676<br />
+Toll Free: 1 877 875 4676</p>
+</div>
+<div class="item">
+<h4>Address</h4>
+<p>190-855 West 12th Avenue<br />
+Vancouver, BC V5Z 1M9 Canada</p>
+<p>Charity Number 132173063RR0001</p>
+</div>
+          </div>
+
+    <div class="col-grid-6 third">
+      <div class="footer-right">
+
+
+        <div class="col">
+          <h4>Navigation</h4>
+            <ul class="menu">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18"><a href="http://localhost:8888/why-give/">Why Give</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://localhost:8888/ways-to-give/">Ways to Give</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-17"><a href="http://localhost:8888/events/">Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><a href="http://localhost:8888/about/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://localhost:8888/contact/">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="col green-text">
+          <h4>Follow Us</h4>
+          <ul class="social">
+            <li><a href="https://www.facebook.com/VGHUBCHospitalFoundation" target="_blank" class="fa fa-facebook"></a></li>
+            <li><a href="https://twitter.com/vghfdn" target="_blank" class="fa fa-twitter"></a></li>
+            <li><a href="https://www.youtube.com/user/VGHandUBCHFoundation" target="_blank" class="fa fa-youtube"></a></li>
+            <li><a href="https://instagram.com/vghfdn/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/company/vgh-&amp;-ubc-hospital-foundation" target="_blank" class="fa fa-linkedin"></a></li>
+          </ul>
+
+          <form role="search" method="get" class="search-form" action="http://localhost:8888/">
+            <input type="search" class="search-field"
+                   placeholder="Search"
+                   value="" name="s"
+                   title="Search for:" />
+            <input type="submit" class="search-submit"
+                value="Search" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container bottom-line">
+    <p class="copyright">© 2017 VGH & UBC Hospital Foundation. All rights reserved.</p>
+    <div class="footer-secondary-menu">
+      <a href="/privacy-policy/">Privacy Policy</a></a>
+    </div>
+  </div>
+</footer>
+
+<section id="overlay" class="panel">
+  <a class="close" href="#"></a>
+  <div class="overlay-content"></div>
+</section>
+
+  <script type="text/javascript" src="http://localhost:8888/app/cache/minify/2f3db.js"></script>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </script>
+
+
+  		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type='text/javascript'> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done"}};/* ]]> */ </script><script type="text/javascript" src="http://localhost:8888/app/cache/minify/c60c7.js"></script>
+
+<script type="text/css" id="tmpl-tribe_customizer_css">.tribe-events-list .tribe-events-loop .tribe-event-featured,
+				.tribe-events-list #tribe-events-day.tribe-events-loop .tribe-event-featured,
+				.type-tribe_events.tribe-events-photo-event.tribe-event-featured .tribe-events-photo-event-wrap,
+				.type-tribe_events.tribe-events-photo-event.tribe-event-featured .tribe-events-photo-event-wrap:hover {
+					background-color: #0ea0d7;
+				}
+
+				#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
+					background-color: #0ea0d7;
+				}
+
+				.tribe-events-list-widget .tribe-event-featured,
+				.tribe-events-venue-widget .tribe-event-featured,
+				.tribe-mini-calendar-list-wrapper .tribe-event-featured,
+				.tribe-events-adv-list-widget .tribe-event-featured .tribe-mini-calendar-event {
+					background-color: #0ea0d7;
+				}
+
+				.tribe-grid-body .tribe-event-featured.tribe-events-week-hourly-single {
+					background-color: rgba(14,160,215, .7 );
+					border-color: #0ea0d7;
+				}
+
+				.tribe-grid-body .tribe-event-featured.tribe-events-week-hourly-single:hover {
+					background-color: #0ea0d7;
+				}</script><style type="text/css" id="tribe_customizer_css">.tribe-events-list .tribe-events-loop .tribe-event-featured,
+				.tribe-events-list #tribe-events-day.tribe-events-loop .tribe-event-featured,
+				.type-tribe_events.tribe-events-photo-event.tribe-event-featured .tribe-events-photo-event-wrap,
+				.type-tribe_events.tribe-events-photo-event.tribe-event-featured .tribe-events-photo-event-wrap:hover {
+					background-color: #0ea0d7;
+				}
+
+				#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured {
+					background-color: #0ea0d7;
+				}
+
+				.tribe-events-list-widget .tribe-event-featured,
+				.tribe-events-venue-widget .tribe-event-featured,
+				.tribe-mini-calendar-list-wrapper .tribe-event-featured,
+				.tribe-events-adv-list-widget .tribe-event-featured .tribe-mini-calendar-event {
+					background-color: #0ea0d7;
+				}
+
+				.tribe-grid-body .tribe-event-featured.tribe-events-week-hourly-single {
+					background-color: rgba(14,160,215, .7 );
+					border-color: #0ea0d7;
+				}
+
+				.tribe-grid-body .tribe-event-featured.tribe-events-week-hourly-single:hover {
+					background-color: #0ea0d7;
+				}</style></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Minified using disk
+
+ Served from: localhost @ 2017-03-08 19:05:30 by W3 Total Cache -->

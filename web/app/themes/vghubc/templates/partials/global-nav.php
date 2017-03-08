@@ -72,9 +72,9 @@
     <?php if (!$take_over_campaign): ?>
       <?php $signature_event = get_post(get_the_ID()); ?>
       <?php $specific_donate_link = get_field('donation_url', get_the_ID()); ?>
-      <?php $donation_link = isset($specific_donate_link) && !empty($specific_donate_link) ? $specific_donate_link : $global_donate_button_link; ?>     
+      <?php $donation_link = isset($specific_donate_link) && !empty($specific_donate_link) ? $specific_donate_link : $global_donate_button_link; ?>
       <?php if(get_post_type(get_the_ID()) == 'signature_events'): ?>
-      <a class="button green big-donate<?php if($signature_event->post_name) print ' '.$signature_event->post_name; ?>" href="<?php print $donation_link; ?>" target="_blank"><?php print $donate; ?></a>
+      <a class="button green big-donate<?php if($signature_event->post_name) print ' '.preg_replace("/\-+\d+$/", "",$signature_event->post_name); ?>" href="<?php print $donation_link; ?>" target="_blank"><?php print $donate; ?></a>
       <?php elseif(get_post_type(get_the_ID()) == 'themes_post'): ?>
       <a class="button green big-donate<?php if($signature_event->post_name) print ' '.$signature_event->post_name; ?>" href="<?php print $donation_link; ?>" target="_blank"><?php print $donate; ?></a>
       <?php else: ?>
