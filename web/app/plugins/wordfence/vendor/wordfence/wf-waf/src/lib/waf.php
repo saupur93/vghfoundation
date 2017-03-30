@@ -810,11 +810,12 @@ HTML
 		$this->getStorageEngine()->logAttack($e->getFailedRules(), $e->getParamKey(), $e->getParamValue(), $e->getRequest(), $e->getRequest()->getMetadata());
 		
 		if ($redirect) {
-			wfWAFUtils::redirect($redirect); // exits
+			wfWAFUtils::redirect($redirect); // exits and emits no cache headers
 		}
 		
 		if ($httpCode == 503) {
 			wfWAFUtils::statusHeader(503);
+			wfWAFUtils::doNotCache();
 			if ($secsToGo = $e->getRequest()->getMetadata('503Time')) {
 				header('Retry-After: ' . $secsToGo);
 			}
@@ -822,7 +823,8 @@ HTML
 		}
 		
 		header('HTTP/1.0 403 Forbidden');
-		exit($this->getBlockedMessage());
+		wfWAFUtils::doNotCache();
+		exit($this->getBlockedMessage($template));
 	}
 
 	/**
@@ -834,11 +836,12 @@ HTML
 		$this->getStorageEngine()->logAttack($e->getFailedRules(), $e->getParamKey(), $e->getParamValue(), $e->getRequest(), $e->getRequest()->getMetadata());
 		
 		if ($redirect) {
-			wfWAFUtils::redirect($redirect); // exits
+			wfWAFUtils::redirect($redirect); // exits and emits no cache headers
 		}
 		
 		if ($httpCode == 503) {
 			wfWAFUtils::statusHeader(503);
+			wfWAFUtils::doNotCache();
 			if ($secsToGo = $e->getRequest()->getMetadata('503Time')) {
 				header('Retry-After: ' . $secsToGo);
 			}
@@ -846,6 +849,7 @@ HTML
 		}
 		
 		header('HTTP/1.0 403 Forbidden');
+		wfWAFUtils::doNotCache();
 		exit($this->getBlockedMessage());
 	}
 	
@@ -856,13 +860,16 @@ HTML
 	/**
 	 * @return string
 	 */
-	public function getBlockedMessage() {
-		if ($this->currentUserCanWhitelist()) {
-			return wfWAFView::create('403-roadblock', array(
-				'waf' => $this,
-			))->render();
+	public function getBlockedMessage($template = null) {
+		if ($template === null) {
+			if ($this->currentUserCanWhitelist()) {
+				$template = '403-roadblock';
+			}
+			else {
+				$template = '403';
+			}
 		}
-		return wfWAFView::create('403', array(
+		return wfWAFView::create($template, array(
 			'waf' => $this,
 		))->render();
 	}
