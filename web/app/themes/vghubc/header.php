@@ -5,7 +5,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="<?php print $currentLang; ?>" class="no-js"><!--<![endif]-->
 <head>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
+	<title><?php wp_title('&raquo;','true','right'); ?></title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 
