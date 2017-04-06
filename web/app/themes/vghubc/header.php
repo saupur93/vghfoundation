@@ -45,15 +45,6 @@
 
 	<?php wp_head(); ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.8.1/luminateExtend.min.js"></script>
-  <script>
-    luminateExtend({
-      apiKey: 'wDB09SQODRpVlOvX',
-      path: {
-        nonsecure: 'http://support.vghfoundation.ca/site/',
-        secure: 'https://secure.vghfoundation.ca/site/'
-      }
-    });
-  </script>
 </head>
 
 <body <?php body_class(); ?>>

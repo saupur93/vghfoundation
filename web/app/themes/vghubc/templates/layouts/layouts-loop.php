@@ -63,6 +63,9 @@
                     <?php elseif( get_row_layout() == 'three_column_image_links' ): ?>
                       <?php include(locate_template('templates/layouts/layout-three_column_image_links.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'newsletter_signup' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-newsletter-signup.php')); ?>
+
                     <?php elseif( get_row_layout() == 'raw_html' ): ?>
                       <?php include(locate_template('templates/layouts/layout-raw_html.php')); ?>
                     <?php endif; ?>

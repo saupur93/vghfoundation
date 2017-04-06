@@ -6581,16 +6581,42 @@ body.overlay-open {
 
 }
 
-  .iframe-wrapper {
-    position: relative;
-    padding-bottom: 56.2%; /* 16:9 */
-    // padding-top: 25px;
-    height: 0;
-  }
-  .iframe-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.2%; /* 16:9 */
+  // padding-top: 25px;
+  height: 0;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Sign-Up Page
+
+.sign-up-feature {
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  transform: rotate(-1deg);
+}
+
+.newsletter {
+  margin-top: 0px!important;
+
+  input[type="text"] {
+    border: 2px solid #f3f3f3;
     width: 100%;
-    height: 100%;
   }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .success {
+    font-size: 2em;
+    color: $brand-green;
+  }
+
+}
