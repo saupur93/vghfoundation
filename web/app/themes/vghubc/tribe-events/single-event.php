@@ -98,3 +98,4 @@ $event_id = get_the_ID();
 
 	</div>
 </div>
+<?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
