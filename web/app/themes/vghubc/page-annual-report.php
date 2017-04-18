@@ -23,7 +23,7 @@ $president_full = get_field('presidents_message_full');
       <div class="container">
         <div class="inner-wrap">
         <h2 class="animate-down">
-            <div class="stay">VGH UBC<br>
+            <div class="stay">VGH & UBC<br>
             annual report</div>
             <div class="keep-going">surgery<br>
             cancer<br>
