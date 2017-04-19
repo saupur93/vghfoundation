@@ -5422,6 +5422,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .single-post .main-content img {
     max-width: 100%;
     height: auto; }
+  .single-post .main-content .inline {
+    float: left;
+    margin-right: 25px; }
   .single-post .main-content .social-share, .single-post .main-content .share-options {
     margin-bottom: 0; }
   .single-post p.intro {
