@@ -9,6 +9,7 @@
   $featured_image_caption = get_posts(array('p' => $featured_image_id, 'post_type' => 'attachment'));
   $theme = get_field('related_theme');
   $featured_image_gallery = null !== get_field('images') ? get_field('images') : false;
+  $hide_related = get_field('hide_related');
 ?>
 
 <?php if($large_header && $featured_image): ?>
@@ -67,6 +68,9 @@
     </div>
   </article>
 
+  <?php if($hide_related): ?>
+  <?php else: ?>
+
   <?php $related_cats = wp_get_post_categories(get_the_ID());?>
   <?php
     // if(isset($theme[0]) || (isset($related_cats) && !empty($related_cats))):
@@ -99,7 +103,6 @@
       <div class="container">
         <div class="narrow-wrap">
           <h3>Related Stories</h3>
-
           <?php while($related_query->have_posts()) : $related_query->the_post(); ?>
           <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'related_thumb')[0]; ?>
           <div class="col-half">
@@ -118,6 +121,7 @@
     </section>
     <?php endif; ?>
   <?php endif; ?>
+<?php endif; ?>
 
   <?php if($related_call_to_action): ?>
     <?php include(locate_template('templates/partials/footer-cta.php')); ?>
