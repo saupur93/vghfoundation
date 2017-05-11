@@ -685,6 +685,65 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
     height:0px;
     overflow:hidden;
   }
+
+  .highlight-lottery {
+    background-position: center right!important;
+
+
+    h2 {
+      width: 60%;
+    }
+
+    @include media($mobileOnly){
+      h2 {
+        width:80%;
+        padding: 15px 0;
+      }
+    }
+
+    &:after {
+      @include media($ptabAndLess){
+        background: none!important;
+      }
+    }
+
+    &:before {
+      @include media($regularNav){
+        background: rgba(0, 0, 0, 0.4)!important;
+      }
+      @include media($ptabAndLess){
+        background: none!important;
+      }
+    }
+
+    &:hover:before {
+      background: none!important;
+    }
+
+    &:hover:after{
+      background: none!important;
+    }
+  }
+
+  .highlight-hometown {
+    background-image:url(../img/Hometown-web-button-460x160.jpg)!important;
+    @include media($ptabAndLess){
+      background-image:url(../img/Hometown-web-button-440x113.jpg)!important;
+    }
+  }
+
+  .highlight-millionaire {
+    background-image:url(../img/millionaire-web-button-460x160.jpg)!important;
+
+    @include media($mobileOnly){
+      h2 {
+        width:55%;
+        padding: 15px 0;
+      }
+    }
+  }
+
+
   .highlight {
     background:#333;
     width:100%;
@@ -710,6 +769,7 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
         display:none;
       }
     }
+
     @include media(new-breakpoint(min-width 601px max-width 1180px)){
       padding: 50px 20px;
     }
@@ -802,6 +862,8 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
       border:0;
     }
   }
+
+
 
   .latest-open &, .latest-closed & {
     height:160px;

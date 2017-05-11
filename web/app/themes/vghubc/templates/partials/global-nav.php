@@ -37,9 +37,16 @@
         <div id="latest-highlights">
           <?php
             $count = 0;
+            $global_lottery_feature = get_field('global_lottery_feature', 'option');
+            if ($global_lottery_feature == 'none') {
+              $posts_per_page = 4;
+            } else {
+              $posts_per_page = 3;
+            }
+
             $latestArgs = array(
               'post_type' => 'post',
-              'posts_per_page' => 4,
+              'posts_per_page' => $posts_per_page,
               'post_status' => 'publish',
               'ignore_sticky_posts' => true,
               'post__in' => get_option('sticky_posts'),
@@ -52,12 +59,21 @@
             );
             $latest_query = new WP_Query($latestArgs);
           ?>
+
+          <?php if ($global_lottery_feature != 'none'): ?>
+            <div class="highlight highlight-<?php print $global_lottery_feature ?> highlight-lottery">
+              <a href="<?php echo get_field('global_lottery_feature_link', 'option') ?>">
+                <h2><?php echo get_field('global_lottery_feature_text', 'option'); ?></h2>
+              </a>
+            </div>
+          <?php endif ?>
+
           <?php while($latest_query->have_posts()) : $latest_query->the_post(); $count++; ?>
           <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>
           <div class="highlight highlight-<?php print $count;  ?>" style="background-image:url(<?php print $featured_image; ?>);">
             <a href="<?php echo get_permalink(); ?>">
               <h2><?php the_title(); ?></h2>
-              <span class="read-more">Read article</span>
+              <span class="read-more">Read article </span>
             </a>
           </div>
           <?php endwhile; ?>

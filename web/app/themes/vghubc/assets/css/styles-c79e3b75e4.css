@@ -1908,6 +1908,41 @@ html[lang="zh"] .latest-open #top-header #toggleLatest:before {
     height: 0px;
     overflow: hidden; } }
 
+#latest-highlights .highlight-lottery {
+  background-position: center right !important; }
+  #latest-highlights .highlight-lottery h2, #latest-highlights .highlight-lottery .title-only h1, .title-only #latest-highlights .highlight-lottery h1, #latest-highlights .highlight-lottery .single-post .large-featured-image h1, .single-post .large-featured-image #latest-highlights .highlight-lottery h1 {
+    width: 60%; }
+  @media screen and (max-width: 600px) {
+    #latest-highlights .highlight-lottery h2, #latest-highlights .highlight-lottery .title-only h1, .title-only #latest-highlights .highlight-lottery h1, #latest-highlights .highlight-lottery .single-post .large-featured-image h1, .single-post .large-featured-image #latest-highlights .highlight-lottery h1 {
+      width: 80%;
+      padding: 15px 0; } }
+  @media screen and (max-width: 768px) {
+    #latest-highlights .highlight-lottery:after {
+      background: none !important; } }
+  @media screen and (min-width: 1181px) {
+    #latest-highlights .highlight-lottery:before {
+      background: rgba(0, 0, 0, 0.4) !important; } }
+  @media screen and (max-width: 768px) {
+    #latest-highlights .highlight-lottery:before {
+      background: none !important; } }
+  #latest-highlights .highlight-lottery:hover:before {
+    background: none !important; }
+  #latest-highlights .highlight-lottery:hover:after {
+    background: none !important; }
+
+#latest-highlights .highlight-hometown {
+  background-image: url(../img/Hometown-web-button-460x160.jpg) !important; }
+  @media screen and (max-width: 768px) {
+    #latest-highlights .highlight-hometown {
+      background-image: url(../img/Hometown-web-button-440x113.jpg) !important; } }
+
+#latest-highlights .highlight-millionaire {
+  background-image: url(../img/millionaire-web-button-460x160.jpg) !important; }
+  @media screen and (max-width: 600px) {
+    #latest-highlights .highlight-millionaire h2, #latest-highlights .highlight-millionaire .title-only h1, .title-only #latest-highlights .highlight-millionaire h1, #latest-highlights .highlight-millionaire .single-post .large-featured-image h1, .single-post .large-featured-image #latest-highlights .highlight-millionaire h1 {
+      width: 55%;
+      padding: 15px 0; } }
+
 #latest-highlights .highlight {
   background: #333;
   width: 100%;
