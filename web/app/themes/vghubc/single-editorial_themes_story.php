@@ -7,7 +7,10 @@
 ?>
 <?php get_header(); ?>
 
-<div class="theme-story-head" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/ar-bg-v-white.svg'), url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/videoscreenshot.png');">
+<div class="theme-story-head">
+	<div class="layer-bg">
+		<iframe src="https://player.vimeo.com/video/217594857?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
 	<div class="layer-1">
 		<div class="container">
 			<div class="inner-wrap">
@@ -23,6 +26,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="layer-3"></div>
 </div>
 
 <section class="panel theme-story-row text-right" data-transition="fadeUp">

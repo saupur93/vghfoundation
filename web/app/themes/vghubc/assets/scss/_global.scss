@@ -6703,6 +6703,15 @@ body.overlay-open {
 
 // New Theme Template (2017)
 
+@keyframes layerBg {
+  0% {
+    background: rgba(0,0,0,0.1);
+  }
+  100% {
+    background: rgba(0,0,0,0.5);
+  }
+}
+
 @keyframes layerInAndOut {
   0% {
     opacity: 0;
@@ -6729,9 +6738,11 @@ body.overlay-open {
 @keyframes layerOut {
   0% {
     opacity: 1;
+    background: rgba(0,0,0,1);
   }
   100% {
     opacity: 0;
+    background: rgba(0,0,0,0.5);
   }
 }
 
@@ -6797,11 +6808,6 @@ body.overlay-open {
   width: 100%;
   height: 100%;
   position: relative;
-  background-repeat: no-repeat;
-  background-position: left center, center;
-  background-size: 50% auto, cover;
-  background-attachment: fixed, scroll;
-  background-blend-mode: lighten, normal;
   @include media ($ptabAndLess) {
     margin-bottom: 30px;
   }
@@ -6815,18 +6821,32 @@ body.overlay-open {
     justify-content: center;
     align-items: center;
   }
+  .layer-bg {
+    z-index: 0;
+    .iframe-wrapper {
+      height: 100%;
+      position: static;
+    }
+  }
   .layer-1 {
-    background: rgba(0,0,0,0.3);
-    animation: layerOut 4s 4s linear forwards;
+    z-index: 1;
+    // background: rgba(0,0,0,0.5);
+    animation: layerOut 4s linear forwards;
     .inner-wrap {
       opacity: 0;
       animation: layerInAndOut 3s 1s linear forwards;
     }
   }
   .layer-2 {
-    // background: rgba(0,0,0,0.1);
+    z-index: 2;
+    background: rgba(0,0,0,0.2);
     opacity: 0;
-    animation: layerIn 2s 3s linear forwards;
+    animation: layerIn 2s 4s linear forwards;
+  }
+  .layer-3 {
+    z-index: 3;
+    background: url('../img/ar-bg-v-white.svg') fixed no-repeat left center;
+    background-size: 50% auto;
   }
   h1 {
     text-align: center;
