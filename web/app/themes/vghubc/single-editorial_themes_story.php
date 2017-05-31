@@ -70,7 +70,7 @@
 
 <section class="panel theme-story-row theme-full-width-img">
 	<div class="img-block">
-		<img src="http://placehold.it/2000x1000" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/fullwidth01.jpg" alt="">
 	</div>
 </section>
 
@@ -89,7 +89,7 @@
 
 <section class="panel theme-story-row text-left">
 	<div class="img-block">
-		<img src="http://placehold.it/500x400" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/surgery.jpg" alt="">
 	</div>
 	<div class="text-block">
 		<div class="container">
@@ -115,7 +115,7 @@
 
 <section class="panel theme-story-row text-right">
 	<div class="img-block">
-		<img src="http://placehold.it/500x400" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/instruments.jpg" alt="">
 	</div>
 	<div class="text-block">
 		<div class="container">
@@ -141,7 +141,7 @@
 
 <section class="panel theme-story-row theme-full-width-img last">
 	<div class="img-block">
-		<img src="http://placehold.it/2000x1000" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/fullwidth02.jpg" alt="">
 	</div>
 </section>
 
