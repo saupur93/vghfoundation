@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 
-<div class="theme-story-head" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/ar-bg-v-white.svg'), url('<?php echo get_template_directory_uri(); ?>/assets/img/home-hero-bg.jpg');">
+<div class="theme-story-head" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/ar-bg-v-white.svg'), url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/videoscreenshot.png');">
 	<div class="layer-1">
 		<div class="container">
 			<div class="inner-wrap">

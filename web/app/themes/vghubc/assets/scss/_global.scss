@@ -6815,7 +6815,7 @@ body.overlay-open {
     align-items: center;
   }
   .layer-1 {
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.3);
     animation: layerOut 4s 4s linear forwards;
     .inner-wrap {
       opacity: 0;
@@ -6823,7 +6823,7 @@ body.overlay-open {
     }
   }
   .layer-2 {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.1);
     opacity: 0;
     animation: layerIn 4s 4s linear forwards;
   }
