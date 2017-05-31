@@ -3555,6 +3555,13 @@ body.tribe-events-page-template {
   p {
     margin-bottom:0;
   }
+
+  .themes_post-template-single-editorial_themes_post-php & {
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
 }
 
 .panel.cta-panel {
