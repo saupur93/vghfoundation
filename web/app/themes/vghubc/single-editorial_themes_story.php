@@ -154,7 +154,7 @@
 				<p>
 					Join us in supporting the Future of Surgery and improving outcomes for patients like Willie.
 				</p>
-				<a class="share-btn" href="">Join us on Facebook</a>
+				<a class="share-btn" href="">Register with Facebook</a>
 			</div>
 			<div class="img-block">
 				<img src="http://placehold.it/350x350" alt="">

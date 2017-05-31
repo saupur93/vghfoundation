@@ -6140,6 +6140,18 @@ body.overlay-open {
     font-size: 2em;
     color: #7dab35; }
 
+@-webkit-keyframes layerBg {
+  0% {
+    background: rgba(0, 0, 0, 0.1); }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
+
+@keyframes layerBg {
+  0% {
+    background: rgba(0, 0, 0, 0.1); }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
+
 @-webkit-keyframes layerInAndOut {
   0% {
     opacity: 0;
@@ -6178,15 +6190,19 @@ body.overlay-open {
 
 @-webkit-keyframes layerOut {
   0% {
-    opacity: 1; }
+    opacity: 1;
+    background: black; }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5); } }
 
 @keyframes layerOut {
   0% {
-    opacity: 1; }
+    opacity: 1;
+    background: black; }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5); } }
 
 .themes_post-template-single-editorial_themes_post {
   background: url("../img/ar-bg-v-grey.svg") fixed no-repeat left top;
@@ -6237,12 +6253,7 @@ body.overlay-open {
   margin-bottom: 100px;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: left center, center;
-  background-size: 50% auto, cover;
-  background-attachment: fixed, scroll;
-  background-blend-mode: lighten, normal; }
+  position: relative; }
   @media screen and (max-width: 768px) {
     .theme-story-head {
       margin-bottom: 30px; } }
@@ -6261,18 +6272,29 @@ body.overlay-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .theme-story-head .layer-bg {
+    z-index: 0; }
+    .theme-story-head .layer-bg .iframe-wrapper {
+      height: 100%;
+      position: static; }
   .theme-story-head .layer-1 {
-    background: rgba(0, 0, 0, 0.3);
-    -webkit-animation: layerOut 4s 4s linear forwards;
-            animation: layerOut 4s 4s linear forwards; }
+    z-index: 1;
+    -webkit-animation: layerOut 4s linear forwards;
+            animation: layerOut 4s linear forwards; }
     .theme-story-head .layer-1 .inner-wrap {
       opacity: 0;
       -webkit-animation: layerInAndOut 3s 1s linear forwards;
               animation: layerInAndOut 3s 1s linear forwards; }
   .theme-story-head .layer-2 {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.2);
     opacity: 0;
-    -webkit-animation: layerIn 2s 3s linear forwards;
-            animation: layerIn 2s 3s linear forwards; }
+    -webkit-animation: layerIn 2s 4s linear forwards;
+            animation: layerIn 2s 4s linear forwards; }
+  .theme-story-head .layer-3 {
+    z-index: 3;
+    background: url("../img/ar-bg-v-white.svg") fixed no-repeat left center;
+    background-size: 50% auto; }
   .theme-story-head h1 {
     text-align: center;
     color: #fff;
