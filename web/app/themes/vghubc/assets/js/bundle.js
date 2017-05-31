@@ -13233,6 +13233,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 var DonationTabs = require('./modules/donationTabs');
 
+var MiscUI = require('./modules/miscUI');
+
 var App = function () {
   function App() {
     _classCallCheck(this, App);
@@ -13315,6 +13317,10 @@ var App = function () {
 
       if ((0, _jquery2.default)('.panel.tiered-tabs').length) {
         this.tierTabs();
+      }
+
+      if ((0, _jquery2.default)('.post-template-single-editorial_themes_story').length) {
+        this.miscUI = new MiscUI();
       }
 
       if ((0, _jquery2.default)('.back-to-top').length) {
@@ -13864,7 +13870,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/annualReport":7,"./modules/donationTabs":8,"./modules/fixedHeaderScroll":9,"./modules/newsFeed":10,"./modules/slideshow":11,"jquery":2}],7:[function(require,module,exports){
+},{"./modules/annualReport":7,"./modules/donationTabs":8,"./modules/fixedHeaderScroll":9,"./modules/miscUI":10,"./modules/newsFeed":11,"./modules/slideshow":12,"jquery":2}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14291,6 +14297,59 @@ module.exports = FixedHeaderScroll;
 },{"jquery":2}],10:[function(require,module,exports){
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = require('jquery');
+
+var MiscUI = function () {
+  function MiscUI() {
+    _classCallCheck(this, MiscUI);
+
+    this.transitionContentIn();
+  }
+
+  _createClass(MiscUI, [{
+    key: 'transitionContentIn',
+    value: function transitionContentIn() {
+      if ($(['data-transition']).length) {
+
+        var st = 0;
+        var contentAreas = $('[data-transition]');
+
+        if ($('.onload-animate').length) {
+          setTimeout(function () {
+            $('.onload-animate').addClass('animated');
+          }, 200);
+        }
+
+        $(window).on('scroll', function (e) {
+          st = $(window).scrollTop();
+          contentAreas.each(function (index, elm) {
+
+            var delay = $(this).attr('data-transition-delay') ? $(this).attr('data-transition-delay') : 0;
+
+            if (st >= $(this).offset().top - $(window).height() / 1) {
+              var self = this;
+              setTimeout(function () {
+                $(self).addClass('animated');
+              }, delay);
+            };
+          });
+        });
+      }
+    }
+  }]);
+
+  return MiscUI;
+}();
+
+module.exports = MiscUI;
+
+},{"jquery":2}],11:[function(require,module,exports){
+'use strict';
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -14401,7 +14460,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":2,"query-string":4}],11:[function(require,module,exports){
+},{"jquery":2,"query-string":4}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

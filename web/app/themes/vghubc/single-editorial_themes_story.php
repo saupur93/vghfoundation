@@ -25,7 +25,7 @@
 	</div>
 </div>
 
-<section class="panel theme-story-row text-right">
+<section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block"></div>
 	<div class="text-block">
 		<div class="container">
@@ -39,7 +39,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-right">
+<section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block">
 		<img src="http://placehold.it/500x400" alt="">
 	</div>
@@ -52,7 +52,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-right">
+<section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block"></div>
 	<div class="text-block">
 		<div class="container">
@@ -65,13 +65,13 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row theme-full-width-img">
+<section class="panel theme-story-row theme-full-width-img" data-transition="fadeUp">
 	<div class="img-block">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/fullwidth01.jpg" alt="">
 	</div>
 </section>
 
-<section class="panel theme-story-row text-left">
+<section class="panel theme-story-row text-left" data-transition="fadeUp">
 	<div class="img-block"></div>
 	<div class="text-block">
 		<div class="container">
@@ -84,7 +84,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-left">
+<section class="panel theme-story-row text-left" data-transition="fadeUp">
 	<div class="img-block">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/surgery.jpg" alt="">
 	</div>
@@ -97,7 +97,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-left">
+<section class="panel theme-story-row text-left" data-transition="fadeUp">
 	<div class="img-block"></div>
 	<div class="text-block">
 		<div class="container">
@@ -110,7 +110,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-right">
+<section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/instruments.jpg" alt="">
 	</div>
@@ -123,7 +123,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row text-right">
+<section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block"></div>
 	<div class="text-block">
 		<div class="container">
@@ -136,7 +136,7 @@
 	</div>
 </section>
 
-<section class="panel theme-story-row theme-full-width-img last">
+<section class="panel theme-story-row theme-full-width-img last" data-transition="fadeUp">
 	<div class="img-block">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/fullwidth02.jpg" alt="">
 	</div>

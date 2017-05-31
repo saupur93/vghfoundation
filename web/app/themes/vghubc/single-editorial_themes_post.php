@@ -32,7 +32,7 @@
 					<a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
 						Dr Umedaly's Story
 					</a>
-					<a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
+					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('http://placehold.it/500x400');">
 						Willie's Story
 					</a>
 				</div>

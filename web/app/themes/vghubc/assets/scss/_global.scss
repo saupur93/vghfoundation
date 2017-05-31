@@ -6801,6 +6801,7 @@ body.overlay-open {
   background-position: left center, center;
   background-size: 50% auto, cover;
   background-attachment: fixed, scroll;
+  background-blend-mode: lighten, normal;
   @include media ($ptabAndLess) {
     margin-bottom: 30px;
   }
@@ -6819,13 +6820,13 @@ body.overlay-open {
     animation: layerOut 4s 4s linear forwards;
     .inner-wrap {
       opacity: 0;
-      animation: layerInAndOut 4s 1s linear forwards;
+      animation: layerInAndOut 3s 1s linear forwards;
     }
   }
   .layer-2 {
-    background: rgba(0,0,0,0.1);
+    // background: rgba(0,0,0,0.1);
     opacity: 0;
-    animation: layerIn 4s 4s linear forwards;
+    animation: layerIn 2s 3s linear forwards;
   }
   h1 {
     text-align: center;
@@ -6994,5 +6995,16 @@ body.overlay-open {
         height: auto;
       }
     }
+  }
+}
+
+*[data-transition="fadeUp"] {
+  transition: transform 0.25s cubic-bezier(.27,.88,.66,1.01), opacity 0.3s linear;
+  opacity: 0;
+  transform: translateY(25%);
+
+  &.animated {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

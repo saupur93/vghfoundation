@@ -4,6 +4,7 @@ const DonationTabs = require('./modules/donationTabs');
 import slideshow from './modules/slideshow';
 import NewsFeed from './modules/newsFeed';
 import AnnualReport from './modules/annualReport';
+const MiscUI = require('./modules/miscUI');
 
 class App {
 
@@ -84,6 +85,10 @@ class App {
 
     if ($('.panel.tiered-tabs').length) {
       this.tierTabs();
+    }
+
+    if ($('.post-template-single-editorial_themes_story').length) {
+      this.miscUI = new MiscUI();
     }
 
     if ($('.back-to-top').length) {

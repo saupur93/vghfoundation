@@ -6241,7 +6241,8 @@ body.overlay-open {
   background-repeat: no-repeat;
   background-position: left center, center;
   background-size: 50% auto, cover;
-  background-attachment: fixed, scroll; }
+  background-attachment: fixed, scroll;
+  background-blend-mode: lighten, normal; }
   @media screen and (max-width: 768px) {
     .theme-story-head {
       margin-bottom: 30px; } }
@@ -6261,18 +6262,17 @@ body.overlay-open {
         -ms-flex-align: center;
             align-items: center; }
   .theme-story-head .layer-1 {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.3);
     -webkit-animation: layerOut 4s 4s linear forwards;
             animation: layerOut 4s 4s linear forwards; }
     .theme-story-head .layer-1 .inner-wrap {
       opacity: 0;
-      -webkit-animation: layerInAndOut 4s 1s linear forwards;
-              animation: layerInAndOut 4s 1s linear forwards; }
+      -webkit-animation: layerInAndOut 3s 1s linear forwards;
+              animation: layerInAndOut 3s 1s linear forwards; }
   .theme-story-head .layer-2 {
-    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    -webkit-animation: layerIn 4s 4s linear forwards;
-            animation: layerIn 4s 4s linear forwards; }
+    -webkit-animation: layerIn 2s 3s linear forwards;
+            animation: layerIn 2s 3s linear forwards; }
   .theme-story-head h1 {
     text-align: center;
     color: #fff;
@@ -6433,3 +6433,15 @@ body.overlay-open {
     .theme-sharing-panel > div > div .img-block img {
       width: 100%;
       height: auto; }
+
+*[data-transition="fadeUp"] {
+  transition: opacity 0.3s linear, -webkit-transform 0.25s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+  transition: transform 0.25s cubic-bezier(0.27, 0.88, 0.66, 1.01), opacity 0.3s linear;
+  transition: transform 0.25s cubic-bezier(0.27, 0.88, 0.66, 1.01), opacity 0.3s linear, -webkit-transform 0.25s cubic-bezier(0.27, 0.88, 0.66, 1.01);
+  opacity: 0;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%); }
+  *[data-transition="fadeUp"].animated {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
