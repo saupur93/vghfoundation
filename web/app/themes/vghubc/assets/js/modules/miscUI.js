@@ -17,11 +17,12 @@ class MiscUI {
     $('body').on('mousemove', function(e) {
       let pageX = e.pageX - ($(window).width() / 2);
       let pageY = e.pageY - ($(window).height() / 2);
-      console.log(e.pageX);
       let newvalueX = width * pageX * - 1 - 25;
       let newvalueY = height * pageY * - 1 - 50;
       let movethis = $(['data-fx="movewithmouse"']);
-      $(['data-fx="movewithmouse"']).css("background-position", newvalueX + "px " + newvalueY + "px");
+      // console.log(newvalueY);
+
+      console.log($(['data-fx="movewithmouse"']).css("background"));
     });
   }
 

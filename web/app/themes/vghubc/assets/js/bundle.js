@@ -14323,11 +14323,12 @@ var MiscUI = function () {
       $('body').on('mousemove', function (e) {
         var pageX = e.pageX - $(window).width() / 2;
         var pageY = e.pageY - $(window).height() / 2;
-        console.log(e.pageX);
         var newvalueX = width * pageX * -1 - 25;
         var newvalueY = height * pageY * -1 - 50;
         var movethis = $(['data-fx="movewithmouse"']);
-        $(['data-fx="movewithmouse"']).css("background-position", newvalueX + "px " + newvalueY + "px");
+        // console.log(newvalueY);
+
+        console.log($(['data-fx="movewithmouse"']).css("background"));
       });
     }
   }, {

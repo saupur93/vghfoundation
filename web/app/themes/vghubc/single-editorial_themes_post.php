@@ -12,8 +12,8 @@
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="theme-head surgery">
-				<div class="title">vital</div>
-				<div class="tagline">Future of Surgery</div>
+				<div class="title">surgery</div>
+				<!-- <div class="tagline">Future of Surgery</div> -->
 				<h1>Our goal is to create a single, <br />state-of-the-art surgical program</h1>
 			</div>
 		</div>
