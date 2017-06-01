@@ -6872,7 +6872,8 @@ body.overlay-open {
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: center;
-    background: url('../img/ar-bg-v-white.svg') fixed no-repeat left center;
+    background: url('../img/ar-bg-v-white.svg') fixed no-repeat;
+    background-position: 0 50%;
     background-size: 50% auto;
     opacity: 0;
     animation: sideArrow 2s 2s ease-out forwards;

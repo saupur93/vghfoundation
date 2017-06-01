@@ -26,7 +26,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="layer-3">
+	<div class="layer-3" data-fx="movewithmouse">
 		<span class="text">Scroll</span>
 		<div class="bar-container">
 			<span class="bar"></span>

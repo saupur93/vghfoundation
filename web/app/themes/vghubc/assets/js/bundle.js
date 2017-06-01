@@ -14308,9 +14308,29 @@ var MiscUI = function () {
     _classCallCheck(this, MiscUI);
 
     this.transitionContentIn();
+    if ($(['data-fx="movewithmouse"']).length) {
+      this.elementMouseMove();
+    }
   }
 
   _createClass(MiscUI, [{
+    key: 'elementMouseMove',
+    value: function elementMouseMove() {
+      var movementStrength = 25;
+      var height = movementStrength / $(window).height();
+      var width = movementStrength / $(window).width();
+
+      $('body').on('mousemove', function (e) {
+        var pageX = e.pageX - $(window).width() / 2;
+        var pageY = e.pageY - $(window).height() / 2;
+        console.log(e.pageX);
+        var newvalueX = width * pageX * -1 - 25;
+        var newvalueY = height * pageY * -1 - 50;
+        var movethis = $(['data-fx="movewithmouse"']);
+        $(['data-fx="movewithmouse"']).css("background-position", newvalueX + "px " + newvalueY + "px");
+      });
+    }
+  }, {
     key: 'transitionContentIn',
     value: function transitionContentIn() {
       if ($(['data-transition']).length) {
