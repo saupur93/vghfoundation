@@ -14308,7 +14308,7 @@ var MiscUI = function () {
     _classCallCheck(this, MiscUI);
 
     this.transitionContentIn();
-    if ($(['data-fx="movewithmouse"']).length) {
+    if ($('#movewithmouse').length) {
       this.elementMouseMove();
     }
   }
@@ -14325,10 +14325,9 @@ var MiscUI = function () {
         var pageY = e.pageY - $(window).height() / 2;
         var newvalueX = width * pageX * -1 - 25;
         var newvalueY = height * pageY * -1 - 50;
-        var movethis = $(['data-fx="movewithmouse"']);
-        // console.log(newvalueY);
-
-        console.log($(['data-fx="movewithmouse"']).css("background"));
+        // let movethis = $('#movewithmouse');
+        $('#movewithmouse').css("background-position", "calc(0% + " + newvalueX + "px)  calc(50% + " + newvalueY + "px)");
+        // console.log($('#movewithmouse').css('background'));
       });
     }
   }, {

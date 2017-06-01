@@ -4,7 +4,7 @@ class MiscUI {
 
   constructor (){
     this.transitionContentIn();
-    if( $(['data-fx="movewithmouse"']).length ) {
+    if( $('#movewithmouse').length ) {
       this.elementMouseMove();
     }
   }
@@ -19,10 +19,9 @@ class MiscUI {
       let pageY = e.pageY - ($(window).height() / 2);
       let newvalueX = width * pageX * - 1 - 25;
       let newvalueY = height * pageY * - 1 - 50;
-      let movethis = $(['data-fx="movewithmouse"']);
-      // console.log(newvalueY);
-
-      console.log($(['data-fx="movewithmouse"']).css("background"));
+      // let movethis = $('#movewithmouse');
+      $('#movewithmouse').css("background-position", "calc(0% + " + newvalueX + "px)  calc(50% + " + newvalueY + "px)");
+      // console.log($('#movewithmouse').css('background'));
     });
   }
 

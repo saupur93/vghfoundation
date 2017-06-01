@@ -9,7 +9,10 @@
 
 <div class="theme-story-head">
 	<div class="layer-bg">
-		<iframe src="https://player.vimeo.com/video/217594857?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<video width="100%" height="100%" autoplay loop>
+		  <source src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/videobg.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
 	</div>
 	<div class="layer-1">
 		<div class="container">
@@ -26,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="layer-3" data-fx="movewithmouse">
+	<div id="movewithmouse" class="layer-3">
 		<span class="text">Scroll</span>
 		<div class="bar-container">
 			<span class="bar"></span>
@@ -162,7 +165,7 @@
 				<a class="share-btn" href="">Register with Facebook</a>
 			</div>
 			<div class="img-block">
-				<img src="http://placehold.it/350x350" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png" alt="">
 			</div>
 		</div>
 	</div>
