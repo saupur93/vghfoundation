@@ -15,18 +15,23 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<div class="title">vital</div>
-				<div class="tagline">Future of Surgery</div>
 			</div>
 		</div>
 	</div>
 	<div class="layer-2">
 		<div class="container">
 			<div class="inner-wrap">
+				<div class="tagline">Future of Surgery</div>
 				<h1>Willie's Story</h1>
 			</div>
 		</div>
 	</div>
-	<div class="layer-3"></div>
+	<div class="layer-3">
+		<span class="text">Scroll</span>
+		<div class="bar-container">
+			<span class="bar"></span>
+		</div>
+	</div>
 </div>
 
 <section class="panel theme-story-row text-right" data-transition="fadeUp">

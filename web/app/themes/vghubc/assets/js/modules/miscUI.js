@@ -19,12 +19,16 @@ class MiscUI {
       }
 
       $(window).on('scroll', function (e){
+        // console.log('scrolling');
         st = $(window).scrollTop();
         contentAreas.each(function (index, elm){
+
+          // console.log('each loop');
 
           var delay = $(this).attr('data-transition-delay') ? $(this).attr('data-transition-delay') : 0;
 
           if (st >= $(this).offset().top - ($(window).height() / 1)){
+            // console.log('if');
             var self = this;
             setTimeout(function() {
               $(self).addClass('animated');
