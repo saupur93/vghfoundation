@@ -1343,9 +1343,6 @@ body {
   font-family: "Karbon", Helvetica, Arial, sans-serif;
   line-height: 1.4;
   color: #575b5e; }
-  body.post-template-single-editorial_themes_story {
-    background: #333;
-    color: #b6b6b6; }
 
 p {
   margin-top: 0; }
@@ -6264,7 +6261,8 @@ body.overlay-open {
   .theme-head .tagline, .theme-story-head .tagline {
     text-transform: uppercase;
     font-size: 24px;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    color: #00AAE3; }
 
 .theme-head {
   margin-top: 100px; }
@@ -6274,15 +6272,15 @@ body.overlay-open {
   .theme-head.surgery .title, .theme-head.surgery .tagline, .theme-head.surgery h1 {
     color: #00AAE3; }
   .theme-head .title {
-    font-size: 150px; }
+    font-size: 6rem; }
     @media screen and (max-width: 768px) {
       .theme-head .title {
         font-size: 70px; } }
   .theme-head h1 {
-    margin-top: 75px;
+    margin-top: 15px;
     width: 80%;
     font-family: "Karbon", Helvetica, Arial, sans-serif;
-    font-size: 55px;
+    font-size: 2.25rem;
     line-height: 1.2em; }
     @media screen and (max-width: 768px) {
       .theme-head h1 {
@@ -6384,7 +6382,8 @@ body.overlay-open {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 14px;
-      font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
+      font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
+      color: #00AAE3; }
     .theme-story-head .layer-3 .bar-container {
       height: 50px;
       overflow: hidden; }
@@ -6392,7 +6391,7 @@ body.overlay-open {
         display: block;
         width: 1px;
         height: 50px;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(0, 170, 227, 0.7);
         -webkit-animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
                 animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite; }
 
@@ -6503,12 +6502,14 @@ body.overlay-open {
         margin: 30px 0; } }
   .theme-story-row .text-block h3 + p, .theme-story-row .text-block body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title + p, body.tribe-events-page-template.single-tribe_events .theme-story-row .text-block .tribe-events-single-event-title + p {
     margin-top: 40px; }
-  .theme-story-row .text-block p {
-    font-size: 20px; }
   .theme-story-row .img-block img {
     max-width: 100%;
     width: 100%;
     height: auto; }
+  .theme-story-row .img-block .iframe-wrapper {
+    width: 100%;
+    min-width: 500px;
+    min-height: 400px; }
 
 .post-template-single-editorial_themes_story .theme-sharing-panel {
   background: #fff; }

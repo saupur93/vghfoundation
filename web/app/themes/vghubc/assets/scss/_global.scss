@@ -21,10 +21,10 @@ body {
 	line-height:1.4;
 	// font-weight:300;
 	color:$body-text;
-	&.post-template-single-editorial_themes_story {
-		background: #333;
-		color: $body-text-light;
-	}
+	// &.post-template-single-editorial_themes_story {
+	// 	// background: #333;
+	// 	// color: $body-text-light;
+	// }
 }
 
 a{
@@ -6797,6 +6797,7 @@ body.overlay-open {
 		text-transform: uppercase;
 		font-size: 24px;
 		letter-spacing: 2px;
+    color:$surgery;
 	}
 }
 
@@ -6916,6 +6917,7 @@ body.overlay-open {
 			letter-spacing: 2px;
 			font-size: 14px;
 			font-family: $font-med;
+      color:$surgery;
 		}
 		.bar-container {
 			height: 50px;
@@ -6924,7 +6926,7 @@ body.overlay-open {
 				display: block;
 				width: 1px;
 				height: 50px;
-				background: rgba(255,255,255,0.7);
+				background: rgba($surgery,0.7);
 				animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
 			}
 		}
