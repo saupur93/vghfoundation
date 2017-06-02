@@ -24,7 +24,7 @@
 			<div class="inner-wrap">
 				<div class="theme-video-box">
 					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover.jpg');">
-						<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+						<i class="fa fa-play" aria-hidden="true"></i>
 					</div>
 					<iframe width="100%" height="720" src="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
