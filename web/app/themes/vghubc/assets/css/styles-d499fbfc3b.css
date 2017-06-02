@@ -6255,17 +6255,14 @@ body.overlay-open {
 .theme-head, .theme-story-head {
   padding: 100px 0; }
   .theme-head .title, .theme-head .tagline, .theme-story-head .title, .theme-story-head .tagline {
-    text-align: center;
     color: #fff; }
   .theme-head .title, .theme-story-head .title {
     margin-bottom: 0;
     font-family: "Karbon-Semibold", Helvetica, Arial, sans-serif;
-    font-size: 200px;
     font-weight: bold;
     line-height: 1em; }
   .theme-head .tagline, .theme-story-head .tagline {
     text-transform: uppercase;
-    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
     font-size: 24px;
     letter-spacing: 2px; }
 
@@ -6274,12 +6271,14 @@ body.overlay-open {
   @media screen and (max-width: 768px) {
     .theme-head {
       padding: 50px 0; } }
-  .theme-head.surgery .title, .theme-head.surgery .tagline {
+  .theme-head.surgery .title, .theme-head.surgery .tagline, .theme-head.surgery h1 {
     color: #00AAE3; }
+  .theme-head .title {
+    font-size: 150px; }
   .theme-head h1 {
     margin-top: 75px;
     width: 80%;
-    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
+    font-family: "Karbon", Helvetica, Arial, sans-serif;
     font-size: 55px;
     line-height: 1.2em; }
     @media screen and (max-width: 768px) {
@@ -6310,11 +6309,20 @@ body.overlay-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .theme-story-head .title, .theme-story-head .tagline {
+    text-align: center; }
+  .theme-story-head .title {
+    font-size: 200px; }
+  .theme-story-head .tagline {
+    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
   .theme-story-head .layer-bg {
-    z-index: 0; }
-    .theme-story-head .layer-bg .iframe-wrapper {
-      height: 100%;
-      position: static; }
+    z-index: 0;
+    background: #000;
+    overflow: hidden; }
+    .theme-story-head .layer-bg video {
+      margin-top: 96px;
+      width: auto;
+      height: 100%; }
   .theme-story-head .layer-1 {
     z-index: 1;
     background: black;
@@ -6347,7 +6355,7 @@ body.overlay-open {
         -ms-flex-align: center;
             align-items: center;
     background: url("../img/ar-bg-v-white.svg") fixed no-repeat;
-    background-position: 0 50%;
+    background-position: 0% 50%;
     background-size: 50% auto;
     opacity: 0;
     -webkit-animation: sideArrow 2s 2s ease-out forwards;
@@ -6376,6 +6384,10 @@ body.overlay-open {
     color: #fff;
     font-size: 75px;
     font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
+    @media screen and (max-width: 768px) {
+      .theme-story-head h1 {
+        margin-top: 20px;
+        line-height: 60px; } }
 
 .theme-video-box {
   margin-bottom: 15px; }
@@ -6503,15 +6515,17 @@ body.overlay-open {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
   .theme-sharing-panel > div > div .text-block {
-    width: 55%;
-    margin-right: 15%;
+    width: 50%;
+    margin-right: 10%;
     color: #575b5e; }
     @media screen and (max-width: 768px) {
       .theme-sharing-panel > div > div .text-block {
         width: 100%;
         margin-right: 0; } }
     .theme-sharing-panel > div > div .text-block h2, .theme-sharing-panel > div > div .text-block .title-only h1, .title-only .theme-sharing-panel > div > div .text-block h1, .theme-sharing-panel > div > div .text-block .single-post .large-featured-image h1, .single-post .large-featured-image .theme-sharing-panel > div > div .text-block h1 {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-size: 2.25rem; }
       @media screen and (max-width: 768px) {
         .theme-sharing-panel > div > div .text-block h2, .theme-sharing-panel > div > div .text-block .title-only h1, .title-only .theme-sharing-panel > div > div .text-block h1, .theme-sharing-panel > div > div .text-block .single-post .large-featured-image h1, .single-post .large-featured-image .theme-sharing-panel > div > div .text-block h1 {
           margin-bottom: 20px;
@@ -6527,7 +6541,7 @@ body.overlay-open {
     .theme-sharing-panel > div > div .text-block .share-btn {
       margin-top: 70px;
       display: block;
-      padding: 30px;
+      padding: 1em;
       background: #3d5b96;
       color: #fff;
       font-size: 26px;
@@ -6536,11 +6550,10 @@ body.overlay-open {
       @media screen and (max-width: 768px) {
         .theme-sharing-panel > div > div .text-block .share-btn {
           margin-top: 35px;
-          padding: 1em;
           font-size: 20px;
           font-size: 1.25rem; } }
   .theme-sharing-panel > div > div .img-block {
-    width: 30%; }
+    width: 40%; }
     @media screen and (max-width: 768px) {
       .theme-sharing-panel > div > div .img-block {
         display: none; } }
