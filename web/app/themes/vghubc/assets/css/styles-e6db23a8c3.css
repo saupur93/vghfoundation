@@ -6526,7 +6526,6 @@ body.overlay-open {
     margin-bottom: 0; }
   .theme-story-row .text-block h3, .theme-story-row .text-block body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events .theme-story-row .text-block .tribe-events-single-event-title {
     margin-bottom: 0;
-    color: #fff;
     font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
     @media screen and (max-width: 768px) {
       .theme-story-row .text-block h3, .theme-story-row .text-block body.tribe-events-page-template.single-tribe_events .tribe-events-single-event-title, body.tribe-events-page-template.single-tribe_events .theme-story-row .text-block .tribe-events-single-event-title {
