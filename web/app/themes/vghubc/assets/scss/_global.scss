@@ -7043,6 +7043,11 @@ body.overlay-open {
 			width: 100%;
 			height: auto;
 		}
+		.iframe-wrapper {
+			width: 100%;
+			min-width: 500px;
+			min-height: 400px;
+		}
 	}
 }
 
