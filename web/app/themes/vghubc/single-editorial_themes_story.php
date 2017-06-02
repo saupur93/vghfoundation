@@ -63,7 +63,7 @@
 
 <section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block">
-		<img src="http://placehold.it/500x400" alt="">
+		<iframe width="500" height="400" src="https://www.youtube.com/embed/ky4wepA0S5Y?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="text-block">
 		<div class="container">
