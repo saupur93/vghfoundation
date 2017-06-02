@@ -6275,6 +6275,9 @@ body.overlay-open {
     color: #00AAE3; }
   .theme-head .title {
     font-size: 150px; }
+    @media screen and (max-width: 768px) {
+      .theme-head .title {
+        font-size: 70px; } }
   .theme-head h1 {
     margin-top: 75px;
     width: 80%;
@@ -6313,8 +6316,21 @@ body.overlay-open {
     text-align: center; }
   .theme-story-head .title {
     font-size: 200px; }
+    @media screen and (max-width: 768px) {
+      .theme-story-head .title {
+        font-size: 70px; } }
   .theme-story-head .tagline {
     font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
+  .theme-story-head h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
+    @media screen and (max-width: 768px) {
+      .theme-story-head h1 {
+        margin-top: 20px;
+        line-height: 48px;
+        font-size: 60px; } }
   .theme-story-head .layer-bg {
     z-index: 0;
     background: #000;
@@ -6354,7 +6370,7 @@ body.overlay-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: url("../img/ar-bg-v-white.svg") fixed no-repeat;
+    background: url("../img/ar-bg-v-white.svg") no-repeat;
     background-position: 0% 50%;
     background-size: 50% auto;
     opacity: 0;
@@ -6379,15 +6395,6 @@ body.overlay-open {
         background: rgba(255, 255, 255, 0.7);
         -webkit-animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
                 animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite; }
-  .theme-story-head h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 75px;
-    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
-    @media screen and (max-width: 768px) {
-      .theme-story-head h1 {
-        margin-top: 20px;
-        line-height: 60px; } }
 
 .theme-video-box {
   margin-bottom: 15px; }
@@ -6546,12 +6553,18 @@ body.overlay-open {
       color: #fff;
       font-size: 26px;
       font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
-      text-align: center; }
+      text-align: center;
+      transition: background 0.2s ease; }
       @media screen and (max-width: 768px) {
         .theme-sharing-panel > div > div .text-block .share-btn {
           margin-top: 35px;
           font-size: 20px;
           font-size: 1.25rem; } }
+      .theme-sharing-panel > div > div .text-block .share-btn.hidden {
+        display: none; }
+      .theme-sharing-panel > div > div .text-block .share-btn:hover {
+        cursor: pointer;
+        background: #7dab35; }
   .theme-sharing-panel > div > div .img-block {
     width: 40%; }
     @media screen and (max-width: 768px) {
@@ -6577,3 +6590,6 @@ body.overlay-open {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1; }
+
+.survey-form {
+  display: none; }

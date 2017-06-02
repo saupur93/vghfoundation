@@ -6811,16 +6811,16 @@ body.overlay-open {
 		}
 	}
 	.title {
-		font-size: 150px;
+		font-size: 6rem;
 		@include media ($ptabAndLess) {
 			font-size: 70px;
 		}
 	}
 	h1 {
-		margin-top: 75px;
+		margin-top: 15px;
 		width: 80%;
 		font-family: $font;
-		font-size: 55px;
+		font-size: 2.25rem;
 		line-height: 1.2em;
 		@include media ($ptabAndLess) {
 			width: 100%;
@@ -7033,9 +7033,9 @@ body.overlay-open {
 		h3 + p {
 			margin-top: 40px;
 		}
-		p {
-			font-size: 20px;
-		}
+		// p {
+		// 	font-size: 20px;
+		// }
 	}
 	.img-block {
 		img {
@@ -7126,4 +7126,8 @@ body.overlay-open {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+.survey-form {
+  display: none;
 }
