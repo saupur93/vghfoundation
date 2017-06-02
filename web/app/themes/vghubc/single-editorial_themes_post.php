@@ -23,16 +23,19 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<div class="theme-video-box">
+					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover.jpg');">
+						<i class="fa fa-play-circle-o" aria-hidden="true"></i>
+					</div>
 					<iframe width="100%" height="720" src="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="theme-stories">
-					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('http://placehold.it/500x400');">
+					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-01-thumb.png');">
 						Willie's Story
 					</a>
-          <a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
+          <a href="" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-02-thumb.png');">
             Giving back to health care
           </a>
-          <a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
+          <a href="" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-03-thumb.jpg');">
             The Future of Surgery
           </a>
 				</div>

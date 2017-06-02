@@ -6933,12 +6933,40 @@ body.overlay-open {
 
 .theme-video-box {
 	margin-bottom: 15px;
-	iframe {
+	position: relative;
+	width: 100%;
+	height: 650px;
+	background: #000;
+	@include media ($ptabAndLess) {
+		height: 300px;
+	}
+	.cover, iframe {
+		position: absolute;
 		width: 100%;
-		height: 650px;
-		@include media ($ptabAndLess) {
-			height: 300px;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+	&:before {
+		content: " ";
+		display: block;
+		background: rgba(0,0,0,0.5);
+	}
+	.cover {
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: no-repeat center;
+		background-size: cover;
+		color: #fff;
+		.fa {
+			font-size: 100px;
 		}
+	}
+	iframe {
+		z-index: 1;
+		opacity: 0;
 	}
 }
 
@@ -6956,6 +6984,7 @@ body.overlay-open {
 		background-color: #000;
 		background-repeat: no-repeat;
 		background-position: center;
+		background-size: cover;
 		color: #fff;
 		font-family: $font-med;
 		font-size: 20px;
