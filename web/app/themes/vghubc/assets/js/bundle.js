@@ -13226,6 +13226,10 @@ var _annualReport = require('./modules/annualReport');
 
 var _annualReport2 = _interopRequireDefault(_annualReport);
 
+var _facebook = require('./modules/facebook');
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13234,6 +13238,12 @@ var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 var DonationTabs = require('./modules/donationTabs');
 
 var MiscUI = require('./modules/miscUI');
+
+
+if (_facebook2.default.loginButton) {
+  window.FacebookModule = _facebook2.default;
+  _facebook2.default.init();
+};
 
 var App = function () {
   function App() {
@@ -13870,7 +13880,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/annualReport":7,"./modules/donationTabs":8,"./modules/fixedHeaderScroll":9,"./modules/miscUI":10,"./modules/newsFeed":11,"./modules/slideshow":12,"jquery":2}],7:[function(require,module,exports){
+},{"./modules/annualReport":7,"./modules/donationTabs":8,"./modules/facebook":9,"./modules/fixedHeaderScroll":10,"./modules/miscUI":11,"./modules/newsFeed":12,"./modules/slideshow":13,"jquery":2}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14246,6 +14256,140 @@ module.exports = DonationTabs;
 },{"jquery":2}],9:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import st from './scrollto';
+
+var _module = void 0;
+
+exports.default = _module = {
+	loginButton: document.querySelector('.fb-login'),
+	logoutButton: document.querySelector('.fb-logout'),
+	content: document.querySelector('.contest-register'),
+	fields: {
+		email: document.querySelector('#survey-cons-email'),
+		first_name: document.querySelector('#survey-cons-first-name'),
+		last_name: document.querySelector('#survey-cons-last-name')
+	},
+
+	init: function init() {
+		_module.loadSDK();
+
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1971766793058772',
+				cookie: false,
+				xfbml: true,
+				version: 'v2.8'
+			});
+
+			FB.getLoginStatus(function (response) {
+				_module.statusChangeCallback(response);
+			});
+		};
+	},
+
+	loadSDK: function loadSDK() {
+		(function (d, s, id) {
+			var js,
+			    fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		})(document, 'script', 'facebook-jssdk');
+	},
+
+	statusChangeCallback: function statusChangeCallback(response) {
+		//console.log('statusChangeCallback');
+		console.log(response);
+
+		if (response.status === 'connected') {
+			console.log('You are logged in');
+			//_module.loginButton.classList.add('hidden');
+			//_module.logoutButton.classList.remove('hidden');
+		} else if (response.status === 'not_authorized') {
+			//console.log('Please log into this app.');
+		} else {
+				//console.log('Please log into Facebook.');
+			}
+	},
+
+	checkLoginState: function checkLoginState() {
+		FB.getLoginStatus(function (response) {
+			_module.statusChangeCallback(response);
+		});
+	},
+
+	login: function login(el) {
+		if (el.classList.contains('disabled')) return false;
+
+		FB.login(function (response) {
+			if (response.authResponse) {
+				console.log('Welcome!  Fetching your information.... ', response);
+				//_module.checkLoginState();
+
+				FB.api('/me?fields=first_name,last_name,email', function (response) {
+					console.log(response);
+
+					_module.loginButton.classList.add('hidden');
+					_module.logoutButton.classList.remove('hidden');
+					// st.animate(_module.content.offsetTop, 100);
+
+					_module.populateFormFields(response);
+				});
+				var uri = "https://support.vghfoundation.ca/site/CRSurveyAPI",
+				    postdata = "method=listUserFields&v=1.7.1&api_key=wDB09SQODRpVIOvX";
+
+				xhr = new XMLHttpRequest();
+				xhr.open('POST', uri, true);
+				console.log(xhr);
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4) {
+						console.log(xhr.status);
+						console.log(xhr.responseText);
+					}
+				};
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhr.send(postdata);
+			} else {
+				//console.log('User cancelled login or did not fully authorize.');
+			}
+		}, {
+			scope: 'public_profile,email'
+		});
+	},
+
+	logout: function logout() {
+		FB.logout(function (response) {
+			_module.loginButton.classList.remove('hidden');
+			_module.logoutButton.classList.add('hidden');
+		});
+	},
+
+	populateFormFields: function populateFormFields(user) {
+		for (var key in user) {
+			if (user.hasOwnProperty(key)) {
+				if (_module.fields[key]) {
+					_module.fields[key].value = user[key];
+				}
+			}
+		}
+	}
+
+};
+
+},{"jquery":2}],10:[function(require,module,exports){
+'use strict';
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14294,7 +14438,7 @@ var FixedHeaderScroll = function () {
 
 module.exports = FixedHeaderScroll;
 
-},{"jquery":2}],10:[function(require,module,exports){
+},{"jquery":2}],11:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14316,7 +14460,7 @@ var MiscUI = function () {
   _createClass(MiscUI, [{
     key: 'elementMouseMove',
     value: function elementMouseMove() {
-      var movementStrength = 25;
+      var movementStrength = 35;
       var height = movementStrength / $(window).height();
       var width = movementStrength / $(window).width();
 
@@ -14371,7 +14515,7 @@ var MiscUI = function () {
 
 module.exports = MiscUI;
 
-},{"jquery":2}],11:[function(require,module,exports){
+},{"jquery":2}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14484,7 +14628,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":2,"query-string":4}],12:[function(require,module,exports){
+},{"jquery":2,"query-string":4}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

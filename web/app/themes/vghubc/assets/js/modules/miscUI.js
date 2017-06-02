@@ -10,7 +10,7 @@ class MiscUI {
   }
 
   elementMouseMove () {
-    let movementStrength = 25;
+    let movementStrength = 35;
     let height = movementStrength / $(window).height();
     let width = movementStrength / $(window).width();
 

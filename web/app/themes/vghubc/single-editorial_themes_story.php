@@ -42,9 +42,19 @@
 	<div class="text-block">
 		<div class="container">
 			<div class="inner-wrap">
-				<h3>Life-saving Technology Buys Crucial Time for Father of Three</h3>
+				<h3>VGH team saves father of three</h3>
 				<p>
-					Last spring, I was kept alive by VGH.
+					At one point, Willie Dalagan didn’t think he would have very much time with his family.
+					In spring of 2016, Willie’s health rapidly declined and he was in urgent need of a lung transplant.
+				</p>
+				<p>
+					“A patient with this disease only has two to five years to live,” he says. “I’d look at my kids and started thinking about, ‘Ok, what’s going to happen here?’”
+				</p>
+				<p>
+					The 44-year old was admitted to Vancouver General Hospital (VGH) with respiratory failure. He was previously diagnosed with Idiopathic Pulmonary Fibrosis – a disease that causes scarring of the lungs.
+				</p>
+				<p>
+					He needed new lungs and he needed them quickly.
 				</p>
 			</div>
 		</div>
@@ -58,7 +68,7 @@
 	<div class="text-block">
 		<div class="container">
 			<div class="inner-wrap">
-				<h3>"And then things got worse."</h3>
+				<h3>Dire situation</h3>
 			</div>
 		</div>
 	</div>
@@ -70,7 +80,7 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<p>
-					Two years ago, I found myself having a dry cough followed by difficulty breathing and shortness of breath. A visit to a respirologist resulted in being diagnosed with Idiopathic Pulmonary Fibrosis (IPF), a disease that causes scarring of the lungs. I was in my early 40s, and was given the devastating news that there was no known cure for IPF and the possibility of only having 2 - 5 years to live.
+					While waiting, Willie’s condition suddenly deteriorated. Doctors at VGH needed to keep him alive until they found a suitable transplant. 
 				</p>
 			</div>
 		</div>
@@ -89,7 +99,7 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<p>
-					While waiting for a lung transplant donor, my condition deteriorated rapidly and I found myself at VGH with respiratory failure. The physicians made a life-altering decision. I became the first person in BC to be kept alive through the use of an ECMO machine, a piece of equipment that acts as a portable heart lung machine. The machine would keep me alive and conscious while I waited for a lung transplant donor. While barely conscious in the ICU, I recalled asking myself, "Have I created enough memories in this lifetime for my family? And my answer was 'no'."
+					They used the novel ECMO machine – a portable “heart-lung” machine, a device that extracts and oxygenates a patient’s blood before re-infusing it.
 				</p>
 			</div>
 		</div>
@@ -103,7 +113,7 @@
 	<div class="text-block">
 		<div class="container">
 			<div class="inner-wrap">
-				<h3>"I became the first person in BC to be kept alive through the use of an ECMO machine."</h3>
+				<h3>"I have to live"</h3>
 			</div>
 		</div>
 	</div>
@@ -115,7 +125,13 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<p>
-					In June, a transplant donor was found. My double lung transplant surgery took about seven hours and I recovered well enough to be discharged a month later, thanks in part to the tremendous care team at VGH that totaled almost 60 people!
+					Thankfully, VGH found new lungs for the dying man. The double-lung transplant took about seven hours and he was discharged less than a month later. This was a testament to Willie’s strength and the world class care at VGH. 
+				</p>
+				<p>
+					The construction manager doesn’t remember much while recovering in the ICU.
+				</p>
+				<p>
+					“I remember asking myself, ‘Have I done enough for my family; created enough good memories?’ And my answer was ‘No. I have to live. I l have to live fill those gaps.’”
 				</p>
 			</div>
 		</div>
@@ -129,7 +145,7 @@
 	<div class="text-block">
 		<div class="container">
 			<div class="inner-wrap">
-				<h3>"Have I created enough memories in this lifetime for my family? And my answer was 'no'."</h3>
+				<h3>Appreciation everyday</h3>
 			</div>
 		</div>
 	</div>
@@ -141,7 +157,13 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<p>
-					The Future of Surgery campaign provides the essential technology and tools needed to safely perform lung transplants like the one that saved me. I am so grateful to VGH & UBC Hospital Foundation's commitment to transforming health care for patients like me. The team at VGH, including Dr. John Yee, Dr. Hussein Kanji and Dr. Gordon Finlayson made it possible for me to have a second lease on life. Without them, I wouldn't be here today celebrating every day with my wife and family.
+					Willie is thankful, every day, for the care he received at VGH.
+				</p>
+				<p>
+					“The team at Vancouver General Hospital made it possible for me to have a second lease on life,” he says, “and I’m not going to waste it.”
+				</p>
+				<p>
+					“I want to go for it.”
 				</p>
 			</div>
 		</div>
@@ -158,11 +180,23 @@
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">
-				<h2>Lorem ipsum dolar sit amet</h2>
+				<h2>Join Us</h2>
 				<p>
-					Join us in supporting the Future of Surgery and improving outcomes for patients like Willie.
+					Join us in supporting the Future of Surgery and improving outcomes for patients like Willie.
 				</p>
-				<a class="share-btn" href="">Register with Facebook</a>
+				<div class="fb-buttons">
+					<span class="share-btn fb-login btn facebook" onclick="FacebookModule.login(this);">Register With Facebook</span>
+					<span class="fb-logout hidden" onclick="FacebookModule.logout()">Logout from Facebook</span>
+				</div>
+				<form class="luminateApi survey-form" method="POST" action="http://support.vghfoundation.ca/site/CRSurveyAPI" data-luminateapi="{"callback": "submitSurveyCallback", "requiresAuth": "true"}">
+					<input type="hidden" name="method" value="submitSurvey">
+					<input type="hidden" name="survey_id" value="1560">
+					<input type="text" placeholder="First Name" name="cons_first_name" id="survey-cons-first-name">
+					<input type="text" placeholder="Last Name" name="cons_last_name" id="survey-cons-last-name">
+					<input type="text" placeholder="Email" name="cons_email" id="survey-cons-email">
+					<input type="hidden" name="cons_email_opt_in" value="true">
+					<button type="submit" class="button small">Sign Me Up</button>
+				</form>
 			</div>
 			<div class="img-block">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png" alt="">

@@ -44,7 +44,20 @@
 <?php endif; ?>
 
 	<?php wp_head(); ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.8.1/luminateExtend.min.js"></script>
+  <script>
+    console.log(luminateExtend.library.version);
+
+    luminateExtend.init({
+      apiKey: 'wDB09SQODRpVIOvX', 
+      path: {
+        nonsecure: 'http://support.vghfoundation.ca/site/', 
+        secure: 'https://support.vghfoundation.ca/site/'
+      }
+    });
+
+  </script>
 </head>
 
 <body <?php body_class(); ?>>

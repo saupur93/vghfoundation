@@ -6812,6 +6812,9 @@ body.overlay-open {
 	}
 	.title {
 		font-size: 150px;
+		@include media ($ptabAndLess) {
+			font-size: 70px;
+		}
 	}
 	h1 {
 		margin-top: 75px;
@@ -6849,9 +6852,23 @@ body.overlay-open {
 	}
 	.title {
 		font-size: 200px;
+		@include media ($ptabAndLess) {
+			font-size: 70px;
+		}
 	}
 	.tagline {
 		font-family: $font-med;
+	}
+	h1 {
+		text-align: center;
+		color: #fff;
+		font-size: 75px;
+		font-family: $font-med;
+		@include media ($ptabAndLess) {
+			margin-top: 20px;
+			line-height: 48px;
+			font-size: 60px;
+		}
 	}
 	.layer-bg {
 		z-index: 0;
@@ -6885,7 +6902,7 @@ body.overlay-open {
 		flex-flow: column nowrap;
 		justify-content: flex-end;
 		align-items: center;
-		background: url('../img/ar-bg-v-white.svg') fixed no-repeat;
+		background: url('../img/ar-bg-v-white.svg') no-repeat;
 		background-position: 0% 50%;
 		background-size: 50% auto;
 		opacity: 0;
@@ -6910,16 +6927,6 @@ body.overlay-open {
 				background: rgba(255,255,255,0.7);
 				animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
 			}
-		}
-	}
-	h1 {
-		text-align: center;
-		color: #fff;
-		font-size: 75px;
-		font-family: $font-med;
-		@include media ($ptabAndLess) {
-			margin-top: 20px;
-			line-height: 60px;
 		}
 	}
 }
@@ -7079,9 +7086,17 @@ body.overlay-open {
 				font-size: 26px;
 				font-family: $font-med;
 				text-align: center;
+				transition: background 0.2s ease;
 				@include media ($ptabAndLess) {
 					margin-top: 35px;
 					@include font-size(20px);
+				}
+				&.hidden {
+					display: none;
+				}
+				&:hover {
+					cursor: pointer;
+					background: $brand-green;
 				}
 			}
 		}
