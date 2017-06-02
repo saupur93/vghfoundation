@@ -26,15 +26,15 @@
 					<iframe width="100%" height="720" src="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="theme-stories">
-					<a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
-						Darla's Story
-					</a>
-					<a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
-						Dr Umedaly's Story
-					</a>
 					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('http://placehold.it/500x400');">
 						Willie's Story
 					</a>
+          <a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
+            Giving back to health care
+          </a>
+          <a href="" class="story" style="background-image: url('http://placehold.it/500x400');">
+            The Future of Surgery
+          </a>
 				</div>
 			</div>
 		</div>
