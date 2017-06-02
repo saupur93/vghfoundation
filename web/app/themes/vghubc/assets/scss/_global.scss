@@ -6917,6 +6917,10 @@ body.overlay-open {
 		color: #fff;
 		font-size: 75px;
 		font-family: $font-med;
+		@include media ($ptabAndLess) {
+			margin-top: 20px;
+			line-height: 60px;
+		}
 	}
 }
 
