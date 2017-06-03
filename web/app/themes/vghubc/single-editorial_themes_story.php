@@ -180,9 +180,9 @@
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">
-				<h2>Join Us</h2>
+				<h2>Enjoy Father’s Day brunch on us!</h2>
 				<p>
-					Join us in supporting the Future of Surgery and improving outcomes for patients like Willie.
+					Celebrate the gift of health and create more memories with the dads in your life by signing up to win a $100 VISA Gift Card.
 				</p>
 				<div class="fb-buttons">
 					<span class="share-btn fb-login btn facebook" onclick="FacebookModule.login(this);">Register With Facebook</span>
