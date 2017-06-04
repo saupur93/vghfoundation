@@ -141,6 +141,7 @@ export default facebookLogin = {
     facebookLogin.form.classList.remove('hidden');
     if(response.errorResponse) {
       facebookLogin.messageText.innerHTML = response.errorResponse.message;
+      facebookLogin.form.classList.add('hidden');
     } else {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
