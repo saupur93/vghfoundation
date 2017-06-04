@@ -16,9 +16,10 @@
 });
 </script>
 
-<form class="luminateApi survey-form" method="POST" action="<?php echo $nonsecure_luminate_url ?>site/CRSurveyAPI" data-luminateApi='{"callback": "submitSurveyCallback", "requiresAuth": "true"}'>
+
+<form class="luminateApi <?php print $atts['form_class']; ?>" method="POST" action="<?php echo $nonsecure_luminate_url ?>site/CRSurveyAPI" data-luminateApi='{"callback": "<?php print $atts['js_callback']; ?>", "requiresAuth": "true"}'>
           <input type="hidden" name="method" value="submitSurvey">
-          <input type="hidden" name="survey_id" value="1441">
+          <input type="hidden" name="survey_id" value="<?php print $atts['form_id']; ?>">
           <div class="row">
               <input type="text" placeholder="First Name" name="cons_first_name" id="survey-cons-first-name">
           </div>
@@ -34,7 +35,7 @@
           <input type="hidden" name="cons_email_opt_in" value="true">
           <div class="row">
             <div class="small-12 large-9 large-offset-3 columns">
-              <button type="submit" class="button small">Sign Me Up</button>
+              <button type="submit" class="button small"><?php print $atts['submit_text']; ?></button>
             </div>
           </div>
         </form>

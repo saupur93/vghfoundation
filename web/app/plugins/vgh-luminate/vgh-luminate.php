@@ -84,9 +84,20 @@ function vgh_ubc_luminate_options_page() {
 function vgh_ubc_luminate_shortcode( $atts, $content = null ) {
   global $post;
 
-  extract( shortcode_atts(array(
-    'form_id' => '1432',
-  ), $atts) );
+  // making these default fallbacks rather than hardcoding
+  if(empty($atts['form_id'])) {
+    $atts['form_id'] = '1432';
+  }
+  if(empty($atts['js_callback'])) {
+    $atts['js_callback'] = 'submitSurveyCallback';
+  }
+  if(empty($atts['form_class'])) {
+    $atts['form_class'] = 'survey-form';
+  }
+  if(empty($atts['submit_text'])) {
+    $atts['submit_text'] = 'Sign Me Up';
+  }
+  
 
   $options = get_option( 'vgh_luminate' );
   $luminate_api_key = $options['luminate_api_key'];

@@ -181,22 +181,15 @@
 		<div class="inner-wrap">
 			<div class="text-block">
 				<h2>Enjoy Father’s Day brunch on us!</h2>
-				<p>
+				<p class="message">
 					Celebrate the gift of health and create more memories with the dads in your life by signing up to win a $100 VISA Gift Card.
 				</p>
+				<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
 				<div class="fb-buttons">
-					<span class="share-btn fb-login btn facebook" onclick="FacebookModule.login(this);">Register With Facebook</span>
-					<span class="fb-logout hidden" onclick="FacebookModule.logout()">Logout from Facebook</span>
+					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span>
 				</div>
-				<form class="luminateApi survey-form" method="POST" action="http://support.vghfoundation.ca/site/CRSurveyAPI" data-luminateapi="{"callback": "submitSurveyCallback", "requiresAuth": "true"}">
-					<input type="hidden" name="method" value="submitSurvey">
-					<input type="hidden" name="survey_id" value="1560">
-					<input type="text" placeholder="First Name" name="cons_first_name" id="survey-cons-first-name">
-					<input type="text" placeholder="Last Name" name="cons_last_name" id="survey-cons-last-name">
-					<input type="text" placeholder="Email" name="cons_email" id="survey-cons-email">
-					<input type="hidden" name="cons_email_opt_in" value="true">
-					<button type="submit" class="button small">Sign Me Up</button>
-				</form>
+
+				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 			</div>
 			<div class="img-block">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png" alt="">

@@ -5,11 +5,11 @@ import slideshow from './modules/slideshow';
 import NewsFeed from './modules/newsFeed';
 import AnnualReport from './modules/annualReport';
 const MiscUI = require('./modules/miscUI');
-import Facebook from './modules/facebook';
+import FacebookLogin from './modules/facebookLogin';
 
-if (Facebook.loginButton) {
-  window.FacebookModule = Facebook;
-  Facebook.init()
+if (FacebookLogin.loginButton) {
+  window.FacebookLogin = FacebookLogin;
+  FacebookLogin.init()
 };
 
 class App {

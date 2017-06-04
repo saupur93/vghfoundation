@@ -12899,6 +12899,183 @@ return jQuery;
 } );
 
 },{}],3:[function(require,module,exports){
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.Jump = factory());
+}(this, (function () { 'use strict';
+
+// Robert Penner's easeInOutQuad
+
+// find the rest of his easing functions here: http://robertpenner.com/easing/
+// find them exported for ES6 consumption here: https://github.com/jaxgeller/ez.js
+
+var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+};
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+var jumper = function jumper() {
+  // private variable cache
+  // no variables are created during a jump, preventing memory leaks
+
+  var element = void 0; // element to scroll to                   (node)
+
+  var start = void 0; // where scroll starts                    (px)
+  var stop = void 0; // where scroll stops                     (px)
+
+  var offset = void 0; // adjustment from the stop position      (px)
+  var easing = void 0; // easing function                        (function)
+  var a11y = void 0; // accessibility support flag             (boolean)
+
+  var distance = void 0; // distance of scroll                     (px)
+  var duration = void 0; // scroll duration                        (ms)
+
+  var timeStart = void 0; // time scroll started                    (ms)
+  var timeElapsed = void 0; // time spent scrolling thus far          (ms)
+
+  var next = void 0; // next scroll position                   (px)
+
+  var callback = void 0; // to call when done scrolling            (function)
+
+  // scroll position helper
+
+  function location() {
+    return window.scrollY || window.pageYOffset;
+  }
+
+  // element offset helper
+
+  function top(element) {
+    return element.getBoundingClientRect().top + start;
+  }
+
+  // rAF loop helper
+
+  function loop(timeCurrent) {
+    // store time scroll started, if not started already
+    if (!timeStart) {
+      timeStart = timeCurrent;
+    }
+
+    // determine time spent scrolling so far
+    timeElapsed = timeCurrent - timeStart;
+
+    // calculate next scroll position
+    next = easing(timeElapsed, start, distance, duration);
+
+    // scroll to it
+    window.scrollTo(0, next);
+
+    // check progress
+    timeElapsed < duration ? window.requestAnimationFrame(loop) // continue scroll loop
+    : done(); // scrolling is done
+  }
+
+  // scroll finished helper
+
+  function done() {
+    // account for rAF time rounding inaccuracies
+    window.scrollTo(0, start + distance);
+
+    // if scrolling to an element, and accessibility is enabled
+    if (element && a11y) {
+      // add tabindex indicating programmatic focus
+      element.setAttribute('tabindex', '-1');
+
+      // focus the element
+      element.focus();
+    }
+
+    // if it exists, fire the callback
+    if (typeof callback === 'function') {
+      callback();
+    }
+
+    // reset time for next jump
+    timeStart = false;
+  }
+
+  // API
+
+  function jump(target) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    // resolve options, or use defaults
+    duration = options.duration || 1000;
+    offset = options.offset || 0;
+    callback = options.callback; // "undefined" is a suitable default, and won't be called
+    easing = options.easing || easeInOutQuad;
+    a11y = options.a11y || false;
+
+    // cache starting position
+    start = location();
+
+    // resolve target
+    switch (typeof target === 'undefined' ? 'undefined' : _typeof(target)) {
+      // scroll from current position
+      case 'number':
+        element = undefined; // no element to scroll to
+        a11y = false; // make sure accessibility is off
+        stop = start + target;
+        break;
+
+      // scroll to element (node)
+      // bounding rect is relative to the viewport
+      case 'object':
+        element = target;
+        stop = top(element);
+        break;
+
+      // scroll to element (selector)
+      // bounding rect is relative to the viewport
+      case 'string':
+        element = document.querySelector(target);
+        stop = top(element);
+        break;
+    }
+
+    // resolve scroll distance, accounting for offset
+    distance = stop - start + offset;
+
+    // resolve duration
+    switch (_typeof(options.duration)) {
+      // number in ms
+      case 'number':
+        duration = options.duration;
+        break;
+
+      // function passed the distance of the scroll
+      case 'function':
+        duration = options.duration(distance);
+        break;
+    }
+
+    // start the loop
+    window.requestAnimationFrame(loop);
+  }
+
+  // expose only the jump method
+  return jump;
+};
+
+// export singleton
+
+var singleton = jumper();
+
+return singleton;
+
+})));
+
+},{}],4:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -12990,7 +13167,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -13197,7 +13374,7 @@ exports.stringify = function (obj, opts) {
 	}).join('&') : '';
 };
 
-},{"object-assign":3,"strict-uri-encode":5}],5:[function(require,module,exports){
+},{"object-assign":4,"strict-uri-encode":6}],6:[function(require,module,exports){
 'use strict';
 module.exports = function (str) {
 	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
@@ -13205,7 +13382,7 @@ module.exports = function (str) {
 	});
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13226,9 +13403,9 @@ var _annualReport = require('./modules/annualReport');
 
 var _annualReport2 = _interopRequireDefault(_annualReport);
 
-var _facebook = require('./modules/facebook');
+var _facebookLogin = require('./modules/facebookLogin');
 
-var _facebook2 = _interopRequireDefault(_facebook);
+var _facebookLogin2 = _interopRequireDefault(_facebookLogin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13240,9 +13417,9 @@ var DonationTabs = require('./modules/donationTabs');
 var MiscUI = require('./modules/miscUI');
 
 
-if (_facebook2.default.loginButton) {
-  window.FacebookModule = _facebook2.default;
-  _facebook2.default.init();
+if (_facebookLogin2.default.loginButton) {
+  window.FacebookLogin = _facebookLogin2.default;
+  _facebookLogin2.default.init();
 };
 
 var App = function () {
@@ -13880,7 +14057,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/annualReport":7,"./modules/donationTabs":8,"./modules/facebook":9,"./modules/fixedHeaderScroll":10,"./modules/miscUI":11,"./modules/newsFeed":12,"./modules/slideshow":13,"jquery":2}],7:[function(require,module,exports){
+},{"./modules/annualReport":8,"./modules/donationTabs":9,"./modules/facebookLogin":10,"./modules/fixedHeaderScroll":11,"./modules/miscUI":12,"./modules/newsFeed":13,"./modules/slideshow":14,"jquery":2}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14139,10 +14316,10 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
-      (0, _jquery2.default)('#president-message').on('click', openOverlay);
+      (0, _jquery2.default)('#president-message').on('click', openOverlay
 
       // close overlay and clear DOM innerHTML
-      var closeOverlay = function closeOverlay(e) {
+      );var closeOverlay = function closeOverlay(e) {
         e.preventDefault();
         (0, _jquery2.default)('body').removeClass('overlay-open');
         overlay.find('.overlay-content').empty();
@@ -14156,7 +14333,7 @@ var AnnualReport = function () {
 
 exports.default = AnnualReport;
 
-},{"jquery":2}],8:[function(require,module,exports){
+},{"jquery":2}],9:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14253,141 +14430,152 @@ var DonationTabs = function () {
 
 module.exports = DonationTabs;
 
-},{"jquery":2}],9:[function(require,module,exports){
+},{"jquery":2}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
-var _jquery = require('jquery');
+var _jump = require('jump.js');
 
-var _jquery2 = _interopRequireDefault(_jquery);
+var _jump2 = _interopRequireDefault(_jump);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import st from './scrollto';
+var facebookLogin = void 0;
 
-var _module = void 0;
+exports.default = facebookLogin = {
+  loginButton: document.querySelector('.fb-login'),
+  logoutButton: document.querySelector('.fb-logout'),
+  messageText: document.querySelector('.message'),
+  thankYou: document.querySelector('.thank-you'),
+  content: document.querySelector('.contest-register'),
+  form: document.querySelector('.facebook-luminate'),
+  fields: {
+    email: document.querySelector('#survey-cons-email'),
+    first_name: document.querySelector('#survey-cons-first-name'),
+    last_name: document.querySelector('#survey-cons-last-name')
+  },
 
-exports.default = _module = {
-	loginButton: document.querySelector('.fb-login'),
-	logoutButton: document.querySelector('.fb-logout'),
-	content: document.querySelector('.contest-register'),
-	fields: {
-		email: document.querySelector('#survey-cons-email'),
-		first_name: document.querySelector('#survey-cons-first-name'),
-		last_name: document.querySelector('#survey-cons-last-name')
-	},
+  init: function init() {
 
-	init: function init() {
-		_module.loadSDK();
+    facebookLogin.loadSDK();
 
-		window.fbAsyncInit = function () {
-			FB.init({
-				appId: '1971766793058772',
-				cookie: false,
-				xfbml: true,
-				version: 'v2.8'
-			});
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1971766793058772',
+        cookie: false,
+        xfbml: true,
+        version: 'v2.8'
+      });
 
-			FB.getLoginStatus(function (response) {
-				_module.statusChangeCallback(response);
-			});
-		};
-	},
+      FB.getLoginStatus(function (response) {
+        facebookLogin.statusChangeCallback(response);
+      });
+    };
+  },
+  loadSDK: function loadSDK() {
+    (function (d, s, id) {
+      var js,
+          fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'facebook-jssdk');
+  },
+  statusChangeCallback: function statusChangeCallback(response) {
+    //console.log('statusChangeCallback');
+    console.log(response);
 
-	loadSDK: function loadSDK() {
-		(function (d, s, id) {
-			var js,
-			    fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		})(document, 'script', 'facebook-jssdk');
-	},
+    if (response.status === 'connected') {
+      console.log('You are logged in');
+      //facebookLogin.loginButton.classList.add('hidden');
+      //facebookLogin.logoutButton.classList.remove('hidden');
+    } else if (response.status === 'not_authorized') {
+      //console.log('Please log into this app.');
+    } else {
+        //console.log('Please log into facebookLogin.');
+      }
+  },
+  checkLoginState: function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+      facebookLogin.statusChangeCallback(response);
+    });
+  },
+  login: function login(el) {
+    if (el.classList.contains('disabled')) return false;
 
-	statusChangeCallback: function statusChangeCallback(response) {
-		//console.log('statusChangeCallback');
-		console.log(response);
+    FB.login(function (response) {
+      if (response.authResponse) {
+        console.log('Welcome!  Fetching your information.... ', response);
+        //facebookLogin.checkLoginState();
 
-		if (response.status === 'connected') {
-			console.log('You are logged in');
-			//_module.loginButton.classList.add('hidden');
-			//_module.logoutButton.classList.remove('hidden');
-		} else if (response.status === 'not_authorized') {
-			//console.log('Please log into this app.');
-		} else {
-				//console.log('Please log into Facebook.');
-			}
-	},
+        FB.api('/me?fields=first_name,last_name,email', function (response) {
+          facebookLogin.populateFormFields(response);
 
-	checkLoginState: function checkLoginState() {
-		FB.getLoginStatus(function (response) {
-			_module.statusChangeCallback(response);
-		});
-	},
+          if (facebookLogin.form.length > 0) {
+            facebookLogin.form.querySelector('button').click();
+          }
+        });
+      } else {
+        //console.log('User cancelled login or did not fully authorize.');
+      }
+    }, {
+      scope: 'public_profile,email'
+    });
+  },
+  logout: function logout() {
+    FB.logout(function (response) {
+      facebookLogin.loginButton.classList.remove('hidden');
+      facebookLogin.logoutButton.classList.add('hidden');
+    });
+  },
 
-	login: function login(el) {
-		if (el.classList.contains('disabled')) return false;
 
-		FB.login(function (response) {
-			if (response.authResponse) {
-				console.log('Welcome!  Fetching your information.... ', response);
-				//_module.checkLoginState();
-
-				FB.api('/me?fields=first_name,last_name,email', function (response) {
-					console.log(response);
-
-					_module.loginButton.classList.add('hidden');
-					_module.logoutButton.classList.remove('hidden');
-					// st.animate(_module.content.offsetTop, 100);
-
-					_module.populateFormFields(response);
-				});
-				var uri = "https://support.vghfoundation.ca/site/CRSurveyAPI",
-				    postdata = "method=listUserFields&v=1.7.1&api_key=wDB09SQODRpVIOvX";
-
-				xhr = new XMLHttpRequest();
-				xhr.open('POST', uri, true);
-				console.log(xhr);
-				xhr.onreadystatechange = function () {
-					if (xhr.readyState == 4) {
-						console.log(xhr.status);
-						console.log(xhr.responseText);
-					}
-				};
-				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhr.send(postdata);
-			} else {
-				//console.log('User cancelled login or did not fully authorize.');
-			}
-		}, {
-			scope: 'public_profile,email'
-		});
-	},
-
-	logout: function logout() {
-		FB.logout(function (response) {
-			_module.loginButton.classList.remove('hidden');
-			_module.logoutButton.classList.add('hidden');
-		});
-	},
-
-	populateFormFields: function populateFormFields(user) {
-		for (var key in user) {
-			if (user.hasOwnProperty(key)) {
-				if (_module.fields[key]) {
-					_module.fields[key].value = user[key];
-				}
-			}
-		}
-	}
-
+  // populates hidden form inputs
+  populateFormFields: function populateFormFields(user) {
+    for (var key in user) {
+      if (user.hasOwnProperty(key)) {
+        if (facebookLogin.fields[key]) {
+          facebookLogin.fields[key].value = user[key];
+        }
+      }
+    }
+  },
+  submitLuminateSurveyCallback: function submitLuminateSurveyCallback(response) {
+    console.log('submitted');
+    console.log(response);
+    if (response.submitSurveyResponse) {
+      if (response.success == 'false' || response.submitSurveyResponse.errors) {
+        facebookLogin.luminateFormErrorHandler(response);
+      } else {
+        // success
+        facebookLogin.loginButton.classList.add('hidden');
+        facebookLogin.messageText.classList.add('hidden');
+        facebookLogin.messageText.innerHTML = "You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.";
+        facebookLogin.thankYou.classList.remove('hidden');
+        (0, _jump2.default)(facebookLogin.thankYou);
+      }
+    } else {
+      facebookLogin.luminateFormErrorHandler(response);
+    }
+  },
+  luminateFormErrorHandler: function luminateFormErrorHandler(response) {
+    console.log('failed');
+    facebookLogin.loginButton.classList.add('hidden');
+    facebookLogin.form.classList.remove('hidden');
+    if (response.errorResponse) {
+      facebookLogin.messageText.innerHTML = response.errorResponse.message;
+    } else {
+      facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
+    }
+    (0, _jump2.default)('.theme-sharing-panel');
+  }
 };
 
-},{"jquery":2}],10:[function(require,module,exports){
+},{"jump.js":3}],11:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14438,7 +14626,7 @@ var FixedHeaderScroll = function () {
 
 module.exports = FixedHeaderScroll;
 
-},{"jquery":2}],11:[function(require,module,exports){
+},{"jquery":2}],12:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14515,7 +14703,7 @@ var MiscUI = function () {
 
 module.exports = MiscUI;
 
-},{"jquery":2}],12:[function(require,module,exports){
+},{"jquery":2}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14628,7 +14816,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":2,"query-string":4}],13:[function(require,module,exports){
+},{"jquery":2,"query-string":5}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14811,4 +14999,4 @@ var slideshow = {
 
 exports.default = slideshow;
 
-},{"hammerjs":1,"jquery":2}]},{},[6]);
+},{"hammerjs":1,"jquery":2}]},{},[7]);

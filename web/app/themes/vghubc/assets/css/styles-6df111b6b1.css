@@ -6622,5 +6622,9 @@ body.overlay-open {
             transform: translateY(0);
     opacity: 1; }
 
+.luminateApi.facebook-luminate input[type="email"], .luminateApi.facebook-luminate input[type="text"] {
+  border: 1px solid #efefef;
+  width: 100%; }
+
 .survey-form {
   display: none; }
