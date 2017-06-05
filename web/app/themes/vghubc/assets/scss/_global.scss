@@ -7284,27 +7284,48 @@ body.overlay-open {
 				}
 			}
 			.share-btn {
-				margin-top: 70px;
+				margin-top:20px;
 				display: block;
 				padding: 1em;
 				background: #3d5b96; // Facebook blue
 				color: #fff;
-				font-size: 26px;
+				font-size: 21px;
 				font-family: $font-med;
 				text-align: center;
 				transition: background 0.2s ease;
+        border:2px solid #3d5b96;
 				@include media ($ptabAndLess) {
 					margin-top: 35px;
 					@include font-size(20px);
 				}
+        @include media ($tab) {
+          width:50%;
+          float:left;
+          &:last-child {
+            width:47.5%;
+            margin-left:2.5%;
+          }
+        }
 				&.hidden {
 					display: none;
 				}
 				&:hover {
 					cursor: pointer;
-					background: $brand-green;
+					background: darken(#3d5b96, 10%);
 				}
-			}
+
+        &.email-signup {
+          background-color:transparent;
+          border:2px solid $brand-green;
+          color: $brand-green;
+
+          &:hover {
+            background:$brand-green;
+            color:#fff;
+          }
+        }
+      }
+
 		}
 		.img-block {
 			width: 40%;
@@ -7341,6 +7362,9 @@ body.overlay-open {
 
 
 .luminateApi.facebook-luminate {
+  margin-top:40px;
+  float:left;
+  width:100%;
 	input[type="email"], input[type="text"] {
 		border:1px solid #efefef;
 		width:100%;

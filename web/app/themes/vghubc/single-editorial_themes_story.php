@@ -221,10 +221,10 @@
 				</p>
 				<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
 				<div class="fb-buttons">
-					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span>
+					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
 				</div>
 
-				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 			</div>
 			<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
 		</div>

@@ -14633,6 +14633,11 @@ exports.default = facebookLogin = {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
     (0, _jump2.default)('.theme-sharing-panel');
+  },
+  showEmailForm: function showEmailForm(el) {
+    console.log(this);
+    document.querySelector('.fb-buttons').style.display = 'none';
+    facebookLogin.form.classList.remove('hidden');
   }
 };
 
