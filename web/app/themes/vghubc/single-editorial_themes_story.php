@@ -36,7 +36,9 @@
 		</div>
 	</div>
 	<div class="layer-4 theme-story-video">
-		<i class="fa fa-play" aria-hidden="true" data-video="https://www.youtube.com/embed/ky4wepA0S5Y?rel=0&controls=0&showinfo=0&autoplay=1"></i>
+		<div class="theme-video-play-btn">
+			<i class="fa fa-play" aria-hidden="true" data-video="https://www.youtube.com/embed/ky4wepA0S5Y?rel=0&controls=0&showinfo=0&autoplay=1"></i>
+		</div>
 		<iframe width="1280" height="720" src="" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>

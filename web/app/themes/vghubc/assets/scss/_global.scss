@@ -6938,22 +6938,21 @@ body.overlay-open {
 		z-index: 4;
 		opacity: 0;
 		animation: layerIn 1s 7s linear forwards;
-		.fa, .iframe-wrapper {
+		.iframe-wrapper {
 			position: absolute;
 		}
-		.fa {
-			z-index: 2;
-			display: block;
-			margin-top: 150px;
-			font-size: 70px;
+		.theme-video-play-btn {
+			// z-index: 2;
+			// display: block;
+			// margin-top: 150px;
+			// font-size: 70px;
 			color: #fff;
-			transition: all 0.5s ease;
+			// transition: all 0.5s ease;
 			&.fade {
 				opacity: 0;
 			}
 			&:hover {
-				cursor: pointer;
-				color: $surgery;
+				@extend .theme-video-play-btn-hover;
 			}
 		}
 		.iframe-wrapper {
@@ -7038,6 +7037,39 @@ body.overlay-open {
 	}
 }
 
+.theme-video-play-btn {
+	margin-top: 250px;
+	padding-left: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	font-size: 30px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: ' ';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		right: 100%;
+		top: 0;
+		z-index: -1;
+		background: $surgery;
+		transition: right 0.5s ease;
+	}
+}
+.theme-video-play-btn-hover {
+	cursor: pointer;
+	&:before {
+		right: 0;
+	}
+}
+
 .theme-video-box {
 	margin-bottom: 15px;
 	position: relative;
@@ -7068,18 +7100,39 @@ body.overlay-open {
 		background-size: cover;
 		color: #fff;
 		transition: opacity 0.5s ease;
-		.fa {
-			font-size: 100px;
-			transition: color 0.3s ease;
-		}
+		// .play-btn {
+		// 	margin-top: 250px;
+		// 	padding-left: 3px;
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	align-items: center;
+		// 	width: 70px;
+		// 	height: 70px;
+		// 	font-size: 30px;
+		// 	border: 5px solid #fff;
+		// 	border-radius: 50%;
+		// 	position: relative;
+		// 	overflow: hidden;
+		// 	&:before {
+		// 		content: ' ';
+		// 		display: block;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		position: absolute;
+		// 		right: 100%;
+		// 		top: 0;
+		// 		z-index: -1;
+		// 		background: $surgery;
+		// 		transition: right 0.5s ease;
+		// 	}
+		// }
 		&.fade {
 			opacity: 0;
 		}
-		&:hover {
-			cursor: pointer;
-			.fa {
-				color: $surgery;
-			}
+	}
+	&:hover {
+		.play-btn {
+			@extend .theme-video-play-btn-hover;
 		}
 	}
 	iframe {
