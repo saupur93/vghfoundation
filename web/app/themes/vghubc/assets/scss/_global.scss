@@ -6942,12 +6942,10 @@ body.overlay-open {
 			position: absolute;
 		}
 		.theme-video-play-btn {
-			// z-index: 2;
-			// display: block;
-			// margin-top: 150px;
-			// font-size: 70px;
 			color: #fff;
-			// transition: all 0.5s ease;
+			@include media ($ptabAndLess) {
+				margin-top: 200px;
+			}
 			&.fade {
 				opacity: 0;
 			}
@@ -6978,25 +6976,26 @@ body.overlay-open {
 	align-items: center;
 	width: 100%;
 	height: 100%;
+	padding: 0 50px;
 	transition: all 0.5s ease;
 	&:not(.show) {
 		transform: translateY(100%);
 		opacity: 0;
 	}
 	.cta-message-content {
-		padding: 100px 0;
+		padding: 100px 50px;
 		width: 100%;
 		min-height: 450px;
 		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
+		// flex-flow: column nowrap;
+		// justify-content: center;
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 		position: relative;
 		.close {
 			position: absolute;
 			right: 30px;
-			top: 50px;
+			top: 30px;
 			display: block;
 			width: 40px;
 			height: 40px;
@@ -7022,22 +7021,25 @@ body.overlay-open {
 				}
 			}
 		}
-		.container {
-			.inner-wrap {
-				display: flex;
-				.text-block {
-					width: 55%;
-					margin-right: 30px;
-					flex-grow: 1;
-				}
-				.img-block {
-					width: 40%;
-					min-height: 400px;
-					background-repeat: no-repeat;
-					background-position: center;
-					background-size: cover;
-				}
+
+		.text-block, .img-block {
+			margin: 0 50px;
+		}
+		.text-block {
+			width: 50%;
+			flex-grow: 1;
+			font-size: 20px;
+			h2 {
+				margin-bottom: 30px;
+				line-height: 1em;
 			}
+		}
+		.img-block {
+			width: 50%;
+			min-height: 400px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 		}
 	}
 	&.animate {
@@ -7074,6 +7076,10 @@ body.overlay-open {
 	border-radius: 50%;
 	position: relative;
 	overflow: hidden;
+	transition: color 0.3s linear;
+	@include media ($ptabAndLess) {
+		margin-top: 150px;
+	}
 	&:before {
 		content: ' ';
 		display: block;
@@ -7083,12 +7089,14 @@ body.overlay-open {
 		right: 100%;
 		top: 0;
 		z-index: -1;
-		background: $surgery;
+		background: #fff;
 		transition: right 0.5s ease;
 	}
 }
 .theme-video-play-btn-hover {
 	cursor: pointer;
+	color: $surgery;
+	transition-delay: 0.3s;
 	&:before {
 		right: 0;
 	}
