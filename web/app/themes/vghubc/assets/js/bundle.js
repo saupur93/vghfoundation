@@ -14361,6 +14361,7 @@ var CTAMessage = function () {
 
 		this.ctamsgbox = document.querySelector('#cta-message');
 		this.close = this.ctamsgbox.querySelector('.close');
+		this.windowheight = window.innerHeight;
 
 		this.events();
 	}
@@ -14374,7 +14375,15 @@ var CTAMessage = function () {
 				_this.ctamsgbox.classList.add('animate');
 				setTimeout(function () {
 					_this.ctamsgbox.style.display = "none";
-				});
+				}, 500);
+			});
+
+			window.addEventListener('scroll', function () {
+				if (window.pageYOffset > _this.windowheight / 2) {
+					_this.ctamsgbox.classList.add('show');
+				} else {
+					_this.ctamsgbox.classList.remove('show');
+				}
 			});
 		}
 	}]);

@@ -44,25 +44,27 @@
 </div>
 
 <div id="cta-message">
-	<div class="close">
-		<span></span>
-		<span></span>
-	</div>
-	<div class="container">
-		<div class="inner-wrap">
-			<div class="text-block">
-				<h2>Enjoy Father’s Day brunch on us!</h2>
-				<p>
-					Celebrate the gift of health and create more memories with the dads in your life by signing up to win a $100 VISA Gift Card.
-				</p>
-				<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
-				<div class="fb-buttons">
-					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span>
-				</div>
+	<div class="cta-message-content">
+		<div class="close">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="container">
+			<div class="inner-wrap">
+				<div class="text-block">
+					<h2>Enjoy Father’s Day brunch on us!</h2>
+					<p>
+						Celebrate the gift of health and create more memories with the dads in your life by signing up to win a $100 VISA Gift Card.
+					</p>
+					<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
+					<div class="fb-buttons">
+						<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span>
+					</div>
 
-				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+					<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+				</div>
+				<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
 			</div>
-			<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
 		</div>
 	</div>
 </div>
