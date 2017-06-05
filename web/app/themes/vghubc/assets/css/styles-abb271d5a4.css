@@ -6803,11 +6803,11 @@ body.overlay-open {
             transform: translateY(0);
     opacity: 1; }
 
-.luminateApi.facebook-luminate {
+.luminateApi.facebook-luminate, .luminateApi.facebook-luminate2 {
   margin-top: 40px;
   float: left;
   width: 100%; }
-  .luminateApi.facebook-luminate input[type="email"], .luminateApi.facebook-luminate input[type="text"] {
+  .luminateApi.facebook-luminate input[type="email"], .luminateApi.facebook-luminate input[type="text"], .luminateApi.facebook-luminate2 input[type="email"], .luminateApi.facebook-luminate2 input[type="text"] {
     border: 1px solid #efefef;
     width: 100%; }
 
