@@ -59,7 +59,7 @@
 				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span>
 			</div>
 
-			<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+			<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Register with Email" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate2 hidden"]'); ?>
 		</div>
 		<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
 	</div>
