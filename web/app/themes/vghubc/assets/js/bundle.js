@@ -14380,7 +14380,7 @@ var CTAMessage = function () {
 
 			window.addEventListener('scroll', function () {
 				console.log('scrolling');
-				if (window.pageYOffset > _this.windowheight / 2) {
+				if (window.pageYOffset > _this.windowheight / 1.5) {
 					_this.ctamsgbox.classList.add('show');
 				} else {
 					_this.ctamsgbox.classList.remove('show');
@@ -14636,8 +14636,9 @@ exports.default = facebookLogin = {
     (0, _jump2.default)('.theme-sharing-panel');
   },
   showEmailForm: function showEmailForm(el) {
+    console.log('show email form');
     console.log(this);
-    document.querySelector('.fb-buttons').style.display = 'none';
+    facebookLogin.loginButton.style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
   }
 };
