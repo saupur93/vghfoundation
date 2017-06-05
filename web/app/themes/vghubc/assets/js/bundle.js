@@ -13415,6 +13415,9 @@ var FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 var DonationTabs = require('./modules/donationTabs');
 
 var MiscUI = require('./modules/miscUI');
+var VideoCover = require('./modules/videocover');
+var StoryHeaderVideo = require('./modules/storyheadervideo');
+var CTAMessage = require('./modules/ctamessage');
 
 
 if (_facebookLogin2.default.loginButton) {
@@ -13508,6 +13511,18 @@ var App = function () {
 
       if ((0, _jquery2.default)('.post-template-single-editorial_themes_story').length) {
         this.miscUI = new MiscUI();
+      }
+
+      if ((0, _jquery2.default)('.theme-video-box').length) {
+        this.videocover = new VideoCover();
+      }
+
+      if ((0, _jquery2.default)('.theme-story-head .theme-story-video').length) {
+        this.storyheadervideo = new StoryHeaderVideo();
+      }
+
+      if ((0, _jquery2.default)('#cta-message').length) {
+        this.ctamessage = new CTAMessage();
       }
 
       if ((0, _jquery2.default)('.back-to-top').length) {
@@ -14057,7 +14072,7 @@ var App = function () {
 
 window.App = new App();
 
-},{"./modules/annualReport":8,"./modules/donationTabs":9,"./modules/facebookLogin":10,"./modules/fixedHeaderScroll":11,"./modules/miscUI":12,"./modules/newsFeed":13,"./modules/slideshow":14,"jquery":2}],8:[function(require,module,exports){
+},{"./modules/annualReport":8,"./modules/ctamessage":9,"./modules/donationTabs":10,"./modules/facebookLogin":11,"./modules/fixedHeaderScroll":12,"./modules/miscUI":13,"./modules/newsFeed":14,"./modules/slideshow":15,"./modules/storyheadervideo":16,"./modules/videocover":17,"jquery":2}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14316,10 +14331,10 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
-      (0, _jquery2.default)('#president-message').on('click', openOverlay
+      (0, _jquery2.default)('#president-message').on('click', openOverlay);
 
       // close overlay and clear DOM innerHTML
-      );var closeOverlay = function closeOverlay(e) {
+      var closeOverlay = function closeOverlay(e) {
         e.preventDefault();
         (0, _jquery2.default)('body').removeClass('overlay-open');
         overlay.find('.overlay-content').empty();
@@ -14334,6 +14349,42 @@ var AnnualReport = function () {
 exports.default = AnnualReport;
 
 },{"jquery":2}],9:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CTAMessage = function () {
+	function CTAMessage() {
+		_classCallCheck(this, CTAMessage);
+
+		this.ctamsgbox = document.querySelector('#cta-message');
+		this.close = this.ctamsgbox.querySelector('.close');
+
+		this.events();
+	}
+
+	_createClass(CTAMessage, [{
+		key: 'events',
+		value: function events() {
+			var _this = this;
+
+			this.close.addEventListener('click', function () {
+				_this.ctamsgbox.classList.add('animate');
+				setTimeout(function () {
+					_this.ctamsgbox.style.display = "none";
+				});
+			});
+		}
+	}]);
+
+	return CTAMessage;
+}();
+
+module.exports = CTAMessage;
+
+},{}],10:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14430,7 +14481,7 @@ var DonationTabs = function () {
 
 module.exports = DonationTabs;
 
-},{"jquery":2}],10:[function(require,module,exports){
+},{"jquery":2}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14576,7 +14627,7 @@ exports.default = facebookLogin = {
   }
 };
 
-},{"jump.js":3}],11:[function(require,module,exports){
+},{"jump.js":3}],12:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14627,7 +14678,7 @@ var FixedHeaderScroll = function () {
 
 module.exports = FixedHeaderScroll;
 
-},{"jquery":2}],12:[function(require,module,exports){
+},{"jquery":2}],13:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14704,7 +14755,7 @@ var MiscUI = function () {
 
 module.exports = MiscUI;
 
-},{"jquery":2}],13:[function(require,module,exports){
+},{"jquery":2}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14817,7 +14868,7 @@ var NewsFeed = function () {
 
 exports.default = NewsFeed;
 
-},{"jquery":2,"query-string":5}],14:[function(require,module,exports){
+},{"jquery":2,"query-string":5}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15000,4 +15051,95 @@ var slideshow = {
 
 exports.default = slideshow;
 
-},{"hammerjs":1,"jquery":2}]},{},[7]);
+},{"hammerjs":1,"jquery":2}],16:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StoryHeaderVideo = function () {
+	function StoryHeaderVideo() {
+		_classCallCheck(this, StoryHeaderVideo);
+
+		this.videoLayer = document.querySelector('.theme-story-head .theme-story-video');
+		this.playBtn = this.videoLayer.querySelector('.fa');
+		this.videoframewrapper = this.videoLayer.querySelector('.iframe-wrapper');
+		this.videoframe = this.videoframewrapper.querySelector('iframe');
+
+		this.events();
+	}
+
+	_createClass(StoryHeaderVideo, [{
+		key: 'events',
+		value: function events() {
+			var _this = this;
+
+			this.playBtn.addEventListener('click', function () {
+
+				// update iframe source
+				var videosrc = _this.playBtn.getAttribute('data-video');
+				_this.videoframe.setAttribute('src', videosrc);
+
+				// take away button
+				_this.playBtn.classList.add('fade');
+				_this.videoframewrapper.style.display = 'block';
+				setTimeout(function () {
+					_this.videoframewrapper.style.opacity = 1;
+				}, 100);
+				setTimeout(function () {
+					_this.playBtn.style.display = 'none';
+				}, 500);
+			});
+		}
+	}]);
+
+	return StoryHeaderVideo;
+}();
+
+module.exports = StoryHeaderVideo;
+
+},{}],17:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var VideoCover = function () {
+	function VideoCover() {
+		_classCallCheck(this, VideoCover);
+
+		this.videoBox = document.querySelector('.theme-video-box');
+		this.videocover = this.videoBox.querySelector('.cover');
+		this.videoframe = this.videoBox.querySelector('iframe');
+
+		this.events();
+	}
+
+	_createClass(VideoCover, [{
+		key: 'events',
+		value: function events() {
+			var _this = this;
+
+			this.videocover.addEventListener('click', function () {
+
+				// update iframe source
+				var videosrc = _this.videocover.getAttribute('data-video');
+				_this.videoframe.setAttribute('src', videosrc);
+
+				// take away cover
+				_this.videocover.classList.add('fade');
+				setTimeout(function () {
+					_this.videocover.style.display = 'none';
+				}, 500);
+			});
+		}
+	}]);
+
+	return VideoCover;
+}();
+
+module.exports = VideoCover;
+
+},{}]},{},[7]);

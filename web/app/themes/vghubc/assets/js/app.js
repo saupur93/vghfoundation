@@ -5,6 +5,9 @@ import slideshow from './modules/slideshow';
 import NewsFeed from './modules/newsFeed';
 import AnnualReport from './modules/annualReport';
 const MiscUI = require('./modules/miscUI');
+const VideoCover = require('./modules/videocover');
+const StoryHeaderVideo = require('./modules/storyheadervideo');
+const CTAMessage = require('./modules/ctamessage');
 import FacebookLogin from './modules/facebookLogin';
 
 if (FacebookLogin.loginButton) {
@@ -95,6 +98,18 @@ class App {
 
     if ($('.post-template-single-editorial_themes_story').length) {
       this.miscUI = new MiscUI();
+    }
+
+    if ($('.theme-video-box').length) {
+      this.videocover = new VideoCover();
+    }
+
+    if ($('.theme-story-head .theme-story-video').length) {
+      this.storyheadervideo = new StoryHeaderVideo();
+    }
+
+    if ($('#cta-message').length) {
+      this.ctamessage = new CTAMessage();
     }
 
     if ($('.back-to-top').length) {

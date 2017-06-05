@@ -14,7 +14,7 @@
 			<div class="theme-head surgery">
 				<div class="title">surgery</div>
 				<!-- <div class="tagline">Future of Surgery</div> -->
-				<h1>Our goal is to create a single, <br />state-of-the-art surgical program</h1>
+				<h1>Our goal is to create a state-of-the-art, efficient and <br />effective surgical program across VGH and UBC Hospital</h1>
 			</div>
 		</div>
 	</div>
@@ -23,10 +23,10 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<div class="theme-video-box">
-					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover.jpg');">
+					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover.jpg');" data-video="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&showinfo=0&autoplay=1">
 						<i class="fa fa-play" aria-hidden="true"></i>
 					</div>
-					<iframe width="100%" height="720" src="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="100%" height="720" src="" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="theme-stories">
 					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-01-thumb.png');">
@@ -47,19 +47,19 @@
 		<div class="container">
 			<div class="narrow-wrap">
 				<p>
-					Together, Vancouver General Hospital (VGH) and UBC Hospital are the cornerstones of surgical excellence in this province. Whether you are dealing with tumors, traumas, or transplants, we're often the only place that can help. The Future of Surgery strengthens the resources of VGH and UBC Hospital as a single, state-of-the-art, efficient, and effective surgical program.
+					Together, Vancouver General Hospital (VGH) and UBC Hospital are the cornerstones of surgical excellence in this province. Whether you are dealing with tumours, traumas, or transplants, we’re often the only place that can help. The <em>Future of Surgery</em> strengthens the resources of VGH and UBC Hospital as a single, state-of-the-art, efficient, and effective surgical program.
 				</p>
 				<p>
-					Led by this accomlished group of community, business and health care leaders, the Future of Surgery Campagin Cabinet and our donors are contributing to the transformation of health care.
+					We are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.
 				</p>
 				<ul>
 					<li>Hybrid operating room at VGH</li>
-					<li>16 new, optimally sized oeprating rooms and a 40-bed peri-operative care unit at VGH</li>
+					<li>16 new, optimally sized operating rooms and a 40-bed peri-operative care unit at VGH</li>
 					<li>Eight bed high acuity unit at UBC Hospital</li>
 					<li>Enhanced inpatient units at UBC Hospital</li>
 				</ul>
 				<div class="theme-learn-more">
-					Learn More about <em>the</em> Future of Surgery
+					Learn More about the <em>Future of Surgery</em>
 					<a href="" target="_blank">Download <em>The Case for Support</em></a>
 				</div>
 			</div>
