@@ -91,10 +91,11 @@
 
 <section class="panel theme-story-row text-right" data-transition="fadeUp">
 	<div class="img-block">
-		<video width="100%" height="100%" autoplay loop>
+		<!-- <video width="100%" height="100%" autoplay loop>
 			<source src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/videobg.mp4" type="video/mp4">
 			Your browser does not support the video tag.
-		</video>
+		</video> -->
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/willie.jpg" alt="">
 	</div>
 	<div class="text-block">
 		<div class="container">

@@ -19,7 +19,7 @@ class CTAMessage {
 
 		window.addEventListener('scroll', () => {
 			console.log('scrolling');
-			if(window.pageYOffset > this.windowheight/2) {
+			if(window.pageYOffset > this.windowheight/1.5) {
 				this.ctamsgbox.classList.add('show');
 			}
 			else {

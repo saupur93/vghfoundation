@@ -150,8 +150,9 @@ export default facebookLogin = {
 
 
   showEmailForm (el) {
+    console.log('show email form');
     console.log(this);
-    document.querySelector('.fb-buttons').style.display = 'none';
+    facebookLogin.loginButton.style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
 
   }
