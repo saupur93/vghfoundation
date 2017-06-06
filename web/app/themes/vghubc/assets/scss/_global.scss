@@ -231,8 +231,8 @@ p {
 
 html,body {
 	@include media($ptabAndLess){
-		overflow-x: hidden;
-		overflow-y: auto;
+		// overflow-x: hidden;
+		// overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 	}
 }
@@ -7003,10 +7003,13 @@ body.overlay-open {
 	height: 100%;
 	padding: 0 50px;
 	transition: all 0.5s ease;
-	overflow:scroll;
+	overflow: auto;
 	@include media ($laptopHeightOnly) {
 		display: block;
 		padding: 0 20px;
+	}
+	@include media ($mobileOnly) {
+		padding: 0 30px;
 	}
 	&:not(.show) {
 		transform: translateY(100%);
@@ -7029,11 +7032,17 @@ body.overlay-open {
 				order: 1;
 			}
 		}
+		@include media ($ptabAndLess) {
+			padding: 65px 30px 30px;
+		}
 
 		p {
 			@include font-size(28px);
 			@include media ($ptabAndLess) {
-				@include font-size(20px);
+				@include font-size(19px);
+			}
+			@include media ($mobileOnly) {
+				@include font-size(16px);
 			}
 		}
 		.close {
@@ -7043,6 +7052,10 @@ body.overlay-open {
 			display: block;
 			width: 40px;
 			height: 40px;
+			@include media ($ptabAndLess) {
+				right: 15px;
+				top: 15px;
+			}
 			span {
 				position: absolute;
 				top: 50%;
@@ -7080,11 +7093,21 @@ body.overlay-open {
 			@include media ($smDesk) {
 				margin-top: 30px;
 			}
+			@include media ($mobileOnly) {
+				margin-top: 15px;
+			}
 			h2 {
 				margin-bottom: 30px;
 				line-height: 1em;
 				@include media ($smDesk) {
 					font-size: 40px;
+				}
+				@include media ($ptabAndLess) {
+					font-size: 28px;
+				}
+				@include media ($mobileOnly) {
+					margin-bottom: 15px;
+					font-size: 24px;
 				}
 			}
 		}
@@ -7095,6 +7118,12 @@ body.overlay-open {
 			background-size: cover;
 			@include media ($smDesk) {
 				min-height: 250px;
+			}
+			@include media ($ptabAndLess) {
+				min-height: 200px;
+			}
+			@include media ($mobileOnly) {
+				min-height: 100px;
 			}
 		}
 		.fb-buttons {
@@ -7113,6 +7142,9 @@ body.overlay-open {
 			@include media ($ptabAndLess) {
 				margin-top: 5px;
 				@include font-size(20px);
+			}
+			@include media ($ptabAndLess) {
+				padding: 0.5em;
 			}
 			@include media ($tab) {
 				width:50%;
@@ -7484,7 +7516,7 @@ body.overlay-open {
 					width: 100%;
 				}
 				@include media ($ptabAndLess) {
-					margin-top: 5px;
+					margin-top: 15px;
 					@include font-size(20px);
 				}
 				&.hidden {
