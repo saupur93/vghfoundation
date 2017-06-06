@@ -6697,6 +6697,42 @@ body.overlay-open {
     min-width: 500px;
     min-height: 400px; }
 
+.post-template-single-editorial_themes_story .share-btn {
+  margin-top: 20px;
+  display: block;
+  padding: 1em;
+  background: #3d5b96;
+  color: #fff;
+  font-size: 21px;
+  font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
+  text-align: center;
+  transition: background 0.2s ease;
+  border: 2px solid #3d5b96; }
+  @media screen and (max-width: 768px) {
+    .post-template-single-editorial_themes_story .share-btn {
+      margin-top: 35px;
+      font-size: 20px;
+      font-size: 1.25rem; } }
+  @media screen and (min-width: 769px) {
+    .post-template-single-editorial_themes_story .share-btn {
+      width: 50%;
+      float: left; }
+      .post-template-single-editorial_themes_story .share-btn:last-child {
+        width: 47.5%;
+        margin-left: 2.5%; } }
+  .post-template-single-editorial_themes_story .share-btn.hidden {
+    display: none; }
+  .post-template-single-editorial_themes_story .share-btn:hover {
+    cursor: pointer;
+    background: #2e4572; }
+  .post-template-single-editorial_themes_story .share-btn.email-signup {
+    background-color: transparent;
+    border: 2px solid #7dab35;
+    color: #7dab35; }
+    .post-template-single-editorial_themes_story .share-btn.email-signup:hover {
+      background: #7dab35;
+      color: #fff; }
+
 .post-template-single-editorial_themes_story .theme-sharing-panel {
   background: #fff; }
 
