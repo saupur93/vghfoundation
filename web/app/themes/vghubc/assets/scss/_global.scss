@@ -7427,6 +7427,9 @@ body.overlay-open {
 					@include font-size(20px);
 				}
 			}
+      .error {
+        color:#c77e7e;
+      }
 			.fb-buttons {
 				display: flex;
 				flex-wrap: wrap;

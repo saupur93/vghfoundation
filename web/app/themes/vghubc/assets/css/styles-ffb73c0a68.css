@@ -6830,6 +6830,8 @@ body.overlay-open {
         .theme-sharing-panel > div > div .text-block p {
           font-size: 20px;
           font-size: 1.25rem; } }
+    .theme-sharing-panel > div > div .text-block .error {
+      color: #c77e7e; }
     .theme-sharing-panel > div > div .text-block .fb-buttons {
       display: -webkit-box;
       display: -ms-flexbox;
