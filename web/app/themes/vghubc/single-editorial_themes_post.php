@@ -32,7 +32,7 @@
 					<iframe width="100%" height="720" src="" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="theme-stories">
-					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-01-thumb.png');">
+					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-01-thumb.jpg');">
 						Willie's Story
 					</a>
 					<a href="" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-02-thumb.png');">
