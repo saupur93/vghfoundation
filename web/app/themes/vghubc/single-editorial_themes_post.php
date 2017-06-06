@@ -45,7 +45,7 @@
 		</div>
 	</section>
 
-	<section class="panel extra-padded">
+	<section class="panel extra-padded theme-content">
 		<div class="container">
 			<div class="narrow-wrap">
 				<p>
