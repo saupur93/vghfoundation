@@ -10,7 +10,7 @@ $wideDesk: new-breakpoint(1201px);
 $smDesk : new-breakpoint(max-width 1201px);
 $mobileOnly: new-breakpoint(max-width 600px);
 $ptabAndLess: new-breakpoint(max-width 768px);
-
+$tabAndLess: new-breakpoint(max-width 900px);
 $laptopHeightOnly: new-breakpoint(min-width 1024px max-height 768px);
 $portraitOnly: new-breakpoint(min-width 768px max-width 1024px);
 
