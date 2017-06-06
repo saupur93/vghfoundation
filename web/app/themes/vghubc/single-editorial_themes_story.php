@@ -44,7 +44,7 @@
 </div>
 
 
-<div id="cta-message">
+<div id="cta-message register-panel">
 	<div class="cta-message-content">
 		<div class="close">
 			<span></span>
@@ -209,7 +209,7 @@
 	</div>
 </section>
 
-<section class="panel extra-padded theme-sharing-panel">
+<section class="panel extra-padded theme-sharing-panel register-panel">
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">

@@ -12,7 +12,10 @@ import FacebookLogin from './modules/facebookLogin';
 
 if (FacebookLogin.loginButton) {
   window.FacebookLogin = FacebookLogin;
-  FacebookLogin.init()
+  let FacebookLuminate = document.querySelectorAll('.register-panel');
+  for (var i = 0; i < FacebookLuminate.length; i++) {
+    FacebookLogin.init(FacebookLuminate[i])
+  }
 };
 
 class App {

@@ -13422,7 +13422,10 @@ var CTAMessage = require('./modules/ctamessage');
 
 if (_facebookLogin2.default.loginButton) {
   window.FacebookLogin = _facebookLogin2.default;
-  _facebookLogin2.default.init();
+  var FacebookLuminate = document.querySelectorAll('.register-panel');
+  for (var i = 0; i < FacebookLuminate.length; i++) {
+    _facebookLogin2.default.init(FacebookLuminate[i]);
+  }
 };
 
 var App = function () {
@@ -14331,10 +14334,10 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
-      (0, _jquery2.default)('#president-message').on('click', openOverlay);
+      (0, _jquery2.default)('#president-message').on('click', openOverlay
 
       // close overlay and clear DOM innerHTML
-      var closeOverlay = function closeOverlay(e) {
+      );var closeOverlay = function closeOverlay(e) {
         e.preventDefault();
         (0, _jquery2.default)('body').removeClass('overlay-open');
         overlay.find('.overlay-content').empty();

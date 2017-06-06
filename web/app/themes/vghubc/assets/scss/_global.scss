@@ -6978,6 +6978,11 @@ body.overlay-open {
 	height: 100%;
 	padding: 0 50px;
 	transition: all 0.5s ease;
+	overflow:scroll;
+	@include media ($laptopHeightOnly) {
+		display: block;
+		padding: 0 20px;
+	}
 	&:not(.show) {
 		transform: translateY(100%);
 		opacity: 0;
@@ -6987,11 +6992,10 @@ body.overlay-open {
 		width: 100%;
 		min-height: 450px;
 		display: flex;
-		// flex-flow: column nowrap;
-		// justify-content: center;
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 		position: relative;
+		
 		.close {
 			position: absolute;
 			right: 30px;
@@ -7025,15 +7029,15 @@ body.overlay-open {
 		.text-block, .img-block {
 			margin: 0 50px;
 		}
-		.text-block {
-			width: 50%;
-			flex-grow: 1;
-			font-size: 20px;
-			h2 {
-				margin-bottom: 30px;
-				line-height: 1em;
-			}
-		}
+		// .text-block {
+		// 	width: 50%;
+		// 	flex-grow: 1;
+		// 	font-size: 20px;
+		// 	h2 {
+		// 		margin-bottom: 30px;
+		// 		line-height: 1em;
+		// 	}
+		// }
 		.img-block {
 			width: 50%;
 			min-height: 400px;
