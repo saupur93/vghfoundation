@@ -14636,9 +14636,8 @@ exports.default = facebookLogin = {
     (0, _jump2.default)('.theme-sharing-panel');
   },
   showEmailForm: function showEmailForm(el) {
-    console.log('show email form');
-    console.log(this);
     facebookLogin.loginButton.style.display = 'none';
+    document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
   }
 };
