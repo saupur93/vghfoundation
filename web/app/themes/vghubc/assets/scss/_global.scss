@@ -6995,6 +6995,7 @@ body.overlay-open {
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 		position: relative;
+<<<<<<< HEAD
 		@include media ($smDesk) {
 			flex-flow: column nowrap;
 			.text-block {
@@ -7004,6 +7005,16 @@ body.overlay-open {
 				order: 1;
 			}
 		}
+=======
+
+    p {
+      @include font-size(28px);
+      @include media ($ptabAndLess) {
+        @include font-size(20px);
+      }
+    }
+		
+>>>>>>> acc8c9060118adce1c80ca369fb11c379a4952e4
 		.close {
 			position: absolute;
 			right: 30px;

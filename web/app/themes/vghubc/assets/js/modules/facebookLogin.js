@@ -127,6 +127,7 @@ export default facebookLogin = {
           facebookLogin.messageText.classList.add('hidden');
           facebookLogin.messageText.innerHTML = "You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.";
           facebookLogin.thankYou.classList.remove('hidden');
+          facebookLogin.form.classList.add('hidden');
           jump(facebookLogin.thankYou);
       }
     } else {
@@ -146,12 +147,18 @@ export default facebookLogin = {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
     jump('.theme-sharing-panel');
+    document.querySelector('#cta-message').classList.remove('show');
   },
 
 
   showEmailForm (el) {
     console.log('show-email')
+    jump('.theme-sharing-panel');
+    let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
+    ctamsgbox.classList.remove('show');
+    ctamsgbox.style.display = "none";
+    // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
   }
