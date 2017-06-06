@@ -6995,7 +6995,15 @@ body.overlay-open {
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 		position: relative;
-		
+		@include media ($smDesk) {
+			flex-flow: column nowrap;
+			.text-block {
+				order: 2;
+			}
+			.img-blcok {
+				order: 1;
+			}
+		}
 		.close {
 			position: absolute;
 			right: 30px;
@@ -7028,22 +7036,34 @@ body.overlay-open {
 
 		.text-block, .img-block {
 			margin: 0 50px;
-		}
-		// .text-block {
-		// 	width: 50%;
-		// 	flex-grow: 1;
-		// 	font-size: 20px;
-		// 	h2 {
-		// 		margin-bottom: 30px;
-		// 		line-height: 1em;
-		// 	}
-		// }
-		.img-block {
 			width: 50%;
+			@include media ($smDesk) {
+				width: 100%;
+				margin: 0;
+			}
+		}
+		.text-block {
+			flex-grow: 1;
+			font-size: 20px;
+			@include media ($smDesk) {
+				margin-top: 30px;
+			}
+			h2 {
+				margin-bottom: 30px;
+				line-height: 1em;
+				@include media ($smDesk) {
+					font-size: 40px;
+				}
+			}
+		}
+		.img-block {
 			min-height: 400px;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
+			@include media ($smDesk) {
+				min-height: 250px;
+			}
 		}
 	}
 	&.animate {
@@ -7136,11 +7156,18 @@ body.overlay-open {
 		background: no-repeat center;
 		background-size: cover;
 		color: #fff;
-		font-size: 24px;
+		font-size: 75px;
 		font-family: $font-med;
-		text-transform: uppercase;
-		letter-spacing: 2px;
 		transition: opacity 0.5s ease;
+		@include media ($smDesk) {
+			font-size: 50px;
+		}
+		@include media ($ptabAndLess) {
+			font-size: 36px;
+		}
+		@include media ($mobileOnly) {
+			font-size: 32px;
+		}
 		&.fade {
 			opacity: 0;
 		}
