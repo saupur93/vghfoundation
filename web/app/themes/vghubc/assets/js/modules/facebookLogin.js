@@ -147,7 +147,10 @@ export default facebookLogin = {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
     jump('.theme-sharing-panel');
-    document.querySelector('#cta-message').classList.remove('show');
+    let ctamsgbox = document.querySelector('#cta-message');
+    facebookLogin.loginButton.style.display = 'none';
+    ctamsgbox.classList.remove('show');
+    ctamsgbox.parentNod.removeChild(ctamsgbox);
   },
 
 
@@ -157,7 +160,7 @@ export default facebookLogin = {
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
-    ctamsgbox.style.display = "none";
+    ctamsgbox.parentNod.removeChild(ctamsgbox);
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
