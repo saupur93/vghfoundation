@@ -14639,7 +14639,10 @@ exports.default = facebookLogin = {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
     (0, _jump2.default)('.theme-sharing-panel');
-    document.querySelector('#cta-message').classList.remove('show');
+    var ctamsgbox = document.querySelector('#cta-message');
+    facebookLogin.loginButton.style.display = 'none';
+    ctamsgbox.classList.remove('show');
+    ctamsgbox.style.display = "none";
   },
   showEmailForm: function showEmailForm(el) {
     console.log('show-email');

@@ -147,7 +147,10 @@ export default facebookLogin = {
       facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
     }
     jump('.theme-sharing-panel');
-    document.querySelector('#cta-message').classList.remove('show');
+    let ctamsgbox = document.querySelector('#cta-message');
+    facebookLogin.loginButton.style.display = 'none';
+    ctamsgbox.classList.remove('show');
+    ctamsgbox.style.display = "none";
   },
 
 
