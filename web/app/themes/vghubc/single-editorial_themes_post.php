@@ -73,7 +73,7 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<h2>Give Today. Donate to our Surgery Funds.</h2>
-				<p><a class="button white-keyline" href="https://secure.vghfoundation.ca/site/Donation2?df_id=1740&amp;mfc_pref=T&amp;1740.donation=form1">Donate</a></p>
+				<p><a class="button white-keyline" target="_blank" href="https://secure.vghfoundation.ca/site/Donation2?df_id=1740&amp;mfc_pref=T&amp;1740.donation=form1">Donate</a></p>
 				<p>For more information, please contact <a href="tel:6048754676">604 875 4676</a></p>
 			</div>
 		</div>
