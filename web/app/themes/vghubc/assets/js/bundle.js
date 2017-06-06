@@ -14642,7 +14642,7 @@ exports.default = facebookLogin = {
     var ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
-    ctamsgbox.outerHTML = '';
+    ctamsgbox.parentNod.removeChild(ctamsgbox);
   },
   showEmailForm: function showEmailForm(el) {
     console.log('show-email');
@@ -14650,7 +14650,7 @@ exports.default = facebookLogin = {
     var ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
-    ctamsgbox.outerHTML = '';
+    ctamsgbox.parentNod.removeChild(ctamsgbox);
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
