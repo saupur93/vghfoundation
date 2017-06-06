@@ -13,7 +13,6 @@
 		<div class="inner-wrap">
 			<div class="theme-head surgery">
 				<div class="title">surgery</div>
-				<!-- <div class="tagline">Future of Surgery</div> -->
 				<h1>Our goal is a state-of-the-art, efficient and <br>effective surgical program across VGH and UBC Hospital</h1>
 			</div>
 		</div>
