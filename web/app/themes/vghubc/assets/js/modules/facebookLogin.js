@@ -150,7 +150,7 @@ export default facebookLogin = {
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
-    ctamsgbox.style.display = "none";
+    ctamsgbox.outerHTML = '';
   },
 
 
@@ -160,7 +160,7 @@ export default facebookLogin = {
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
-    ctamsgbox.style.display = "none";
+    ctamsgbox.outerHTML = '';
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
