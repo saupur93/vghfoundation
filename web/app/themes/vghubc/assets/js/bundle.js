@@ -14651,8 +14651,10 @@ exports.default = facebookLogin = {
     (0, _jump2.default)('.theme-sharing-panel');
     var ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
-    ctamsgbox.classList.remove('show');
-    ctamsgbox.parentNode.removeChild(ctamsgbox);
+    if (ctamsgbox) {
+      ctamsgbox.classList.remove('show');
+      ctamsgbox.parentNode.removeChild(ctamsgbox);
+    }
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');

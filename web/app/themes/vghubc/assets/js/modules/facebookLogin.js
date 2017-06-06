@@ -161,8 +161,10 @@ export default facebookLogin = {
     jump('.theme-sharing-panel');
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
-    ctamsgbox.classList.remove('show');
-    ctamsgbox.parentNode.removeChild(ctamsgbox);
+    if (ctamsgbox) {
+      ctamsgbox.classList.remove('show');
+      ctamsgbox.parentNode.removeChild(ctamsgbox);
+    }
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
