@@ -7072,6 +7072,49 @@ body.overlay-open {
 				min-height: 250px;
 			}
 		}
+		.fb-buttons {
+			margin-top: 20px;
+		}
+		.share-btn {
+			display: block;
+			padding: 1em;
+			background: #3d5b96; // Facebook blue
+			color: #fff;
+			font-size: 21px;
+			font-family: $font-med;
+			text-align: center;
+			transition: background 0.2s ease;
+			border:2px solid #3d5b96;
+			@include media ($ptabAndLess) {
+				margin-top: 5px;
+				@include font-size(20px);
+			}
+			@include media ($tab) {
+				width:50%;
+				float:left;
+				&:last-child {
+					width:47.5%;
+					margin-left:2.5%;
+				}
+			}
+			&.hidden {
+				display: none;
+			}
+			&:hover {
+				cursor: pointer;
+				background: darken(#3d5b96, 10%);
+			}
+
+			&.email-signup {
+				background-color:transparent;
+				border:2px solid $brand-green;
+				color: $brand-green;
+				&:hover {
+					background:$brand-green;
+					color:#fff;
+				}
+			}
+		}
 	}
 	&.animate {
 		opacity: 0;
@@ -7305,60 +7348,57 @@ body.overlay-open {
 }
 
 
-.post-template-single-editorial_themes_story {
-	.fb-buttons {
-		margin-top: 20px;
-	}
-	.share-btn {
-		display: block;
-		padding: 1em;
-		background: #3d5b96; // Facebook blue
-		color: #fff;
-		font-size: 21px;
-		font-family: $font-med;
-		text-align: center;
-		transition: background 0.2s ease;
-		border:2px solid #3d5b96;
-		@include media ($ptabAndLess) {
-			margin-top: 5px;
-			@include font-size(20px);
-		}
-		@include media ($tab) {
-			width:50%;
-			float:left;
-			&:last-child {
-				width:47.5%;
-				margin-left:2.5%;
-			}
-		}
-		&.hidden {
-			display: none;
-		}
-		&:hover {
-			cursor: pointer;
-			background: darken(#3d5b96, 10%);
-		}
+// .post-template-single-editorial_themes_story {
+// 	.fb-buttons {
+// 		margin-top: 20px;
+// 	}
+// 	.share-btn {
+// 		display: block;
+// 		padding: 1em;
+// 		background: #3d5b96; // Facebook blue
+// 		color: #fff;
+// 		font-size: 21px;
+// 		font-family: $font-med;
+// 		text-align: center;
+// 		transition: background 0.2s ease;
+// 		border:2px solid #3d5b96;
+// 		@include media ($ptabAndLess) {
+// 			margin-top: 5px;
+// 			@include font-size(20px);
+// 		}
+// 		@include media ($tab) {
+// 			width:50%;
+// 			float:left;
+// 			&:last-child {
+// 				width:47.5%;
+// 				margin-left:2.5%;
+// 			}
+// 		}
+// 		&.hidden {
+// 			display: none;
+// 		}
+// 		&:hover {
+// 			cursor: pointer;
+// 			background: darken(#3d5b96, 10%);
+// 		}
 
-		&.email-signup {
-			background-color:transparent;
-			border:2px solid $brand-green;
-			color: $brand-green;
-			&:hover {
-				background:$brand-green;
-				color:#fff;
-			}
-		}
-	}
-}
+// 		&.email-signup {
+// 			background-color:transparent;
+// 			border:2px solid $brand-green;
+// 			color: $brand-green;
+// 			&:hover {
+// 				background:$brand-green;
+// 				color:#fff;
+// 			}
+// 		}
+// 	}
+// }
 
 
 .theme-sharing-panel {
-	.post-template-single-editorial_themes_story & {
-		background: #fff;
-	}
 	> div > div {
 		display: flex;
-		@include media ($ptabAndLess) {
+		@include media ($tabAndLess) {
 			flex-wrap: wrap;
 		}
 		.text-block {
@@ -7368,7 +7408,8 @@ body.overlay-open {
 			padding: 50px;
 			background: $lighter-grey;
 			color: $body-text;
-			@include media ($ptabAndLess) {
+			@include media ($tabAndLess) {
+				order: 2;
 				width: 100%;
 				margin-right: 0;
 			}
@@ -7386,9 +7427,16 @@ body.overlay-open {
 					@include font-size(20px);
 				}
 			}
+			.fb-buttons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: stretch;
+			}
 			.share-btn {
 				margin-top: 20px;
 				display: block;
+				width: 48%;
 				padding: 1em 0.7em;
 				background: #3d5b96; // Facebook blue
 				color: #fff;
@@ -7399,19 +7447,13 @@ body.overlay-open {
 				border:2px solid #3d5b96;
 				@include media ($smDesk) {
 					padding: 1em;
-					@include font-size(18px);
+				}
+				@include media ($tabAndLess) {
+					width: 100%;
 				}
 				@include media ($ptabAndLess) {
 					margin-top: 5px;
 					@include font-size(20px);
-				}
-				@include media ($tab) {
-					width:50%;
-					float:left;
-					&:last-child {
-						width:47.5%;
-						margin-left:2.5%;
-					}
 				}
 				&.hidden {
 					display: none;
@@ -7437,8 +7479,14 @@ body.overlay-open {
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
+			@include media ($tabAndLess) {
+				order: 1;
+				width: 100%;
+				min-height: 300px;
+				background-position: center bottom;
+			}
 			@include media ($ptabAndLess) {
-				display: none;
+				min-height: 200px;
 			}
 			img {
 				width: 100%;
