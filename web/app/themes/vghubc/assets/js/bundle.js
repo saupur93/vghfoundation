@@ -14640,9 +14640,11 @@ exports.default = facebookLogin = {
     }
     (0, _jump2.default)('.theme-sharing-panel');
     var ctamsgbox = document.querySelector('#cta-message');
-    // facebookLogin.loginButton.style.display = 'none';
-    ctamsgbox.classList.remove('show');
-    ctamsgbox.parentNode.removeChild(ctamsgbox);
+    facebookLogin.loginButton.style.display = 'none';
+    if (ctamsgbox) {
+      ctamsgbox.classList.remove('show');
+      ctamsgbox.parentNode.removeChild(ctamsgbox);
+    }
   },
   showEmailForm: function showEmailForm(el) {
     console.log('show-email');
