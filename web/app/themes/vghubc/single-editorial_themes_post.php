@@ -62,7 +62,7 @@
 				</ul>
 				<div class="theme-learn-more">
 					Learn more about the <em>Future of Surgery</em>
-					<a href="" target="_blank">Download <em>The Case for Support</em></a>
+					<a href="http://vghfoundation.ca/app/uploads/2017/02/VGHSurgicalCase_web.pdf" target="_blank">Download <em>The Case for Support</em></a>
 				</div>
 			</div>
 		</div>
