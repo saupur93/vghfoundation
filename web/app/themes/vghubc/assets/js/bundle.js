@@ -14633,10 +14633,10 @@ exports.default = facebookLogin = {
     facebookLogin.loginButton.classList.add('hidden');
     facebookLogin.form.classList.remove('hidden');
     if (response.errorResponse) {
-      facebookLogin.messageText.innerHTML = response.errorResponse.message;
+      facebookLogin.messageText.innerHTML = '<span class="error">' + response.errorResponse.message + '</span>';
       facebookLogin.form.classList.add('hidden');
     } else {
-      facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
+      facebookLogin.messageText.innerHTML = '<span class="error">There was a problem with your submission. Please check the information in the form and re-submit.</span>';
     }
     (0, _jump2.default)('.theme-sharing-panel');
     var ctamsgbox = document.querySelector('#cta-message');
