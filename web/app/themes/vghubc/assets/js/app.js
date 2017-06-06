@@ -11,16 +11,8 @@ const CTAMessage = require('./modules/ctamessage');
 import FacebookLogin from './modules/facebookLogin';
 
 if (FacebookLogin.loginButton) {
-<<<<<<< HEAD
 	window.FacebookLogin = FacebookLogin;
 	FacebookLogin.init()
-=======
-  window.FacebookLogin = FacebookLogin;
-  let FacebookLuminate = document.querySelectorAll('.register-panel');
-  for (var i = 0; i < FacebookLuminate.length; i++) {
-    FacebookLogin.init(FacebookLuminate[i])
-  }
->>>>>>> 562139df2c64a1a624d85fdf95963e88a978b991
 };
 
 class App {
