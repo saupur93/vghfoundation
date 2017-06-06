@@ -6801,7 +6801,7 @@ body.overlay-open {
 		text-transform: uppercase;
 		font-size: 24px;
 		letter-spacing: 2px;
-    color:$surgery;
+	color:$surgery;
 	}
 }
 
@@ -6920,7 +6920,7 @@ body.overlay-open {
 			letter-spacing: 2px;
 			font-size: 14px;
 			font-family: $font-med;
-      		color:$surgery;
+			color:$surgery;
 		}
 		.bar-container {
 			height: 50px;
@@ -7083,7 +7083,6 @@ body.overlay-open {
 	width: 70px;
 	height: 70px;
 	font-size: 30px;
-	// border: 5px solid #fff;
 	box-shadow: inset 0 0 0 5px #fff;
 	border-radius: 50%;
 	position: relative;
@@ -7138,11 +7137,16 @@ body.overlay-open {
 	.cover {
 		z-index: 2;
 		display: flex;
+		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
 		background: no-repeat center;
 		background-size: cover;
 		color: #fff;
+		font-size: 24px;
+		font-family: $font-med;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 		transition: opacity 0.5s ease;
 		&.fade {
 			opacity: 0;
@@ -7152,10 +7156,14 @@ body.overlay-open {
 		cursor: pointer;
 		.theme-video-play-btn {
 			@extend .theme-video-play-btn-hover;
+			color: $body-text;
 		}
 	}
 	iframe {
 		z-index: 1;
+	}
+	.theme-video-play-btn {
+		margin-top: 20px;
 	}
 }
 
@@ -7270,50 +7278,51 @@ body.overlay-open {
 }
 
 
-.post-template-single-editorial_themes_story {
-  .share-btn {
-    margin-top:20px;
-    display: block;
-    padding: 1em;
-    background: #3d5b96; // Facebook blue
-    color: #fff;
-    font-size: 21px;
-    font-family: $font-med;
-    text-align: center;
-    transition: background 0.2s ease;
-    border:2px solid #3d5b96;
-    @include media ($ptabAndLess) {
-      margin-top: 35px;
-      @include font-size(20px);
-    }
-    @include media ($tab) {
-      width:50%;
-      float:left;
-      &:last-child {
-        width:47.5%;
-        margin-left:2.5%;
-      }
-    }
-    &.hidden {
-      display: none;
-    }
-    &:hover {
-      cursor: pointer;
-      background: darken(#3d5b96, 10%);
-    }
+// .post-template-single-editorial_themes_story {
+// 	.fb-buttons {
+// 		margin-top: 20px;
+// 	}
+// 	.share-btn {
+// 		display: block;
+// 		padding: 1em;
+// 		background: #3d5b96; // Facebook blue
+// 		color: #fff;
+// 		font-size: 21px;
+// 		font-family: $font-med;
+// 		text-align: center;
+// 		transition: background 0.2s ease;
+// 		border:2px solid #3d5b96;
+// 		@include media ($ptabAndLess) {
+// 			margin-top: 5px;
+// 			@include font-size(20px);
+// 		}
+// 		@include media ($tab) {
+// 			width:50%;
+// 			float:left;
+// 			&:last-child {
+// 				width:47.5%;
+// 				margin-left:2.5%;
+// 			}
+// 		}
+// 		&.hidden {
+// 			display: none;
+// 		}
+// 		&:hover {
+// 			cursor: pointer;
+// 			background: darken(#3d5b96, 10%);
+// 		}
 
-    &.email-signup {
-      background-color:transparent;
-      border:2px solid $brand-green;
-      color: $brand-green;
-
-      &:hover {
-        background:$brand-green;
-        color:#fff;
-      }
-    }
-  }
-}
+// 		&.email-signup {
+// 			background-color:transparent;
+// 			border:2px solid $brand-green;
+// 			color: $brand-green;
+// 			&:hover {
+// 				background:$brand-green;
+// 				color:#fff;
+// 			}
+// 		}
+// 	}
+// }
 
 
 .theme-sharing-panel {
@@ -7351,28 +7360,32 @@ body.overlay-open {
 				}
 			}
 			.share-btn {
-				margin-top:20px;
+				margin-top: 20px;
 				display: block;
-				padding: 1em;
+				padding: 1em 0.7em;
 				background: #3d5b96; // Facebook blue
 				color: #fff;
 				font-size: 21px;
 				font-family: $font-med;
 				text-align: center;
 				transition: background 0.2s ease;
-        border:2px solid #3d5b96;
+				border:2px solid #3d5b96;
+				@include media ($smDesk) {
+					padding: 1em;
+					@include font-size(18px);
+				}
 				@include media ($ptabAndLess) {
-					margin-top: 35px;
+					margin-top: 5px;
 					@include font-size(20px);
 				}
-        @include media ($tab) {
-          width:50%;
-          float:left;
-          &:last-child {
-            width:47.5%;
-            margin-left:2.5%;
-          }
-        }
+				@include media ($tab) {
+					width:50%;
+					float:left;
+					&:last-child {
+						width:47.5%;
+						margin-left:2.5%;
+					}
+				}
 				&.hidden {
 					display: none;
 				}
@@ -7381,18 +7394,16 @@ body.overlay-open {
 					background: darken(#3d5b96, 10%);
 				}
 
-        &.email-signup {
-          background-color:transparent;
-          border:2px solid $brand-green;
-          color: $brand-green;
-
-          &:hover {
-            background:$brand-green;
-            color:#fff;
-          }
-        }
-      }
-
+				&.email-signup {
+					background-color:transparent;
+					border:2px solid $brand-green;
+					color: $brand-green;
+					&:hover {
+						background:$brand-green;
+						color:#fff;
+					}
+				}
+			}
 		}
 		.img-block {
 			width: 40%;

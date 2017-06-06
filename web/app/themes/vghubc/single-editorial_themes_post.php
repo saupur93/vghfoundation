@@ -23,7 +23,8 @@
 		<div class="container">
 			<div class="inner-wrap">
 				<div class="theme-video-box">
-					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover.jpg');" data-video="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&showinfo=0&autoplay=1">
+					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover2.jpg');" data-video="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&showinfo=0&autoplay=1">
+						Future of Surgery
 						<div class="theme-video-play-btn">
 							<i class="fa fa-play" aria-hidden="true"></i>
 						</div>
