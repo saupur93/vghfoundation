@@ -6995,6 +6995,13 @@ body.overlay-open {
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
 		position: relative;
+
+    p {
+      @include font-size(28px);
+      @include media ($ptabAndLess) {
+        @include font-size(20px);
+      }
+    }
 		
 		.close {
 			position: absolute;
