@@ -7435,10 +7435,8 @@ body.overlay-open {
 		.img-block {
 			width: 40%;
 			background-repeat: no-repeat;
+			background-position: center;
 			background-size: cover;
-			@include media ($smDesk) {
-				background-position: center;
-			}
 			@include media ($ptabAndLess) {
 				display: none;
 			}
