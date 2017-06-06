@@ -141,16 +141,18 @@ export default facebookLogin = {
     facebookLogin.loginButton.classList.add('hidden');
     facebookLogin.form.classList.remove('hidden');
     if(response.errorResponse) {
-      facebookLogin.messageText.innerHTML = response.errorResponse.message;
+      facebookLogin.messageText.innerHTML = '<span class="error">' + response.errorResponse.message + '</span>';
       facebookLogin.form.classList.add('hidden');
     } else {
-      facebookLogin.messageText.innerHTML = 'There was a problem with your submission. Please check the information in the form and re-submit.';
+      facebookLogin.messageText.innerHTML = '<span class="error">There was a problem with your submission. Please check the information in the form and re-submit.</span>';
     }
     jump('.theme-sharing-panel');
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
-    ctamsgbox.classList.remove('show');
-    ctamsgbox.parentNod.removeChild(ctamsgbox);
+    if (ctamsgbox) {
+      ctamsgbox.classList.remove('show');
+      ctamsgbox.parentNode.removeChild(ctamsgbox);
+    }
   },
 
 
@@ -159,8 +161,10 @@ export default facebookLogin = {
     jump('.theme-sharing-panel');
     let ctamsgbox = document.querySelector('#cta-message');
     facebookLogin.loginButton.style.display = 'none';
-    ctamsgbox.classList.remove('show');
-    ctamsgbox.parentNod.removeChild(ctamsgbox);
+    if (ctamsgbox) {
+      ctamsgbox.classList.remove('show');
+      ctamsgbox.parentNode.removeChild(ctamsgbox);
+    }
     // document.querySelector('#cta-message').innerHTML = '';
     // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');

@@ -6531,6 +6531,42 @@ body.overlay-open {
       @media screen and (max-width: 1201px) {
         #cta-message .cta-message-content .img-block {
           min-height: 250px; } }
+    #cta-message .cta-message-content .fb-buttons {
+      margin-top: 20px; }
+    #cta-message .cta-message-content .share-btn {
+      display: block;
+      padding: 1em;
+      background: #3d5b96;
+      color: #fff;
+      font-size: 21px;
+      font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
+      text-align: center;
+      transition: background 0.2s ease;
+      border: 2px solid #3d5b96; }
+      @media screen and (max-width: 768px) {
+        #cta-message .cta-message-content .share-btn {
+          margin-top: 5px;
+          font-size: 20px;
+          font-size: 1.25rem; } }
+      @media screen and (min-width: 769px) {
+        #cta-message .cta-message-content .share-btn {
+          width: 50%;
+          float: left; }
+          #cta-message .cta-message-content .share-btn:last-child {
+            width: 47.5%;
+            margin-left: 2.5%; } }
+      #cta-message .cta-message-content .share-btn.hidden {
+        display: none; }
+      #cta-message .cta-message-content .share-btn:hover {
+        cursor: pointer;
+        background: #2e4572; }
+      #cta-message .cta-message-content .share-btn.email-signup {
+        background-color: transparent;
+        border: 2px solid #7dab35;
+        color: #7dab35; }
+        #cta-message .cta-message-content .share-btn.email-signup:hover {
+          background: #7dab35;
+          color: #fff; }
   #cta-message.animate {
     opacity: 0;
     -webkit-transform: translateY(-30%);
@@ -6754,52 +6790,11 @@ body.overlay-open {
     min-width: 500px;
     min-height: 400px; }
 
-.post-template-single-editorial_themes_story .fb-buttons {
-  margin-top: 20px; }
-
-.post-template-single-editorial_themes_story .share-btn {
-  display: block;
-  padding: 1em;
-  background: #3d5b96;
-  color: #fff;
-  font-size: 21px;
-  font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
-  text-align: center;
-  transition: background 0.2s ease;
-  border: 2px solid #3d5b96; }
-  @media screen and (max-width: 768px) {
-    .post-template-single-editorial_themes_story .share-btn {
-      margin-top: 5px;
-      font-size: 20px;
-      font-size: 1.25rem; } }
-  @media screen and (min-width: 769px) {
-    .post-template-single-editorial_themes_story .share-btn {
-      width: 50%;
-      float: left; }
-      .post-template-single-editorial_themes_story .share-btn:last-child {
-        width: 47.5%;
-        margin-left: 2.5%; } }
-  .post-template-single-editorial_themes_story .share-btn.hidden {
-    display: none; }
-  .post-template-single-editorial_themes_story .share-btn:hover {
-    cursor: pointer;
-    background: #2e4572; }
-  .post-template-single-editorial_themes_story .share-btn.email-signup {
-    background-color: transparent;
-    border: 2px solid #7dab35;
-    color: #7dab35; }
-    .post-template-single-editorial_themes_story .share-btn.email-signup:hover {
-      background: #7dab35;
-      color: #fff; }
-
-.post-template-single-editorial_themes_story .theme-sharing-panel {
-  background: #fff; }
-
 .theme-sharing-panel > div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     .theme-sharing-panel > div > div {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
@@ -6812,8 +6807,11 @@ body.overlay-open {
     padding: 50px;
     background: #f3f3f3;
     color: #575b5e; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       .theme-sharing-panel > div > div .text-block {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
         width: 100%;
         margin-right: 0; } }
     .theme-sharing-panel > div > div .text-block h2, .theme-sharing-panel > div > div .text-block .title-only h1, .title-only .theme-sharing-panel > div > div .text-block h1, .theme-sharing-panel > div > div .text-block .single-post .large-featured-image h1, .single-post .large-featured-image .theme-sharing-panel > div > div .text-block h1 {
@@ -6832,9 +6830,24 @@ body.overlay-open {
         .theme-sharing-panel > div > div .text-block p {
           font-size: 20px;
           font-size: 1.25rem; } }
+    .theme-sharing-panel > div > div .text-block .error {
+      color: #c77e7e; }
+    .theme-sharing-panel > div > div .text-block .fb-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; }
     .theme-sharing-panel > div > div .text-block .share-btn {
       margin-top: 20px;
       display: block;
+      width: 48%;
       padding: 1em 0.7em;
       background: #3d5b96;
       color: #fff;
@@ -6845,21 +6858,15 @@ body.overlay-open {
       border: 2px solid #3d5b96; }
       @media screen and (max-width: 1201px) {
         .theme-sharing-panel > div > div .text-block .share-btn {
-          padding: 1em;
-          font-size: 18px;
-          font-size: 1.125rem; } }
+          padding: 1em; } }
+      @media screen and (max-width: 900px) {
+        .theme-sharing-panel > div > div .text-block .share-btn {
+          width: 100%; } }
       @media screen and (max-width: 768px) {
         .theme-sharing-panel > div > div .text-block .share-btn {
           margin-top: 5px;
           font-size: 20px;
           font-size: 1.25rem; } }
-      @media screen and (min-width: 769px) {
-        .theme-sharing-panel > div > div .text-block .share-btn {
-          width: 50%;
-          float: left; }
-          .theme-sharing-panel > div > div .text-block .share-btn:last-child {
-            width: 47.5%;
-            margin-left: 2.5%; } }
       .theme-sharing-panel > div > div .text-block .share-btn.hidden {
         display: none; }
       .theme-sharing-panel > div > div .text-block .share-btn:hover {
@@ -6877,9 +6884,17 @@ body.overlay-open {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
+    @media screen and (max-width: 900px) {
+      .theme-sharing-panel > div > div .img-block {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        width: 100%;
+        min-height: 300px;
+        background-position: center bottom; } }
     @media screen and (max-width: 768px) {
       .theme-sharing-panel > div > div .img-block {
-        display: none; } }
+        min-height: 200px; } }
     .theme-sharing-panel > div > div .img-block img {
       width: 100%;
       height: auto; }

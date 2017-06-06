@@ -7346,11 +7346,6 @@ body.overlay-open {
 		h3 {
 			margin-bottom: 0;
 			font-family: $font-med;
-			// @include media ($ptabAndLess) {
-			// 	&:last-child {
-			// 		margin-bottom: 30px;
-			// 	}
-			// }
 		}
 		h3 + p {
 			margin-top: 40px;
@@ -7458,6 +7453,9 @@ body.overlay-open {
 					@include font-size(20px);
 				}
 			}
+      .error {
+        color:#c77e7e;
+      }
 			.fb-buttons {
 				display: flex;
 				flex-wrap: wrap;
