@@ -44,7 +44,7 @@
 </div>
 
 
-<div id="cta-message register-panel">
+<div id="cta-message" class="register-panel">
 	<div class="cta-message-content">
 		<div class="close">
 			<span></span>

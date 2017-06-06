@@ -14334,10 +14334,10 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
-      (0, _jquery2.default)('#president-message').on('click', openOverlay
+      (0, _jquery2.default)('#president-message').on('click', openOverlay);
 
       // close overlay and clear DOM innerHTML
-      );var closeOverlay = function closeOverlay(e) {
+      var closeOverlay = function closeOverlay(e) {
         e.preventDefault();
         (0, _jquery2.default)('body').removeClass('overlay-open');
         overlay.find('.overlay-content').empty();
@@ -14639,8 +14639,9 @@ exports.default = facebookLogin = {
     (0, _jump2.default)('.theme-sharing-panel');
   },
   showEmailForm: function showEmailForm(el) {
+    console.log('show-email');
     facebookLogin.loginButton.style.display = 'none';
-    document.querySelector('#cta-message .fb-buttons').style.display = 'none';
+    // document.querySelector('#cta-message .fb-buttons').style.display = 'none';
     facebookLogin.form.classList.remove('hidden');
   }
 };
