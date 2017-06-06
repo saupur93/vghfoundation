@@ -163,7 +163,7 @@
 					The construction manager doesn’t remember much while recovering in the ICU.
 				</p>
 				<p>
-					“I remember asking myself, ‘Have I done enough for my family; created enough good memories?’ And my answer was ‘No. I have to live. I l have to live fill those gaps.’”
+					“I remember asking myself, ‘Have I done enough for my family; created enough good memories?’ And my answer was ‘No. I have to live. I have to live fill those gaps.’”
 				</p>
 			</div>
 		</div>

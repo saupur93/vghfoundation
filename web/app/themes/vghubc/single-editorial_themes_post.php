@@ -61,7 +61,7 @@
 					<li>Enhanced inpatient units at UBC Hospital</li>
 				</ul>
 				<div class="theme-learn-more">
-					Learn More about the <em>Future of Surgery</em>
+					Learn more about the <em>Future of Surgery</em>
 					<a href="" target="_blank">Download <em>The Case for Support</em></a>
 				</div>
 			</div>
