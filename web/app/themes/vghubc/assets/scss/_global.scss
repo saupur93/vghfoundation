@@ -7435,7 +7435,7 @@ body.overlay-open {
 			margin-right: 30px;
 			flex-grow: 1;
 			padding: 50px;
-			background: $lighter-grey;
+			background: darken($lighter-grey, 3%);
 			color: $body-text;
 			@include media ($tabAndLess) {
 				order: 2;
