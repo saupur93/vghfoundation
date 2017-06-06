@@ -148,7 +148,7 @@ export default facebookLogin = {
     }
     jump('.theme-sharing-panel');
     let ctamsgbox = document.querySelector('#cta-message');
-    facebookLogin.loginButton.style.display = 'none';
+    // facebookLogin.loginButton.style.display = 'none';
     ctamsgbox.classList.remove('show');
     ctamsgbox.parentNode.removeChild(ctamsgbox);
   },
