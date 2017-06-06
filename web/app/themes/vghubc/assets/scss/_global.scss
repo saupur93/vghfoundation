@@ -6770,12 +6770,15 @@ body.overlay-open {
 	}
 }
 
+.themes_post-template-single-editorial_themes_post, .post-template-single-editorial_themes_story {
+		background: url('../img/ar-bg-v-grey.svg') fixed no-repeat left top;
+		background-size: 50% auto;
+		@include media ($ptabAndLess) {
+			background-position: left center;
+		}
+}
+
 .themes_post-template-single-editorial_themes_post {
-	background: url('../img/ar-bg-v-grey.svg') fixed no-repeat left top;
-	background-size: 50% auto;
-	@include media ($ptabAndLess) {
-		background-position: left center;
-	}
 	.panel {
 		background: transparent;
 	}
