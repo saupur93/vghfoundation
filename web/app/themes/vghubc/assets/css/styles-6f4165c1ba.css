@@ -6263,18 +6263,28 @@ body.overlay-open {
   .theme-head .tagline, .theme-story-head .tagline {
     text-transform: uppercase;
     font-size: 24px;
-    letter-spacing: 2px;
-    color: #00AAE3; }
+    letter-spacing: 2px; }
 
 .theme-head {
   margin-top: 50px; }
   @media screen and (max-width: 768px) {
     .theme-head {
       padding: 50px 0; } }
-  .theme-head.surgery .title, .theme-head.surgery .tagline, .theme-head.surgery h1 {
+  .theme-head.theme-color-surgery .title, .theme-head.theme-color-surgery .tagline, .theme-head.theme-color-surgery h1 {
     color: #00AAE3; }
+  .theme-head.theme-color-cancer .title, .theme-head.theme-color-cancer .tagline, .theme-head.theme-color-cancer h1 {
+    color: #8E3A80; }
+  .theme-head.theme-color-heartlung .title, .theme-head.theme-color-heartlung .tagline, .theme-head.theme-color-heartlung h1 {
+    color: #ED6062; }
+  .theme-head.theme-color-innovation .title, .theme-head.theme-color-innovation .tagline, .theme-head.theme-color-innovation h1 {
+    color: #ED8B00; }
+  .theme-head.theme-color-brainhealth .title, .theme-head.theme-color-brainhealth .tagline, .theme-head.theme-color-brainhealth h1 {
+    color: #6DCDB8; }
+  .theme-head.theme-color-community .title, .theme-head.theme-color-community .tagline, .theme-head.theme-color-community h1 {
+    color: #FFB81C; }
   .theme-head .title {
-    font-size: 6rem; }
+    font-size: 6rem;
+    text-transform: lowercase; }
     @media screen and (max-width: 768px) {
       .theme-head .title {
         font-size: 70px; } }
@@ -6290,11 +6300,14 @@ body.overlay-open {
         font-size: 30px; } }
 
 .theme-content ul {
-  padding: 0; }
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 550px; }
   .theme-content ul li {
     list-style: none;
-    position: relative;
-    padding-left: 1em; }
+    margin-bottom: 25px;
+    padding-left: 1em;
+    position: relative; }
     .theme-content ul li:before {
       position: absolute;
       left: 0;
@@ -6303,8 +6316,25 @@ body.overlay-open {
       display: block;
       width: 0.3em;
       height: 0.3em;
-      border-radius: 50%;
-      background: #00AAE3; }
+      border-radius: 50%; }
+
+.theme-content.theme-color-surgery ul li:before {
+  background: #00AAE3; }
+
+.theme-content.theme-color-cancer ul li:before {
+  background: #8E3A80; }
+
+.theme-content.theme-color-heartlung ul li:before {
+  background: #ED6062; }
+
+.theme-content.theme-color-innovation ul li:before {
+  background: #ED8B00; }
+
+.theme-content.theme-color-brainhealth ul li:before {
+  background: #6DCDB8; }
+
+.theme-content.theme-color-community ul li:before {
+  background: #FFB81C; }
 
 .theme-story-head {
   width: 100%;
@@ -6336,7 +6366,8 @@ body.overlay-open {
       .theme-story-head .title {
         font-size: 70px; } }
   .theme-story-head .tagline {
-    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif; }
+    font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
   .theme-story-head h1 {
     text-align: center;
     color: #fff;
@@ -6349,7 +6380,10 @@ body.overlay-open {
         font-size: 60px; } }
   .theme-story-head .layer-bg {
     z-index: 0;
-    background: #000;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden; }
     .theme-story-head .layer-bg video {
       margin-top: 96px;
@@ -6401,7 +6435,7 @@ body.overlay-open {
       letter-spacing: 2px;
       font-size: 14px;
       font-family: "Karbon-Medium", Helvetica, Arial, sans-serif;
-      color: #00AAE3; }
+      color: #bbbbbb; }
     .theme-story-head .layer-3 .bar-container {
       height: 50px;
       overflow: hidden; }
@@ -6409,7 +6443,7 @@ body.overlay-open {
         display: block;
         width: 1px;
         height: 50px;
-        background: rgba(0, 170, 227, 0.7);
+        background: rgba(187, 187, 187, 0.7);
         -webkit-animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
                 animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite; }
   .theme-story-head .layer-4 {
@@ -6434,6 +6468,30 @@ body.overlay-open {
       transition: all 0.5s ease; }
   .theme-story-head + section {
     margin-top: 100px; }
+  .theme-story-head.theme-color-surgery .tagline, .theme-story-head.theme-color-surgery .layer-3 .text, .theme-story-head.theme-color-surgery .layer-4 .theme-video-play-btn:hover {
+    color: #00AAE3; }
+  .theme-story-head.theme-color-surgery .layer-3 .bar-container .bar {
+    background: rgba(0, 170, 227, 0.7); }
+  .theme-story-head.theme-color-cancer .tagline, .theme-story-head.theme-color-cancer .layer-3 .text, .theme-story-head.theme-color-cancer .layer-4 .theme-video-play-btn:hover {
+    color: #8E3A80; }
+  .theme-story-head.theme-color-cancer .layer-3 .bar-container .bar {
+    background: rgba(142, 58, 128, 0.7); }
+  .theme-story-head.theme-color-heartlung .tagline, .theme-story-head.theme-color-heartlung .layer-3 .text, .theme-story-head.theme-color-heartlung .layer-4 .theme-video-play-btn:hover {
+    color: #ED6062; }
+  .theme-story-head.theme-color-heartlung .layer-3 .bar-container .bar {
+    background: rgba(237, 96, 98, 0.7); }
+  .theme-story-head.theme-color-innovation .tagline, .theme-story-head.theme-color-innovation .layer-3 .text, .theme-story-head.theme-color-innovation .layer-4 .theme-video-play-btn:hover {
+    color: #ED8B00; }
+  .theme-story-head.theme-color-innovation .layer-3 .bar-container .bar {
+    background: rgba(237, 139, 0, 0.7); }
+  .theme-story-head.theme-color-brainhealth .tagline, .theme-story-head.theme-color-brainhealth .layer-3 .text, .theme-story-head.theme-color-brainhealth .layer-4 .theme-video-play-btn:hover {
+    color: #6DCDB8; }
+  .theme-story-head.theme-color-brainhealth .layer-3 .bar-container .bar {
+    background: rgba(109, 205, 184, 0.7); }
+  .theme-story-head.theme-color-community .tagline, .theme-story-head.theme-color-community .layer-3 .text, .theme-story-head.theme-color-community .layer-4 .theme-video-play-btn:hover {
+    color: #FFB81C; }
+  .theme-story-head.theme-color-community .layer-3 .bar-container .bar {
+    background: rgba(255, 184, 28, 0.7); }
 
 #cta-message {
   position: fixed;
@@ -6667,7 +6725,7 @@ body.overlay-open {
 
 .theme-video-play-btn-hover, .theme-story-head .layer-4 .theme-video-play-btn:hover, .theme-video-box:hover .theme-video-play-btn {
   cursor: pointer;
-  color: #00AAE3;
+  color: #575b5e;
   transition-delay: 0.3s; }
   .theme-video-play-btn-hover:before, .theme-story-head .layer-4 .theme-video-play-btn:hover:before, .theme-video-box:hover .theme-video-play-btn:before {
     right: 0; }
