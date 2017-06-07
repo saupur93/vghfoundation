@@ -212,9 +212,9 @@
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">
-				<h2>Enjoy Father’s Day brunch on us!</h2>
+				<h2>Create more memories with your dad!</h2>
 				<p class="message">
-					Create more memories with your dad! Enjoy Father’s Day brunch on us by signing up to win a $100 VISA Gift Card.
+					Enjoy Father’s Day brunch on us by signing up to win a $100 VISA Gift Card.
 				</p>
 				<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
 				<div class="fb-buttons">
