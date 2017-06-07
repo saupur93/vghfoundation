@@ -1,5 +1,12 @@
 <?php $event = get_post_type(get_the_ID()) == 'signature_events' ? true : false; ?>
-<?php $ID = null !== get_sub_field('related_cta') ? get_sub_field('related_cta')[0]->ID : false; ?>
+<?php
+	if(get_field('related_cta')) {
+		$ID = get_field('related_cta')[0]->ID;
+	}
+	else {
+		$ID = null !== get_sub_field('related_cta') ? get_sub_field('related_cta')[0]->ID : false;
+	}
+?>
 <?php $text_content = $ID && null !== get_field('text_content', $ID) ? get_field('text_content', $ID) : false; ?>
 <?php $white_text_colour = null !== get_field('text_colour', $ID) && get_field('text_colour', $ID) == 'White text' ? true : false; ?>
 <?php $bg_image = null !== get_field('background_image', $ID) ? get_field('background_image', $ID)['url'] : false; ?>

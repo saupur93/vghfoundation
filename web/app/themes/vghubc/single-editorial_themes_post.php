@@ -70,7 +70,11 @@ $pagecolor = get_field('theme_color');
 		</div>
 	</section>
 
-	<section class="panel extra-padded cta-panel bg-color-cta">
+	<?php if(get_field('related_cta')): ?>
+		<?php include(locate_template('templates/layouts/layout-call_to_action.php')); ?>
+	<?php endif; ?>
+
+	<!-- <section class="panel extra-padded cta-panel bg-color-cta">
 		<div class="container">
 			<div class="inner-wrap">
 				<h2>Give Today. Donate to our Surgery Funds.</h2>
@@ -78,7 +82,9 @@ $pagecolor = get_field('theme_color');
 				<p>For more information, please contact 604 875 4676</p>
 			</div>
 		</div>
-	</section>
+	</section> -->
+
+	<?php include(locate_template('templates/partials/footer-cta.php')); ?>
 
 </div>
 

@@ -6863,11 +6863,12 @@ body.overlay-open {
 
 .theme-content {
 	ul {
-		padding: 0;
+		padding: 20px 0;
 		li {
 			list-style: none;
-			position: relative;
+			margin-bottom: 25px;
 			padding-left: 1em;
+			position: relative;
 			&:before {
 				position: absolute;
 				left: 0;
@@ -6955,7 +6956,10 @@ body.overlay-open {
 	}
 	.layer-bg {
 		z-index: 0;
-		background: #000;
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 		overflow: hidden;
 		video {
 			margin-top: 96px; // height of navigation

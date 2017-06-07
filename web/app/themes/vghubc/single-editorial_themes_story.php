@@ -12,11 +12,14 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 <?php get_header(); ?>
 
 <div class="theme-story-head theme-color-<?php echo $pagecolor; ?>">
-	<div class="layer-bg">
-		<video width="100%" height="100%" autoplay loop>
-			<source src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/videobg.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+	<?php $storyheaderimg = get_field('story_header_image'); ?>
+	<div class="layer-bg" style="background-image:url(<?php echo $storyheaderimg['url']; ?>);">
+		<?php if(is_single(24126)): ?>
+			<video width="100%" height="100%" autoplay loop>
+				<source src="<?php echo get_template_directory_uri(); ?>/assets/img/willie/videobg.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		<?php endif; ?>
 	</div>
 	<div class="layer-1">
 		<div class="container">
