@@ -7035,6 +7035,3 @@ body.overlay-open {
   .luminateApi.facebook-luminate input[type="email"], .luminateApi.facebook-luminate input[type="text"], .luminateApi.facebook-luminate2 input[type="email"], .luminateApi.facebook-luminate2 input[type="text"] {
     border: 1px solid #efefef;
     width: 100%; }
-
-.survey-form {
-  display: none; }
