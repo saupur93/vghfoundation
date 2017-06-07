@@ -6791,7 +6791,6 @@ body.overlay-open {
 .theme-head, .theme-story-head {
 	padding: 100px 0;
 	.title, .tagline {
-		// text-align: center;
 		color: #fff;
 	}
 	.title {
@@ -6804,7 +6803,6 @@ body.overlay-open {
 		text-transform: uppercase;
 		font-size: 24px;
 		letter-spacing: 2px;
-	color:$surgery;
 	}
 }
 
@@ -6813,13 +6811,39 @@ body.overlay-open {
 	@include media ($ptabAndLess) {
 		padding: 50px 0;
 	}
-	&.surgery {
+	&.theme-color-surgery {
 		.title, .tagline, h1 {
 			color: $surgery;
 		}
 	}
+	&.theme-color-cancer {
+		.title, .tagline, h1 {
+			color: $cancer;
+		}
+	}
+	&.theme-color-heartlung {
+		.title, .tagline, h1 {
+			color: $heartlung;
+		}
+	}
+	&.theme-color-innovation {
+		.title, .tagline, h1 {
+			color: $innovation;
+		}
+	}
+	&.theme-color-brainhealth {
+		.title, .tagline, h1 {
+			color: $brainhealth;
+		}
+	}
+	&.theme-color-community {
+		.title, .tagline, h1 {
+			color: $community;
+		}
+	}
 	.title {
 		font-size: 6rem;
+		text-transform: lowercase;
 		@include media ($ptabAndLess) {
 			font-size: 70px;
 		}
@@ -6853,8 +6877,37 @@ body.overlay-open {
 				width: 0.3em;
 				height: 0.3em;
 				border-radius: 50%;
-				background: $surgery;
 			}
+		}
+	}
+	&.theme-color-surgery {
+		ul li:before {
+			background: $surgery;
+		}
+	}
+	&.theme-color-cancer {
+		ul li:before {
+			background: $cancer;
+		}
+	}
+	&.theme-color-heartlung {
+		ul li:before {
+			background: $heartlung;
+		}
+	}
+	&.theme-color-innovation {
+		ul li:before {
+			background: $innovation;
+		}
+	}
+	&.theme-color-brainhealth {
+		ul li:before {
+			background: $brainhealth;
+		}
+	}
+	&.theme-color-community {
+		ul li:before {
+			background: $community;
 		}
 	}
 }
@@ -6887,6 +6940,7 @@ body.overlay-open {
 	}
 	.tagline {
 		font-family: $font-med;
+		text-transform: uppercase;
 	}
 	h1 {
 		text-align: center;
@@ -6945,7 +6999,7 @@ body.overlay-open {
 			letter-spacing: 2px;
 			font-size: 14px;
 			font-family: $font-med;
-			color:$surgery;
+			color: $light-grey;
 		}
 		.bar-container {
 			height: 50px;
@@ -6954,7 +7008,7 @@ body.overlay-open {
 				display: block;
 				width: 1px;
 				height: 50px;
-				background: rgba($surgery,0.7);
+				background: rgba($light-grey,0.7);
 				animation: scrollBar 1.5s cubic-bezier(0.75, 0.24, 0.23, 0.77) infinite;
 			}
 		}
@@ -6988,6 +7042,55 @@ body.overlay-open {
 	}
 	+ section {
 		margin-top: 100px;
+	}
+
+	&.theme-color-surgery {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $surgery;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($surgery, 0.7);
+		}
+	}
+	&.theme-color-cancer {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $cancer;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($cancer, 0.7);
+		}
+	}
+	&.theme-color-heartlung {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $heartlung;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($heartlung, 0.7);
+		}
+	}
+	&.theme-color-innovation {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $innovation;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($innovation, 0.7);
+		}
+	}
+	&.theme-color-brainhealth {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $brainhealth;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($brainhealth, 0.7);
+		}
+	}
+	&.theme-color-community {
+		.tagline, .layer-3 .text, .layer-4 .theme-video-play-btn:hover {
+			 color: $community;
+		}
+		.layer-3 .bar-container .bar {
+			background: rgba($community, 0.7);
+		}
 	}
 }
 
@@ -7226,7 +7329,7 @@ body.overlay-open {
 }
 .theme-video-play-btn-hover {
 	cursor: pointer;
-	color: $surgery;
+	color: $body-text;
 	transition-delay: 0.3s;
 	&:before {
 		right: 0;
@@ -7265,6 +7368,7 @@ body.overlay-open {
 		color: #fff;
 		font-size: 75px;
 		font-family: $font-med;
+		// text-transform: lowercase;
 		transition: opacity 0.5s ease;
 		@include media ($smDesk) {
 			font-size: 50px;

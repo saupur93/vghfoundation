@@ -1,9 +1,10 @@
 <?php 
 /*
- * Template Name: Simplified Template (2017)
+ * Template Name: Revised Theme Template (2017)
  * Template Post Type: themes_post
  */
 
+$pagecolor = get_field('theme_color');
 ?>
 <?php get_header(); ?>
 
@@ -11,9 +12,11 @@
 
 	<div class="container">
 		<div class="inner-wrap">
-			<div class="theme-head surgery">
-				<div class="title">surgery</div>
-				<h1>Our goal is a state-of-the-art, efficient and <br>effective surgical program across VGH and UBC Hospital</h1>
+			<div class="theme-head theme-color-<?php echo $pagecolor; ?>">
+				<div class="title"><?php the_title(); ?></div>
+				<?php if(get_field('page_tagline')): ?>
+					<h1><?php the_field('page_tagline'); ?></h1>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -21,49 +24,48 @@
 	<section class="panel">
 		<div class="container">
 			<div class="inner-wrap">
-				<div class="theme-video-box">
-					<div class="cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/surgery-video-cover2.jpg');" data-video="https://www.youtube.com/embed/Uz2C7hCGD-U?controls=0&showinfo=0&autoplay=1">
-						Future of Surgery
-						<div class="theme-video-play-btn">
-							<i class="fa fa-play" aria-hidden="true"></i>
+
+				<?php if(get_field('feature_video_id')): ?>
+					<div class="theme-video-box">
+						<?php $video_thumb = get_field('feature_video_thumb'); ?>
+						<div class="cover" style="background-image: url('<?php echo $video_thumb['url']; ?>');" data-video="https://www.youtube.com/embed/<?php the_field('feature_video_id'); ?>?rel=0&controls=0&showinfo=0&autoplay=1">
+							<?php the_field('feature_video_title'); ?>
+							<div class="theme-video-play-btn">
+								<i class="fa fa-play" aria-hidden="true"></i>
+							</div>
 						</div>
+						<iframe width="100%" height="720" src="" frameborder="0" allowfullscreen></iframe>
 					</div>
-					<iframe width="100%" height="720" src="" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="theme-stories">
-					<a href="<?php echo site_url(); ?>/2017/05/31/willies-story/" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-01-thumb.jpg');">
-						Willie's Story
-					</a>
-					<a href="" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-02-thumb.png');">
-						Giving back to health care
-					</a>
-					<a href="" class="story" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/story-03-thumb.jpg');">
-						The Future of Surgery
-					</a>
-				</div>
+				<?php endif; ?>
+				
+				<?php if(have_rows('related_stories')): ?>
+					<div class="theme-stories">
+						<?php while(have_rows('related_stories')): the_row(); ?>
+							<?php
+							$related_story = get_sub_field('story');
+							$story_thumb = get_field('story_thumb',$related_story->ID);
+							?>
+							<a href="<?php echo get_permalink($related_story->ID); ?>" class="story" style="background-image: url('<?php echo $story_thumb['url']; ?>');">
+								<?php echo $related_story->post_title; ?>
+							</a>
+						<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+
 			</div>
 		</div>
 	</section>
 
-	<section class="panel extra-padded theme-content">
+	<section class="panel extra-padded theme-content theme-color-<?php echo $pagecolor; ?>">
 		<div class="container">
 			<div class="narrow-wrap">
-				<p>
-					Together, Vancouver General Hospital (VGH) and UBC Hospital are the cornerstones of surgical excellence in this province. Whether you are dealing with tumours, traumas, or transplants, we’re often the only place that can help. The <em>Future of Surgery</em> strengthens the resources of VGH and UBC Hospital as a single, state-of-the-art, efficient, and effective surgical program.
-				</p>
-				<p>
-					We are raising funds to purchase the most advanced equipment, attract the best minds, and support leading-edge research and innovation.
-				</p>
-				<ul>
-					<li>Hybrid operating room at VGH</li>
-					<li>16 new, optimally sized operating rooms and a 40-bed peri-operative care unit at VGH</li>
-					<li>Eight bed high acuity unit at UBC Hospital</li>
-					<li>Enhanced inpatient units at UBC Hospital</li>
-				</ul>
-				<div class="theme-learn-more">
-					Learn more about the <em>Future of Surgery</em>
-					<a href="http://vghfoundation.ca/app/uploads/2017/02/VGHSurgicalCase_web.pdf" target="_blank">Download <em>The Case for Support</em></a>
-				</div>
+				<?php the_content(); ?>
+				<?php if(get_field('the_case_for_support_link')): ?>
+					<div class="theme-learn-more">
+						Learn more about the <em>Future of Surgery</em>
+						<a href="<?php the_field('the_case_for_support_link'); ?>" target="_blank">Download <em>The Case for Support</em></a>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</section>
