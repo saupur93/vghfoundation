@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * Template Name: Theme Story
  * Template Post Type: post
@@ -85,7 +85,7 @@ if( have_rows('story_content') ):
 
 		include(locate_template('templates/layouts/layout-story_text_with_image.php'));
 
-	elseif( get_row_layout() == 'full_width_image' ): 
+	elseif( get_row_layout() == 'full_width_image' ):
 
 		include(locate_template('templates/layouts/layout-story_full_width_image.php'));
 
@@ -110,6 +110,11 @@ endif;
 				</div>
 
 				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+        <div class="caption-text">
+          <p>
+            By Subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
+          </p>
+        </div>
 			</div>
 			<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
 		</div>
