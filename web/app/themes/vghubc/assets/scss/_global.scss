@@ -6790,6 +6790,12 @@ body.overlay-open {
 
 .theme-head, .theme-story-head {
 	padding: 100px 0;
+	video {
+		@include media($ptabAndLess){
+			display: none;
+		}
+	}
+
 	.title, .tagline {
 		color: #fff;
 	}
@@ -7025,6 +7031,8 @@ body.overlay-open {
 		animation: layerIn 1s 7s linear forwards;
 		.iframe-wrapper {
 			position: absolute;
+			left:0;
+			top:0;
 		}
 		.theme-video-play-btn {
 			color: #fff;
@@ -7695,8 +7703,4 @@ body.overlay-open {
 		width:100%;
 	}
 
-}
-
-.survey-form {
-  // display: none;
 }

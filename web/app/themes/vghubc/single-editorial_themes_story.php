@@ -49,7 +49,11 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			<div class="theme-video-play-btn">
 				<i class="fa fa-play" aria-hidden="true" data-video="https://www.youtube.com/embed/<?php the_field('story_feature_video'); ?>?rel=0&controls=0&showinfo=0&autoplay=1"></i>
 			</div>
-			<iframe width="1280" height="720" src="" frameborder="0" allowfullscreen></iframe>
+			
+			<div class="iframe-wrapper">
+				<div id="player" data-video-id="<?php the_field('story_feature_video'); ?>"></div>
+			</div>
+
 		</div>
 	<?php endif; ?>
 </div>

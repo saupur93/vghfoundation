@@ -15092,42 +15092,71 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var StoryHeaderVideo = function () {
-	function StoryHeaderVideo() {
-		_classCallCheck(this, StoryHeaderVideo);
+  function StoryHeaderVideo() {
+    _classCallCheck(this, StoryHeaderVideo);
 
-		this.videoLayer = document.querySelector('.theme-story-head .theme-story-video');
-		this.playBtn = this.videoLayer.querySelector('.fa');
-		this.videoframewrapper = this.videoLayer.querySelector('.iframe-wrapper');
-		this.videoframe = this.videoframewrapper.querySelector('iframe');
+    this.videoLayer = document.querySelector('.theme-story-head .theme-story-video');
+    this.playBtn = this.videoLayer.querySelector('.fa');
+    this.videoframewrapper = this.videoLayer.querySelector('.iframe-wrapper');
+    // this.videoframe = this.videoframewrapper.querySelector('iframe');
 
-		this.events();
-	}
+    this.setupVideoIframe();
+    this.events();
+  }
 
-	_createClass(StoryHeaderVideo, [{
-		key: 'events',
-		value: function events() {
-			var _this = this;
+  _createClass(StoryHeaderVideo, [{
+    key: 'events',
+    value: function events() {
+      var _this = this;
 
-			this.playBtn.addEventListener('click', function () {
+      this.playBtn.addEventListener('click', function (event) {
+        window.youTubePlayer.playVideo();
 
-				// update iframe source
-				var videosrc = _this.playBtn.getAttribute('data-video');
-				_this.videoframe.setAttribute('src', videosrc);
+        //  // update iframe source
+        //  let videosrc = this.playBtn.getAttribute('data-video');
+        //  this.videoframe.setAttribute('src', videosrc);
 
-				// take away button
-				_this.playBtn.classList.add('fade');
-				_this.videoframewrapper.style.display = 'block';
-				setTimeout(function () {
-					_this.videoframewrapper.style.opacity = 1;
-				}, 100);
-				setTimeout(function () {
-					_this.playBtn.style.display = 'none';
-				}, 500);
-			});
-		}
-	}]);
+        // take away button
+        _this.playBtn.classList.add('fade');
+        _this.videoframewrapper.style.display = 'block';
+        setTimeout(function () {
+          _this.videoframewrapper.style.opacity = 1;
+        }, 100);
+        setTimeout(function () {
+          _this.playBtn.style.display = 'none';
+        }, 500);
+      });
+    }
+  }, {
+    key: 'setupVideoIframe',
+    value: function setupVideoIframe() {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	return StoryHeaderVideo;
+      var videoId = document.getElementById('player').getAttribute('data-video-id');
+
+      var player = void 0;
+      window.youTubePlayer = player;
+      window.onYouTubeIframeAPIReady = function () {
+        window.youTubePlayer = new YT.Player('player', {
+          height: '720',
+          width: '1280',
+          videoId: videoId,
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      };
+
+      window.onPlayerStateChange = function (event) {
+        console.log('playing');
+      };
+    }
+  }]);
+
+  return StoryHeaderVideo;
 }();
 
 module.exports = StoryHeaderVideo;

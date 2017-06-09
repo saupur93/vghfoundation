@@ -6253,6 +6253,9 @@ body.overlay-open {
 
 .theme-head, .theme-story-head {
   padding: 100px 0; }
+  @media screen and (max-width: 768px) {
+    .theme-head video, .theme-story-head video {
+      display: none; } }
   .theme-head .title, .theme-head .tagline, .theme-story-head .title, .theme-story-head .tagline {
     color: #fff; }
   .theme-head .title, .theme-story-head .title {
@@ -6452,7 +6455,9 @@ body.overlay-open {
     -webkit-animation: layerIn 1s 7s linear forwards;
             animation: layerIn 1s 7s linear forwards; }
     .theme-story-head .layer-4 .iframe-wrapper {
-      position: absolute; }
+      position: absolute;
+      left: 0;
+      top: 0; }
     .theme-story-head .layer-4 .theme-video-play-btn {
       color: #fff; }
       @media screen and (max-width: 768px) {
