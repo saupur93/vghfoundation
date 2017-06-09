@@ -7128,8 +7128,8 @@ body.overlay-open {
 	}
 	@include media ($mobileOnly) {
 		padding: 0 30px;
-		top: 0px;
-		align-items: flex-end;
+		top: 70px;
+		align-items: flex-start;
 	}
 	&:not(.show) {
 		transform: translateY(100%);

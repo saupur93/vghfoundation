@@ -6525,10 +6525,10 @@ body.overlay-open {
   @media screen and (max-width: 600px) {
     #cta-message {
       padding: 0 30px;
-      top: 0px;
-      -webkit-box-align: end;
-          -ms-flex-align: end;
-              align-items: flex-end; } }
+      top: 70px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
   #cta-message:not(.show) {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
