@@ -6360,7 +6360,8 @@ body.overlay-open {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    overflow: hidden; }
   .theme-story-head .title, .theme-story-head .tagline {
     text-align: center; }
   .theme-story-head .title {

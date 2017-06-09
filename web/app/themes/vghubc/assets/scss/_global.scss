@@ -6937,6 +6937,7 @@ body.overlay-open {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 	}
 	.title, .tagline {
 		text-align: center;
