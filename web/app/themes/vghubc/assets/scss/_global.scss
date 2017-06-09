@@ -7128,7 +7128,8 @@ body.overlay-open {
 	}
 	@include media ($mobileOnly) {
 		padding: 0 30px;
-		top: 70px;
+		top: 0px;
+		align-items: flex-end;
 	}
 	&:not(.show) {
 		transform: translateY(100%);
@@ -7137,6 +7138,9 @@ body.overlay-open {
 
 	.caption-text {
 		float:left;
+		@include media ($mobileOnly) {
+			@include font-size(12px);
+		}
 	}
 
 	.cta-message-content {

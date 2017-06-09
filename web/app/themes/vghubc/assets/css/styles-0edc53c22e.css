@@ -6525,13 +6525,20 @@ body.overlay-open {
   @media screen and (max-width: 600px) {
     #cta-message {
       padding: 0 30px;
-      top: 70px; } }
+      top: 0px;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; } }
   #cta-message:not(.show) {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
     opacity: 0; }
   #cta-message .caption-text {
     float: left; }
+    @media screen and (max-width: 600px) {
+      #cta-message .caption-text {
+        font-size: 12px;
+        font-size: 0.75rem; } }
   #cta-message .cta-message-content {
     padding: 100px 50px;
     width: 100%;
