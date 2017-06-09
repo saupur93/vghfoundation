@@ -50,6 +50,7 @@ class StoryHeaderVideo {
         height: '720',
         width: '1280',
         videoId: videoId,
+        playerVars: { 'ref': 0, 'modestbranding': 1, 'color': 'white' },
         events: {
           'onStateChange': onPlayerStateChange
         }

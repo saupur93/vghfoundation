@@ -6524,11 +6524,14 @@ body.overlay-open {
       padding: 0 20px; } }
   @media screen and (max-width: 600px) {
     #cta-message {
-      padding: 0 30px; } }
+      padding: 0 30px;
+      top: 70px; } }
   #cta-message:not(.show) {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
     opacity: 0; }
+  #cta-message .caption-text {
+    float: left; }
   #cta-message .cta-message-content {
     padding: 100px 50px;
     width: 100%;

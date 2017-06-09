@@ -7128,11 +7128,17 @@ body.overlay-open {
 	}
 	@include media ($mobileOnly) {
 		padding: 0 30px;
+		top: 70px;
 	}
 	&:not(.show) {
 		transform: translateY(100%);
 		opacity: 0;
 	}
+
+	.caption-text {
+		float:left;
+	}
+
 	.cta-message-content {
 		padding: 100px 50px;
 		width: 100%;
