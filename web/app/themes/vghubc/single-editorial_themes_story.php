@@ -80,7 +80,6 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
           By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
       </div>
 		</div>
-		<div class="img-block" style="background-image:url('http://vghfoundation.ca/app/uploads/2017/04/Screen-Shot-2017-04-07-at-9.49.39-AM.png'); background-position: center top;"></div>
 	</div>
 </div>
 
@@ -123,7 +122,6 @@ endif;
             By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
         </div>
 			</div>
-			<div class="img-block" style="background-image:url('http://vghfoundation.ca/app/uploads/2017/04/Screen-Shot-2017-04-07-at-9.49.39-AM.png'); background-position: center top;"></div>
 		</div>
 	</div>
 </section>
