@@ -49,7 +49,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			<div class="theme-video-play-btn">
 				<i class="fa fa-play" aria-hidden="true" data-video="https://www.youtube.com/embed/<?php the_field('story_feature_video'); ?>?rel=0&controls=0&showinfo=0&autoplay=1"></i>
 			</div>
-			
+
 			<div class="iframe-wrapper">
 				<div id="player" data-video-id="<?php the_field('story_feature_video'); ?>"></div>
 			</div>
@@ -66,9 +66,9 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			<span></span>
 		</div>
 		<div class="text-block">
-			<h2>Enjoy Father’s Day brunch on us!</h2>
+			<h2>Let’s stay connected</h2>
 			<p>
-				Celebrate the gift of health and create more memories with the dads in your life by signing up to win a $100 VISA Gift Card.
+				Register to receive our e-newsletter for stories on transformational health care and inspiration, updates on fundraising initiatives and other electronic communications.
 			</p>
 			<div class="fb-buttons">
 				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
@@ -80,7 +80,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
           By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
       </div>
 		</div>
-		<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
+		<div class="img-block" style="background-image:url('http://vghfoundation.ca/app/uploads/2017/04/Screen-Shot-2017-04-07-at-9.49.39-AM.png'); background-position: center top;"></div>
 	</div>
 </div>
 
@@ -108,11 +108,11 @@ endif;
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">
-				<h2>Create more memories with your dad!</h2>
+				<h2>Let’s stay connected</h2>
 				<p class="message">
-					Enjoy Father’s Day brunch on us by signing up to win a $100 VISA Gift Card.
+					Register to receive our e-newsletter for stories on transformational health care and inspiration, updates on fundraising initiatives and other electronic communications.
 				</p>
-				<p class="thank-you hidden">You've successfully registered for a chance to win. We'll be in touch via email to let you know more details.</p>
+				<p class="thank-you hidden">You've successfully registered for our newsletter.</p>
 				<div class="fb-buttons">
 					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
 				</div>
@@ -123,7 +123,7 @@ endif;
             By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
         </div>
 			</div>
-			<div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/brunch.png');"></div>
+			<div class="img-block" style="background-image:url('http://vghfoundation.ca/app/uploads/2017/04/Screen-Shot-2017-04-07-at-9.49.39-AM.png'); background-position: center top;"></div>
 		</div>
 	</div>
 </section>
