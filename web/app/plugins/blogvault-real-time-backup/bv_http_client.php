@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('ABSPATH')) exit;
 class BVHttpClient {
 	var $user_agent = 'BVHttpClient';
 	var $host;
@@ -99,14 +100,18 @@ class BVHttpClient {
 	function newChunkedPart($data) {
 		if (strlen($data) > 0) {
 			$chunk = "";
-			if (isset($_REQUEST['checksum'])) {
-				if ($_REQUEST['checksum'] == 'crc32') {
-					$chunk = "CRC32" . ":" . crc32($data) . ":";
-				} else if ($_REQUEST['checksum'] == 'md5') {
-					$chunk = "MD5" . ":" . md5($data) . ":";
-				}
+			if (isset($_REQUEST['bvb64'])) {
+				$data = base64_encode($data);
+				$chunk .= "BVB64" . ":";
 			}
 			$chunk .= (strlen($data) . ":" . $data);
+			if (isset($_REQUEST['checksum'])) {
+				if ($_REQUEST['checksum'] == 'crc32') {
+					$chunk = "CRC32" . ":" . crc32($data) . ":" . $chunk;
+				} else if ($_REQUEST['checksum'] == 'md5') {
+					$chunk = "MD5" . ":" . md5($data) . ":" . $chunk;
+				}
+			}
 			$this->sendChunk($chunk);
 		}
 	}

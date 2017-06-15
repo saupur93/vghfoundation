@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('ABSPATH')) exit;
 class BVManageSite {
 
 	function __construct() {
@@ -56,7 +57,11 @@ class BVManageSite {
 		$result = array();
 		$plugins = $args['items'];
 		foreach ($plugins as $plugin) {
-			$networkwide = array_key_exists('network', $plugin) ? true : false;
+			if (array_key_exists('network', $plugin)) {
+				$networkwide = $plugin['network'];
+			} else {
+				$networkwide = false;
+			}
 			switch ($args['action']) {
 			case 'activate':
 				$res = activate_plugin($plugin['file'], '', $networkwide);
@@ -162,17 +167,14 @@ class BVManageSite {
 
 	function addUser($args) {
 		if (username_exists($args['user_login'])) {
-			return array('error' => 'Username already exists');
+			return array('status' => "Error", 'message' => "Username already exists");
 		}
-
 		if (email_exists($args['user_email'])) {
-			return array('error' => 'Email already exists');
+			return array('status' => "Error", 'message' => "Email already exists");
 		}
-
 		$result = wp_insert_user($args);
-
 		if ( !is_wp_error( $result ) ) {
-			return array('user_id' => $result );
+			return array('status' => "Done", 'user_id' => $result);
 		} else {
 			return array('status' => "Error", 'message' => $this->getError($result));
 		}
@@ -182,11 +184,7 @@ class BVManageSite {
 		$result = array();
 		$premium_upgrades = array();
 		if (array_key_exists('core', $params) && !empty($params['core'])) {
-			if ($this->upgradeCore($params['core'])) {
-				$result['core'] = array('status' => 'Done');
-			} else {
-				$result['core'] = array('error' => 'true');
-			}
+			$result['core'] = $this->upgradeCore($params['core']);
 		}
 		if (array_key_exists('plugins', $params) && !empty($params['plugins'])) {
 			$files = array();
@@ -299,28 +297,19 @@ class BVManageSite {
 			}
 			$upgrader = new Plugin_Upgrader($skin);
 			$result   = $upgrader->bulk_upgrade($plugins);
-			if (!empty($result)) {
-				foreach ($result as $file => $res) {
-					if (!$res || is_wp_error($res)) {
-						$result[$file] = array('status' => "Error", 'message' => $this->getError($res));
-						continue;
-					}
-
+		}
+		foreach($plugins as $file) {
+			$res = $result[$file];
+				if (!$res || is_wp_error($res)) {
+					$result[$file] = array('status' => "Error");
+				} else {
 					$result[$file] = array('status' => "Done");
 				}
-
-				return $result;
-			} else {
-				$blogvault->addStatus("plugin_upgrade_error", "Update failed");
-				return false;
-			}
-		} else {
-			$blogvault->addStatus("plugin_upgrade_error", "Cannot upgrade plugins");
-			return false;
 		}
+		return $result;
 	}
 
-	function upgradeThemes($themes = false) {
+	function upgradeThemes($themes) {
 		global $blogvault;
 		$result  = array();
 		if (class_exists('Theme_Upgrader')) {
@@ -332,25 +321,16 @@ class BVManageSite {
 			}
 			$upgrader = new Theme_Upgrader($skin);
 			$result   = $upgrader->bulk_upgrade($themes);
-			if (!empty($result)) {
-				foreach ($result as $template => $res) {
-					if (!$res || is_wp_error($res)) {
-						$result[$template] = array('status' => "Error", 'message' => $this->getError($res));
-						continue;
-					}
-
-					$result[$template] = array('status' => "Done");
-				}
-
-				return $result;
-			} else {
-				$blogvault->addStatus("theme_upgrade_error", "Update failed");
-				return false;
-			}
-		} else {
-			$blogvault->addStatus("theme_upgrade_error", "Cannot upgrade themes");
-			return false;
 		}
+		foreach($themes as $template) {
+			$res = $result[$template];
+			if (!$res || is_wp_error($res)) {
+				$result[$template] = array('status' => "Error");
+			} else {
+				$result[$template] = array('status' => "Done");
+			}
+		}
+		return $result;
 	}
 
 	function getError($err) {

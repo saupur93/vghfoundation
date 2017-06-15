@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('ABSPATH')) exit;
 class BlogVault {
 
 	private static $instance = NULL; 
@@ -138,8 +139,12 @@ class BlogVault {
 			$this->addStatus("serverip", urlencode($_SERVER['SERVER_ADDR']));
 			$this->addStatus("siteurl", urlencode($this->wpurl()));
 		}
-		
-		die("bvbvbvbvbv".serialize($this->status)."bvbvbvbvbv");
+
+		$response = "bvbvbvbvbv".serialize($this->status)."bvbvbvbvbv";
+		if (isset($_REQUEST['bvb64'])) {
+			$response = "bvb64bvb64".base64_encode($response)."bvb64bvb64";
+		}
+		die($response);
 		exit;
 	}
 
@@ -455,6 +460,12 @@ class BlogVault {
 			$body['openssl_public_decrypt'] = "1";
 		}
 		$body['sha1'] = "1";
+		if (function_exists('base64_encode')) {
+			$body['b64encode'] = true;
+		}
+		if (function_exists('base64_decode')) {
+			$body['b64decode'] = true;
+		}
 		$all_tables = $this->getAllTables();
 		$i = 0;
 		foreach ($all_tables as $table) {
@@ -531,6 +542,7 @@ class BlogVault {
 				"<input type='hidden' name='multisite' value='{$multisite}'/>\n".
 				"<input type='hidden' name='dbsig' value='{$this->dbSig(true)}'/>\n".
 				"<input type='hidden' name='bvversion' value='{$bvVersion}'/>\n".
+				"<input type='hidden' name='abspath' value='".ABSPATH."'/>\n".
 				"<input type='hidden' name='serversig' value='{$this->serverSig(true)}'/>\n";
 		if (defined('IS_AMIMOTO')) {
 			$tags .= "<input type='hidden' name='amimoto' value='true'/>\n";
@@ -1039,7 +1051,7 @@ class BlogVault {
 		}
 		if (array_key_exists('unser', $_REQUEST)) {
 			foreach ($_REQUEST['unser'] as $key) {
-				$_REQUEST[$key] = unserialize($_REQUEST[$key]);	
+				$_REQUEST[$key] = unserialize($_REQUEST[$key]);
 			}
 		}
 		if (array_key_exists('dic', $_REQUEST)) {
@@ -1185,9 +1197,9 @@ class BlogVault {
 			break;
 		case "getdynamicevents":
 			$isdynsyncactive = $this->getOption('bvDynSyncActive');
-			$limit = intval(urldecode($_REQUEST['limit']));
-			$filter = urldecode($_REQUEST['filter']);
 			if ($isdynsyncactive == 'yes') {
+				$limit = intval(urldecode($_REQUEST['limit']));
+				$filter = urldecode($_REQUEST['filter']);
 				$this->deleteBvDynamicEvents($_REQUEST['rmfilter']);
 				$this->addStatus("status", $this->getBvDynamincEvents($limit, $filter));
 			}

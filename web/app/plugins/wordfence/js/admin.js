@@ -551,6 +551,14 @@
 					if (res.signatureUpdateTime) {
 						this.updateSignaturesTimestamp(res.signatureUpdateTime);
 					}
+					
+					if (res.scanFailed) {
+						jQuery('#wf-scan-failed-time-ago').text(res.scanFailedTiming);
+						jQuery('#wf-scan-failed').show();
+					}
+					else {
+						jQuery('#wf-scan-failed').hide();
+					}
 				}
 				this.activityLogUpdatePending = false;
 			},
@@ -674,6 +682,10 @@
 				} else if (item.msg.indexOf('SUM_ENDSKIPPED') != -1) {
 					msg = item.msg.replace('SUM_ENDSKIPPED:', '');
 					jQuery('div.wfSummaryMsg:contains("' + msg + '")').next().addClass('wfSummaryResult').html('Skipped.');
+					summaryUpdated = true;
+				} else if (item.msg.indexOf('SUM_ENDIGNORED') != -1) {
+					msg = item.msg.replace('SUM_ENDIGNORED:', '');
+					jQuery('div.wfSummaryMsg:contains("' + msg + '")').next().addClass('wfSummaryIgnored').html('Ignored.');
 					summaryUpdated = true;
 				} else if (item.msg.indexOf('SUM_DISABLED:') != -1) {
 					msg = item.msg.replace('SUM_DISABLED:', '');
@@ -924,6 +936,10 @@
 				limit = limit || WordfenceAdminVars.scanIssuesPerPage;
 				var self = this;
 				this.ajax('wordfence_loadIssues', {offset: offset, limit: limit}, function(res) {
+					var newCount = parseInt(res.issueCounts.new) || 0;
+					var ignoredCount = (parseInt(res.issueCounts.ignoreP) || 0) + (parseInt(res.issueCounts.ignoreC) || 0);
+					jQuery('#wfNewIssuesTab .wfIssuesCount').text(' (' + newCount + ')');
+					jQuery('#wfIgnoredIssuesTab .wfIssuesCount').text(' (' + ignoredCount + ')'); 
 					self.displayIssues(res, callback);
 				});
 			},

@@ -1,4 +1,6 @@
 <?php
+
+if (!defined('ABSPATH')) exit;
 global $blogvault;
 global $bvNotice;
 global $bvAdminPage;
@@ -89,8 +91,8 @@ if ( !function_exists('bvKeyConf') ) :
 	function bvKeyConf() {
 		global $blogvault, $bvNotice, $bvAdminPage, $bvAppUrl;
 		$_error = NULL;
-		if (isset($_GET['error'])) {
-			$_error = $_GET['error'];
+		if (array_key_exists('error', $_REQUEST)) {
+			$_error = $_REQUEST['error'];
 		}
 ?>
 

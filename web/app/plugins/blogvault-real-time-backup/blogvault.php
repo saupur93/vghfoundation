@@ -5,7 +5,7 @@ Plugin URI: http://blogvault.net/
 Description: Easiest way to backup your WordPress site
 Author: Backup by blogVault
 Author URI: http://blogvault.net/
-Version: 1.46
+Version: 1.48
 Network: True
  */
 
@@ -26,11 +26,13 @@ Network: True
 */
 
 /* Global response array */
+
+if (!defined('ABSPATH')) exit;
 global $bvVersion;
 global $blogvault;
 global $bvDynamicEvents;
 global $bvmanager;
-$bvVersion = '1.46';
+$bvVersion = '1.48';
 
 if (is_admin())
 	require_once dirname( __FILE__ ) . '/admin.php';

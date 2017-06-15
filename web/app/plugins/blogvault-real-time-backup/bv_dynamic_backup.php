@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('ABSPATH')) exit;
 class BVDynamicBackup {
 	/**
 	 * PHP5 constructor.

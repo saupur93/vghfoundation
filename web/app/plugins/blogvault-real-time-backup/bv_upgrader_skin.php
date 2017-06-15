@@ -1,4 +1,6 @@
 <?php
+
+if (!defined('ABSPATH')) exit;
 class BVUpgraderSkin extends WP_Upgrader_Skin {
 	public $action = '';
 	public $plugin_info = array();
