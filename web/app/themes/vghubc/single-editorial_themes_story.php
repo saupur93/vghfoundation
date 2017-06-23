@@ -72,9 +72,9 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			<span></span>
 		</div>
 		<div class="text-block">
-			<h2>Let’s stay connected</h2>
+			<h2>Be the first to know</h2>
 			<p>
-				Register to receive our e-newsletter for stories on transformational health care and inspiration, updates on fundraising initiatives and other electronic communications.
+				Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
 			</p>
 			<div class="fb-buttons">
 				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
@@ -86,6 +86,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
           By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
       </div>
 		</div>
+    <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg');"></div>
 	</div>
 </div>
 
@@ -113,9 +114,9 @@ endif;
 	<div class="container">
 		<div class="inner-wrap">
 			<div class="text-block">
-				<h2>Let’s stay connected</h2>
+				<h2>Be the first to know</h2>
 				<p class="message">
-					Register to receive our e-newsletter for stories on transformational health care and inspiration, updates on fundraising initiatives and other electronic communications.
+					Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
 				</p>
 				<p class="thank-you hidden">You've successfully registered for our newsletter.</p>
 				<div class="fb-buttons">
@@ -128,6 +129,7 @@ endif;
             By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
         </div>
 			</div>
+      <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg'); background-position: center top;"></div>
 		</div>
 	</div>
 </section>
