@@ -1,8 +1,8 @@
 ## MAC OS X
 .DS_Store
 node_modules/
-dist/
 .idea/
+/*dist/
 web/app/themes/*/assets/bower_components/
 web/app/uploads/
 backups
