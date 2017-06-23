@@ -86,7 +86,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
           By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
       </div>
 		</div>
-    <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg');"></div>
+    <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg'); background-position: center top;"></div>
 	</div>
 </div>
 
