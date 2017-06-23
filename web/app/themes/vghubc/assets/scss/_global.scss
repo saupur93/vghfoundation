@@ -7584,8 +7584,10 @@ body.overlay-open {
 // 	}
 // }
 
-
 .theme-sharing-panel {
+  .container {
+    max-width: 100%;
+  }
 	> div > div {
 		display: flex;
 		@include media ($tabAndLess) {
