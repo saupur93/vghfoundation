@@ -77,7 +77,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 				Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
 			</p>
 			<div class="fb-buttons">
-				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
+				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Subscribe with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Subscribe with Email</span>
 			</div>
 
 			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
@@ -118,9 +118,9 @@ endif;
 				<p class="message">
 					Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
 				</p>
-				<p class="thank-you hidden">You've successfully registered for our newsletter.</p>
+				<p class="thank-you hidden">You've successfully subscribed to our newsletter.</p>
 				<div class="fb-buttons">
-					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Register with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Register with Email</span>
+					<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Subscribe with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Subscribe with Email</span>
 				</div>
 
 				<?php print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
