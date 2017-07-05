@@ -33,6 +33,18 @@ Template Name: Ways to Give
     </section>
   <?php endif; ?>
 
+  <?php if( have_rows('layouts') ): ?>
+    <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
+
+  <?php else : ?>
+    <section class="main-content panel">
+      <div class="container">
+        <?php the_content(); ?>
+      </div>
+    </section>
+
+  <?php endif; ?>
+
   <?php if(have_rows('tab')): ?>
   <section class="panel padded grey-bg donation-panel-tabs">
     <ul class="tabs">
@@ -84,18 +96,6 @@ Template Name: Ways to Give
     <?php endwhile; ?>
 
   </section>
-  <?php endif; ?>
-
-  <?php if( have_rows('layouts') ): ?>
-    <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
-
-  <?php else : ?>
-    <section class="main-content panel">
-      <div class="container">
-        <?php the_content(); ?>
-      </div>
-    </section>
-
   <?php endif; ?>
 
 

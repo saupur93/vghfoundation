@@ -7715,5 +7715,20 @@ body.overlay-open {
 		border:1px solid #efefef;
 		width:100%;
 	}
+}
 
+.page-template-page-ways-to-give {
+  .page-wrap {
+    .expanding-two-column-list {
+      .container {
+        .inner-wrap {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+h2 {
+  margin-top: 50px;
 }
