@@ -45,7 +45,8 @@ Template Name: Ways to Give
 
   <?php endif; ?>
 
-  <?php if(have_rows('tab')): ?>
+
+  <!-- <?php if(have_rows('tab')): ?>
   <section class="panel padded grey-bg donation-panel-tabs">
     <ul class="tabs">
       <?php $tab_count = 0; ?>
@@ -96,7 +97,7 @@ Template Name: Ways to Give
     <?php endwhile; ?>
 
   </section>
-  <?php endif; ?>
+  <?php endif; ?> -->
 
 
   <?php
