@@ -102,7 +102,7 @@
     <section class="panel padded related-posts-panel">
       <div class="container">
         <div class="narrow-wrap">
-          <h3>Related Stories</h3>
+          <h3>Other Stories</h3>
           <?php while($related_query->have_posts()) : $related_query->the_post(); ?>
           <?php $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($posts->ID), 'related_thumb')[0]; ?>
           <div class="col-half">
