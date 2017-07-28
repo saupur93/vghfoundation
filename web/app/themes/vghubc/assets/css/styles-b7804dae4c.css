@@ -3311,8 +3311,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         padding: 50px 40px 0px 40px;
         font-size: 13px;
         font-size: 0.8125rem;
-        min-height: 250px;
-        margin-left: 10px; } }
+        min-height: 250px; } }
     @media screen and (max-width: 600px) {
       .panel.page-header .donation-form-landing {
         width: 26.875rem;
