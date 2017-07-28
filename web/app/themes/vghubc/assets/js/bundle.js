@@ -13516,7 +13516,7 @@ var App = function () {
 						console.log(url);
 					} else {
 						yd = Number(yd.substring(1));
-						var ydc = math.round(yd * 100);
+						var ydc = yd * 100;
 						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2525&set.Value=" + ydc;
 					}
 				});
