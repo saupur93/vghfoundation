@@ -2,9 +2,10 @@
 .DS_Store
 node_modules/
 .idea/
-/*dist/
+  /*dist/
 web/app/themes/*/assets/bower_components/
 web/app/uploads/
 backups
 .env
 npm-debug.log
+web/app/themes/vghubc/single-editorial_themes_story_old.php

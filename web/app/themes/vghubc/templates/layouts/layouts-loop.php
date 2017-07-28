@@ -15,6 +15,9 @@
                     <?php elseif( get_row_layout() == 'two_column' ): ?>
                       <?php include(locate_template('templates/layouts/layout-two_column.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'two_column_landing' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-two_column_landing.php')); ?>
+
                     <?php elseif( get_row_layout() == 'narrow_two_column' ): ?>
                       <?php include(locate_template('templates/layouts/layout-narrow_two_column.php')); ?>
 

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 const FixedHeaderScroll = require('./modules/fixedHeaderScroll');
 const DonationTabs = require('./modules/donationTabs');
+const DonationLanding = require('./modules/donationlanding');
 import slideshow from './modules/slideshow';
 import NewsFeed from './modules/newsFeed';
 import AnnualReport from './modules/annualReport';
@@ -52,6 +53,42 @@ class App {
 		if ($('.donation-panel-tabs').length) {
 			this.donationTabs = new DonationTabs();
 		}
+		 if ($('.donation-form-landing').length) {
+			 $(document).ready(function() {
+			 $('#yourdonation').click(function() {
+				 console.log("entered");
+         this.value = "";
+ });
+ $('#yourdonation').mouseout(function() {
+       var yd = $('#yourdonation').val();
+
+			   if (yd == '') {
+					 $('#yourdonation').val("$100");
+					 $('#yourimpact').val("$200");
+
+				 } else{
+					 if ($.isNumeric(yd)){
+
+						 var ip = 2 * yd;
+
+						 $('#yourimpact').val("$"+ip);
+					 } else if ((yd % 1) !==0){
+						 yd = parseFloat(yd);
+						 var ip = 2 * yd;
+						 $('#yourimpact').val("$"+ip);
+					 }else {
+						 yd = Number(yd.substring(1));
+
+						 var ip = 2 * yd;
+
+						 $('#yourimpact').val("$"+ip);
+					 }
+
+				 }
+			 console.log(yd);
+		 });
+	});
+	  }
 
 		if ($('.fixed-sidebar').length) {
 			this.anchorStickyNav();
