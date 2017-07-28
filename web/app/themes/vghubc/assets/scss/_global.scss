@@ -2607,11 +2607,11 @@ body.tribe-events-page-template {
 
 }
 @include media($mobileOnly){
-	width:rem(400);
+
 	padding: 50px 40px 0px 40px;
 	@include font-size(13px);
 	min-height:250px;
-	
+
 }
 
 	}

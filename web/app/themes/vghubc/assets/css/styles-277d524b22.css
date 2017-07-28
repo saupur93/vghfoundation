@@ -3313,7 +3313,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         min-height: 250px; } }
     @media screen and (max-width: 600px) {
       .panel.page-header .donation-form-landing {
-        width: 25rem;
         padding: 50px 40px 0px 40px;
         font-size: 13px;
         font-size: 0.8125rem;
