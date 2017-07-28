@@ -3317,8 +3317,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         padding: 50px 40px 0px 40px;
         font-size: 13px;
         font-size: 0.8125rem;
-        min-height: 250px;
-        margin-left: 5px; } }
+        min-height: 250px; } }
   .panel.page-header .donation {
     display: block;
     font-size: 20px;
