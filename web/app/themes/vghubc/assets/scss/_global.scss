@@ -2594,23 +2594,24 @@ body.tribe-events-page-template {
 		color: #000;
 		min-height:230px;
 		z-index: 1;
-    margin-left: 0px;
+
 
 
 		@include media($ptab){
 			width:rem(430);
 			padding: 50px 40px 0px 40px;
+
 			@include font-size(13px);
 			min-height:250px;
-       margin-left: 10px;
+
 
 }
 @include media($mobileOnly){
-	width:rem(430);
+
 	padding: 50px 40px 0px 40px;
 	@include font-size(13px);
 	min-height:250px;
-	margin-left: 5px;
+
 }
 
 	}
