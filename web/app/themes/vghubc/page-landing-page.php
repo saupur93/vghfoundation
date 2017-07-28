@@ -20,7 +20,7 @@ Template Name: LandingPage
               <h1><?php print $page_header_subtitle; ?></h1>
               <p class="intro-landing">For thge month of August, your donation to the Emergency Department at VGH will be matched by Grosvenor Americas.</p>
               <div class="donation-form-landing">
-                <form name="donationform" id="donationform" role="donation">
+                <form name="donationform" id="donationform">
                       <div class="donation">your donation </div>
                       <div class="impact">your impact</div>
                       <div class="donation-landing">
@@ -31,7 +31,7 @@ Template Name: LandingPage
                          <br/><p class="impact-small">with matching donation</p>
                        </div>
 
-                       <input type="submit" name="submit" value="Donate now">
+                       <input type="button" name="submit" id="donatenow" value="Donate now">
 
                  </form>
                <div>

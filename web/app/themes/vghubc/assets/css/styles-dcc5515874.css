@@ -3359,13 +3359,17 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     border: 1px;
     border-color: #646568; }
   .panel.page-header form input[name="submit"] {
+    height: 45px;
+    margin-left: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
     display: block;
     border: 2px solid #575b5e;
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
     color: #575b5e;
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 2px;
     transition: all 0.3s linear;
     color: #fff;
@@ -3374,7 +3378,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin: 0px; }
     @media screen and (min-width: 769px) {
       .panel.page-header form input[name="submit"] {
-        width: 103%; } }
+        width: 101%; } }
   .panel.page-header .header-copy-landing {
     position: absolute;
     bottom: -70px;

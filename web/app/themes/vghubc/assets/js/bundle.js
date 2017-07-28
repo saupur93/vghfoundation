@@ -13467,6 +13467,7 @@ var App = function () {
 				this.donationTabs = new DonationTabs();
 			}
 			if ((0, _jquery2.default)('.donation-form-landing').length) {
+
 				(0, _jquery2.default)(document).ready(function () {
 					(0, _jquery2.default)('#yourdonation').click(function () {
 						console.log("entered");
@@ -13484,10 +13485,6 @@ var App = function () {
 								var ip = 2 * yd;
 
 								(0, _jquery2.default)('#yourimpact').val("$" + ip);
-							} else if (yd % 1 !== 0) {
-								yd = parseFloat(yd);
-								var ip = 2 * yd;
-								(0, _jquery2.default)('#yourimpact').val("$" + ip);
 							} else {
 								yd = Number(yd.substring(1));
 
@@ -13496,8 +13493,32 @@ var App = function () {
 								(0, _jquery2.default)('#yourimpact').val("$" + ip);
 							}
 						}
-						console.log(yd);
 					});
+				});
+
+				(0, _jquery2.default)('#donatenow').click(function (e) {
+					var url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1";
+					var yd = (0, _jquery2.default)('#yourdonation').val();
+					if (yd == "100" || yd == "$100") {
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2522";
+					} else if (yd == "250" || yd == "$250") {
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2526";
+					} else if (yd == "500" || yd == "$500") {
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2524";
+					} else if (yd == "1000" || yd == "$1000") {
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2521";
+					} else if (yd == "50" || yd == "$50") {
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2523";
+					} else if (_jquery2.default.isNumeric(yd)) {
+						var ydc = yd * 100;
+						url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2525&set.Value=" + ydc;
+						self.location = url;
+						console.log(url);
+					} else {
+						yd = Number(yd.substring(1));
+						var ydc = math.round(yd * 100);
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2525&set.Value=" + ydc;
+					}
 				});
 			}
 
