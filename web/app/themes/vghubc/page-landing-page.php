@@ -18,7 +18,7 @@ Template Name: LandingPage
           <div class="inner-wrap">
             <div class="header-copy-landing">
               <h1><?php print $page_header_subtitle; ?></h1>
-              <p class="intro-landing">For thge month of August, your donation to the Emergency Department at VGH will be matched by Grosvenor Americas.</p>
+              <p class="intro-copy-landing">For the month of August, your donation to the VGH Emergency Department will be matched by Grosvenor Americas.</p>
               <div class="donation-form-landing">
                 <form name="donationform" id="donationform">
                       <div class="donation">your donation </div>

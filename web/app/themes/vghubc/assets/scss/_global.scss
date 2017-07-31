@@ -2622,11 +2622,12 @@ body.tribe-events-page-template {
 
 		display: block;
 		@include font-size(20px);
-
-		color: grey;
+    color: #5b5c5f;
+		margin-bottom: 6px;
 		float:left;
 		@include media($tab){
     @include font-size(30px);
+
 
 		}
 	}
@@ -2634,9 +2635,9 @@ body.tribe-events-page-template {
 
 		display: block;
 		@include font-size(20px);
-
-		color: #d32328;
+    color: #e11a21;
 		float:right;
+		margin-bottom: 6px;
 		@include media($tab){
 		@include font-size(30px);
 		}
@@ -2645,9 +2646,10 @@ body.tribe-events-page-template {
 	.donation-landing {
 		width:50%;
 		display: inherit;
-		@include font-size(40px);
 
-		color: #d32328;
+
+
+
 		float:left;
 		margin-bottom: 5px;
 	}
@@ -2655,7 +2657,7 @@ body.tribe-events-page-template {
 	.impact-landing {
 		width:50%;
 		display: inherit;
-		@include font-size(40px);
+
 
 		float:right;
 		margin-bottom: 5px;
@@ -2664,21 +2666,25 @@ body.tribe-events-page-template {
 .impact-small {
 
   margin-top:5px;
-	@include font-size(12px);
-	color: #646568;
+	@include font-size(13px);
+	color: #56585a;
 
 	margin-bottom: 5px;
 }
 
 
 form input[name="yourimpact"] {
+width:100%;
 background:#646568;
 color: #fff;
+@include font-size(30px);
 }
 
 form input[name="yourdonation"] {
-
+	width:100%;
+@include font-size(30px);
 border: 1px;
+color: #e11a21;;
 border-color: #646568;
 }
 
@@ -2693,11 +2699,13 @@ text-decoration: none;
 text-transform: uppercase;
 width: 100%;
 color: #575b5e;
-font-size: 22px;
+font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
+font-size: 32px;
+font-weight: 600;
 letter-spacing: 2px;
 transition: all 0.3s linear;
 color: #fff;
-background-color: #d32328;
+background-color: #e11a21;
 border: 2px solid #d32328;
 margin: 0px;
 
@@ -2711,7 +2719,7 @@ width: 101%;
 		bottom:-70px;
 		width:100%;
 		min-height:170px;
-		padding:50px 15px 30px 5px;
+		padding:50px 18px 30px 5px;
 		@include font-size(13px);
 		color:#fff;
 		line-height:1.33;
@@ -2778,6 +2786,20 @@ width: 101%;
 			margin-bottom:1rem;
 			@include font-size(80px);
 		}
+
+	}
+
+	.intro-copy-landing {
+          position:relative;
+          font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
+					font-size: 15px;
+				   padding-right:2rem;
+					@include media($ptab){
+
+						font-size: 22px;
+						font-weight: bold !important;
+						padding-right:3rem;
+					}
 
 	}
 

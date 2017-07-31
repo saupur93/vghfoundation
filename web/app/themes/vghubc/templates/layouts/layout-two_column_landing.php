@@ -7,9 +7,23 @@
     <div class="inner-wrap">
     <?php if( have_rows('columns') ): ?>
       <?php while( have_rows('columns') ): the_row();
+        $n++;
         $column_title = get_sub_field('column_title');
         $column_body = get_sub_field('column_body');
-        $n++;
+          if ($n ==2) {
+               if ($campaign_goal){
+               $campaign_goal = get_sub_field('campaign_goal');
+             }
+                if ($raised_total){
+                $raised_total = get_the_field('raised_total');
+                $need_total = ($campaign_total - $raised_total);
+                $percent_raised = ($raised_total/$campaign_total) * 100;
+                $percent_raised_round = ceil($percent_raised);
+                $percent_need_round = (100 - $percent_raised_round);
+              }
+      }
+
+
       ?>
       <?php if($column_title): ?>
       <h3><?php print $column_title; ?></h3>
@@ -18,7 +32,8 @@
 
         <?php
          if ($n==2) {
-           print $column_body. "<p>Campaign Goal: $20,000</p>";
+           print $column_body. "<p>Campaign Goal:". $campaign_goal ."</p>";
+
          } else {
            print $column_body;
          }
@@ -60,13 +75,14 @@
 
         .thermometer-progress {
             position: relative;
-            width: 690px;
-            max-width: 95%;
+            width: 500px;
+            max-width: 100%;
             height: 50px;
             border-radius: 60px;
             margin: auto auto 30px;
             padding: 4px;
             border: 4px solid #bdbdc0;
+
         }
 
 
