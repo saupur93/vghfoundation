@@ -2666,10 +2666,13 @@ body.tribe-events-page-template {
 .impact-small {
 
   margin-top:5px;
-	@include font-size(13px);
+	@include font-size(9px);
+	padding-right: 0px;
 	color: #56585a;
-
 	margin-bottom: 5px;
+	@include media($tab){
+	@include font-size(13px);
+	}
 }
 
 
@@ -2691,7 +2694,7 @@ border-color: #646568;
 	form input[name="submit"] {
 		height:45px;
 		margin-left:10px;
-		padding-left:60px;
+		padding-left:50px;
 		padding-right:60px;
 display: block;
 border: 2px solid #575b5e;
@@ -2700,8 +2703,7 @@ text-transform: uppercase;
 width: 100%;
 color: #575b5e;
 font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
-font-size: 32px;
-font-weight: 600;
+font-size: 20px;
 letter-spacing: 2px;
 transition: all 0.3s linear;
 color: #fff;
@@ -2711,6 +2713,10 @@ margin: 0px;
 
 @include media($tab){
 width: 101%;
+padding-left:60px;
+font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
+font-size: 32px;
+font-weight: 600;
 }
 }
 
@@ -2780,7 +2786,7 @@ width: 101%;
 	.header-copy-landing h1 {
 		margin-top:-56px;
 		//margin-bottom:0.5rem;
-		@include font-size(40px);
+		@include font-size(35px);
 		@include media($ptab){
 
 			margin-bottom:1rem;
@@ -2791,14 +2797,18 @@ width: 101%;
 
 	.intro-copy-landing {
           position:relative;
+					padding-right: 3rem;
           font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
-					font-size: 15px;
-				   padding-right:2rem;
-					@include media($ptab){
+					font-size: 14px;
+          font-weight: none;
 
+					@include media($ptab){
+            font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
 						font-size: 22px;
 						font-weight: bold !important;
-						padding-right:3rem;
+						padding-right: 8rem;
+
+
 					}
 
 	}

@@ -3351,10 +3351,15 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-bottom: 5px; }
   .panel.page-header .impact-small {
     margin-top: 5px;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 9px;
+    font-size: 0.5625rem;
+    padding-right: 0px;
     color: #56585a;
     margin-bottom: 5px; }
+    @media screen and (min-width: 769px) {
+      .panel.page-header .impact-small {
+        font-size: 13px;
+        font-size: 0.8125rem; } }
   .panel.page-header form input[name="yourimpact"] {
     width: 100%;
     background: #646568;
@@ -3371,7 +3376,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .panel.page-header form input[name="submit"] {
     height: 45px;
     margin-left: 10px;
-    padding-left: 60px;
+    padding-left: 50px;
     padding-right: 60px;
     display: block;
     border: 2px solid #575b5e;
@@ -3380,8 +3385,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     width: 100%;
     color: #575b5e;
     font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 20px;
     letter-spacing: 2px;
     transition: all 0.3s linear;
     color: #fff;
@@ -3390,7 +3394,11 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin: 0px; }
     @media screen and (min-width: 769px) {
       .panel.page-header form input[name="submit"] {
-        width: 101%; } }
+        width: 101%;
+        padding-left: 60px;
+        font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
+        font-size: 32px;
+        font-weight: 600; } }
   .panel.page-header .header-copy-landing {
     position: absolute;
     bottom: -70px;
@@ -3439,8 +3447,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         margin-bottom: 1rem; } }
   .panel.page-header .header-copy-landing h1 {
     margin-top: -56px;
-    font-size: 40px;
-    font-size: 2.5rem; }
+    font-size: 35px;
+    font-size: 2.1875rem; }
     @media screen and (min-width: 601px) {
       .panel.page-header .header-copy-landing h1 {
         margin-bottom: 1rem;
@@ -3448,14 +3456,16 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-size: 5rem; } }
   .panel.page-header .intro-copy-landing {
     position: relative;
+    padding-right: 3rem;
     font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
-    font-size: 15px;
-    padding-right: 2rem; }
+    font-size: 14px;
+    font-weight: none; }
     @media screen and (min-width: 601px) {
       .panel.page-header .intro-copy-landing {
+        font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
         font-size: 22px;
         font-weight: bold !important;
-        padding-right: 3rem; } }
+        padding-right: 8rem; } }
   .panel.page-header p {
     padding-right: 3rem; }
     @media screen and (max-width: 768px) {
