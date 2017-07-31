@@ -208,10 +208,10 @@
             <div class="thermometer-progress">
               <div class="progress-title fill">
                  <?php
-                      if (($percent_raised > 15) && ($percent_raised < 40)){
+                      if (($percent_raised > 15) && ($percent_raised < 30)){
                         print number_format($raised_total);
-                      } else if (percent_raised > 40) {
-                        print number_format($raised_total). "DONATED";
+                      } else if ($percent_raised > 30) {
+                        print number_format($raised_total). " DONATED";
                       }
                  ?>
               </div>
