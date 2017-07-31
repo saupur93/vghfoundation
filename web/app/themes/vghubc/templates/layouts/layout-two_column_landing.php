@@ -11,16 +11,16 @@
         $column_title = get_sub_field('column_title');
         $column_body = get_sub_field('column_body');
           if ($n ==2) {
-               if ($campaign_goal){
+
                $campaign_goal = get_sub_field('campaign_goal');
-             }
-                if ($raised_total){
-                $raised_total = get_the_field('raised_total');
-                $need_total = ($campaign_total - $raised_total);
-                $percent_raised = ($raised_total/$campaign_total) * 100;
+
+
+                $raised_total = get_sub_field('raised_total');
+                $need_total = ($campaign_goal - $raised_total);
+                $percent_raised = ($raised_total / $campaign_goal) * 100;
                 $percent_raised_round = ceil($percent_raised);
                 $percent_need_round = (100 - $percent_raised_round);
-              }
+
       }
 
 
@@ -31,8 +31,8 @@
       <div class="col-half-landing">
 
         <?php
-         if ($n==2) {
-           print $column_body. "<p>Campaign Goal:". $campaign_goal ."</p>";
+         if ($n>=2) {
+           print $column_body. "<p>Campaign Goal: $". number_format($campaign_goal) ."</p>";
 
          } else {
            print $column_body;
@@ -89,7 +89,7 @@
         .progress-title {
            margin-top:3px;
             height: 80%;
-            width : 50%;
+            width : <?php  echo $percent_raised_round; ?>%;
 
             border-radius: 70px 0 0 70px;
             line-height: 25px;
@@ -105,7 +105,7 @@
           margin-top: -14px;
            display: block;
             height: 80%;
-            width: 50%;
+            width: <?php  echo $percent_need_round; ?>%;
 
 
             line-height: 0px;
@@ -206,8 +206,16 @@
 
           <div class="thermometers-wrap">
             <div class="thermometer-progress">
-              <div class="progress-title fill">$10,000 DONATED</div>
-              <div class="remaining-title">Need $10,000</div>
+              <div class="progress-title fill">
+                 <?php
+                      if (($percent_raised > 15) && ($percent_raised < 40)){
+                        print number_format($raised_total);
+                      } else if (percent_raised > 40) {
+                        print number_format($raised_total). "DONATED";
+                      }
+                 ?>
+              </div>
+              <div class="remaining-title">Need <?php echo number_format($need_total);?></div>
               <div class="progress-bars one"></div>
               <div class="progress-bars two"></div>
               <div class="progress-bars three"></div>
