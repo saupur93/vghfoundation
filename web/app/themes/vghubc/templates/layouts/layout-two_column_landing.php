@@ -75,7 +75,7 @@
 
         .thermometer-progress {
             position: relative;
-            width: 500px;
+            width: 600px;
             max-width: 100%;
             height: 50px;
             border-radius: 60px;
@@ -209,13 +209,21 @@
               <div class="progress-title fill">
                  <?php
                       if (($percent_raised > 15) && ($percent_raised < 30)){
-                        print number_format($raised_total);
+                        print "$".number_format($raised_total);
                       } else if ($percent_raised > 30) {
-                        print number_format($raised_total). " DONATED";
+                        print "$".number_format($raised_total). " DONATED";
                       }
                  ?>
               </div>
-              <div class="remaining-title">Need <?php echo number_format($need_total);?></div>
+              <div class="remaining-title">
+                <?php
+              if ($percent_raised > 80){
+                echo "$". number_format($need_total);
+              } else {
+                  echo "NEED $". number_format($need_total);
+              }
+                ?>
+              </div>
               <div class="progress-bars one"></div>
               <div class="progress-bars two"></div>
               <div class="progress-bars three"></div>
