@@ -13497,27 +13497,27 @@ var App = function () {
 				});
 
 				(0, _jquery2.default)('#donatenow').click(function (e) {
-					var url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1";
+					var url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087";
 					var yd = (0, _jquery2.default)('#yourdonation').val();
 					if (yd == "100" || yd == "$100") {
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2522";
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2522";
 					} else if (yd == "250" || yd == "$250") {
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2526";
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2526";
 					} else if (yd == "500" || yd == "$500") {
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2524";
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2524";
 					} else if (yd == "1000" || yd == "$1000") {
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2521";
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2521";
 					} else if (yd == "50" || yd == "$50") {
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2523";
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2523";
 					} else if (_jquery2.default.isNumeric(yd)) {
 						var ydc = yd * 100;
-						url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2525&set.Value=" + ydc;
+						url = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2525&set.Value=" + ydc;
 						self.location = url;
 						console.log(url);
 					} else {
 						yd = Number(yd.substring(1));
 						var ydc = yd * 100;
-						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.DonationLevel=2525&set.Value=" + ydc;
+						self.location = "https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2525&set.Value=" + ydc;
 					}
 				});
 			}
