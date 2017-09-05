@@ -70,9 +70,11 @@ Template Name: LandingPage
     		<div class="text-block">
     			<h2>There is still time</h2>
     			<p>
-    				In case you missed it last month, Grosvenor Americas is extending their match untill <em>Friday </em> <strong>September 8th</strong>.
+    				In case you missed it last month, Grosvenor Americas is extending their match until <b><em>Friday </em>,September 8th</b>.
     			</p>
-
+    			<div class="fb-buttons">
+    				<span class="share-btn btn email-signup" onclick="window.open('https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2522');">DONATE NOW</span>
+    			</div>
 
     			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 
