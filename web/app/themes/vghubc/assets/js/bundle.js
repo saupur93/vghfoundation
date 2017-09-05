@@ -14439,11 +14439,12 @@ var CTAMessage = function () {
 			});
 
 			window.addEventListener('scroll', function () {
-				if (window.pageYOffset > _this.windowheight * 1.56) {
-					_this.ctamsgbox.classList.add('show');
-				} else {
-					_this.ctamsgbox.classList.remove('show');
-				}
+				//if(window.pageYOffset > this.windowheight*1.56) {
+				_this.ctamsgbox.classList.add('show');
+				//	}
+				//	else {
+				//		this.ctamsgbox.classList.remove('show');
+				//	}
 			});
 		}
 	}]);

@@ -18,12 +18,12 @@ class CTAMessage {
 		});
 
 		window.addEventListener('scroll', () => {
-			if(window.pageYOffset > this.windowheight*1.56) {
+			//if(window.pageYOffset > this.windowheight*1.56) {
 				this.ctamsgbox.classList.add('show');
-			}
-			else {
-				this.ctamsgbox.classList.remove('show');
-			}
+		//	}
+		//	else {
+		//		this.ctamsgbox.classList.remove('show');
+		//	}
 		});
 
 	}
