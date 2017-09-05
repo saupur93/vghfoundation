@@ -70,7 +70,7 @@ Template Name: LandingPage
     		<div class="text-block">
     			<h2>There is still time</h2>
     			<p>
-    				In case you missed it last month, Grosvenor Americas is extending their match until <b><em>Friday </em>,September 8th</b>.
+    				In case you missed it last month, Grosvenor Americas is extending their match until <strong><em>Friday </em>, September 8th</strong>.
     			</p>
     			<div class="fb-buttons">
     				<span class="share-btn btn email-signup" onclick="window.open('https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2522');">DONATE NOW</span>
