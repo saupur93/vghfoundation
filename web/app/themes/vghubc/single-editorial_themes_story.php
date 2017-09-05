@@ -69,9 +69,33 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 		</div>
 	<?php endif; ?>
 </div>
+<?php if(is_single(24781)): ?>
+	<div id="cta-message" class="register-panel">
+	<div class="cta-message-content">
+		<div class="close">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="text-block">
+			<h2>Be the first to know</h2>
+			<p>
+				Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
+			</p>
+			<div class="fb-buttons">
+				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Subscribe with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Subscribe with Email</span>
+			</div>
 
+			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
+      <div class="caption-text">
+        <br />
+          By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
+      </div>
+		</div>
+    <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg'); background-position: center top;"></div>
+	</div>
+</div>
 
-
+<?php endif; ?>
 
 
 <?php
