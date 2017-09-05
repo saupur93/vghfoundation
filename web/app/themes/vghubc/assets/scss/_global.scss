@@ -7435,8 +7435,8 @@ body.overlay-open {
 
 	.cta-message-content {
 		padding: 100px 50px;
-		width: 100%;
-		min-height: 450px;
+		//width: 100%;
+		//min-height: 450px;
 		display: flex;
 		background: $lighter-grey;
 		box-shadow: 0 1px 15px rgba(0,0,0,0.2);
@@ -7530,7 +7530,7 @@ body.overlay-open {
 			}
 		}
 		.img-block {
-			min-height: 400px;
+			//min-height: 400px;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;

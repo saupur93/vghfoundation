@@ -6751,8 +6751,6 @@ body.overlay-open {
         font-size: 0.75rem; } }
   #cta-message .cta-message-content {
     padding: 100px 50px;
-    width: 100%;
-    min-height: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6848,7 +6846,6 @@ body.overlay-open {
             margin-bottom: 15px;
             font-size: 24px; } }
     #cta-message .cta-message-content .img-block {
-      min-height: 400px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
