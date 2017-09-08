@@ -91,6 +91,10 @@ if( have_rows('story_content') ):
 	endwhile;
 endif;
 
+if(get_field('related_cta')):
+	    include(locate_template('templates/layouts/layout-call_to_action.php'));
+endif;
+
 ?>
 
 
