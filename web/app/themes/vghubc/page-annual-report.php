@@ -55,7 +55,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-1 full-panel">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>the power of giving</h3>
         </div>
       </header>
@@ -101,7 +101,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-2 full-panel">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>president’s message</h3>
         </div>
       </header>
@@ -136,7 +136,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-3 full-panel">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>philanthropic pillars</h3>
         </div>
       </header>
@@ -158,7 +158,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-4 full-panel" data-headerColor="surgery-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>surgery</h3>
         </div>
       </header>
@@ -200,7 +200,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-4 full-panel" data-headerColor="cancer-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>cancer</h3>
         </div>
       </header>
@@ -242,7 +242,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-5 full-panel" data-headerColor="heart-lung-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>heart and lung</h3>
         </div>
       </header>
@@ -284,7 +284,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-6 full-panel" data-headerColor="innovation-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>innovation</h3>
         </div>
       </header>
@@ -326,7 +326,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-7 full-panel" data-headerColor="community-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+
           <h3>community</h3>
         </div>
       </header>
@@ -368,7 +368,7 @@ $president_full = get_field('presidents_message_full');
     <section class="panel ar-section ar-section-8 full-panel" data-headerColor="brain-health-bg">
       <header class="panel ar-section-header">
         <div class="container">
-          <h5>2015 - 2016 ANNUAL REPORT</h5>
+    
           <h3>brain health</h3>
         </div>
       </header>
