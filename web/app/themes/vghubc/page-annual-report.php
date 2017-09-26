@@ -102,15 +102,16 @@ $president_full = get_field('presidents_message_full');
       <header class="panel ar-section-header">
         <div class="container">
 
-          <h3>president’s message</h3>
+          <h3>Board & president’s message</h3>
         </div>
       </header>
       <div class="container">
         <div class="inner-wrap">
-          <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/ar-president.jpg" class="president" />
-          <div class="copy" style="overflow:hidden;">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/tmp/board&president.jpg" class="president" />
+             <div class="item-text" style="overflow:hidden;">
             <?php print $president_intro; ?>
             <p><a href="#" class="read-more" id="president-message">read president’s message</a></p>
+
             <div class="hide message-html">
               <div class="container">
                 <div class="inner-wrap">
@@ -142,7 +143,7 @@ $president_full = get_field('presidents_message_full');
       </header>
       <div class="container">
         <div class="narrow-wrap">
-          <h2>We’re changing lives together. <br>Here’s how.</h2>
+          <h2 class="green-header">Philanthrophy is vital <br>to the transformation <br>of health care.</h2>
           <p>In this Annual Report, you will read some amazing stories about six areas of where philanthropy is playing a major role delivering innovative, transformative and sustainable health care.</p>
         </div>
       </div>
@@ -163,28 +164,34 @@ $president_full = get_field('presidents_message_full');
         </div>
       </header>
       <div class="container">
-        <div class="inner-wrap vcenter adjust">
+        <div class="inner-wrap">
           <div class="row">
-            <div class="col-4 facts">
-              <p class="stat-intro">Our world-class surgeons and OR specialists deserve the best facilities possible to help our patients.</p>
-            </div>
-            <div class="col-4 facts">
-              <h5>Facts</h5>
-                <p class="larger-text">60%</p>
-                <p class="small">We serve sixty percent of the province’s adult trauma cases are seen in our hospitals</p>
+            <div class="col-2 facts">
+
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/VGH-NicolaBrailsford-Blackmore.jpg" />
+
             </div>
 
-            <div class="col-4 facts">
-              <h5>Outcome</h5>
-                <p class="larger-text">Efficient and effective operating rooms</p>
-                <p class="small">Having more effective operating theatres is a part of the Future of Surgery</p>
+            <div class="col-2 facts" style="overflow:hidden">
+
+                <p class="larger-text">Giving ‘the gift of life’</p>
+                <p>Leon was clearly a man of vision, personality, drive, ambition and generosity.
+</p>
+<p><a href="#" class="read-more" id="full-story-surgery">read the full story</a></p>
+<div class="hide message-html">
+  <div class="container">
+    <div class="inner-wrap">
+     <?php print $president_full; ?>
+
+
+    </div>
+  </div>
+</div>
             </div>
 
-            <div class="col-4 facts">
-              <h5>Story</h5>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/ar/surgery.jpg" />
-                <p class="small">Operating rooms like this one with Dr. Bas Masri will be revitalized as part of the Future of Surgery initiative.</p>
-            </div>
+
+
+
           </div>
         </div>
       </div>
@@ -197,7 +204,7 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-4 full-panel" data-headerColor="cancer-bg">
+    <section class="panel ar-section ar-section-5 full-panel" data-headerColor="cancer-bg">
       <header class="panel ar-section-header">
         <div class="container">
 
@@ -239,7 +246,7 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-5 full-panel" data-headerColor="heart-lung-bg">
+    <section class="panel ar-section ar-section-6 full-panel" data-headerColor="heart-lung-bg">
       <header class="panel ar-section-header">
         <div class="container">
 
@@ -281,7 +288,7 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-6 full-panel" data-headerColor="innovation-bg">
+    <section class="panel ar-section ar-section-7 full-panel" data-headerColor="innovation-bg">
       <header class="panel ar-section-header">
         <div class="container">
 
@@ -323,7 +330,7 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-7 full-panel" data-headerColor="community-bg">
+    <section class="panel ar-section ar-section-8 full-panel" data-headerColor="community-bg">
       <header class="panel ar-section-header">
         <div class="container">
 
@@ -365,10 +372,10 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-8 full-panel" data-headerColor="brain-health-bg">
+    <section class="panel ar-section ar-section-9 full-panel" data-headerColor="brain-health-bg">
       <header class="panel ar-section-header">
         <div class="container">
-    
+
           <h3>brain health</h3>
         </div>
       </header>
@@ -407,7 +414,7 @@ $president_full = get_field('presidents_message_full');
     </section>
 
 
-    <section class="panel ar-section ar-section-9 bg-color-cta full-panel">
+    <section class="panel ar-section ar-section-10 bg-color-cta full-panel">
       <div class="container">
         <div class="narrow-wrap">
           <h2>Find out how your contributions have helped make us vital.</h2>

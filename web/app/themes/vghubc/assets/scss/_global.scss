@@ -5321,15 +5321,34 @@ body.page-template-page-annual-report-php {
 	h2 {
 		font-family:$font-bold;
 		line-height:1.1;
-	}
 
+	}
+  .green-header {
+		color:$teal !important;
+	}
 	.vcenter {
 		margin:0%;
 		h2 {
 			font-family: $font;
+			color:$brand-green !important;
 		}
 	}
 
+	.col-2 {
+		width:100%;
+		float:left;
+		padding-right:0;
+		@include media($tab){
+			padding-right:rem(60);
+			width:50%;
+		}
+		@include media($ptabAndLess){
+			margin-bottom:1.5rem;
+		}
+		&:last-child {
+			padding-right:0;
+		}
+	}
 	.col-third {
 		@include media($ptab){
 			padding-right:rem(50);
@@ -5781,27 +5800,38 @@ body.page-template-page-annual-report-php {
 				// margin-top:rem(100);
 				@include media($tab){
 					transform:translateY(-50%);
-					top:calc(50% + 70px);
+					top:calc(40% + 70px);
 					// margin-top:16%;
 				}
 			}
 
 			.president {
 				@include media($ptab){
-					float:left;
+					float:right;
 					margin-right:40px;
+					margin-left: 20px;
 				}
 			}
 		}
 
 
 		&.ar-section-3 {
-			color:#fff;
-			background:url(../img/tmp/ar-people-bg.jpg) no-repeat 50% 100px;
-			background-size:cover;
+
+
+		}
+		&.ar-section-4 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				 transform:translateY(-50%);
+ 				 top:calc(10% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
 		}
 
-		&.ar-section-9 {
+		&.ar-section-10 {
 			background-color:$teal;
 
 			@include media($ptabAndLess){
@@ -6087,8 +6117,8 @@ body.page-template-page-annual-report-php {
 
 		&:hover {
 			a, .read-more {
-				color:$brand-green;
-				border-color:$brand-green;
+				color:$teal;
+				border-color:$teal;
 			}
 		}
 

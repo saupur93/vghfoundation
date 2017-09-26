@@ -273,7 +273,14 @@ export default class AnnualReport {
       let presHTML = $(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
       overlay.find('.overlay-content').append(presHTML);
     };
-    $('#president-message').on('click', openOverlay)
+    const openOverlay2 = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-4').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    $('#president-message').on('click', openOverlay);
+    $('#full-story-surgery').on('click', openOverlay2);
 
     // close overlay and clear DOM innerHTML
     const closeOverlay = e => {

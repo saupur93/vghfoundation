@@ -14391,7 +14391,14 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
+      var openOverlay2 = function openOverlay2(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-4').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
       (0, _jquery2.default)('#president-message').on('click', openOverlay);
+      (0, _jquery2.default)('#full-story-surgery').on('click', openOverlay2);
 
       // close overlay and clear DOM innerHTML
       var closeOverlay = function closeOverlay(e) {
