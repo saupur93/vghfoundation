@@ -172,11 +172,10 @@ $president_full = get_field('presidents_message_full');
 
             </div>
 
-            <div class="col-2 facts" style="overflow:hidden">
+            <div class="col-2 facts2" style="overflow:hidden;">
 
                 <p class="larger-text">Giving ‘the gift of life’</p>
-                <p>Leon was clearly a man of vision, personality, drive, ambition and generosity.
-</p>
+                <p>Leon was clearly a man of vision, personality, drive, ambition and generosity.</p>
 <p><a href="#" class="read-more" id="full-story-surgery">read the full story</a></p>
 <div class="hide message-html">
   <div class="container">

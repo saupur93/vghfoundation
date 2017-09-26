@@ -5569,15 +5569,15 @@ body.page-template-page-annual-report-php {
 
 
 	.larger-text {
-		@include font-size(28px);
+		@include font-size(45px);
 		line-height:1.1;
 		display:inline-block;
 		margin-bottom:rem(5);
 		@include media($ptab){
-			@include font-size(32px);
+			@include font-size(30px);
 		}
 		@include media($tab){
-			@include font-size(35px);
+			@include font-size(45px);
 			margin-bottom:rem(20);
 		}
 	}
@@ -5723,15 +5723,32 @@ body.page-template-page-annual-report-php {
 		}
 
 		.facts {
+
+			img {
+				// margin-top:rem(-20);
+				margin-bottom:rem(15);
+			}
+		}
+
+		.facts2 {
+			@include media($tab){
+				margin-top: rem(20) !important;
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+			}
 			h5 {
 				margin-bottom:rem(15);
 			}
 
 			p {
 				margin-bottom:0;
+				@include font-size(40px);
+
 			}
 
 			.larger-text {
+       @include font-size(45px);
 				margin-bottom:rem(10);
 			}
 			.number {
@@ -5741,11 +5758,27 @@ body.page-template-page-annual-report-php {
 				margin-bottom:rem(0);
 			}
 
-			img {
-				// margin-top:rem(-20);
-				margin-bottom:rem(15);
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$surgery !important;
+				border-bottom:1px solid  $surgery !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptab){
+					@include font-size(18px);
+				}
+
+				&:hover {
+					color:rgba( $surgery, 0.7);
+					border-bottom:1px solid rgba( $surgery, 0.7);
+				}
 			}
 		}
+
 
 		.animated-content {
 			overflow: hidden;
