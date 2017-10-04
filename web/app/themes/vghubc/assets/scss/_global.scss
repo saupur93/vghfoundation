@@ -153,6 +153,10 @@ p {
 		border:2px solid #fff;
 		color:#fff;
 		background-color:transparent;
+		margin-right:10px;
+		@include media($ptabAndLess){
+			margin-bottom: 10px;
+		}
 		&:hover {
 			color:$brand-green;
 			background-color:#fff;
@@ -5260,6 +5264,16 @@ body.page-template-page-annual-report-php {
 .hide {
 	display:none;
 }
+.ar-main-header-image {
+	color:#fff;
+	background: url('../img/tmp/multicolor.png') no-repeat;
+  background-size: cover;
+
+	@include media($regularNav){
+		top:100px;
+	}
+
+}
 
 .ar-main-header {
 	color:#fff;
@@ -5308,7 +5322,12 @@ body.page-template-page-annual-report-php {
 .ar-main-header[data-headerColor="brain-health-bg"] {
 	background-color:$brainhealth;
 }
-
+	.ar-main-header[data-headerColor="legacy-bg"] {
+		background-color:$brand-green;
+}
+.green-header {
+	color:$teal !important;
+}
 #annual-report {
 	@include media($tab){
 		overflow:visible;
@@ -5323,9 +5342,7 @@ body.page-template-page-annual-report-php {
 		line-height:1.1;
 
 	}
-  .green-header {
-		color:$teal !important;
-	}
+
 	.vcenter {
 		margin:0%;
 		h2 {
@@ -5344,9 +5361,34 @@ body.page-template-page-annual-report-php {
 		}
 		@include media($ptabAndLess){
 			margin-bottom:1.5rem;
+			padding-right:20px !important;
+			padding-left:20px !important;
 		}
 		&:last-child {
 			padding-right:0;
+		}
+	}
+
+	.col-2-right{
+		width:100%;
+		float:left;
+
+		padding-left:20px;
+		@include media($tab){
+			padding-left:rem(60);
+
+			width:50%;
+		}
+		@include media($ptabAndLess){
+			margin-bottom:1.5rem;
+
+			  padding-right:20px !important;
+				@include font-size(12px);
+
+		}
+		&:last-child {
+			padding-right:0;
+
 		}
 	}
 	.col-third {
@@ -5416,6 +5458,9 @@ body.page-template-page-annual-report-php {
 		[data-headerColor="brain-health-bg"] .ar-section-header {
 			background-color:$brainhealth;
 		}
+		[data-headerColor="legacy-bg"] .ar-section-header {
+			background-color:$brand-green;
+		}
 	}
 
 	.arrow-down {
@@ -5435,7 +5480,7 @@ body.page-template-page-annual-report-php {
 
 	.ar-intro-cover, .ar-section.ar-section-3 {
 		.arrow-down-icon {
-			color:#fff;
+			//color:#fff;
 			// &:hover {
 			//   color:rgba(#fff, 0.8);
 			// }
@@ -5492,12 +5537,15 @@ body.page-template-page-annual-report-php {
 			}
 		}
 
-		.container, .inner-wrap {
+		.container, .container2, .inner-wrap {
+
 			height:calc(100vh - 100px);
 			@include media($portraitOnly){
 				height:auto;
 			}
 		}
+
+
 
 		.animate-down {
 			position:absolute;
@@ -5574,7 +5622,7 @@ body.page-template-page-annual-report-php {
 		display:inline-block;
 		margin-bottom:rem(5);
 		@include media($ptab){
-			@include font-size(30px);
+			@include font-size(15px);
 		}
 		@include media($tab){
 			@include font-size(45px);
@@ -5585,7 +5633,7 @@ body.page-template-page-annual-report-php {
 
 	.ar-section .facts {
 		@include media($portraitOnly){
-			width:50%;
+
 			float:left;
 			padding-right:5%;
 			&:first-child {
@@ -5658,6 +5706,11 @@ body.page-template-page-annual-report-php {
 			color:$brainhealth !important;
 		}
 	}
+		[data-headerColor="legacy-bg"] {
+			.larger-text, .facts .number {
+				color:$brand-green !important;
+			}
+	}
 
 @include media($ptabAndLess){
 	[data-headerColor="surgery-bg"] .ar-section-header {
@@ -5677,6 +5730,9 @@ body.page-template-page-annual-report-php {
 	}
 	[data-headerColor="brain-health-bg"] .ar-section-header {
 		background-color:$brainhealth;
+	}
+	[data-headerColor="legacy-bg"] .ar-section-header {
+		background-color:$brand-green;
 	}
 }
 
@@ -5712,6 +5768,14 @@ body.page-template-page-annual-report-php {
 
 		}
 
+		.container2 {
+			max-width: 100%;
+			display:block;
+			//height:calc(100%);
+
+
+		}
+
 		.narrow-wrap, .inner-wrap.vcenter {
 			// top: rem(160);
 			@include media($tab){
@@ -5730,26 +5794,111 @@ body.page-template-page-annual-report-php {
 			}
 		}
 
-		.facts2 {
+		.facts-president {
 			@include media($tab){
-				margin-top: rem(20) !important;
+				margin-top:calc(15%);
+
 			}
 			@include media($portraitOnly){
 				margin-top: rem(20) !important;
+				//margin-left: 10px;
 			}
 			h5 {
 				margin-bottom:rem(15);
 			}
 
 			p {
-				margin-bottom:0;
-				@include font-size(40px);
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
 
 			}
 
 			.larger-text {
-       @include font-size(45px);
+       @include font-size(25px);
 				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+
+					@include media($ptabAndLess){
+         @include font-size(13px);
+					}
+
+
+
+			}
+		}
+
+		.facts-surgery {
+			@include media($tab){
+				margin-top: calc(15%);
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+       @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
 			}
 			.number {
 				@include font-size(72px);
@@ -5768,8 +5917,8 @@ body.page-template-page-annual-report-php {
 				padding-bottom:8px;
 				transition: all 0.3s linear;
 				font-family:$font-med;
-				@include media($ptab){
-					@include font-size(18px);
+				@include media($ptabAndLess){
+			 @include font-size(13px);
 				}
 
 				&:hover {
@@ -5779,7 +5928,412 @@ body.page-template-page-annual-report-php {
 			}
 		}
 
+		.facts-cancer {
+			@include media($tab){
+				margin-top: calc(15%);
 
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$cancer !important;
+				border-bottom:1px solid  $cancer !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $cancer, 0.7);
+					border-bottom:1px solid rgba( $cancer, 0.7);
+				}
+			}
+		}
+		.facts-lungs {
+			@include media($tab){
+				margin-top: calc(15%);
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$heartlung !important;
+				border-bottom:1px solid  $heartlung !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $heartlung, 0.7);
+					border-bottom:1px solid rgba( $heartlung, 0.7);
+				}
+			}
+		}
+		.facts-innovation {
+			@include media($tab){
+				margin-top: calc(15%);
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$innovation !important;
+				border-bottom:1px solid  $innovation !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $innovation, 0.5);
+					border-bottom:1px solid rgba( $innovation, 0.5);
+				}
+			}
+		}
+
+		.facts-community {
+			@include media($tab){
+				margin-top: calc(15%);
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$community !important;
+				border-bottom:1px solid  $community !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $community, 0.5);
+					border-bottom:1px solid rgba( $community, 0.5);
+				}
+			}
+		}
+		.facts-brainhealth {
+			@include media($tab){
+				margin-top: calc(20%);
+				padding-left: 300px !important;
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$brainhealth !important;
+				border-bottom:1px solid  $brainhealth !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $brainhealth, 0.5);
+					border-bottom:1px solid rgba( $brainhealth, 0.5);
+				}
+			}
+		}
+
+		.facts-legacy {
+			@include media($tab){
+				margin-top: calc(15%);
+
+			}
+			@include media($portraitOnly){
+				margin-top: rem(20) !important;
+				//margin-left: 10px;
+			}
+			h5 {
+				margin-bottom:rem(15);
+			}
+
+			p {
+				margin-bottom:10px;
+				@include font-size(24px);
+				@include media($portraitOnly){
+					@include font-size(30px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(17px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
+			.larger-text {
+			 @include font-size(25px);
+				margin-bottom:rem(10);
+
+				@include media($portraitOnly){
+					@include font-size(15px);
+				}
+				@include media($tab){
+					@include font-size(45px);
+					margin-bottom:rem(20);
+				}
+
+			}
+			.number {
+				@include font-size(72px);
+				float:left;
+				width:100%;
+				margin-bottom:rem(0);
+			}
+
+			.read-more {
+				text-transform:uppercase;
+				text-decoration:none;
+				@include font-size(18px);
+				color:$brand-green !important;
+				border-bottom:1px solid  $brand-green !important;
+				letter-spacing:2px;
+				padding-bottom:8px;
+				transition: all 0.3s linear;
+				font-family:$font-med;
+				@include media($ptabAndLess){
+			 @include font-size(13px);
+				}
+
+				&:hover {
+					color:rgba( $brand-green, 0.5);
+					border-bottom:1px solid rgba( $brand-green, 0.5);
+				}
+			}
+		}
 		.animated-content {
 			overflow: hidden;
 			// position: relative;
@@ -5855,17 +6409,124 @@ body.page-template-page-annual-report-php {
 		&.ar-section-4 {
 
 			.inner-wrap {
+
  			 // margin-top:rem(100);
  			 @include media($tab){
  				 transform:translateY(-50%);
- 				 top:calc(10% + 70px);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+
+		}
+
+		.inner-wrap .img {
+			 width: 100%;
+	 		display: flex;
+	 		align-items: center;
+	 		@include media ($ptabAndLess) {
+	 			width: 100%;
+	 		}
+		 }
+
+		&.ar-section-5 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+		}
+
+		&.ar-section-6 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+		}
+
+		&.ar-section-7 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+		}
+
+		&.ar-section-8 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+		}
+		&.ar-section-9 {
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
  				 // margin-top:16%;
  			 }
  		 }
 		}
 
 		&.ar-section-10 {
-			background-color:$teal;
+
+			.inner-wrap {
+ 			 // margin-top:rem(100);
+ 			 @include media($tab){
+ 				// transform:translateY(-50%);
+ 				 top:calc(15% + 70px);
+ 				 // margin-top:16%;
+ 			 }
+ 		 }
+		}
+
+		&.ar-section-11 {
+			position:relative;
+			background-image:url(../img/tmp/ar-bg.jpg);
+			background-color:#16ad8e;
+			background-repeat:no-repeat;
+			background-position:50% 50%;
+			background-size:100%;
+			height:100vh;
+			color:#fff;
+			@include media($portraitOnly){
+				height:100vh;
+				padding-top:rem(60);
+				padding-bottom:rem(150);
+			}
+
+			.but_layout {
+				padding-right: 5px;
+				@include media($ptabAndLess){
+          padding-top: 5px;
+				}
+			}
+
+			.col-half {
+				@include media($ptabAndLess){
+					width:100%;
+				}
+			}
 
 			@include media($ptabAndLess){
 				padding-top:rem(40);
@@ -5956,6 +6617,16 @@ body.page-template-page-annual-report-php {
 			position:relative;
 			height:rem(660);
 			display:block;
+			@include media($mobileOnly){
+				top:rem(200);
+			}
+		}
+		.container2 {
+			max-width:100%;
+			position:relative;
+			height:rem(660);
+			display:block;
+
 			@include media($mobileOnly){
 				top:rem(200);
 			}
@@ -6958,6 +7629,32 @@ body.overlay-open {
 
 	.overlay-content {
 		// margin-top:60px;
+
+			.teal {
+			color:$teal;
+		}
+
+		.surgery{
+			color:$surgery;
+		}
+		.cancer {
+			color:$cancer;
+		}
+		.lung {
+			color:$heartlung;
+		}
+	  .corporate {
+			color:$innovation;
+		}
+		.community {
+			color:$community;
+		}
+		.brain {
+			color:$brainhealth;
+		}
+		.legacy {
+			color:$brand-green;
+		}
 	}
 
 	.full-container {

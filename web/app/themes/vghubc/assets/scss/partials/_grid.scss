@@ -52,6 +52,36 @@ $mobileNav: new-breakpoint(max-width 1180px);
   }
 }
 
+.container2 {
+
+//  padding-left:20px;
+ padding-right:2px;
+  @include media($tab){
+  //  padding-left:30px;
+  //  padding-right:30px;
+  }
+
+  .inner-wrap {
+    position: relative;
+    @include media($tab){
+    //  margin: 0 3%;
+    }
+    @include media($desk){
+      //margin: 0 5.933%;
+    }
+  }
+
+  .narrow-wrap {
+    position: relative;
+    @include media($tab){
+      margin: 0 5%
+    }
+    @include media($desk){
+      margin: 0 5%
+    }
+  }
+}
+
 .col-grid-1 {
   @include media($tab){
     @include span-columns(1);

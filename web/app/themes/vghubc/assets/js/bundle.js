@@ -14331,30 +14331,32 @@ var AnnualReport = function () {
           self.elements.container.setAttribute('style', '-webkit-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-moz-transform:translate3d(0,' + transitionPercentage + '%,0);' + '-ms-transform:translate3d(0,' + transitionPercentage + '%,0);' + 'transform:translate3d(0,' + transitionPercentage + '%,0);');
 
           // different first panel
-          if (!(0, _jquery2.default)('.ar-intro-cover').hasClass('active')) {
-            (0, _jquery2.default)('.ar-main-header').removeClass('cover');
+          if (!(0, _jquery2.default)('.full-panel.ar-section-1').hasClass('active')) {
+            if (!(0, _jquery2.default)('.ar-intro-cover').hasClass('active')) {
+              (0, _jquery2.default)('.ar-main-header').removeClass('cover');
 
-            // colors
-            var newColor = void 0;
-            if ((0, _jquery2.default)('.full-panel.active').attr('data-headerColor')) {
-              newColor = (0, _jquery2.default)('.full-panel.active').attr('data-headerColor');
-            } else {
-              newColor = '';
+              // colors
+              var newColor = void 0;
+              if ((0, _jquery2.default)('.full-panel.active').attr('data-headerColor')) {
+                newColor = (0, _jquery2.default)('.full-panel.active').attr('data-headerColor');
+              } else {
+                newColor = '';
+              }
+              (0, _jquery2.default)('.ar-main-header').attr('data-headerColor', newColor);
+
+              // headers
+
+              var headers = (0, _jquery2.default)('.full-panel.active .ar-section-header').find('.container').html();
+              (0, _jquery2.default)('.ar-main-header').find('.container').html(headers);
+
+              // last panel like cover
+              if (self.elements.pages.length - 1 == (0, _jquery2.default)('.full-panel.active').index()) {
+                (0, _jquery2.default)('.ar-main-header').addClass('cover');
+              }
             }
-            (0, _jquery2.default)('.ar-main-header').attr('data-headerColor', newColor);
-
-            // headers
-            var headers = (0, _jquery2.default)('.full-panel.active .ar-section-header').find('.container').html();
-            (0, _jquery2.default)('.ar-main-header').find('.container').html(headers);
-
-            // last panel like cover
-            if (self.elements.pages.length - 1 == (0, _jquery2.default)('.full-panel.active').index()) {
-              (0, _jquery2.default)('.ar-main-header').addClass('cover');
-            }
-
             // specifically section 1
             if ((0, _jquery2.default)('.full-panel.ar-section-1').hasClass('active')) {
-
+              (0, _jquery2.default)('.ar-main-header').removeClass('cover');
               var count = 0;
               window.section2interval = setInterval(function () {
                 if (count < (0, _jquery2.default)('.animated-content .item').length - 1) {
@@ -14391,14 +14393,56 @@ var AnnualReport = function () {
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
-      var openOverlay2 = function openOverlay2(e) {
+      var openOverlaysurgery = function openOverlaysurgery(e) {
         e.preventDefault();
         (0, _jquery2.default)('body').addClass('overlay-open');
         var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-4').find('.message-html').html();
         overlay.find('.overlay-content').append(presHTML);
       };
+      var openOverlaycancer = function openOverlaycancer(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-5').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      var openOverlaylungs = function openOverlaylungs(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-6').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      var openOverlayinnovation = function openOverlayinnovation(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-7').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      var openOverlaycommunity = function openOverlaycommunity(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-8').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      var openOverlaybrainhealth = function openOverlaybrainhealth(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-9').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
+      var openOverlaylegacy = function openOverlaylegacy(e) {
+        e.preventDefault();
+        (0, _jquery2.default)('body').addClass('overlay-open');
+        var presHTML = (0, _jquery2.default)(e.currentTarget).parents('.ar-section-10').find('.message-html').html();
+        overlay.find('.overlay-content').append(presHTML);
+      };
       (0, _jquery2.default)('#president-message').on('click', openOverlay);
-      (0, _jquery2.default)('#full-story-surgery').on('click', openOverlay2);
+      (0, _jquery2.default)('#full-story-surgery').on('click', openOverlaysurgery);
+      (0, _jquery2.default)('#full-story-cancer').on('click', openOverlaycancer);
+      (0, _jquery2.default)('#full-story-lungs').on('click', openOverlaylungs);
+      (0, _jquery2.default)('#full-story-innovation').on('click', openOverlayinnovation);
+      (0, _jquery2.default)('#full-story-community').on('click', openOverlaycommunity);
+      (0, _jquery2.default)('#full-story-brainhealth').on('click', openOverlaybrainhealth);
+      (0, _jquery2.default)('#full-story-legacy').on('click', openOverlaylegacy);
 
       // close overlay and clear DOM innerHTML
       var closeOverlay = function closeOverlay(e) {
