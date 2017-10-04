@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Backup by blogVault
+Plugin Name: Backup by BlogVault
 Plugin URI: http://blogvault.net/
 Description: Easiest way to backup your WordPress site
-Author: Backup by blogVault
+Author: Backup by BlogVault
 Author URI: http://blogvault.net/
-Version: 1.48
+Version: 1.49
 Network: True
  */
 
@@ -32,7 +32,7 @@ global $bvVersion;
 global $blogvault;
 global $bvDynamicEvents;
 global $bvmanager;
-$bvVersion = '1.48';
+$bvVersion = '1.49';
 
 if (is_admin())
 	require_once dirname( __FILE__ ) . '/admin.php';

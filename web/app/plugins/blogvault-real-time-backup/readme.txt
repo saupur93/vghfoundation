@@ -4,7 +4,7 @@ Tags: backup, migrate, WordPress backup, restore, clone, cloud backup, complete 
 Plugin URI: https://blogvault.net/
 Donate link: https://app.blogvault.net/home/signup
 Requires at least: 4.0
-Tested up to: 4.7.5
+Tested up to: 4.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -203,6 +203,9 @@ Please visit our **[Pricing page](https://blogvault.net/pricing/)** and select t
 
 
 == CHANGELOG ==
+
+= 1.49 =
+* Updated WooCommerce Dynamic Sync
 
 = 1.46 =
 * Separating the functions into clear modules.

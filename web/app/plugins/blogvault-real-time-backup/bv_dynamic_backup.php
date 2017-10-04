@@ -1,5 +1,4 @@
 <?php
-
 if (!defined('ABSPATH')) exit;
 class BVDynamicBackup {
 	/**
@@ -270,8 +269,15 @@ class BVDynamicBackup {
 	/* WOOCOMMERCE SUPPORT FUNCTIONS BEGINS FROM HERE*/
 
 	function woocommerce_resume_order_handler($order_id) {
+		global $wpdb;
 		$this->add_db_event('woocommerce_order_items', array('order_id' => $order_id, 'msg_type' => 'delete'));
-		$this->add_event('sync_table', array('name' => 'woocommerce_order_itemmeta'));
+		$meta_ids = array();
+		foreach( $wpdb->get_results($wpdb->prepare("SELECT {$wpdb->prefix}woocommerce_order_itemmeta.meta_id FROM {$wpdb->prefix}woocommerce_order_itemmeta INNER JOIN {$wpdb->prefix}woocommerce_order_items WHERE {$wpdb->prefix}woocommerce_order_items.order_item_id = {$wpdb->prefix}woocommerce_order_itemmeta.order_item_id AND {$wpdb->prefix}woocommerce_order_items.order_id = %d", $order_id)) as $key => $row) {
+			if (!in_array($row->meta_id, $meta_ids)) {
+				$meta_ids[] = $row->meta_id;
+				$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $row->meta_id, 'msg_type' => 'delete'));
+			}
+		}
 	}
 
 	function woocommerce_new_order_item_handler($item_id, $item, $order_id) {
@@ -300,9 +306,10 @@ class BVDynamicBackup {
 	function woocommerce_attribute_updated_handler($attribute_id, $attribute, $old_attribute_name) {
 		$this->add_db_event('woocommerce_attribute_taxonomies', array('attribute_id' => $attribute_id));
 		# $woocommerce->attribute_taxonomy_name( $attribute_name )
-		$this->add_db_event('term_taxonomy', array('taxonomy' => 'pa_' . $attribute['attribute_name']));
+		$this->add_db_event('term_taxonomy', array('taxonomy' => wc_attribute_taxonomy_name($attribute['attribute_name'])));
 		# sanitize_title( $attribute_name )
-		$this->add_db_event('woocommerce_termmeta', array('meta_key' => 'order_pa_' . $attribute['attribute_name']));
+		$this->add_db_event('woocommerce_termmeta', array('meta_key' => 'order_pa_' . $attribute['attribute_name']));#deprecated
+		$this->add_db_event('termmeta', array('meta_key' => 'order_pa_' . $attribute['attribute_name']));
 		$this->add_db_event('postmeta', array('meta_key' => '_product_attributes'));
 		# sanitize_title( $attribute_name )
 		$this->add_db_event('postmeta', array('meta_key' => 'attribute_pa_' . $attribute['attribute_name']));
@@ -327,7 +334,7 @@ class BVDynamicBackup {
 	}
 
 	function woocommerce_grant_product_download_access_handler($data) {
-		$this->add_db_event('woocommerce_downloadable_product_permissions', array('download_id' => $data['download_id'], 'user_id' => $data['user_id'], 'order_id' => $data['order_id']));
+		$this->add_db_event('woocommerce_downloadable_product_permissions', array('download_id' => $data['download_id'], 'user_id' => $data['user_id'], 'order_id' => $data['order_id'], 'product_id' => $data['product_id']));
 	}
 
 	function woocommerce_delete_order_items_handler($postid) {
@@ -347,15 +354,7 @@ class BVDynamicBackup {
 	}
 
 	function woocommerce_payment_token_handler($token_id) {
-		global $wpdb;
 		$this->add_db_event('woocommerce_payment_tokens', array('token_id' => $token_id));
-		$meta_ids = array();
-		foreach( $wpdb->get_results("SELECT {$wpdb->prefix}woocommerce_payment_tokenmeta.meta_id FROM {$wpdb->prefix}woocommerce_payment_tokenmeta WHERE {$wpdb->prefix}woocommerce_payment_tokenmeta.payment_token_id = '{$token_id}'") as $key => $row) {
-			if (!in_array($row->meta_id, $meta_ids)) {
-				$meta_ids[] = $row->meta_id;
-				$this->add_db_event('woocommerce_payment_tokenmeta', array('meta_id' => $row->meta_id, 'msg_type' => 'edit'));
-			}
-		}
 	}
 
 	function woocommerce_payment_token_deleted_handler($token_id, $object) {
@@ -370,7 +369,7 @@ class BVDynamicBackup {
 	}
 
 	function woocommerce_shipping_zone_method_deleted_handler($instance_id, $method_id, $zone_id) {
-		$this->add_db_event('woocommerce_shipping_zone_methods', array('instance_id' => $instance_id));
+		$this->add_db_event('woocommerce_shipping_zone_methods', array('instance_id' => $instance_id, 'msg_type' => 'delete'));
 	}
 
 	function woocommerce_shipping_zone_method_status_toggled_handler($instance_id, $method_id, $zone_id, $is_enabled) {
@@ -380,6 +379,45 @@ class BVDynamicBackup {
 	function woocommerce_deleted_order_downloadable_permissions_handler($post_id) {
 		$this->add_db_event('woocommerce_downloadable_product_permissions', array('order_id' => $post_id, 'msg_type' => 'delete'));
 	}
+
+	function woocommerce_delete_shipping_zone_handler($zone_id) {
+		$this->add_db_event('woocommerce_shipping_zone_methods', array('zone_id' => $zone_id, 'msg_type' => 'delete'));
+		$this->add_db_event('woocommerce_shipping_zone_locations', array('zone_id' => $zone_id, 'msg_type' => 'delete'));
+		$this->add_db_event('woocommerce_shipping_zones', array('zone_id' => $zone_id, 'msg_type' => 'delete'));
+	}
+
+	function woocommerce_delete_shipping_zone_method_handler($instance_id) {
+		$this->add_db_event('woocommerce_shipping_zone_methods', array('instance_id' => $instance_id, 'msg_type' => 'delete'));
+	}
+
+	function woocommerce_order_term_meta_handler($meta_id, $object_id, $meta_key, $meta_value) {
+		if (current_filter() == 'deleted_order_item_meta')
+			$msg_type = 'delete';
+		else
+			$msg_type = 'edit';
+		if (!is_array($meta_id)) {
+			$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $meta_id, 'msg_type' => $msg_type));
+		} else {
+			foreach ($meta_id as $id) {
+				$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $id, 'msg_type' => $msg_type));
+			}
+		}
+	}
+
+	function woocommerce_payment_token_meta_handler($meta_id, $object_id, $meta_key, $meta_value) {
+		if (current_filter() == 'deleted_payment_token_meta')
+			$msg_type = 'delete';
+		else
+			$msg_type = 'edit';
+		if (!is_array($meta_id)) {
+			$this->add_db_event('woocommerce_payment_tokenmeta', array('meta_id' => $meta_id, 'msg_type' => $msg_type));
+		} else {
+			foreach ($meta_id as $id) {
+				$this->add_db_event('woocommerce_payment_tokenmeta', array('meta_id' => $id, 'msg_type' => $msg_type));
+			}
+		}
+	}
+
 
 	/* ADDING ACTION AND LISTENERS FOR CAPTURING EVENTS. */
 	function add_actions_and_listeners() {
@@ -482,6 +520,9 @@ class BVDynamicBackup {
 			add_action('woocommerce_update_order_item', array($this, 'woocommerce_update_order_item_handler'), 10, 2);
 			add_action('woocommerce_delete_order_item', array($this, 'woocommerce_delete_order_item_handler'), 10, 1);
 			add_action('woocommerce_delete_order_items', array($this, 'woocommerce_delete_order_items_handler'), 10, 1);
+			add_action('added_order_item_meta', array($this, 'woocommerce_order_term_meta_handler' ), 10, 4);
+			add_action('updated_order_item_meta', array($this, 'woocommerce_order_term_meta_handler'), 10, 4);
+			add_action('deleted_order_item_meta', array($this, 'woocommerce_order_term_meta_handler'), 10, 4);
 
 			add_action('woocommerce_attribute_added', array($this, 'woocommerce_attribute_added_handler' ), 10, 2 );
 			add_action('woocommerce_attribute_updated', array($this, 'woocommerce_attribute_updated_handler'), 10, 3 );
@@ -496,15 +537,21 @@ class BVDynamicBackup {
 			add_action('woocommerce_deleted_order_downloadable_permissions', array($this, 'woocommerce_deleted_order_downloadable_permissions_handler'), 10, 1);
 			add_filter('woocommerce_process_product_file_download_paths_remove_access_to_old_file', array($this, 'woocommerce_downloadable_product_permissions_delete_handler', 10, 4));
 
+			add_action('woocommerce_new_payment_token', array($this, 'woocommerce_payment_token_handler'), 10, 1);
 			add_action('woocommerce_payment_token_created', array($this, 'woocommerce_payment_token_handler'), 10, 1);
 			add_action('woocommerce_payment_token_updated', array($this, 'woocommerce_payment_token_handler'), 10, 1);
 			add_action('woocommerce_payment_token_deleted', array($this, 'woocommerce_payment_token_deleted_handler'), 10, 2);
+			add_action('added_payment_token_meta', array($this, 'woocommerce_payment_token_meta_handler' ), 10, 4);
+			add_action('updated_payment_token_meta', array($this, 'woocommerce_payment_token_meta_handler'), 10, 4);
+			add_action('deleted_payment_token_meta', array($this, 'woocommerce_payment_token_meta_handler'), 10, 4);
+
 
 			add_action('woocommerce_shipping_zone_method_added', array($this, 'woocommerce_shipping_zone_method_added_handler'), 10, 3);
 			add_action('woocommerce_shipping_zone_method_status_toggled', array($this, 'woocommerce_shipping_zone_method_status_toggled_handler'), 10, 4);
 			add_action('woocommerce_shipping_zone_method_deleted', array($this, 'woocommerce_shipping_zone_method_deleted_handler'), 10, 3);
 
+			add_action('woocommerce_delete_shipping_zone', array($this, 'woocommerce_delete_shipping_zone_handler'), 10, 1);
+			add_action('woocommerce_delete_shipping_zone_method', array($this, 'woocommerce_delete_shipping_zone_method_handler'), 10, 1);
 		}
-
 	}
 }

@@ -67,22 +67,22 @@ class BlogVault {
 		return false;
 	}
 
-	#function autoLogin($username, $isHttps) {
-	#	$user = get_user_by('login', $username);
-	#	if ($user != FALSE) {
-	#		wp_set_current_user( $user->ID );
-	#		if ($isHttps) {
-	#			wp_set_auth_cookie( $user->ID, false, true );
-	#		} else {
-	#			# As we are not sure about wp-cofig.php settings for sure login
-	#			wp_set_auth_cookie( $user->ID, false, true );
-	#			wp_set_auth_cookie( $user->ID, false, false );
-	#		}
-	#		$redirect_to = get_admin_url();
-	#		wp_safe_redirect( $redirect_to );
-	#		exit;
-	#	}
-	#}
+	function autoLogin($username, $isHttps) {
+		$user = get_user_by('login', $username);
+		if ($user != FALSE) {
+			wp_set_current_user( $user->ID );
+			if ($isHttps) {
+				wp_set_auth_cookie( $user->ID, false, true );
+			} else {
+				# As we are not sure about wp-cofig.php settings for sure login
+				wp_set_auth_cookie( $user->ID, false, true );
+				wp_set_auth_cookie( $user->ID, false, false );
+			}
+			$redirect_to = get_admin_url();
+			wp_safe_redirect( $redirect_to );
+			exit;
+		}
+	}
 
 	function serverSig($full = false) {
 		$sig = sha1($_SERVER['SERVER_ADDR'].ABSPATH);
@@ -502,14 +502,14 @@ class BlogVault {
 	}
 
 	function updateDailyPing($value) {
-		if(update_option("bvDailyPing", $value)) {
+		if($this->updateOption("bvDailyPing", $value)) {
 			return $value;
 		}
 		return "failed";
 	}
 
 	function disableBadge() {
-		if(update_option("bvBadgeInFooter", "false")) {
+		if($this->updateOption("bvBadgeInFooter", "false")) {
 			return "false";
 		}
 		return "failed";
@@ -907,12 +907,12 @@ class BlogVault {
 
 	function updateOption($key, $value) {
 		if (function_exists('update_site_option')) {
-			update_site_option($key, $value);
+			return update_site_option($key, $value);
 		} else {
 			if ($this->isMultisite()) {
-				update_blog_option(1, $key, $value);
+				return update_blog_option(1, $key, $value);
 			} else {
-				update_option($key, $value);
+				return update_option($key, $value);
 			}
 		}
 	}
@@ -1372,12 +1372,12 @@ class BlogVault {
 				$full = true;
 			$this->addStatus("users", $this->getUsers($_REQUEST['args'], $full));
 			break;
-		#case "autologin":
-		#	$isHttps = false;
-		#	if (array_key_exists('https', $_REQUEST))
-		#		$isHttps = true;
-		#	$this->addStatus("autologin", $this->autoLogin($_REQUEST['username'], $isHttps));
-		#	break;
+		case "autologin":
+			$isHttps = false;
+			if (array_key_exists('https', $_REQUEST))
+				$isHttps = true;
+			$this->addStatus("autologin", $this->autoLogin($_REQUEST['username'], $isHttps));
+			break;
 		case "gettransient":
 			$transient = $this->getTransient($_REQUEST['name']);
 			if ($transient && array_key_exists('asarray', $_REQUEST))

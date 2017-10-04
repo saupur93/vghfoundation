@@ -44,7 +44,7 @@ if (!function_exists('bvAdminInitHandler')) :
 					$keys = str_split($_REQUEST['blogvaultkey'], 32);
 					$blogvault->updateKeys($keys[0], $keys[1]);
 					bvActivateHandler();
-					$bvNotice = "<b>Activated!</b> blogVault is now backing up your site.<br/><br/>";
+					$bvNotice = "<b>Activated!</b> BlogVault is now backing up your site.<br/><br/>";
 					if (isset($_REQUEST['redirect'])) {
 						$location = $_REQUEST['redirect'];
 						wp_redirect($bvAppUrl."/dash/redir?q=".urlencode($location));
@@ -67,7 +67,7 @@ endif;
 if (!function_exists('bvAdminMenu')) :
 	function bvAdminMenu() {
 		global $bvAdminPage;
-		add_menu_page('blogVault', 'blogVault', 'manage_options', $bvAdminPage, 'bvKeyConf', plugins_url('img/icon.png',  __FILE__ ));
+		add_menu_page('BlogVault', 'BlogVault', 'manage_options', $bvAdminPage, 'bvKeyConf', plugins_url('img/icon.png',  __FILE__ ));
 	}
 	if (function_exists('is_multisite') && is_multisite()) {
 		add_action('network_admin_menu', 'bvAdminMenu');
@@ -118,11 +118,11 @@ if ( !function_exists('bvKeyConf') ) :
 		if ($blogvault->getOption('bvPublic') !== false) {
 ?>
 		<div style="display:table;table-layout:fixed;width:100%;float:left;padding:1% 2.5% 2em 2.5%;overflow:hidden;" id="form_wrapper">
-				<font size='3'><a href='https://app.blogvault.net' target="_blank">Click here</a> to manage your backups from the <a href='https://app.blogvault.net' target="_blank">blogVault Dashboard.</a></font>
+				<font size='3'><a href='https://app.blogvault.net' target="_blank">Click here</a> to manage your backups from the <a href='https://app.blogvault.net' target="_blank">BlogVault Dashboard.</a></font>
 				<br/><br/>
 <?php if (isset($_REQUEST['changekey'])) { ?>
 				<form method='post'>
-					<font size='3'>Change blogVault Key:</font> <input type='text' name='blogvaultkey' size='65'>
+					<font size='3'>Change BlogVault Key:</font> <input type='text' name='blogvaultkey' size='65'>
 					<input type='hidden' name='change_parameter' value='true'>
 					<input type='hidden' name='bvnonce' value='<?php echo wp_create_nonce("bvnonce") ?>'>
 					<input type='submit' value='Change'>
@@ -131,9 +131,9 @@ if ( !function_exists('bvKeyConf') ) :
 		</div>
 <?php } else { ?> <!-- Change keys ELSE -->
 			<div style="display:none">
-				<a href='http://blogvault.net?bvsrc=bvplugin&wpurl=<?php echo urlencode($blogvault->wpurl()) ?>'> Click here </a> to get your blogVault Key.</font>
+				<a href='http://blogvault.net?bvsrc=bvplugin&wpurl=<?php echo urlencode($blogvault->wpurl()) ?>'> Click here </a> to get your BlogVault Key.</font>
 				<form method='post'> 
-					<font size='3'>Enter blogVault Key:</font> <input type='text' name='blogvaultkey' size='65'>
+					<font size='3'>Enter BlogVault Key:</font> <input type='text' name='blogvaultkey' size='65'>
 					<input type='hidden' name='bvnonce' value='<?php echo wp_create_nonce("bvnonce") ?>'>
 					<input type='submit' value='Activate'>	
 				</form>
@@ -143,7 +143,7 @@ if ( !function_exists('bvKeyConf') ) :
 <?php if (!isset($_REQUEST['signin'])) { ?>
 			<!-- Signup form starts here -->
 			<div>
-				<h2><div style="display:block;padding-bottom:1%;">Create a blogVault Account!</div></h2>
+				<h2><div style="display:block;padding-bottom:1%;">Create a BlogVault Account!</div></h2>
 <?php if (!isset($_REQUEST['free'])) { ?>
 				<span style="color:grey;padding:1% 2.5% 0 2.5%;">All plans(<a href="http://blogvault.net/pricing?bvsrc=wpplugin&wpurl=<?php echo urlencode($blogvault->wpurl()) ?>">See Pricing</a>) come with free 1 week trial.</span>
 <?php } ?>
@@ -157,7 +157,7 @@ if ( !function_exists('bvKeyConf') ) :
 <?php } else if ($_error == "pass") { ?>
 				<div style="color:red; font-weight: bold;" align="right">Password does not match.</div>
 <?php } else if ($_error == "blog") { ?>
-				<div style="color:red; font-weight: bold;" align="right">Could not add the site. Please contact <a href="http://blogvault.net/contact/">blogVault Support</a></div>
+				<div style="color:red; font-weight: bold;" align="right">Could not add the site. Please contact <a href="http://blogvault.net/contact/">BlogVault Support</a></div>
 <?php } ?>
 				<table style="border-spacing:0px 10px;">
 					<tr>
@@ -179,7 +179,7 @@ if ( !function_exists('bvKeyConf') ) :
 						<td>
 <?php 	if (isset($_REQUEST['free'])) { ?>
 							<strong>FREE OFFER</strong>
-							<input type='hidden' name='loc' value='WPPLUGINFREEOFFER'>
+							<input type='hidden' name='plan' value='freeweekly'>
 <?php 	} else { ?>
 							<select name="plan">
 								<option value="1sitey" selected>1 Site - $89/year</option>
@@ -191,10 +191,10 @@ if ( !function_exists('bvKeyConf') ) :
 						</td>
 					</tr>
 
-<!-- Option to insert the blogVault badge -->
+<!-- Option to insert the BlogVault badge -->
 <?php if (isset($_REQUEST['free'])) { ?>
 					<tr>
-						<td colspan="2"><span style="color: gray;">&nbsp;Add the blogVault Badge to your site</span></td>
+						<td colspan="2"><span style="color: gray;">&nbsp;Add the BlogVault Badge to your site</span></td>
 					</tr>
 					<tr>
 						<td><a href="http://blogvault.net?src=wpbadge"><img src="<?php echo plugins_url('img/wordpress_backup_bbd1.png', __FILE__); ?>" alt="WordPress Backup" /></a></td>
@@ -224,7 +224,7 @@ if ( !function_exists('bvKeyConf') ) :
 <?php } else { ?>
 			<!-- Signin form end here -->
 			<div>
-			  <font size="3">Login to your blogVault Account!</font>
+			  <font size="3">Login to your BlogVault Account!</font>
 			</div>
 			<form dummy=">" action="<?php echo $bvAppUrl; ?>/home/api_signin" style="padding:0 2% 2em 1%;" method="post" name="signin">
 				<input type='hidden' name='bvsrc' value='wpplugin' />
@@ -252,7 +252,7 @@ if ( !function_exists('bvKeyConf') ) :
 					</tr>
 					<tr>
 						<td></td>
-						<td align="right"><p><b>New to blogVault? </b><a href="<?php echo $blogvault->bvAdminUrl($bvAdminPage); ?>">Sign up</a></p></td>
+						<td align="right"><p><b>New to BlogVault? </b><a href="<?php echo $blogvault->bvAdminUrl($bvAdminPage); ?>">Sign up</a></p></td>
 					</tr>
 				</table>
 			</form>
@@ -261,7 +261,7 @@ if ( !function_exists('bvKeyConf') ) :
 		</div>	<!-- Signin  form ends here -->
 		<div class="bv_3part_column1" style="width:100%;max-width:45%;float:left;padding:3% 2.5% 0 2.5%;overflow:hidden;">
 					<div style="width:100%;overflow:hidden; margin-bottom: 10px;">
-								<blockquote><span class="bqstart" style="float:left;font-size:400%;color:#cfcfcf;">&#8220;</span><h2>blogVault is my favorite way to backup, migrate, and restore WordPress websites.&nbsp;&nbsp;<font size='2'><a href="http://bit.ly/mightyreview" style="text-decoration:none;" align="right" target="_blank">Read the complete review.</a></font></h2> <span style="float:right;"> - Kristin &#38; Mickey &#64; <a href="http://www.mightyminnow.com" style="text-decoration:none;" target="_blank">MIGHTYminnow</a> <font size='1'>(A Top WordPress Agency)</font></span></blockquote>
+								<blockquote><span class="bqstart" style="float:left;font-size:400%;color:#cfcfcf;">&#8220;</span><h2>BlogVault is my favorite way to backup, migrate, and restore WordPress websites.&nbsp;&nbsp;<font size='2'><a href="http://bit.ly/mightyreview" style="text-decoration:none;" align="right" target="_blank">Read the complete review.</a></font></h2> <span style="float:right;"> - Kristin &#38; Mickey &#64; <a href="http://www.mightyminnow.com" style="text-decoration:none;" target="_blank">MIGHTYminnow</a> <font size='1'>(A Top WordPress Agency)</font></span></blockquote>
 					</div>
 				<font size='2' color="gray">As seen on:</font>
 				<div align="center" style="padding-top:3%;"><img src="<?php echo plugins_url('img/as_seen_in.png', __FILE__); ?>" /></div>
@@ -282,7 +282,7 @@ if ( !function_exists('bvKeyConf') ) :
 						<span class="price" style="display: block; font-family: 'Average', serif; font-weight: 400; color: #ffffff; text-align: center; margin: 0; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);">
 							<strong style="font-size: 60px; line-height: 1em; font-weight: 400;">Free</strong>
 						</span>
-						<small style="display: block; text-align: center; color: #dbd8cf; font-weight: 400; font-size: 12px;">With blogVault Badge</small>
+						<small style="display: block; text-align: center; color: #dbd8cf; font-weight: 400; font-size: 12px;">With BlogVault Badge</small>
 						<p style="color: #595752; border-top: 1px solid #8e8b83; padding-top: 8px; font-size: 16px; line-height: 1.6em;">
 							Personal Sites<br/>
 							Weekly Backups<br/>
@@ -310,8 +310,8 @@ if ( !function_exists('bvActivateWarning') ) :
 		if (!$blogvault->getOption('bvPublic') && $hook_suffix == 'admin.php' ) {
 ?>
 			<div id="message" class="updated" style="padding: 8px; font-size: 16px; background-color: #dff0d8">
-						<a class="button-primary" href="<?php echo $blogvault->bvAdminUrl($bvAdminPage); ?>">Activate blogVault</a>
-						&nbsp;&nbsp;&nbsp;<b>Almost Done:</b> Activate your blogVault account to backup your site.
+						<a class="button-primary" href="<?php echo $blogvault->bvAdminUrl($bvAdminPage); ?>">Activate BlogVault</a>
+						&nbsp;&nbsp;&nbsp;<b>Almost Done:</b> Activate your BlogVault account to backup your site.
 			</div>
 <?php
 		}
