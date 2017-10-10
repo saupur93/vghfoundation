@@ -203,6 +203,7 @@ export default class AnnualReport {
 
 
           // different first panel
+          if (!$('.full-panel.ar-section-1').hasClass('active')){
           if (!$('.ar-intro-cover').hasClass('active')) {
             $('.ar-main-header').removeClass('cover');
 
@@ -217,6 +218,7 @@ export default class AnnualReport {
 
 
             // headers
+
             let headers = $('.full-panel.active .ar-section-header').find('.container').html();
             $('.ar-main-header').find('.container').html(headers);
 
@@ -225,10 +227,10 @@ export default class AnnualReport {
             if(self.elements.pages.length - 1 == $('.full-panel.active').index()) {
               $('.ar-main-header').addClass('cover');
             }
-
+        }
             // specifically section 1
             if($('.full-panel.ar-section-1').hasClass('active')) {
-
+              $('.ar-main-header').removeClass('cover');
               let count = 0
               window.section2interval = setInterval(() => {
                 if (count < $('.animated-content .item').length -1) {
@@ -273,7 +275,56 @@ export default class AnnualReport {
       let presHTML = $(e.currentTarget).parents('.ar-section-2').find('.message-html').html();
       overlay.find('.overlay-content').append(presHTML);
     };
-    $('#president-message').on('click', openOverlay)
+    const openOverlaysurgery = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-4').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlaycancer = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-5').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlaylungs = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-6').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlayinnovation = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-7').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlaycommunity = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-8').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlaybrainhealth = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-9').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    const openOverlaylegacy = e => {
+      e.preventDefault();
+      $('body').addClass('overlay-open');
+      let presHTML = $(e.currentTarget).parents('.ar-section-10').find('.message-html').html();
+      overlay.find('.overlay-content').append(presHTML);
+    };
+    $('#president-message').on('click', openOverlay);
+    $('#full-story-surgery').on('click', openOverlaysurgery);
+    $('#full-story-cancer').on('click', openOverlaycancer);
+    $('#full-story-lungs').on('click', openOverlaylungs);
+    $('#full-story-innovation').on('click', openOverlayinnovation);
+    $('#full-story-community').on('click', openOverlaycommunity);
+    $('#full-story-brainhealth').on('click', openOverlaybrainhealth);
+    $('#full-story-legacy').on('click', openOverlaylegacy);
 
     // close overlay and clear DOM innerHTML
     const closeOverlay = e => {
