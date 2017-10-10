@@ -74,11 +74,17 @@ $legacy_full = get_field('legacy_story_full');
         </div>
       </header>
       <div class="container">
-        <div class="narrow-wrap">
+        <div class="inner-wrap">
         <div class="animated-content">
           <div class="item item-1 active">
-            <h2 class="green-header">$113 million in 2016-17 thanks to you, our donors</h2>
-            <p>VITAL is the important work of VGH & UBC Hospital Foundation. It is the crucial link that makes good health care better, enabling us to build new facilities, invest in new equipment and technologies, better meet patient demands and take advantage of new treatments and procedures. While government funds the day-to-day operations of our hospitals and health care services, philanthropy helps us accomplish our vision of exemplary care and enables us to act on what we know is possible.</p>
+            <h2 class="green-header">You are playing a vital role in the future of health care in BC.</h2>
+
+            <div class="col-quarter">
+              <span class="large-number">$113 million in 2016-17.<br/> Thanks to you, <br/> our donors.</span>
+            </div>
+            <div class="col-rest">
+              <p>VITAL is the important work of VGH & UBC Hospital Foundation. It is the crucial link that makes good health care better, enabling us to build new facilities, invest in new equipment and technologies, better meet patient demands and take advantage of new treatments and procedures. While government funds the day-to-day operations of our hospitals and health care services, philanthropy helps us accomplish our vision of exemplary care and enables us to act on what we know is possible.</p>
+            </div>
           </div>
 
           <div class="item item-2">
