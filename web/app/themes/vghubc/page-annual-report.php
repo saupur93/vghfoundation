@@ -104,7 +104,7 @@ $legacy_full = get_field('legacy_story_full');
       <header class="panel ar-section-header">
         <div class="container">
 
-          <h3>Board & president’s message</h3>
+          <h3>Board & President’s message</h3>
         </div>
       </header>
       <div class="container2">
