@@ -87,25 +87,7 @@ $legacy_full = get_field('legacy_story_full');
             </div>
           </div>
 
-          <div class="item item-2">
-            <h2>your impact in 2015-2016:</h2>
-            <div class="col-half">
-              <span class="large-number">60%</span>
-            </div>
-            <div class="col-half">
-              <p>We treat sixty percent of the province's adult trauma cases</p>
-            </div>
-          </div>
 
-          <div class="item item-3">
-            <h2>your impact in 2015-2016:</h2>
-            <div class="col-half">
-              <span class="large-number">50%</span>
-            </div>
-            <div class="col-half">
-              <p>of surgical patients are from outside vancouver</p>
-            </div>
-          </div>
         </div>
         </div>
       </div>
