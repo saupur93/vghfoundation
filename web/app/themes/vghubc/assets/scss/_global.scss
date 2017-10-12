@@ -5923,6 +5923,20 @@ body.page-template-page-annual-report-php {
 
 			}
 
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
 			.read-more {
 				text-transform:uppercase;
 				text-decoration:none;
@@ -5984,6 +5998,20 @@ body.page-template-page-annual-report-php {
 				}
 
 			}
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
+
+				}
+
+			}
+
 			.read-more {
 				text-transform:uppercase;
 				text-decoration:none;
@@ -6045,6 +6073,19 @@ body.page-template-page-annual-report-php {
 
 			}
 
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
+
+				}
+
+			}
 
 			.read-more {
 				text-transform:uppercase;
@@ -6107,6 +6148,19 @@ body.page-template-page-annual-report-php {
 
 			}
 
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
+
+				}
+
+			}
 
 			.read-more {
 				text-transform:uppercase;
@@ -6169,7 +6223,19 @@ body.page-template-page-annual-report-php {
 				}
 
 			}
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
 
+				}
+
+			}
 
 			.read-more {
 				text-transform:uppercase;
@@ -6229,6 +6295,19 @@ body.page-template-page-annual-report-php {
 				@include media($tab){
 					@include font-size(45px);
 					margin-bottom:rem(20);
+				}
+
+			}
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
+
 				}
 
 			}
@@ -6294,7 +6373,19 @@ body.page-template-page-annual-report-php {
 				}
 
 			}
+			.small {
+				margin-bottom:8px;
+				@include font-size(20px);
+				@include media($portraitOnly){
+					@include font-size(25px);
+				}
+				@include media($ptabAndLess){
+					@include font-size(14px);
+					padding-bottom: 10px;
 
+				}
+
+			}
 
 			.read-more {
 				text-transform:uppercase;
@@ -6504,7 +6595,7 @@ body.page-template-page-annual-report-php {
 			 max-height: 100vh;
 			 display: flex;
 			 align-items: center;
-			
+
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}

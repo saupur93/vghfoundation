@@ -5605,6 +5605,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-surgery .small, #annual-report .ar-section .facts-surgery .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-surgery .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-surgery .small, #annual-report .ar-section .facts-surgery .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-surgery .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-surgery .small, #annual-report .ar-section .facts-surgery .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-surgery .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-surgery .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5657,6 +5670,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-cancer .small, #annual-report .ar-section .facts-cancer .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-cancer .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-cancer .small, #annual-report .ar-section .facts-cancer .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-cancer .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-cancer .small, #annual-report .ar-section .facts-cancer .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-cancer .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-cancer .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5709,6 +5735,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-lungs .small, #annual-report .ar-section .facts-lungs .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-lungs .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-lungs .small, #annual-report .ar-section .facts-lungs .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-lungs .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-lungs .small, #annual-report .ar-section .facts-lungs .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-lungs .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-lungs .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5761,6 +5800,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-innovation .small, #annual-report .ar-section .facts-innovation .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-innovation .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-innovation .small, #annual-report .ar-section .facts-innovation .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-innovation .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-innovation .small, #annual-report .ar-section .facts-innovation .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-innovation .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-innovation .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5813,6 +5865,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-community .small, #annual-report .ar-section .facts-community .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-community .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-community .small, #annual-report .ar-section .facts-community .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-community .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-community .small, #annual-report .ar-section .facts-community .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-community .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-community .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5866,6 +5931,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-brainhealth .small, #annual-report .ar-section .facts-brainhealth .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-brainhealth .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-brainhealth .small, #annual-report .ar-section .facts-brainhealth .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-brainhealth .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-brainhealth .small, #annual-report .ar-section .facts-brainhealth .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-brainhealth .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-brainhealth .read-more {
       text-transform: uppercase;
       text-decoration: none;
@@ -5918,6 +5996,19 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           font-size: 45px;
           font-size: 2.8125rem;
           margin-bottom: 1.25rem; } }
+    #annual-report .ar-section .facts-legacy .small, #annual-report .ar-section .facts-legacy .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-legacy .wp-caption-text {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-size: 1.25rem; }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #annual-report .ar-section .facts-legacy .small, #annual-report .ar-section .facts-legacy .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-legacy .wp-caption-text {
+          font-size: 25px;
+          font-size: 1.5625rem; } }
+      @media screen and (max-width: 768px) {
+        #annual-report .ar-section .facts-legacy .small, #annual-report .ar-section .facts-legacy .single-post .wp-caption-text, .single-post #annual-report .ar-section .facts-legacy .wp-caption-text {
+          font-size: 14px;
+          font-size: 0.875rem;
+          padding-bottom: 10px; } }
     #annual-report .ar-section .facts-legacy .read-more {
       text-transform: uppercase;
       text-decoration: none;
