@@ -6409,10 +6409,16 @@ body.page-template-page-annual-report-php {
 
 
 		.inner-wrap .img {
-			 width: 100%;
-			 height:auto;
+			 max-width: 100%;
+
 	 		display: flex;
 	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+	 		 height: auto;
+
+
+			}
 	 		@include media ($ptabAndLess) {
 	 			width: 100%;
 	 		}
@@ -6424,16 +6430,21 @@ body.page-template-page-annual-report-php {
 			.inner-wrap {
  			 // margin-top:rem(100);
  			 @include media($tab){
- 			//	transform:translateY(-50%);
- 			top:calc(40% + 70px);
+ 			transform:translateY(-50%);
+ 			top:calc(15% + 70px);
  				 // margin-top:16%;
  			 }
  		 }
 		 .inner-wrap .img {
- 			 width: 100%;
-			 height: auto;
+ 			 max-width: 100%;
+
  	 		display: flex;
  	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+			 height: auto;
+       float:right;
+			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6444,17 +6455,24 @@ body.page-template-page-annual-report-php {
 
 			.inner-wrap {
  			 // margin-top:rem(100);
+			 transform:translateY(-50%);
+			 top:calc(15% + 70px);
  			 @include media($tab){
- 				// transform:translateY(-50%);
+ 				transform:translateY(-50%);
  				top:calc(15% + 70px);
  				 // margin-top:16%;
  			 }
  		 }
 		 .inner-wrap .img {
- 			 width: 100%;
- 			 height:auto;
+			 max-width: 100%;
+
  	 		display: flex;
  	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+	 		 height: auto;
+
+			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6472,10 +6490,15 @@ body.page-template-page-annual-report-php {
  			 }
  		 }
 		 .inner-wrap .img {
- 			 width: 100%;
- 			 height:auto;
+			 max-width: 100%;
+
  	 		display: flex;
  	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+	 		 height: auto;
+       float:right;
+			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6493,10 +6516,15 @@ body.page-template-page-annual-report-php {
  			 }
  		 }
 		 .inner-wrap .img {
- 			 width: 100%;
- 			 height:auto;
+			 max-width: 100%;
+
  	 		display: flex;
  	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+	 		 height: auto;
+
+			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6513,10 +6541,15 @@ body.page-template-page-annual-report-php {
  			 }
  		 }
 		 .inner-wrap .img {
- 			 width: 100%;
- 			 height:auto;
+			 max-width: 100%;
+
  	 		display: flex;
  	 		align-items: center;
+			@include media($wideDesk){
+				width: 95%;
+	 		 height: auto;
+       float:right;
+			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6534,10 +6567,15 @@ body.page-template-page-annual-report-php {
  			 }
  		 }
 		 .inner-wrap .img {
-				width: 100%;
-				height:auto;
+			 max-width: 100%;
+
 			 display: flex;
 			 align-items: center;
+			 @include media($wideDesk){
+ 				width: 95%;
+ 	 		 height: auto;
+
+ 			}
 			 @include media ($ptabAndLess) {
 				 width: 100%;
 			 }
