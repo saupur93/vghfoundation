@@ -482,7 +482,7 @@ $legacy_full = get_field('legacy_story_full');
         <div class="narrow-wrap">
           <h2>Find out how your contributions have helped make us vital.</h2>
           <h4>Download our full Annual Report to learn more.</h4>
-          <p><a class="button white-keyline" href="<?php print $pdf_download; ?>" target="_blank">Download the Report</a><a class="button white-keyline" href="<?php print "/about/our-donors/"; ?>" target="_blank">full donor lists</a><a class="button white-keyline" href="<?php print "/about/audited-financials/"; ?>" target="_blank">view finances</a></p>
+          <p><a class="button white-keyline" href="<?php print $pdf_download; ?>" target="_blank">Download the Report</a><a class="button white-keyline" href="<?php print "/about/our-donors/"; ?>" target="_blank">view donor lists</a><a class="button white-keyline" href="<?php print "/about/audited-financials/"; ?>" target="_blank">view financials</a></p>
         </div>
       </div>
     </section>

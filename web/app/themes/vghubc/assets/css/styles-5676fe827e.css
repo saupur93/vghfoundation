@@ -5997,16 +5997,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-4 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-4 .inner-wrap .img {
-          width: 95%;
-          height: auto; } }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-4 .inner-wrap .img {
           width: 100%; } }
@@ -6017,17 +6014,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-5 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-5 .inner-wrap .img {
-          width: 95%;
-          height: auto;
-          float: right; } }
+              align-items: center;
+      float: right; }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-5 .inner-wrap .img {
           width: 100%; } }
@@ -6042,16 +6036,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
           top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-6 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-6 .inner-wrap .img {
-          width: 95%;
-          height: auto; } }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-6 .inner-wrap .img {
           width: 100%; } }
@@ -6060,17 +6051,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-7 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-7 .inner-wrap .img {
-          width: 95%;
-          height: auto;
-          float: right; } }
+              align-items: center;
+      float: right; }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-7 .inner-wrap .img {
           width: 100%; } }
@@ -6079,16 +6067,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-8 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-8 .inner-wrap .img {
-          width: 95%;
-          height: auto; } }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-8 .inner-wrap .img {
           width: 100%; } }
@@ -6097,17 +6082,14 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-9 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-9 .inner-wrap .img {
-          width: 95%;
-          height: auto;
-          float: right; } }
+              align-items: center;
+      float: right; }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-9 .inner-wrap .img {
           width: 100%; } }
@@ -6116,16 +6098,13 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         top: calc(15% + 70px); } }
     #annual-report .ar-section.ar-section-10 .inner-wrap .img {
       max-width: 100%;
+      max-height: 100vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      @media screen and (min-width: 1201px) {
-        #annual-report .ar-section.ar-section-10 .inner-wrap .img {
-          width: 95%;
-          height: auto; } }
       @media screen and (max-width: 768px) {
         #annual-report .ar-section.ar-section-10 .inner-wrap .img {
           width: 100%; } }

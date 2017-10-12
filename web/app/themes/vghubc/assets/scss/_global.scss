@@ -6410,15 +6410,10 @@ body.page-template-page-annual-report-php {
 
 		.inner-wrap .img {
 			 max-width: 100%;
-
+       max-height: 100vh;
 	 		display: flex;
 	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-	 		 height: auto;
 
-
-			}
 	 		@include media ($ptabAndLess) {
 	 			width: 100%;
 	 		}
@@ -6437,14 +6432,10 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
  			 max-width: 100%;
-
+       max-height: 100vh;
  	 		display: flex;
  	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-			 height: auto;
-       float:right;
-			}
+      float:right;
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6465,14 +6456,10 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
 			 max-width: 100%;
+			 max-height: 100vh;
+			 display: flex;
+			 align-items: center;
 
- 	 		display: flex;
- 	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-	 		 height: auto;
-
-			}
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6491,14 +6478,11 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
 			 max-width: 100%;
-
+       max-height: 100vh;
  	 		display: flex;
  	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-	 		 height: auto;
-       float:right;
-			}
+			float:right;
+
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6517,14 +6501,10 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
 			 max-width: 100%;
-
- 	 		display: flex;
- 	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-	 		 height: auto;
-
-			}
+			 max-height: 100vh;
+			 display: flex;
+			 align-items: center;
+			
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6542,14 +6522,10 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
 			 max-width: 100%;
-
- 	 		display: flex;
- 	 		align-items: center;
-			@include media($wideDesk){
-				width: 95%;
-	 		 height: auto;
-       float:right;
-			}
+			 max-height: 100vh;
+			 display: flex;
+			 align-items: center;
+			 float:right;
  	 		@include media ($ptabAndLess) {
  	 			width: 100%;
  	 		}
@@ -6568,14 +6544,10 @@ body.page-template-page-annual-report-php {
  		 }
 		 .inner-wrap .img {
 			 max-width: 100%;
-
+			 max-height: 100vh;
 			 display: flex;
 			 align-items: center;
-			 @include media($wideDesk){
- 				width: 95%;
- 	 		 height: auto;
 
- 			}
 			 @include media ($ptabAndLess) {
 				 width: 100%;
 			 }
