@@ -2818,10 +2818,13 @@ font-weight: 600;
 		margin-top:-56px;
 		//margin-bottom:0.5rem;
 		@include font-size(35px);
+		line-height: 3.2rem !important;
+
 		@include media($ptab){
 
 			margin-bottom:1rem;
 			@include font-size(55px);
+			line-height: 3.2rem !important;
 		}
 
 	}

@@ -148,7 +148,7 @@ $legacy_full = get_field('legacy_story_full');
       </header>
       <div class="container">
         <div class="narrow-wrap">
-          <h2 class="green-header">Philantrophy is vital <br>to the transformation <br>of health care.</h2>
+          <h2 class="green-header">Philanthropy is vital <br>to the transformation <br>of health care.</h2>
           <p>In this Annual Report, you will read some amazing stories about six areas of where philanthropy is playing a major role delivering innovative, transformative and sustainable health care.</p>
         </div>
       </div>
