@@ -51,6 +51,12 @@
                     <?php elseif( get_row_layout() == 'three_stories_panel' ): ?>
                       <?php include(locate_template('templates/layouts/layout-three_stories_panel.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'three_stories_panel_angel' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-three_stories_panel_angel.php')); ?>
+
+                    <?php elseif( get_row_layout() == 'full_width_angel_video' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-full_width_angel_video.php')); ?>
+
                     <?php elseif( get_row_layout() == 'three_column_donors' ): ?>
                       <?php include(locate_template('templates/layouts/layout-three_column_donors.php')); ?>
 

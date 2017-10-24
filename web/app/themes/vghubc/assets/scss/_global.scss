@@ -2619,9 +2619,9 @@ body.tribe-events-page-template {
 
 	  display:block;
 		position:relative;
-		background:#deddd8;
-		border: 1px solid #cac9c5;
-		padding: 30px 20px 0px 20px;
+		background:#cb98c5;
+		border: 1px solid #8f3b81;
+		padding: 70px 20px 0px 10px;
 		color: #000;
 		min-height:230px;
 		z-index: 1;
@@ -2630,7 +2630,7 @@ body.tribe-events-page-template {
 
 		@include media($ptab){
 			width:rem(430);
-			padding: 50px 40px 0px 40px;
+			padding: 70px 40px 0px 40px;
 
 			@include font-size(13px);
 			min-height:250px;
@@ -2675,14 +2675,14 @@ body.tribe-events-page-template {
 	}
 
 	.donation-landing {
-		width:50%;
+		width:100%;
 		display: inherit;
 
 
 
 
 		float:left;
-		margin-bottom: 5px;
+		margin-bottom: 20px;
 	}
 
 	.impact-landing {
@@ -2718,8 +2718,8 @@ form input[name="yourdonation"] {
 	width:100%;
 @include font-size(30px);
 border: 1px;
-color: #e11a21;;
-border-color: #646568;
+color: #8f3b81;;
+border-color: #c965b8;
 }
 
 	form input[name="submit"] {
@@ -2738,8 +2738,8 @@ font-size: 20px;
 letter-spacing: 2px;
 transition: all 0.3s linear;
 color: #fff;
-background-color: #e11a21;
-border: 2px solid #d32328;
+background-color: #8f3b81;
+border: 2px solid #7b336f;
 margin: 0px;
 
 @include media($tab){
@@ -2766,7 +2766,7 @@ font-weight: 600;
     //background:#deddd8;
 		@include media($tab){
 			width:rem(600);
-			padding:60px 40px 0px 5px;
+		//	padding:60px 40px 0px 5px;
 			@include font-size(13px);
 			min-height:300px;
 			bottom:-100px;
@@ -2821,7 +2821,7 @@ font-weight: 600;
 		@include media($ptab){
 
 			margin-bottom:1rem;
-			@include font-size(80px);
+			@include font-size(55px);
 		}
 
 	}
@@ -4184,7 +4184,9 @@ font-weight: 600;
 			}
 		}
 
-		&:hover {
+
+
+		  &:hover {
 			background-color:$brand-green;
 
 			a.read-more, span.read-more {
@@ -4192,8 +4194,40 @@ font-weight: 600;
 				border-color:#fff;
 
 			}
-		}
+
 	}
+		a.read-more-angel, span.read-more-angel {
+			margin-top:rem(15);
+			margin-left:rem(25);
+			margin-right:rem(25);
+			margin-bottom:rem(20);
+			display:inline-block;
+			color:$body-text;
+			border-color:$body-text;
+			@include media($ptab){
+				margin-top:rem(25);
+				margin-left:rem(25);
+				margin-right:rem(25);
+				margin-bottom:rem(40);
+			}
+		}
+
+
+
+		    &:hover {
+			    background-color:$angel-pink;
+
+			a.read-more-angel, span.read-more-angel {
+				color:#fff;
+				border-color:#fff;
+
+			}
+
+	}
+	}
+
+
+
 
 	p {
 		margin-bottom:0;

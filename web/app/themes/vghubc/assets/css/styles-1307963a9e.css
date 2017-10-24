@@ -3334,16 +3334,16 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   .panel.page-header .donation-form-landing {
     display: block;
     position: relative;
-    background: #deddd8;
-    border: 1px solid #cac9c5;
-    padding: 30px 20px 0px 20px;
+    background: #cb98c5;
+    border: 1px solid #8f3b81;
+    padding: 70px 20px 0px 10px;
     color: #000;
     min-height: 230px;
     z-index: 1; }
     @media screen and (min-width: 601px) {
       .panel.page-header .donation-form-landing {
         width: 26.875rem;
-        padding: 50px 40px 0px 40px;
+        padding: 70px 40px 0px 40px;
         font-size: 13px;
         font-size: 0.8125rem;
         min-height: 250px; } }
@@ -3376,10 +3376,10 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-size: 30px;
         font-size: 1.875rem; } }
   .panel.page-header .donation-landing {
-    width: 50%;
+    width: 100%;
     display: inherit;
     float: left;
-    margin-bottom: 5px; }
+    margin-bottom: 20px; }
   .panel.page-header .impact-landing {
     width: 50%;
     display: inherit;
@@ -3407,8 +3407,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     font-size: 30px;
     font-size: 1.875rem;
     border: 1px;
-    color: #e11a21;
-    border-color: #646568; }
+    color: #8f3b81;
+    border-color: #c965b8; }
   .panel.page-header form input[name="submit"] {
     height: 45px;
     margin-left: 10px;
@@ -3425,8 +3425,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     letter-spacing: 2px;
     transition: all 0.3s linear;
     color: #fff;
-    background-color: #e11a21;
-    border: 2px solid #d32328;
+    background-color: #8f3b81;
+    border: 2px solid #7b336f;
     margin: 0px; }
     @media screen and (min-width: 769px) {
       .panel.page-header form input[name="submit"] {
@@ -3450,7 +3450,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     @media screen and (min-width: 769px) {
       .panel.page-header .header-copy-landing {
         width: 37.5rem;
-        padding: 60px 40px 0px 5px;
         font-size: 13px;
         font-size: 0.8125rem;
         min-height: 300px;
@@ -3488,8 +3487,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     @media screen and (min-width: 601px) {
       .panel.page-header .header-copy-landing h1 {
         margin-bottom: 1rem;
-        font-size: 80px;
-        font-size: 5rem; } }
+        font-size: 55px;
+        font-size: 3.4375rem; } }
   .panel.page-header .intro-copy-landing {
     position: relative;
     padding-right: 3rem;
@@ -4394,6 +4393,25 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .three-stories-panel article:hover, .panel.three-subpages-panel article:hover {
       background-color: #7dab35; }
       .three-stories-panel article:hover a.read-more, .panel.three-subpages-panel article:hover a.read-more, .three-stories-panel article:hover span.read-more, .panel.three-subpages-panel article:hover span.read-more {
+        color: #fff;
+        border-color: #fff; }
+    .three-stories-panel article a.read-more-angel, .panel.three-subpages-panel article a.read-more-angel, .three-stories-panel article span.read-more-angel, .panel.three-subpages-panel article span.read-more-angel {
+      margin-top: 0.9375rem;
+      margin-left: 1.5625rem;
+      margin-right: 1.5625rem;
+      margin-bottom: 1.25rem;
+      display: inline-block;
+      color: #575b5e;
+      border-color: #575b5e; }
+      @media screen and (min-width: 601px) {
+        .three-stories-panel article a.read-more-angel, .panel.three-subpages-panel article a.read-more-angel, .three-stories-panel article span.read-more-angel, .panel.three-subpages-panel article span.read-more-angel {
+          margin-top: 1.5625rem;
+          margin-left: 1.5625rem;
+          margin-right: 1.5625rem;
+          margin-bottom: 2.5rem; } }
+    .three-stories-panel article:hover, .panel.three-subpages-panel article:hover {
+      background-color: #ce89c3; }
+      .three-stories-panel article:hover a.read-more-angel, .panel.three-subpages-panel article:hover a.read-more-angel, .three-stories-panel article:hover span.read-more-angel, .panel.three-subpages-panel article:hover span.read-more-angel {
         color: #fff;
         border-color: #fff; }
   .three-stories-panel p, .panel.three-subpages-panel p {

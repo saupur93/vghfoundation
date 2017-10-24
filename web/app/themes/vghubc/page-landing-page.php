@@ -18,18 +18,15 @@ Template Name: LandingPage
           <div class="inner-wrap">
             <div class="header-copy-landing">
               <h1><?php print $page_header_subtitle; ?></h1>
-              <p class="intro-copy-landing">For the month of August, your donation to the VGH Emergency Department will be matched by Grosvenor Americas.</p>
+              <p class="intro-copy-landing">Make a donation to support our hospitals and health care centres today.</p>
               <div class="donation-form-landing">
                 <form name="donationform" id="donationform">
-                      <div class="donation">your donation </div>
-                      <div class="impact">your impact</div>
+
                       <div class="donation-landing">
                          <input type="text" name="yourdonation" id="yourdonation" value="$100">
                        </div>
 
-                      <div class="impact-landing"><input type="text" name="yourimpact" id="yourimpact" value="$200" readonly="readonly">
-                         <br/><p class="impact-small">with matching donation</p>
-                       </div>
+
 
                        <input type="button" name="submit" id="donatenow" value="Donate now">
 
@@ -61,27 +58,7 @@ Template Name: LandingPage
       </section>
 
     <?php endif; ?>
-    <div id="cta-message" class="register-panel">
-    	<div class="cta-message-content">
-    		<div class="close">
-    			<span></span>
-    			<span></span>
-    		</div>
-    		<div class="text-block">
-    			<h2>There is still time</h2>
-    			<p>
-    				In case you missed it last month, Grosvenor Americas is extending their match until <strong><em>Friday </em>, September 8th</strong>.
-    			</p>
-    			<div class="fb-buttons">
-    				<span class="share-btn btn email-signup" onclick="window.open('https://secure.vghfoundation.ca/site/Donation2?df_id=2040&mfc_pref=T&2040.donation=form1&set.SingleDesignee=1087&set.DonationLevel=2522');">DONATE NOW</span>
-    			</div>
 
-    			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
-
-    		</div>
-        <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/og-cast.jpg'); background-position: center top;"></div>
-    	</div>
-    </div>
 
 <?php
   $related_call_to_action = null !== get_field('related_call_to_action') ? get_field('related_call_to_action') : false;
