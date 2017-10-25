@@ -2620,7 +2620,7 @@ body.tribe-events-page-template {
 	  display:block;
 		position:relative;
 		background:#cb98c5;
-		border: 1px solid #8f3b81;
+		//border: 1px solid #8f3b81;
 		padding: 70px 20px 0px 10px;
 		color: #000;
 		min-height:230px;
@@ -2818,13 +2818,13 @@ font-weight: 600;
 		margin-top:-56px;
 		//margin-bottom:0.5rem;
 		@include font-size(35px);
-		line-height: 3.2rem !important;
+		line-height: 3.2rem;
 
 		@include media($ptab){
 
 			margin-bottom:1rem;
 			@include font-size(55px);
-			line-height: 3.2rem !important;
+			line-height: 3.2rem;
 		}
 
 	}
@@ -4953,7 +4953,7 @@ font-weight: 600;
 			&.logo {
 				padding-left:0;
 				margin-top:1.5rem;
-				margin-bottom:1.5rem;
+				margin-bottom:1.9rem;
 				img {
 					max-width:80%;
 					height:auto;
