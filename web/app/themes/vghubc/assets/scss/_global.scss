@@ -2819,6 +2819,7 @@ font-weight: 600;
 		//margin-bottom:0.5rem;
 		@include font-size(35px);
 		line-height: 3.2rem;
+		text-transform: none;
 
 		@include media($ptab){
 
