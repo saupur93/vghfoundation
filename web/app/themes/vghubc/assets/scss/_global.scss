@@ -2639,7 +2639,7 @@ body.tribe-events-page-template {
 }
 @include media($mobileOnly){
 
-	padding: 50px 40px 0px 40px;
+	padding: 30px 40px 0px 40px;
 	@include font-size(13px);
 	min-height:250px;
 
@@ -2652,13 +2652,14 @@ body.tribe-events-page-template {
 	.donation {
 
 		display: block;
-		@include font-size(20px);
+		@include font-size(18px);
+
     color: #fff;
 		margin-bottom: 6px;
 		float:left;
 		@include media($tab){
-    @include font-size(30px);
-
+    @include font-size(22px);
+    font-weight: bold !important;
 
 		}
 	}
@@ -2816,10 +2817,11 @@ font-weight: 600;
 
 	.header-copy-landing h1 {
 		margin-top:-56px;
-		//margin-bottom:0.5rem;
+		margin-bottom:0.5rem;
 		@include font-size(35px);
-		line-height: 3.2rem;
+		line-height: 2rem;
 		text-transform: none;
+		padding-left: 20px;
 
 		@include media($ptab){
 
@@ -2836,7 +2838,7 @@ font-weight: 600;
           font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
 					font-size: 14px;
           font-weight: none;
-
+          padding-left: 20px;
 					@include media($ptab){
             font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
 						font-size: 22px;
