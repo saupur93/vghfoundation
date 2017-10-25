@@ -2621,7 +2621,7 @@ body.tribe-events-page-template {
 		position:relative;
 		background:#cb98c5;
 		//border: 1px solid #8f3b81;
-		padding: 70px 20px 0px 10px;
+		padding: 20px 20px 0px 10px;
 		color: #000;
 		min-height:230px;
 		z-index: 1;
@@ -2630,7 +2630,7 @@ body.tribe-events-page-template {
 
 		@include media($ptab){
 			width:rem(430);
-			padding: 70px 40px 0px 40px;
+			padding: 20px 40px 0px 40px;
 
 			@include font-size(13px);
 			min-height:250px;
@@ -2653,7 +2653,7 @@ body.tribe-events-page-template {
 
 		display: block;
 		@include font-size(20px);
-    color: #5b5c5f;
+    color: #fff;
 		margin-bottom: 6px;
 		float:left;
 		@include media($tab){

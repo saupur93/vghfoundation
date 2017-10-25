@@ -21,7 +21,7 @@ Template Name: LandingPage
               <p class="intro-copy-landing">Make a donation to support our hospitals and health care centres today.</p>
               <div class="donation-form-landing">
                 <form name="donationform" id="donationform">
-
+                      <div class="donation">Yes, I would like to honour my angel with a gift.</div>
                       <div class="donation-landing">
                          <input type="text" name="yourdonation" id="yourdonation" value="$100">
                        </div>
