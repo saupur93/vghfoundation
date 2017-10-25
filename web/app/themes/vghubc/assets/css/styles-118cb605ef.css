@@ -3483,7 +3483,8 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     margin-top: -56px;
     font-size: 35px;
     font-size: 2.1875rem;
-    line-height: 3.2rem; }
+    line-height: 3.2rem;
+    text-transform: none; }
     @media screen and (min-width: 601px) {
       .panel.page-header .header-copy-landing h1 {
         margin-bottom: 1rem;
