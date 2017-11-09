@@ -94,7 +94,7 @@
    			$table_name = $wpdb->prefix . "celebration_cards_template";
 
    			// update the day
-    		$result = $wpdb->update( $table_name, array( 'template' => $_POST[ 'celebration_cards_template' ], 'cover_image' => $_POST[ 'celebration_cards_cover_image' ], 'background_image' => '#00', 'decoration_image' => $_POST[ 'celebration_cards_decoration_image' ], 'background_color' => $_POST[ 'celebration_cards_background_color' ], 'text_color' => $_POST[ 'celebration_cards_text_color' ], 'text_font' => $_POST[ 'celebration_cards_text_font' ], 'categoryId' => intval($_POST[ 'celebration_cards_category_parent' ]), 'update_time' => current_time( 'mysql' ) ), array( 'id' => $template_id ) );
+    		$result = $wpdb->update( $table_name, array( 'template' => $_POST[ 'celebration_cards_template' ], 'cover_image' => $_POST[ 'celebration_cards_cover_image' ], 'background_image' => $_POST[ 'celebration_cards_background_image' ], 'decoration_image' => $_POST[ 'celebration_cards_decoration_image' ], 'background_color' => '#00', 'text_color' => $_POST[ 'celebration_cards_text_color' ], 'text_font' => $_POST[ 'celebration_cards_text_font' ], 'categoryId' => intval($_POST[ 'celebration_cards_category_parent' ]), 'update_time' => current_time( 'mysql' ) ), array( 'id' => $template_id ) );
 
 ?>
 
