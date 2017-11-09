@@ -1,0 +1,181 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ /**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* columns of the table  */
+.column-template {
+  width: 10%;
+}
+
+.column-image {
+  width: 10%;
+}
+
+.column-color {
+  width: 10%;
+}
+
+.column-font {
+  width: 10%;
+}
+
+/* style for the div inside column color td */
+.column-color div {
+  height: 100%;
+  width: 100%;
+  max-height: 31px;
+  max-width: 31px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  color: transparent;
+  border: 1px solid #b4b9be;
+}
+
+/* default height for the images */
+.admin-celebration-cards-img {
+  max-height: 38px;
+  max-width: 100%;
+}
+
+ /* custom radio & checkboxes
+   http://stackoverflow.com/a/17541916/383904 */
+.rad {
+  cursor: pointer!important;
+  user-select: none!important;
+  -webkit-user-select: none!important;
+  -webkit-touch-callout: none!important;
+}
+
+/* hide org radio & checkbox */
+.rad > input { 
+  position: absolute!important;
+  width: 64px!important;
+  height: 54px!important;
+  border: 0!important;
+  margin-top: 0px!important;
+  border-radius: 5px!important;
+  background: transparent!important;
+}
+
+.rad > .header-input {
+  width: 136px!important;
+  height: 49px!important;
+}
+
+.rad > .toggle-input {
+  width: 55px!important;
+  height: 49px!important;
+}
+
+.rad > .color-input {
+  width: 49px!important;
+  height: 49px!important;
+}
+
+.rad > input:before {
+  display: none!important;
+}
+
+/* radio & checkbox styles */
+.rad > .admin-celebration-cards-img-wrapper {
+  display: inline-block!important;
+    background: white!important;
+    border-radius: 5px!important;
+    border: 1px solid #ddd!important;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.07)!important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07)!important;
+    padding: 5px!important;
+}
+
+.rad > .admin-celebration-cards-img-wrapper.header-input-wrapper {
+  width: 124px!important;
+}
+
+.rad > .admin-celebration-cards-img-wrapper.header-input-wrapper img {
+  margin: auto!important;
+  display: block!important;
+}
+
+.rad > .admin-celebration-cards-img-wrapper.toggle-input-wrapper{
+  width: 43px!important;
+}
+
+.rad > .admin-celebration-cards-img-wrapper.toggle-input-wrapper img {
+  margin: auto!important;
+  display: block!important;
+}
+
+.rad > .admin-celebration-cards-img-wrapper.color-input-wrapper{
+  width: 38px!important;
+  height: 38px!important;
+}
+
+/* checkbox overwrite styles */
+.rad:hover > .admin-celebration-cards-img-wrapper, .rad:hover > .color-input-wrapper { /* HOVER <i> STYLE */
+  border: 1px solid #0073aa!important;
+}
+
+.rad > input:checked + .admin-celebration-cards-img-wrapper, .rad > input:checked + .color-input-wrapper { /* (RADIO CHECKED) <i> STYLE */
+  border: 1px solid #0073aa!important;
+}
+
+/* miscellaneous */
+.color-input-wrapper-1 {
+  background-color: antiquewhite!important;
+}
+
+.color-input-wrapper-2 {
+  background-color: #f6c244!important;
+}
+
+.color-input-wrapper-3 {
+  background-color: #82b362!important;
+}
+
+.color-input-wrapper-4 {
+  background-color: #445260!important;
+}
+
+.color-input-wrapper-5 {
+  background-color: #b24145!important;
+}
+
+.color-input-wrapper-6 {
+  background-color: #c73336!important;
+}
+
+.call-to-action {
+  margin-top: 0.8em!important;
+}
+
+@media (max-width: 781px) {
+  .call-to-action {
+    margin-top: 0.6em!important;
+  }
+}
+
+.pull-left {
+  float: left!important;
+}
+
+.pull-right {
+  float: right!important;
+}
+
+.clearfix {
+  clear: both!important;
+}
+
+.button-danger {
+  background: #CD0000!important;
+  border-color: #AA0000!important;
+  -webkit-box-shadow: inset 0 1px 0 rgba(230,120,120,.5),0 1px 0 rgba(0,0,0,.15)!important;
+  box-shadow: inset 0 1px 0 rgba(230, 120, 120, 0.5),0 1px 0 rgba(0,0,0,.15)!important;
+}
