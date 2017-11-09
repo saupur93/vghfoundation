@@ -22,7 +22,7 @@
 
 	// aux var to know if we are creating a new category
 	$creatingCategory = false;
-	
+
 	// check if edit is set
 	if( isset( $_GET[ 'action' ] ) ) {
 
@@ -37,14 +37,14 @@
     			}
 
     		}
-    	
+
     	}
     	else {
 
     		if ( isset( $_GET[ 'create' ] ) )  {
 
     			$creatingCategory = true;
-    		
+
     		}
 
     	}
@@ -62,7 +62,7 @@
     		if ( $_GET[ 'template'] > 0 && is_numeric( $_GET[ 'template' ] ) ) {
 
     			$template_id = $_GET[ 'template' ];
-    		
+
     		}
 
     	}
@@ -76,9 +76,9 @@
    			$table_name = $wpdb->prefix . "celebration_cards_template";
 
    			$sql = "INSERT INTO {$wpdb->prefix}celebration_cards_template (id,template,cover_image,background_image,decoration_image,background_color,text_color,text_font,categoryId,update_time) VALUES (%d,%d,%s,%s,%s,%s,%s,%s,%d,%s) ON DUPLICATE KEY UPDATE update_time = %s";
-			
+
 			$sql = $wpdb->prepare( $sql, $template_id, 1, content_url() . '/plugins/celebration-cards/public/images/template' . 1 . '.png', content_url() . '/plugins/celebration-cards/public/images/templates/sample-img/img_template' . 1 . '.png', content_url() . '/plugins/celebration-cards/public/images/templates/card-decoration/card_decoration' . 1 . '.png', '#AF3C37', '#FFFFFF','Open Sans Light', 1, current_time( 'mysql' ), current_time( 'mysql' ) );
-			
+
 			// insert it
 			$wpdb->query( $sql );
 
@@ -86,7 +86,7 @@
 
     	// if we are updating ( aka form data sent )
     	if( $_POST[ 'celebration_cards_hidden' ] == 'Y' ) {
- 			
+
     		// get the global wordpress database variable
 			global $wpdb;
 
@@ -94,7 +94,7 @@
    			$table_name = $wpdb->prefix . "celebration_cards_template";
 
    			// update the day
-    		$result = $wpdb->update( $table_name, array( 'template' => $_POST[ 'celebration_cards_template' ], 'cover_image' => $_POST[ 'celebration_cards_cover_image' ], 'background_image' => $_POST[ 'celebration_cards_background_image' ], 'decoration_image' => $_POST[ 'celebration_cards_decoration_image' ], 'background_color' => $_POST[ 'celebration_cards_background_color' ], 'text_color' => $_POST[ 'celebration_cards_text_color' ], 'text_font' => $_POST[ 'celebration_cards_text_font' ], 'categoryId' => intval($_POST[ 'celebration_cards_category_parent' ]), 'update_time' => current_time( 'mysql' ) ), array( 'id' => $template_id ) );
+    		$result = $wpdb->update( $table_name, array( 'template' => $_POST[ 'celebration_cards_template' ], 'cover_image' => $_POST[ 'celebration_cards_cover_image' ], 'background_image' => '#00', 'decoration_image' => $_POST[ 'celebration_cards_decoration_image' ], 'background_color' => $_POST[ 'celebration_cards_background_color' ], 'text_color' => $_POST[ 'celebration_cards_text_color' ], 'text_font' => $_POST[ 'celebration_cards_text_font' ], 'categoryId' => intval($_POST[ 'celebration_cards_category_parent' ]), 'update_time' => current_time( 'mysql' ) ), array( 'id' => $template_id ) );
 
 ?>
 
@@ -116,7 +116,7 @@
 
 	// create a name for the table
    	$table_name = $wpdb->prefix . "celebration_cards_template";
-				
+
    	// declare the query
 	$sql = "SELECT * FROM " . $table_name . " WHERE id = " . $template_id . " LIMIT 1";
 
@@ -125,7 +125,7 @@
 
 	// create a name for the table
    	$table_name2 = $wpdb->prefix . "celebration_cards_category";
-				
+
    	// declare the query
 	$sql2 = "SELECT * FROM " . $table_name2;
 
@@ -139,9 +139,9 @@
 
 	<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER[ 'REQUEST_URI' ] ); ?>">
 		<input type="hidden" name="celebration_cards_hidden" value="Y">
-		
+
 		<?php
-			
+
 			echo "<h3>" . __( 'Template Settings' ) . "</h3>";
 
 		?>
@@ -159,7 +159,7 @@
 									<?php    echo __( 'Template' ) ; ?>
 								</span>
 							</legend>
-							<?php 
+							<?php
 
 								for( $i = 1; $i < 9; $i++ ) {
 
@@ -226,7 +226,7 @@
 								echo '<input name="celebration_cards_background_color" type="radio" class="color-input" id="celebration_cards_background_color"' . $i . '" value="' . $background_colors[ $i ] . '" ' . ( ( $celebration_cards_template[ 0 ][ 'background_color' ] == $background_colors[ $i ] ) ? 'checked="checked"' : '' ) . '>';
 								echo '<div class="admin-celebration-cards-img-wrapper color-input-wrapper" style="background-color:'. $background_colors[ $i ] . '!important;"></div>';
 								echo '</label>';
-									
+
 							}
 
 						?>
@@ -248,7 +248,7 @@
 								echo '<input name="celebration_cards_text_color" type="radio" class="color-input" id="celebration_cards_text_color"' . $i . '" value="' . $text_colors[ $i ] . '" ' . ( ( $celebration_cards_template[ 0 ][ 'text_color' ] == $text_colors[ $i ] ) ? 'checked="checked"' : '' ) . '>';
 								echo '<div class="admin-celebration-cards-img-wrapper color-input-wrapper" style="background-color:'. $text_colors[ $i ] . '!important;"></div>';
 								echo '</label>';
-									
+
 							}
 
 						?>
@@ -320,7 +320,7 @@
 			<?php    echo '<input type="submit" name="submit" id="submit" class="button button-primary" value="' . __( 'Save changes' ) . '">'; ?>
 		</p>
 	</form>
-		
+
 </div>
 
 <?php
@@ -346,7 +346,7 @@
 
 				// create a name for the table
 	   			$table_name5 = $wpdb->prefix . "celebration_cards_category";
-					
+
 	   			// declare the query
 				$sql5 = "SELECT * FROM " . $table_name5;
 
@@ -354,7 +354,7 @@
 				$celebration_cards_categories_aux = $wpdb->get_results($sql5, ARRAY_A);
 
 				foreach ($celebration_cards_categories_aux as $key => $value) {
-					
+
 					// update the day
 	    			$result = $wpdb->update( $table_name5, array( 'title' => stripslashes( $_POST[ 'celebration_cards_category_title' . $value['id'] ] ), 'update_time' => current_time( 'mysql' ) ), array( 'id' => $value['id'] ) );
 
@@ -431,7 +431,7 @@
 	    		if ( $_GET[ 'category'] > 0 && is_numeric( $_GET[ 'category' ] ) ) {
 
 	    			$categoryId = $_GET[ 'category' ];
-	    		
+
 	    		}
 
 	    	}
@@ -440,9 +440,9 @@
 	   		$table_name3 = $wpdb->prefix . "celebration_cards_category";
 
 	   		$sql3 = "INSERT INTO {$wpdb->prefix}celebration_cards_category (id,title,update_time) VALUES (%d,%s,%s) ON DUPLICATE KEY UPDATE update_time = %s";
-				
+
 			$sql3 = $wpdb->prepare( $sql3, $categoryId, 'New Category', current_time( 'mysql' ), current_time( 'mysql' ) );
-				
+
 			// insert it
 			$wpdb->query( $sql3 );
 
@@ -490,7 +490,7 @@
 
 		// create a name for the table
    		$table_name2 = $wpdb->prefix . "celebration_cards_category";
-				
+
    		// declare the query
 		$sql2 = "SELECT * FROM " . $table_name2;
 
@@ -498,7 +498,7 @@
 		$celebration_cards_categories = $wpdb->get_results($sql2, ARRAY_A);
 
 	?>
-	
+
 	<div>
 		<h3 class="title pull-left">
 			<?php    echo __( 'Categories Settings' ); ?>
@@ -514,8 +514,8 @@
 		<input type="hidden" name="celebration_cards_category_hidden" value="Y">
 		<table class="form-table">
 			<tbody>
-				<?php 
-				
+				<?php
+
 					// loop for all the days
 					foreach( $celebration_cards_categories as $row ) {
 
@@ -530,7 +530,7 @@
 					</td>
 				</tr>
 				<?php
-		
+
 					}
 
 				?>
@@ -550,7 +550,7 @@
 
 		// create a name for the table
    		$table_name = $wpdb->prefix . "celebration_cards_template";
-				
+
    		// declare the query
 		$sql = "SELECT * FROM " . $table_name;
 
@@ -558,7 +558,7 @@
 		$celebration_cards_templates = $wpdb->get_results($sql, ARRAY_A);
 
 	?>
-	
+
 	<div>
 		<h3 class="title pull-left">
 			<?php    echo __( 'Templates Settings' ); ?>
@@ -605,10 +605,10 @@
 	<div class="tablenav top">
 		<div class="tablenav-pages one-page">
 			<span class="displaying-num"><?php echo count( $celebration_cards_templates ) . ' ' . __( 'elements' ); ?></span>
-		</div>		
+		</div>
 		<br class="clear">
 	</div>
-	
+
 	<table class="wp-list-table widefat fixed striped posts">
 		<thead>
 			<tr>
@@ -631,16 +631,16 @@
 		</thead>
 
 		<tbody id="the-list">
-			
-			<?php 
-				
+
+			<?php
+
 				// loop for all the days
 				foreach( $celebration_cards_templates as $row ) {
 
 			?>
-			
+
 			<tr style="<?php echo ($row['categoryId'] == $celebration_cards_categories[0]['id']) ? 'display: table-row;' : 'display: none;' ;?>" id="celebration_cards_template-<?php echo $row['id'] ;?>" class="iedit author-self level-0 template-in-category-<?php echo $row[ 'categoryId' ];?> celebration_cards_template-tr celebration_cards_template-<?php echo $row[ 'id' ];?> type-post status-publish format-standard hentry xfolkentry">
-				<th scope="row" class="check-column">			
+				<th scope="row" class="check-column">
 					<label class="screen-reader-text" for="cb-select-<?php echo $row['id'] ;?>"> <?php echo __( 'Choose' ) . ' ' . __( 'template' ) . ' ' . $row[ 'id' ]; ?></label>
 					<input id="cb-select-<?php echo $row[ 'id' ] ;?>" type="checkbox" name="celebration_cards_template[]" value="<?php echo $row['id'] ;?>">
 					<div class="locked-indicator"></div>
@@ -651,16 +651,16 @@
 						<a class="row-title" href="<?php echo strtok( $_SERVER[ "REQUEST_URI" ],'?' ) . '?page=celebration-cards&action=edit&template=' . $row[ 'id' ]; ?>" title="<?php echo __( 'Edit' ) . ' ' . __( 'template' ) . ' ' . $row[ 'id' ];?> "><?php echo __( 'Template' ) . ' ' . $row[ 'id' ];?></a>
 					</strong>
 					<div class="locked-info">
-						<span class="locked-avatar"></span> 
+						<span class="locked-avatar"></span>
 						<span class="locked-text"></span>
 					</div>
 
 					<div class="row-actions">
 						<span class="edit">
-							<a href="<?php echo strtok( $_SERVER["REQUEST_URI"], '?' ) . '?page=celebration-cards&action=edit&template=' . $row[ 'id' ]; ?>" title="<?php echo __( 'Edit this element' ); ?>"><?php echo __( 'Edit' ); ?></a> 
+							<a href="<?php echo strtok( $_SERVER["REQUEST_URI"], '?' ) . '?page=celebration-cards&action=edit&template=' . $row[ 'id' ]; ?>" title="<?php echo __( 'Edit this element' ); ?>"><?php echo __( 'Edit' ); ?></a>
 						</span>
 						<span class="delete">
-							<a href="<?php echo strtok( $_SERVER["REQUEST_URI"], '?' ) . '?page=celebration-cards&delete=template&template=' . $row[ 'id' ]; ?>" title="<?php echo __( 'Delete this element' ); ?>"><?php echo __( 'Delete' ); ?></a> 
+							<a href="<?php echo strtok( $_SERVER["REQUEST_URI"], '?' ) . '?page=celebration-cards&delete=template&template=' . $row[ 'id' ]; ?>" title="<?php echo __( 'Delete this element' ); ?>"><?php echo __( 'Delete' ); ?></a>
 						</span>
 					</div>
 				</td>
@@ -668,7 +668,7 @@
 				<td class="author column-template" data-colname="Predefined Template">
 					<?php echo $row[ 'template' ] ;?>
 				</td>
-				
+
 				<td class="image column-image" data-colname="Cover Image">
 					<img class="admin-celebration-cards-img" alt="template <?php echo $row[ 'id' ] ;?> cover image" title="template <?php echo $row[ 'id' ] ;?> cover image" src="<?php echo $row[ 'cover_image' ] ;?>">
 				</td>
@@ -727,7 +727,7 @@
 		<div class="tablenav-pages one-page"><span class="displaying-num"><?php echo count( $celebration_cards_templates ) . ' ' . __( 'elements' ); ?></span>
 		<br class="clear">
 	</div>
-		
+
 </div>
 
 <?php
