@@ -56,7 +56,7 @@ Template Name: LandingPage
 
     .slider-panel {
     	min-height:435px;
-    	background:#8f3c82 url(http://vghubc.dev/app/uploads/2017/11/Angel_bg-image_new_2.jpg) no-repeat;
+    	background:#8f3c82 url(/app/uploads/2017/11/Angel_bg-image_new_2.jpg) no-repeat;
     	background-size: auto;
     }
     .slider-panel .row {
@@ -288,7 +288,7 @@ Template Name: LandingPage
             <article class="col-grid-8">
               <div class="slider-wrapper">
                 <div class="angel-bg">
-                  <section class="img-wrapper"> <img src="http://vghubc.dev/app/uploads/2017/11/angel-icon.png"> </section>
+                  <section class="img-wrapper"> <img src="/app/uploads/2017/11/angel-icon.png"> </section>
                   <section class="slider-container">
                     <div class="slider">
                       <div class="sliders">
