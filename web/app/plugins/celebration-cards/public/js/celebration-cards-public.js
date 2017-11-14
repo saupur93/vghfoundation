@@ -312,6 +312,7 @@ x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),n(0,!0)):"t
       }
    }
 
+
    // show the share modal
 
    function showShareModal() {
@@ -713,11 +714,15 @@ x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),n(0,!0)):"t
       var color = $(this).attr("data-color");
       textColor = color;
       $(".canvas-wrapper .canvas .canvas__message").css("color", color);
+      $(".canvas-wrapper .canvas .canvas__message2").css("color", color);
+      $(".canvas-wrapper .canvas .canvas__message3").css("color", color);
    });
 
    $(document).on("click", ".font-text-container", function(){
       var font = $(this).attr("data-font");
       $(".canvas-wrapper .canvas .canvas__message").css("font-family", font);
+      $(".canvas-wrapper .canvas .canvas__message2").css("font-family", font);
+      $(".canvas-wrapper .canvas .canvas__message3").css("font-family", font);
    });
 
    $(document).on("click", ".horitzontal-button", function(){

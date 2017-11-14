@@ -610,7 +610,7 @@ textarea {
 .template-2 .canvas__message {
     position: absolute;
     bottom: 35%;
-    top: auto;
+    top: 120px;
     width: 40%;
     right: 0%;
     margin-right: 5%;
@@ -842,16 +842,16 @@ textarea {
 }
 
 .template-angel .canvas__message {
-    position: absolute;
-    font-family: 'Dancing Script Regular';
-    bottom: 35%;
-    top: auto;
-    width: 40%;
-    right: 0%;
-    margin-right: 5%;
-    text-align: center;
-    font-size: 22px;
-    white-space: pre-line;
+  position: absolute;
+  font-family: 'Dancing Script Regular';
+  bottom: 35%;
+  top: 120px;
+  width: 40%;
+  right: 0%;
+  margin-right: 5%;
+  text-align: center;
+  font-size: 22px;
+  white-space: pre-line;
 }
 
 .template-angel .canvas__message2 {
@@ -1154,7 +1154,7 @@ textarea {
 
 .canvas-wrapper--small {
     height: -webkit-calc(100vh - 180px)!important;
-    height: calc(100vh - 180px)!important;
+    height: 900px !important;
     width: 100%!important;
 }
 
@@ -1616,6 +1616,17 @@ textarea.form-style {}
 
 .page2-footer{ text-align:center; position:relative; margin-top:350px;}
 
+
+@media(max-width:768px){
+
+.template-2 .canvas__message {
+
+    bottom: 0;
+    top: 38%;
+
+}
+
+}
 
 
 

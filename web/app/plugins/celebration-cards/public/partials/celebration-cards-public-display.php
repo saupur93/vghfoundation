@@ -18,6 +18,41 @@
   var logo = '<?php echo get_option("celebration_cards_company_logo"); ?>';
   var close = '<?php echo plugins_url() . "/celebration-cards/public/images/close-icon.png"; ?>';
   var adminAjax = '<?php echo admin_url(); ?>';
+
+function validateForm() {
+    var errors = [];
+    var x = document.forms["ornamentform"]["name_honouree"].value;
+    var x1 = document.forms["ornamentform"]["message"].value;
+    var x2 = document.forms["ornamentform"]["first_name"].value;
+    var x3 = document.forms["ornamentform"]["last_name"].value;
+    var x4 = document.forms["ornamentform"]["email"].value;
+
+    if (x == "") {
+        errors.push("Honouree Name must be filled out \n");
+
+    }
+    if (x1 == "") {
+        errors.push("Message must be filled out \n");
+
+    }
+    if (x2 == "") {
+        errors.push("First Name must be filled out \n");
+
+    }
+    if (x3 == "") {
+        errors.push("Last Name must be filled out \n");
+
+    }
+    if (x4 == "") {
+        errors.push("Email must be filled out \n");
+
+    }
+    if (errors.length > 0) {
+    alert (errors.join(""));
+    return false;
+  }
+}
+
 </script>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
@@ -29,12 +64,7 @@
             <h6>TEMPLATES</h6>
           </div>
       </div>
-      <div class="side-bar__button background-button">
-          <div class="side-bar__button-content">
-            <img src="<?php echo plugins_url() . '/celebration-cards/public/images/background-icon.png'; ?>">
-            <h6>BACKGROUND</h6>
-          </div>
-      </div>
+
       <div class="side-bar__button text-button">
           <div class="side-bar__button-content">
             <img src="<?php echo plugins_url() . '/celebration-cards/public/images/text-icon.png'; ?>">
@@ -203,6 +233,7 @@
     <div class="canvas-wrapper">
     <?php
           global $wpdb;
+          $error = 0;
                         // creates my_table in database if not exists
           $table = $wpdb->prefix . "celebration_cards_user_details";
           $charset_collate = $wpdb->get_charset_collate();
@@ -217,6 +248,7 @@
              ob_start();
              $html = ob_get_clean();
              $host_url = $_SERVER['QUERY_STRING'];
+
 ?>
       <div class="canvas <?php echo ($host_url  !== 'v_form') ? "canvas--horizontal" : "canvas--horizontal-after"; ?> template-angel">
         <?php
@@ -225,7 +257,8 @@
              if ($host_url  !== 'v_form') {
 
              ?>
-        <form action="?v_form" method="post" id="v_form">
+
+        <form name="ornamentform" action="?v_form" method="post"  id="v_form" onsubmit="return validateForm()">
 
             <section class="honouree">
 
@@ -242,7 +275,7 @@
 
       <div class="col-md-12">
 
-    <textarea name="message" class="form-style" id ="message" rows="2" cols="70" maxlength="80" placeholder="write a short message to your angel ..."></textarea> </div>
+    <textarea name="message" class="form-style" id ="message" rows="2" cols="70" maxlength="65" placeholder="write a short message to your angel ..."></textarea> </div>
 
 
 
@@ -261,7 +294,7 @@
               $message = strip_tags($_POST["message"], "");
               $firstname = strip_tags($_POST["first_name"], "");
               $lastname = strip_tags($_POST["last_name"], "");
-              $email = strip_tags($_POST["email"], "");
+              $email = $_POST["email"];
               $wpdb->insert(
                   $table2,
                   array(
@@ -279,6 +312,7 @@
 
                   )
               );
+
               $lastid = $wpdb->insert_id;
             //  echo $lastid;
               //echo "<h1 class=\"h1\">Thank You for creating An Angel Ornament. </h1>";
@@ -291,11 +325,12 @@
 
         }
           // if the form is submitted but the name is empty
-          if ( isset( $_POST["submit_form"] ) && $_POST["name_honouree"] == "" && $_POST["message"] == "" && $_POST["first_name"] == "" && $_POST["last_name"] == "" && $_POST["email"] == "" ) {
+        //  if ( isset( $_POST["submit_form"] ) && $_POST["name_honouree"] == "" && $_POST["message"] == "" && $_POST["first_name"] == "" && $_POST["last_name"] == "" && $_POST["email"] == "" ) {
 
-              echo "<p>You need to fill the required fields.</p>";
+
+        //      echo "<p>You need to fill the required fields.</p>";
           // outputs everything
-        }
+    //    }
 
       ?>
 
@@ -355,7 +390,7 @@
       </div>
 
       <div class="text-center">
-      <input type="submit" name="submit_form" value="Review & Confirm Ornament" class="btn" />
+      <input type="submit" name="submit_form" value="Confirm Ornament" class="btn" id ="submit_form"/>
 
       </div>
 
@@ -376,7 +411,7 @@
 
 <h1 class="uppercase">Thank You For Creating <br> an Angel Ornament</h1>
 
-<p>Your ornament will be displayed <br> along side others in our gallery</p>
+<p>Your ornament is now displayed <br> along side others in our gallery</p>
 
 </div>
 
@@ -390,7 +425,7 @@
 
 <button name="donate" value="" class="btn btn-page-2" id="donate"/>Donate <span>To Help Now</span></button>
 
-<button name="share" value="" class="btn btn-page-2" id="share"/>I love it! <span>Post my ornament</span></button>
+<button name="share" value="" class="btn btn-page-2" id="share"/>I love it! <span>I want to share it</span></button>
 
 </div>
 
@@ -451,7 +486,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ca_ES/sdk.js#xfbml=1&version=v2.5";
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 

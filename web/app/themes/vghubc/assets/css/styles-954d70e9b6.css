@@ -3376,7 +3376,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-size: 30px;
         font-size: 1.875rem; } }
   .panel.page-header .donation-landing {
-    width: 100%;
+    width: 140%;
     display: inherit;
     float: left;
     margin-bottom: 20px; }
@@ -4399,25 +4399,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     .three-stories-panel article:hover, .panel.three-subpages-panel article:hover {
       background-color: #7dab35; }
       .three-stories-panel article:hover a.read-more, .panel.three-subpages-panel article:hover a.read-more, .three-stories-panel article:hover span.read-more, .panel.three-subpages-panel article:hover span.read-more {
-        color: #fff;
-        border-color: #fff; }
-    .three-stories-panel article a.read-more-angel, .panel.three-subpages-panel article a.read-more-angel, .three-stories-panel article span.read-more-angel, .panel.three-subpages-panel article span.read-more-angel {
-      margin-top: 0.9375rem;
-      margin-left: 1.5625rem;
-      margin-right: 1.5625rem;
-      margin-bottom: 1.25rem;
-      display: inline-block;
-      color: #575b5e;
-      border-color: #575b5e; }
-      @media screen and (min-width: 601px) {
-        .three-stories-panel article a.read-more-angel, .panel.three-subpages-panel article a.read-more-angel, .three-stories-panel article span.read-more-angel, .panel.three-subpages-panel article span.read-more-angel {
-          margin-top: 1.5625rem;
-          margin-left: 1.5625rem;
-          margin-right: 1.5625rem;
-          margin-bottom: 2.5rem; } }
-    .three-stories-panel article:hover, .panel.three-subpages-panel article:hover {
-      background-color: #ce89c3; }
-      .three-stories-panel article:hover a.read-more-angel, .panel.three-subpages-panel article:hover a.read-more-angel, .three-stories-panel article:hover span.read-more-angel, .panel.three-subpages-panel article:hover span.read-more-angel {
         color: #fff;
         border-color: #fff; }
   .three-stories-panel p, .panel.three-subpages-panel p {
