@@ -280,7 +280,7 @@ Template Name: LandingPage
           <div class="row">
             <article class="col-grid-4">
               <div class="slider-text-box">
-                <h1>Honour your angel dedicate an ornament</h1>
+                <h1>Honour your angel by dedicating an ornament</h1>
                 <p style="font-size:20px;"> Join the thousands of British Columbians who are dedicating an angel to a loved one or a member of their health care team.  </p>
                 <p><a class="button white-keyline" href="/ornaments">Create An Angel Ornament</a></p>
               </div>

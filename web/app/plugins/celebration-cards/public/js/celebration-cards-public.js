@@ -401,7 +401,7 @@ x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),n(0,!0)):"t
             success: function(value) {
                uploadedImage = 2;
                showLink(value);
-               $('.celebration-cards-share-modal__content__message').html('Click the copy button to copy the link or if you are in mobile hold on to the input and tap copy.')
+               $('.celebration-cards-share-modal__content__message').html('Click the copy button to copy the link or if you are in mobile hold on to the input and tap copy.');
                $('.celebration-cards-share-modal__content__social-message').html('or share in twitter, facebook and email');
             },
             error: function(jqXHR, textStatus, errorThrown) {
