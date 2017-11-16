@@ -345,17 +345,18 @@ x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),n(0,!0)):"t
 
       var url = [location.protocol, '//', location.host, location.pathname].join('');
       url = url + '?ccshare=a&ccs='+ encodeURIComponent(encode64(textMessage))+'&ccs2='+ encodeURIComponent(encode64(textMessage2)) +'&ccs3='+ encodeURIComponent(encode64(textMessage3)) +'&ccl='+ encodeURIComponent(encode64(template)) +'&cca='+ encodeURIComponent(encode64(((aspectRatio == 'horizontal') ? 0 : 1 ))) +'&ccd='+ encodeURIComponent(encode64(decorationImage)) +'&cci='+ encodeURIComponent(encode64(backgroundImage)) +'&ccb='+ encodeURIComponent(encode64(backgroundColor.slice( 1 ))) +'&cct='+ encodeURIComponent(encode64(textColor.slice( 1 ))) +'&ccf='+ encodeURIComponent(encode64(textFont));
-
+      var subject = textMessage+' you are '+textMessage3+ '\'s angel';
+      var body2 = 'Dear '+textMessage+ '\t\n\t\n'+ 'You are my angel. I\'ve made an ornament to support VGH & UBC Hospital Foundation\'s';
       $('.celebration-cards-share-modal__content__cancel').css('display', 'none');
       $('.celebration-cards-share-modal__content__input input').val( url );
       $('.twitter-share-button').remove();
       $('.fb-share-button').remove();
       $('.email-share-button').remove();
-      $('.celebration-cards-share-modal__content__input').append('<a class="twitter-share-button" title="" data-text="" href="https://twitter.com/intent/tweet?url='+encodeURIComponent(url)+'"></a')
-      $('.celebration-cards-share-modal__content__input').append('<div class="fb-share-button" data-layout="button" data-href="'+url+'"></div>')
-      $('.celebration-cards-share-modal__content__input').append(' <a class="email-share-button" href="mailto:?subject=Angel Card&amp;body='+encodeURIComponent(url)+'" title="">Email</a>')
+//    $('.celebration-cards-share-modal__content__input').append('<a class="twitter-share-button" title="" data-text="" href="https://twitter.com/intent/tweet?url='+encodeURIComponent(url)+'"></a')
+  //   $('.celebration-cards-share-modal__content__input').append('<div class="fb-share-button" data-layout="button" data-href="'+url+'"></div>')
+  //  $('.celebration-cards-share-modal__content__input').append(' <a class="email-share-button" href="mailto:?subject='+subject+'&amp;body='+body2+'" title="">Email</a>')
 
-      $('.celebration-cards-share-modal__content__input').css('display', 'block');
+     $('.celebration-cards-share-modal__content__input').css('display', 'block');
       $('.celebration-cards-share-modal__content__input').animate( {
          opacity: 1
       }, 500, function() {

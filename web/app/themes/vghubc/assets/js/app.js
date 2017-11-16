@@ -65,8 +65,8 @@ class App {
       var yd = $('#yourdonation').val();
 
 			   if (yd == '') {
-					 $('#yourdonation').val("$100");
-					 $('#yourimpact').val("$200");
+					 $('#yourdonation').val("$50");
+					// $('#yourimpact').val("$200");
 
 				 } else{
 					 if ($.isNumeric(yd)){

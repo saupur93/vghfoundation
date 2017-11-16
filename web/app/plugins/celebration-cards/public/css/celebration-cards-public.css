@@ -376,7 +376,7 @@ textarea {
     height: 100vh;
     width: -webkit-calc(100% - 340px);
     width: calc(100% - 340px);
-    background-image: url(../images/angel-background-image_web.jpg);
+    background-image: url(../images/angel-background-image.jpg);
     background-size: cover;
     float: left;
     position: relative;
@@ -609,6 +609,7 @@ textarea {
 
 .template-2 .canvas__message {
     position: absolute;
+    font-family: 'Sofia Regular' !important;
     bottom: 35%;
     top: 120px;
     width: 40%;
@@ -621,6 +622,7 @@ textarea {
 
 .template-2 .canvas__message2 {
     position: absolute;
+    font-family: 'Sofia Regular' !important;
     bottom: 65%;
     top: auto;
     width: 40%;
@@ -633,6 +635,7 @@ textarea {
 
 .template-2 .canvas__message3 {
     position: absolute;
+    font-family: 'Sofia Regular' !important;
     bottom: 25%;
     top: auto;
     width: 40%;
@@ -843,7 +846,7 @@ textarea {
 
 .template-angel .canvas__message {
   position: absolute;
-  font-family: 'Dancing Script Regular';
+  font-family: 'Sofia Regular' !important;
   bottom: 35%;
   top: 120px;
   width: 40%;
@@ -856,7 +859,7 @@ textarea {
 
 .template-angel .canvas__message2 {
     position: absolute;
-    font-family: 'Dancing Script Regular';
+    font-family: 'Sofia Regular' !important;
     bottom: 65%;
     top: auto;
     width: 40%;
@@ -869,7 +872,7 @@ textarea {
 
 .template-angel .canvas__message3 {
     position: absolute;
-    font-family: 'Dancing Script Regular';
+    font-family: 'Sofia Regular' !important;
     bottom: 25%;
     top: auto;
     width: 40%;

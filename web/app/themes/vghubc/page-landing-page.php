@@ -23,7 +23,7 @@ Template Name: LandingPage
                 <form name="donationform" id="donationform">
                       <div class="donation">Yes, I would like to honour my angel with a gift.</div>
                       <div class="donation-landing">
-                         <input type="text" name="yourdonation" id="yourdonation" value="$100">
+                         <input type="text" name="yourdonation" id="yourdonation" placeholder="Enter the amount">
                        </div>
 
 
@@ -47,7 +47,7 @@ Template Name: LandingPage
         </div>
       </section>
     <?php endif; ?>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=sofia" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <style>
     /* cyrillic-ext */
@@ -184,7 +184,8 @@ Template Name: LandingPage
     .slider {
         text-align: center;
         padding: 30px !important;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Sofia Regular', cursive;
+        color: #5b5a58 !important;
         padding-left: 400px;
         width: 360px;
         height: 340px;
@@ -282,7 +283,7 @@ Template Name: LandingPage
               <div class="slider-text-box">
                 <h1>Honour your angel by dedicating an ornament</h1>
                 <p style="font-size:20px;"> Join the thousands of British Columbians who are dedicating an angel to a loved one or a member of their health care team.  </p>
-                <p><a class="button white-keyline" href="/ornaments">Create An Angel Ornament</a></p>
+                <p><a class="button white-keyline" href="/ornaments" target="_blank">Create An Angel Ornament</a></p>
               </div>
             </article>
             <article class="col-grid-8">

@@ -65,12 +65,6 @@ function validateForm() {
           </div>
       </div>
 
-      <div class="side-bar__button text-button">
-          <div class="side-bar__button-content">
-            <img src="<?php echo plugins_url() . '/celebration-cards/public/images/text-icon.png'; ?>">
-            <h6>TEXT</h6>
-          </div>
-      </div>
     </div>
 
     <div class="elements-side-bar">
@@ -411,7 +405,7 @@ function validateForm() {
 
 <h1 class="uppercase">Thank You For Creating <br> an Angel Ornament</h1>
 
-<p>Your ornament is now displayed <br> along side others in our gallery</p>
+<p>Your ornament is now displayed <br> at vghfoundation.ca/angel</p>
 
 </div>
 
