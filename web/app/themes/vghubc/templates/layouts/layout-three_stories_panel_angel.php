@@ -102,7 +102,7 @@
             <p class="date"><?php the_time('F j, Y'); ?></p>
             <p><?php the_title(); ?></p>
           </div>
-          <p class="more"><span class="read-more-angel"><?php print $link_text; ?></span></p>
+          <p class="more"><span class="read-more"><?php print $link_text; ?></span></p>
         </a>
         </article>
       <?php endwhile; ?>
