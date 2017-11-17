@@ -13477,7 +13477,7 @@ var App = function () {
 						var yd = (0, _jquery2.default)('#yourdonation').val();
 
 						if (yd == '') {
-							(0, _jquery2.default)('#yourdonation').val("$50");
+							(0, _jquery2.default)('#yourdonation').val("$100");
 							// $('#yourimpact').val("$200");
 						} else {
 							if (_jquery2.default.isNumeric(yd)) {
