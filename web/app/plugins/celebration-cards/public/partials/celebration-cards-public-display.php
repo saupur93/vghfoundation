@@ -373,7 +373,7 @@ function validateForm() {
 
          </div>
 
-         <p>You will receive your angel ornament via email so you can share it with your friends.</p>
+
          <p>You will also be receiving news and updates on how to support the angel campaign.</p>
 
 
