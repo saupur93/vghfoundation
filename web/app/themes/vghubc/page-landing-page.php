@@ -267,9 +267,7 @@ Template Name: LandingPage
         .control {
             display: none;
         }
-        .container {
-            overflow: hidden;
-        }
+
     }
 
     /* #end Custom slider style*/
