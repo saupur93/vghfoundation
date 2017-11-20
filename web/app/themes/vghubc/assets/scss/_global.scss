@@ -2830,6 +2830,10 @@ font-weight: 600;
 			@include font-size(55px);
 			line-height: 3.3rem;
 		}
+		@include media($ptabAndLess){
+			margin-top:-90px;
+		 margin-bottom:2rem;
+		}
 
 	}
 
@@ -2840,6 +2844,7 @@ font-weight: 600;
 					font-size: 14px;
           font-weight: none;
           padding-left: 20px;
+					//display:none;
 					@include media($ptab){
             font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
 						font-size: 22px;
@@ -2847,6 +2852,9 @@ font-weight: 600;
 						padding-right: 8rem;
 
 
+					}
+					@include media($ptabAndLess){
+					display:none;
 					}
 
 	}
