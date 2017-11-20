@@ -858,7 +858,7 @@ body.front, body.single-signature_events {
   .hero-copy.angel-campaign {
     background-color:$angel-pink;
     @include media($tab){
-      width:45.5rem;
+      width:40.5rem;
     }
     @include media($ptabAndLess){
       height:18rem;
