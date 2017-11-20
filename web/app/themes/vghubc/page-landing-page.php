@@ -239,7 +239,7 @@ Template Name: LandingPage
             margin-left: 44%;
         }
         .bx-wrapper article {
-            font-size: 24px;
+            font-size: 22px;
             padding-right:25px;
         }
     }
@@ -266,6 +266,10 @@ Template Name: LandingPage
         }
         .control {
             display: none;
+        }
+        .bx-wrapper article {
+            font-size: 18px;
+            padding-right:25px;
         }
 
     }
