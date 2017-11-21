@@ -39,7 +39,13 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			</video>
 		<?php endif; ?>
 	</div>
-	
+	<div class="layer-1">
+		<div class="container">
+			<div class="inner-wrap">
+				<div class="title">vital</div>
+			</div>
+		</div>
+	</div>
 	<div class="layer-2">
 		<div class="container">
 			<div class="inner-wrap">
