@@ -32,6 +32,12 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 				Your browser does not support the video tag.
 			</video>
 		<?php endif; ?>
+		<?php if(is_single(25510)): ?>
+			<video width="100%" height="100%" autoplay loop>
+				<source src="<?php echo get_template_directory_uri(); ?>/assets/img/angel/videobg.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		<?php endif; ?>
 	</div>
 	<div class="layer-1">
 		<div class="container">
