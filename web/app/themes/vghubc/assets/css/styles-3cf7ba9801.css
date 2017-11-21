@@ -7369,7 +7369,6 @@ body.overlay-open {
     background-color: #000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     overflow: hidden; }
     .theme-story-head .layer-bg video {
       margin-top: 96px;
