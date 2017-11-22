@@ -43,7 +43,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 	<div class="layer-1">
 		<div class="container">
 			<div class="inner-wrap">
-				<div class="title">Angel</div>
+				<div class="title">angel</div>
 			</div>
 		</div>
 	</div>
@@ -52,7 +52,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 		<div class="layer-1">
 			<div class="container">
 				<div class="inner-wrap">
-					<div class="title">Vital</div>
+					<div class="title">vital</div>
 				</div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 				<div class="layer-1">
 					<div class="container">
 						<div class="inner-wrap">
-							<div class="title">Vital</div>
+							<div class="title">vital</div>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 					<div class="layer-1">
 						<div class="container">
 							<div class="inner-wrap">
-								<div class="title">Vital</div>
+								<div class="title">vital</div>
 							</div>
 						</div>
 					</div>
