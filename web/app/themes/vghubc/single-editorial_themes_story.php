@@ -48,6 +48,33 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 		</div>
 	</div>
 	<?php endif; ?>
+	<?php if(is_single(24125)): ?>
+		<div class="layer-1">
+			<div class="container">
+				<div class="inner-wrap">
+					<div class="title">Vital</div>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
+		  <?php if(is_single(24258)): ?>
+				<div class="layer-1">
+					<div class="container">
+						<div class="inner-wrap">
+							<div class="title">Vital</div>
+						</div>
+					</div>
+				</div>
+				<?php endif; ?>
+				<?php if(is_single(24781)): ?>
+					<div class="layer-1">
+						<div class="container">
+							<div class="inner-wrap">
+								<div class="title">Vital</div>
+							</div>
+						</div>
+					</div>
+					<?php endif; ?>
 	<div class="layer-2">
 		<div class="container">
 			<div class="inner-wrap">
