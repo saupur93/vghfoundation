@@ -47,16 +47,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			</div>
 		</div>
 	</div>
-	<?php endif;
-       else { ?>
-				 <div class="layer-1">
-			 		<div class="container">
-			 			<div class="inner-wrap">
-			 				<div class="title">Angel</div>
-			 			</div>
-			 		</div>
-			 	</div>
-				<?php } ?>
+	<?php endif; ?>
 	<div class="layer-2">
 		<div class="container">
 			<div class="inner-wrap">
