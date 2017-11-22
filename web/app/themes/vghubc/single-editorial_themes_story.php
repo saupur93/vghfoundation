@@ -39,6 +39,7 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			</video>
 		<?php endif; ?>
 	</div>
+	<?php if(is_single(25510)): ?>
 	<div class="layer-1">
 		<div class="container">
 			<div class="inner-wrap">
@@ -46,6 +47,16 @@ $pagecolor = get_field('theme_color', $relatedthemeID);
 			</div>
 		</div>
 	</div>
+	<?php endif;
+       else { ?>
+				 <div class="layer-1">
+			 		<div class="container">
+			 			<div class="inner-wrap">
+			 				<div class="title">Angel</div>
+			 			</div>
+			 		</div>
+			 	</div>
+				<?php } ?>
 	<div class="layer-2">
 		<div class="container">
 			<div class="inner-wrap">
