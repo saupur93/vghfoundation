@@ -384,7 +384,7 @@ x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),n(0,!0)):"t
       if (uploadedImage == 0 || uploadedImage == 2) {
          showLink('');
          $('.celebration-cards-share-modal__content__message').html('Click the copy button to copy the link or if you are in mobile hold on to the input and tap copy.');
-         $('.celebration-cards-share-modal__content__social-message').html('or share in twitter, facebook and email');
+      //   $('.celebration-cards-share-modal__content__social-message').html('or share in twitter, facebook and email');
       }
       else if (uploadedImage == 1) {
          $('.celebration-cards-share-modal__content__message').html("Uploading your image...");
