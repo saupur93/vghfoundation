@@ -4780,6 +4780,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     bottom: 70px; }
     @media screen and (max-width: 768px) {
       .grid-slider .pager .left, .grid-slider .pager .right {
+        bottom: 70px !important; } }
+    @media screen and (max-width: 600px) {
+      .grid-slider .pager .left, .grid-slider .pager .right {
         bottom: 20px !important; } }
   .grid-slider .pager .left {
     left: 0;
@@ -7087,6 +7090,9 @@ body.overlay-open {
       background-image: url(../img/pager-right.svg);
       background-position: 50% 50%;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 768px) {
+        #overlay .pager .right {
+          right: 2.6rem; } }
 
 .iframe-wrapper {
   position: relative;
