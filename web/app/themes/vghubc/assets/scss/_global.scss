@@ -4729,7 +4729,7 @@ font-weight: 600;
 		position:absolute;
 		bottom:0;
 		@include media($ptabAndLess){
-			display:none;
+		//	display:none;
 		}
 
 		.left, .right {
@@ -4740,6 +4740,9 @@ font-weight: 600;
 			z-index:10;
 			position:absolute;
 			bottom:70px;
+			@include media($ptabAndLess){
+			bottom:20px !important;
+			}
 
 		}
 
@@ -7862,7 +7865,7 @@ body.overlay-open {
 		transform:translateY(-50%);
 
 		@include media($ptabAndLess){
-			display:none;
+			//display:none;
 		}
 
 		.left, .right {

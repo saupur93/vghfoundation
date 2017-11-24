@@ -4770,9 +4770,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
   width: 100%;
   position: absolute;
   bottom: 0; }
-  @media screen and (max-width: 768px) {
-    .grid-slider .pager {
-      display: none; } }
   .grid-slider .pager .left, .grid-slider .pager .right {
     width: 3.75rem;
     height: 3.75rem;
@@ -4781,6 +4778,9 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
     z-index: 10;
     position: absolute;
     bottom: 70px; }
+    @media screen and (max-width: 768px) {
+      .grid-slider .pager .left, .grid-slider .pager .right {
+        bottom: 20px !important; } }
   .grid-slider .pager .left {
     left: 0;
     right: 0;
@@ -7067,9 +7067,6 @@ body.overlay-open {
     top: calc(50% + 160px);
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-    @media screen and (max-width: 768px) {
-      #overlay .pager {
-        display: none; } }
     #overlay .pager .left, #overlay .pager .right {
       width: 3.75rem;
       height: 3.75rem;
