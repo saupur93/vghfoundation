@@ -556,6 +556,7 @@ class App {
 			overlay.find('.pager .left').fadeIn();
 			overlay.find('.pager .right').fadeIn();
 
+
 			if(currentSlideOverlay == 0) {
 				overlay.find('.pager .left').fadeOut();
 			}
@@ -571,6 +572,9 @@ class App {
 			loadContent(e);
 			$('body').addClass('overlay-open');
 			currentSlideOverlay = $(e.currentTarget).index();
+		var downloadurl = overlay.find("#image"+currentSlideOverlay).attr("data-overlay-image");
+	//		console.log(downloadurl);
+     overlay.find('.right').after('<a href="'+downloadurl+'" class="dload" download></a>').fadeIn();
 			$('#overlay .gallery-item').css({
 				transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
 			});
@@ -587,6 +591,10 @@ class App {
 		const loadPrevious = e => {
 			if (currentSlideOverlay > 0 ) {
 				currentSlideOverlay--;
+				var downloadurl = overlay.find("#image"+currentSlideOverlay).attr("data-overlay-image");
+				console.log(downloadurl);
+				overlay.find('.dload').fadeOut();
+		     overlay.find('.right').after('<a href="'+downloadurl+'" class="dload" download></a>').fadeIn();
 				$('#overlay .gallery-item').css({
 					transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
 				});
@@ -594,9 +602,14 @@ class App {
 			}
 		};
 
+
 		const loadNext = e => {
 			if (currentSlideOverlay < $('#overlay .gallery-item').length-1) {
 				currentSlideOverlay++;
+				var downloadurl = overlay.find("#image"+currentSlideOverlay).attr("data-overlay-image");
+				console.log(downloadurl);
+				overlay.find('.dload').fadeOut();
+		     overlay.find('.right').after('<a href="'+downloadurl+'" class="dload" download></a>').fadeIn();;
 				$('#overlay .gallery-item').css({
 					transform: 'translate3d(-'+ 100 * currentSlideOverlay +'%,0,0)'
 				});

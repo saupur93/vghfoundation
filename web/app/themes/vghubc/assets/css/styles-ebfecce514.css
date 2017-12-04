@@ -7077,6 +7077,27 @@ body.overlay-open {
       display: block;
       z-index: 10;
       position: absolute; }
+    #overlay .pager .dload {
+      width: 3.75rem;
+      height: 3.75rem;
+      background: rgba(0, 0, 0, 0.4);
+      display: block;
+      z-index: 10;
+      position: absolute; }
+      @media screen and (max-width: 768px) {
+        #overlay .pager .dload {
+          width: 3.125rem;
+          height: 3.125rem; } }
+    #overlay .pager .dload {
+      right: 50px;
+      margin-top: -20px;
+      background-image: url(../img/download-button.png);
+      background-position: 10% 10%;
+      background-size: contain; }
+      @media screen and (max-width: 768px) {
+        #overlay .pager .dload {
+          margin-top: -120px;
+          right: 2.6rem; } }
     #overlay .pager .left {
       left: 0;
       right: 0;

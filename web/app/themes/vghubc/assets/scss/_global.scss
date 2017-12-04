@@ -7870,7 +7870,7 @@ body.overlay-open {
 			//display:none;
 		}
 
-		.left, .right {
+		.left, .right{
 			width:rem(60);
 			height:rem(60);
 			background:rgba(0,0,0,0.4);
@@ -7880,7 +7880,33 @@ body.overlay-open {
 			// bottom:70px;
 
 		}
+.dload {
+	width:rem(60);
+	height:rem(60);
+	background:rgba(0,0,0,0.4);
+	display:block;
+	z-index:10;
+	position:absolute;
 
+	@include media($ptabAndLess){
+		width:rem(50);
+		height:rem(50);
+	}
+}
+
+		.dload {
+
+			right:50px;
+			margin-top: -20px;
+			background-image:url(../img/download-button.png);
+			background-position:10% 10%;
+			background-size: contain;
+			@include media($ptabAndLess){
+			margin-top:-120px;
+			right:2.6rem;
+			}
+
+		}
 		.left {
 			left:0;
 			right:0;

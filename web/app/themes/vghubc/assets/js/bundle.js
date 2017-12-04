@@ -13975,6 +13975,9 @@ var App = function () {
 				loadContent(e);
 				(0, _jquery2.default)('body').addClass('overlay-open');
 				currentSlideOverlay = (0, _jquery2.default)(e.currentTarget).index();
+				var downloadurl = overlay.find("#image" + currentSlideOverlay).attr("data-overlay-image");
+				//		console.log(downloadurl);
+				overlay.find('.right').after('<a href="' + downloadurl + '" class="dload" download></a>').fadeIn();
 				(0, _jquery2.default)('#overlay .gallery-item').css({
 					transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
 				});
@@ -13991,6 +13994,10 @@ var App = function () {
 			var loadPrevious = function loadPrevious(e) {
 				if (currentSlideOverlay > 0) {
 					currentSlideOverlay--;
+					var downloadurl = overlay.find("#image" + currentSlideOverlay).attr("data-overlay-image");
+					console.log(downloadurl);
+					overlay.find('.dload').fadeOut();
+					overlay.find('.right').after('<a href="' + downloadurl + '" class="dload" download></a>').fadeIn();
 					(0, _jquery2.default)('#overlay .gallery-item').css({
 						transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
 					});
@@ -14001,6 +14008,10 @@ var App = function () {
 			var loadNext = function loadNext(e) {
 				if (currentSlideOverlay < (0, _jquery2.default)('#overlay .gallery-item').length - 1) {
 					currentSlideOverlay++;
+					var downloadurl = overlay.find("#image" + currentSlideOverlay).attr("data-overlay-image");
+					console.log(downloadurl);
+					overlay.find('.dload').fadeOut();
+					overlay.find('.right').after('<a href="' + downloadurl + '" class="dload" download></a>').fadeIn();;
 					(0, _jquery2.default)('#overlay .gallery-item').css({
 						transform: 'translate3d(-' + 100 * currentSlideOverlay + '%,0,0)'
 					});
