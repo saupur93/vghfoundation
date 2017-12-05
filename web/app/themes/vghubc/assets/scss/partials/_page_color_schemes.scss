@@ -868,6 +868,12 @@ body.front, body.single-signature_events {
       color:$stars-gala;
     }
   }
+  .big-donate.innovators-challenge {
+    background-color:$ino-challenge;
+    a.button:hover {
+      color:$ino-challenge;
+    }
+  }
 
   .big-donate.viva-pharmaceutical-time-to-shine-gala {
     background-color:$shine-gala;
