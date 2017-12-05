@@ -449,6 +449,13 @@
     }
   }
 
+  .signature-event-innovators-challenge & {
+    background-color:$ino-challenge;
+    a.button:hover {
+      color:$ino-challenge;
+    }
+  }
+
   .signature-event-viva-pharmaceutical-time-to-shine-gala & {
     background-color:$shine-gala;
     a.button:hover {
@@ -535,6 +542,35 @@
       &:hover {
         background-color:$stars-gala;
         border-color:$stars-gala;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+.signature-event-innovators-challenge {
+  .button {
+    background-color:$ino-challenge;
+    border-color:$ino-challenge;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$ino-challenge;
+      &:hover {
+        background-color:$ino-challenge;
+        border-color: $ino-challenge;
         color:#fff;
       }
     }
