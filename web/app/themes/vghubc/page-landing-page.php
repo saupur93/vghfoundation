@@ -315,6 +315,7 @@ Template Name: LandingPage
                 </div>
               </div>
             </article>
+            <p id="7-eleven"></p>
           </div>
         </div>
       </div>
@@ -336,7 +337,7 @@ Template Name: LandingPage
     							});
         });
       </script>
-      <p id="7-eleven"></p>
+
     <?php if( have_rows('layouts') ): ?>
       <?php include(locate_template('templates/layouts/layouts-loop.php')); ?>
 
