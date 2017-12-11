@@ -315,11 +315,11 @@ Template Name: LandingPage
                 </div>
               </div>
             </article>
-            <p id="7-eleven"></p>
           </div>
         </div>
       </div>
     </section>
+      <p id="7-eleven"></p>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://use.fontawesome.com/21b94d4319.js"></script>
