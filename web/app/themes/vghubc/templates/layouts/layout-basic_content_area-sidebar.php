@@ -1,6 +1,8 @@
 <?php $event = get_post_type(get_the_ID()) == 'signature_events' ? true : false; ?>
 <?php $section_title = null !== get_sub_field('section_title') ? get_sub_field('section_title') : false; ?>
-<?php if(($count == 1) && (! is_single(25347))):  ?>
+<?php
+ $id = get_the_ID();
+if(($count == 1) && ($id != '25347'))):  ?>
   <section class="panel extra-padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php else: ?>
 <section class="panel padded sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
