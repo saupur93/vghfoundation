@@ -315,7 +315,7 @@ Template Name: LandingPage
                 </div>
               </div>
             </article>
-            <p id="7-eleven"></p>
+          
           </div>
         </div>
       </div>
