@@ -315,7 +315,6 @@ Template Name: LandingPage
                 </div>
               </div>
             </article>
-          
           </div>
         </div>
       </div>
