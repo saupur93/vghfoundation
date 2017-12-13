@@ -4,8 +4,7 @@
  $id = get_the_ID();
 if(($count == 1) && ($id != '25347'))):  ?>
   <section class="panel extra-padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
-<?php elseif ($id == '25347'): ?>
-  <section class="panel extra-padded-landing overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
+
 <?php else : ?>
 <section class="panel padded sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php endif; ?>
