@@ -2,7 +2,7 @@
 <?php $section_title = null !== get_sub_field('section_title') ? get_sub_field('section_title') : false; ?>
 <?php
  $id = get_the_ID();
-if(($count == 1) && ($id != 25347))):  ?>
+    if(($count == 1) && ($id != '25347'))):  ?>
   <section class="panel extra-padded overview-panel sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
 <?php else: ?>
 <section class="panel padded sidebar-right<?php echo ' panel-'.$count; ?><?php if($event) print ' category-bg-color'; ?>">
