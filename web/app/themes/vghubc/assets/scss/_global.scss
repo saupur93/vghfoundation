@@ -1006,7 +1006,7 @@ html[lang="zh"] .latest-open #top-header #toggleLatest {
 	}
 
 	&.extra-padded-landing {
-		padding: rem(20) 0;
+		padding: rem(10) 0;
 		@include media($tab){
 			padding: rem(60) 0;
 		}

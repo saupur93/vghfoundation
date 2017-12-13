@@ -2190,7 +2190,7 @@ html[lang="zh"] .latest-open #top-header #toggleLatest:before {
       .panel.extra-padded {
         padding: 7.5rem 0; } }
   .panel.extra-padded-landing {
-    padding: 1.25rem 0; }
+    padding: 0.625rem 0; }
     @media screen and (min-width: 769px) {
       .panel.extra-padded-landing {
         padding: 3.75rem 0; } }
