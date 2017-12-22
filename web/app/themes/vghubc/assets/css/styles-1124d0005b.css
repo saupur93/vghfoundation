@@ -3465,7 +3465,7 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
         font-size: 32px;
         font-weight: 600; } }
-  .panel.page-header form #gform_4 form input[type="text"], .panel.page-header form input[type="email"] {
+  .panel.page-header form #gform_4 input[type="text"], .panel.page-header input[type="email"] {
     border: 1px solid #ccc !important; }
   .panel.page-header .header-copy-landing {
     position: absolute;
