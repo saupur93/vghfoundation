@@ -2983,6 +2983,7 @@ form input[type="text"], form input[type="email"] {
   border: 0;
   padding: 10px 15px;
   margin-right: 10px;
+  border: 1px solid #ccc;
   font-size: 16px;
   font-size: 1rem;
   min-width: calc(44% - 225px);
@@ -3465,13 +3466,6 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
         font-size: 32px;
         font-weight: 600; } }
-  .panel.page-header .customform {
-    font-size: inherit;
-    font-family: inherit;
-    padding: 0.313em 0;
-    letter-spacing: normal;
-    text-indent: 0.25em;
-    border: 1px solid #ccc !important; }
   .panel.page-header .header-copy-landing {
     position: absolute;
     bottom: -70px;
