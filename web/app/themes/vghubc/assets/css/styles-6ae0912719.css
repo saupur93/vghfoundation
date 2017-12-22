@@ -3465,7 +3465,12 @@ body.tribe-events-page-template .tribe-events-event-meta .tribe-events-meta-grou
         font-family: "Karbon-Medium",Helvetica,Arial,sans-serif;
         font-size: 32px;
         font-weight: 600; } }
-  .panel.page-header .gform_wrapper input[type=email], .panel.page-header .gform_wrapper input[type=number], .panel.page-header .gform_wrapper input[type=password], .panel.page-header .gform_wrapper input[type=tel], .panel.page-header .gform_wrapper input[type=text], .panel.page-header .gform_wrapper input[type=url] {
+  .panel.page-header .customform {
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.313em 0;
+    letter-spacing: normal;
+    text-indent: 0.25em;
     border: 1px solid #ccc !important; }
   .panel.page-header .header-copy-landing {
     position: absolute;

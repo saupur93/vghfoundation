@@ -2753,8 +2753,13 @@ font-weight: 600;
 }
 }
 
-.gform_wrapper input[type=email], .gform_wrapper input[type=number], .gform_wrapper input[type=password], .gform_wrapper input[type=tel], .gform_wrapper input[type=text], .gform_wrapper input[type=url]
+.customform
 {
+	font-size: inherit;
+	font-family: inherit;
+	padding:0.313em 0;
+	letter-spacing:normal;
+	text-indent:0.25em;
 	border:1px solid #ccc !important;
 }
 	.header-copy-landing {
