@@ -165,19 +165,16 @@ Template Name: Home
   			<span></span>
   		</div>
   		<div class="text-block">
-  			<h2>Be the first to know</h2>
+  			<h2>End the year with a donation</h2>
   			<p>
-  				Snowboarder Kody Williams is lucky to be alive. Preview his inspirational story in our upcoming edition of <em>Impact</em> newsletter.
+  				Your donation changes lives. Donate before midnight on Dec 31 to receive your 2017 tax receipt.
   			</p>
   			<div class="fb-buttons">
-  				<span class="share-btn fb-login btn facebook" onclick="FacebookLogin.login(this);">Subscribe with Facebook</span> <span class="share-btn btn email-signup" onclick="FacebookLogin.showEmailForm(this);">Subscribe with Email</span>
+  				<a class="button green big-donate  angel-campaign" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a> 
   			</div>
 
   			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
-        <div class="caption-text">
-          <br />
-            By subscribing, you agree to receive electronic communications from VGH & UBC Hospital Foundation. You may unsubscribe at any time.
-        </div>
+
   		</div>
       <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg'); background-position: center top;"></div>
   	</div>
