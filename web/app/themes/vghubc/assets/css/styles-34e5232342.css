@@ -1282,7 +1282,8 @@ p.date {
       color: #6DCDB8; }
 
 body.front .big-donate.angel-campaign, body.single-signature_events .big-donate.angel-campaign {
-  background-color: #ce89c3; }
+  background-color: #ce89c3;
+  border: 2px solid #ce89c3; }
   body.front .big-donate.angel-campaign a.button:hover, body.front .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.angel-campaign a.tribe-events-read-more:hover, body.single-signature_events .big-donate.angel-campaign a.button:hover, body.single-signature_events .big-donate.angel-campaign body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.angel-campaign a.tribe-events-read-more:hover {
     color: #ce89c3; }
 

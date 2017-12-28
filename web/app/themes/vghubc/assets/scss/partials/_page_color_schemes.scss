@@ -857,6 +857,7 @@
 body.front, body.single-signature_events {
   .big-donate.angel-campaign {
     background-color:$angel-pink;
+    border: 2px solid #ce89c3;
     a.button:hover {
       color:$angel-pink;
     }
