@@ -170,8 +170,8 @@ Template Name: Home
   				Your donation changes lives. Donate before midnight on Dec 31 to receive your 2017 tax receipt.
   			</p>
 
-  				<a class="button big-donate angel-campaign" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a>
-  		
+  				<a class="button big-donate" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a>
+
 
   			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 
