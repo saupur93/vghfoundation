@@ -170,13 +170,13 @@ Template Name: Home
   				Your donation changes lives. Donate before midnight on Dec 31 to receive your 2017 tax receipt.
   			</p>
   			<div class="fb-buttons">
-  				<a class="button green big-donate  angel-campaign" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a> 
+  				<a class="button big-donate  angel-campaign" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a>
   			</div>
 
   			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 
   		</div>
-      <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/kody_williams.jpg'); background-position: center top;"></div>
+      <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/Richard-Gaffney_pop_up.jpg'); background-position: center top;"></div>
   	</div>
   </div>
 
