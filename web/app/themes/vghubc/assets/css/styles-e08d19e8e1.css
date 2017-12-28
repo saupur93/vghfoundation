@@ -7684,7 +7684,7 @@ body.overlay-open {
           min-height: 200px; } }
       @media screen and (max-width: 600px) {
         #cta-message .cta-message-content .img-block {
-          min-height: 100px; } }
+          min-height: 200px; } }
     #cta-message .cta-message-content .fb-buttons {
       margin-top: 20px; }
     #cta-message .cta-message-content .share-btn {

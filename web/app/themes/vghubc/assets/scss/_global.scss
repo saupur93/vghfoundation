@@ -8517,7 +8517,7 @@ body.overlay-open {
 				min-height: 200px;
 			}
 			@include media ($mobileOnly) {
-				min-height: 100px;
+				min-height: 200px;
 			}
 		}
 		.fb-buttons {
