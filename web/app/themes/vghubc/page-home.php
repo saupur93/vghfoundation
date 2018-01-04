@@ -158,27 +158,9 @@ Template Name: Home
     </ul>
   </section>
   <?php endif; ?>
-  <div id="cta-message" class="register-panel">
-  	<div class="cta-message-content">
-  		<div class="close">
-  			<span></span>
-  			<span></span>
-  		</div>
-  		<div class="text-block">
-  			<h2>End the year with a donation</h2>
-  			<p>
-  				Your donation changes lives. Donate before midnight on Dec 31 to receive your 2017 tax receipt.
-  			</p>
-
-  				<a class="button big-donate" href="https://secure.vghfoundation.ca/site/Donation2?df_id=2080&mfc_pref=T&2080.donation=form1&_ga=2.251262342.1053310539.1513799223-1590723844.1510451875&utm_source=google&utm_medium=homepage_pop_up&utm_campaign=year_end&utm_content=pop_up" target="_blank">Donate</a>
 
 
-  			<?php //print do_shortcode('[luminate_form form_id="1560" submit_text="Submit Entry" js_callback="FacebookLogin.submitLuminateSurveyCallback" form_class="facebook-luminate hidden"]'); ?>
 
-  		</div>
-      <div class="img-block" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/willie/Richard-Gaffney_pop_up.jpg'); background-position: center top;"></div>
-  	</div>
-  </div>
 
 	<?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
 
