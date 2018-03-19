@@ -1034,6 +1034,10 @@ p.date {
     background-color: #0e2d4d; }
     .signature-event-innovators-challenge .panel.category-bg-color a.button:hover, .signature-event-innovators-challenge .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-innovators-challenge .panel.category-bg-color a.tribe-events-read-more:hover {
       color: #0e2d4d; }
+  .signature-event-isserow .panel.category-bg-color {
+    background-color: #0e2d4d; }
+    .signature-event-isserow .panel.category-bg-color a.button:hover, .signature-event-isserow .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-isserow .panel.category-bg-color a.tribe-events-read-more:hover {
+      color: #0e2d4d; }
   .signature-event-viva-pharmaceutical-time-shine-gala .panel.category-bg-color {
     background-color: #c5a465; }
     .signature-event-viva-pharmaceutical-time-shine-gala .panel.category-bg-color a.button:hover, .signature-event-viva-pharmaceutical-time-shine-gala .panel.category-bg-color body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-shine-gala .panel.category-bg-color a.tribe-events-read-more:hover {
@@ -1111,6 +1115,24 @@ p.date {
       color: #fff; }
 
 .signature-event-innovators-challenge .panel.overview-panel ul li:before {
+  color: #fff; }
+
+.signature-event-isserow .button, .signature-event-isserow form input[type="submit"], form .signature-event-isserow input[type="submit"], .signature-event-isserow body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-isserow .tribe-events-read-more {
+  background-color: #0e2d4d;
+  border-color: #0e2d4d;
+  color: #fff; }
+  .signature-event-isserow .button:hover, .signature-event-isserow form input[type="submit"]:hover, form .signature-event-isserow input[type="submit"]:hover, .signature-event-isserow body.tribe-events-page-template .tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-isserow .tribe-events-read-more:hover {
+    color: #fff;
+    background: transparent; }
+  .signature-event-isserow .button.keyline, .signature-event-isserow form input.keyline[type="submit"], form .signature-event-isserow input.keyline[type="submit"], .signature-event-isserow body.tribe-events-page-template .keyline.tribe-events-read-more, body.tribe-events-page-template .signature-event-isserow .keyline.tribe-events-read-more {
+    background-color: transparent;
+    color: #0e2d4d; }
+    .signature-event-isserow .button.keyline:hover, .signature-event-isserow form input.keyline[type="submit"]:hover, form .signature-event-isserow input.keyline[type="submit"]:hover, .signature-event-isserow body.tribe-events-page-template .keyline.tribe-events-read-more:hover, body.tribe-events-page-template .signature-event-isserow .keyline.tribe-events-read-more:hover {
+      background-color: #0e2d4d;
+      border-color: #0e2d4d;
+      color: #fff; }
+
+.signature-event-isserow .panel.overview-panel ul li:before {
   color: #fff; }
 
 .signature-event-viva-pharmaceutical-time-shine-gala .button, .signature-event-viva-pharmaceutical-time-shine-gala form input[type="submit"], form .signature-event-viva-pharmaceutical-time-shine-gala input[type="submit"], .signature-event-viva-pharmaceutical-time-shine-gala body.tribe-events-page-template .tribe-events-read-more, body.tribe-events-page-template .signature-event-viva-pharmaceutical-time-shine-gala .tribe-events-read-more {
@@ -1295,6 +1317,11 @@ body.front .big-donate.night-of-a-thousand-stars-gala, body.single-signature_eve
 body.front .big-donate.innovators-challenge, body.single-signature_events .big-donate.innovators-challenge {
   background-color: #0e2d4d; }
   body.front .big-donate.innovators-challenge a.button:hover, body.front .big-donate.innovators-challenge body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.innovators-challenge a.tribe-events-read-more:hover, body.single-signature_events .big-donate.innovators-challenge a.button:hover, body.single-signature_events .big-donate.innovators-challenge body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.innovators-challenge a.tribe-events-read-more:hover {
+    color: #0e2d4d; }
+
+body.front .big-donate.isserow, body.single-signature_events .big-donate.isserow {
+  background-color: #0e2d4d; }
+  body.front .big-donate.isserow a.button:hover, body.front .big-donate.isserow body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.front .big-donate.isserow a.tribe-events-read-more:hover, body.single-signature_events .big-donate.isserow a.button:hover, body.single-signature_events .big-donate.isserow body.tribe-events-page-template a.tribe-events-read-more:hover, body.tribe-events-page-template body.single-signature_events .big-donate.isserow a.tribe-events-read-more:hover {
     color: #0e2d4d; }
 
 body.front .big-donate.viva-pharmaceutical-time-shine-gala, body.single-signature_events .big-donate.viva-pharmaceutical-time-shine-gala {

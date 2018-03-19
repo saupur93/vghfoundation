@@ -1,5 +1,5 @@
 <?php exit; ?>{
-    "version": "0.9.5.4",
+    "version": "0.9.6",
     "cluster.messagebus.debug": false,
     "cluster.messagebus.enabled": false,
     "cluster.messagebus.sns.region": "",
@@ -154,6 +154,10 @@
         "wp-.*\\.php",
         "index\\.php"
     ],
+    "pgcache.reject.categories": [],
+    "pgcache.reject.tags": [],
+    "pgcache.reject.authors": [],
+    "pgcache.reject.custom": [],
     "pgcache.reject.ua": [],
     "pgcache.reject.cookie": [
         "wptouch_switch_toggle"
@@ -183,6 +187,32 @@
     "pgcache.prime.limit": 10,
     "pgcache.prime.sitemap": "",
     "pgcache.prime.post.enabled": false,
+    "pgcache.cookiegroups.enabled": false,
+    "pgcache.cookiegroups.groups": {
+        "mobile": {
+            "enabled": false,
+            "cache": true,
+            "cookies": [
+                "wptouch-pro-view=mobile",
+                "wptouch-pro-cache-state=mobile"
+            ]
+        },
+        "loggedin": {
+            "enabled": false,
+            "cache": true,
+            "cookies": [
+                "wordpress_logged_in_.*"
+            ]
+        },
+        "subscribers": {
+            "enabled": false,
+            "cache": true,
+            "cookies": [
+                "role=subscriber",
+                "role=member"
+            ]
+        }
+    },
     "stats.enabled": "0",
     "minify.configuration_overloaded": false,
     "minify.enabled": "1",
@@ -190,7 +220,7 @@
     "minify.debug": "0",
     "minify.engine": "file",
     "minify.error.notification": "",
-    "minify.file.gc": 86400,
+    "minify.file.gc": "86400",
     "minify.file.nfs": false,
     "minify.file.locking": false,
     "minify.memcached.servers": [
@@ -206,41 +236,41 @@
     ],
     "minify.redis.password": "",
     "minify.redis.dbid": 0,
-    "minify.rewrite": true,
+    "minify.rewrite": "1",
     "minify.options": [],
     "minify.symlinks": [],
-    "minify.lifetime": 86400,
+    "minify.lifetime": "86400",
     "minify.upload": true,
-    "minify.html.enable": false,
+    "minify.html.enable": "0",
     "minify.html.engine": "html",
-    "minify.html.reject.feed": false,
-    "minify.html.inline.css": false,
-    "minify.html.inline.js": false,
-    "minify.html.strip.crlf": false,
+    "minify.html.reject.feed": "0",
+    "minify.html.inline.css": "0",
+    "minify.html.inline.js": "0",
+    "minify.html.strip.crlf": "0",
     "minify.html.comments.ignore": [
         "google_ad_",
         "RSPEAK_"
     ],
-    "minify.css.combine": false,
-    "minify.css.enable": true,
+    "minify.css.combine": "0",
+    "minify.css.enable": "0",
     "minify.css.engine": "css",
-    "minify.css.http2push": false,
-    "minify.css.strip.comments": false,
-    "minify.css.strip.crlf": false,
+    "minify.css.http2push": "0",
+    "minify.css.strip.comments": "0",
+    "minify.css.strip.crlf": "0",
     "minify.css.embed": false,
     "minify.css.imports": "",
     "minify.css.groups": [],
-    "minify.js.http2push": false,
-    "minify.js.enable": true,
+    "minify.js.http2push": "0",
+    "minify.js.enable": "0",
     "minify.js.engine": "js",
-    "minify.js.combine.header": false,
+    "minify.js.combine.header": "0",
     "minify.js.header.embed_type": "blocking",
     "minify.js.combine.body": false,
     "minify.js.body.embed_type": "blocking",
     "minify.js.combine.footer": false,
     "minify.js.footer.embed_type": "blocking",
-    "minify.js.strip.comments": false,
-    "minify.js.strip.crlf": false,
+    "minify.js.strip.comments": "0",
+    "minify.js.strip.crlf": "0",
     "minify.js.groups": [],
     "minify.yuijs.path.java": "java",
     "minify.yuijs.path.jar": "yuicompressor.jar",
@@ -275,15 +305,23 @@
     "minify.htmltidy.options.clean": false,
     "minify.htmltidy.options.hide-comments": true,
     "minify.htmltidy.options.wrap": 0,
-    "minify.reject.logged": false,
-    "minify.reject.ua": [],
-    "minify.reject.uri": [],
-    "minify.reject.files.js": [],
-    "minify.reject.files.css": [],
+    "minify.reject.logged": "0",
+    "minify.reject.ua": [
+        ""
+    ],
+    "minify.reject.uri": [
+        ""
+    ],
+    "minify.reject.files.js": [
+        ""
+    ],
+    "minify.reject.files.css": [
+        ""
+    ],
     "minify.cache.files": [
         ""
     ],
-    "minify.cache.files_regexp": false,
+    "minify.cache.files_regexp": "0",
     "cdn.configuration_overloaded": false,
     "cdn.enabled": "0",
     "cdn.debug": false,
@@ -314,6 +352,8 @@
     "cdn.autoupload.enabled": false,
     "cdn.autoupload.interval": 3600,
     "cdn.canonical_header": false,
+    "cdn.admin.media_library": false,
+    "cdn.cors_header": true,
     "cdn.ftp.host": "",
     "cdn.ftp.type": "",
     "cdn.ftp.user": "",
@@ -335,12 +375,14 @@
     "cdn.s3.key": "",
     "cdn.s3.secret": "",
     "cdn.s3.bucket": "",
+    "cdn.s3.bucket.location": "us-east-1",
     "cdn.s3.cname": [],
     "cdn.s3.ssl": "auto",
     "cdn.s3_compatible.api_host": "auto",
     "cdn.cf.key": "",
     "cdn.cf.secret": "",
     "cdn.cf.bucket": "",
+    "cdn.cf.bucket.location": "us-east-1",
     "cdn.cf.id": "",
     "cdn.cf.cname": [],
     "cdn.cf.ssl": "auto",
@@ -370,13 +412,6 @@
     "cdn.azure.ssl": "auto",
     "cdn.mirror.domain": [],
     "cdn.mirror.ssl": "auto",
-    "cdn.netdna.alias": "",
-    "cdn.netdna.consumerkey": "",
-    "cdn.netdna.consumersecret": "",
-    "cdn.netdna.authorization_key": "",
-    "cdn.netdna.domain": [],
-    "cdn.netdna.ssl": "auto",
-    "cdn.netdna.zone_id": 0,
     "cdn.maxcdn.authorization_key": "",
     "cdn.maxcdn.domain": [],
     "cdn.maxcdn.ssl": "auto",
@@ -412,6 +447,9 @@
         "{plugins_dir}\/wp-fb-autoconnect\/facebook-platform\/channel.html"
     ],
     "cdn.reject.ssl": false,
+    "cdnfsd.enabled": false,
+    "cdnfsd.engine": "",
+    "cdnfsd.debug": false,
     "varnish.configuration_overloaded": false,
     "varnish.enabled": "0",
     "varnish.debug": false,
@@ -615,7 +653,6 @@
             ]
         }
     },
-    "common.edge": false,
     "common.support": "",
     "common.track_usage": "0",
     "common.tweeted": false,
@@ -625,6 +662,7 @@
     "widget.latest_news.items": 5,
     "widget.pagespeed.enabled": "1",
     "widget.pagespeed.key": "",
+    "widget.pagespeed.key.restrict.referrer": "",
     "widget.pagespeed.show_in_admin_bar": "0",
     "timelimit.email_send": 180,
     "timelimit.varnish_purge": 300,
@@ -648,6 +686,14 @@
     "extensions.active_frontend": [],
     "plugin.license_key": "",
     "plugin.type": "",
+    "cdn.netdna.alias": "",
+    "cdn.netdna.consumerkey": "",
+    "cdn.netdna.consumersecret": "",
+    "cdn.netdna.authorization_key": "",
+    "cdn.netdna.domain": [],
+    "cdn.netdna.ssl": "auto",
+    "cdn.netdna.zone_id": 0,
+    "common.edge": false,
     "fragmentcache": {
         "engine": ""
     },

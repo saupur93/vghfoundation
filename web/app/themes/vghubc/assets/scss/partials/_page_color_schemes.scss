@@ -456,6 +456,13 @@
     }
   }
 
+  .signature-event-isserow & {
+    background-color:$ino-challenge;
+    a.button:hover {
+      color:$ino-challenge;
+    }
+  }
+
   .signature-event-viva-pharmaceutical-time-shine-gala & {
     background-color:$shine-gala;
     a.button:hover {
@@ -585,6 +592,37 @@
     }
   }
 }
+
+.signature-event-isserow {
+  .button {
+    background-color:$ino-challenge;
+    border-color:$ino-challenge;
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background:transparent;
+    }
+    &.keyline {
+      background-color:transparent;
+      color:$ino-challenge;
+      &:hover {
+        background-color:$ino-challenge;
+        border-color: $ino-challenge;
+        color:#fff;
+      }
+    }
+  }
+  .panel.overview-panel {
+    ul {
+      li {
+        &:before {
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
 .signature-event-viva-pharmaceutical-time-shine-gala {
   .button {
     background-color:$shine-gala;
@@ -870,6 +908,13 @@ body.front, body.single-signature_events {
     }
   }
   .big-donate.innovators-challenge {
+    background-color:$ino-challenge;
+    a.button:hover {
+      color:$ino-challenge;
+    }
+  }
+
+  .big-donate.isserow {
     background-color:$ino-challenge;
     a.button:hover {
       color:$ino-challenge;
