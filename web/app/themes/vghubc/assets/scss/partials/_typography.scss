@@ -126,6 +126,10 @@ h1.page-header {
 }
 
 .panel {
+  strong {
+    font-family: 'Karbon-Semibold';
+  }
+
   p.intro {
     @include font-size(20px);
     line-height:1.26;
