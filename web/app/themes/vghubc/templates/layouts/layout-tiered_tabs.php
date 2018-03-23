@@ -9,7 +9,7 @@
 
  ?>
  <?php if(isset($main_tabs) && !empty($main_tabs)): ?>
-    <section class="panel extra-padded-bottom tiered-tabs slideshow grey-bg<?php print ' panel-'.$count; ?>">
+    <section class="panel extra-padded-bottom tiered-tabs slideshow grey-bg<?php print ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
       <div class="container tab-group">
         <nav class="mobile-tabs-nav">
           <h4 class="switcher"><?php is_page(104) ? print 'Donors' : print 'Tabs'; ?></h4>

@@ -1,4 +1,4 @@
-<section class="panel with-sidebar three-column-panel<?php echo ' panel-'.$count; ?>">
+<section class="panel with-sidebar three-column-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
 	<div class="inner-wrap">
     <section class="content-left">
     <?php if( have_rows('columns') ): ?>

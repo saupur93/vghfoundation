@@ -1,3 +1,3 @@
-		<section class="panel<?php echo ' panel-'.$count; ?>">
+		<section class="panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
 				<?php the_sub_field('raw_html_code'); ?>
 		</section>

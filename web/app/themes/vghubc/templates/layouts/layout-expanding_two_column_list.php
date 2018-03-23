@@ -5,7 +5,7 @@
   $links = null !== get_sub_field('links') ? get_sub_field('links') : false;
 ?>
 
-    <section class="panel padded expanding-two-column-list<?php echo ' panel-'.$count; ?>">
+    <section class="panel padded expanding-two-column-list<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
           <?php if($section_title): ?>

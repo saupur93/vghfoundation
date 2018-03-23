@@ -58,7 +58,7 @@
     ));
   }
 ?>
-<section class="panel padded three-stories-panel<?php echo ' panel-'.$count; ?>">
+<section class="panel padded three-stories-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
   <div class="container">
     <div class="inner-wrap">
       <h2><?php print $section_title; ?></h2>

@@ -1,5 +1,5 @@
     <?php if( have_rows('download_set') ): ?>
-      <section class="panel padded grey-bg download-sets<?php echo ' panel-'.$count; ?>">
+      <section class="panel padded grey-bg download-sets<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
         <div class="container">
           <div class="inner-wrap">
             <?php while( have_rows('download_set') ): the_row();

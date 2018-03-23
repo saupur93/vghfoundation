@@ -1,4 +1,4 @@
-    <section class="panel padded slideshow-content-panel slideshow grey-bg<?php echo ' panel-'.$count; ?>">
+    <section class="panel padded slideshow-content-panel slideshow grey-bg<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
           <?php if( have_rows('slide') ): ?>
@@ -36,4 +36,3 @@
         </div>
       </div>
     </section>
-

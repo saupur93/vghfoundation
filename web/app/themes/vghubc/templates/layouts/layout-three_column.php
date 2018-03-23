@@ -1,4 +1,4 @@
-<section class="panel three-column-panel<?php echo ' panel-'.$count; ?>">
+<section class="panel three-column-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
 	<div class="inner-wrap">
   <?php if( have_rows('columns') ): ?>
     <?php while( have_rows('columns') ): the_row();

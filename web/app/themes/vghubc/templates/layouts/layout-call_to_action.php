@@ -15,7 +15,7 @@
 <?php $bg_color = explode(':', $bg_color)[0]; ?>
 
 <?php if($text_content): ?>
-  <section class="panel<?php echo ' panel-'.$count; ?> extra-padded cta-panel<?php if($white_text_colour) print ' bg-color-cta'; ?><?php if($bg_image) print ' bg-image-cta'; ?><?php if($event) print ' category-bg-color'; ?>"<?php if($bg_image) { print ' style="background-image:url('. $bg_image .');"';} elseif($bg_color){ print ' style="background-color:'. $bg_color .';"';} ?>>
+  <section id="<?php echo 'panel-'.$count; ?>" class="panel<?php echo ' panel-'.$count; ?> extra-padded cta-panel<?php if($white_text_colour) print ' bg-color-cta'; ?><?php if($bg_image) print ' bg-image-cta'; ?><?php if($event) print ' category-bg-color'; ?>"<?php if($bg_image) { print ' style="background-image:url('. $bg_image .');"';} elseif($bg_color){ print ' style="background-color:'. $bg_color .';"';} ?>>
     <div class="container">
       <div class="inner-wrap">
         <?php print $text_content; ?>

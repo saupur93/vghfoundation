@@ -1,5 +1,5 @@
 <?php if( have_rows('columns') ): ?>
-  <section class="panel three-column-image-links three-column-list white-bg<?php echo ' panel-'.$count; ?>">
+  <section class="panel three-column-image-links three-column-list white-bg<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
     <?php while( have_rows('columns') ): the_row();
       $column_title = get_sub_field('column_title');
       $link = get_sub_field('link');

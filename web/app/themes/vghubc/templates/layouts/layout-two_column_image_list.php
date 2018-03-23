@@ -1,4 +1,4 @@
-      <section class="panel padded-bottom two-column-image-list<?php echo ' panel-'.$count; ?>">
+      <section class="panel padded-bottom two-column-image-list<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
         <div class="container">
           <div class="inner-wrap">
           <?php if( have_rows('columns') ): ?>

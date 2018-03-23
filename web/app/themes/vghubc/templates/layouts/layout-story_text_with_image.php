@@ -8,7 +8,7 @@
 // - image (array)
 ?>
 
-<section class="panel theme-story-row <?php the_sub_field('display'); ?>" data-transition="fadeUp">
+<section class="panel theme-story-row <?php the_sub_field('display'); ?>" data-transition="fadeUp" id="<?php echo 'panel-'.$count; ?>">
 	<div class="img-block">
 		<?php if(get_sub_field('image')): ?>
 			<?php $row_img = get_sub_field('image'); ?>

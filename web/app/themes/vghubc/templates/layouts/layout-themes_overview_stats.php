@@ -1,4 +1,4 @@
-      <section class="panel themes-overview-stats<?php echo ' panel-'.$count; ?>">
+      <section class="panel themes-overview-stats<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
         <nav class="mobile-tabs-nav">
           <h4 class="switcher">Philanthropic Pillars</h4>
           <ul class="options">

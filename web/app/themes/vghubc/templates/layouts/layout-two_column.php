@@ -1,7 +1,7 @@
 <?php if($count == 1): ?>
-<section class="panel extra-padded two-column overview-panel<?php echo ' panel-'.$count; ?>">
+<section class="panel extra-padded two-column overview-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
 <?php else: ?>
-<section class="panel padded two-column<?php echo ' panel-'.$count; ?>">
+<section class="panel padded two-column<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
 <?php endif; ?>
   <div class="container">
     <div class="inner-wrap">

@@ -4,7 +4,7 @@
 ?>
 
 <?php if ($video_embed): ?>
-    <section class="panel padded video-panel<?php echo ' panel-'.$count; ?>">
+    <section class="panel padded video-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
         <?php if($section_title): ?>

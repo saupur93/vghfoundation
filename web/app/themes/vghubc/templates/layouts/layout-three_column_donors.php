@@ -3,7 +3,7 @@
 
 ?>
 
-    <section class="panel padded three-column-donors<?php echo ' panel-'.$count; ?>">
+    <section class="panel padded three-column-donors<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
       <div class="container">
         <div class="inner-wrap">
           <?php if($section_title): ?>

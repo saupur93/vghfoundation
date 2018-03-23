@@ -3,7 +3,7 @@
   $factsheet_download = null !== get_sub_field('factsheet_download') ? get_sub_field('factsheet_download') : false;
 ?>
 
-<section class="panel padded-top full-stats-panel<?php echo ' panel-'.$count; ?>">
+<section class="panel padded-top full-stats-panel<?php echo ' panel-'.$count; ?>" id="<?php echo 'panel-'.$count; ?>">
   <div class="container">
     <div class="inner-wrap">
     <?php foreach($facts_row as $row): ?>
