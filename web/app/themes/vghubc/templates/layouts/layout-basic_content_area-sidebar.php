@@ -13,12 +13,12 @@
     <div class="container">
       <div class="inner-wrap">
         <?php if($section_title): ?>
-          <h2 class="section-title"><?php print $section_title; ?></h2>
+          <h2 class="section-title" id="<?php print $section_title ?>"><?php print $section_title; ?></h2>
         <?php endif; ?>
         <div class="col-grid-9">
           <?php the_sub_field('body'); ?>
         </div>
-        <aside class="col-grid-3">
+        <aside class="col-grid-3" id="sidebar">
           <?php if(get_sub_field('sidebar')): ?>
             <?php the_sub_field('sidebar'); ?>
           <?php endif; ?>

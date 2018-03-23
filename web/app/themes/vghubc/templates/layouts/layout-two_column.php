@@ -11,7 +11,7 @@
         $column_body = get_sub_field('column_body');
       ?>
       <?php if($column_title): ?>
-      <h3><?php print $column_title; ?></h3>
+      <h3 id="<?php print sanitize_title($column_title); ?>"><?php print $column_title; ?></h3>
       <?php endif; ?>
       <div class="col-half">
         <?php print $column_body; ?>
