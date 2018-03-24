@@ -5,6 +5,7 @@
   $campaign_slogan = null !== get_field('campaign_slogan') ? get_field('campaign_slogan') : false;
   $donate_url = null !== get_field('donation_url') ? get_field('donation_url') : false;
   $donation_button_text = null !== get_field('donation_button_text') ? get_field('donation_button_text') : 'Donate to this event';
+  $page_colour = null !== get_field('page_colour') ? get_field('page_colour') : false;
  ?>
 
 	<div class="page-wrap">
@@ -39,5 +40,19 @@
   </div>
 
   <?php edit_post_link('edit', '<div class="admin-edit-link">', '</div>'); ?>
+
+<?php if ($page_colour): ?>
+  <style>
+    .night-of-a-thousand-stars-gala {
+      background-color: <?php print($page_colour) ?>!important;
+      border: 2px solid <?php print($page_colour) ?>!important;
+     }
+
+    .panel.category-bg-color {
+      background-color: <?php print($page_colour) ?>!important;
+    }
+  </style>
+<?php endif ?>
+
 
 <?php get_footer(); ?>
