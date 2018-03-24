@@ -43,7 +43,7 @@
 
 <?php if ($page_colour): ?>
   <style>
-    .night-of-a-thousand-stars-gala {
+    .big-donate {
       background-color: <?php print($page_colour) ?>!important;
       border: 2px solid <?php print($page_colour) ?>!important;
      }
