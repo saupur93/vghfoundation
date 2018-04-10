@@ -21,6 +21,46 @@ function redirection_to_editor() {
   return 'edit_pages';
 }
 
+function get_donor_segment($attrs) {
+  global $wpdb;
+
+  $table2 = $wpdb->prefix."donor_list";
+  if (empty($attrs["secondary-category"])) {
+    $result = $wpdb->get_results( "SELECT * FROM wp_donor_list WHERE primary_category = '".$attrs['primary-category']."'");
+  } else {
+    $result = $wpdb->get_results( "SELECT * FROM wp_donor_list WHERE primary_category = '".$attrs['primary-category']."' AND secondary_category = '".$attrs['secondary-category']."'");
+  }
+
+  if(empty($attrs['layout'])) {
+    foreach ( $result as $print )   {
+      $name_honouree2 = $print->donor_name;
+      $name[] = "<p class='small'>".$name_honouree2."</p>";
+    }
+
+    return (implode($name));
+  } else {
+       $col1[] = "<div class='col-half'>";
+       $col2[] = "<div class='col-half'>";
+       $i = 0;
+      foreach ( $result as $print )   {
+        $name_honouree2 = $print->donor_name;
+        if ($i <= ( count($result) / 2 )) {
+          $col1[] = "<p class='small'>".$name_honouree2."</p>";
+        } else {
+          $col2[] = "<p class='small'>".$name_honouree2."</p>";
+        }
+        $i++;
+      }
+      $col1[] = "</div>";
+      $col2[] = "</div>";
+
+    return (implode($col1).implode($col2));
+  }
+}
+
+add_shortcode('donorSegment', 'get_donor_segment');
+
+
 
 // Custom Image Sizes
 if ( function_exists( 'add_theme_support' ) ) {
