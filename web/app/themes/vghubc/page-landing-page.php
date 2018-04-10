@@ -25,19 +25,6 @@ Template Name: LandingPage
                       <div class="donation-landing">
                          <input type="text" name="yourdonation" id="yourdonation" placeholder="Enter the amount">
                        </div>
-                       <?php
-                    $table2 = $wpdb->prefix."celebration_cards_user_details";
-                    $result = $wpdb->get_results( $wpdb->prepare('SELECT * FROM '.$table2.' order by id DESC') );
-                    foreach ( $result as $print )   {
-                            $name_honouree2 = $print->name_honouree;
-                            $message2 = $print->message;
-                            $firstname2 = $print->first_name;
-                     ?>
-                    <article> <?php echo $name_honouree2; ?><br /> <?php echo $message2; ?> <br /><?php echo $firstname2; ?></article>
-                  <?php
-                }
-                   ?>
-
 
 
 
@@ -308,7 +295,18 @@ Template Name: LandingPage
                   <section class="slider-container">
                     <div class="slider">
                       <div class="sliders">
-
+                        <?php
+                        $table2 = $wpdb->prefix."celebration_cards_user_details";
+                        $result = $wpdb->get_results( $wpdb->prepare('SELECT * FROM '.$table2.' order by id DESC') );
+                        foreach ( $result as $print )   {
+                                $name_honouree2 = $print->name_honouree;
+                                $message2 = $print->message;
+                                $firstname2 = $print->first_name;
+                         ?>
+                        <article> <?php echo $name_honouree2; ?><br /> <?php echo $message2; ?> <br /><?php echo $firstname2; ?></article>
+                      <?php
+                    }
+                       ?>
                       </div>
                     </div>
                     <div id="goNext" class="control"> </div>
