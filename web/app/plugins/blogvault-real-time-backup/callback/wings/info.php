@@ -164,6 +164,7 @@ class BVInfoCallback {
 			$info['openssl_public_decrypt'] = "1";
 		}
 		$info['sha1'] = "1";
+		$info['apissl'] = "1";
 		if (function_exists('base64_encode')) {
 			$info['b64encode'] = true;
 		}

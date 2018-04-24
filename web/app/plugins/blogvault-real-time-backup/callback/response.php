@@ -55,9 +55,11 @@ class BVResponse {
 		global $bvcb;
 		$this->stream = new BVRespStream();
 		if (array_key_exists('apicall',$_REQUEST)) {
-			$this->stream = new BVHttpStream($_REQUEST['apihost'], intval($_REQUEST['apiport']));
+			$this->stream = new BVHttpStream($_REQUEST['apihost'], intval($_REQUEST['apiport']), array_key_exists('apissl', $_REQUEST));
 			if (!$this->stream->connect()) {
 				$this->addStatus("httperror", "Cannot Open Connection to Host");
+				$this->addStatus("streamerrno", $this->stream->errno);
+				$this->addStatus("streamerrstr", $this->stream->errstr);
 				return false;
 			}
 			if (array_key_exists('acbmthd', $_REQUEST)) {

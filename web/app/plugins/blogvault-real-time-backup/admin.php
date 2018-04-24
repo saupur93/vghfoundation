@@ -41,11 +41,26 @@ class BVAdmin {
 
 	public function menu() {
 		$brand = $this->bvmain->getBrandInfo();
-		if (!$brand || !array_key_exists('hide', $brand)) {
+		if (!$brand || (!array_key_exists('hide', $brand) && !array_key_exists('hide_from_menu', $brand))) {
 			$bname = $this->bvmain->getBrandName();
 			add_menu_page($bname, $bname, 'manage_options', $this->bvmain->plugname,
 					array($this, 'adminPage'), plugins_url('img/icon.png',  __FILE__ ));
 		}
+	}
+
+	public function hidePluginDetails($plugin_metas, $slug) {
+		$brand = $this->bvmain->getBrandInfo();
+		$bvslug = $this->bvmain->slug;
+
+		if ($slug === $bvslug && $brand && array_key_exists('hide_plugin_details', $brand)){
+			foreach ($plugin_metas as $pluginKey => $pluginValue) {
+				if (strpos($pluginValue, sprintf('>%s<', translate('View details')))) {
+					unset($plugin_metas[$pluginKey]);
+					break;
+				}
+			}
+		}
+		return $plugin_metas;
 	}
 
 	public function settingsLink($links, $file) {

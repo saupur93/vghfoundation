@@ -4,7 +4,7 @@ Tags: backup, security, restore, database backup, WordPress backup, WordPress se
 Plugin URI: https://blogvault.net/
 Donate link: https://app.blogvault.net/home/signup
 Requires at least: 4.0
-Tested up to: 4.9.4
+Tested up to: 4.9.5
 Stable tag: trunk
 License: GPLv2 or later
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -97,6 +97,13 @@ Never! We will be with you for any queries at any time. **[Click here](https://b
 
 
 == CHANGELOG ==
+
+= 1.62 =
+* Removing warning for stream_socket_client check
+
+= 1.62 =
+* SSL support in plugin for API calls
+* Adding support for plugin branding
 
 = 1.61 =
 * Better handling for request IP
