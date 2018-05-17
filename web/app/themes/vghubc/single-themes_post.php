@@ -3,8 +3,6 @@
 	<div class="page-wrap">
     <?php get_template_part('templates/layouts/layouts'); ?>
 
-
-
     <section class="panel footer-themes-menu padded-top">
     <?php
       $posts = new WP_Query(array(
@@ -36,8 +34,6 @@
       <?php endif; ?>
       <?php wp_reset_query(); ?>
     </section>
-
-
 
   </div>
 

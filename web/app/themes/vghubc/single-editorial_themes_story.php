@@ -126,11 +126,16 @@ if( have_rows('story_content') ):
 	endwhile;
 endif;
 
-if(get_field('related_cta')):
-	    include(locate_template('templates/layouts/layout-call_to_action.php'));
-endif;
+// if(get_field('related_cta')):
+// 	    include(locate_template('templates/layouts/layout-call_to_action.php'));
+// endif; ?>
 
+<?php
+  $related_call_to_action = null !== get_field('related_call_to_action') ? get_field('related_call_to_action') : false;
 ?>
+<?php if($related_call_to_action): ?>
+  <?php include(locate_template('templates/partials/footer-cta.php')); ?>
+<?php endif; ?>
 
 
 
