@@ -66,7 +66,10 @@ class BVAdmin {
 	public function settingsLink($links, $file) {
 		#XNOTE: Fix this
 		if ( $file == plugin_basename( dirname(__FILE__).'/blogvault.php' ) ) {
-			$links[] = '<a href="'.$this->mainUrl().'">'.__( 'Settings' ).'</a>';
+			$brand = $this->bvmain->getBrandInfo();
+			if (!$brand || !array_key_exists('hide_plugin_details', $brand)) {
+				$links[] = '<a href="'.$this->mainUrl().'">'.__( 'Settings' ).'</a>';
+			}
 		}
 		return $links;
 	}
@@ -93,6 +96,7 @@ class BVAdmin {
 		$tags = "<input type='hidden' name='url' value='".$this->bvmain->info->wpurl()."'/>\n".
 				"<input type='hidden' name='homeurl' value='".$this->bvmain->info->homeurl()."'/>\n".
 				"<input type='hidden' name='siteurl' value='".$this->bvmain->info->siteurl()."'/>\n".
+				"<input type='hidden' name='dbsig' value='".$this->bvmain->lib->dbsig(false)."'/>\n".
 				"<input type='hidden' name='plug' value='".$this->bvmain->plugname."'/>\n".
 				"<input type='hidden' name='adminurl' value='".$this->mainUrl()."'/>\n".
 				"<input type='hidden' name='bvversion' value='".$this->bvmain->version."'/>\n".

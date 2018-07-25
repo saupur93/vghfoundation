@@ -334,10 +334,14 @@ class BVDynSync {
 		$this->add_db_event('woocommerce_downloadable_product_permissions', array('download_id' => $data['download_id'], 'user_id' => $data['user_id'], 'order_id' => $data['order_id'], 'product_id' => $data['product_id']));
 	}
 
+	function woocommerce_download_product_handler($user_email, $order_key, $product_id, $user_id, $download_id, $order_id) {
+		$this->add_db_event('woocommerce_downloadable_product_permissions', array('order_id' => $order_id, 'user_id' => $user_id, 'order_key' => $order_key, 'product_id' => $product_id));
+	}
+
 	function woocommerce_delete_order_items_handler($postid) {
 		$meta_ids = array();
 		$order_item_ids = array();
-		foreach( $this->bvmain->db->get_results("SELECT {$this->bvmain->db->prefix}woocommerce_order_itemmeta.meta_id, {$this->bvmain->db->prefix}woocommerce_order_items.order_item_id FROM {$this->bvmain->db->prefix}woocommerce_order_items JOIN {$this->bvmain->db->prefix}woocommerce_order_itemmeta ON {$this->bvmain->db->prefix}woocommerce_order_items.order_item_id = {$this->bvmain->db->prefix}woocommerce_order_itemmeta.order_item_id WHERE {$this->bvmain->db->prefix}woocommerce_order_items.order_id = '{$postid}'") as $key => $row) {
+		foreach( $this->bvmain->db->getResult("SELECT {$this->bvmain->db->dbprefix}woocommerce_order_itemmeta.meta_id, {$this->bvmain->db->dbprefix}woocommerce_order_items.order_item_id FROM {$this->bvmain->db->dbprefix}woocommerce_order_items JOIN {$this->bvmain->db->dbprefix}woocommerce_order_itemmeta ON {$this->bvmain->db->dbprefix}woocommerce_order_items.order_item_id = {$this->bvmain->db->dbprefix}woocommerce_order_itemmeta.order_item_id WHERE {$this->bvmain->db->dbprefix}woocommerce_order_items.order_id = '{$postid}'") as $key => $row) {
 			if (!in_array($row->meta_id, $meta_ids)) {
 				$meta_ids[] = $row->meta_id;
 				$this->add_db_event('woocommerce_order_itemmeta', array('meta_id' => $row->meta_id, 'msg_type' => 'delete'));
@@ -382,6 +386,14 @@ class BVDynSync {
 		$this->add_db_event('woocommerce_shipping_zones', array('zone_id' => $zone_id, 'msg_type' => 'delete'));
 	}
 
+	function woocommerce_webhook_handler($webhook_id) {
+		$this->add_db_event('wc_webhooks', array('webhook_id' => $webhook_id));
+	}
+
+	function woocommerce_webhook_delete_handler($webhook_id, $webhook) {
+		$this->add_db_event('wc_webhooks', array('webhook_id' => $webhook_id, 'msg_type' => 'delete'));
+	}
+
 	function woocommerce_delete_shipping_zone_method_handler($instance_id) {
 		$this->add_db_event('woocommerce_shipping_zone_methods', array('instance_id' => $instance_id, 'msg_type' => 'delete'));
 	}
@@ -412,6 +424,10 @@ class BVDynSync {
 				$this->add_db_event('woocommerce_payment_tokenmeta', array('meta_id' => $id, 'msg_type' => $msg_type));
 			}
 		}
+	}
+
+	function woocommerce_api_product_attribute_handler($id, $data) {
+		$this->add_db_event('woocommerce_attribute_taxonomies', array('attribute_id' => $id));
 	}
 
 
@@ -524,7 +540,12 @@ class BVDynSync {
 			add_action('woocommerce_tax_rate_added', array($this, 'woocommerce_tax_rate_handler'), 10, 2);
 			add_action('woocommerce_tax_rate_deleted', array($this, 'woocommerce_tax_rate_deleted_handler'), 10, 1);
 			add_action('woocommerce_tax_rate_updated', array($this, 'woocommerce_tax_rate_handler'), 10, 2);
-			
+
+			add_action('woocommerce_new_webhook', array($this, 'woocommerce_webhook_handler'), 10, 1);
+			add_action('woocommerce_webhook_updated', array($this, 'woocommerce_webhook_handler'), 10, 1);
+			add_action('woocommerce_webhook_deleted', array($this, 'woocommerce_webhook_delete_handler'), 10, 2);
+
+			add_action('woocommerce_download_product', array($this, 'woocommerce_download_product_handler'), 10, 6);
 			add_action('woocommerce_grant_product_download_access', array($this, 'woocommerce_grant_product_download_access_handler'), 10, 1);
 			add_action('woocommerce_ajax_revoke_access_to_product_download', array($this, 'woocommerce_revoke_access_to_product_download_handler'), 10, 4);
 			add_action('woocommerce_deleted_order_downloadable_permissions', array($this, 'woocommerce_deleted_order_downloadable_permissions_handler'), 10, 1);
@@ -545,6 +566,9 @@ class BVDynSync {
 
 			add_action('woocommerce_delete_shipping_zone', array($this, 'woocommerce_delete_shipping_zone_handler'), 10, 1);
 			add_action('woocommerce_delete_shipping_zone_method', array($this, 'woocommerce_delete_shipping_zone_method_handler'), 10, 1);
+
+			add_action('woocommerce_api_create_product_attribute', array($this, 'woocommerce_api_product_attribute_handler'), 10, 2);
+			add_action('woocommerce_api_edit_product_attribute', array($this, 'woocommerce_api_product_attribute_handler'), 10, 2);
 		}
 	}
 }

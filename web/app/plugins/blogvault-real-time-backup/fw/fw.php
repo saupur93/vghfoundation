@@ -90,7 +90,7 @@ VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|
 			die("
 				<div style='height: 98vh;'>
 					<div style='text-align: center; padding: 10% 0; font-family: Arial, Helvetica, sans-serif;'>
-					<div><p><img src=".plugins_url('../img/lock.png', __FILE__)."><h2>Firewall</h2><h3>powered by</h3><h2>"
+					<div><p><img src=".plugins_url('../img/icon.png', __FILE__)."><h2>Firewall</h2><h3>powered by</h3><h2>"
 							.$brandname."</h2></p><div>
 						<p>Blocked because of Malicious Activities</p>
 					</div>

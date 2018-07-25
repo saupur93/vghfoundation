@@ -24,10 +24,24 @@ class BVResponse {
 		$this->status[$key][] = $value;
 	}
 
+	public function base64Encode($data, $chunk_size) {
+		if ($chunk_size) {
+			$out = "";
+			$len = strlen($data);
+			for ($i = 0; $i < $len; $i += $chunk_size) {
+				$out .= base64_encode(substr($data, $i, $chunk_size));
+			}
+		} else {
+			$out = base64_encode($data);
+		}
+		return $out;
+	}
+
 	public function finish() {
 		$response = "bvbvbvbvbv".serialize($this->status)."bvbvbvbvbv";
-		if (array_key_exists('bvb64', $_REQUEST)) {
-			$response = "bvb64bvb64".base64_encode($response)."bvb64bvb64";
+		if (array_key_exists('bvb64resp', $_REQUEST)) {
+			$chunk_size = array_key_exists('bvb64cksize', $_REQUEST) ? intval($_REQUEST['bvb64cksize']) : false;
+			$response = "bvb64bvb64".$this->base64Encode($response, $chunk_size)."bvb64bvb64";
 		}
 		die($response);
 	}
@@ -35,8 +49,9 @@ class BVResponse {
 	public function writeStream($_string) {
 		if (strlen($_string) > 0) {
 			$chunk = "";
-			if (isset($_REQUEST['bvb64'])) {
-				$_string = base64_encode($_string);
+			if (isset($_REQUEST['bvb64stream'])) {
+				$chunk_size = array_key_exists('bvb64cksize', $_REQUEST) ? intval($_REQUEST['bvb64cksize']) : false;
+				$_string = $this->base64Encode($_string, $chunk_size);
 				$chunk .= "BVB64" . ":";
 			}
 			$chunk .= (strlen($_string) . ":" . $_string);

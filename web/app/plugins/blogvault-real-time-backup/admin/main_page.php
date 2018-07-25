@@ -62,6 +62,11 @@
 							</select>
 						</td>
 					</tr>
+					<tr>
+						<td>
+								<input type="checkbox" name="consent" value="1"/>I agree to Blogvault <a href="https://blogvault.net/tos" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://blogvault.net/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>						
+						<td>
+					</tr>
 				<tr>
 					<td></td>
 					<td><button type="submit">Register</button></td>

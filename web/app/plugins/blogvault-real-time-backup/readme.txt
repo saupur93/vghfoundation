@@ -98,8 +98,23 @@ Never! We will be with you for any queries at any time. **[Click here](https://b
 
 == CHANGELOG ==
 
-= 1.62 =
-* Removing warning for stream_socket_client check
+= 1.69 =
+* Adding support for chunked base64 encoding
+
+= 1.68 =
+* Updating upload rows 
+
+= 1.67 =
+* Latest WooCommerce plugin compatibility
+
+= 1.66 =
+* Updating TOS and privacy policies
+
+= 1.65 =
+* Bug fix for dynsync
+
+= 1.64 =
+* Bug fixes for lp and fw
 
 = 1.62 =
 * SSL support in plugin for API calls

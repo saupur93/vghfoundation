@@ -77,7 +77,11 @@ class GFFormsModel {
 	 * @return string
 	 */
 	public static function get_database_version() {
-		return get_option( 'gf_db_version' );
+		static $db_version = null;
+		if ( empty( $db_version ) ) {
+			$db_version = get_option( 'gf_db_version' );
+		}
+		return $db_version;
 	}
 
 	/**
@@ -860,6 +864,11 @@ class GFFormsModel {
 
 		if ( ! $form ) {
 			return null;
+		}
+
+		// Ensure the fields property is in the correct format, an associative array will cause warnings and js errors in the form editor.
+		if ( isset( $form['fields'] ) && is_array( $form['fields'] ) ) {
+			$form['fields'] = array_values( $form['fields'] );
 		}
 
 		// Loading notifications
@@ -1883,13 +1892,12 @@ class GFFormsModel {
 
 		self::delete_physical_file( $file_url );
 
-		// update lead field value - simulate form submission
+		// Update entry field value - simulate form submission.
+		$entry_meta_table_name = self::get_entry_meta_table_name();
+		$sql                   = $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
+		$entry_meta_id         = $wpdb->get_var( $sql );
 
-		$lead_detail_table = self::get_lead_details_table_name();
-		$sql               = $wpdb->prepare( "SELECT id FROM $lead_detail_table WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
-		$entry_detail_id   = $wpdb->get_var( $sql );
-
-		self::update_entry_field_value( $form, $entry, $field, $entry_detail_id, $field_id, $field_value );
+		self::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field_value );
 
 	}
 
@@ -2337,7 +2345,17 @@ class GFFormsModel {
 				continue;
 			}
 
-			$read_value_from_post = $is_new_lead || ! isset( $entry[ 'date_created' ] );
+			/**
+			 * Specify whether to fetch values from the $_POST when evaluating a field's conditional logic. Defaults to true
+			 * for new entries and false for existing entries.
+			 *
+			 * @since 2.3.1.11
+			 *
+			 * @param bool  $read_value_from_post Should value be fetched from $_POST?
+			 * @param array $form                The current form object.
+			 * @param array $entry               The current entry object.
+			 */
+			$read_value_from_post = gf_apply_filters( array( 'gform_use_post_value_for_conditional_logic_save_entry', $form['id'] ), $is_new_lead || ! isset( $entry[ 'date_created' ] ), $form, $entry );
 
 			// Only save fields that are not hidden (except when updating an entry)
 			if ( $is_entry_detail || ! GFFormsModel::is_field_hidden( $form, $field, array(), $read_value_from_post ? null : $entry ) ) {
@@ -3153,9 +3171,11 @@ class GFFormsModel {
 			//transforms this: col1|col2,col1b|col2b into this: col1,col2,col1b,col2b
 			$column_count = count( $field->choices );
 
-			$rows     = explode( ',', $value );
-			$ary_rows = array();
+			$rows = is_array( $value ) ? $value : explode( ',', $value );
+
 			if ( ! empty( $rows ) ) {
+				$ary_rows = array();
+
 				foreach ( $rows as $row ) {
 					/**
 					 * Allow modification of the delimiter used to parse List field URL parameters.
@@ -3168,7 +3188,7 @@ class GFFormsModel {
 					 * @param array  $field_values Array of values provided for pre-population into the form.
 					 */
 					$delimiter = apply_filters( 'gform_list_field_parameter_delimiter', '|', $field, $name, $field_values );
-					$ary_rows = array_merge( $ary_rows, rgexplode( $delimiter, $row, $column_count ) );
+					$ary_rows  = array_merge( $ary_rows, rgexplode( $delimiter, $row, $column_count ) );
 				}
 
 				$value = $ary_rows;
@@ -5455,8 +5475,16 @@ class GFFormsModel {
 		return GFAPI::get_entry_ids( $form_id, $search_criteria );
 	}
 
+	/**
+	 * Returns the gf_entry table field names.
+	 *
+	 * @since 2.3.2.13 Added date_updated.
+	 * @since unknown
+	 *
+	 * @return array
+	 */
 	public static function get_lead_db_columns() {
-		return array( 'id', 'form_id', 'post_id', 'date_created', 'is_starred', 'is_read', 'ip', 'source_url', 'user_agent', 'currency', 'payment_status', 'payment_date', 'payment_amount', 'transaction_id', 'is_fulfilled', 'created_by', 'transaction_type', 'status', 'payment_method' );
+		return array( 'id', 'form_id', 'post_id', 'date_created', 'date_updated', 'is_starred', 'is_read', 'ip', 'source_url', 'user_agent', 'currency', 'payment_status', 'payment_date', 'payment_amount', 'transaction_id', 'is_fulfilled', 'created_by', 'transaction_type', 'status', 'payment_method' );
 	}
 
 	/**

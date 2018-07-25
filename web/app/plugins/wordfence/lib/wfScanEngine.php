@@ -327,7 +327,7 @@ class wfScanEngine {
 		exit(0);
 	}
 	public function emailNewIssues($timeLimitReached = false){
-		$this->i->emailNewIssues($timeLimitReached);
+		$this->i->emailNewIssues($timeLimitReached, $this->scanController);
 	}
 	public function submitMetrics() {
 		if (wfConfig::get('other_WFNet', true)) {
@@ -1900,7 +1900,7 @@ class wfScanEngine {
 		
 		if (version_compare(phpversion(), '5.4') < 0 && wfConfig::get('isPaid') && wfBlock::hasCountryBlock()) {
 			$shortMsg = __('PHP Update Needed for Country Blocking', 'wordfence');
-			$longMsg = sprintf(__('The GeoIP database that is required for country blocking is being updated to a new format in April 2018. This new format requires sites to run PHP 5.4 or newer, and this site is on PHP %s. To ensure country blocking continues functioning, please update PHP prior to that date.', 'wordfence'), wfUtils::cleanPHPVersion());
+			$longMsg = sprintf(__('The GeoIP database that is required for country blocking has been updated to a new format. This new format requires sites to run PHP 5.4 or newer, and this site is on PHP %s. To ensure country blocking continues functioning, please update PHP.', 'wordfence'), wfUtils::cleanPHPVersion());
 			
 			$longMsg .= ' <a href="' . wfSupportController::esc_supportURL(wfSupportController::ITEM_SCAN_RESULT_GEOIP_UPDATE) . '" target="_blank" rel="noopener noreferrer">Get more information.</a>';
 			

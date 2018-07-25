@@ -345,7 +345,7 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 		 *
 		 * @return $this
 		 */
-		protected function unlock_process() {
+		public function unlock_process() {
 			delete_site_option( $this->identifier . '_process_lock' );
 
 			return $this;
@@ -373,15 +373,23 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 				$value_column = 'meta_value';
 			}
 
-			$key = $wpdb->esc_like( $this->identifier . '_batch_' ) . '%';
+			$key = $wpdb->esc_like( $this->identifier . '_batch_blog_id_' . get_current_blog_id() . '_' ) . '%';
 
-			$query = $wpdb->get_row( $wpdb->prepare( "
-			SELECT *
-			FROM {$table}
-			WHERE {$column} LIKE %s
-			ORDER BY {$key_column} ASC
-			LIMIT 1
-		", $key ) );
+			$sql = "
+					SELECT *
+					FROM {$table}
+					WHERE {$column} LIKE %s
+					ORDER BY {$key_column} ASC
+					LIMIT 1
+				";
+
+			$query = $wpdb->get_row( $wpdb->prepare( $sql, $key ) );
+
+			if ( empty( $query ) ) {
+				// No more batches for this blog ID. Get the next one in the queue regardless of the blog ID.
+				$key = $wpdb->esc_like( $this->identifier . '_batch_' ) . '%';
+				$query = $wpdb->get_row( $wpdb->prepare( $sql, $key ) );
+			}
 
 			$batch       = new stdClass();
 			$batch->key  = $query->$column;
@@ -406,9 +414,18 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 			do {
 				$batch = $this->get_batch();
 
-				if ( is_multisite() && get_current_blog_id() !== $batch->blog_id ) {
-					$this->spawn_multisite_child_process( $batch->blog_id );
-					wp_die();
+				if ( is_multisite() ) {
+					$current_blog_id = get_current_blog_id();
+					if ( $current_blog_id !== $batch->blog_id ) {
+						$this->spawn_multisite_child_process( $batch->blog_id );
+						if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
+							// Switch back to the current blog and return so the other tasks queued in this process can be run.
+							switch_to_blog( $current_blog_id );
+							return;
+						} else {
+							wp_die();
+						}
+					}
 				}
 
 				GFCommon::log_debug( sprintf( '%s(): Processing batch for %s.', __METHOD__, $this->action ) );
@@ -448,7 +465,12 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 				$this->complete();
 			}
 
-			wp_die();
+			if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
+				// Return so the other tasks queued in this process can be run.
+				return;
+			} else {
+				wp_die();
+			}
 		}
 
 		/**
@@ -463,7 +485,7 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 			switch_to_blog( $blog_id );
 			$this->query_url = admin_url( 'admin-ajax.php' );
 			$this->unlock_process();
-			parent::dispatch();
+			$this->dispatch();
 		}
 
 		/**
@@ -583,19 +605,17 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 
 			if ( $this->is_process_running() ) {
 				// Background process already running.
-				exit;
+				return;
 			}
 
 
 			if ( $this->is_queue_empty() ) {
 				// No data to process.
 				$this->clear_scheduled_event();
-				exit;
+				return;
 			}
 
 			$this->handle();
-
-			exit;
 		}
 
 		/**
@@ -625,6 +645,15 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 		}
 
 		/**
+		 * Clears all scheduled events.
+		 *
+		 * @since 2.3.1.x
+		 */
+		public function clear_scheduled_events() {
+			wp_clear_scheduled_hook( $this->cron_hook_identifier );
+		}
+
+		/**
 		 * Cancel Process
 		 *
 		 * Stop processing queue items, clear cronjob and delete batch.
@@ -636,8 +665,7 @@ if ( ! class_exists( 'GF_Background_Process' ) ) {
 				$batch = $this->get_batch();
 
 				$this->delete( $batch->key );
-
-				wp_clear_scheduled_hook( $this->cron_hook_identifier );
+				$this->clear_scheduled_events();
 			}
 
 		}

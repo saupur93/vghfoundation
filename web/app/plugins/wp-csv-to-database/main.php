@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WP CSV TO DB
- * Plugin URI: http://www.tipsandtricks-hq.com/wp-csv-to-database-plugin-import-excel-file-content-into-wordpress-database-2116
+ * Plugin URI: https://www.tipsandtricks-hq.com/wp-csv-to-database-plugin-import-excel-file-content-into-wordpress-database-2116
  * Description: Import CSV file content directly into your WordPress database table.
- * Version: 2.2
+ * Version: 2.4
  * Author: Tips and Tricks HQ, josh401
- * Author URI: http://www.tipsandtricks-hq.com
+ * Author URI: https://www.tipsandtricks-hq.com
  * License: GPL2
 */
 
@@ -211,7 +211,11 @@ class wp_csv_to_db {
 				$numColumns = $_POST['num_cols'];
 				
 				// Open the .csv file and get it's contents
-				if(( $fh = @fopen($_POST['csv_file'], 'r')) !== false) {
+				$myCSV = $_POST['csv_file'];
+				$path = parse_url($myCSV, PHP_URL_PATH);
+				$myCSV = $_SERVER['DOCUMENT_ROOT'] . $path;
+
+				if(( $fh = @fopen($myCSV, 'r')) !== false) {
 					
 					// Set variables
 					$values = array();
@@ -219,6 +223,7 @@ class wp_csv_to_db {
 					
 					while(( $row = fgetcsv($fh)) !== false) {  // Get file contents and set up row array
 						if(count($row) == $numColumns) {  // If .csv column count matches db column count
+                                                        $row = array_map(function($v) { return esc_sql($v) ;}, $row) ;
 							$values[] = '("' . implode('", "', $row) . '")';  // Each new line of .csv file becomes an array
 						}
 					}
@@ -335,7 +340,7 @@ class wp_csv_to_db {
             <h2><?php _e('WordPress CSV to Database Options','wp_csv_to_db'); ?></h2>
             
             <p>This plugin allows you to insert CSV file data into your WordPress database table. You can also export the content of a database using this plugin.</p>
-			<p><a href="http://www.tipsandtricks-hq.com/wp-csv-to-database-plugin-import-excel-file-content-into-wordpress-database-2116" target="_blank">Visit the plugin page</a> for more details and usage instruction.</p>
+			<p><a href="https://www.tipsandtricks-hq.com/wp-csv-to-database-plugin-import-excel-file-content-into-wordpress-database-2116" target="_blank">Visit the plugin page</a> for more details and usage instruction.</p>
             
             <div id="tabs">
                 <ul>
