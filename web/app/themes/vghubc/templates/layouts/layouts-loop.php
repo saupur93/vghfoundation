@@ -12,6 +12,9 @@
                     <?php elseif( get_row_layout() == 'accordion' ): ?>
                       <?php include(locate_template('templates/layouts/layout-accordion.php')); ?>
 
+                    <?php elseif( get_row_layout() == 'campaign_accordion' ): ?>
+                      <?php include(locate_template('templates/layouts/layout-campaign-accordion.php')); ?>
+
                     <?php elseif( get_row_layout() == 'two_column' ): ?>
                       <?php include(locate_template('templates/layouts/layout-two_column.php')); ?>
 

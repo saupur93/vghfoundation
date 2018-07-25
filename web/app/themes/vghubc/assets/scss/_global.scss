@@ -8993,3 +8993,30 @@ body.overlay-open {
     }
   }
 }
+
+.campaign-caption {
+	padding-top: 5px;
+	font-size: 1rem!important;
+}
+
+@include media($tab){
+	.campaign-accordion .col-half {
+		padding-left: 60px;
+	}
+}
+
+.campaign-accordion .big-donate {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.campaign-accordion img {
+	width: 400px;
+}
+
+@include media($tab){
+	.panel.accordion-panel .accordion-item .accordion-content {
+    max-width: 90%;
+	}
+}
