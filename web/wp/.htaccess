@@ -1,7 +1,7 @@
 # BEGIN W3TC Page Cache core
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /give-to-spinal-cord-research-2/
+    RewriteBase /
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteRule .* - [E=W3TC_ENC:_gzip]
     RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]

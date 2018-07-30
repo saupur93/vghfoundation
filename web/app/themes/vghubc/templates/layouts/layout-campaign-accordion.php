@@ -7,6 +7,8 @@
             <div class="col-half">
               <?php the_sub_field('accordion_campaign_description');?>
               <a class="button green big-donate" href="<?php the_sub_field('accordion_donate_link')?>" target="_blank">Donate now</a>
+              <br /><br />
+                  <p><?php the_sub_field('accordion_secondary_campaign_description');?></p>
             </div>
           <?php endif; ?>
 
